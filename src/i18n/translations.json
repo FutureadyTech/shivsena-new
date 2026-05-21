@@ -1,0 +1,69 @@
+{
+  "mr": {
+    "brand":               "शिवसेना",
+    "brand-tagline":       "धनुष्यबाण",
+    "brand-tagline-home":  "॥ महाराष्ट्र धर्म ॥",
+
+    "nav-home":       "होम",
+    "nav-about":      "आमच्याबद्दल",
+    "nav-news":       "बातम्या",
+    "nav-leadership": "नेतृत्व",
+    "nav-members":    "सदस्य",
+    "nav-join":       "सदस्य व्हा",
+
+    "home-headline-1": "एकत्रितपणे एक चांगले ,",
+    "home-headline-2": "भविष्य घडवूया",
+    "home-subtitle":   "मराठी मनाचा अभिमान,\nमहाराष्ट्राच्या स्वाभिमानासाठी!",
+    "home-cta-join":   "सदस्य व्हा",
+    "home-cta-about":  "आमच्याबद्दल जाणून घ्या",
+
+    "pillar-1-title": "मराठी अस्मिता",
+    "pillar-1-sub":   "भाषा, संस्कृती आणि स्वाभिमान",
+    "pillar-2-title": "सशक्त नेतृत्व",
+    "pillar-2-sub":   "स्पष्ट विचार, ठाम निर्णय",
+    "pillar-3-title": "महाराष्ट्र प्रथम",
+    "pillar-3-sub":   "सर्वांसाठी न्याय, सर्वांचा विकास",
+    "pillar-4-title": "हिंदुत्व आमची ओळख",
+    "pillar-4-sub":   "राष्ट्रवाद हीच आमची दिशा",
+
+    "loader":     "शिवसेना",
+    "loader-sub": "PREPARING THE HALL",
+
+    "footer-meta":   "© 2026 शिवसेना ॥ जय महाराष्ट्र ॥ जय हिंद",
+    "footer-credit": "Designed in Mumbai · A Cinematic Experience"
+  },
+
+  "en": {
+    "brand":               "Shiv Sena",
+    "brand-tagline":       "Bow & Arrow",
+    "brand-tagline-home":  "॥ MAHARASHTRA DHARMA ॥",
+
+    "nav-home":       "Home",
+    "nav-about":      "About",
+    "nav-news":       "News",
+    "nav-leadership": "Leadership",
+    "nav-members":    "Members",
+    "nav-join":       "Join Us",
+
+    "home-headline-1": "Not Just Governance,",
+    "home-headline-2": "A True Leadership",
+    "home-subtitle":   "The pride of every Marathi heart,\nFor the dignity of Maharashtra!",
+    "home-cta-join":   "Become a Member",
+    "home-cta-about":  "Learn More About Us",
+
+    "pillar-1-title": "Marathi Identity",
+    "pillar-1-sub":   "Language, culture and self-respect",
+    "pillar-2-title": "Strong Leadership",
+    "pillar-2-sub":   "Clear vision, firm decisions",
+    "pillar-3-title": "Maharashtra First",
+    "pillar-3-sub":   "Justice for all, growth for all",
+    "pillar-4-title": "Hindutva, Our Identity",
+    "pillar-4-sub":   "Nationalism is our direction",
+
+    "loader":     "SHIV SENA",
+    "loader-sub": "PREPARING THE HALL",
+
+    "footer-meta":   "© 2026 Shiv Sena · Jai Maharashtra · Jai Hind",
+    "footer-credit": "Designed in Mumbai · A Cinematic Experience"
+  }
+}

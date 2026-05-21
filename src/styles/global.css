@@ -1,0 +1,119 @@
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN TOKENS — site-wide. Used by every page.
+═══════════════════════════════════════════════════════════════ */
+:root {
+  --saffron: #FF6B1A;
+  --saffron-deep: #B8420A;
+  --saffron-glow: #FFB26B;
+  --saffron-burn: #FF8A3D;
+  --gold: #D4A24C;
+  --gold-bright: #F4D68A;
+  --bronze: #8A5A20;
+  --ink: #0A0806;
+  --ink-deep: #050302;
+  --warm-cream: #F4E4BC;
+  --warm-cream-dim: rgba(244, 228, 188, 0.7);
+  --crimson: #5C1810;
+
+  --font-display-en: 'Cinzel', serif;
+  --font-display-dev: 'Tiro Devanagari Marathi', serif;
+  --font-body: 'Mukta', system-ui, sans-serif;
+
+  --ease-cinematic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-expo: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body {
+  background: #050302;
+  color: var(--warm-cream);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+body { min-height: 100vh; -webkit-font-smoothing: antialiased; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--saffron-deep); }
+
+button, a { color: inherit; cursor: pointer; }
+button { font-family: inherit; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+/* ─── Custom Cursor ─────────────────────────────────────── */
+body.has-custom-cursor,
+body.has-custom-cursor * {
+  cursor: none !important;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  will-change: transform;
+}
+
+.cursor-dot.is-visible,
+.cursor-ring.is-visible {
+  opacity: 1;
+}
+
+/* Dot — tiny saffron fill */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  margin-top: -3px;
+  background: var(--saffron-on-light, #C44D0E);
+  transition: opacity 0.2s ease, transform 0.12s ease, background 0.2s ease;
+}
+
+/* Ring — larger hollow circle with spring lag */
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  margin-left: -16px;
+  margin-top: -16px;
+  border: 1.5px solid rgba(196, 77, 14, 0.55);
+  transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease,
+              margin 0.2s ease, border-color 0.2s ease;
+}
+
+/* Link variant — ring expands, dot stays */
+.cursor-dot--link {
+  background: var(--saffron-on-light, #C44D0E);
+  transform: scale(1.5);
+}
+.cursor-ring--link {
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  border-color: rgba(196, 77, 14, 0.75);
+}
+
+/* On dark hero background — lighter ring */
+.hero-section .cursor-ring,
+.hero-section .cursor-dot {
+  mix-blend-mode: screen;
+}
+
+/* ─── Devanagari font (Marathi) ─────────────────────────── */
+html[lang="mr"] body,
+html[lang="mr"] h1,
+html[lang="mr"] h2,
+html[lang="mr"] h3,
+html[lang="mr"] h4,
+html[lang="mr"] p,
+html[lang="mr"] span,
+html[lang="mr"] a,
+html[lang="mr"] button {
+  font-family: 'Mukta', sans-serif;
+}

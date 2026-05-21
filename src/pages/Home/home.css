@@ -1,0 +1,423 @@
+/* ═══════════════════════════════════════════════════════════════
+   HOME PAGE — Cream Editorial Theme
+   Hero stays dark cinematic. Everything below is light.
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Light editorial palette (used by everything below hero) ─── */
+  --paper:        #FAF6EE;   /* primary section background */
+  --paper-deep:   #F2EBDD;   /* alternating section / cards */
+  --paper-soft:   #FCFBF7;   /* card surfaces, lightest */
+
+  --ink:          #1A1410;   /* headlines */
+  --ink-soft:     #2E2820;   /* secondary headings */
+  --body-text:    #5C544A;   /* body copy */
+  --body-light:   #847B6E;   /* meta text */
+  --hairline:     rgba(26, 20, 16, 0.1);
+  --hairline-strong: rgba(26, 20, 16, 0.18);
+
+  /* Saffron/gold tokens carried over (used as accents on cream) */
+  --saffron-on-light: #C44D0E; /* deeper saffron for readability on cream */
+}
+
+.home-page {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SITE HEADER — Scroll-aware
+   Default = LIGHT style (used on /about, /news, and when scrolled past hero)
+   When body has .has-dark-hero-visible = DARK style (over hero only)
+═══════════════════════════════════════════════════════════════ */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 18px 48px;
+  background: rgba(250, 246, 238, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--hairline);
+  transition: background 0.45s ease, border-color 0.45s ease;
+  animation: navFadeDown 0.8s var(--ease-out-expo) 0.1s both;
+}
+
+@keyframes navFadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── DARK mode (over the cinematic hero) ─── */
+body.has-dark-hero-visible .site-nav {
+  background: linear-gradient(to bottom, rgba(5, 3, 2, 0.85), rgba(5, 3, 2, 0.4) 70%, transparent);
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+}
+
+/* ─── BRAND ─── */
+.site-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.site-nav__logo {
+  height: 48px;
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.site-nav__brand:hover .site-nav__logo { transform: scale(1.04); }
+
+.site-nav__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.site-nav__brand-name {
+  font-family: var(--font-display-dev);
+  font-size: 1.55rem;
+  color: var(--saffron-on-light);
+  letter-spacing: 0.02em;
+  transition: color 0.45s ease;
+}
+
+.site-nav__brand-tagline {
+  font-family: var(--font-display-dev);
+  font-size: 0.7rem;
+  color: var(--body-light);
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+  transition: color 0.45s ease;
+}
+
+/* Brand colors over dark hero */
+body.has-dark-hero-visible .site-nav__brand-name {
+  color: var(--gold-bright);
+  text-shadow: 0 0 18px rgba(244, 214, 138, 0.35);
+}
+body.has-dark-hero-visible .site-nav__brand-tagline {
+  color: var(--saffron-glow);
+}
+body.has-dark-hero-visible .site-nav__logo {
+  filter: drop-shadow(0 0 18px rgba(244, 214, 138, 0.4));
+}
+
+/* ─── NAV LINKS ─── */
+.site-nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  flex: 1;
+  justify-content: center;
+}
+
+.site-nav__link {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--body-text);
+  text-decoration: none;
+  padding: 6px 2px;
+  transition: color 0.3s ease;
+}
+
+.site-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--saffron);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s var(--ease-out-expo);
+}
+
+.site-nav__link:hover { color: var(--ink); }
+.site-nav__link:hover::after { transform: scaleX(1); }
+
+.site-nav__link--active {
+  color: var(--saffron-on-light);
+  font-weight: 600;
+}
+.site-nav__link--active::after { transform: scaleX(1); }
+
+/* Nav link colors over dark hero */
+body.has-dark-hero-visible .site-nav__link {
+  color: var(--warm-cream-dim);
+}
+body.has-dark-hero-visible .site-nav__link:hover { color: var(--warm-cream); }
+body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
+
+/* ─── CTA (saffron filled, consistent on both backgrounds) ─── */
+.site-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 22px;
+  background: var(--saffron);
+  border: 1.5px solid var(--saffron);
+  border-radius: 6px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.site-nav__cta:hover {
+  background: var(--saffron-deep);
+  border-color: var(--saffron-deep);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap');
+
+/* ── ANIMATIONS ── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(124px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 1px rgba(255,215,0,0.3), 0 2px 32px rgba(0,0,0,0.1); }
+  50%       { text-shadow: 0 0 2px #fb691a, 0 2px 32px rgba(0,0,0,0.1); }
+}
+
+@keyframes shimmerLine {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes flickerGlow {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 0.45; }
+}
+
+@keyframes slowPan {
+  0%   { transform: translate(-50%, -50%) scale(1.06); }
+  50%  { transform: translate(-50%, -50%) scale(1.1) translate(-6px, -3px); }
+  100% { transform: translate(-50%, -50%) scale(1.06); }
+}
+
+/* ── SECTION ── */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── VIDEO ── */
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  min-width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  animation: slowPan 22s ease-in-out infinite;
+}
+
+/* ── OVERLAY STACK ── */
+
+.ov-base {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    160deg,
+    rgba(5, 2, 0, 0.75) 0%,
+    rgba(10, 5, 0, 0.55) 45%,
+    rgba(5, 2, 0, 0.80) 100%
+  );
+}
+
+.ov-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 180, 0, 0.022) 0px,
+    rgba(255, 180, 0, 0.022) 1px,
+    transparent 1px,
+    transparent 44px
+  );
+}
+
+.ov-spotlight {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(
+    ellipse 60% 55% at 50% 46%,
+    rgba(255, 180, 0, 0.07) 0%,
+    rgba(0, 0, 0, 0.22) 55%,
+    rgba(0, 0, 0, 0.52) 100%
+  );
+}
+
+.ov-light-tl {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(
+    ellipse 55% 50% at 12% 18%,
+    rgba(255, 160, 0, 0.16) 0%,
+    transparent 68%
+  );
+  animation: flickerGlow 7s ease-in-out infinite;
+}
+
+.ov-light-br {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: radial-gradient(
+    ellipse 45% 40% at 90% 88%,
+    rgba(200, 100, 0, 0.12) 0%,
+    transparent 65%
+  );
+}
+
+.ov-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 22%;
+  z-index: 4;
+  background: linear-gradient(to bottom, rgba(4, 2, 0, 0.65) 0%, transparent 100%);
+}
+
+.ov-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32%;
+  z-index: 4;
+  background: linear-gradient(to top, rgba(4, 2, 0, 0.90) 0%, transparent 100%);
+}
+
+/* ── CONTENT WRAPPER ── */
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  z-index: 5;
+  text-align: center;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+/* ── TYPOGRAPHY ── */
+
+.hero-tagline {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: rgba(255, 215, 0, 0.85);
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  animation: fadeUp 1s ease 0.2s both;
+}
+
+.hero-main-title {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-weight: 700;
+    color: #fb691a;
+    line-height: 1;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFD700, #fff, #FFD700, transparent);
+  background-size: 200% 100%;
+  margin: 0 auto 1.6rem auto;
+  border-radius: 2px;
+  animation: fadeUp 1s ease 0.6s both, shimmerLine 3s linear 1.5s infinite;
+}
+
+.hero-para {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 2.2rem auto;
+  letter-spacing: 0.02em;
+  animation: fadeUp 1s ease 0.8s both;
+}
+
+/* ── CTA BUTTON ── */
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 2.2rem;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  animation: fadeUp 1s ease 1s both;
+}
+
+.hero-cta-btn:hover {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: #FFD700;
+  color: #FFD700;
+  box-shadow: 0 0 28px rgba(255, 215, 0, 0.3);
+  gap: 0.9rem;
+}
+
+/* ── PILLARSTRIP WRAPPER ── */
+
+.hero-pillar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 6;
+}

@@ -1,0 +1,646 @@
+{
+  "hero": {
+    "mr": {
+      "eyebrow": "॥ महाराष्ट्र धर्म ॥",
+      "title": "शिवसेना",
+      "subtitle": "मराठी अस्मितेसाठी, हिंदुत्वासाठी, मराठी माणसासाठी — एक संघटना, एक आवाज.",
+      "ctaPrimary": "सहभागी व्हा",
+      "ctaSecondary": "अधिक जाणून घ्या"
+    },
+    "en": {
+      "eyebrow": "|| MAHARASHTRA DHARMA ||",
+      "title": "Shivsena",
+      "subtitle": "For Marathi pride, for Hindutva, for the Marathi people — one organisation, one voice.",
+      "ctaPrimary": "Join Us",
+      "ctaSecondary": "Learn More"
+    }
+  },
+
+  "vision": {
+    "mr": {
+      "eyebrow": "मुख्य सिद्धांत",
+      "title": "संकल्प आणि तत्त्वप्रणाली",
+      "lede": "महाराष्ट्राच्या मातीतून जन्मलेल्या या संघटनेचा पाया तीन ठाम स्तंभांवर आहे — सुशासन, एकता आणि प्रगती.",
+      "pillars": [
+        {
+          "id": "governance",
+          "number": "01",
+          "title": "सुशासन",
+          "body": "प्रत्येक निर्णय-प्रक्रियेत पारदर्शकता आणि जबाबदारी — जिल्हा समित्यांपासून ते सर्वोच्च परिषदांपर्यंत."
+        },
+        {
+          "id": "unity",
+          "number": "02",
+          "title": "एकता",
+          "body": "विविध आवाज एकत्र आणणे — भाषा, प्रांत, पिढ्या — एकसंध आणि सर्वसमावेशक समाजाची उभारणी."
+        },
+        {
+          "id": "progress",
+          "number": "03",
+          "title": "प्रगती",
+          "body": "शाश्वत विकास, शिक्षण, रोजगार आणि आर्थिक वाढ — वचनांनी नव्हे, परिणामांनी मोजलेली."
+        }
+      ]
+    },
+    "en": {
+      "eyebrow": "CORE PRINCIPLES",
+      "title": "Vision & Philosophy",
+      "lede": "Born from the soil of Maharashtra, this organisation stands on three firm pillars — Good Governance, Unity, and Progress.",
+      "pillars": [
+        {
+          "id": "governance",
+          "number": "01",
+          "title": "Governance",
+          "body": "Transparency and accountability in every decision-making process — from district committees to the highest councils."
+        },
+        {
+          "id": "unity",
+          "number": "02",
+          "title": "Unity",
+          "body": "Bringing diverse voices together — languages, regions, generations — to forge one harmonious and inclusive society."
+        },
+        {
+          "id": "progress",
+          "number": "03",
+          "title": "Progress",
+          "body": "Sustainable development, education, employment, and economic growth — measured not by promises but by impact."
+        }
+      ]
+    }
+  },
+
+  "leadership": {
+    "mr": {
+      "eyebrow": "आमचा परिवार",
+      "title": "आमचे नेतृत्व",
+      "leaders": [
+        {
+          "id": "thackeray",
+          "name": "श्री. बाळासाहेब ठाकरे",
+          "role": "संस्थापक अध्यक्ष",
+          "image": "leaders/thackeray.jpg"
+        },
+        {
+          "id": "dighe",
+          "name": "श्री. आनंद दिघे साहेब",
+          "role": "धर्मवीर",
+          "image": "leaders/dharmaveer.jpg"
+        },
+        {
+          "id": "shinde",
+          "name": "एकनाथ शिंदे",
+          "role": "मुख्यमंत्री, महाराष्ट्र",
+          "image": "leaders/shinde.png"
+        }
+      ]
+    },
+    "en": {
+      "eyebrow": "OUR FAMILY",
+      "title": "Our Leadership",
+      "leaders": [
+        {
+          "id": "thackeray",
+          "name": "Shri Balasaheb Thackeray",
+          "role": "Founder President",
+          "image": "leaders/thackeray.jpg"
+        },
+        {
+          "id": "dighe",
+          "name": "Shri Anand Dighe Saheb",
+          "role": "Dharmaveer",
+          "image": "leaders/dharmaveer.jpg"
+        },
+        {
+          "id": "shinde",
+          "name": "Eknath Shinde",
+          "role": "Chief Minister, Maharashtra",
+          "image": "leaders/shinde.png"
+        }
+      ]
+    }
+  },
+
+  "storytelling": {
+    "mr": {
+      "eyebrow": "आमचा प्रवास · १९६६ — आज",
+      "title": "शिवसेनेचा प्रवास",
+      "chapterLabel": "अध्याय",
+      "scrollHint": "पुढे स्क्रोल करा",
+      "eras": [
+        {
+          "id": "founding",
+          "yearDev": "१९ जून १९६६",
+          "yearLatin": "19 June 1966",
+          "title": "शिवसेनेची स्थापना",
+          "short": "मराठी अस्मितेच्या लढ्याची सुरुवात.",
+          "description": "'मार्मिक'ला मिळालेल्या प्रतिसादामुळे उत्साह वाढला. मराठी माणसांची उर्जा एकत्र आणण्यासाठी संघटनेची गरज सगळीकडून व्यक्त होऊ लागली. प्रबोधनकारांनाही तसा आग्रह केला. त्यातून शिवसेनेचा जन्म झाला.",
+          "image": "/img-1.webp"
+        },
+        {
+          "id": "alliance-1995",
+          "yearDev": "१९९५",
+          "yearLatin": "1995",
+          "title": "विधानसभेवर भगवा फडकला",
+          "short": "महाराष्ट्रात पहिल्यांदाच भगवा सत्तेवर.",
+          "description": "शिवसेना-भाजपा युतीची पहिल्यांदाच महाराष्ट्रात सत्ता आली. शिवसेनेचे मनोहर जोशी युतीचे पहिले मुख्यमंत्री झाले.",
+          "image": "/img-2.webp"
+        },
+        {
+          "id": "shinde-cm",
+          "yearDev": "३० जून २०२२",
+          "yearLatin": "30 June 2022",
+          "title": "एकनाथ शिंदे मुख्यमंत्री झाले",
+          "short": "शिवसेनेच्या इतिहासातील सर्वात मोठा बदल.",
+          "description": "एकनाथ शिंदे यांनी बंडानंतर महाराष्ट्राच्या मुख्यमंत्रीपदाची शपथ घेतली. हा शिवसेनेतील सर्वात मोठा राजकीय बदल मानला जातो.",
+          "image": "/img-1.jpg"
+        },
+        {
+          "id": "shinde-dcm",
+          "yearDev": "५ डिसेंबर २०२४",
+          "yearLatin": "5 December 2024",
+          "title": "उपमुख्यमंत्रीपदाची शपथ",
+          "short": "पुन्हा एकदा सत्तेच्या केंद्रस्थानी.",
+          "description": "५ डिसेंबर रोजी एकनाथ शिंदे यांनी उपमुख्यमंत्रीपदाची शपथ घेतली.",
+          "image": "https://images.unsplash.com/photo-1605600659908-0ef719419d41?w=2000&q=85&auto=format&fit=crop"
+        }
+      ]
+    },
+    "en": {
+      "eyebrow": "OUR JOURNEY · 1966 — TODAY",
+      "title": "The Shiv Sena Journey",
+      "chapterLabel": "CHAPTER",
+      "scrollHint": "SCROLL TO UNFURL",
+      "eras": [
+        {
+          "id": "founding",
+          "yearDev": "१९ जून १९६६",
+          "yearLatin": "19 June 1966",
+          "title": "Founding of Shiv Sena",
+          "short": "The beginning of the Marathi pride movement.",
+          "description": "The enthusiastic response to 'Marmik' magazine fuelled the movement. The need for an organisation to channel the energy of the Marathi people was voiced from every quarter. Out of this, Shiv Sena was born.",
+          "image": "/img-1.webp"
+        },
+        {
+          "id": "alliance-1995",
+          "yearDev": "१९९५",
+          "yearLatin": "1995",
+          "title": "Saffron Flag Over the Assembly",
+          "short": "Saffron in power in Maharashtra for the first time.",
+          "description": "The Shiv Sena–BJP alliance came to power in Maharashtra for the first time. Shiv Sena's Manohar Joshi became the alliance's first Chief Minister.",
+          "image": "/img-2.webp"
+        },
+        {
+          "id": "shinde-cm",
+          "yearDev": "३० जून २०२२",
+          "yearLatin": "30 June 2022",
+          "title": "Eknath Shinde Becomes Chief Minister",
+          "short": "The biggest political shift in Shiv Sena history.",
+          "description": "After the rebellion, Eknath Shinde was sworn in as Chief Minister of Maharashtra. This is considered the biggest political shift within Shiv Sena.",
+          "image": "/img-1.jpg"
+        },
+        {
+          "id": "shinde-dcm",
+          "yearDev": "५ डिसेंबर २०२४",
+          "yearLatin": "5 December 2024",
+          "title": "Oath as Deputy Chief Minister",
+          "short": "Back at the centre of power.",
+          "description": "On 5 December, Eknath Shinde took oath as Deputy Chief Minister of Maharashtra.",
+          "image": "https://images.unsplash.com/photo-1605600659908-0ef719419d41?w=2000&q=85&auto=format&fit=crop"
+        }
+      ]
+    }
+  },
+
+"news": {
+  "mr": {
+    "eyebrow": "मैदानावरून",
+    "title": "बातम्या आणि माध्यम",
+    "viewAllLabel": "सर्व संग्रह पहा",
+    "featured": {
+      "badge": "ताजी बातमी",
+      "date": "२२ मे २०२५",
+      "category": "राजकीय",
+      "title": "महापालिका निवडणुकांसाठी शिवसेना सज्ज — शिंदेंनी कार्यकर्त्यांना दिले मार्गदर्शन",
+      "excerpt": "उपमुख्यमंत्री एकनाथ शिंदे यांनी मुंबईत विविध पक्षांतून शिवसेनेत आलेल्या माजी नगरसेवकांशी संवाद साधला. मुंबई, ठाणे, पुण्यासह राज्यातील महापालिका निवडणुकांच्या पार्श्वभूमीवर त्यांनी कार्यकर्त्यांना तयारी सुरू करण्याचे निर्देश दिले.",
+      "image": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=1600&q=85&auto=format&fit=crop"
+    },
+    "sidebar": [
+      {
+        "date": "११ जानेवारी २०२६",
+        "category": "महापालिका",
+        "title": "महायुती बीएमसी जाहीरनामा — पाच वर्षे पाणीपट्टी जैसे थे, महिलांना बेस्टमध्ये ५०% सवलत",
+        "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&q=85&auto=format&fit=crop"
+      },
+      {
+        "date": "१७ जुलै २०२५",
+        "category": "राजकीय",
+        "title": "रिपब्लिकन सेना व शिवसेनेत राजकीय युती — महाराष्ट्रात नवी आघाडी",
+        "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&q=85&auto=format&fit=crop"
+      },
+      {
+        "date": "फेब्रुवारी २०२५",
+        "category": "विकास",
+        "title": "बीएमसी बजेट ७४,४२७ कोटी — पायाभूत सुविधा, आरोग्य व पाणीपुरवठ्यावर भर",
+        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=85&auto=format&fit=crop"
+      }
+    ]
+  },
+  "en": {
+    "eyebrow": "FROM THE GROUND",
+    "title": "News & Media",
+    "viewAllLabel": "VIEW ALL ARCHIVE",
+    "featured": {
+      "badge": "LATEST NEWS",
+      "date": "May 22, 2025",
+      "category": "POLITICS",
+      "title": "Shiv Sena Gears Up for BMC Elections — Shinde Briefs Former Corporators Across Mumbai",
+      "excerpt": "Deputy Chief Minister Eknath Shinde met with former corporators who have joined Shiv Sena from various parties across Mumbai. With civic body elections in Mumbai, Thane and Pune expected between October and December, Shinde urged workers to begin ground-level preparations immediately.",
+      "image": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=1600&q=85&auto=format&fit=crop"
+    },
+    "sidebar": [
+      {
+        "date": "Jan 11, 2026",
+        "category": "CIVIC",
+        "title": "Mahayuti BMC Manifesto: 5-year water charge freeze and 50% bus fare relief for women",
+        "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&q=85&auto=format&fit=crop"
+      },
+      {
+        "date": "Jul 17, 2025",
+        "category": "ALLIANCE",
+        "title": "Republican Sena and Shiv Sena forge political alliance, strengthening Mahayuti in Maharashtra",
+        "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&q=85&auto=format&fit=crop"
+      },
+      {
+        "date": "Feb 2025",
+        "category": "DEVELOPMENT",
+        "title": "BMC presents record Rs 74,427 crore budget focused on infrastructure, health and water supply",
+        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=85&auto=format&fit=crop"
+      }
+    ]
+  }
+},
+
+"socialFeed": {
+  "mr": {
+    "eyebrow": "सोशल मीडिया",
+    "title": "आमच्याशी जोडलेले राहा",
+    "followLabel": "फॉलो करा",
+    "posts": [
+      {
+        "platform": "instagram",
+        "type": "image",
+        "image": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=600&q=85&auto=format&fit=crop",
+        "handle": "@shivsenaofc",
+        "caption": "शिवाजी पार्कमधील रॅलीत हजारो शिवसैनिक — मुंबईत चळवळीचे हृदय अजूनही धडधडत आहे. #shivsena #EknathShinde",
+        "meta": "९.३ लाख फॉलोअर्स",
+        "time": "२ तास"
+      },
+      {
+        "platform": "facebook",
+        "type": "image",
+        "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=85&auto=format&fit=crop",
+        "handle": "Shiv Sena",
+        "caption": "महाराष्ट्रभर स्थापना दिन उत्सव — मराठी माणसाप्रती आमची वचनबद्धता पुन्हा एकदा सिद्ध. #ShivSena",
+        "meta": "७.२ लाख प्रतिक्रिया",
+        "time": "५ तास"
+      },
+      {
+        "platform": "twitter",
+        "type": "text",
+        "handle": "@Shivsenaofc",
+        "caption": "\"महाराष्ट्राला केवळ सत्ता नव्हे, तर जबाबदार, संवेदनशील आणि उत्तरदायी नेतृत्व हवे आहे.\" — एकनाथ शिंदे",
+        "meta": "४.८ हजार रिट्विट",
+        "time": "८ तास"
+      },
+      {
+        "platform": "youtube",
+        "type": "video",
+        "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=85&auto=format&fit=crop",
+        "handle": "Shiv Sena",
+        "caption": "पहा: दसरा मेळावा २०२४ — आझाद मैदान, मुंबई | उपमुख्यमंत्री एकनाथ शिंदे यांचे संपूर्ण भाषण.",
+        "meta": "५६ हजार व्ह्यूज",
+        "time": "१ दिवस"
+      }
+    ]
+  },
+  "en": {
+    "eyebrow": "SOCIAL MEDIA",
+    "title": "Stay Connected With Us",
+    "followLabel": "Follow",
+    "posts": [
+      {
+        "platform": "instagram",
+        "type": "image",
+        "image": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=600&q=85&auto=format&fit=crop",
+        "handle": "@shivsenaofc",
+        "caption": "Thousands of Shiv Sainiks at Shivaji Park — the movement's heart still beats strong in Mumbai. #shivsena #EknathShinde",
+        "meta": "931K followers",
+        "time": "2h"
+      },
+      {
+        "platform": "facebook",
+        "type": "image",
+        "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=85&auto=format&fit=crop",
+        "handle": "Shiv Sena",
+        "caption": "Foundation Day celebrations across Maharashtra reaffirm our commitment to the Marathi manoos and Maharashtra's development.",
+        "meta": "720K reactions",
+        "time": "5h"
+      },
+      {
+        "platform": "twitter",
+        "type": "text",
+        "handle": "@Shivsenaofc",
+        "caption": "\"Maharashtra deserves not just governance, but leadership that listens, acts, and stands accountable to its people.\" — Eknath Shinde",
+        "meta": "4.8K reposts",
+        "time": "8h"
+      },
+      {
+        "platform": "youtube",
+        "type": "video",
+        "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=85&auto=format&fit=crop",
+        "handle": "Shiv Sena",
+        "caption": "WATCH: Dussehra Rally 2024 — Azad Maidan, Mumbai | Full address by Dy. CM Eknath Shinde.",
+        "meta": "56K views",
+        "time": "1d"
+      }
+    ]
+  }
+}, 
+
+  "officeLocator": {
+    "mr": {
+      "eyebrow": "महाराष्ट्रभर",
+      "title": "जवळचे कार्यालय शोधा",
+      "searchPlaceholder": "शहर किंवा कार्यालयाचे नाव शोधा…",
+      "emptyMessage": "कोणतेही कार्यालय आढळले नाही.",
+      "captionLabel": "महाराष्ट्र",
+      "hqBadge": "मुख्य",
+      "offices": [
+        {
+          "id": "mumbai",
+          "name": "शिवसेना भवन",
+          "city": "मुंबई",
+          "address": "दादर (पूर्व), मुंबई ४०००१४",
+          "phone": "+91 22 2422 3030",
+          "hours": "सोम — शनि · सकाळी १० — संध्या ६",
+          "pin": { "x": 110, "y": 450 },
+          "isHQ": true
+        },
+        {
+          "id": "pune",
+          "name": "कार्यालय — पुणे",
+          "city": "पुणे",
+          "address": "शिवाजी नगर, पुणे ४११००५",
+          "phone": "+91 20 2553 1212",
+          "hours": "सोम — शनि · सकाळी १० — संध्या ६",
+          "pin": { "x": 230, "y": 510 }
+        },
+        {
+          "id": "nashik",
+          "name": "कार्यालय — नाशिक",
+          "city": "नाशिक",
+          "address": "कॉलेज रोड, नाशिक ४२२००५",
+          "phone": "+91 253 257 9090",
+          "hours": "सोम — शनि · सकाळी १० — संध्या ५:३०",
+          "pin": { "x": 230, "y": 320 }
+        },
+        {
+          "id": "nagpur",
+          "name": "कार्यालय — नागपूर",
+          "city": "नागपूर",
+          "address": "सिव्हिल लाइन्स, नागपूर ४४०००१",
+          "phone": "+91 712 256 4040",
+          "hours": "सोम — शनि · सकाळी १० — संध्या ६",
+          "pin": { "x": 850, "y": 330 }
+        },
+        {
+          "id": "aurangabad",
+          "name": "कार्यालय — संभाजीनगर",
+          "city": "संभाजीनगर",
+          "address": "जालना रोड, छत्रपती संभाजीनगर ४३१००१",
+          "phone": "+91 240 233 5050",
+          "hours": "सोम — शनि · सकाळी १० — संध्या ५:३०",
+          "pin": { "x": 430, "y": 410 }
+        },
+        {
+          "id": "kolhapur",
+          "name": "कार्यालय — कोल्हापूर",
+          "city": "कोल्हापूर",
+          "address": "महाद्वार रोड, कोल्हापूर ४१६००१",
+          "phone": "+91 231 265 7575",
+          "hours": "सोम — शनि · सकाळी १० — संध्या ५:३०",
+          "pin": { "x": 260, "y": 690 }
+        }
+      ]
+    },
+    "en": {
+      "eyebrow": "ACROSS MAHARASHTRA",
+      "title": "Find an Office Near You",
+      "searchPlaceholder": "Search by city or office name…",
+      "emptyMessage": "No offices match your search.",
+      "captionLabel": "MAHARASHTRA",
+      "hqBadge": "HQ",
+      "offices": [
+        {
+          "id": "mumbai",
+          "name": "Shiv Sena Bhavan",
+          "city": "Mumbai",
+          "address": "Dadar (East), Mumbai 400014",
+          "phone": "+91 22 2422 3030",
+          "hours": "Mon — Sat · 10:00 — 18:00",
+          "pin": { "x": 110, "y": 450 },
+          "isHQ": true
+        },
+        {
+          "id": "pune",
+          "name": "Karyalaya — Pune",
+          "city": "Pune",
+          "address": "Shivaji Nagar, Pune 411005",
+          "phone": "+91 20 2553 1212",
+          "hours": "Mon — Sat · 10:00 — 18:00",
+          "pin": { "x": 230, "y": 510 }
+        },
+        {
+          "id": "nashik",
+          "name": "Karyalaya — Nashik",
+          "city": "Nashik",
+          "address": "College Road, Nashik 422005",
+          "phone": "+91 253 257 9090",
+          "hours": "Mon — Sat · 10:00 — 17:30",
+          "pin": { "x": 230, "y": 320 }
+        },
+        {
+          "id": "nagpur",
+          "name": "Karyalaya — Nagpur",
+          "city": "Nagpur",
+          "address": "Civil Lines, Nagpur 440001",
+          "phone": "+91 712 256 4040",
+          "hours": "Mon — Sat · 10:00 — 18:00",
+          "pin": { "x": 850, "y": 330 }
+        },
+        {
+          "id": "aurangabad",
+          "name": "Karyalaya — Sambhajinagar",
+          "city": "Sambhajinagar",
+          "address": "Jalna Road, Chhatrapati Sambhajinagar 431001",
+          "phone": "+91 240 233 5050",
+          "hours": "Mon — Sat · 10:00 — 17:30",
+          "pin": { "x": 430, "y": 410 }
+        },
+        {
+          "id": "kolhapur",
+          "name": "Karyalaya — Kolhapur",
+          "city": "Kolhapur",
+          "address": "Mahadwar Road, Kolhapur 416001",
+          "phone": "+91 231 265 7575",
+          "hours": "Mon — Sat · 10:00 — 17:30",
+          "pin": { "x": 260, "y": 690 }
+        }
+      ]
+    }
+  },
+
+  "joinCta": {
+    "mr": {
+      "eyebrow": "चळवळीत सामील व्हा",
+      "title": "पुढे काय येणार त्याचा भाग व्हा",
+      "lede": "कार्यकर्ता बना. तुमचे नाव, वेळ, आवाज — सहा दशकांपासून महाराष्ट्राला घडवणाऱ्या चळवळीला द्या.",
+      "emailPlaceholder": "तुमचा ईमेल पत्ता",
+      "submitLabel": "सदस्य व्हा",
+      "privacyNote": "तुमची माहिती कधीही तिसऱ्या पक्षाला दिली जाणार नाही.",
+      "successMessage": "धन्यवाद! आम्ही लवकरच तुमच्याशी संपर्क साधू.",
+      "benefits": [
+        {
+          "id": "voice",
+          "title": "आपला आवाज उठवा",
+          "body": "स्थानिक उपक्रमांवर मत द्या, जिल्हा बैठकांना उपस्थित राहा, इतर कार्यकर्त्यांसोबत अजेंडा ठरवा."
+        },
+        {
+          "id": "initiatives",
+          "title": "उपक्रमांत सहभागी व्हा",
+          "body": "सामुदायिक उपक्रमांत सामील व्हा — आरोग्य शिबिरे, शिक्षण कार्यक्रम, पर्यावरण कार्य आणि निवडणूक समर्थन."
+        },
+        {
+          "id": "informed",
+          "title": "माहितीत राहा",
+          "body": "साप्ताहिक अहवाल, धोरण सूचना आणि महाराष्ट्रभर होणाऱ्या कार्याचे सदस्यांसाठी विशेष अपडेट."
+        }
+      ]
+    },
+    "en": {
+      "eyebrow": "JOIN THE MOVEMENT",
+      "title": "Be Part of What Comes Next",
+      "lede": "Become a kāryakartā. Add your name, your time, your voice to a movement that has shaped Maharashtra for six decades — and is still being written.",
+      "emailPlaceholder": "Your email address",
+      "submitLabel": "Become a Member",
+      "privacyNote": "Your information will never be shared with third parties.",
+      "successMessage": "Thank you! We'll be in touch soon.",
+      "benefits": [
+        {
+          "id": "voice",
+          "title": "Make Your Voice Heard",
+          "body": "Vote on local initiatives, attend district meetings, and shape the agenda alongside other kāryakartās."
+        },
+        {
+          "id": "initiatives",
+          "title": "Take Part in Initiatives",
+          "body": "Join community drives — health camps, education programs, environmental work, and election support."
+        },
+        {
+          "id": "informed",
+          "title": "Stay Informed",
+          "body": "Weekly briefings, policy alerts, and member-only updates on the work being done across Maharashtra."
+        }
+      ]
+    }
+  },
+
+  "footer": {
+    "mr": {
+      "tagline": "मराठी अस्मितेसाठी, हिंदुत्वासाठी, मराठी माणसासाठी.",
+      "about": "मराठी माणसासाठी जन्मलेली चळवळ — मुंबईत जन्मली, महाराष्ट्रभर पसरली, उद्याच्या न्याय्य आणि समृद्ध महाराष्ट्रासाठी वचनबद्ध.",
+      "brandTag": "॥ महाराष्ट्र धर्म ॥",
+      "columns": [
+        {
+          "heading": "नेव्हिगेट करा",
+          "links": [
+            { "label": "होम",        "href": "/home" },
+            { "label": "आमच्याबद्दल", "href": "/about" },
+            { "label": "बातम्या",     "href": "/news" },
+            { "label": "नेतृत्व",     "href": "/leadership" },
+            { "label": "सदस्य",      "href": "/members" }
+          ]
+        },
+        {
+          "heading": "सहभागी व्हा",
+          "links": [
+            { "label": "स्वयंसेवक",   "href": "#" },
+            { "label": "देणगी द्या",   "href": "#" },
+            { "label": "कार्यालय शोधा", "href": "#offices" },
+            { "label": "प्रेस रिलीज",  "href": "#" },
+            { "label": "वार्षिक अहवाल", "href": "#" }
+          ]
+        },
+        {
+          "heading": "संपर्क",
+          "links": [
+            { "label": "संपर्क साधा",  "href": "#" },
+            { "label": "करिअर",       "href": "#" },
+            { "label": "गोपनीयता धोरण", "href": "#" },
+            { "label": "वापराच्या अटी", "href": "#" }
+          ]
+        }
+      ],
+      "newsletter": {
+        "heading": "न्यूजलेटर",
+        "description": "महत्त्वाच्या घडामोडी थेट तुमच्या इनबॉक्समध्ये.",
+        "emailPlaceholder": "ईमेल पत्ता",
+        "submitLabel": "सबस्क्राइब करा"
+      },
+      "copyright": "© 2026 शिवसेना. सर्व हक्क राखीव."
+    },
+    "en": {
+      "tagline": "For Marathi pride, for Hindutva, for the Marathi people.",
+      "about": "A movement for the Marathi manoos — born in Mumbai, carried across Maharashtra, and committed to a fair, prosperous, dignified tomorrow.",
+      "brandTag": "॥ MAHARASHTRA DHARMA ॥",
+      "columns": [
+        {
+          "heading": "Navigate",
+          "links": [
+            { "label": "Home",       "href": "/home" },
+            { "label": "About",      "href": "/about" },
+            { "label": "News",       "href": "/news" },
+            { "label": "Leadership", "href": "/leadership" },
+            { "label": "Members",    "href": "/members" }
+          ]
+        },
+        {
+          "heading": "Get Involved",
+          "links": [
+            { "label": "Volunteer",      "href": "#" },
+            { "label": "Donate",         "href": "#" },
+            { "label": "Find Office",    "href": "#offices" },
+            { "label": "Press Releases", "href": "#" },
+            { "label": "Annual Reports", "href": "#" }
+          ]
+        },
+        {
+          "heading": "Connect",
+          "links": [
+            { "label": "Contact",        "href": "#" },
+            { "label": "Careers",        "href": "#" },
+            { "label": "Privacy Policy", "href": "#" },
+            { "label": "Terms of Use",   "href": "#" }
+          ]
+        }
+      ],
+      "newsletter": {
+        "heading": "Newsletter",
+        "description": "Important updates straight to your inbox.",
+        "emailPlaceholder": "Email address",
+        "submitLabel": "Subscribe"
+      },
+      "copyright": "© 2026 Shiv Sena. All rights reserved."
+    }
+  }
+}

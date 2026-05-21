@@ -1,0 +1,583 @@
+/* ═══════════════════════════════════════════════════════════════
+   OFFICE LOCATOR — Real Maharashtra Map + Picker Tool
+═══════════════════════════════════════════════════════════════ */
+.locator {
+  position: relative;
+  padding: 140px 48px 160px;
+  background: var(--paper);
+}
+
+.locator__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ─── Header ─── */
+.locator__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.locator__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: var(--saffron-on-light);
+  font-weight: 700;
+}
+
+.locator__eyebrow-line { width: 40px; height: 1px; background: var(--saffron-on-light); }
+
+.locator__title {
+  font-family: var(--font-display-en);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+/* Controls row */
+.locator__controls { display: flex; gap: 10px; align-items: stretch; }
+
+.locator__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 280px;
+  padding: 12px 18px;
+  background: var(--paper-soft);
+  border: 1.5px solid var(--hairline-strong);
+  transition: border-color 0.3s ease;
+}
+.locator__search:focus-within { border-color: var(--saffron); }
+.locator__search input:disabled { opacity: 0.4; cursor: not-allowed; }
+.locator__search-icon { color: var(--body-light); flex-shrink: 0; }
+.locator__search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+.locator__search input::placeholder { color: var(--body-light); }
+.locator__search-clear {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--body-light);
+  cursor: pointer;
+  padding: 0 4px;
+}
+.locator__search-clear:hover { color: var(--saffron); }
+
+/* 🛠️ Picker toggle button */
+.locator__picker-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: transparent;
+  border: 1.5px dashed var(--hairline-strong);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  color: var(--body-text);
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.locator__picker-toggle:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: var(--paper-soft);
+}
+.locator__picker-toggle.is-on {
+  background: #1aa56b;
+  border-color: #1aa56b;
+  border-style: solid;
+  color: #fff;
+}
+.locator__picker-toggle.is-on:hover { background: #178a59; border-color: #178a59; }
+.locator__picker-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* ─── Grid layout ─── */
+.locator__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MAP CONTAINER — aspect matches new SVG viewBox 1126.9:940.43
+═══════════════════════════════════════════════════════════════ */
+.locator__map {
+  position: relative;
+  aspect-ratio: 1126.9 / 940.43;
+  background: var(--paper-soft);
+  border: 1px solid var(--hairline);
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+
+.locator__map.is-picking {
+  cursor: crosshair;
+  border-color: #1aa56b;
+  box-shadow: 0 0 0 1px rgba(26, 165, 107, 0.2);
+}
+
+.locator__map-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.locator__map-caption {
+  position: absolute;
+  bottom: 14px;
+  left: 22px;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.4em;
+  color: var(--body-light);
+  font-weight: 700;
+}
+
+/* 🛠️ Live coordinate readout chip */
+.locator__readout {
+  position: absolute;
+  top: 14px;
+  left: 22px;
+  background: #1aa56b;
+  color: #fff;
+  padding: 6px 12px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(26, 165, 107, 0.3);
+}
+.locator__readout strong { font-weight: 700; }
+
+/* District outlines */
+.locator__district--cls-1 {
+  fill: rgba(196, 77, 14, 0.04);
+  stroke: rgba(196, 77, 14, 0.22);
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  transition: fill 0.3s ease;
+}
+
+.locator__district--cls-2 {
+  fill: none;
+  stroke: rgba(196, 77, 14, 0.55);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+/* Office pins (saffron, pulsing) */
+.locator__pin {
+  transition: transform 0.4s var(--ease-out-expo);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.locator__pin-dot {
+  fill: var(--saffron);
+  stroke: #fff;
+  stroke-width: 2.5;
+  transition: fill 0.3s ease;
+  filter: drop-shadow(0 2px 6px rgba(255, 107, 26, 0.5));
+}
+
+.locator__pin-pulse {
+  fill: var(--saffron);
+  opacity: 0.3;
+  transform-origin: center;
+  animation: pinPulse 2.4s ease-in-out infinite;
+}
+
+.locator__pin-label {
+  fill: var(--saffron-on-light);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+
+.locator__pin:hover .locator__pin-dot,
+.locator__pin.is-active .locator__pin-dot {
+  fill: var(--saffron-on-light);
+}
+
+.locator__pin.is-active .locator__pin-pulse {
+  animation-duration: 1.4s;
+  opacity: 0.45;
+}
+
+@keyframes pinPulse {
+  0%   { transform: scale(0.5); opacity: 0.5; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* 🛠️ Picked points */
+.locator__picked-pin { pointer-events: none; }
+
+.locator__picked-num {
+  fill: #fff;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   OFFICE LIST
+═══════════════════════════════════════════════════════════════ */
+.locator__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+}
+
+.locator__list::-webkit-scrollbar { width: 6px; }
+.locator__list::-webkit-scrollbar-track { background: transparent; }
+.locator__list::-webkit-scrollbar-thumb { background: var(--hairline-strong); border-radius: 3px; }
+
+.locator__empty {
+  padding: 32px 24px;
+  text-align: center;
+  font-family: var(--font-body);
+  color: var(--body-light);
+  background: var(--paper-soft);
+  border: 1px dashed var(--hairline-strong);
+}
+
+.office-card {
+  position: relative;
+  padding: 22px 56px 22px 22px;
+  background: var(--paper-soft);
+  border: 1px solid var(--hairline);
+  cursor: pointer;
+  transition:
+    border-color 0.4s ease,
+    background 0.3s ease,
+    transform 0.4s var(--ease-out-expo),
+    box-shadow 0.4s ease;
+}
+
+.office-card:hover {
+  border-color: var(--hairline-strong);
+  transform: translateX(3px);
+  background: #fff;
+}
+
+.office-card.is-active {
+  background: #fff;
+  border-color: var(--saffron);
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 26, 0.15),
+    0 18px 40px -22px rgba(255, 107, 26, 0.25);
+}
+
+.office-card.is-active::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--saffron);
+}
+
+.office-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.office-card__name {
+  font-family: var(--font-display-en);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  margin-bottom: 2px;
+}
+
+.office-card__city {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  color: var(--saffron-on-light);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.office-card__hq-badge {
+  background: var(--saffron);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  font-weight: 700;
+  padding: 4px 10px;
+  flex-shrink: 0;
+}
+
+.office-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.office-card__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--body-text);
+  line-height: 1.45;
+}
+
+.office-card__row svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--body-light);
+}
+
+.office-card.is-active .office-card__row svg { color: var(--saffron); }
+
+.office-card__arrow {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translateY(-50%) translateX(-4px);
+  color: var(--body-light);
+  opacity: 0;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.office-card:hover .office-card__arrow,
+.office-card.is-active .office-card__arrow {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  color: var(--saffron);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   🛠️ PICKER PANEL — delete in Phase 2
+═══════════════════════════════════════════════════════════════ */
+.picker-panel {
+  background: var(--paper-soft);
+  border: 1.5px dashed #1aa56b;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  max-height: 640px;
+}
+
+.picker-panel__head h4 {
+  font-family: var(--font-display-en);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: -0.005em;
+}
+
+.picker-panel__head p {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--body-text);
+  margin-bottom: 20px;
+}
+
+.picker-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-right: 6px;
+  flex: 1;
+  min-height: 100px;
+  scrollbar-width: thin;
+}
+
+.picker-panel__list::-webkit-scrollbar { width: 5px; }
+.picker-panel__list::-webkit-scrollbar-thumb { background: var(--hairline-strong); border-radius: 3px; }
+
+.picker-panel__empty {
+  text-align: center;
+  padding: 28px 16px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--body-light);
+  background: var(--paper-deep);
+  border: 1px dashed var(--hairline-strong);
+}
+
+.picker-row {
+  display: grid;
+  grid-template-columns: 26px 1fr auto 26px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid var(--hairline);
+}
+
+.picker-row__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: #1aa56b;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.picker-row__label {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--ink);
+  padding: 4px 4px;
+  min-width: 0;
+}
+
+.picker-row__label:focus { background: var(--paper); }
+
+.picker-row__coords {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--body-light);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.picker-row__remove {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: var(--paper-deep);
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--body-light);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.picker-row__remove:hover { background: #c4322e; color: #fff; }
+
+.picker-panel__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--hairline);
+}
+
+.picker-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.picker-btn--primary { background: #1aa56b; color: #fff; }
+.picker-btn--primary:hover { background: #178a59; }
+
+.picker-btn--ghost {
+  background: transparent;
+  border: 1.5px solid var(--hairline-strong);
+  color: var(--body-text);
+  flex: 0 0 auto;
+  padding: 12px 18px;
+}
+
+.picker-btn--ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .locator { padding: 100px 28px 120px; }
+  .locator__grid { grid-template-columns: 1fr; gap: 40px; }
+  .locator__map { position: relative; top: auto; }
+  .locator__list { max-height: none; }
+  .picker-panel { max-height: none; }
+}
+
+@media (max-width: 768px) {
+  .locator { padding: 80px 20px 100px; }
+  .locator__title { font-size: clamp(2rem, 8vw, 2.4rem); }
+  .locator__controls { flex-direction: column; gap: 8px; width: 100%; }
+  .locator__search { min-width: 100%; }
+  .locator__picker-toggle { justify-content: center; }
+  .locator__header { margin-bottom: 40px; }
+  .office-card { padding: 18px 48px 18px 18px; }
+  .office-card__name { font-size: 1.05rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .locator__pin-pulse { animation: none; opacity: 0.3; }
+  .office-card, .office-card__arrow { transition: none; }
+}

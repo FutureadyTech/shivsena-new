@@ -1,0 +1,95 @@
+/* ═══════════════════════════════════════════════════════════════
+   LANGUAGE TOGGLE — Minimal "मराठी | EN" pair
+═══════════════════════════════════════════════════════════════ */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.lang-toggle__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-toggle__btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-weight: 500;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  line-height: 1;
+}
+
+.lang-toggle__sep {
+  display: inline-block;
+  font-weight: 300;
+  opacity: 0.35;
+  padding: 0 2px;
+}
+
+/* ─── AUTO variant (inherits parent text color) ─── */
+.lang-toggle--auto {
+  color: inherit;
+}
+.lang-toggle--auto .lang-toggle__btn {
+  color: inherit;
+  opacity: 0.55;
+}
+.lang-toggle--auto .lang-toggle__btn:hover {
+  opacity: 0.85;
+}
+.lang-toggle--auto .lang-toggle__btn.is-active {
+  opacity: 1;
+  font-weight: 700;
+  color: var(--saffron-on-light, #C44D0E);
+}
+
+/* ─── LIGHT variant (for cream/white headers) ─── */
+.lang-toggle--light .lang-toggle__btn {
+  color: var(--body-light, #847B6E);
+}
+.lang-toggle--light .lang-toggle__btn:hover {
+  color: var(--ink, #1A1410);
+}
+.lang-toggle--light .lang-toggle__btn.is-active {
+  color: var(--saffron-on-light, #C44D0E);
+  font-weight: 700;
+}
+.lang-toggle--light .lang-toggle__sep {
+  color: var(--hairline-strong, rgba(0,0,0,0.18));
+}
+
+/* ─── DARK variant (for dark/navy headers) ─── */
+.lang-toggle--dark .lang-toggle__btn {
+  color: rgba(255, 255, 255, 0.65);
+}
+.lang-toggle--dark .lang-toggle__btn:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+.lang-toggle--dark .lang-toggle__btn.is-active {
+  color: var(--saffron-glow, #FFB26B);
+  font-weight: 700;
+}
+.lang-toggle--dark .lang-toggle__sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ─── Focus states (accessibility) ─── */
+.lang-toggle__btn:focus-visible {
+  outline: 2px solid var(--saffron-on-light, #C44D0E);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 640px) {
+  .lang-toggle { font-size: 0.78rem; }
+  .lang-toggle__btn { padding: 6px 8px; }
+}

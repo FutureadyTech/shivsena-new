@@ -1,0 +1,160 @@
+/* ═══════════════════════════════════════════════════════════════
+   WELCOME BANNER — Photojournalistic splash overlay
+   Eyebrow + huge saffron title + description + outlined CTA.
+═══════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&family=Rozha+One&family=Mukta:wght@300;400;500;600&family=Cinzel:wght@500;600;700&display=swap');
+
+.welcome-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+  max-width: min(960px, 92vw);
+  width: 100%;
+  transition: opacity 0.18s ease-out;
+  padding: 0 24px;
+}
+
+/* ─── Eyebrow ─── */
+.welcome-banner__eyebrow {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+  margin: 0 0 12px;
+  text-transform: none;
+}
+
+/* ─── ROYAL SAFFRON TITLE (Marathi default) ─── */
+.welcome-banner__title {
+  font-family: 'Yatra One', 'Rozha One', 'Tiro Devanagari Sanskrit', serif;
+  font-size: clamp(5rem, 13vw, 9.5rem);
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  color: #FF6B1A;
+  margin: 0 0 26px;
+  padding: 0;
+  text-shadow:
+    0 0 50px rgba(255, 107, 26, 0.55),
+    0 0 22px rgba(255, 107, 26, 0.35),
+    0 8px 26px rgba(0, 0, 0, 0.9),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 0 20px rgba(255, 140, 60, 0.3));
+}
+
+/* English title — Latin caps need different font */
+.welcome-banner__title--en {
+  font-family: 'Cinzel', 'Trajan Pro', serif;
+  font-size: clamp(3.6rem, 9vw, 6.8rem);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+/* ─── Description ─── */
+.welcome-banner__description {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.95rem, 1.18vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
+  max-width: 620px;
+  margin: 0 auto 32px;
+}
+
+.welcome-banner__cta-inline {
+  color: #FFB26B;
+  font-weight: 600;
+}
+
+/* ─── Outlined CTA Button ─── */
+.welcome-banner__cta {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 32px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.welcome-banner__cta:hover {
+  background: rgba(255, 107, 26, 0.95);
+  border-color: rgba(255, 107, 26, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(255, 107, 26, 0.4);
+  text-shadow: none;
+}
+
+.welcome-banner__cta:active {
+  transform: translateY(0);
+}
+
+.welcome-banner__cta-arrow {
+  color: inherit;
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.welcome-banner__cta:hover .welcome-banner__cta-arrow {
+  transform: translateX(5px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .welcome-banner {
+    top: 48%;
+    padding: 0 20px;
+  }
+  .welcome-banner__eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+    margin-bottom: 10px;
+  }
+  .welcome-banner__title {
+    font-size: clamp(3.4rem, 16vw, 5.5rem);
+    margin-bottom: 20px;
+  }
+  .welcome-banner__title--en {
+    font-size: clamp(2.4rem, 11vw, 3.6rem);
+  }
+  .welcome-banner__description {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 26px;
+  }
+  .welcome-banner__cta {
+    font-size: 0.95rem;
+    padding: 12px 26px;
+  }
+  .welcome-banner__cta-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-banner { transition: opacity 0.1s ease-out; }
+  .welcome-banner__cta { transition: opacity 0.3s ease, background 0.3s ease; }
+  .welcome-banner__cta:hover { transform: none; }
+  .welcome-banner__cta:hover .welcome-banner__cta-arrow { transform: none; }
+}
