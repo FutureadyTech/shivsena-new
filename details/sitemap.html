@@ -1,0 +1,2780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shiv Sena Digital Headquarters · शिवसेना डिजिटल मुख्यालय | Futuready Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@300;400;500;600;700;800&family=Tiro+Devanagari+Marathi:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  /* =========================================================
+     SHIV SENA STANDALONE — DESIGN SYSTEM
+     ========================================================= */
+  :root {
+    --paper: #FAF6F0;
+    --paper-2: #F4EEE4;
+    --paper-3: #FFFDF9;
+    --paper-deep: #EFE7D7;
+    --line: rgba(26,26,26,0.08);
+    --line-strong: rgba(26,26,26,0.16);
+    --ink: #1F1B16;
+    --ink-soft: #4A453E;
+    --ink-muted: #8B847A;
+    --saffron: #D9591D;
+    --saffron-soft: #F2C9A8;
+    --saffron-tint: #FBEEE0;
+    --gold: #B68A2E;
+    --leaf: #4F6645;
+
+    --font-display-en: 'Fraunces', Georgia, serif;
+    --font-body-en: 'Manrope', -apple-system, sans-serif;
+    --font-display-mr: 'Noto Serif Devanagari', 'Tiro Devanagari Marathi', serif;
+    --font-body-mr: 'Mukta', 'Noto Serif Devanagari', sans-serif;
+    --font-marathi-accent: 'Tiro Devanagari Marathi', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Active fonts (set by language) */
+    --font-display: var(--font-display-en);
+    --font-body: var(--font-body-en);
+    --font-marathi: var(--font-marathi-accent);
+
+    --shadow-sm: 0 1px 2px rgba(31,27,22,0.04), 0 2px 8px rgba(31,27,22,0.04);
+    --shadow-md: 0 2px 6px rgba(31,27,22,0.05), 0 12px 28px rgba(31,27,22,0.06);
+    --shadow-lg: 0 4px 12px rgba(31,27,22,0.06), 0 24px 60px rgba(31,27,22,0.08);
+  }
+
+  body.lang-mr {
+    --font-display: var(--font-display-mr);
+    --font-body: var(--font-body-mr);
+  }
+  body.lang-mr { line-height: 1.65; }
+
+  /* Bilingual visibility */
+  body.lang-en .mr { display: none !important; }
+  body.lang-mr .en { display: none !important; }
+
+  /* Language toggle */
+  .lang-toggle {
+    position: fixed;
+    top: 18px;
+    right: 24px;
+    z-index: 200;
+    display: inline-flex;
+    background: rgba(255,253,249,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px;
+    box-shadow: var(--shadow-sm);
+  }
+  .lang-toggle button {
+    background: none;
+    border: none;
+    padding: 8px 18px;
+    font-family: var(--font-body-en);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+    cursor: pointer;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+    line-height: 1;
+  }
+  .lang-toggle button[data-lang="mr"] {
+    font-family: var(--font-marathi-accent);
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  .lang-toggle button:hover { color: var(--ink); }
+  .lang-toggle button.active {
+    background: var(--saffron);
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(217,89,29,0.3);
+  }
+
+  /* Marathi-specific tweaks for various components */
+  body.lang-mr .pill { letter-spacing: 0.04em; text-transform: none; font-size: 12px; }
+  body.lang-mr .slide-tag { letter-spacing: 0.05em; text-transform: none; font-size: 12px; }
+  body.lang-mr h2.section { font-size: clamp(32px, 4.5vw, 60px); line-height: 1.2; letter-spacing: 0; font-weight: 500; }
+  body.lang-mr h1.display { font-size: clamp(44px, 8vw, 110px); line-height: 1.18; letter-spacing: -0.005em; font-weight: 500; }
+  body.lang-mr h3.heading { letter-spacing: 0; line-height: 1.3; }
+  body.lang-mr p.lead { line-height: 1.8; }
+  body.lang-mr em.serif { font-style: normal; font-weight: 600; }
+  body.lang-mr .cover-main h1 em { font-style: normal; font-weight: 600; }
+  body.lang-mr .big-call em { font-style: normal; font-weight: 600; }
+  body.lang-mr .cover-spec small,
+  body.lang-mr .toc-item .toc-page,
+  body.lang-mr .exec-stat .lbl,
+  body.lang-mr .exec-summary-box dt,
+  body.lang-mr .delv-card .delv-sub,
+  body.lang-mr .delv-card .count-bar .count-label,
+  body.lang-mr .team-card .role-tag,
+  body.lang-mr .team-card .role-meta small,
+  body.lang-mr .manpower-summary .ms-label,
+  body.lang-mr .invest-eyebrow,
+  body.lang-mr .invest-tag,
+  body.lang-mr .pay-stages-title,
+  body.lang-mr .amc-card .amc-cat,
+  body.lang-mr .footer-grid > div small,
+  body.lang-mr .ptag,
+  body.lang-mr .gh-cell { letter-spacing: 0.04em; text-transform: none; font-size: 12px; }
+
+  body.lang-mr .cover-main h1 { font-size: clamp(50px, 8vw, 120px); line-height: 1.2; }
+  body.lang-mr .closing .big-call { font-size: clamp(46px, 8vw, 110px); line-height: 1.18; letter-spacing: 0; font-weight: 500; }
+  body.lang-mr .invest-num { letter-spacing: -0.025em; }
+
+  @media (max-width: 700px) {
+    .lang-toggle { top: 12px; right: 12px; }
+    .lang-toggle button { padding: 7px 14px; font-size: 11px; }
+    .lang-toggle button[data-lang="mr"] { font-size: 13px; }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+  body {
+    font-family: var(--font-body);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    overflow-x: hidden;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  .brand-strip {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--saffron) 0%, var(--gold) 60%, transparent 100%);
+    z-index: 100;
+    opacity: 0.85;
+  }
+
+  .nav-rail {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 14px 7px;
+    background: rgba(250,246,240,0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 999px;
+    border: 1px solid var(--line);
+  }
+  .nav-rail a {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ink-muted);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    display: block;
+  }
+  .nav-rail a:hover { opacity: 1; transform: scale(1.4); background: var(--saffron); }
+  .nav-rail a.active { background: var(--saffron); opacity: 1; transform: scale(1.4); }
+
+  .slide {
+    min-height: 100vh;
+    width: 100%;
+    padding: 80px 7vw 60px;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .slide + .slide { border-top: 1px solid var(--line); }
+  .slide-cream { background: var(--paper); }
+  .slide-warm  { background: var(--paper-2); }
+  .slide-tint  { background: var(--saffron-tint); }
+  .slide-deep  { background: var(--paper-deep); }
+
+  .slide-num {
+    position: absolute;
+    top: 32px;
+    right: 5vw;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+  }
+  .slide-tag {
+    position: absolute;
+    top: 32px;
+    left: 5vw;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .slide-tag::before {
+    content: "";
+    display: inline-block;
+    width: 22px; height: 1px;
+    background: var(--saffron);
+  }
+
+  /* TYPE */
+  h1.display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(54px, 9vw, 120px);
+    line-height: 0.94;
+    letter-spacing: -0.03em;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h2.section {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h3.heading {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+  p.lead {
+    font-size: clamp(14px, 1.05vw, 17px);
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    font-weight: 400;
+  }
+  em.serif {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--saffron);
+  }
+  .accent { color: var(--saffron); }
+  .muted { color: var(--ink-muted); }
+  .marathi { font-family: var(--font-marathi); }
+  .mono { font-family: var(--font-mono); font-size: 0.92em; }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: var(--paper-3);
+    color: var(--saffron);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+  }
+  .pill::before {
+    content: "";
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--saffron);
+  }
+  .pill-solid {
+    background: var(--saffron);
+    color: #fff;
+    border-color: var(--saffron);
+  }
+  .pill-solid::before { background: #fff; }
+
+  /* COVER */
+  .cover {
+    background:
+      radial-gradient(ellipse at 90% 10%, var(--saffron-tint) 0%, transparent 55%),
+      var(--paper);
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 4px;
+  }
+  .cover-main h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(64px, 10vw, 148px);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .cover-main h1 em {
+    font-style: italic;
+    color: var(--saffron);
+  }
+  .cover-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: end;
+  }
+  .cover-spec-grid {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+  .cover-spec {
+    border-left: 1px solid var(--line-strong);
+    padding-left: 14px;
+    min-width: 130px;
+  }
+  .cover-spec small {
+    color: var(--ink-muted);
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .cover-spec p {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 5px;
+    line-height: 1.2;
+  }
+
+  /* TABLE OF CONTENTS */
+  .toc-list {
+    margin-top: 40px;
+    column-count: 2;
+    column-gap: 60px;
+  }
+  .toc-item {
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+    break-inside: avoid;
+  }
+  .toc-item .toc-num {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--saffron);
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .toc-item .toc-title {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .toc-item .toc-page {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  /* EXEC SUMMARY */
+  .exec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: start;
+  }
+  .exec-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .exec-stat {
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px 22px;
+  }
+  .exec-stat .num {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 36px;
+    color: var(--saffron);
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+  .exec-stat .lbl {
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .exec-summary-box {
+    background: var(--paper-3);
+    border: 1px solid var(--saffron-soft);
+    border-radius: 12px;
+    padding: 32px 30px;
+    box-shadow: var(--shadow-sm);
+  }
+  .exec-summary-box h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 18px;
+    letter-spacing: -0.015em;
+  }
+  .exec-summary-box dl {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 14px 18px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .exec-summary-box dt {
+    color: var(--ink-muted);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    align-self: center;
+  }
+  .exec-summary-box dd {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .exec-summary-box dd strong { color: var(--saffron); font-weight: 600; }
+
+  /* SITEMAP */
+  .sitemap-tree {
+    margin-top: 40px;
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 36px 32px;
+    box-shadow: var(--shadow-sm);
+  }
+  .sitemap-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .sitemap-root-node {
+    background: var(--saffron);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    box-shadow: var(--shadow-sm);
+  }
+  .sitemap-root-node small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 2px;
+    opacity: 0.85;
+  }
+  .sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    position: relative;
+  }
+  .sitemap-grid::before {
+    content: "";
+    position: absolute;
+    top: -24px; left: 12.5%; right: 12.5%;
+    height: 1px;
+    background: var(--saffron-soft);
+  }
+  .sitemap-node {
+    background: var(--paper-2);
+    border: 1px solid var(--saffron-soft);
+    border-radius: 8px;
+    padding: 16px 16px 14px;
+    position: relative;
+  }
+  .sitemap-node::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    width: 1px;
+    height: 24px;
+    background: var(--saffron-soft);
+  }
+  .sitemap-node h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .sitemap-node ul {
+    list-style: none;
+  }
+  .sitemap-node ul li {
+    font-size: 12px;
+    color: var(--ink-soft);
+    padding: 3px 0 3px 12px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .sitemap-node ul li::before {
+    content: "─";
+    position: absolute;
+    left: 0;
+    color: var(--saffron-soft);
+    font-size: 10px;
+    top: 1px;
+  }
+
+  /* PAGE INVENTORY */
+  .page-inventory {
+    margin-top: 30px;
+  }
+  .page-row {
+    display: grid;
+    grid-template-columns: 50px 200px 1fr 100px;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+    transition: background 0.2s, padding 0.2s;
+  }
+  .page-row:hover { background: var(--paper-3); padding-left: 12px; padding-right: 12px; border-radius: 6px; }
+  .page-row .pn {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--saffron);
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .page-row .ptitle {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .page-row .ptitle small {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+  .page-row .pdesc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .page-row .ptags {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+  }
+  .ptag {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    background: var(--paper-2);
+    color: var(--ink-muted);
+    border: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  .ptag-cms { color: var(--saffron); border-color: var(--saffron-soft); background: var(--saffron-tint); }
+  .ptag-3d { color: var(--leaf); border-color: rgba(79,102,69,0.3); background: rgba(79,102,69,0.08); }
+  .ptag-form { color: var(--gold); border-color: rgba(182,138,46,0.3); background: rgba(182,138,46,0.08); }
+
+  /* CONTENT MATRIX */
+  .content-matrix {
+    margin-top: 30px;
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .cm-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 16px 24px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .cm-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .cm-row:hover { background: var(--paper-2); }
+  .cm-row:last-child { border-bottom: none; }
+  .cm-row .cm-section {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .cm-row .cm-section small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 3px;
+    font-weight: 500;
+  }
+  .cm-marker {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .cm-marker .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .cm-marker.yes { color: var(--saffron); }
+  .cm-marker.yes .dot { background: var(--saffron); }
+  .cm-marker.client { color: var(--ink); }
+  .cm-marker.client .dot { background: var(--ink); }
+  .cm-marker.partial { color: var(--gold); }
+  .cm-marker.partial .dot { background: var(--gold); }
+  .cm-marker.na { color: var(--ink-muted); opacity: 0.5; }
+  .cm-marker.na .dot { background: var(--ink-muted); opacity: 0.4; }
+
+  .cm-legend {
+    margin-top: 18px;
+    padding: 16px 22px;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .cm-legend strong { color: var(--saffron); font-weight: 600; }
+  .cm-legend p + p { margin-top: 6px; }
+
+  /* TWO-COL DELIVERABLES */
+  .delv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+  }
+  .delv-card {
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 26px 24px;
+    transition: all 0.3s;
+  }
+  .delv-card:hover { border-color: var(--saffron-soft); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+  .delv-card .icn {
+    width: 36px; height: 36px;
+    background: var(--saffron-tint);
+    color: var(--saffron);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--saffron-soft);
+  }
+  .delv-card h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  .delv-card .delv-sub {
+    font-size: 10px;
+    color: var(--ink-muted);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .delv-card ul { list-style: none; }
+  .delv-card ul li {
+    font-size: 12px;
+    color: var(--ink-soft);
+    padding: 4px 0 4px 12px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .delv-card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 11px;
+    width: 6px; height: 1px;
+    background: var(--saffron);
+  }
+  .delv-card .count-bar {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .count-bar .count-label {
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .count-bar .count-num {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--saffron);
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  /* TEAM SLIDE */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+  }
+  .team-card {
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 22px;
+    transition: all 0.3s;
+  }
+  .team-card:hover { border-color: var(--saffron-soft); box-shadow: var(--shadow-sm); }
+  .team-card .role-tag {
+    color: var(--saffron);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .team-card .role-name {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 14px;
+  }
+  .team-card .role-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 12px;
+  }
+  .team-card .role-meta div {
+    display: flex;
+    flex-direction: column;
+  }
+  .team-card .role-meta small {
+    font-size: 9px;
+    color: var(--ink-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .team-card .role-meta strong {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .team-card .role-task {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  .manpower-summary {
+    margin-top: 30px;
+    background: var(--paper-3);
+    border: 1px solid var(--saffron-soft);
+    border-radius: 12px;
+    padding: 26px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+  }
+  .manpower-summary .ms-label {
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .manpower-summary .ms-num {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--saffron);
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+  .manpower-summary .ms-sub {
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 5px;
+    font-weight: 500;
+  }
+
+  /* TIMELINE GANTT */
+  .gantt {
+    margin-top: 30px;
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 24px;
+    box-shadow: var(--shadow-sm);
+    overflow-x: auto;
+  }
+  .gantt-header {
+    display: grid;
+    grid-template-columns: 200px repeat(12, 1fr);
+    gap: 2px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 8px;
+    min-width: 800px;
+  }
+  .gantt-header .gh-cell {
+    font-family: var(--font-body);
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding: 4px 0;
+  }
+  .gantt-header .gh-cell.label-col { text-align: left; padding-left: 0; }
+  .gantt-row {
+    display: grid;
+    grid-template-columns: 200px repeat(12, 1fr);
+    gap: 2px;
+    align-items: center;
+    padding: 8px 0;
+    min-width: 800px;
+  }
+  .gantt-row .gr-label {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .gantt-row .gr-label small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 10px;
+    color: var(--ink-muted);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .gantt-cell {
+    height: 22px;
+    border-radius: 4px;
+    background: transparent;
+  }
+  .gantt-bar {
+    background: var(--saffron-soft);
+    border-radius: 4px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--saffron);
+    letter-spacing: 0.05em;
+  }
+  .gantt-bar.solid { background: var(--saffron); color: #fff; }
+  .gantt-bar.deep { background: var(--ink); color: var(--paper); }
+
+  /* AMC */
+  .amc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .amc-card {
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 26px 28px;
+    transition: all 0.3s;
+  }
+  .amc-card:hover { border-color: var(--saffron-soft); box-shadow: var(--shadow-sm); }
+  .amc-card .amc-cat {
+    color: var(--saffron);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .amc-card h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 14px;
+    letter-spacing: -0.015em;
+  }
+  .amc-card ul {
+    list-style: none;
+  }
+  .amc-card ul li {
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding: 6px 0 6px 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .amc-card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 13px;
+    width: 7px; height: 1px;
+    background: var(--saffron);
+  }
+  .amc-card ul li strong { color: var(--ink); font-weight: 600; }
+
+  /* INVESTMENT (slide 16) */
+  .invest-headline {
+    margin-top: 40px;
+    background: var(--paper-3);
+    border: 1px solid var(--saffron-soft);
+    border-radius: 14px;
+    padding: 36px 40px;
+    box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .invest-headline::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 280px;
+    background: radial-gradient(ellipse at 100% 50%, var(--saffron-tint), transparent 70%);
+    pointer-events: none;
+  }
+  .invest-headline-left { position: relative; z-index: 1; }
+  .invest-headline-right { position: relative; z-index: 1; text-align: right; border-left: 1px solid var(--line); padding-left: 40px; }
+  .invest-eyebrow {
+    color: var(--saffron);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .invest-num {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(70px, 9vw, 118px);
+    color: var(--saffron);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+  }
+  .invest-sub {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    max-width: 50ch;
+  }
+  .invest-tag {
+    display: inline-block;
+    padding: 7px 16px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .invest-meta {
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.55;
+    font-weight: 500;
+  }
+
+  .pay-stages {
+    margin-top: 26px;
+    background: var(--saffron-tint);
+    border: 1px solid var(--saffron-soft);
+    border-radius: 10px;
+    padding: 22px 28px;
+  }
+  .pay-stages-title {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--saffron-soft);
+  }
+  .pay-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    padding: 10px 0;
+    align-items: center;
+  }
+  .pay-row + .pay-row { border-top: 1px dashed rgba(217, 89, 29, 0.25); }
+  .pay-row-stage { display: flex; align-items: center; gap: 16px; }
+  .pay-pct {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--saffron);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    min-width: 44px;
+  }
+  .pay-label {
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .pay-amt {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--ink);
+  }
+
+  /* TERMS slide */
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 30px;
+  }
+  .terms-card {
+    background: var(--paper-3);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 24px 26px;
+  }
+  .terms-card h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .terms-card ul { list-style: none; }
+  .terms-card ul li {
+    font-size: 12px;
+    color: var(--ink-soft);
+    padding: 6px 0 6px 14px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .terms-card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 12px;
+    width: 6px; height: 1px;
+    background: var(--saffron);
+  }
+
+  /* CLOSING */
+  .closing {
+    background:
+      radial-gradient(ellipse at 10% 90%, var(--saffron-tint) 0%, transparent 60%),
+      var(--paper);
+  }
+  .big-call {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(56px, 9vw, 130px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+  }
+  .big-call em {
+    font-style: italic;
+    color: var(--saffron);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .footer-grid > div small {
+    color: var(--ink-muted);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .footer-grid > div p {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .exec-grid, .exec-stats, .delv-grid, .team-grid, .amc-grid, .terms-grid,
+    .invest-headline, .sitemap-grid, .toc-list, .manpower-summary {
+      grid-template-columns: 1fr !important;
+      column-count: 1 !important;
+    }
+    .page-row, .gantt-row, .gantt-header {
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+    }
+    .cm-header, .cm-row { grid-template-columns: 1fr !important; }
+    .nav-rail { display: none; }
+    .slide { padding: 60px 6vw 50px; }
+  }
+
+  @media print {
+    html, body { scroll-snap-type: none !important; }
+    .slide { page-break-after: always; min-height: auto; }
+    .nav-rail, .brand-strip { display: none; }
+  }
+</style>
+</head>
+<body class="lang-en">
+<div class="brand-strip"></div>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle" role="group" aria-label="Language toggle">
+  <button data-lang="en" class="active" aria-pressed="true">EN</button>
+  <button data-lang="mr" aria-pressed="false">मराठी</button>
+</div>
+
+<nav class="nav-rail">
+  <a href="#s1" class="active"></a>
+  <a href="#s2"></a>
+  <a href="#s3"></a>
+  <a href="#s4"></a>
+  <a href="#s5"></a>
+  <a href="#s6"></a>
+  <a href="#s7"></a>
+  <a href="#s8"></a>
+  <a href="#s9"></a>
+  <a href="#s10"></a>
+  <a href="#s11"></a>
+  <a href="#s12"></a>
+  <a href="#s13"></a>
+  <a href="#s14"></a>
+  <a href="#s15"></a>
+  <a href="#s16"></a>
+  <a href="#s17"></a>
+  <a href="#s18"></a>
+</nav>
+
+<!-- ============================================================
+     SLIDE 1 — COVER
+     ============================================================ -->
+<section class="slide cover" id="s1">
+  <div class="cover-top">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div class="logo-mark">F</div>
+      <div>
+        <div><span class="en">Futuready Media</span><span class="mr">फ्युचरेडी मीडिया</span></div>
+        <div style="color:var(--saffron); margin-top:2px"><span class="en">Strategic Digital Partner</span><span class="mr">धोरणात्मक डिजिटल भागीदार</span></div>
+      </div>
+    </div>
+    <div style="text-align:right">
+      <div><span class="en">Detailed Proposal · Confidential</span><span class="mr">तपशीलवार प्रस्ताव · गोपनीय</span></div>
+      <div style="color:var(--saffron); margin-top:2px">v1.0 · April 2026</div>
+    </div>
+  </div>
+
+  <div class="cover-main">
+    <span class="pill" style="margin-bottom:24px"><span class="en">Single Property · Detailed Scope</span><span class="mr">एकल मंच · तपशीलवार व्याप्ती</span></span>
+    <h1>
+      <span class="en">Shiv Sena.<br>A digital<br><em>headquarters.</em></span>
+      <span class="mr">शिवसेना.<br>एक डिजिटल<br><em>मुख्यालय.</em></span>
+    </h1>
+    <p class="lead" style="margin-top:26px; max-width:54ch; font-size:17px">
+      <span class="en">A standalone, end-to-end proposal for the <strong style="color:var(--ink)">Shiv Sena party website</strong> — covering site architecture, content strategy, design and development scope, project team, and 12-week delivery plan.</span><span class="mr"><strong style="color:var(--ink)">शिवसेना पक्ष संकेतस्थळासाठी</strong> स्वतंत्र, संपूर्ण प्रस्ताव — संकेतस्थळ रचना, मजकूर रणनीती, डिझाइन-डेव्हलपमेंट व्याप्ती, प्रकल्प टीम आणि १२-आठवडे वितरण योजना.</span>
+    </p>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-spec-grid">
+      <div class="cover-spec">
+        <small><span class="en">Scope</span><span class="mr">व्याप्ती</span></small>
+        <p><span class="en">Single Website<br>Party Property</span><span class="mr">एकच संकेतस्थळ<br>पक्ष मालमत्ता</span></p>
+      </div>
+      <div class="cover-spec">
+        <small><span class="en">Investment</span><span class="mr">गुंतवणूक</span></small>
+        <p>₹4 L<br><span class="en">Website + 9-mo AMC</span><span class="mr">संकेतस्थळ + ९-महिने AMC</span></p>
+      </div>
+      <div class="cover-spec">
+        <small><span class="en">Timeline</span><span class="mr">वेळापत्रक</span></small>
+        <p><span class="en">12 Weeks<br>Discovery to Launch</span><span class="mr">१२ आठवडे<br>शोध ते लाँच</span></p>
+      </div>
+      <div class="cover-spec">
+        <small><span class="en">Team Size</span><span class="mr">टीम आकार</span></small>
+        <p><span class="en">7 Specialists<br>~210 person-days</span><span class="mr">७ तज्ञ<br>~२१० मनुष्य-दिवस</span></p>
+      </div>
+    </div>
+    <div style="text-align:right; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--ink-muted); font-weight:600">
+      <span class="en">Scroll</span><span class="mr">स्क्रोल</span><br><span style="color:var(--saffron); font-size:18px; display:inline-block; margin-top:6px">↓</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 2 — TABLE OF CONTENTS
+     ============================================================ -->
+<section class="slide slide-warm" id="s2">
+  <span class="slide-num">02 — 18</span>
+  <span class="slide-tag"><span class="en">Contents</span><span class="mr">अनुक्रमणिका</span></span>
+
+  <span class="pill"><span class="en">Document Map</span><span class="mr">दस्तऐवज नकाशा</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">What's <em class="serif">inside</em><br>this document.</span><span class="mr">या दस्तऐवजात<br><em class="serif">काय आहे.</em></span></h2>
+
+  <div class="toc-list">
+    <div class="toc-item"><span class="toc-num">01</span><span class="toc-title"><span class="en">Cover</span><span class="mr">मुखपृष्ठ</span></span><span class="toc-page"><span class="en">Pg 1</span><span class="mr">पृ ०१</span></span></div>
+    <div class="toc-item"><span class="toc-num">02</span><span class="toc-title"><span class="en">Contents</span><span class="mr">अनुक्रमणिका</span></span><span class="toc-page"><span class="en">Pg 2</span><span class="mr">पृ ०२</span></span></div>
+    <div class="toc-item"><span class="toc-num">03</span><span class="toc-title"><span class="en">Executive Summary</span><span class="mr">कार्यकारी सारांश</span></span><span class="toc-page"><span class="en">Pg 3</span><span class="mr">पृ ०३</span></span></div>
+    <div class="toc-item"><span class="toc-num">04</span><span class="toc-title"><span class="en">Site Architecture & Sitemap</span><span class="mr">संकेतस्थळ रचना आणि साइटमॅप</span></span><span class="toc-page"><span class="en">Pg 4</span><span class="mr">पृ ०४</span></span></div>
+    <div class="toc-item"><span class="toc-num">05</span><span class="toc-title"><span class="en">Page-by-Page Inventory</span><span class="mr">पान-निहाय यादी</span></span><span class="toc-page"><span class="en">Pg 5</span><span class="mr">पृ ०५</span></span></div>
+    <div class="toc-item"><span class="toc-num">06</span><span class="toc-title"><span class="en">Content Responsibility Matrix</span><span class="mr">मजकूर जबाबदारी सारणी</span></span><span class="toc-page"><span class="en">Pg 6</span><span class="mr">पृ ०६</span></span></div>
+    <div class="toc-item"><span class="toc-num">07</span><span class="toc-title"><span class="en">Design Approach & Deliverables</span><span class="mr">डिझाइन दृष्टिकोन आणि वितरणयोग्य</span></span><span class="toc-page"><span class="en">Pg 7</span><span class="mr">पृ ०७</span></span></div>
+    <div class="toc-item"><span class="toc-num">08</span><span class="toc-title"><span class="en">Development Approach</span><span class="mr">डेव्हलपमेंट दृष्टिकोन</span></span><span class="toc-page"><span class="en">Pg 8</span><span class="mr">पृ ०८</span></span></div>
+    <div class="toc-item"><span class="toc-num">09</span><span class="toc-title"><span class="en">CMS & Bilingual Strategy</span><span class="mr">CMS आणि द्विभाषिक रणनीती</span></span><span class="toc-page"><span class="en">Pg 9</span><span class="mr">पृ ०९</span></span></div>
+    <div class="toc-item"><span class="toc-num">10</span><span class="toc-title"><span class="en">Animation & Interaction Layer</span><span class="mr">अॅनिमेशन आणि इंटरॅक्शन थर</span></span><span class="toc-page"><span class="en">Pg 10</span><span class="mr">पृ १०</span></span></div>
+    <div class="toc-item"><span class="toc-num">11</span><span class="toc-title"><span class="en">Performance, SEO & Security</span><span class="mr">कामगिरी, SEO आणि सुरक्षा</span></span><span class="toc-page"><span class="en">Pg 11</span><span class="mr">पृ ११</span></span></div>
+    <div class="toc-item"><span class="toc-num">12</span><span class="toc-title"><span class="en">Project Team & Manpower</span><span class="mr">प्रकल्प टीम आणि मनुष्यबळ</span></span><span class="toc-page"><span class="en">Pg 12</span><span class="mr">पृ १२</span></span></div>
+    <div class="toc-item"><span class="toc-num">13</span><span class="toc-title"><span class="en">12-Week Delivery Plan</span><span class="mr">१२-आठवडे वितरण योजना</span></span><span class="toc-page"><span class="en">Pg 13</span><span class="mr">पृ १३</span></span></div>
+    <div class="toc-item"><span class="toc-num">14</span><span class="toc-title"><span class="en">Quality Assurance & Launch</span><span class="mr">गुणवत्ता हमी आणि लाँच</span></span><span class="toc-page"><span class="en">Pg 14</span><span class="mr">पृ १४</span></span></div>
+    <div class="toc-item"><span class="toc-num">15</span><span class="toc-title"><span class="en">12-Month AMC Coverage</span><span class="mr">१२-महिने AMC व्याप्ती</span></span><span class="toc-page"><span class="en">Pg 15</span><span class="mr">पृ १५</span></span></div>
+    <div class="toc-item"><span class="toc-num">16</span><span class="toc-title"><span class="en">Investment & Payment Schedule</span><span class="mr">गुंतवणूक आणि पेमेंट वेळापत्रक</span></span><span class="toc-page"><span class="en">Pg 16</span><span class="mr">पृ १६</span></span></div>
+    <div class="toc-item"><span class="toc-num">17</span><span class="toc-title"><span class="en">Terms & Assumptions</span><span class="mr">अटी आणि गृहीतके</span></span><span class="toc-page"><span class="en">Pg 17</span><span class="mr">पृ १७</span></span></div>
+    <div class="toc-item"><span class="toc-num">18</span><span class="toc-title"><span class="en">Next Steps</span><span class="mr">पुढील पायऱ्या</span></span><span class="toc-page"><span class="en">Pg 18</span><span class="mr">पृ १८</span></span></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 3 — EXECUTIVE SUMMARY
+     ============================================================ -->
+<section class="slide slide-cream" id="s3">
+  <span class="slide-num">03 — 18</span>
+  <span class="slide-tag"><span class="en">Executive Summary</span><span class="mr">कार्यकारी सारांश</span></span>
+
+  <span class="pill"><span class="en">The Engagement at a Glance</span><span class="mr">एका दृष्टिक्षेपात</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">A digital headquarters,<br><em class="serif">built once. Built right.</em></span><span class="mr">डिजिटल मुख्यालय,<br><em class="serif">एकदा. योग्यरीत्या.</em></span></h2>
+
+  <div class="exec-grid">
+    <div>
+      <p class="lead">
+        <span class="en">Futuready Media will design, develop, and deploy a flagship digital property for the <strong style="color:var(--ink)">Shiv Sena</strong> — engineered as the party's permanent online headquarters, not as a campaign microsite. The platform will serve as the central destination for voters, karyakartas, journalists, and the diaspora.</span><span class="mr">फ्युचरेडी मीडिया <strong style="color:var(--ink)">शिवसेनेसाठी</strong> प्रमुख डिजिटल मालमत्ता डिझाइन, विकसित आणि लाँच करेल — पक्षाचे कायमचे ऑनलाइन मुख्यालय म्हणून, प्रचार मायक्रोसाइट नव्हे. हा मंच मतदार, कार्यकर्ते, पत्रकार आणि प्रवासी भारतीयांचे केंद्रीय गंतव्य बनेल.</span>
+      </p>
+      <p class="lead" style="margin-top:14px">
+        <span class="en">The site is built on a modern Next.js + Strapi CMS stack, with a scroll-driven 3D hero, interactive party-journey timeline, karyakarta onboarding flow, and full English-Marathi bilingual support. Nine months of AMC are bundled into the engagement.</span><span class="mr">संकेतस्थळ आधुनिक Next.js + Strapi CMS तंत्रज्ञानावर — स्क्रोल-आधारित 3D हीरो, संवादात्मक पक्ष-प्रवास वेळरेखा, कार्यकर्ता नोंदणी प्रक्रिया, आणि संपूर्ण इंग्रजी-मराठी द्विभाषिक सुविधा. ९ महिने AMC यात समाविष्ट.</span>
+      </p>
+
+      <div class="exec-stats">
+        <div class="exec-stat">
+          <div class="num">17+</div>
+          <div class="lbl"><span class="en">Pages designed and developed</span><span class="mr">पाने डिझाइन आणि विकसित</span></div>
+        </div>
+        <div class="exec-stat">
+          <div class="num">12 wks</div>
+          <div class="lbl"><span class="en">Discovery to launch · phased</span><span class="mr">शोध ते लाँच · टप्प्याटप्प्याने</span></div>
+        </div>
+        <div class="exec-stat">
+          <div class="num">~210</div>
+          <div class="lbl"><span class="en">Person-days · 7-member squad</span><span class="mr">मनुष्य-दिवस · ७ सदस्यांची टीम</span></div>
+        </div>
+        <div class="exec-stat">
+          <div class="num">EN + मराठी</div>
+          <div class="lbl"><span class="en">Bilingual from day one</span><span class="mr">पहिल्या दिवसापासून द्विभाषिक</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exec-summary-box">
+      <h4><span class="en">The Commercial Snapshot</span><span class="mr">व्यावसायिक सारांश</span></h4>
+      <dl>
+        <dt><span class="en">Property</span><span class="mr">मालमत्ता</span></dt>
+        <dd><span class="en">Shiv Sena Party Website</span><span class="mr">शिवसेना पक्ष संकेतस्थळ</span></dd>
+
+        <dt><span class="en">Investment</span><span class="mr">गुंतवणूक</span></dt>
+        <dd><strong>₹4,00,000</strong> + GST · <span class="en">One-time, all-inclusive</span><span class="mr">एकदाच, सर्वसमावेशक</span></dd>
+
+        <dt><span class="en">Includes</span><span class="mr">समाविष्ट</span></dt>
+        <dd><span class="en">Website build + 9 months AMC bundled</span><span class="mr">संकेतस्थळ निर्मिती + ९ महिने AMC एकत्रित</span></dd>
+
+        <dt><span class="en">Timeline</span><span class="mr">वेळापत्रक</span></dt>
+        <dd><span class="en">12 weeks · phased weekly checkpoints</span><span class="mr">१२ आठवडे · साप्ताहिक टप्पे</span></dd>
+
+        <dt><span class="en">Team</span><span class="mr">टीम</span></dt>
+        <dd><span class="en">7 specialists · ~210 person-days</span><span class="mr">७ तज्ञ · ~२१० मनुष्य-दिवस</span></dd>
+
+        <dt><span class="en">Tech Stack</span><span class="mr">तंत्रज्ञान</span></dt>
+        <dd>Next.js · GSAP · Three.js · Strapi CMS · Vercel/AWS</dd>
+
+        <dt><span class="en">Languages</span><span class="mr">भाषा</span></dt>
+        <dd><span class="en">English + Marathi · CMS-controlled</span><span class="mr">इंग्रजी + मराठी · CMS-नियंत्रित</span></dd>
+
+        <dt><span class="en">Hosting</span><span class="mr">होस्टिंग</span></dt>
+        <dd><span class="en">Pass-through · ₹40–60K/yr separately</span><span class="mr">पास-थ्रू · ₹४०–६०K/वर्ष स्वतंत्र</span></dd>
+
+        <dt><span class="en">Payment</span><span class="mr">पेमेंट</span></dt>
+        <dd><span class="en">50% advance + 50% on go-live</span><span class="mr">५०% अॅडव्हान्स + ५०% लाँचवर</span></dd>
+
+        
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 4 — SITE ARCHITECTURE & SITEMAP
+     ============================================================ -->
+<section class="slide slide-warm" id="s4">
+  <span class="slide-num">04 — 18</span>
+  <span class="slide-tag"><span class="en">Site Architecture</span><span class="mr">संकेतस्थळ रचना</span></span>
+
+  <span class="pill"><span class="en">Information Architecture</span><span class="mr">माहिती रचना</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">The full <em class="serif">sitemap.</em></span><span class="mr">संपूर्ण <em class="serif">साइटमॅप.</em></span></h2>
+  <p class="lead" style="margin-top:18px">
+    <span class="en">Six top-level sections, sixteen unique pages. Every node mapped to a specific user journey — first-time visitor, journalist, intending karyakarta, returning voter, and donor.</span><span class="mr">सहा प्रमुख विभाग, सोळा स्वतंत्र पाने. प्रत्येक नोड विशिष्ट वापरकर्ता प्रवासाशी जोडलेला — पहिल्यांदा भेट देणारा, पत्रकार, इच्छुक कार्यकर्ता, परतणारा मतदार, देणगीदार.</span>
+  </p>
+
+  <div class="sitemap-tree">
+    <div class="sitemap-root">
+      <div class="sitemap-root-node">
+        शिवसेना · Shiv Sena
+        <small><span class="en">shivsena.in · Home</span><span class="mr">shivsena.in · मुख्यपृष्ठ</span></small>
+      </div>
+    </div>
+
+    <div class="sitemap-grid">
+      <div class="sitemap-node">
+        <h6><span class="en">About</span><span class="mr">आमच्याविषयी</span></h6>
+        <ul>
+          <li><span class="en">Founder's Vision</span><span class="mr">संस्थापकांचा दृष्टिकोन</span></li>
+          <li><span class="en">Party Journey</span><span class="mr">पक्षाचा प्रवास</span></li>
+          <li><span class="en">Ideology · Hindutva</span><span class="mr">विचारधारा · हिंदुत्व</span></li>
+          <li><span class="en">Historic Milestones</span><span class="mr">ऐतिहासिक टप्पे</span></li>
+        </ul>
+      </div>
+      <div class="sitemap-node">
+        <h6><span class="en">Leadership & Heritage</span><span class="mr">नेतृत्व आणि वारसा</span></h6>
+        <ul>
+          <li><span class="en">Hindu Hriday Samrat Bala Saheb</span><span class="mr">हिं. हृ. सम्राट बाळासाहेब</span></li>
+          <li><span class="en">Shri Anand Dighe Saheb</span><span class="mr">श्री आनंद दिघे साहेब</span></li>
+          <li><span class="en">Chairman's Profile</span><span class="mr">अध्यक्षांची ओळख</span></li>
+          <li><span class="en">National & State Leaders</span><span class="mr">राष्ट्रीय आणि राज्य नेते</span></li>
+          <li><span class="en">Office Bearers</span><span class="mr">पदाधिकारी</span></li>
+        </ul>
+      </div>
+      <div class="sitemap-node">
+        <h6><span class="en">News & Media</span><span class="mr">बातम्या आणि माध्यम</span></h6>
+        <ul>
+          <li><span class="en">Latest News</span><span class="mr">ताज्या बातम्या</span></li>
+          <li><span class="en">Press Releases</span><span class="mr">प्रसिद्धीपत्रके</span></li>
+          <li><span class="en">Speeches</span><span class="mr">भाषणे</span></li>
+          <li><span class="en">Photo Gallery</span><span class="mr">छायाचित्र संग्रह</span></li>
+          <li><span class="en">Video Gallery</span><span class="mr">व्हिडिओ संग्रह</span></li>
+        </ul>
+      </div>
+      <div class="sitemap-node">
+        <h6><span class="en">Get Involved</span><span class="mr">सहभागी व्हा</span></h6>
+        <ul>
+          <li><span class="en">Join as Karyakarta</span><span class="mr">कार्यकर्ता म्हणून सामील व्हा</span></li>
+          <li><span class="en">Volunteer</span><span class="mr">स्वयंसेवक</span></li>
+          <li><span class="en">Donate</span><span class="mr">देणगी</span></li>
+          <li><span class="en">Events Calendar</span><span class="mr">कार्यक्रम कॅलेंडर</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:14px; margin-top:14px">
+      <div class="sitemap-node">
+        <h6><span class="en">Constituency Connect</span><span class="mr">मतदारसंघ संपर्क</span></h6>
+        <ul>
+          <li><span class="en">Find Your MLA / MP</span><span class="mr">तुमचे आमदार / खासदार शोधा</span></li>
+          <li><span class="en">Local Office Locator</span><span class="mr">स्थानिक कार्यालय शोधा</span></li>
+          <li><span class="en">Contact Forms</span><span class="mr">संपर्क फॉर्म</span></li>
+        </ul>
+      </div>
+      <div class="sitemap-node">
+        <h6><span class="en">Resources</span><span class="mr">संसाधने</span></h6>
+        <ul>
+          <li><span class="en">Manifesto Documents</span><span class="mr">जाहीरनामा दस्तऐवज</span></li>
+          <li><span class="en">Achievement Reports</span><span class="mr">उपलब्धी अहवाल</span></li>
+          <li><span class="en">Press Kit / Brand Assets</span><span class="mr">प्रेस किट / ब्रँड साहित्य</span></li>
+          <li><span class="en">Sitewide Search</span><span class="mr">सर्वत्र शोध</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 5 — PAGE-BY-PAGE INVENTORY
+     ============================================================ -->
+<section class="slide slide-cream" id="s5">
+  <span class="slide-num">05 — 18</span>
+  <span class="slide-tag"><span class="en">Page Inventory</span><span class="mr">पान यादी</span></span>
+
+  <span class="pill"><span class="en">Every Page · Every Function</span><span class="mr">प्रत्येक पान · प्रत्येक कार्य</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">17 pages.<br><em class="serif">All accounted for.</em></span><span class="mr">१७ पाने.<br><em class="serif">सर्व समाविष्ट.</em></span></h2>
+
+  <div class="page-inventory">
+
+    <div class="page-row">
+      <div class="pn">01</div>
+      <div class="ptitle"><span class="en">Homepage</span><span class="mr">मुख्यपृष्ठ</span> <small><span class="en">Hero · Movement Story</span><span class="mr">हीरो · चळवळीची कथा</span></small></div>
+      <div class="pdesc"><span class="en">Cinematic 3D scroll-driven hero with party identity reveal. Latest-news ticker. Featured leadership. CTA blocks for join/donate. Marathi-first hero copy.</span><span class="mr">सिनेमॅटिक 3D स्क्रोल हीरो, पक्ष ओळख प्रकटीकरण. ताज्या बातम्या टिकर. प्रमुख नेतृत्व. सामील व्हा/देणगी CTA. मराठी-प्रथम हीरो मजकूर.</span></div>
+      <div class="ptags"><span class="ptag ptag-3d">3D</span><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">02</div>
+      <div class="ptitle"><span class="en">About Shiv Sena</span><span class="mr">शिवसेनेविषयी</span> <small><span class="en">Static · Heritage Anchor</span><span class="mr">स्थिर · वारसा अँकर</span></small></div>
+      <div class="pdesc"><span class="en">Founder's vision, ideological pillars, historic context. Full-bleed imagery, prose-led layout. Print-friendly.</span><span class="mr">संस्थापकांचा दृष्टिकोन, वैचारिक स्तंभ, ऐतिहासिक संदर्भ. पूर्ण प्रतिमा, गद्य-केंद्रित मांडणी. प्रिंट-अनुकूल.</span></div>
+      <div class="ptags"><span class="ptag"><span class="en">Static</span><span class="mr">स्थिर</span></span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">03</div>
+      <div class="ptitle"><span class="en">Party Journey</span><span class="mr">पक्षाचा प्रवास</span> <small><span class="en">Interactive · Timeline</span><span class="mr">संवादात्मक · वेळरेखा</span></small></div>
+      <div class="pdesc"><span class="en">Scroll-driven horizontal timeline with year-by-year milestones. Image and video reveals. GSAP-powered parallax.</span><span class="mr">स्क्रोल-आधारित आडवी वेळरेखा, वर्षवार टप्पे. प्रतिमा आणि व्हिडिओ प्रकटीकरण. GSAP-समर्थित पॅरॅलॅक्स.</span></div>
+      <div class="ptags"><span class="ptag ptag-3d"><span class="en">Animated</span><span class="mr">अॅनिमेटेड</span></span><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">04</div>
+      <div class="ptitle"><span class="en">Ideology & Vision</span><span class="mr">विचारधारा आणि दृष्टी</span> <small><span class="en">Static · Brand Foundation</span><span class="mr">स्थिर · ब्रँड पाया</span></small></div>
+      <div class="pdesc"><span class="en">Hindutva framework, social positioning, cultural commitments. Editorial layout with pull quotes and infographic blocks.</span><span class="mr">हिंदुत्व चौकट, सामाजिक स्थान, सांस्कृतिक वचनबद्धता. संपादकीय मांडणी, अवतरणे आणि इन्फोग्राफिक.</span></div>
+      <div class="ptags"><span class="ptag"><span class="en">Static</span><span class="mr">स्थिर</span></span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">05</div>
+      <div class="ptitle"><span class="en">Heritage Tribute</span><span class="mr">वारसा अर्पण</span> <small><span class="en">Bala Saheb · Anand Dighe Saheb</span><span class="mr">बाळासाहेब · आनंद दिघे साहेब</span></small></div>
+      <div class="pdesc"><span class="en">Dedicated tribute pages for Hindu Hriday Samrat Bala Saheb Thackeray and Shri Anand Dighe Saheb. Photo-led editorial layout — life timeline, defining moments, ideological legacy, archival speeches and writings. Sets the spiritual and ideological foundation of the party.</span><span class="mr">हिंदू हृदयसम्राट बाळासाहेब ठाकरे आणि श्री आनंद दिघे साहेब यांच्यासाठी समर्पित अर्पण पाने. छायाचित्र-केंद्रित संपादकीय मांडणी — जीवन वेळरेखा, निर्णायक क्षण, वैचारिक वारसा, ऐतिहासिक भाषणे आणि लेखन. पक्षाचा आध्यात्मिक आणि वैचारिक पाया.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">06</div>
+      <div class="ptitle"><span class="en">Chairman's Profile</span><span class="mr">अध्यक्षांची ओळख</span> <small><span class="en">Detail Page</span><span class="mr">तपशील पान</span></small></div>
+      <div class="pdesc"><span class="en">Hero portrait, biographical timeline, key speeches embedded, achievement counters, social media wall.</span><span class="mr">हीरो छायाचित्र, चरित्रात्मक वेळरेखा, प्रमुख भाषणे, उपलब्धी काउंटर, सोशल मीडिया वॉल.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">07</div>
+      <div class="ptitle"><span class="en">Leadership Directory</span><span class="mr">नेतृत्व निर्देशिका</span> <small><span class="en">Listing + Detail</span><span class="mr">यादी + तपशील</span></small></div>
+      <div class="pdesc"><span class="en">National + state leaders. Filterable by role/region. Each leader has lightbox or sub-page with bio, contact, social handles.</span><span class="mr">राष्ट्रीय + राज्य नेते. भूमिका/प्रदेशानुसार फिल्टर. प्रत्येक नेत्यासाठी लाइटबॉक्स किंवा उप-पान — बायो, संपर्क, सोशल हँडल.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">08</div>
+      <div class="ptitle"><span class="en">Office Bearers</span><span class="mr">पदाधिकारी</span> <small><span class="en">Org Structure</span><span class="mr">संघटनात्मक रचना</span></small></div>
+      <div class="pdesc"><span class="en">Visual hierarchy of party office bearers. District-wise filter. Photo + designation + contact card per entry.</span><span class="mr">पक्ष पदाधिकाऱ्यांची दृश्य रचना. जिल्हानिहाय फिल्टर. प्रत्येक नोंदीसाठी छायाचित्र + पद + संपर्क कार्ड.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">09</div>
+      <div class="ptitle"><span class="en">News & Press</span><span class="mr">बातम्या आणि प्रेस</span> <small><span class="en">Listing · CMS-driven</span><span class="mr">यादी · CMS-आधारित</span></small></div>
+      <div class="pdesc"><span class="en">News listing with category filters, search, pagination. Featured/breaking news flag. Auto-Marathi delivery.</span><span class="mr">बातमी यादी, श्रेणी फिल्टर, शोध, पेजिनेशन. प्रमुख/ब्रेकिंग न्यूज ध्वज. स्वयं-मराठी वितरण.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">10</div>
+      <div class="ptitle"><span class="en">News Article</span><span class="mr">बातमी लेख</span> <small><span class="en">Detail Template</span><span class="mr">तपशील टेम्प्लेट</span></small></div>
+      <div class="pdesc"><span class="en">Single article view. Hero image, body, embedded media, share buttons, related articles, comment moderation hooks.</span><span class="mr">एकल लेख दृश्य. हीरो प्रतिमा, मजकूर, माध्यम, शेअर बटण, संबंधित लेख, टिप्पणी नियंत्रण.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms"><span class="en">Template</span><span class="mr">टेम्प्लेट</span></span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">11</div>
+      <div class="ptitle"><span class="en">Speeches Archive</span><span class="mr">भाषण संग्रह</span> <small><span class="en">Video + Transcript</span><span class="mr">व्हिडिओ + लिप्यंतरण</span></small></div>
+      <div class="pdesc"><span class="en">Searchable video library. Each entry: thumbnail, date, occasion, transcript download. Filter by speaker and theme.</span><span class="mr">शोधण्यायोग्य व्हिडिओ ग्रंथालय. प्रत्येक नोंद: थंबनेल, तारीख, प्रसंग, लिप्यंतरण डाउनलोड. वक्ता आणि विषयानुसार फिल्टर.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">12</div>
+      <div class="ptitle"><span class="en">Photo Gallery</span><span class="mr">छायाचित्र संग्रह</span> <small><span class="en">Visual · Lightbox</span><span class="mr">दृश्य · लाइटबॉक्स</span></small></div>
+      <div class="pdesc"><span class="en">Albumed gallery (rallies, public events, milestones). Lazy-loaded grid, lightbox viewer, captions, EXIF preserved.</span><span class="mr">अल्बम संग्रह (सभा, सार्वजनिक कार्यक्रम, टप्पे). लेझी-लोड ग्रिड, लाइटबॉक्स दृश्य, मथळे, EXIF जतन.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">13</div>
+      <div class="ptitle"><span class="en">Video Gallery</span><span class="mr">व्हिडिओ संग्रह</span> <small><span class="en">YouTube Embeds</span><span class="mr">YouTube एम्बेड</span></small></div>
+      <div class="pdesc"><span class="en">Curated video grid with playlists. Native YouTube embeds. Featured live-stream block.</span><span class="mr">व्यवस्थित व्हिडिओ ग्रिड, प्लेलिस्ट. नेटिव्ह YouTube एम्बेड. प्रमुख लाइव्ह-स्ट्रीम विभाग.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">14</div>
+      <div class="ptitle"><span class="en">Join as Karyakarta</span><span class="mr">कार्यकर्ता म्हणून सामील व्हा</span> <small><span class="en">Form · Onboarding</span><span class="mr">फॉर्म · नोंदणी</span></small></div>
+      <div class="pdesc"><span class="en">Multi-step form. District/ward mapping. Aadhaar-friendly fields. WhatsApp opt-in. Confirmation email + SMS.</span><span class="mr">मल्टी-स्टेप फॉर्म. जिल्हा/प्रभाग मॅपिंग. आधार-अनुकूल फील्ड. WhatsApp ऑप्ट-इन. पुष्टी ईमेल + SMS.</span></div>
+      <div class="ptags"><span class="ptag ptag-form"><span class="en">Form</span><span class="mr">फॉर्म</span></span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">15</div>
+      <div class="ptitle"><span class="en">Donate</span><span class="mr">देणगी</span> <small><span class="en">Payment Gateway</span><span class="mr">पेमेंट गेटवे</span></small></div>
+      <div class="pdesc"><span class="en">Razorpay/UPI integration. Tax-exemption note. Donation tiers. Receipt auto-mail. Compliance disclosures.</span><span class="mr">Razorpay/UPI एकत्रीकरण. कर-सवलत सूचना. देणगी स्तर. पावती स्वयं-ईमेल. नियम पालन प्रकटन.</span></div>
+      <div class="ptags"><span class="ptag ptag-form"><span class="en">Payment</span><span class="mr">पेमेंट</span></span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">16</div>
+      <div class="ptitle"><span class="en">Events & Rally Calendar</span><span class="mr">कार्यक्रम आणि सभा कॅलेंडर</span> <small><span class="en">Listing · Map</span><span class="mr">यादी · नकाशा</span></small></div>
+      <div class="pdesc"><span class="en">Upcoming events with date filters. Interactive map. RSVP form. Add-to-calendar button.</span><span class="mr">येणारे कार्यक्रम, तारीख फिल्टर. संवादात्मक नकाशा. RSVP फॉर्म. कॅलेंडरमध्ये जोडा.</span></div>
+      <div class="ptags"><span class="ptag ptag-cms">CMS</span></div>
+    </div>
+
+    <div class="page-row">
+      <div class="pn">17</div>
+      <div class="ptitle"><span class="en">Find Your MLA/MP & Contact</span><span class="mr">तुमचे आमदार/खासदार शोधा</span> <small><span class="en">Tool · Locator</span><span class="mr">साधन · शोधक</span></small></div>
+      <div class="pdesc"><span class="en">Constituency-finder by pincode/district. Local office addresses, phone, email. Static contact form for general queries.</span><span class="mr">पिनकोड/जिल्हानुसार मतदारसंघ शोधक. स्थानिक कार्यालय पत्ते, फोन, ईमेल. सामान्य चौकशीसाठी संपर्क फॉर्म.</span></div>
+      <div class="ptags"><span class="ptag ptag-form"><span class="en">Tool</span><span class="mr">साधन</span></span></div>
+    </div>
+
+  </div>
+
+  <p style="margin-top:24px; color:var(--ink-muted); font-size:12px; line-height:1.6; padding-top:20px; border-top:1px dashed var(--line)">
+    <span class="en"><strong style="color:var(--saffron)">Plus 4 utility pages:</strong> Manifesto / Resources Hub · Press Kit · Search Results · 404 / Privacy / Cookie pages. Total: <strong style="color:var(--saffron)">21 unique templates and pages</strong>.</span><span class="mr"><strong style="color:var(--saffron)">अधिक ४ युटिलिटी पाने:</strong> जाहीरनामा / संसाधन केंद्र · प्रेस किट · शोध परिणाम · ४०४ / गोपनीयता / कुकी. एकूण: <strong style="color:var(--saffron)">२१ स्वतंत्र टेम्प्लेट आणि पाने</strong>.</span>
+  </p>
+</section>
+
+<!-- ============================================================
+     SLIDE 6 — CONTENT RESPONSIBILITY MATRIX
+     ============================================================ -->
+<section class="slide slide-tint" id="s6">
+  <span class="slide-num">06 — 18</span>
+  <span class="slide-tag"><span class="en">Content Responsibility</span><span class="mr">मजकूर जबाबदारी</span></span>
+
+  <span class="pill pill-solid"><span class="en">Important · Read Carefully</span><span class="mr">महत्त्वाचे · काळजीपूर्वक वाचा</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">Who provides<br><em class="serif">what content?</em></span><span class="mr">कोण काय<br><em class="serif">मजकूर देतो?</em></span></h2>
+  <p class="lead" style="margin-top:18px; max-width:70ch">
+    <span class="en">A clear scope of content responsibility prevents delays. Futuready will mine all <strong style="color:var(--ink)">publicly available content</strong> (party history, leader biographies, milestone facts, manifesto, press archives) and structure it into the relevant sections of the website. Anything not in the public domain — current photographs, internal documents, leader quotes, video assets, donation compliance copy — must come from the client, and Futuready will <strong style="color:var(--ink)">restructure and adapt it</strong> for the appropriate page.</span><span class="mr">मजकूर जबाबदारीची स्पष्ट व्याप्ती विलंब टाळते. फ्युचरेडी सर्व <strong style="color:var(--ink)">सार्वजनिकरीत्या उपलब्ध मजकूर</strong> (पक्ष इतिहास, नेता चरित्रे, टप्पे, जाहीरनामा, प्रेस संग्रह) गोळा करून संकेतस्थळाच्या योग्य विभागात मांडेल. सार्वजनिक डोमेनमध्ये नसलेले — अद्ययावत छायाचित्रे, अंतर्गत दस्तऐवज, नेत्यांचे अवतरण, व्हिडिओ, देणगी नियम मजकूर — क्लायंटकडून यावे लागतील, आणि फ्युचरेडी ते <strong style="color:var(--ink)">योग्य पानासाठी पुनर्रचित आणि अनुकूल</strong> करेल.</span>
+  </p>
+
+  <div class="content-matrix">
+    <div class="cm-header">
+      <div><span class="en">Content Section</span><span class="mr">मजकूर विभाग</span></div>
+      <div><span class="en">Public Domain</span><span class="mr">सार्वजनिक</span></div>
+      <div><span class="en">Client Provides</span><span class="mr">क्लायंट देतो</span></div>
+      <div><span class="en">FRM Restructures</span><span class="mr">FRM पुनर्रचना</span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Party History & Founding</span><span class="mr">पक्ष इतिहास आणि स्थापना</span><small><span class="en">Hindu Hriday Samrat Bala Saheb Thackeray · Anand Dighe Saheb · formative years · milestones</span><span class="mr">हिंदू हृदयसम्राट बाळासाहेब ठाकरे · आनंद दिघे साहेब · प्रारंभिक वर्षे · टप्पे</span></small></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes — sourced</span><span class="mr">होय — मिळवले</span></span></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">Validation only</span><span class="mr">केवळ पडताळणी</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Ideology & Vision</span><span class="mr">विचारधारा आणि दृष्टी</span><small><span class="en">Hindutva framework, cultural positioning</span><span class="mr">हिंदुत्व चौकट, सांस्कृतिक स्थान</span></small></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes — sourced</span><span class="mr">होय — मिळवले</span></span></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">Tone alignment</span><span class="mr">सूर समायोजन</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Chairman's Profile</span><span class="mr">अध्यक्षांची ओळख</span><small><span class="en">Bio, achievements, public record</span><span class="mr">चरित्र, उपलब्धी, सार्वजनिक रेकॉर्ड</span></small></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">Partial</span><span class="mr">अंशतः</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">Approved bio</span><span class="mr">मंजूर चरित्र</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Leadership Directory</span><span class="mr">नेतृत्व निर्देशिका</span><small><span class="en">National + state leaders</span><span class="mr">राष्ट्रीय + राज्य नेते</span></small></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">Partial</span><span class="mr">अंशतः</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">List + photos</span><span class="mr">यादी + छायाचित्रे</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Office Bearers</span><span class="mr">पदाधिकारी</span><small><span class="en">State/district org structure</span><span class="mr">राज्य/जिल्हा रचना</span></small></div>
+      <div><span class="cm-marker na"><span class="dot"></span><span class="en">No</span><span class="mr">नाही</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">Full list</span><span class="mr">संपूर्ण यादी</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">News Articles & Press</span><span class="mr">बातम्या आणि प्रेस</span><small><span class="en">Initial archive load</span><span class="mr">प्रारंभिक संग्रह</span></small></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes — last 12 mo</span><span class="mr">होय — गेले १२ महिने</span></span></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">Approval only</span><span class="mr">केवळ मंजुरी</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Speeches & Videos</span><span class="mr">भाषणे आणि व्हिडिओ</span><small><span class="en">YouTube/social archive</span><span class="mr">YouTube/सोशल संग्रह</span></small></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes — public links</span><span class="mr">होय — सार्वजनिक दुवे</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">Curation list</span><span class="mr">क्युरेशन यादी</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Photo Gallery</span><span class="mr">छायाचित्र संग्रह</span><small><span class="en">Hi-res rally + event imagery</span><span class="mr">हाय-रेस सभा + कार्यक्रम छायाचित्रे</span></small></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">Partial · low-res</span><span class="mr">अंशतः · लो-रेस</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">Hi-res files</span><span class="mr">हाय-रेस फाइल्स</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Manifesto & Policy Docs</span><span class="mr">जाहीरनामा आणि धोरण दस्तऐवज</span><small><span class="en">Election commitments</span><span class="mr">निवडणूक वचनबद्धता</span></small></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes — public</span><span class="mr">होय — सार्वजनिक</span></span></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">Latest versions</span><span class="mr">नवीनतम आवृत्त्या</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Karyakarta Onboarding</span><span class="mr">कार्यकर्ता नोंदणी</span><small><span class="en">Form fields, T&Cs, eligibility</span><span class="mr">फॉर्म फील्ड, अटी, पात्रता</span></small></div>
+      <div><span class="cm-marker na"><span class="dot"></span><span class="en">No</span><span class="mr">नाही</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">Eligibility rules</span><span class="mr">पात्रता नियम</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Donation Compliance</span><span class="mr">देणगी नियम पालन</span><small><span class="en">FCRA, tax exemption, disclosures</span><span class="mr">FCRA, कर सवलत, प्रकटन</span></small></div>
+      <div><span class="cm-marker na"><span class="dot"></span><span class="en">No</span><span class="mr">नाही</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">Legal copy</span><span class="mr">कायदेशीर मजकूर</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Layout only</span><span class="mr">केवळ मांडणी</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">MLA / MP Constituency Data</span><span class="mr">आमदार/खासदार मतदारसंघ डेटा</span><small><span class="en">Pincode-mapped contact info</span><span class="mr">पिनकोड-नकाशा संपर्क</span></small></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">ECI public data</span><span class="mr">ECI सार्वजनिक डेटा</span></span></div>
+      <div><span class="cm-marker client"><span class="dot"></span><span class="en">Office addresses</span><span class="mr">कार्यालय पत्ते</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes</span><span class="mr">होय</span></span></div>
+    </div>
+
+    <div class="cm-row">
+      <div class="cm-section"><span class="en">Marathi Translation</span><span class="mr">मराठी अनुवाद</span><small><span class="en">All client-provided English copy</span><span class="mr">क्लायंट-दिलेला सर्व इंग्रजी मजकूर</span></small></div>
+      <div><span class="cm-marker na"><span class="dot"></span>—</span></div>
+      <div><span class="cm-marker partial"><span class="dot"></span><span class="en">If available</span><span class="mr">उपलब्ध असल्यास</span></span></div>
+      <div><span class="cm-marker yes"><span class="dot"></span><span class="en">Yes — handled</span><span class="mr">होय — हाताळले</span></span></div>
+    </div>
+  </div>
+
+  <div class="cm-legend">
+    <p><strong><span class="en">Legend:</span><span class="mr">स्पष्टीकरण:</span></strong> <span style="display:inline-flex; align-items:center; gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:var(--saffron); display:inline-block"></span> <span class="en">Public Domain — Futuready will source and structure</span><span class="mr">सार्वजनिक — फ्युचरेडी मिळवेल आणि मांडेल</span></span> · <span style="display:inline-flex; align-items:center; gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:var(--ink); display:inline-block"></span> <span class="en">Client Provides — required from party comms team</span><span class="mr">क्लायंट देतो — पक्षाच्या टीमकडून आवश्यक</span></span> · <span style="display:inline-flex; align-items:center; gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:var(--gold); display:inline-block"></span> <span class="en">Partial — collaborative</span><span class="mr">अंशतः — सहयोगी</span></span></p>
+    <span class="en"><p><strong>What "restructure" means:</strong> Futuready will edit, condense, format, translate, and present client-provided content in the appropriate page section. We do <strong>not</strong> write original political copy, draft policy positions, or compose original messaging — that responsibility stays with the party comms team.</p></span><span class="mr"><p><strong>"पुनर्रचना" म्हणजे काय:</strong> फ्युचरेडी क्लायंट-दिलेला मजकूर संपादित, संक्षिप्त, स्वरूपण, अनुवाद आणि योग्य पानावर सादर करेल. आम्ही मूळ राजकीय मजकूर लिहिणार <strong>नाही</strong>, धोरण भूमिका तयार करणार नाही, किंवा मूळ संदेश रचणार नाही — ती जबाबदारी पक्षाच्या टीमकडे राहील.</p></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 7 — DESIGN APPROACH & DELIVERABLES
+     ============================================================ -->
+<section class="slide slide-cream" id="s7">
+  <span class="slide-num">07 — 18</span>
+  <span class="slide-tag"><span class="en">Design Deliverables</span><span class="mr">डिझाइन वितरण</span></span>
+
+  <span class="pill"><span class="en">UI / UX Workstream</span><span class="mr">UI / UX कार्यप्रवाह</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">Design <em class="serif">deliverables</em><br>in detail.</span><span class="mr">डिझाइन <em class="serif">वितरण</em><br>तपशीलवार.</span></h2>
+  <p class="lead" style="margin-top:18px"><span class="en">Three workstreams across four weeks. Every deliverable is a tangible artifact handed over for sign-off — no ambiguity, no scope creep.</span><span class="mr">चार आठवड्यांत तीन कार्यप्रवाह. प्रत्येक वितरण ठोस वस्तू, मंजुरीसाठी हस्तांतरित — संदिग्धता नाही, व्याप्ती-वाढ नाही.</span></p>
+
+  <div class="delv-grid">
+    <div class="delv-card">
+      <div class="icn">A</div>
+      <h6><span class="en">Discovery & Strategy</span><span class="mr">शोध आणि रणनीती</span></h6>
+      <div class="delv-sub"><span class="en">Week 1–2 · Foundation</span><span class="mr">आठवडा १–२ · पाया</span></div>
+      <ul>
+        <li><span class="en">Stakeholder workshop (3 sessions)</span><span class="mr">भागधारक कार्यशाळा (३ सत्रे)</span></li>
+        <li><span class="en">Audience persona document (5 personas)</span><span class="mr">प्रेक्षक व्यक्तिमत्व दस्तऐवज (५)</span></li>
+        <li><span class="en">Competitor & political-site audit</span><span class="mr">स्पर्धक आणि राजकीय संकेतस्थळ ऑडिट</span></li>
+        <li><span class="en">Information architecture diagram</span><span class="mr">माहिती रचना आरेख</span></li>
+        <li><span class="en">User flow maps (5 flows)</span><span class="mr">वापरकर्ता प्रवाह नकाशे (५)</span></li>
+        <li><span class="en">Content strategy & tonality doc</span><span class="mr">मजकूर रणनीती आणि सूर दस्तऐवज</span></li>
+        <li><span class="en">Visual mood-board (3 directions)</span><span class="mr">दृश्य मूड-बोर्ड (३ दिशा)</span></li>
+      </ul>
+      <div class="count-bar">
+        <span class="count-label"><span class="en">Artifacts</span><span class="mr">वस्तू</span></span>
+        <span class="count-num">8</span>
+      </div>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">B</div>
+      <h6><span class="en">Wireframes & Prototype</span><span class="mr">वायरफ्रेम आणि प्रोटोटाइप</span></h6>
+      <div class="delv-sub"><span class="en">Week 3 · Skeleton</span><span class="mr">आठवडा ३ · सांगाडा</span></div>
+      <ul>
+        <li><span class="en">Low-fidelity wireframes — all 17 pages</span><span class="mr">लो-फिडेलिटी वायरफ्रेम — सर्व १७ पाने</span></li>
+        <li><span class="en">Mobile + tablet + desktop variants</span><span class="mr">मोबाइल + टॅबलेट + डेस्कटॉप</span></li>
+        <li><span class="en">Component library wireframe</span><span class="mr">कंपोनंट लायब्ररी वायरफ्रेम</span></li>
+        <li><span class="en">Interactive Figma prototype</span><span class="mr">संवादात्मक Figma प्रोटोटाइप</span></li>
+        <li><span class="en">Responsive grid system</span><span class="mr">रिस्पॉन्सिव्ह ग्रिड प्रणाली</span></li>
+        <li><span class="en">Form-flow wireframes (Karyakarta + Donate)</span><span class="mr">फॉर्म-फ्लो वायरफ्रेम (कार्यकर्ता + देणगी)</span></li>
+        <li><span class="en">Sign-off review session</span><span class="mr">मंजुरी समीक्षा सत्र</span></li>
+      </ul>
+      <div class="count-bar">
+        <span class="count-label"><span class="en">Pages</span><span class="mr">पाने</span></span>
+        <span class="count-num">48+</span>
+      </div>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">C</div>
+      <h6><span class="en">Visual Design</span><span class="mr">दृश्य डिझाइन</span></h6>
+      <div class="delv-sub"><span class="en">Week 4 · High Fidelity</span><span class="mr">आठवडा ४ · हाय फिडेलिटी</span></div>
+      <ul>
+        <li><span class="en">3 design directions for homepage</span><span class="mr">मुख्यपृष्ठासाठी ३ डिझाइन दिशा</span></li>
+        <li><span class="en">Final design system & tokens</span><span class="mr">अंतिम डिझाइन प्रणाली आणि टोकन</span></li>
+        <li><span class="en">Hi-fi mocks — all 17 pages × 3 breakpoints</span><span class="mr">हाय-फाय मॉक — सर्व १७ पाने × ३ ब्रेकपॉइंट</span></li>
+        <li><span class="en">Iconography set (custom, ~40 icons)</span><span class="mr">आयकॉन सेट (कस्टम, ~४० आयकॉन)</span></li>
+        <li><span class="en">Illustration / motif system</span><span class="mr">इलस्ट्रेशन / आकृतिबंध प्रणाली</span></li>
+        <li><span class="en">Marathi typography testing</span><span class="mr">मराठी टायपोग्राफी चाचणी</span></li>
+        <li><span class="en">Style guide PDF for handover</span><span class="mr">हस्तांतरणासाठी स्टाइल गाइड PDF</span></li>
+      </ul>
+      <div class="count-bar">
+        <span class="count-label"><span class="en">Mockups</span><span class="mr">मॉकअप</span></span>
+        <span class="count-num">48+</span>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:24px; color:var(--ink-muted); font-size:12px; line-height:1.6">
+    <span class="en"><strong style="color:var(--saffron)">Total design output:</strong> ~110 deliverables across discovery, wireframes, and visual design. All files handed over in editable Figma + exportable PNG/PDF formats.</span><span class="mr"><strong style="color:var(--saffron)">एकूण डिझाइन वितरण:</strong> शोध, वायरफ्रेम आणि दृश्य डिझाइनमध्ये ~११० वितरण. सर्व फाइल्स संपादनयोग्य Figma + निर्यातयोग्य PNG/PDF स्वरूपात.</span>
+  </p>
+</section>
+
+<!-- ============================================================
+     SLIDE 8 — DEVELOPMENT APPROACH
+     ============================================================ -->
+<section class="slide slide-warm" id="s8">
+  <span class="slide-num">08 — 18</span>
+  <span class="slide-tag"><span class="en">Development</span><span class="mr">डेव्हलपमेंट</span></span>
+
+  <span class="pill"><span class="en">Engineering Workstream</span><span class="mr">अभियांत्रिकी कार्यप्रवाह</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">Built with <em class="serif">precision.</em></span><span class="mr"><em class="serif">अचूकतेने</em><br>निर्मित.</span></h2>
+  <p class="lead" style="margin-top:18px"><span class="en">Modern, maintainable, performant. The engineering choices below are deliberate — chosen for ease of handover, low operating cost, and proven scalability under spike traffic.</span><span class="mr">आधुनिक, देखभालयोग्य, कार्यक्षम. खालील अभियांत्रिकी निवडी जाणीवपूर्वक — सुलभ हस्तांतरण, कमी ऑपरेटिंग खर्च, आणि स्पाइक ट्रॅफिकखाली सिद्ध स्केलेबिलिटी.</span></p>
+
+  <div class="delv-grid">
+    <div class="delv-card">
+      <div class="icn">D</div>
+      <h6><span class="en">Frontend Engineering</span><span class="mr">फ्रंटएंड अभियांत्रिकी</span></h6>
+      <div class="delv-sub">Next.js · React · TypeScript</div>
+      <ul>
+        <li>Next.js 14+ (App Router)</li>
+        <li><span class="en">Server-side rendering for SEO</span><span class="mr">SEO साठी SSR</span></li>
+        <li><span class="en">TypeScript-strict codebase</span><span class="mr">TypeScript-स्ट्रिक्ट कोडबेस</span></li>
+        <li><span class="en">Tailwind CSS · component-driven</span><span class="mr">Tailwind CSS · कंपोनंट-आधारित</span></li>
+        <li><span class="en">i18n setup · EN + Marathi</span><span class="mr">i18n सेटअप · EN + मराठी</span></li>
+        <li><span class="en">Form validation · Zod / RHF</span><span class="mr">फॉर्म पडताळणी · Zod / RHF</span></li>
+        <li><span class="en">Image optimization · next/image</span><span class="mr">प्रतिमा ऑप्टिमायझेशन · next/image</span></li>
+      </ul>
+      <div class="count-bar">
+        <span class="count-label"><span class="en">Components</span><span class="mr">कंपोनंट</span></span>
+        <span class="count-num">60+</span>
+      </div>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">E</div>
+      <h6><span class="en">Backend & APIs</span><span class="mr">बॅकएंड आणि API</span></h6>
+      <div class="delv-sub">Strapi CMS · Node.js</div>
+      <ul>
+        <li><span class="en">Strapi v4 self-hosted CMS</span><span class="mr">Strapi v4 स्वयं-होस्टेड CMS</span></li>
+        <li><span class="en">17 content types modeled</span><span class="mr">१७ मजकूर प्रकार मॉडेल केलेले</span></li>
+        <li><span class="en">REST + GraphQL APIs</span><span class="mr">REST + GraphQL API</span></li>
+        <li><span class="en">Role-based access (Editor/Admin)</span><span class="mr">भूमिका-आधारित प्रवेश (एडिटर/अॅडमिन)</span></li>
+        <li><span class="en">Bilingual content models</span><span class="mr">द्विभाषिक मजकूर मॉडेल</span></li>
+        <li><span class="en">Media library + S3 backend</span><span class="mr">मीडिया लायब्ररी + S3 बॅकएंड</span></li>
+        <li><span class="en">Webhook hooks for cache</span><span class="mr">कॅशेसाठी वेबहूक</span></li>
+      </ul>
+      <div class="count-bar">
+        <span class="count-label"><span class="en">Content Types</span><span class="mr">मजकूर प्रकार</span></span>
+        <span class="count-num">17</span>
+      </div>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">F</div>
+      <h6><span class="en">Integrations</span><span class="mr">एकत्रीकरण</span></h6>
+      <div class="delv-sub"><span class="en">Forms · Payments · Comms</span><span class="mr">फॉर्म · पेमेंट · संप्रेषण</span></div>
+      <ul>
+        <li><span class="en">Razorpay · donation gateway</span><span class="mr">Razorpay · देणगी गेटवे</span></li>
+        <li><span class="en">WhatsApp Business API · opt-in</span><span class="mr">WhatsApp Business API · ऑप्ट-इन</span></li>
+        <li><span class="en">Mailgun / SendGrid · transactional</span><span class="mr">Mailgun / SendGrid · व्यवहार ईमेल</span></li>
+        <li><span class="en">SMS gateway (MSG91) · OTP + alerts</span><span class="mr">SMS गेटवे (MSG91) · OTP + सूचना</span></li>
+        <li><span class="en">YouTube Data API · video gallery</span><span class="mr">YouTube Data API · व्हिडिओ संग्रह</span></li>
+        <li><span class="en">Google Maps · constituency locator</span><span class="mr">Google Maps · मतदारसंघ शोधक</span></li>
+        <li><span class="en">reCAPTCHA · spam protection</span><span class="mr">reCAPTCHA · स्पॅम संरक्षण</span></li>
+      </ul>
+      <div class="count-bar">
+        <span class="count-label"><span class="en">3rd Party APIs</span><span class="mr">तृतीय पक्ष API</span></span>
+        <span class="count-num">7</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 9 — CMS & BILINGUAL STRATEGY
+     ============================================================ -->
+<section class="slide slide-cream" id="s9">
+  <span class="slide-num">09 — 18</span>
+  <span class="slide-tag"><span class="en">CMS & Languages</span><span class="mr">CMS आणि भाषा</span></span>
+
+  <span class="pill"><span class="en">Editorial Control</span><span class="mr">संपादकीय नियंत्रण</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">A CMS the team<br><em class="serif">actually owns.</em></span><span class="mr">टीमच्या <em class="serif">मालकीचा</em><br>CMS.</span></h2>
+
+  <div class="exec-grid">
+    <div>
+      <p class="lead">
+        <span class="en">Strapi is a self-hosted, open-source CMS that gives the party comms team full control over every piece of content on the site — without ever needing a developer for routine updates. Bilingual content is treated as a first-class citizen — every record exists in both English and Marathi, edited side-by-side in a single interface.</span><span class="mr">Strapi हा स्वयं-होस्टेड, ओपन-सोर्स CMS, जो पक्षाच्या टीमला संकेतस्थळावरील प्रत्येक मजकूरावर पूर्ण नियंत्रण देतो — नियमित अपडेटसाठी डेव्हलपरची गरज नाही. द्विभाषिक मजकूर प्रथम-श्रेणी — प्रत्येक नोंद इंग्रजी आणि मराठीत, एकाच इंटरफेसमध्ये शेजारी संपादनीय.</span>
+      </p>
+      <p class="lead" style="margin-top:14px">
+        <span class="en">Training is hands-on: two live sessions for the comms team, with video walkthroughs handed over for new joiners. A 30-day post-launch warranty period gives the team time to ramp up without pressure.</span><span class="mr">प्रशिक्षण प्रत्यक्ष: टीमसाठी दोन लाइव्ह सत्रे, नवीन सदस्यांसाठी व्हिडिओ मार्गदर्शन. ३० दिवस लाँचनंतर वॉरंटी — टीमला दबावाशिवाय शिकण्याचा वेळ.</span>
+      </p>
+    </div>
+
+    <div class="delv-grid" style="grid-template-columns: 1fr; gap: 14px; margin-top: 0">
+      <div class="delv-card">
+        <h6><span class="en">17 Content Types Modeled</span><span class="mr">१७ मजकूर प्रकार मॉडेल केलेले</span></h6>
+        <ul>
+          <li><span class="en">News article · press release · speech · video · photo album · event · leader profile · office bearer · constituency · donation tier · karyakarta entry · manifesto doc · achievement · static page · global navigation · footer · settings</span><span class="mr">बातमी लेख · प्रसिद्धीपत्रक · भाषण · व्हिडिओ · छायाचित्र अल्बम · कार्यक्रम · नेता प्रोफाइल · पदाधिकारी · मतदारसंघ · देणगी स्तर · कार्यकर्ता नोंद · जाहीरनामा · उपलब्धी · स्थिर पान · जागतिक नेव्हिगेशन · फूटर · सेटिंग्ज</span></li>
+        </ul>
+      </div>
+      <div class="delv-card">
+        <h6><span class="en">Bilingual Content Workflow</span><span class="mr">द्विभाषिक मजकूर कार्यप्रवाह</span></h6>
+        <ul>
+          <li><span class="en">Single record · two language fields per text element</span><span class="mr">एकच नोंद · प्रत्येक मजकूर घटकासाठी दोन भाषा फील्ड</span></li>
+          <li><span class="en">Marathi translation can be drafted by team or sent to professional translator via plug-in workflow</span><span class="mr">मराठी अनुवाद टीमकडून किंवा व्यावसायिक अनुवादकाकडे प्लगइन-वर्कफ्लोद्वारे</span></li>
+          <li><span class="en">Publish rules: require both languages before going live (toggleable)</span><span class="mr">प्रकाशन नियम: लाइव्ह जाण्यापूर्वी दोन्ही भाषा (टॉगलयोग्य)</span></li>
+          <li><span class="en">SEO: hreflang auto-generated · separate Marathi sitemap</span><span class="mr">SEO: hreflang स्वयं-निर्मित · स्वतंत्र मराठी साइटमॅप</span></li>
+        </ul>
+      </div>
+      <div class="delv-card">
+        <h6><span class="en">Roles & Access</span><span class="mr">भूमिका आणि प्रवेश</span></h6>
+        <ul>
+          <li><span class="en">Admin: full access (Futuready handover at launch)</span><span class="mr">अॅडमिन: पूर्ण प्रवेश (फ्युचरेडी लाँचवर हस्तांतरण)</span></li>
+          <li><span class="en">Editor: news, photos, videos, events</span><span class="mr">एडिटर: बातम्या, छायाचित्रे, व्हिडिओ, कार्यक्रम</span></li>
+          <li><span class="en">Reviewer: approve before publish</span><span class="mr">समीक्षक: प्रकाशनापूर्वी मंजूर</span></li>
+          <li><span class="en">Audit log: every change tracked</span><span class="mr">ऑडिट लॉग: प्रत्येक बदल ट्रॅक</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 10 — ANIMATION & INTERACTION LAYER
+     ============================================================ -->
+<section class="slide slide-warm" id="s10">
+  <span class="slide-num">10 — 18</span>
+  <span class="slide-tag"><span class="en">Animation Layer</span><span class="mr">अॅनिमेशन थर</span></span>
+
+  <span class="pill"><span class="en">Motion · Restraint Over Flash</span><span class="mr">गती · भडकपणावर संयम</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">A site that <em class="serif">feels alive.</em></span><span class="mr"><em class="serif">जिवंत</em><br>संकेतस्थळ.</span></h2>
+  <p class="lead" style="margin-top:18px">
+    <span class="en">Animation is not decoration — it's a layer of meaning. Every motion has a job: to draw attention, to reveal hierarchy, to communicate transition. Tasteful, dignified, and never gimmicky.</span><span class="mr">अॅनिमेशन सजावट नव्हे — अर्थाचा थर. प्रत्येक गतीचे काम: लक्ष वेधणे, श्रेणी उघडणे, बदल सांगणे. सुसंस्कृत, प्रतिष्ठित, कधीही गिमिकी नाही.</span>
+  </p>
+
+  <div class="delv-grid">
+    <div class="delv-card">
+      <div class="icn">G</div>
+      <h6><span class="en">Hero 3D Scroll</span><span class="mr">हीरो 3D स्क्रोल</span></h6>
+      <div class="delv-sub">Three.js · <span class="en">Light Footprint</span><span class="mr">हलका फूटप्रिंट</span></div>
+      <ul>
+        <li><span class="en">Subtle 3D scene on homepage hero</span><span class="mr">मुख्यपृष्ठ हीरोवर सूक्ष्म 3D दृश्य</span></li>
+        <li><span class="en">Camera moves with scroll position</span><span class="mr">स्क्रोल स्थानानुसार कॅमेरा गती</span></li>
+        <li><span class="en">~40KB Three.js footprint</span><span class="mr">~४०KB Three.js फूटप्रिंट</span></li>
+        <li><span class="en">Graceful fallback to static for older devices</span><span class="mr">जुन्या उपकरणांसाठी स्थिर फॉलबॅक</span></li>
+        <li><span class="en">WebGL detection · auto-degrade</span><span class="mr">WebGL शोध · स्वयं-घट</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">H</div>
+      <h6><span class="en">Scroll-Driven Reveals</span><span class="mr">स्क्रोल-आधारित प्रकटीकरण</span></h6>
+      <div class="delv-sub">GSAP ScrollTrigger</div>
+      <ul>
+        <li><span class="en">Section entrances · fade + lift</span><span class="mr">विभाग प्रवेश · फेड + उचल</span></li>
+        <li><span class="en">Timeline page horizontal scroll</span><span class="mr">वेळरेखा पान आडवा स्क्रोल</span></li>
+        <li><span class="en">Counter animations · achievements</span><span class="mr">काउंटर अॅनिमेशन · उपलब्धी</span></li>
+        <li><span class="en">Image parallax · subtle depth</span><span class="mr">प्रतिमा पॅरॅलॅक्स · सूक्ष्म खोली</span></li>
+        <li><span class="en">Pinned sections · long-scroll storytelling</span><span class="mr">पिन केलेले विभाग · दीर्घ-स्क्रोल कथन</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">I</div>
+      <h6><span class="en">Micro-Interactions</span><span class="mr">मायक्रो-इंटरॅक्शन</span></h6>
+      <div class="delv-sub">CSS + Framer Motion</div>
+      <ul>
+        <li><span class="en">Hover states · button & card lifts</span><span class="mr">हॉव्हर स्थिती · बटण आणि कार्ड उचल</span></li>
+        <li><span class="en">Form field transitions</span><span class="mr">फॉर्म फील्ड बदल</span></li>
+        <li><span class="en">Loading states · skeleton screens</span><span class="mr">लोडिंग स्थिती · स्केलेटन स्क्रीन</span></li>
+        <li><span class="en">Page transitions · cross-fade</span><span class="mr">पान बदल · क्रॉस-फेड</span></li>
+        <li><span class="en">Toast notifications · subtle slide</span><span class="mr">टोस्ट सूचना · सूक्ष्म स्लाइड</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:24px; padding:18px 22px; background:var(--paper-3); border:1px dashed var(--saffron); border-radius:8px; color:var(--ink-soft); font-size:13px; line-height:1.7">
+    <span class="en"><strong style="color:var(--saffron)">Performance budget for animation:</strong> All motion runs in CSS or GPU-accelerated transforms. Total animation overhead under 60KB. <em>Reduces motion automatically</em> for users with <span class="mono">prefers-reduced-motion</span> set — accessibility is non-negotiable.</span><span class="mr"><strong style="color:var(--saffron)">अॅनिमेशन कामगिरी बजेट:</strong> सर्व गती CSS किंवा GPU-गतिमान ट्रान्सफॉर्ममध्ये. एकूण अॅनिमेशन ओव्हरहेड ६०KB पेक्षा कमी. <span class="mono">prefers-reduced-motion</span> सेट केलेल्या वापरकर्त्यांसाठी <em>स्वयंचलित गती कमी</em> — सुलभता बिनतडजोड.</span>
+  </p>
+</section>
+
+<!-- ============================================================
+     SLIDE 11 — PERFORMANCE, SEO & SECURITY
+     ============================================================ -->
+<section class="slide slide-cream" id="s11">
+  <span class="slide-num">11 — 18</span>
+  <span class="slide-tag"><span class="en">Performance · SEO · Security</span><span class="mr">कामगिरी · SEO · सुरक्षा</span></span>
+
+  <span class="pill"><span class="en">Engineering Quality Standards</span><span class="mr">अभियांत्रिकी गुणवत्ता मानके</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">Fast, found, <em class="serif">defended.</em></span><span class="mr">वेगवान, सापडणारे,<br><em class="serif">सुरक्षित.</em></span></h2>
+
+  <div class="delv-grid">
+    <div class="delv-card">
+      <div class="icn">J</div>
+      <h6><span class="en">Performance Targets</span><span class="mr">कामगिरी लक्ष्य</span></h6>
+      <div class="delv-sub">Lighthouse · Core Web Vitals</div>
+      <ul>
+        <li><span class="en">Lighthouse score ≥ 90 on all pages</span><span class="mr">सर्व पानांवर Lighthouse स्कोअर ≥ ९०</span></li>
+        <li><span class="en">LCP under 2.5s on 4G</span><span class="mr">4G वर LCP २.५s पेक्षा कमी</span></li>
+        <li><span class="en">FID under 100ms</span><span class="mr">FID १०० ms पेक्षा कमी</span></li>
+        <li><span class="en">CLS under 0.1</span><span class="mr">CLS ०.१ पेक्षा कमी</span></li>
+        <li><span class="en">Image optimization · WebP/AVIF</span><span class="mr">प्रतिमा ऑप्टिमायझेशन · WebP/AVIF</span></li>
+        <li><span class="en">Code splitting · route-based</span><span class="mr">कोड स्प्लिटिंग · मार्ग-आधारित</span></li>
+        <li><span class="en">CDN delivery via Vercel/Cloudflare</span><span class="mr">Vercel/Cloudflare द्वारे CDN</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">K</div>
+      <h6><span class="en">SEO Foundation</span><span class="mr">SEO पाया</span></h6>
+      <div class="delv-sub"><span class="en">Indexing · Discoverability</span><span class="mr">इंडेक्सिंग · शोधण्यायोग्यता</span></div>
+      <ul>
+        <li><span class="en">Server-side rendering for crawlers</span><span class="mr">क्रॉलरसाठी SSR</span></li>
+        <li><span class="en">Schema.org structured data (Person, Event, Article)</span><span class="mr">Schema.org संरचित डेटा (व्यक्ती, कार्यक्रम, लेख)</span></li>
+        <li><span class="en">OG + Twitter card metadata · per page</span><span class="mr">OG + Twitter कार्ड मेटाडेटा · प्रति पान</span></li>
+        <li><span class="en">XML sitemap · auto-generated</span><span class="mr">XML साइटमॅप · स्वयं-निर्मित</span></li>
+        <li><span class="en">Marathi sitemap · separate</span><span class="mr">मराठी साइटमॅप · स्वतंत्र</span></li>
+        <li><span class="en">hreflang tags · EN/MR</span><span class="mr">hreflang टॅग · EN/MR</span></li>
+        <li><span class="en">Google Search Console setup</span><span class="mr">Google Search Console सेटअप</span></li>
+        <li><span class="en">GA4 + Google Tag Manager</span><span class="mr">GA4 + Google Tag Manager</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">L</div>
+      <h6><span class="en">Security & Compliance</span><span class="mr">सुरक्षा आणि नियम पालन</span></h6>
+      <div class="delv-sub"><span class="en">Hardening · Privacy</span><span class="mr">हार्डनिंग · गोपनीयता</span></div>
+      <ul>
+        <li><span class="en">SSL/TLS · auto-renewal</span><span class="mr">SSL/TLS · स्वयं-नूतनीकरण</span></li>
+        <li><span class="en">WAF · Cloudflare Pro</span><span class="mr">WAF · Cloudflare Pro</span></li>
+        <li><span class="en">DDoS protection</span><span class="mr">DDoS संरक्षण</span></li>
+        <li><span class="en">Rate-limiting on forms</span><span class="mr">फॉर्मवर रेट-लिमिट</span></li>
+        <li><span class="en">OWASP Top 10 mitigations</span><span class="mr">OWASP Top 10 शमन</span></li>
+        <li><span class="en">Daily DB backups · 30-day retention</span><span class="mr">दैनंदिन DB बॅकअप · ३० दिवस</span></li>
+        <li><span class="en">Privacy policy · cookie banner · DPDP-compliant</span><span class="mr">गोपनीयता धोरण · कुकी बॅनर · DPDP अनुरूप</span></li>
+        <li><span class="en">Form data encryption at rest</span><span class="mr">फॉर्म डेटा एनक्रिप्शन</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 12 — PROJECT TEAM & MANPOWER
+     ============================================================ -->
+<section class="slide slide-warm" id="s12">
+  <span class="slide-num">12 — 18</span>
+  <span class="slide-tag"><span class="en">The Team</span><span class="mr">टीम</span></span>
+
+  <span class="pill"><span class="en">Squad Allocation · Person-Days</span><span class="mr">टीम वाटप · मनुष्य-दिवस</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">7 specialists.<br><em class="serif">~210 person-days.</em></span><span class="mr">७ तज्ञ.<br><em class="serif">~२१० मनुष्य-दिवस.</em></span></h2>
+  <p class="lead" style="margin-top:18px; max-width:70ch">
+    <span class="en">A dedicated cross-functional squad of seven specialists. Every role time-boxed and accountable. The numbers below represent <strong>person-days of effort</strong> — not calendar days. Multiple roles run in parallel through the 12-week schedule.</span><span class="mr">सात तज्ञांची समर्पित क्रॉस-फंक्शनल टीम. प्रत्येक भूमिका वेळ-निश्चित आणि जबाबदार. खालील आकडे <strong>मनुष्य-दिवस प्रयत्न</strong> दर्शवतात — कॅलेंडर दिवस नव्हे. १२-आठवडे वेळापत्रकात अनेक भूमिका समांतर चालतात.</span>
+  </p>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="role-tag"><span class="en">Lead</span><span class="mr">प्रमुख</span></div>
+      <div class="role-name"><span class="en">Project Director</span><span class="mr">प्रकल्प संचालक</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">20 days</span><span class="mr">२० दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Full</span><span class="mr">पूर्ण</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Single point of contact for the client. Owns scope, timeline, escalations, weekly status, sign-off coordination, risk management.</span><span class="mr">क्लायंटसाठी एकमेव संपर्क बिंदू. व्याप्ती, वेळापत्रक, समस्या वाढ, साप्ताहिक स्थिती, मंजुरी समन्वय, जोखीम व्यवस्थापन.</span></div>
+    </div>
+
+    <div class="team-card">
+      <div class="role-tag"><span class="en">Strategy</span><span class="mr">रणनीती</span></div>
+      <div class="role-name"><span class="en">UX Strategist</span><span class="mr">UX रणनीतिकार</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">15 days</span><span class="mr">१५ दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Wk 1–4</span><span class="mr">आठवडा १–४</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Drives discovery workshops, persona development, audience research, IA, content strategy, user flows, and the strategic content plan.</span><span class="mr">शोध कार्यशाळा, व्यक्तिमत्व विकास, प्रेक्षक संशोधन, IA, मजकूर रणनीती, वापरकर्ता प्रवाह, धोरणात्मक मजकूर योजना.</span></div>
+    </div>
+
+    <div class="team-card">
+      <div class="role-tag"><span class="en">Design</span><span class="mr">डिझाइन</span></div>
+      <div class="role-name"><span class="en">Sr. UI Designer</span><span class="mr">सीनियर UI डिझाइनर</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">40 days</span><span class="mr">४० दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Wk 2–6</span><span class="mr">आठवडा २–६</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Owns visual design across all 17 pages × 3 breakpoints. Wireframes, mockups, design system, iconography, Marathi typography, style guide.</span><span class="mr">सर्व १७ पाने × ३ ब्रेकपॉइंट्सवर दृश्य डिझाइन. वायरफ्रेम, मॉकअप, डिझाइन प्रणाली, आयकॉन, मराठी टायपोग्राफी, स्टाइल गाइड.</span></div>
+    </div>
+
+    <div class="team-card">
+      <div class="role-tag"><span class="en">Engineering</span><span class="mr">अभियांत्रिकी</span></div>
+      <div class="role-name"><span class="en">Sr. Frontend Engineer</span><span class="mr">सीनियर फ्रंटएंड इंजिनियर</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">50 days</span><span class="mr">५० दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Wk 4–10</span><span class="mr">आठवडा ४–१०</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Lead build of the Next.js frontend. Component library, page builds, animation integration, i18n, form logic, integrations.</span><span class="mr">Next.js फ्रंटएंडची प्रमुख निर्मिती. कंपोनंट लायब्ररी, पान निर्मिती, अॅनिमेशन एकत्रीकरण, i18n, फॉर्म लॉजिक.</span></div>
+    </div>
+
+    <div class="team-card">
+      <div class="role-tag"><span class="en">Engineering</span><span class="mr">अभियांत्रिकी</span></div>
+      <div class="role-name"><span class="en">Backend Engineer</span><span class="mr">बॅकएंड इंजिनियर</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">30 days</span><span class="mr">३० दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Wk 4–9</span><span class="mr">आठवडा ४–९</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Strapi CMS setup, content modeling, role/permission setup, REST/GraphQL APIs, deployment scripts, integration plumbing (payments, WA, SMS).</span><span class="mr">Strapi CMS सेटअप, मजकूर मॉडेलिंग, भूमिका/परवानगी, REST/GraphQL API, डिप्लॉयमेंट स्क्रिप्ट, एकत्रीकरण (पेमेंट, WA, SMS).</span></div>
+    </div>
+
+    <div class="team-card">
+      <div class="role-tag"><span class="en">Motion</span><span class="mr">मोशन</span></div>
+      <div class="role-name"><span class="en">Animation / 3D Specialist</span><span class="mr">अॅनिमेशन / 3D तज्ञ</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">20 days</span><span class="mr">२० दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Wk 5–9</span><span class="mr">आठवडा ५–९</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">3D hero scene, GSAP scroll animations, micro-interactions, motion testing across devices. Performance budgeting.</span><span class="mr">3D हीरो दृश्य, GSAP स्क्रोल अॅनिमेशन, मायक्रो-इंटरॅक्शन, उपकरणांवर मोशन चाचणी. कामगिरी बजेट.</span></div>
+    </div>
+
+    <div class="team-card">
+      <div class="role-tag">QA</div>
+      <div class="role-name"><span class="en">QA Engineer</span><span class="mr">QA इंजिनियर</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">15 days</span><span class="mr">१५ दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Wk 8–11</span><span class="mr">आठवडा ८–११</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Cross-browser testing, mobile/tablet QA, accessibility audit (WCAG AA), performance benchmarking, security scan, bug triage.</span><span class="mr">क्रॉस-ब्राउझर चाचणी, मोबाइल/टॅबलेट QA, सुलभता ऑडिट (WCAG AA), कामगिरी बेंचमार्क, सुरक्षा स्कॅन, बग ट्रायाज.</span></div>
+    </div>
+
+    <div class="team-card">
+      <div class="role-tag"><span class="en">Content</span><span class="mr">मजकूर</span></div>
+      <div class="role-name"><span class="en">Content Producer</span><span class="mr">मजकूर निर्माता</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Allocation</span><span class="mr">वाटप</span></small><strong><span class="en">20 days</span><span class="mr">२० दिवस</span></strong></div>
+        <div><small><span class="en">Phase</span><span class="mr">टप्पा</span></small><strong><span class="en">Wk 3–10</span><span class="mr">आठवडा ३–१०</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Public-domain content sourcing, Marathi translation, copy restructuring, image curation, content QA, CMS data entry coordination.</span><span class="mr">सार्वजनिक मजकूर मिळवणे, मराठी अनुवाद, पुनर्रचना, प्रतिमा क्युरेशन, मजकूर QA, CMS डेटा एंट्री समन्वय.</span></div>
+    </div>
+
+    <div class="team-card" style="background:var(--saffron-tint); border-color:var(--saffron-soft)">
+      <div class="role-tag"><span class="en">Total</span><span class="mr">एकूण</span></div>
+      <div class="role-name"><span class="en">Combined Effort</span><span class="mr">एकत्रित प्रयत्न</span></div>
+      <div class="role-meta">
+        <div><small><span class="en">Person-Days</span><span class="mr">मनुष्य-दिवस</span></small><strong>~210</strong></div>
+        <div><small><span class="en">Calendar</span><span class="mr">कॅलेंडर</span></small><strong><span class="en">12 wks</span><span class="mr">१२ आठवडे</span></strong></div>
+      </div>
+      <div class="role-task"><span class="en">Roles run in parallel — the 12-week calendar fits 210 person-days because multiple specialists work concurrently in their respective phases.</span><span class="mr">भूमिका समांतर चालतात — १२-आठवडे कॅलेंडरमध्ये २१० मनुष्य-दिवस बसतात कारण अनेक तज्ञ त्यांच्या टप्प्यात एकत्र काम करतात.</span></div>
+    </div>
+  </div>
+
+  <div class="manpower-summary">
+    <div>
+      <div class="ms-label"><span class="en">Squad Size</span><span class="mr">टीम आकार</span></div>
+      <div class="ms-num">7</div>
+      <div class="ms-sub"><span class="en">cross-functional specialists</span><span class="mr">क्रॉस-फंक्शनल तज्ञ</span></div>
+    </div>
+    <div>
+      <div class="ms-label"><span class="en">Person-Days</span><span class="mr">मनुष्य-दिवस</span></div>
+      <div class="ms-num">~210</div>
+      <div class="ms-sub"><span class="en">total billable effort</span><span class="mr">एकूण बिलयोग्य प्रयत्न</span></div>
+    </div>
+    <div>
+      <div class="ms-label"><span class="en">Senior Effort</span><span class="mr">सीनियर प्रयत्न</span></div>
+      <div class="ms-num">62%</div>
+      <div class="ms-sub"><span class="en">PM + Sr. UI + Sr. FE + Backend</span><span class="mr">PM + सीनियर UI + सीनियर FE + बॅकएंड</span></div>
+    </div>
+    <div>
+      <div class="ms-label"><span class="en">Calendar</span><span class="mr">कॅलेंडर</span></div>
+      <div class="ms-num"><span class="en">12 wks</span><span class="mr">१२ आठवडे</span></div>
+      <div class="ms-sub"><span class="en">parallel-track delivery</span><span class="mr">समांतर-ट्रॅक वितरण</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 13 — 12-WEEK DELIVERY PLAN (GANTT)
+     ============================================================ -->
+<section class="slide slide-cream" id="s13">
+  <span class="slide-num">13 — 18</span>
+  <span class="slide-tag"><span class="en">Delivery Plan</span><span class="mr">वितरण योजना</span></span>
+
+  <span class="pill"><span class="en">12-Week Schedule · Weekly Granularity</span><span class="mr">१२-आठवडे वेळापत्रक · साप्ताहिक तपशील</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">Discovery to <em class="serif">launch.</em></span><span class="mr">शोध ते <em class="serif">लाँच.</em></span></h2>
+  <p class="lead" style="margin-top:18px">
+    <span class="en">Six phases. Every Friday: a written status update. Every other Tuesday: a formal review with the client. Critical milestones marked in solid saffron — these are the sign-off gates.</span><span class="mr">सहा टप्पे. प्रत्येक शुक्रवार: लेखी स्थिती अपडेट. प्रत्येक दुसऱ्या मंगळवारी: क्लायंटसोबत औपचारिक समीक्षा. महत्त्वाचे टप्पे ठळक केशरीत — हे मंजुरीचे टप्पे.</span>
+  </p>
+
+  <div class="gantt">
+    <div class="gantt-header">
+      <div class="gh-cell label-col"><span class="en">Phase / Workstream</span><span class="mr">टप्पा / कार्यप्रवाह</span></div>
+      <div class="gh-cell">W1</div>
+      <div class="gh-cell">W2</div>
+      <div class="gh-cell">W3</div>
+      <div class="gh-cell">W4</div>
+      <div class="gh-cell">W5</div>
+      <div class="gh-cell">W6</div>
+      <div class="gh-cell">W7</div>
+      <div class="gh-cell">W8</div>
+      <div class="gh-cell">W9</div>
+      <div class="gh-cell">W10</div>
+      <div class="gh-cell">W11</div>
+      <div class="gh-cell">W12</div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Discovery & Strategy</span><span class="mr">शोध आणि रणनीती</span><small><span class="en">UX Strategist + PM</span><span class="mr">UX रणनीतिकार + PM</span></small></div>
+      <div class="gantt-cell"><div class="gantt-bar solid">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar solid">●</div></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Wireframes & UX</span><span class="mr">वायरफ्रेम आणि UX</span><small><span class="en">UX Strategist + UI</span><span class="mr">UX रणनीतिकार + UI</span></small></div>
+      <div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar solid">●</div></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Visual Design</span><span class="mr">दृश्य डिझाइन</span><small><span class="en">Sr. UI Designer</span><span class="mr">सीनियर UI डिझाइनर</span></small></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar solid">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Backend / CMS Setup</span><span class="mr">बॅकएंड / CMS सेटअप</span><small><span class="en">Backend Engineer</span><span class="mr">बॅकएंड इंजिनियर</span></small></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar solid">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Frontend Build</span><span class="mr">फ्रंटएंड निर्मिती</span><small><span class="en">Sr. Frontend Engineer</span><span class="mr">सीनियर फ्रंटएंड इंजिनियर</span></small></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar solid">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Animation Layer</span><span class="mr">अॅनिमेशन थर</span><small><span class="en">Animation Specialist</span><span class="mr">अॅनिमेशन तज्ञ</span></small></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Content Production</span><span class="mr">मजकूर निर्मिती</span><small><span class="en">Content Producer</span><span class="mr">मजकूर निर्माता</span></small></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">QA · Testing · Audits</span><span class="mr">QA · चाचणी · ऑडिट</span><small><span class="en">QA Engineer</span><span class="mr">QA इंजिनियर</span></small></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar solid">●</div></div>
+      <div class="gantt-cell"></div>
+    </div>
+
+    <div class="gantt-row">
+      <div class="gr-label"><span class="en">Deploy · Train · Launch</span><span class="mr">डिप्लॉय · प्रशिक्षण · लाँच</span><small><span class="en">Full Squad</span><span class="mr">संपूर्ण टीम</span></small></div>
+      <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      <div class="gantt-cell"><div class="gantt-bar">●</div></div>
+      <div class="gantt-cell"><div class="gantt-bar deep"><span class="en">★ LAUNCH</span><span class="mr">★ लाँच</span></div></div>
+    </div>
+  </div>
+
+  <p style="margin-top:24px; padding-top:18px; border-top:1px dashed var(--line); color:var(--ink-muted); font-size:12px; line-height:1.7">
+    <span class="en"><strong style="color:var(--saffron)">Sign-off gates:</strong> W2 — Strategy & IA approval ★ · W4 — Visual design approval ★ · W8 — Backend ready ★ · W9 — Frontend feature-complete ★ · W11 — QA pass ★ · W12 — Production launch ★. Each gate requires written client sign-off before the next phase opens.</span><span class="mr"><strong style="color:var(--saffron)">मंजुरी टप्पे:</strong> आ२ — रणनीती आणि IA मंजुरी ★ · आ४ — दृश्य डिझाइन मंजुरी ★ · आ८ — बॅकएंड तयार ★ · आ९ — फ्रंटएंड पूर्ण ★ · आ११ — QA पास ★ · आ१२ — उत्पादन लाँच ★. प्रत्येक टप्प्यासाठी पुढील टप्पा सुरू होण्यापूर्वी लेखी क्लायंट मंजुरी आवश्यक.</span>
+  </p>
+</section>
+
+<!-- ============================================================
+     SLIDE 14 — QUALITY ASSURANCE & LAUNCH
+     ============================================================ -->
+<section class="slide slide-warm" id="s14">
+  <span class="slide-num">14 — 18</span>
+  <span class="slide-tag"><span class="en">QA · Launch · Handover</span><span class="mr">QA · लाँच · हस्तांतरण</span></span>
+
+  <span class="pill"><span class="en">Pre-Flight Checklist</span><span class="mr">प्री-फ्लाइट यादी</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">Tested, hardened,<br><em class="serif">handed over.</em></span><span class="mr">चाचणी, सुरक्षित,<br><em class="serif">हस्तांतरित.</em></span></h2>
+
+  <div class="delv-grid">
+    <div class="delv-card">
+      <div class="icn">M</div>
+      <h6><span class="en">Cross-Browser Testing</span><span class="mr">क्रॉस-ब्राउझर चाचणी</span></h6>
+      <div class="delv-sub"><span class="en">Compatibility Matrix</span><span class="mr">सुसंगतता सारणी</span></div>
+      <ul>
+        <li>Chrome · Edge · Safari · Firefox</li>
+        <li>iOS Safari · Android Chrome</li>
+        <li><span class="en">Last 2 major versions of each</span><span class="mr">प्रत्येकाच्या शेवटच्या २ प्रमुख आवृत्त्या</span></li>
+        <li><span class="en">Real-device testing (5 devices min)</span><span class="mr">प्रत्यक्ष-उपकरण चाचणी (किमान ५)</span></li>
+        <li><span class="en">Screenshot regression suite</span><span class="mr">स्क्रीनशॉट रिग्रेशन सूट</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">N</div>
+      <h6><span class="en">Accessibility Audit</span><span class="mr">सुलभता ऑडिट</span></h6>
+      <div class="delv-sub"><span class="en">WCAG 2.1 AA Target</span><span class="mr">WCAG 2.1 AA लक्ष्य</span></div>
+      <ul>
+        <li><span class="en">Screen-reader testing (NVDA + VoiceOver)</span><span class="mr">स्क्रीन-रीडर चाचणी (NVDA + VoiceOver)</span></li>
+        <li><span class="en">Keyboard navigation full-flow</span><span class="mr">कीबोर्ड नेव्हिगेशन पूर्ण-प्रवाह</span></li>
+        <li><span class="en">Colour contrast audit · 4.5:1 minimum</span><span class="mr">रंग कॉन्ट्रास्ट ऑडिट · ४.५:१ किमान</span></li>
+        <li><span class="en">Alt text · all images</span><span class="mr">Alt मजकूर · सर्व प्रतिमा</span></li>
+        <li><span class="en">ARIA landmarks · semantic HTML</span><span class="mr">ARIA लँडमार्क · सेमँटिक HTML</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">O</div>
+      <h6><span class="en">Performance Audit</span><span class="mr">कामगिरी ऑडिट</span></h6>
+      <div class="delv-sub">Lighthouse · WebPageTest</div>
+      <ul>
+        <li><span class="en">Lighthouse ≥90 on all key pages</span><span class="mr">मुख्य पानांवर Lighthouse ≥९०</span></li>
+        <li><span class="en">Real-user metrics validation</span><span class="mr">प्रत्यक्ष-वापरकर्ता मापन पडताळणी</span></li>
+        <li><span class="en">Bundle size analysis</span><span class="mr">बंडल आकार विश्लेषण</span></li>
+        <li><span class="en">Image optimization verified</span><span class="mr">प्रतिमा ऑप्टिमायझेशन पडताळले</span></li>
+        <li><span class="en">Cache strategy validated</span><span class="mr">कॅशे रणनीती पडताळली</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">P</div>
+      <h6><span class="en">Security Hardening</span><span class="mr">सुरक्षा हार्डनिंग</span></h6>
+      <div class="delv-sub"><span class="en">OWASP · DPDP Compliance</span><span class="mr">OWASP · DPDP नियम पालन</span></div>
+      <ul>
+        <li><span class="en">OWASP Top 10 mitigations verified</span><span class="mr">OWASP Top 10 शमन पडताळले</span></li>
+        <li><span class="en">Input validation · all forms</span><span class="mr">इनपुट पडताळणी · सर्व फॉर्म</span></li>
+        <li><span class="en">SQL/XSS injection scans</span><span class="mr">SQL/XSS इंजेक्शन स्कॅन</span></li>
+        <li><span class="en">SSL Labs A+ rating</span><span class="mr">SSL Labs A+ रेटिंग</span></li>
+        <li><span class="en">DPDP Act compliance check</span><span class="mr">DPDP कायदा पालन तपासणी</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">Q</div>
+      <h6><span class="en">Deployment</span><span class="mr">डिप्लॉयमेंट</span></h6>
+      <div class="delv-sub"><span class="en">Production · Day 0</span><span class="mr">उत्पादन · दिवस ०</span></div>
+      <ul>
+        <li><span class="en">Vercel/AWS production deployment</span><span class="mr">Vercel/AWS उत्पादन डिप्लॉयमेंट</span></li>
+        <li><span class="en">Cloudflare CDN + SSL configured</span><span class="mr">Cloudflare CDN + SSL कॉन्फिगर</span></li>
+        <li><span class="en">DNS migration (zero-downtime)</span><span class="mr">DNS स्थलांतर (शून्य-डाउनटाइम)</span></li>
+        <li><span class="en">GA4 + GTM live</span><span class="mr">GA4 + GTM लाइव्ह</span></li>
+        <li><span class="en">Uptime monitor active (99.9% SLA)</span><span class="mr">अपटाइम मॉनिटर सक्रिय (९९.९% SLA)</span></li>
+      </ul>
+    </div>
+
+    <div class="delv-card">
+      <div class="icn">R</div>
+      <h6><span class="en">Training & Handover</span><span class="mr">प्रशिक्षण आणि हस्तांतरण</span></h6>
+      <div class="delv-sub"><span class="en">Comms Team Enablement</span><span class="mr">टीम सक्षमीकरण</span></div>
+      <ul>
+        <li><span class="en">2 live training sessions (2hrs each)</span><span class="mr">२ लाइव्ह प्रशिक्षण सत्रे (प्रत्येकी २ तास)</span></li>
+        <li><span class="en">Video walkthroughs · permanent</span><span class="mr">व्हिडिओ मार्गदर्शन · कायमचे</span></li>
+        <li><span class="en">CMS user manual · PDF</span><span class="mr">CMS वापरकर्ता मॅन्युअल · PDF</span></li>
+        <li><span class="en">Brand & content guidelines doc</span><span class="mr">ब्रँड आणि मजकूर मार्गदर्शक दस्तऐवज</span></li>
+        <li><span class="en">30-day post-launch warranty</span><span class="mr">३० दिवस लाँचनंतर वॉरंटी</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 15 — 12-MONTH AMC COVERAGE
+     ============================================================ -->
+<section class="slide slide-cream" id="s15">
+  <span class="slide-num">15 — 18</span>
+  <span class="slide-tag"><span class="en">AMC Coverage</span><span class="mr">AMC व्याप्ती</span></span>
+
+  <span class="pill"><span class="en">9 Months · Bundled Into ₹4 L</span><span class="mr">९ महिने · ₹४ L मध्ये समाविष्ट</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">9-Month AMC.<br><em class="serif">Already paid for.</em></span><span class="mr">९-महिने AMC.<br><em class="serif">आधीच भरलेले.</em></span></h2>
+  <p class="lead" style="margin-top:18px; max-width:70ch">
+    <span class="en">The website build takes 12 weeks (3 months); the remaining 9 months of the engagement year are covered by AMC from launch day. No surprise renewal in month 10. The AMC scope below is what's <strong style="color:var(--ink)">guaranteed in writing</strong>.</span><span class="mr">संकेतस्थळ निर्मिती १२ आठवडे (३ महिने); करार वर्षाचे उर्वरित ९ महिने AMC मध्ये — लाँच दिवसापासून. १०व्या महिन्यात अनपेक्षित नूतनीकरण नाही. खालील AMC व्याप्ती <strong style="color:var(--ink)">लेखी हमी</strong>.</span>
+  </p>
+
+  <div class="amc-grid">
+    <div class="amc-card">
+      <div class="amc-cat"><span class="en">Content & Updates</span><span class="mr">मजकूर आणि अपडेट</span></div>
+      <h6><span class="en">Monthly Content Refresh</span><span class="mr">मासिक मजकूर रिफ्रेश</span></h6>
+      <ul>
+        <li><span class="en"><strong>Up to 8 hours/month</strong> of content updates by Futuready team</span><span class="mr"><strong>दर महिन्याला ८ तासांपर्यंत</strong> मजकूर अपडेट फ्युचरेडी टीमकडून</span></li>
+        <li><span class="en">News article uploads · Marathi translation included</span><span class="mr">बातमी अपलोड · मराठी अनुवाद समाविष्ट</span></li>
+        <li><span class="en">Photo / video gallery updates</span><span class="mr">छायाचित्र / व्हिडिओ संग्रह अपडेट</span></li>
+        <li><span class="en">Event calendar maintenance</span><span class="mr">कार्यक्रम कॅलेंडर देखभाल</span></li>
+        <li><span class="en">Leadership directory updates</span><span class="mr">नेतृत्व निर्देशिका अपडेट</span></li>
+        <li><span class="en">Manifesto & document refreshes</span><span class="mr">जाहीरनामा आणि दस्तऐवज रिफ्रेश</span></li>
+      </ul>
+    </div>
+
+    <div class="amc-card">
+      <div class="amc-cat"><span class="en">Technical Maintenance</span><span class="mr">तांत्रिक देखभाल</span></div>
+      <h6><span class="en">Engineering Care</span><span class="mr">अभियांत्रिकी काळजी</span></h6>
+      <ul>
+        <li><span class="en"><strong>Security patches</strong> · within 72 hrs of CVE disclosure</span><span class="mr"><strong>सुरक्षा पॅच</strong> · CVE प्रकटीकरणापासून ७२ तासांत</span></li>
+        <li><span class="en">CMS version upgrades · quarterly</span><span class="mr">CMS आवृत्ती अपग्रेड · तिमाही</span></li>
+        <li><span class="en">Bug fixes · 24-hour SLA on critical issues</span><span class="mr">बग फिक्स · गंभीर समस्यांसाठी २४-तास SLA</span></li>
+        <li><span class="en">Performance monitoring · monthly review</span><span class="mr">कामगिरी मॉनिटरिंग · मासिक समीक्षा</span></li>
+        <li><span class="en">Database backups · daily, 30-day retention</span><span class="mr">डेटाबेस बॅकअप · दैनंदिन, ३० दिवस</span></li>
+        <li><span class="en">Uptime monitoring · 24/7 alerting</span><span class="mr">अपटाइम मॉनिटरिंग · २४/७ सूचना</span></li>
+      </ul>
+    </div>
+
+    <div class="amc-card">
+      <div class="amc-cat"><span class="en">Design Refresh</span><span class="mr">डिझाइन रिफ्रेश</span></div>
+      <h6><span class="en">Quarterly Design Tune-up</span><span class="mr">तिमाही डिझाइन ट्यून-अप</span></h6>
+      <ul>
+        <li><span class="en"><strong>One minor design refresh / quarter</strong></span><span class="mr"><strong>तिमाहीला एक छोटा डिझाइन रिफ्रेश</strong></span></li>
+        <li><span class="en">Hero banner / campaign-graphic swaps</span><span class="mr">हीरो बॅनर / प्रचार-ग्राफिक बदल</span></li>
+        <li><span class="en">Seasonal theming (Diwali, election, festivals)</span><span class="mr">हंगामी थीम (दिवाळी, निवडणूक, सण)</span></li>
+        <li><span class="en">New section visual treatments</span><span class="mr">नवीन विभाग दृश्य उपचार</span></li>
+        <li><span class="en">Updated photography integration</span><span class="mr">अद्ययावत छायाचित्रण एकत्रीकरण</span></li>
+      </ul>
+    </div>
+
+    <div class="amc-card">
+      <div class="amc-cat"><span class="en">Reporting & Insights</span><span class="mr">अहवाल आणि अंतर्दृष्टी</span></div>
+      <h6><span class="en">Performance Dashboard</span><span class="mr">कामगिरी डॅशबोर्ड</span></h6>
+      <ul>
+        <li><span class="en"><strong>Monthly analytics report</strong> · GA4 deep-dive</span><span class="mr"><strong>मासिक अॅनालिटिक्स अहवाल</strong> · GA4 सखोल विश्लेषण</span></li>
+        <li><span class="en">Top pages, traffic sources, conversions</span><span class="mr">प्रमुख पाने, ट्रॅफिक स्रोत, रूपांतरण</span></li>
+        <li><span class="en">Karyakarta sign-up metrics</span><span class="mr">कार्यकर्ता नोंदणी मापन</span></li>
+        <li><span class="en">Donation performance summary</span><span class="mr">देणगी कामगिरी सारांश</span></li>
+        <li><span class="en">Quarterly executive review · 1-hour video call</span><span class="mr">तिमाही कार्यकारी समीक्षा · १-तास व्हिडिओ कॉल</span></li>
+        <li><span class="en">Annual roadmap recommendation</span><span class="mr">वार्षिक रोडमॅप शिफारस</span></li>
+      </ul>
+    </div>
+
+    <div class="amc-card">
+      <div class="amc-cat"><span class="en">Support</span><span class="mr">सहाय्य</span></div>
+      <h6><span class="en">Priority Communication</span><span class="mr">प्राधान्य संप्रेषण</span></h6>
+      <ul>
+        <li><span class="en"><strong>Dedicated Slack/email channel</strong> for the comms team</span><span class="mr">टीमसाठी <strong>समर्पित Slack/ईमेल चॅनेल</strong></span></li>
+        <li><span class="en">Critical-issue SLA: 24 hours</span><span class="mr">गंभीर समस्या SLA: २४ तास</span></li>
+        <li><span class="en">General queries: 48-hour response</span><span class="mr">सामान्य चौकशी: ४८-तास प्रतिसाद</span></li>
+        <li><span class="en">Emergency hotline (campaign-day cover)</span><span class="mr">आपत्कालीन हॉटलाइन (प्रचार-दिवस कव्हर)</span></li>
+        <li><span class="en">Quarterly check-in calls</span><span class="mr">तिमाही चेक-इन कॉल</span></li>
+      </ul>
+    </div>
+
+    <div class="amc-card">
+      <div class="amc-cat"><span class="en">What's Not Included</span><span class="mr">यात समाविष्ट नाही</span></div>
+      <h6><span class="en">Out of AMC Scope</span><span class="mr">AMC व्याप्तीबाहेर</span></h6>
+      <ul>
+        <li><span class="en">New page additions beyond original 17+4 templates</span><span class="mr">मूळ १७+४ टेम्प्लेटपेक्षा अधिक नवीन पाने</span></li>
+        <li><span class="en">Major redesigns or rebrands</span><span class="mr">मोठे पुनर्डिझाइन किंवा रीब्रँड</span></li>
+        <li><span class="en">New third-party integrations</span><span class="mr">नवीन तृतीय-पक्ष एकत्रीकरण</span></li>
+        <li><span class="en">Hosting / domain / SSL fees (pass-through)</span><span class="mr">होस्टिंग / डोमेन / SSL शुल्क (पास-थ्रू)</span></li>
+        <li><span class="en">Content writing or political copy origination</span><span class="mr">मजकूर लेखन किंवा मूळ राजकीय मजकूर</span></li>
+        <li><span class="en">Available as separate change requests at agency rates</span><span class="mr">एजन्सी दरांवर स्वतंत्र बदल विनंत्या म्हणून उपलब्ध</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 16 — INVESTMENT & PAYMENT SCHEDULE
+     ============================================================ -->
+<section class="slide slide-warm" id="s16">
+  <span class="slide-num">16 — 18</span>
+  <span class="slide-tag"><span class="en">Investment</span><span class="mr">गुंतवणूक</span></span>
+
+  <span class="pill"><span class="en">Locked Pricing · Single Property</span><span class="mr">निश्चित किंमत · एकल मंच</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">A single<br><em class="serif">commitment.</em></span><span class="mr">एकच<br><em class="serif">वचनबद्धता.</em></span></h2>
+
+  <div class="invest-headline">
+    <div class="invest-headline-left">
+      <div class="invest-eyebrow"><span class="en">Total Investment · Shiv Sena Website</span><span class="mr">एकूण गुंतवणूक · शिवसेना संकेतस्थळ</span></div>
+      <div class="invest-num">₹4 L</div>
+      <div class="invest-sub"><span class="en">Website Build + 9 Months AMC · Design · Development · CMS · Bilingual · Training · Deployment · Maintenance</span><span class="mr">संकेतस्थळ निर्मिती + ९ महिने AMC · डिझाइन · डेव्हलपमेंट · CMS · द्विभाषिक · प्रशिक्षण · डिप्लॉयमेंट · देखभाल</span></div>
+    </div>
+    <div class="invest-headline-right">
+      <div class="invest-tag"><span class="en">Website + AMC</span><span class="mr">संकेतस्थळ + AMC</span></div>
+      <div class="invest-meta"><span class="en">Exclusive of GST</span><span class="mr">GST वगळून</span><br><span class="en">50% advance + 50% on go-live</span><span class="mr">५०% अॅडव्हान्स + ५०% लाँचवर</span></div>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:24px">
+    <div style="background:var(--paper-3); border:1px solid var(--line); border-radius:10px; padding:26px 28px">
+      <div style="font-weight:600; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--saffron); margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid var(--line)"><span class="en">What's Included — Website Build</span><span class="mr">यात समाविष्ट — संकेतस्थळ निर्मिती</span></div>
+      <ul style="list-style:none">
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">UI / UX design — 17 pages × 3 breakpoints</span><span class="mr">UI / UX डिझाइन — १७ पाने × ३ ब्रेकपॉइंट्स</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Frontend (Next.js + GSAP + Three.js)</span><span class="mr">फ्रंटएंड (Next.js + GSAP + Three.js)</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Strapi CMS · 17 content types · bilingual</span><span class="mr">Strapi CMS · १७ मजकूर प्रकार · द्विभाषिक</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Public-domain content sourcing + restructuring</span><span class="mr">सार्वजनिक मजकूर मिळवणे + पुनर्रचना</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Marathi translation of client-provided English content</span><span class="mr">क्लायंट-दिलेल्या इंग्रजी मजकुराचा मराठी अनुवाद</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Razorpay donation gateway integration</span><span class="mr">Razorpay देणगी गेटवे एकत्रीकरण</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Karyakarta multi-step form + WhatsApp opt-in</span><span class="mr">कार्यकर्ता मल्टी-स्टेप फॉर्म + WhatsApp ऑप्ट-इन</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Cross-browser testing · WCAG AA accessibility</span><span class="mr">क्रॉस-ब्राउझर चाचणी · WCAG AA सुलभता</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Deployment · GA4 · monitoring setup</span><span class="mr">डिप्लॉयमेंट · GA4 · मॉनिटरिंग सेटअप</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Team training · 30-day post-launch warranty</span><span class="mr">टीम प्रशिक्षण · ३० दिवस लाँचनंतर वॉरंटी</span></li>
+      </ul>
+
+      <div style="font-weight:600; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--saffron); margin-top:24px; margin-bottom:18px; padding-top:18px; padding-bottom:12px; border-top:1px solid var(--line); border-bottom:1px solid var(--line)"><span class="en">What's Included — 9 Months AMC</span><span class="mr">यात समाविष्ट — ९ महिने AMC</span></div>
+      <ul style="list-style:none">
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Up to 8 hrs/month content updates</span><span class="mr">दर महिन्याला ८ तासांपर्यंत मजकूर अपडेट</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Security patches · CMS upgrades</span><span class="mr">सुरक्षा पॅच · CMS अपग्रेड</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">One minor design refresh per quarter</span><span class="mr">तिमाहीला एक छोटा डिझाइन रिफ्रेश</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Monthly performance & analytics report</span><span class="mr">मासिक कामगिरी आणि अॅनालिटिक्स अहवाल</span></li>
+        <li style="font-size:13px; color:var(--ink-soft); padding:6px 0 6px 14px; position:relative; line-height:1.6"><span style="position:absolute; left:0; top:13px; width:7px; height:1px; background:var(--saffron)"></span><span class="en">Priority support · 24-hr SLA on critical issues</span><span class="mr">प्राधान्य सहाय्य · गंभीर समस्यांसाठी २४-तास SLA</span></li>
+      </ul>
+    </div>
+
+    <div style="background:var(--saffron-tint); border:1px solid var(--saffron-soft); border-radius:10px; padding:26px 28px">
+      <div style="font-weight:600; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--saffron); margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid var(--saffron-soft)"><span class="en">Payment Schedule</span><span class="mr">पेमेंट वेळापत्रक</span></div>
+
+      <div class="pay-row">
+        <div class="pay-row-stage">
+          <div class="pay-pct">50%</div>
+          <div class="pay-label"><span class="en">Advance on signing</span><span class="mr">साइन-अपवर अॅडव्हान्स</span><br><small style="color:var(--ink-muted); font-size:11px; font-weight:400"><span class="en">Project kick-off · Discovery starts</span><span class="mr">प्रकल्प सुरू · शोध सुरू</span></small></div>
+        </div>
+        <div class="pay-amt">₹2 L</div>
+      </div>
+      <div class="pay-row">
+        <div class="pay-row-stage">
+          <div class="pay-pct">50%</div>
+          <div class="pay-label"><span class="en">On go-live</span><span class="mr">लाँचवर</span><br><small style="color:var(--ink-muted); font-size:11px; font-weight:400"><span class="en">Week 12 · Production live + handover</span><span class="mr">आठवडा १२ · उत्पादन लाइव्ह + हस्तांतरण</span></small></div>
+        </div>
+        <div class="pay-amt">₹2 L</div>
+      </div>
+
+      <div style="margin-top:20px; padding-top:18px; border-top:1px solid var(--saffron-soft); font-size:12px; color:var(--ink-soft); line-height:1.7">
+        <span class="en"><strong style="color:var(--saffron)">Notes:</strong> All amounts in INR, exclusive of GST. Hosting, domain, and SSL covered separately on a pass-through basis (~₹40–60K/year). AMC renewal from Month 13 onwards quoted separately at the time. No hidden change-request fees within the agreed scope of 17+4 pages.</span><span class="mr"><strong style="color:var(--saffron)">टीप:</strong> सर्व रक्कम INR मध्ये, GST वगळून. होस्टिंग, डोमेन, SSL पास-थ्रू आधारावर स्वतंत्र (~₹४०–६०K/वर्ष). महिना १३ पासून AMC नूतनीकरण त्या वेळी स्वतंत्र कोट. १७+४ पानांच्या मान्य व्याप्तीत कोणतेही छुपे बदल-शुल्क नाहीत.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SLIDE 17 — TERMS & ASSUMPTIONS
+     ============================================================ -->
+<section class="slide slide-cream" id="s17">
+  <span class="slide-num">17 — 18</span>
+  <span class="slide-tag"><span class="en">Terms & Assumptions</span><span class="mr">अटी आणि गृहीतके</span></span>
+
+  <span class="pill"><span class="en">For the Avoidance of Doubt</span><span class="mr">संशय टाळण्यासाठी</span></span>
+  <h2 class="section" style="margin-top:18px"><span class="en">Terms.<br><em class="serif">Assumptions.</em></span><span class="mr">अटी.<br><em class="serif">गृहीतके.</em></span></h2>
+
+  <div class="terms-grid">
+    <div class="terms-card">
+      <h6><span class="en">Scope Boundaries</span><span class="mr">व्याप्ती मर्यादा</span></h6>
+      <ul>
+        <li><span class="en">Scope is fixed at 17 unique page templates + 4 utility pages (Manifesto Hub, Press Kit, Search, 404/Privacy)</span><span class="mr">व्याप्ती निश्चित — १७ स्वतंत्र पान टेम्प्लेट + ४ युटिलिटी पाने (जाहीरनामा हब, प्रेस किट, शोध, ४०४/गोपनीयता)</span></li>
+        <li><span class="en">Up to 3 design directions on the homepage; 1 round of revision on each remaining page</span><span class="mr">मुख्यपृष्ठावर ३ डिझाइन दिशा; उर्वरित प्रत्येक पानावर १ फेरी सुधारणा</span></li>
+        <li><span class="en">2 rounds of major revision per page included; further rounds billable separately</span><span class="mr">प्रति पान २ मोठ्या सुधारणा फेऱ्या; पुढील फेऱ्या स्वतंत्र बिल</span></li>
+        <li><span class="en">Marathi translation covers up to 50,000 words of client-provided English content</span><span class="mr">मराठी अनुवाद — क्लायंट-दिलेल्या इंग्रजी मजकुराचे ५०,००० शब्दांपर्यंत</span></li>
+        <li><span class="en">Original political copy, manifesto drafting, and policy positions remain the party's responsibility</span><span class="mr">मूळ राजकीय मजकूर, जाहीरनामा लेखन, धोरण भूमिका — पक्षाची जबाबदारी</span></li>
+      </ul>
+    </div>
+
+    <div class="terms-card">
+      <h6><span class="en">Client Dependencies</span><span class="mr">क्लायंट अवलंबित्व</span></h6>
+      <ul>
+        <li><span class="en">Comms team to nominate a single point of contact (SPOC) for all approvals</span><span class="mr">सर्व मंजुरीसाठी टीमने एकच संपर्क बिंदू (SPOC) नियुक्त करावा</span></li>
+        <li><span class="en">Client-required content (photos, leader bios, manifesto, eligibility rules) delivered by Week 4</span><span class="mr">क्लायंट-आवश्यक मजकूर (छायाचित्रे, नेता चरित्रे, जाहीरनामा, पात्रता) आठवडा ४ पर्यंत</span></li>
+        <li><span class="en">Hi-res leadership photographs (minimum 2000px on shorter side)</span><span class="mr">हाय-रेस नेतृत्व छायाचित्रे (किमान २०००px लहान बाजूवर)</span></li>
+        <li><span class="en">Approval of designs and content within 5 business days at each gate</span><span class="mr">प्रत्येक टप्प्यावर ५ कार्यदिवसांत डिझाइन आणि मजकूर मंजुरी</span></li>
+        <li><span class="en">Domain ownership and DNS access for deployment</span><span class="mr">डिप्लॉयमेंटसाठी डोमेन मालकी आणि DNS प्रवेश</span></li>
+      </ul>
+    </div>
+
+    <div class="terms-card">
+      <h6><span class="en">Intellectual Property</span><span class="mr">बौद्धिक संपदा</span></h6>
+      <ul>
+        <li><span class="en">All custom code, designs, and assets created for the project transfer to the client on final payment</span><span class="mr">प्रकल्पासाठी तयार केलेले सर्व कस्टम कोड, डिझाइन, साहित्य अंतिम पेमेंटवर क्लायंटकडे हस्तांतरित</span></li>
+        <li><span class="en">Futuready retains the right to feature the project in its portfolio (with party approval on imagery)</span><span class="mr">फ्युचरेडीला पोर्टफोलिओमध्ये प्रकल्प दाखवण्याचा अधिकार (छायाचित्रांवर पक्षाची मंजुरी)</span></li>
+        <li><span class="en">Open-source dependencies governed by their respective licenses</span><span class="mr">ओपन-सोर्स अवलंबित्वे त्यांच्या परवान्यांद्वारे नियंत्रित</span></li>
+        <li><span class="en">Photos, logos, and political branding remain the property of the party at all times</span><span class="mr">छायाचित्रे, लोगो, राजकीय ब्रँडिंग सर्वकाळ पक्षाच्या मालकीचे</span></li>
+      </ul>
+    </div>
+
+    <div class="terms-card">
+      <h6><span class="en">Hosting, Confidentiality, Termination</span><span class="mr">होस्टिंग, गोपनीयता, समाप्ती</span></h6>
+      <ul>
+        <li><span class="en">Hosting / domain / SSL on a pass-through basis · client procures or Futuready procures on client account</span><span class="mr">होस्टिंग / डोमेन / SSL पास-थ्रू · क्लायंट थेट किंवा फ्युचरेडी क्लायंट खात्यावर</span></li>
+        <li><span class="en">NDA in effect for the duration of the engagement and 24 months thereafter</span><span class="mr">NDA — एंगेजमेंटच्या काळात आणि नंतर २४ महिने</span></li>
+        <li><span class="en">Client may terminate with 30 days' notice; pro-rated refund minus delivered milestones</span><span class="mr">क्लायंट ३० दिवसांच्या नोटिसीने समाप्त करू शकतो; वितरित टप्पे वजा करून प्रमाणबद्ध परतावा</span></li>
+        <li><span class="en">All disputes governed by the laws of India · jurisdiction Mumbai</span><span class="mr">सर्व वाद भारतीय कायद्याद्वारे · अधिकारक्षेत्र मुंबई</span></li>
+        <li><span class="en">Force majeure clause applies to natural events, regulatory changes, election commission directives</span><span class="mr">नैसर्गिक घटना, नियामक बदल, निवडणूक आयोग निर्देशांना फोर्स मेज्योर लागू</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:24px; padding:18px 24px; background:var(--paper-3); border:1px dashed var(--saffron); border-radius:8px; color:var(--ink-soft); font-size:12px; line-height:1.7">
+    <span class="en"><strong style="color:var(--saffron)">Validity of this proposal:</strong> 30 days from date of issue. Pricing is locked once a Letter of Intent is signed. A formal Master Services Agreement will be drawn up post-LOI for execution by both parties.</span><span class="mr"><strong style="color:var(--saffron)">या प्रस्तावाची वैधता:</strong> जारी तारखेपासून ३० दिवस. आशय पत्र (LOI) साइन झाल्यावर किंमत निश्चित. LOI नंतर दोन्ही पक्षांसाठी औपचारिक Master Services Agreement तयार केला जाईल.</span>
+  </p>
+</section>
+
+<!-- ============================================================
+     SLIDE 18 — CLOSING / NEXT STEPS
+     ============================================================ -->
+<section class="slide closing" id="s18">
+  <span class="slide-num">18 — 18</span>
+  <span class="slide-tag"><span class="en">Next Steps</span><span class="mr">पुढील पायऱ्या</span></span>
+
+  <span class="pill"><span class="en">Ready When You Are</span><span class="mr">तुम्ही तयार झाल्यावर आम्ही तयार</span></span>
+  <div class="big-call" style="margin-top:24px">
+    <span class="en">Build the<br><em>movement.</em><br>Own the narrative.</span>
+    <span class="mr">चळवळ<br><em>उभारा.</em><br>कथेवर मालकी.</span>
+  </div>
+
+  <p class="lead" style="max-width:60ch; font-size:17px">
+    <span class="en">This proposal is the blueprint. The squad is identified. The 12-week clock starts the moment the LOI is signed and the kick-off advance lands. We're ready when you are.</span><span class="mr">हा प्रस्ताव म्हणजे आराखडा. टीम निश्चित. LOI साइन आणि सुरुवातीचा हप्ता मिळताच १२-आठवड्याचे घड्याळ सुरू. तुम्ही तयार झाल्यावर आम्ही तयार.</span>
+  </p>
+
+  <div style="margin-top:40px; display:grid; grid-template-columns:repeat(3, 1fr); gap:20px">
+    <div style="background:var(--paper-3); border:1px solid var(--line); border-radius:10px; padding:24px 26px">
+      <div style="color:var(--saffron); font-weight:600; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; margin-bottom:8px"><span class="en">Step 01</span><span class="mr">पायरी ०१</span></div>
+      <div style="font-family:var(--font-display); font-weight:500; font-size:18px; margin-bottom:8px; letter-spacing:-0.015em"><span class="en">Sign the Letter of Intent</span><span class="mr">आशय पत्र साइन करा</span></div>
+      <p style="color:var(--ink-soft); font-size:13px; line-height:1.6"><span class="en">Locks pricing at ₹4L. Defines the scope and timeline as agreed in this document.</span><span class="mr">₹४L किंमत निश्चित. या दस्तऐवजात मान्य व्याप्ती आणि वेळापत्रक निश्चित.</span></p>
+    </div>
+    <div style="background:var(--paper-3); border:1px solid var(--line); border-radius:10px; padding:24px 26px">
+      <div style="color:var(--saffron); font-weight:600; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; margin-bottom:8px"><span class="en">Step 02</span><span class="mr">पायरी ०२</span></div>
+      <div style="font-family:var(--font-display); font-weight:500; font-size:18px; margin-bottom:8px; letter-spacing:-0.015em"><span class="en">50% advance + MSA</span><span class="mr">५०% अॅडव्हान्स + MSA</span></div>
+      <p style="color:var(--ink-soft); font-size:13px; line-height:1.6"><span class="en">₹2L kick-off invoice. Master Services Agreement signed. Squad is locked in for the project.</span><span class="mr">₹२L सुरुवातीचे बिल. Master Services Agreement साइन. प्रकल्पासाठी टीम निश्चित.</span></p>
+    </div>
+    <div style="background:var(--saffron-tint); border:1px solid var(--saffron-soft); border-radius:10px; padding:24px 26px">
+      <div style="color:var(--saffron); font-weight:600; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; margin-bottom:8px"><span class="en">Step 03</span><span class="mr">पायरी ०३</span></div>
+      <div style="font-family:var(--font-display); font-weight:500; font-size:18px; margin-bottom:8px; letter-spacing:-0.015em"><span class="en">Discovery starts · Week 1</span><span class="mr">शोध सुरू · आठवडा १</span></div>
+      <p style="color:var(--ink-soft); font-size:13px; line-height:1.6"><span class="en">First stakeholder workshop scheduled within 5 business days of LOI. The 12-week clock begins.</span><span class="mr">LOI नंतर ५ कार्यदिवसांत पहिली भागधारक कार्यशाळा. १२-आठवड्याचे घड्याळ सुरू.</span></p>
+    </div>
+  </div>
+
+  <div class="footer-grid">
+    <div>
+      <small><span class="en">Agency</span><span class="mr">एजन्सी</span></small>
+      <p><span class="en">Futuready Media</span><span class="mr">फ्युचरेडी मीडिया</span></p>
+    </div>
+    <div>
+      <small><span class="en">Lead</span><span class="mr">प्रमुख</span></small>
+      <p><span class="en">Ritesh Bhagat<br>Digital Operations Head</span><span class="mr">रितेश भगत<br>डिजिटल ऑपरेशन्स प्रमुख</span></p>
+    </div>
+    <div>
+      <small><span class="en">Web</span><span class="mr">वेब</span></small>
+      <p>futureadymedia.com</p>
+    </div>
+    <div>
+      <small><span class="en">Status</span><span class="mr">स्थिती</span></small>
+      <p style="color:var(--saffron)"><em style="font-family:var(--font-display); font-style:italic"><span class="en">Ready to start.</span><span class="mr">सुरू करण्यास तयार.</span></em></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ====== LANGUAGE TOGGLE ======
+  const langButtons = document.querySelectorAll('.lang-toggle button');
+  const setLang = (lang) => {
+    document.body.className = `lang-${lang}`;
+    document.documentElement.lang = lang === 'mr' ? 'mr' : 'en';
+    langButtons.forEach(btn => {
+      const isActive = btn.dataset.lang === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+  };
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.dataset.lang));
+  });
+
+  // ====== ACTIVE NAV INDICATOR ======
+  const navLinks = document.querySelectorAll('.nav-rail a');
+  const slides = document.querySelectorAll('.slide');
+
+  const slideObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  slides.forEach(s => slideObserver.observe(s));
+
+  // Keyboard nav
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    const cur = document.querySelector('.nav-rail a.active');
+    if (!cur) return;
+    const idx = Array.from(navLinks).indexOf(cur);
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      navLinks[Math.min(idx + 1, navLinks.length - 1)].click();
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      navLinks[Math.max(idx - 1, 0)].click();
+    } else if (e.key === 'l' || e.key === 'L') {
+      const currentLang = document.body.classList.contains('lang-mr') ? 'mr' : 'en';
+      setLang(currentLang === 'en' ? 'mr' : 'en');
+    }
+  });
+</script>
+</body>
+</html>
