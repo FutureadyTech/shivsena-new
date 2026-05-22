@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext.jsx';
 import Entrance from './pages/Entrance/index.jsx';
 import Home from './pages/Home/index.jsx';
@@ -6,6 +7,27 @@ import About from './pages/About/index.jsx';
 import News from './pages/News/index.jsx';
 import Contact from './pages/Contact/index.jsx';
 import Leadership from './pages/Leadership/index.jsx';
+
+/* Reset scroll to the top on every route change.
+   Tries Lenis (if it's been mounted by the active page) first for a clean
+   jump that the smooth-scroll library doesn't fight, otherwise falls back
+   to native window.scrollTo. */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // Run on next tick so the new page has mounted (and any new Lenis
+    // instance has had a chance to attach).
+    const id = requestAnimationFrame(() => {
+      if (window.__lenis && typeof window.__lenis.scrollTo === 'function') {
+        window.__lenis.scrollTo(0, { immediate: true, force: true });
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      }
+    });
+    return () => cancelAnimationFrame(id);
+  }, [pathname]);
+  return null;
+}
 
 function ComingSoon({ title }) {
   return (
@@ -40,6 +62,7 @@ export default function App() {
   return (
     <LanguageProvider defaultLang="mr">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Entrance />} />
           <Route path="/home" element={<Home />} />

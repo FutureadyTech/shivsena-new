@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useContent } from '../../../content/_shared/useContent.js';
 import homeContent from '../../../content/home.json';
@@ -6,15 +5,6 @@ import './Footer.css';
 
 export default function Footer() {
   const t = useContent(homeContent.footer);
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle');
-
-  const onNewsletter = (e) => {
-    e.preventDefault();
-    if (!email || !email.includes('@')) return;
-    setStatus('success');
-    setTimeout(() => { setEmail(''); setStatus('idle'); }, 3500);
-  };
 
   return (
     <footer className="footer">
@@ -48,33 +38,6 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-
-          {/* Newsletter column */}
-          {t.newsletter && (
-            <div className="footer__col footer__col--newsletter">
-              <h4 className="footer__col-title">{t.newsletter.heading}</h4>
-              <p className="footer__newsletter-desc">{t.newsletter.description}</p>
-              <form className="footer__newsletter-form" onSubmit={onNewsletter}>
-                {status === 'success' ? (
-                  <p className="footer__newsletter-success">✓ Subscribed</p>
-                ) : (
-                  <>
-                    <input
-                      type="email"
-                      className="footer__newsletter-input"
-                      placeholder={t.newsletter.emailPlaceholder}
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                    <button type="submit" className="footer__newsletter-btn" data-cursor="link">
-                      {t.newsletter.submitLabel}
-                    </button>
-                  </>
-                )}
-              </form>
-            </div>
-          )}
 
         </div>
       </div>

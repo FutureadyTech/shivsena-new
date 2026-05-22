@@ -6,17 +6,32 @@
 
 .welcome-banner {
   position: fixed;
-  top: 50%;
+  bottom: 8vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   text-align: center;
   z-index: 10;
   pointer-events: none;
   user-select: none;
-  max-width: min(960px, 92vw);
+  max-width: min(720px, 92vw);
   width: 100%;
   transition: opacity 0.18s ease-out;
   padding: 0 24px;
+}
+
+/* Side-by-side button row */
+.welcome-banner__actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 540px) {
+  .welcome-banner { bottom: 5vh; }
+  .welcome-banner__actions { gap: 12px; flex-direction: column; }
+  .welcome-banner__actions .welcome-banner__cta { width: 100%; justify-content: center; }
 }
 
 /* ─── Eyebrow ─── */

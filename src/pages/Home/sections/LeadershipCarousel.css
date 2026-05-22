@@ -84,7 +84,7 @@ font-family: 'Noto Sans Devanagari', sans-serif;
   pointer-events: none;
 }
 
-/* ─── Track ─── */
+/* ─── Track (default: horizontal scroll carousel) ─── */
 .leadership__track {
   display: flex;
   gap: 24px;
@@ -97,6 +97,35 @@ font-family: 'Noto Sans Devanagari', sans-serif;
 }
 
 .leadership__track::-webkit-scrollbar { display: none; }
+
+/* ─── Grid variant — show all cards in a fixed-column grid ─── */
+.leadership__track--grid {
+  display: grid;
+  gap: 24px;
+  overflow: visible;
+  padding: 12px 4px 24px;
+  scroll-snap-type: none;
+}
+
+.leadership__track--grid .leader-card {
+  flex: none;
+  min-width: 0;
+  width: 100%;
+}
+
+.leadership__track--cols-3 { grid-template-columns: repeat(3, 1fr); }
+.leadership__track--cols-4 { grid-template-columns: repeat(4, 1fr); }
+.leadership__track--cols-5 { grid-template-columns: repeat(5, 1fr); }
+
+@media (max-width: 1100px) {
+  .leadership__track--cols-4,
+  .leadership__track--cols-5 { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+@media (max-width: 560px) {
+  .leadership__track--cols-3,
+  .leadership__track--cols-4,
+  .leadership__track--cols-5 { grid-template-columns: 1fr; }
+}
 
 /* ─── Leader card ─── */
 .leader-card {

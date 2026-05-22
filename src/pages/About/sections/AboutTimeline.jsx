@@ -1,8 +1,13 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
+import { useLanguage } from '../../../i18n/LanguageContext.jsx';
 import aboutContent from '../../../content/about.json';
 import './AboutTimeline.css';
+
+/* Convert ASCII digits → Devanagari digits when site is in Marathi */
+const DEV_DIGITS = ['०','१','२','३','४','५','६','७','८','९'];
+const toDevDigits = (s) => String(s ?? '').replace(/[0-9]/g, (d) => DEV_DIGITS[+d]);
 
 const YEAR_ROW_PX = 72;
 
@@ -36,6 +41,9 @@ const EVENT_IMAGES = {
 
 export default function AboutTimeline() {
   const t = useContent(aboutContent.timeline);
+  const { lang } = useLanguage();
+  const isMr = lang === 'mr';
+  const fmtYear = (y) => (isMr ? toDevDigits(y) : y);
   const events = t.events || [];
   const headerRef = useScrollReveal(0.2);
 
@@ -79,7 +87,7 @@ export default function AboutTimeline() {
         {/* ── Left: big active year + arrow ── */}
         <div className="cgn-tl__left">
           <span key={`year-${activeYear}`} className="cgn-tl__big-year">
-            {activeYear}
+            {fmtYear(activeYear)}
           </span>
           <span className="cgn-tl__arrow" aria-hidden="true">
             <svg viewBox="0 0 48 28" fill="none">
@@ -104,7 +112,7 @@ export default function AboutTimeline() {
                       onClick={() => goTo(group.firstIdx)}
                       aria-label={`Go to ${group.year}`}
                     >
-                      <span className="cgn-tl__year-label">{group.year}</span>
+                      <span className="cgn-tl__year-label">{fmtYear(group.year)}</span>
                       <span className="cgn-tl__year-dot" />
                     </button>
                   </li>

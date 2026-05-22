@@ -4,22 +4,25 @@ import { useContent } from '../../../content/_shared/useContent.js';
 import homeContent from '../../../content/home.json';
 import './LeadershipCarousel.css';
 
-export default function LeadershipCarousel({ content }) {
+export default function LeadershipCarousel({ content, gridCols }) {
   const t = useContent(content ?? homeContent.leadership);
   const trackRef = useRef(null);
   const headerRef = useScrollReveal(0.25);
+  const isGrid = !!gridCols;
 
   const [canPrev, setCanPrev] = useState(false);
   const [canNext, setCanNext] = useState(true);
 
   const updateArrows = useCallback(() => {
+    if (isGrid) return; // grid mode: no scroll arrows
     const el = trackRef.current;
     if (!el) return;
     setCanPrev(el.scrollLeft > 8);
     setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
-  }, []);
+  }, [isGrid]);
 
   useEffect(() => {
+    if (isGrid) return;
     const el = trackRef.current;
     if (!el) return;
     updateArrows();
@@ -29,7 +32,7 @@ export default function LeadershipCarousel({ content }) {
       el.removeEventListener('scroll', updateArrows);
       window.removeEventListener('resize', updateArrows);
     };
-  }, [updateArrows]);
+  }, [updateArrows, isGrid]);
 
   const scrollByCard = (dir) => {
     const el = trackRef.current;
@@ -52,29 +55,34 @@ export default function LeadershipCarousel({ content }) {
             <h2 className="leadership__title">{t.title}</h2>
           </div>
 
-          <div className="leadership__controls">
-            <button
-              className={`leadership__arrow ${canPrev ? '' : 'is-disabled'}`}
-              onClick={() => scrollByCard(-1)}
-              aria-label="Previous leaders"
-            >
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" />
-              </svg>
-            </button>
-            <button
-              className={`leadership__arrow ${canNext ? '' : 'is-disabled'}`}
-              onClick={() => scrollByCard(1)}
-              aria-label="Next leaders"
-            >
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
-          </div>
+          {!isGrid && (
+            <div className="leadership__controls">
+              <button
+                className={`leadership__arrow ${canPrev ? '' : 'is-disabled'}`}
+                onClick={() => scrollByCard(-1)}
+                aria-label="Previous leaders"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" />
+                </svg>
+              </button>
+              <button
+                className={`leadership__arrow ${canNext ? '' : 'is-disabled'}`}
+                onClick={() => scrollByCard(1)}
+                aria-label="Next leaders"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
 
-        <div ref={trackRef} className="leadership__track">
+        <div
+          ref={trackRef}
+          className={`leadership__track ${isGrid ? `leadership__track--grid leadership__track--cols-${gridCols}` : ''}`}
+        >
           {t.leaders?.map((leader, i) => (
             <LeaderCard key={leader.id} leader={leader} index={i} />
           ))}

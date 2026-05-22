@@ -9,6 +9,7 @@ const NAV = [
   { to: '/news',       key: 'nav-news' },
   { to: '/leadership', key: 'nav-leadership' },
   { to: '/members',    key: 'nav-members' },
+  { to: '/contact',    key: 'nav-contact' },
 ];
 
 export default function SiteHeader() {
@@ -62,13 +63,13 @@ export default function SiteHeader() {
         ))}
       </nav>
 
-      <a href="#join" className="site-nav__cta">
+      <NavLink to="/contact" className="site-nav__cta">
         <span>{t('nav-join')}</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
           <circle cx="12" cy="7" r="4" />
         </svg>
-      </a>
+      </NavLink>
       <LanguageToggle />
 
     </header>

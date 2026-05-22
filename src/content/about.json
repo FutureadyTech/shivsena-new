@@ -87,7 +87,7 @@
         { "id": "thackeray",        "name": "हिंदुहृदयसम्राट बाळासाहेब ठाकरे", "role": "संस्थापक अध्यक्ष",        "image": "/leaders/thackeray.jpg" },
         { "id": "dighe",            "name": "धर्मवीर आनंद दिघे साहेब",         "role": "धर्मवीर",                  "image": "/leaders/dharmaveer.jpg" },
         { "id": "shinde",           "name": "एकनाथजी शिंदे साहेब",             "role": "मुख्य नेते, शिवसेना",      "image": "/leaders/shinde.png" },
-        { "id": "shrikant-shinde",  "name": "डॉ. श्रीकांत एकनाथ शिंदे",        "role": "खासदार, कल्याण लोकसभा",   "image": "/leaders/leader-1.jpg" }
+        { "id": "shrikant-shinde",  "name": "डॉ. श्रीकांत एकनाथ शिंदे",        "role": "खासदार, कल्याण लोकसभा",   "image": "/leaders/Shrikant Shinde.webp" }
       ]
     },
     "en": {
@@ -97,7 +97,7 @@
         { "id": "thackeray",        "name": "Hinduhrudaysamrat Balasaheb Thackeray", "role": "Founder President",          "image": "/leaders/thackeray.jpg" },
         { "id": "dighe",            "name": "Dharmaveer Anand Dighe Saheb",          "role": "Dharmaveer",                 "image": "/leaders/dharmaveer.jpg" },
         { "id": "shinde",           "name": "Eknathji Shinde Saheb",                 "role": "Chief Leader, Shiv Sena",    "image": "/leaders/shinde.png" },
-        { "id": "shrikant-shinde",  "name": "Dr. Shrikant Eknath Shinde",            "role": "MP, Kalyan Lok Sabha",       "image": "/leaders/leader-1.jpg" }
+        { "id": "shrikant-shinde",  "name": "Dr. Shrikant Eknath Shinde",            "role": "MP, Kalyan Lok Sabha",       "image": "/leaders/Shrikant Shinde.webp" }
       ]
     }
   },
