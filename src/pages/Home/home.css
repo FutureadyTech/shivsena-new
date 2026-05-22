@@ -73,7 +73,7 @@ body.has-dark-hero-visible .site-nav {
 }
 
 .site-nav__logo {
-  height: 48px;
+  height: 60px;
   width: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
 }

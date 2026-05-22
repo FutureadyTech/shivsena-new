@@ -72,7 +72,7 @@ export default function AboutTimeline() {
   const activeYearIdx = yearGroups.findIndex(g => g.year === activeYear);
 
   return (
-    <section className="cgn-tl">
+    <section className="cgn-tl" id="history">
       {/* Background: cream wash + huge blurred शिवसेना watermark */}
       <div className="cgn-tl__bg" aria-hidden="true">
         <div className="cgn-tl__bg-wash" />

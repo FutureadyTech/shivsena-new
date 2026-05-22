@@ -25,7 +25,7 @@ export default function VideoGallery() {
   const close = useCallback(() => setActiveVideo(null), []);
 
   return (
-    <section className="vg-section">
+    <section className="vg-section" id="video-gallery">
       <div className="vg-section__inner">
 
         <div ref={headerRef} className="vg-section__header reveal">

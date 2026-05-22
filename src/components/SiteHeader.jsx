@@ -12,11 +12,11 @@ const NAV = [
     key: 'nav-about',
     to: '/about',
     children: [
+      { to: '/about#history',    key: 'nav-history' },
       { to: '/leadership',       key: 'nav-leadership' },
       { to: '/about#affiliated', key: 'nav-affiliated' },
     ],
   },
-  { to: '/leadership',   key: 'nav-leadership' },
   {
     key: 'nav-news',
     to: '/news',
@@ -24,7 +24,8 @@ const NAV = [
       { to: '/news#press-releases', key: 'nav-press' },
       { to: '/news#interviews',     key: 'nav-interviews' },
       { to: '/news#speeches',       key: 'nav-speeches' },
-      { to: '/news#gallery',        key: 'nav-gallery' },
+      { to: '/news#video-gallery',  key: 'nav-video-gallery' },
+      { to: '/news#photo-gallery',  key: 'nav-photo-gallery' },
     ],
   },
   { to: '/innovative',   key: 'nav-innovative' },
@@ -61,12 +62,8 @@ export default function SiteHeader() {
 
   return (
     <header className="site-nav">
-      <NavLink to="/home" className="site-nav__brand">
+      <NavLink to="/home" className="site-nav__brand" aria-label="शिवसेना">
         <img src="/logo.png" alt="शिवसेना" className="site-nav__logo" />
-        <div className="site-nav__brand-text">
-          <span className="site-nav__brand-name">शिवसेना</span>
-          <span className="site-nav__brand-tagline">{t('brand-tagline-home')}</span>
-        </div>
       </NavLink>
 
       <nav className="site-nav__menu">
@@ -189,19 +186,25 @@ function NavDropdown({ item, t }) {
       </NavLink>
 
       <div className="site-nav__submenu" role="menu">
-        {item.children.map((child) => (
-          <NavLink
-            key={child.to}
-            to={child.to}
-            className={({ isActive }) =>
-              `site-nav__sublink ${isActive ? 'site-nav__sublink--active' : ''}`
-            }
-            role="menuitem"
-          >
-            <span className="site-nav__sublink-dot" aria-hidden="true" />
-            <span>{t(child.key)}</span>
-          </NavLink>
-        ))}
+        {item.children.map((child) => {
+          // NavLink's built-in isActive only compares pathname, so two
+          // sub-items that share a pathname (e.g. /about#history and
+          // /about#affiliated) would BOTH be highlighted at the same time.
+          // We hand-roll the active check so the hash is also compared.
+          const [childPath, childHash = ''] = child.to.split('#');
+          const isChildActive = pathname === childPath && hash === (childHash ? `#${childHash}` : '');
+          return (
+            <NavLink
+              key={child.to}
+              to={child.to}
+              className={`site-nav__sublink ${isChildActive ? 'site-nav__sublink--active' : ''}`}
+              role="menuitem"
+            >
+              <span className="site-nav__sublink-dot" aria-hidden="true" />
+              <span>{t(child.key)}</span>
+            </NavLink>
+          );
+        })}
       </div>
     </div>
   );
