@@ -1,0 +1,320 @@
+/* ═══════════════════════════════════════════════════════════════
+   OUR JOURNEY — full-bleed timeline (reference: BJP "Our Journey")
+   Fixed 600px section, year strip pinned to the bottom.
+═══════════════════════════════════════════════════════════════ */
+.journey {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #0a0806;
+  color: #fff;
+  isolation: isolate;
+}
+
+/* ── Background image ── */
+.journey__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  animation: journeyBgIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* slight contrast/brightness boost so the timeline images read */
+  filter: saturate(1.08) contrast(1.05) brightness(1.05);
+}
+
+@keyframes journeyBgIn {
+  from { opacity: 0; transform: scale(1.04); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Much softer overlay — image now reads through clearly. Strong scrim
+   on the left half so the text stays readable, fades to almost
+   transparent on the right where the photo dominates. */
+.journey__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(95deg,
+      rgba(8, 4, 0, 0.78) 0%,
+      rgba(8, 4, 0, 0.55) 30%,
+      rgba(8, 4, 0, 0.18) 60%,
+      rgba(8, 4, 0, 0.10) 100%
+    ),
+    linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 26%);
+}
+
+/* ── Layout shell ── */
+.journey__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 88px 140px 88px;  /* extra bottom pad for the absolute strip */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Section title (top-left) ── */
+.journey__title {
+  font-family: 'Khand', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(2.4rem, 4.6vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  margin: 0;
+}
+
+/* ── Big year + event copy panel ── */
+.journey__panel {
+  align-self: center;
+  max-width: 640px;
+  /* Reserve enough vertical space for the longest event copy so the
+     flex column doesn't re-centre + shift the panel up/down when
+     switching between short and long descriptions. */
+  min-height: 320px;
+  animation: panelIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.journey__year {
+  font-family: 'Khand', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(3.6rem, 7vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -2px;
+  color: #fff;
+  margin: 0 0 12px;
+  text-shadow: 0 6px 32px rgba(0, 0, 0, 0.6);
+}
+
+.journey__event-title {
+  font-family: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+  font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #FFB26B;
+  margin: 0 0 14px;
+}
+
+.journey__body {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.86);
+  margin: 0 0 14px;
+  max-width: 620px;
+}
+
+.journey__date {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 178, 107, 0.85);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER: year strip is its own full-bleed element; nav buttons are
+   positioned absolutely at the bottom-right so they don't shrink the
+   strip's available width.
+═══════════════════════════════════════════════════════════════ */
+.journey__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  z-index: 3;
+  padding: 0;
+}
+
+/* Horizontal dot-rail (mirrors the About page's vertical year rail).
+   The dot is rendered first inside the flex column → its vertical
+   centre sits at padding-top + (dot height / 2). The connecting line
+   uses the same math so the dots sit ON the line, not above it. */
+.journey__years {
+  --dot-size: 14px;
+  --strip-pad-top: 14px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* True edge-to-edge: only a tiny breathing pad on each side */
+  padding: var(--strip-pad-top) 16px 6px 16px;
+  width: 100%;
+}
+.journey__years::-webkit-scrollbar { display: none; }
+
+/* Horizontal hairline — sits exactly on the vertical centre of the dots */
+.journey__years-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* padding-top + half the dot = centre of the dot row */
+  top: calc(var(--strip-pad-top) + var(--dot-size) / 2);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.journey__year-tick {
+  position: relative;
+  flex: 1 1 0;          /* equal spacing across the full width */
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.25s ease, transform 0.25s ease;
+  z-index: 1;            /* keep dots above the line */
+}
+
+.journey__year-dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid #0a0806;       /* darker outline lifts the dot off the line */
+  box-shadow: 0 0 0 0 rgba(255, 107, 26, 0);
+  transition: background 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+}
+
+.journey__year-label {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color 0.25s ease;
+}
+
+.journey__year-tick:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.journey__year-tick:hover .journey__year-dot {
+  background: var(--saffron-glow, #FFB26B);
+}
+
+.journey__year-tick.is-active {
+  color: #fff;
+}
+.journey__year-tick.is-active .journey__year-dot {
+  background: var(--saffron, #FF6B1A);
+  transform: scale(1.6);
+  box-shadow: 0 0 0 4px rgba(255, 107, 26, 0.22);
+}
+.journey__year-tick.is-active .journey__year-label {
+  color: #fff;
+  /* Keep weight identical to inactive labels — bumping to 700 here was
+     changing the label's measured width and visibly shifting siblings
+     along the flex strip on every click. */
+}
+
+/* Nav arrows — anchored to the section's bottom-right, lifted well
+   above the year strip so they never collide with it. */
+.journey__nav {
+  position: absolute;
+  right: 32px;
+  bottom: 110px;
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.journey__nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, border-color 0.3s ease,
+              transform 0.3s ease, opacity 0.3s ease;
+}
+
+.journey__nav-btn:hover:not(:disabled) {
+  background: var(--saffron, #FF6B1A);
+  border-color: var(--saffron, #FF6B1A);
+  transform: translateY(-2px);
+}
+
+.journey__nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Scroll reveal ── */
+.journey .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.journey .reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .journey__inner  { padding: 56px 32px 130px 32px; }
+  .journey__years  { padding-right: 110px; }
+  .journey__nav    { right: 24px; }
+}
+
+@media (max-width: 768px) {
+  .journey { height: auto; min-height: 560px; }
+  .journey__inner {
+    padding: 56px 22px 170px 22px;
+    gap: 16px;
+  }
+  .journey__title { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .journey__year  { font-size: clamp(3rem, 13vw, 4.5rem); }
+
+  /* On mobile, drop nav below the strip so the strip can use the full width */
+  .journey__years { padding: var(--strip-pad-top) 16px 6px 16px; --dot-size: 10px; gap: 8px; }
+  .journey__year-label { font-size: 0.82rem; }
+  .journey__nav {
+    right: 16px;
+    bottom: 78px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey__bg,
+  .journey__panel,
+  .journey__year-tick,
+  .journey__nav-btn,
+  .journey .reveal { animation: none !important; transition: none !important; }
+}

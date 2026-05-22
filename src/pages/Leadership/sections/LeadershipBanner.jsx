@@ -9,7 +9,7 @@ export default function LeadershipBanner() {
     <section className="ldr-banner">
       <div
         className="ldr-banner__image"
-        style={{ backgroundImage: 'url(/new-imgs/501949-eknath-shinde-group.avif)' }}
+        style={{ backgroundImage: 'url(/new-imgs/gettyimages-2256018761-612x612.jpg)' }}
         aria-hidden="true"
       />
 

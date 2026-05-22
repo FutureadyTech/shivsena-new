@@ -197,10 +197,11 @@
       "title": "आमच्यासोबत जोडलेले रहा",
       "lede": "ताज्या अपडेट्ससाठी आम्हाला सोशल मीडियावर फॉलो करा.",
       "items": [
-        { "id": "facebook",  "name": "फेसबुक",   "handle": "@ShivSenaOfficial",  "href": "https://facebook.com/shivsenaofficial" },
-        { "id": "instagram", "name": "इंस्टाग्राम", "handle": "@shivsenaofficial",  "href": "https://instagram.com/shivsenaofficial" },
-        { "id": "twitter",   "name": "ट्विटर / X",  "handle": "@ShivsenaComms",     "href": "https://x.com/ShivsenaComms" },
-        { "id": "youtube",   "name": "युट्यूब",    "handle": "@ShivSenaOfficial",  "href": "https://youtube.com/@shivsenaofficial" }
+        { "id": "facebook",  "name": "फेसबुक",      "handle": "@Shivsenaofc", "href": "https://www.facebook.com/Shivsenaofc" },
+        { "id": "instagram", "name": "इंस्टाग्राम",  "handle": "@shivsenaofc", "href": "https://www.instagram.com/shivsenaofc/" },
+        { "id": "twitter",   "name": "ट्विटर / X",   "handle": "@Shivsenaofc", "href": "https://x.com/Shivsenaofc" },
+        { "id": "youtube",   "name": "युट्यूब",     "handle": "@shivsenaofc", "href": "https://www.youtube.com/@shivsenaofc" },
+        { "id": "whatsapp",  "name": "व्हॉट्सॲप चॅनेल", "handle": "Shivsena", "href": "https://whatsapp.com/channel/0029Va9nyyVDDmFQ61SOyT1A" }
       ]
     },
     "en": {
@@ -208,10 +209,11 @@
       "title": "Stay Connected",
       "lede": "Follow us on social media for the latest updates.",
       "items": [
-        { "id": "facebook",  "name": "Facebook",  "handle": "@ShivSenaOfficial",  "href": "https://facebook.com/shivsenaofficial" },
-        { "id": "instagram", "name": "Instagram", "handle": "@shivsenaofficial",  "href": "https://instagram.com/shivsenaofficial" },
-        { "id": "twitter",   "name": "Twitter / X", "handle": "@ShivsenaComms",   "href": "https://x.com/ShivsenaComms" },
-        { "id": "youtube",   "name": "YouTube",   "handle": "@ShivSenaOfficial",  "href": "https://youtube.com/@shivsenaofficial" }
+        { "id": "facebook",  "name": "Facebook",        "handle": "@Shivsenaofc", "href": "https://www.facebook.com/Shivsenaofc" },
+        { "id": "instagram", "name": "Instagram",       "handle": "@shivsenaofc", "href": "https://www.instagram.com/shivsenaofc/" },
+        { "id": "twitter",   "name": "Twitter / X",     "handle": "@Shivsenaofc", "href": "https://x.com/Shivsenaofc" },
+        { "id": "youtube",   "name": "YouTube",         "handle": "@shivsenaofc", "href": "https://www.youtube.com/@shivsenaofc" },
+        { "id": "whatsapp",  "name": "WhatsApp Channel","handle": "Shivsena",     "href": "https://whatsapp.com/channel/0029Va9nyyVDDmFQ61SOyT1A" }
       ]
     }
   }

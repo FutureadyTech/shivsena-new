@@ -376,9 +376,6 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   .site-nav__live-dot { animation: none; }
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap');
-
 /* ── ANIMATIONS ── */
 
 @keyframes fadeUp {

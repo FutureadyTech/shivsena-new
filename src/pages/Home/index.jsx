@@ -2,7 +2,7 @@ import SiteHeader from '../../components/SiteHeader.jsx';
 import Hero from './Hero.jsx';
 import VisionIdeology from './sections/VisionIdeology.jsx';
 import LeadershipCarousel from './sections/LeadershipCarousel.jsx';
-import StorytellingTimeline from './sections/StorytellingTimeline.jsx';
+import OurJourney from './sections/OurJourney.jsx';
 import NewsMedia from './sections/NewsMedia.jsx';
 import SocialFeed from './sections/SocialFeed.jsx';
 // import OfficeLocator from './sections/OfficeLocator.jsx';
@@ -23,7 +23,7 @@ export default function Home() {
       <Hero />
       <VisionIdeology />
       <LeadershipCarousel />
-      <StorytellingTimeline />
+      <OurJourney />
       <NewsMedia />
       <SocialFeed />
       {/* <OfficeLocator /> */}
