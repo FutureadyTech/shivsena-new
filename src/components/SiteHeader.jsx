@@ -17,6 +17,8 @@ const NAV = [
       { to: '/about#affiliated', key: 'nav-affiliated' },
     ],
   },
+  { to: '/leadership',   key: 'nav-leadership' },
+  { to: '/innovative',   key: 'nav-innovative' },
   {
     key: 'nav-news',
     to: '/news',
@@ -28,7 +30,6 @@ const NAV = [
       { to: '/news#photo-gallery',  key: 'nav-photo-gallery' },
     ],
   },
-  { to: '/innovative',   key: 'nav-innovative' },
   { to: '/members',      key: 'nav-members' },
   { to: '/contact',      key: 'nav-contact' },
 ];
@@ -84,13 +85,11 @@ export default function SiteHeader() {
         )}
       </nav>
 
-      <NavLink to="/contact" className="site-nav__cta">
-        <span>{t('nav-join')}</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-          <circle cx="12" cy="7" r="4" />
-        </svg>
+      <NavLink to="/shivsena-live" className="site-nav__live">
+        <span className="site-nav__live-dot" aria-hidden="true" />
+        <span>{t('nav-live')}</span>
       </NavLink>
+
       <LanguageToggle />
 
     </header>

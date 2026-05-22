@@ -7,6 +7,8 @@ import { memberFor } from '../utils/transliterate.js';
 import './LeadersDirectory.css';
 
 const CATEGORY_ORDER = [
+  'mp',
+  'mla',
   'leaders',
   'deputyLeaders',
   'divisionalContactHeads',
@@ -46,6 +48,8 @@ export default function LeadersDirectory({ activeRegion, onChangeRegion }) {
     const state = leadershipContent.stateLevel || {};
     const region = leadershipContent.byRegion?.[activeRegion] || {};
     const map = {
+      mp:                       region.mp                      || state.mp                       || [],
+      mla:                      region.mla                     || state.mla                      || [],
       leaders:                  state.leaders                  || [],
       deputyLeaders:            state.deputyLeaders            || [],
       divisionalContactHeads:   region.divisionalContactHeads   || [],

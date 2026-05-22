@@ -92,6 +92,7 @@ export default function App() {
           <Route path="/declarations" element={<Declarations />} />
           <Route path="/affiliated/:slug" element={<AffiliatedOrg />} />
           <Route path="/innovative" element={<ComingSoon title="नावीन्यपूर्ण उपक्रम" />} />
+          <Route path="/shivsena-live" element={<ComingSoon title="शिवसेना लाइव्ह" />} />
           <Route path="/members" element={<ComingSoon title="Members" />} />
           <Route path="*" element={<ComingSoon title="Page Not Found" />} />
         </Routes>

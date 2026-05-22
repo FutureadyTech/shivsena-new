@@ -76,21 +76,21 @@
       "leaders": [
         {
           "id": "thackeray",
-          "name": "श्री. बाळासाहेब ठाकरे",
-          "role": "संस्थापक अध्यक्ष",
+          "name": "हिंदुहृदयसम्राट शिवसेनाप्रमुख बाळासाहेब ठाकरे",
+          "role": "संस्थापक",
           "image": "leaders/thackeray.jpg"
         },
         {
           "id": "dighe",
-          "name": "श्री. आनंद दिघे साहेब",
-          "role": "धर्मवीर",
+          "name": "धर्मवीर आनंद दिघे साहेब",
+          "role": "गुरुवर्य",
           "image": "leaders/dharmaveer.jpg"
         },
         {
           "id": "shinde",
-          "name": "एकनाथ शिंदे",
-          "role": "मुख्यमंत्री, महाराष्ट्र",
-          "image": "leaders/shinde.png"
+          "name": "श्री. एकनाथजी शिंदे साहेब",
+          "role": "मुख्य नेते · माजी मुख्यमंत्री तथा विद्यमान उपमुख्यमंत्री · महाराष्ट्र राज्य",
+          "image": "leaders/shinde-white.png"
         }
       ]
     },
@@ -100,21 +100,21 @@
       "leaders": [
         {
           "id": "thackeray",
-          "name": "Shri Balasaheb Thackeray",
-          "role": "Founder President",
+          "name": "Hinduhrudaysamrat Shivsenapramukh Balasaheb Thackeray",
+          "role": "Founder",
           "image": "leaders/thackeray.jpg"
         },
         {
           "id": "dighe",
-          "name": "Shri Anand Dighe Saheb",
-          "role": "Dharmaveer",
+          "name": "Dharmaveer Anand Dighe Saheb",
+          "role": "Guruvarya",
           "image": "leaders/dharmaveer.jpg"
         },
         {
           "id": "shinde",
-          "name": "Eknath Shinde",
-          "role": "Chief Minister, Maharashtra",
-          "image": "leaders/shinde.png"
+          "name": "Shri Eknathji Shinde Saheb",
+          "role": "Chief Leader · Former CM & Current Deputy CM · Maharashtra",
+          "image": "leaders/shinde-white.png"
         }
       ]
     }

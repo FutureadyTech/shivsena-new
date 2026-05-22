@@ -190,20 +190,24 @@ font-family: 'Noto Sans Devanagari', sans-serif;
 
 .leader-card__name {
   font-family: var(--font-display-en);
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   font-weight: 500;
   color: var(--ink);
-  line-height: 1.25;
+  line-height: 1.3;
   letter-spacing: -0.005em;
+  /* Long honorific names like "हिंदुहृदयसम्राट शिवसेनाप्रमुख बाळासाहेब ठाकरे"
+     need to wrap cleanly within the card. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .leader-card__role {
   font-family: var(--font-body);
-  font-size: 0.68rem;
-  letter-spacing: 0.3em;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
   color: var(--saffron-on-light);
-  text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .leader-card__arrow {
