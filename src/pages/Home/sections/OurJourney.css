@@ -17,11 +17,10 @@
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   z-index: 0;
   animation: journeyBgIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
-  /* slight contrast/brightness boost so the timeline images read */
   filter: saturate(1.08) contrast(1.05) brightness(1.05);
 }
 
@@ -30,20 +29,27 @@
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* Much softer overlay — image now reads through clearly. Strong scrim
-   on the left half so the text stays readable, fades to almost
-   transparent on the right where the photo dominates. */
+/* Heavier scrim on the left ~half so the year + body text always stays
+   readable, even against very light photos (newspaper scans etc.).
+   Right side fades to ~25% so the photo still reads as the hero. */
 .journey__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(95deg,
-      rgba(8, 4, 0, 0.78) 0%,
-      rgba(8, 4, 0, 0.55) 30%,
-      rgba(8, 4, 0, 0.18) 60%,
-      rgba(8, 4, 0, 0.10) 100%
+    /* Strong vertical scrim across the entire section for baseline contrast */
+    linear-gradient(180deg,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.55) 100%
     ),
+    /* Left-half horizontal scrim — densest where the panel text sits */
+    linear-gradient(95deg,
+      rgba(8, 4, 0, 0.85) 0%,
+      rgba(8, 4, 0, 0.70) 32%,
+      rgba(8, 4, 0, 0.35) 60%,
+      rgba(8, 4, 0, 0.20) 100%
+    ),
+    /* Extra darkening at the bottom for the year strip */
     linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 26%);
 }
 
@@ -60,23 +66,13 @@
   gap: 18px;
 }
 
-/* ── Section title (top-left) ── */
-.journey__title {
-  font-family: 'Khand', 'Noto Sans Devanagari', sans-serif;
-  font-size: clamp(2.4rem, 4.6vw, 4.4rem);
-  font-weight: 700;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
-  margin: 0;
-}
-
-/* ── Big year + event copy panel ── */
+/* ── Big year + event copy panel — left-aligned, vertically centred ── */
 .journey__panel {
-  align-self: center;
+  align-self: flex-start;     /* hug left edge of the column */
+  text-align: left;
   max-width: 640px;
+  margin-top: auto;
+  margin-bottom: auto;        /* vertically centre within the inner shell */
   /* Reserve enough vertical space for the longest event copy so the
      flex column doesn't re-centre + shift the panel up/down when
      switching between short and long descriptions. */
@@ -97,7 +93,9 @@
   letter-spacing: -2px;
   color: #fff;
   margin: 0 0 12px;
-  text-shadow: 0 6px 32px rgba(0, 0, 0, 0.6);
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 6px 28px rgba(0, 0, 0, 0.7);
 }
 
 .journey__event-title {
@@ -107,16 +105,22 @@
   line-height: 1.35;
   color: #FFB26B;
   margin: 0 0 14px;
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.85),
+    0 4px 18px rgba(0, 0, 0, 0.6);
 }
 
 .journey__body {
   font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
   font-size: clamp(0.95rem, 1.15vw, 1.08rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.94);
   margin: 0 0 14px;
   max-width: 620px;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.85),
+    0 3px 12px rgba(0, 0, 0, 0.55);
 }
 
 .journey__date {

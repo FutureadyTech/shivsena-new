@@ -106,7 +106,7 @@ export default function OurJourney() {
   const nextLabel  = isMr ? 'पुढे' : 'Next';
 
   return (
-    <section className="journey">
+    <section className="journey" id="history">
       {/* Background — swaps on every event change with a slow cross-fade */}
       <div
         key={activeImage}
@@ -118,10 +118,7 @@ export default function OurJourney() {
 
       <div ref={headerRef} className="journey__inner reveal">
 
-        {/* Title (top-left) */}
-        <h2 className="journey__title">{titleLabel}</h2>
-
-        {/* Big year + active event text */}
+        {/* Big year + active event text (left-aligned, no title above) */}
         <div className="journey__panel" key={`panel-${activeIdx}`}>
           <p className="journey__year">{fmtYear(activeEvent.year)}</p>
           {activeEvent.title && <h3 className="journey__event-title">{activeEvent.title}</h3>}
