@@ -33,13 +33,26 @@
   border-top-color: var(--gold);
   animation: emblem-spin 2s linear infinite reverse;
 }
-.loader-emblem-logo {
-  width: 78px;
-  height: 78px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 18px rgba(255, 178, 107, 0.55))
-          drop-shadow(0 0 6px rgba(255, 215, 0, 0.35));
+/* Solid white disc that frames the logo cleanly, with a soft saffron
+   glow so it matches the entrance ambience. */
+.loader-emblem-disc {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 22px 4px rgba(255, 178, 107, 0.45),
+    0 0 8px 1px rgba(255, 215, 0, 0.35);
   animation: emblem-pulse 2.4s ease-in-out infinite;
+}
+
+.loader-emblem-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
   user-select: none;
   pointer-events: none;
 }

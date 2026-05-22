@@ -206,6 +206,7 @@ function CategoryCarousel({ label, items, noDataLabel, prevLabel, nextLabel, vie
 function MemberCard({ member, index, viewMoreLabel, lang }) {
   const photo = photoFor(member);
   const { name, role } = memberFor(member, lang);
+  const socials = member.social || {};
   return (
     <article
       className="dir-card"
@@ -220,6 +221,8 @@ function MemberCard({ member, index, viewMoreLabel, lang }) {
         {role && <p className="dir-card__role">{role}</p>}
 
         <div className="dir-card__reveal">
+          <SocialIcons socials={socials} />
+
           {member.phone && (
             <a className="dir-card__phone" href={`tel:${member.phone.replace(/\s+/g, '')}`} data-cursor="link" tabIndex={-1}>
               <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -237,5 +240,58 @@ function MemberCard({ member, index, viewMoreLabel, lang }) {
         </div>
       </div>
     </article>
+  );
+}
+
+/* ── Social icons row (revealed on card hover) ───────────────────
+   Each platform falls back to a "#" link if no handle is provided
+   in the member's `social` object, so the icons always appear and
+   the design stays consistent. */
+function SocialIcons({ socials }) {
+  const links = [
+    { key: 'facebook',  href: socials.facebook  || '#', label: 'Facebook' },
+    { key: 'twitter',   href: socials.twitter   || socials.x || '#', label: 'X / Twitter' },
+    { key: 'instagram', href: socials.instagram || '#', label: 'Instagram' },
+    { key: 'youtube',   href: socials.youtube   || '#', label: 'YouTube' },
+  ];
+
+  return (
+    <div className="dir-card__socials" aria-label="Social profiles">
+      {links.map((s) => (
+        <a
+          key={s.key}
+          href={s.href}
+          target={s.href === '#' ? undefined : '_blank'}
+          rel={s.href === '#' ? undefined : 'noopener noreferrer'}
+          className={`dir-card__social dir-card__social--${s.key}`}
+          aria-label={s.label}
+          onClick={(e) => { if (s.href === '#') e.preventDefault(); }}
+          tabIndex={-1}
+        >
+          {s.key === 'facebook' && (
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+              <path d="M22 12a10 10 0 1 0-11.56 9.88V14.9H8v-2.9h2.44V9.84c0-2.4 1.44-3.73 3.63-3.73 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.2 0-1.57.74-1.57 1.5V12h2.67l-.43 2.9h-2.24v6.98A10 10 0 0 0 22 12Z" />
+            </svg>
+          )}
+          {s.key === 'twitter' && (
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.84l-5.36-6.93L4.56 22H1.3l8.04-9.18L1 2h6.98l4.84 6.36L18.244 2Zm-1.2 18h1.9L7.04 4H5.05l11.994 16Z" />
+            </svg>
+          )}
+          {s.key === 'instagram' && (
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          )}
+          {s.key === 'youtube' && (
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+              <path d="M23 12s0-3.18-.41-4.7a2.51 2.51 0 0 0-1.77-1.77C19.3 5.12 12 5.12 12 5.12s-7.3 0-8.82.41a2.51 2.51 0 0 0-1.77 1.77C1 8.82 1 12 1 12s0 3.18.41 4.7a2.51 2.51 0 0 0 1.77 1.77c1.52.41 8.82.41 8.82.41s7.3 0 8.82-.41a2.51 2.51 0 0 0 1.77-1.77C23 15.18 23 12 23 12Zm-13.2 3.04V8.96L15.5 12l-5.7 3.04Z" />
+            </svg>
+          )}
+        </a>
+      ))}
+    </div>
   );
 }

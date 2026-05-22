@@ -287,7 +287,7 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  padding: 18px 20px 20px;
+  padding: 16px 18px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,7 +323,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   max-height: 0;
   margin-top: 0;
   opacity: 0;
@@ -335,42 +335,90 @@
 }
 
 .dir-card:hover .dir-card__reveal {
-  max-height: 120px;
-  margin-top: 12px;
+  max-height: 180px;
+  margin-top: 10px;
   opacity: 1;
   pointer-events: auto;
 }
 
 .dir-card__phone,
-.dir-card__action {
+.dir-card__action,
+.dir-card__socials {
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.dir-card:hover .dir-card__socials {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.06s;
+}
 .dir-card:hover .dir-card__phone {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.12s;
+  transition-delay: 0.16s;
 }
 .dir-card:hover .dir-card__action {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.20s;
+  transition-delay: 0.24s;
 }
+
+/* ── Social icons row (revealed on card hover) ── */
+.dir-card__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dir-card__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease,
+              transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.dir-card__social svg { width: 12px; height: 12px; }
+
+.dir-card__social:hover {
+  background: var(--saffron, #C44D0E);
+  border-color: var(--saffron, #C44D0E);
+  color: #fff;
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* Brand-tinted hover per platform */
+.dir-card__social--facebook:hover  { background: #1877F2; border-color: #1877F2; }
+.dir-card__social--twitter:hover   { background: #000;    border-color: #000;    }
+.dir-card__social--instagram:hover {
+  background: linear-gradient(45deg, #F58529, #DD2A7B 50%, #515BD4 100%);
+  border-color: transparent;
+}
+.dir-card__social--youtube:hover   { background: #FF0000; border-color: #FF0000; }
 
 .dir-card__phone {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
   color: #fff;
   text-decoration: none;
@@ -387,13 +435,13 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 7px 16px;
   background: var(--saffron, #C44D0E);
   color: #fff;
   border: none;
   border-radius: 999px;
   font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -450,9 +498,12 @@
   .dir-card__shade,
   .dir-card__content,
   .dir-card__phone,
-  .dir-card__action { animation: none !important; transition: none; }
+  .dir-card__action,
+  .dir-card__socials,
+  .dir-card__social { animation: none !important; transition: none; }
 
   .dir-card__reveal { max-height: none; margin-top: 12px; opacity: 1; pointer-events: auto; overflow: visible; }
   .dir-card__phone,
-  .dir-card__action { opacity: 1; transform: none; pointer-events: auto; }
+  .dir-card__action,
+  .dir-card__socials { opacity: 1; transform: none; pointer-events: auto; }
 }

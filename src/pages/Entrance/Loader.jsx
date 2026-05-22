@@ -10,12 +10,14 @@ export default function Loader() {
   return (
     <div className="loader" id="loader">
       <div className="loader-emblem">
-        <img
-          src="/logo.png"
-          alt="शिवसेना"
-          className="loader-emblem-logo"
-          draggable="false"
-        />
+        <div className="loader-emblem-disc">
+          <img
+            src="/entrance-logo-loader.png"
+            alt="शिवसेना"
+            className="loader-emblem-logo"
+            draggable="false"
+          />
+        </div>
       </div>
       <div className="loader-bar"></div>
     </div>

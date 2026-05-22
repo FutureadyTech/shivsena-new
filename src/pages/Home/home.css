@@ -425,7 +425,7 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   height: 56.25vw;
   min-height: 100vh;
   /* translate3d promotes the video to its own compositor layer (GPU),
-     avoiding the costly continuous repaint that was causing the lag. */
+     avoiding continuous repaint. */
   transform: translate3d(-50%, -50%, 0);
   object-fit: cover;
   z-index: 0;
