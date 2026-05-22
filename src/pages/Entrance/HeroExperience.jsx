@@ -37,7 +37,7 @@ export default function HeroExperience() {
 
       {/* Photorealistic vestibule cover — fades + scales to reveal the 3D hall */}
       <div className="vestibule-cover" id="vestibule-cover" aria-hidden="true">
-        <img src="/shakha.png" alt="" />
+        <img src="/shakha.jpeg" alt="" />
       </div>
 
       {/* Golden bloom from the doorway */}
