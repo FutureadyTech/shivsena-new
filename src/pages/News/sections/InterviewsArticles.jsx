@@ -9,7 +9,7 @@ export default function InterviewsArticles() {
   const featuredRef = useScrollReveal(0.18);
 
   return (
-    <section className="ia-section">
+    <section className="ia-section" id="interviews">
       <div className="ia-section__inner">
 
         <div ref={headerRef} className="ia-section__header reveal">

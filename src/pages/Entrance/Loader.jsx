@@ -14,7 +14,12 @@ export default function Loader() {
   return (
     <div className="loader" id="loader">
       <div className="loader-emblem">
-        <div className="loader-emblem-mark">शि</div>
+        <img
+          src="/logo.png"
+          alt="शिवसेना"
+          className="loader-emblem-logo"
+          draggable="false"
+        />
       </div>
       <div className="loader-text">{t('loader')}</div>
       <div className="loader-sub">{t('loader-sub')}</div>

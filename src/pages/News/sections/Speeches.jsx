@@ -25,7 +25,7 @@ export default function Speeches() {
   const close = useCallback(() => setActiveSpeech(null), []);
 
   return (
-    <section className="sp-section">
+    <section className="sp-section" id="speeches">
       <div className="sp-section__inner">
 
         <div ref={headerRef} className="sp-section__header reveal">

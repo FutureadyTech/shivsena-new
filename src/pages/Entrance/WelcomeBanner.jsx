@@ -36,10 +36,32 @@ export default function WelcomeBanner() {
 
     setLang(targetLang);
 
+    // 1) Play the click "join" stinger.
+    // 2) When it ends, start the ambient bed as a window-scoped Audio object
+    //    so it survives the route change to /home and keeps looping.
+    //    Guarded so we don't stack multiple ambient instances on re-entry.
     try {
-      const audio = new Audio('/join.mp3');
-      audio.volume = 0.85;
-      audio.play().catch(() => {});
+      const click = new Audio('/join.mp3');
+      click.volume = 0.85;
+
+      const startAmbient = () => {
+        if (window.__ambientAudio) return; // already playing from a prior entry
+        const ambient = new Audio('/ambient.mp3');
+        ambient.loop = true;
+        ambient.volume = 0.5;
+        ambient.play().catch(() => {});
+        window.__ambientAudio = ambient;
+      };
+
+      click.addEventListener('ended', startAmbient, { once: true });
+      // Safety: if the stinger errors out, still kick off ambient.
+      click.addEventListener('error', startAmbient, { once: true });
+
+      click.play().catch(() => {
+        // If even the click can't play, start ambient immediately so the
+        // user still gets the audio experience after their gesture.
+        startAmbient();
+      });
     } catch (err) {}
 
     setIsExiting(true);
@@ -59,9 +81,9 @@ export default function WelcomeBanner() {
           className="welcome-banner__cta welcome-banner__cta--mr"
           onClick={enter('mr')}
           disabled={isExiting}
-          aria-label="मराठीत प्रवेश करा"
+          aria-label="मराठी"
         >
-          <span className="welcome-banner__cta-label">प्रवेश करा</span>
+          <span className="welcome-banner__cta-label">मराठी</span>
           <svg
             className="welcome-banner__cta-arrow"
             viewBox="0 0 24 24"
@@ -83,9 +105,9 @@ export default function WelcomeBanner() {
           className="welcome-banner__cta welcome-banner__cta--en"
           onClick={enter('en')}
           disabled={isExiting}
-          aria-label="Enter in English"
+          aria-label="English"
         >
-          <span className="welcome-banner__cta-label">Enter</span>
+          <span className="welcome-banner__cta-label">English</span>
           <svg
             className="welcome-banner__cta-arrow"
             viewBox="0 0 24 24"

@@ -8,8 +8,17 @@ export default function Hero() {
   return (
     <section className="hero-section">
 
-      <video autoPlay muted loop playsInline preload="auto" className="hero-video">
-        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        disableRemotePlayback
+        className="hero-video"
+      >
+        <source src="/videos/homepage-banner-sena.mp4" type="video/mp4" />
       </video>
 
       <div className="ov-base" />

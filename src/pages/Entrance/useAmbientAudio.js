@@ -43,7 +43,11 @@ export function useAmbientAudio() {
   }, []);
 
   // ──────────────────────────────────────────────────
-  // Init audio + try autoplay (with interaction fallback)
+  // Init audio — NO autoplay on load. Ambient now starts only
+  // after the user clicks "Enter" on the welcome banner (kicked
+  // off as a window-scoped Audio in WelcomeBanner so it survives
+  // the route change). The SoundToggle button still works via
+  // toggle() below for any manual mute/resume.
   // ──────────────────────────────────────────────────
   useEffect(() => {
     const audio = new Audio('/ambient.mp3');
@@ -52,52 +56,14 @@ export function useAmbientAudio() {
     audio.preload = 'auto';
     audioRef.current = audio;
 
-    const startAudio = () => {
-      if (playingRef.current) return;
-      const a = audioRef.current;
-      if (!a) return;
-
-      a.play()
-        .then(() => {
-          playingRef.current = true;
-          setEnabled(true);
-          fadeVolume(0.5, 2000); // 2s gentle fade-in
-          removeInteractionListeners();
-        })
-        .catch(() => {
-          // Autoplay still blocked — listeners stay armed, will retry on interaction.
-        });
-    };
-
-    const onInteraction = () => startAudio();
-
-    const interactionEvents = ['scroll', 'click', 'touchstart', 'keydown', 'mousemove'];
-    const addInteractionListeners = () => {
-      interactionEvents.forEach((ev) =>
-        window.addEventListener(ev, onInteraction, { passive: true })
-      );
-    };
-    const removeInteractionListeners = () => {
-      interactionEvents.forEach((ev) =>
-        window.removeEventListener(ev, onInteraction)
-      );
-    };
-
-    // Attempt 1: direct autoplay (will work if browser allows it)
-    startAudio();
-
-    // Attempt 2: fall back to first user interaction
-    addInteractionListeners();
-
     return () => {
       if (fadeRafRef.current) cancelAnimationFrame(fadeRafRef.current);
-      removeInteractionListeners();
       audio.pause();
       audio.src = '';
       audioRef.current = null;
       playingRef.current = false;
     };
-  }, [fadeVolume]);
+  }, []);
 
   // ──────────────────────────────────────────────────
   // Manual toggle (SoundToggle button)

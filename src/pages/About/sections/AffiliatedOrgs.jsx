@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
 import aboutContent from '../../../content/about.json';
@@ -27,10 +27,9 @@ function PathIcon({ children }) {
 export default function AffiliatedOrgs() {
   const t = useContent(aboutContent.affiliated);
   const headerRef = useScrollReveal(0.25);
-  const [selectedOrg, setSelectedOrg] = useState(null);
 
   return (
-    <section className="affiliated">
+    <section className="affiliated" id="affiliated">
       <div className="affiliated__inner">
 
         <div ref={headerRef} className="affiliated__header reveal">
@@ -48,27 +47,18 @@ export default function AffiliatedOrgs() {
               key={org.id}
               org={org}
               index={i}
-              joinLabel={t.joinLabel}
-              onJoin={() => setSelectedOrg(org)}
+              ctaLabel={t.readMoreLabel ?? t.joinLabel}
             />
           ))}
         </div>
 
       </div>
-
-      {selectedOrg && (
-        <JoinModal
-          org={selectedOrg}
-          form={t.form}
-          onClose={() => setSelectedOrg(null)}
-        />
-      )}
     </section>
   );
 }
 
 /* ── Card ──────────────────────────────────────────────────── */
-function OrgCard({ org, index, joinLabel, onJoin }) {
+function OrgCard({ org, index, ctaLabel }) {
   const ref = useScrollReveal(0.15);
   const icon = ORG_ICONS[org.id] ?? ORG_ICONS.yuva;
 
@@ -86,169 +76,17 @@ function OrgCard({ org, index, joinLabel, onJoin }) {
       <h3 className="org-card__name">{org.name}</h3>
       <p className="org-card__body">{org.body}</p>
 
-      <button
-        type="button"
+      <Link
+        to={`/affiliated/${org.id}`}
         className="org-card__join"
-        onClick={onJoin}
         data-cursor="link"
       >
-        <span>{joinLabel}</span>
+        <span>{ctaLabel}</span>
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <line x1="5" y1="12" x2="19" y2="12" />
           <polyline points="12 5 19 12 12 19" />
         </svg>
-      </button>
+      </Link>
     </article>
-  );
-}
-
-/* ── Modal Form (shared across all orgs) ───────────────────── */
-function JoinModal({ org, form, onClose }) {
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted]   = useState(false);
-  const [fields, setFields] = useState({ name: '', email: '', phone: '', city: '' });
-
-  /* Body scroll lock + ESC close */
-  useEffect(() => {
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
-    window.addEventListener('keydown', onKey);
-    return () => {
-      document.body.style.overflow = prevOverflow;
-      window.removeEventListener('keydown', onKey);
-    };
-  }, [onClose]);
-
-  const update = (key) => (e) => setFields((f) => ({ ...f, [key]: e.target.value }));
-
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
-    if (!fields.name || !fields.email || !fields.phone) return;
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-    }, 800);
-  }, [fields]);
-
-  return (
-    <div className="org-modal" role="dialog" aria-modal="true" onClick={onClose}>
-      <div className="org-modal__panel" onClick={(e) => e.stopPropagation()}>
-
-        <button
-          type="button"
-          className="org-modal__close"
-          onClick={onClose}
-          aria-label={form.closeLabel}
-        >
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-
-        {!submitted ? (
-          <>
-            <header className="org-modal__head">
-              <span className="org-modal__eyebrow">{org.tag}</span>
-              <h3 className="org-modal__title">{form.title}</h3>
-              <p className="org-modal__subtitle">{form.subtitle}</p>
-            </header>
-
-            <form className="org-modal__form" onSubmit={handleSubmit}>
-              <label className="org-field">
-                <span className="org-field__label">{form.labels.organization}</span>
-                <input
-                  type="text"
-                  className="org-field__input org-field__input--readonly"
-                  value={org.name}
-                  readOnly
-                />
-              </label>
-
-              <label className="org-field">
-                <span className="org-field__label">{form.labels.name}</span>
-                <input
-                  type="text"
-                  className="org-field__input"
-                  placeholder={form.placeholders.name}
-                  value={fields.name}
-                  onChange={update('name')}
-                  required
-                />
-              </label>
-
-              <div className="org-field-row">
-                <label className="org-field">
-                  <span className="org-field__label">{form.labels.email}</span>
-                  <input
-                    type="email"
-                    className="org-field__input"
-                    placeholder={form.placeholders.email}
-                    value={fields.email}
-                    onChange={update('email')}
-                    required
-                  />
-                </label>
-
-                <label className="org-field">
-                  <span className="org-field__label">{form.labels.phone}</span>
-                  <input
-                    type="tel"
-                    className="org-field__input"
-                    placeholder={form.placeholders.phone}
-                    value={fields.phone}
-                    onChange={update('phone')}
-                    pattern="[0-9]{10}"
-                    required
-                  />
-                </label>
-              </div>
-
-              <label className="org-field">
-                <span className="org-field__label">{form.labels.city}</span>
-                <input
-                  type="text"
-                  className="org-field__input"
-                  placeholder={form.placeholders.city}
-                  value={fields.city}
-                  onChange={update('city')}
-                />
-              </label>
-
-              <button
-                type="submit"
-                className="org-modal__submit"
-                disabled={submitting}
-                data-cursor="link"
-              >
-                {submitting ? form.submitting : form.submitLabel}
-                {!submitting && (
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                )}
-              </button>
-            </form>
-          </>
-        ) : (
-          <div className="org-modal__success">
-            <div className="org-modal__success-tick" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <h3 className="org-modal__success-title">{form.successTitle}</h3>
-            <p className="org-modal__success-msg">{form.successMessage}</p>
-            <button type="button" className="org-modal__success-close" onClick={onClose}>
-              {form.closeLabel}
-            </button>
-          </div>
-        )}
-
-      </div>
-    </div>
   );
 }

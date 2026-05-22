@@ -165,6 +165,146 @@ body.has-dark-hero-visible .site-nav__link {
 body.has-dark-hero-visible .site-nav__link:hover { color: var(--warm-cream); }
 body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
 
+/* ─── DROPDOWN (About Us → Leadership / Affiliated Orgs) ─── */
+.site-nav__dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-nav__link--has-children {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.site-nav__caret {
+  transition: transform 0.3s var(--ease-out-expo);
+  opacity: 0.7;
+}
+.site-nav__dropdown.is-open .site-nav__caret { transform: rotate(180deg); opacity: 1; }
+.site-nav__dropdown:hover .site-nav__caret  { transform: rotate(180deg); opacity: 1; }
+
+.site-nav__submenu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 240px;
+  padding: 10px;
+  background: var(--paper-soft, #FCFBF7);
+  border: 1px solid var(--hairline, rgba(26, 20, 16, 0.1));
+  border-radius: 10px;
+  box-shadow:
+    0 18px 44px -18px rgba(26, 20, 16, 0.28),
+    0 2px 6px rgba(26, 20, 16, 0.06);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.28s var(--ease-out-expo),
+    transform 0.32s var(--ease-out-expo),
+    visibility 0.28s;
+  z-index: 200;
+}
+
+/* Invisible bridge so the cursor can move from parent → submenu
+   without crossing a gap that closes the menu. */
+.site-nav__submenu::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+.site-nav__dropdown.is-open .site-nav__submenu,
+.site-nav__dropdown:hover .site-nav__submenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.site-nav__sublink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--body-text, #5C544A);
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, padding 0.3s var(--ease-out-expo);
+  white-space: nowrap;
+}
+
+.site-nav__sublink-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--saffron, #FF6B1A);
+  border-radius: 50%;
+  opacity: 0.35;
+  transition: opacity 0.25s ease, transform 0.3s var(--ease-out-expo);
+}
+
+.site-nav__sublink:hover {
+  background: rgba(255, 107, 26, 0.08);
+  color: var(--saffron-on-light, #C44D0E);
+  padding-left: 16px;
+}
+.site-nav__sublink:hover .site-nav__sublink-dot {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+.site-nav__sublink--active {
+  color: var(--saffron-on-light, #C44D0E);
+  font-weight: 600;
+}
+.site-nav__sublink--active .site-nav__sublink-dot { opacity: 1; }
+
+/* Submenu styling over dark hero — dark surface, cream text */
+body.has-dark-hero-visible .site-nav__submenu {
+  background: rgba(10, 6, 4, 0.94);
+  border-color: rgba(255, 178, 107, 0.18);
+  box-shadow:
+    0 22px 50px -18px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 178, 107, 0.05) inset;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+body.has-dark-hero-visible .site-nav__sublink { color: var(--warm-cream-dim); }
+body.has-dark-hero-visible .site-nav__sublink:hover {
+  background: rgba(255, 107, 26, 0.14);
+  color: var(--warm-cream);
+}
+body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
+
+@media (max-width: 768px) {
+  .site-nav__submenu {
+    min-width: 200px;
+    left: 0;
+    transform: translateX(0) translateY(-6px);
+  }
+  .site-nav__dropdown.is-open .site-nav__submenu,
+  .site-nav__dropdown:hover .site-nav__submenu {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav__submenu,
+  .site-nav__sublink,
+  .site-nav__sublink-dot,
+  .site-nav__caret { transition: none; }
+}
+
 /* ─── CTA (saffron filled, consistent on both backgrounds) ─── */
 .site-nav__cta {
   display: inline-flex;
@@ -214,11 +354,9 @@ body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
   50%       { opacity: 0.45; }
 }
 
-@keyframes slowPan {
-  0%   { transform: translate(-50%, -50%) scale(1.06); }
-  50%  { transform: translate(-50%, -50%) scale(1.1) translate(-6px, -3px); }
-  100% { transform: translate(-50%, -50%) scale(1.06); }
-}
+/* slowPan Ken-Burns animation removed — the video has its own motion,
+   and continuously animating transform on a video element was forcing
+   per-frame repaints (root cause of the hero lag). */
 
 /* ── SECTION ── */
 
@@ -239,10 +377,14 @@ body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
   min-width: 100vw;
   height: 56.25vw;
   min-height: 100vh;
-  transform: translate(-50%, -50%);
+  /* translate3d promotes the video to its own compositor layer (GPU),
+     avoiding the costly continuous repaint that was causing the lag. */
+  transform: translate3d(-50%, -50%, 0);
   object-fit: cover;
   z-index: 0;
-  animation: slowPan 22s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* ── OVERLAY STACK ── */

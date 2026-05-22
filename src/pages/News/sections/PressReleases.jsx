@@ -8,7 +8,7 @@ export default function PressReleases() {
   const headerRef = useScrollReveal(0.2);
 
   return (
-    <section className="pr-section">
+    <section className="pr-section" id="press-releases">
       <div className="pr-section__inner">
 
         <div ref={headerRef} className="pr-section__header reveal">

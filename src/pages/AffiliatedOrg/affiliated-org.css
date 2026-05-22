@@ -1,0 +1,162 @@
+/* ═══════════════════════════════════════════════════════════════
+   AFFILIATED ORG — placeholder "Coming Soon" page
+═══════════════════════════════════════════════════════════════ */
+.aff-org-page {
+  --paper:           #FAF6EE;
+  --paper-deep:      #F2EBDD;
+  --paper-soft:      #FCFBF7;
+  --ink:             #1A1410;
+  --ink-soft:        #2E2820;
+  --body-text:       #5C544A;
+  --body-light:      #847B6E;
+  --hairline:        rgba(26, 20, 16, 0.1);
+  --hairline-strong: rgba(26, 20, 16, 0.18);
+  --saffron-on-light:#C44D0E;
+
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.aff-org {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 32px 120px;
+  overflow: hidden;
+}
+
+/* Soft radial saffron glow backdrop */
+.aff-org__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 50% at 50% 30%, rgba(255, 178, 107, 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 50% 110%, rgba(196, 77, 14, 0.10) 0%, transparent 70%);
+}
+
+.aff-org__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  text-align: center;
+  animation: affOrgRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes affOrgRise {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.aff-org__tag {
+  display: inline-block;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: var(--saffron-on-light);
+  padding: 8px 16px;
+  background: rgba(255, 107, 26, 0.08);
+  border: 1px solid rgba(255, 107, 26, 0.22);
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+
+.aff-org__name {
+  font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 28px;
+}
+
+.aff-org__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aff-org__divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 77, 14, 0.4), transparent);
+}
+.aff-org__divider-dot {
+  width: 6px; height: 6px;
+  background: var(--saffron-on-light);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 107, 26, 0.12);
+}
+
+.aff-org__soon {
+  font-family: 'Mukta', sans-serif;
+  font-size: clamp(0.78rem, 1vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  color: var(--saffron-on-light);
+  margin-bottom: 22px;
+  animation: affOrgPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes affOrgPulse {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1;   }
+}
+
+.aff-org__body {
+  font-family: 'Mukta', sans-serif;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.78;
+  color: var(--body-text);
+  max-width: 580px;
+  margin: 0 auto 40px;
+}
+
+.aff-org__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border: 1.5px solid var(--saffron-on-light);
+  color: var(--saffron-on-light);
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.aff-org__back:hover {
+  background: var(--saffron-on-light);
+  color: #fff;
+  gap: 16px;
+  box-shadow: 0 14px 32px -14px rgba(196, 77, 14, 0.4);
+}
+.aff-org__back svg { transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1); }
+.aff-org__back:hover svg { transform: translateX(-3px); }
+
+@media (max-width: 768px) {
+  .aff-org { padding: 110px 20px 90px; }
+  .aff-org__name { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .aff-org__soon { letter-spacing: 0.3em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aff-org__inner,
+  .aff-org__soon,
+  .aff-org__back,
+  .aff-org__back svg { animation: none; transition: none; }
+}

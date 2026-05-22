@@ -35,7 +35,7 @@ export default function PhotoGallery() {
   const activePhoto = activeIdx !== null ? items[activeIdx] : null;
 
   return (
-    <section className="pg-section">
+    <section className="pg-section" id="gallery">
       <div className="pg-section__inner">
 
         <div ref={headerRef} className="pg-section__header reveal">

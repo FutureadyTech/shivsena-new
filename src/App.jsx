@@ -8,17 +8,34 @@ import News from './pages/News/index.jsx';
 import Contact from './pages/Contact/index.jsx';
 import Leadership from './pages/Leadership/index.jsx';
 import Declarations from './pages/Declarations/index.jsx';
+import AffiliatedOrg from './pages/AffiliatedOrg/index.jsx';
+import AmbientAudio from './components/AmbientAudio.jsx';
 
 /* Reset scroll to the top on every route change.
    Tries Lenis (if it's been mounted by the active page) first for a clean
    jump that the smooth-scroll library doesn't fight, otherwise falls back
    to native window.scrollTo. */
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
     // Run on next tick so the new page has mounted (and any new Lenis
     // instance has had a chance to attach).
     const id = requestAnimationFrame(() => {
+      // If the route includes a hash anchor (e.g. /about#affiliated),
+      // scroll to that element instead of jumping to the top.
+      if (hash) {
+        const el = document.querySelector(hash);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 80; // header offset
+          if (window.__lenis && typeof window.__lenis.scrollTo === 'function') {
+            window.__lenis.scrollTo(top, { immediate: false });
+          } else {
+            window.scrollTo({ top, left: 0, behavior: 'smooth' });
+          }
+          return;
+        }
+      }
+
       if (window.__lenis && typeof window.__lenis.scrollTo === 'function') {
         window.__lenis.scrollTo(0, { immediate: true, force: true });
       } else {
@@ -26,7 +43,7 @@ function ScrollToTop() {
       }
     });
     return () => cancelAnimationFrame(id);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 }
 
@@ -64,6 +81,7 @@ export default function App() {
     <LanguageProvider defaultLang="mr">
       <BrowserRouter>
         <ScrollToTop />
+        <AmbientAudio />
         <Routes>
           <Route path="/" element={<Entrance />} />
           <Route path="/home" element={<Home />} />
@@ -72,6 +90,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/declarations" element={<Declarations />} />
+          <Route path="/affiliated/:slug" element={<AffiliatedOrg />} />
+          <Route path="/innovative" element={<ComingSoon title="नावीन्यपूर्ण उपक्रम" />} />
           <Route path="/members" element={<ComingSoon title="Members" />} />
           <Route path="*" element={<ComingSoon title="Page Not Found" />} />
         </Routes>
