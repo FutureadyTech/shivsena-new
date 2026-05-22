@@ -7,6 +7,7 @@ import About from './pages/About/index.jsx';
 import News from './pages/News/index.jsx';
 import Contact from './pages/Contact/index.jsx';
 import Leadership from './pages/Leadership/index.jsx';
+import Declarations from './pages/Declarations/index.jsx';
 
 /* Reset scroll to the top on every route change.
    Tries Lenis (if it's been mounted by the active page) first for a clean
@@ -70,6 +71,7 @@ export default function App() {
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/leadership" element={<Leadership />} />
+          <Route path="/declarations" element={<Declarations />} />
           <Route path="/members" element={<ComingSoon title="Members" />} />
           <Route path="*" element={<ComingSoon title="Page Not Found" />} />
         </Routes>

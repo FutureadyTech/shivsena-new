@@ -43,12 +43,12 @@
   transform: translate(-50%, -50%);
   font-family: 'Noto Sans Devanagari', 'Tiro Devanagari Marathi', serif;
   font-weight: 900;
-  font-size: clamp(14rem, 32vw, 38rem);
+  font-size: clamp(7rem, 14vw, 16rem);
   line-height: 0.85;
   letter-spacing: -0.04em;
   color: var(--saffron, #C44D0E);
-  opacity: 0.08;
-  filter: blur(12px);
+  opacity: 0.16;
+  filter: blur(3px);
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
@@ -66,9 +66,9 @@
   max-width: 1500px;
   margin: 0 auto;
   height: 100%;
-  padding: 0 64px;          /* horizontal only — vertical removed so line goes edge-to-edge */
+  padding: 0 64px;
   display: grid;
-  grid-template-columns: 1.1fr 280px 1.3fr;
+  grid-template-columns: 0.9fr 280px 1.3fr;
   grid-template-rows: 1fr;
   align-items: center;
   gap: 0;
@@ -87,7 +87,7 @@
 .cgn-tl__big-year {
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
   font-weight: 800;
-  font-size: clamp(4.5rem, 9vw, 8rem);
+  font-size: clamp(4.5rem, 9vw, 5rem);
   line-height: 1;
   letter-spacing: -0.045em;
   color: var(--ink, #1A1410);

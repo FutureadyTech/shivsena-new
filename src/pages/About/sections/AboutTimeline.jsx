@@ -89,11 +89,6 @@ export default function AboutTimeline() {
           <span key={`year-${activeYear}`} className="cgn-tl__big-year">
             {fmtYear(activeYear)}
           </span>
-          <span className="cgn-tl__arrow" aria-hidden="true">
-            <svg viewBox="0 0 48 28" fill="none">
-              <path d="M 0 14 L 48 14 L 30 0 L 30 28 Z" fill="currentColor" />
-            </svg>
-          </span>
         </div>
 
         {/* ── Center: vertical rail with year dots ── */}

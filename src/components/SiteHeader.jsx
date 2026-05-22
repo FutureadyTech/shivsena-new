@@ -4,12 +4,13 @@ import { useT } from '../i18n/LanguageContext.jsx';
 import LanguageToggle from './LanguageToggle.jsx';
 
 const NAV = [
-  { to: '/home',       key: 'nav-home' },
-  { to: '/about',      key: 'nav-about' },
-  { to: '/news',       key: 'nav-news' },
-  { to: '/leadership', key: 'nav-leadership' },
-  { to: '/members',    key: 'nav-members' },
-  { to: '/contact',    key: 'nav-contact' },
+  { to: '/home',         key: 'nav-home' },
+  { to: '/about',        key: 'nav-about' },
+  { to: '/news',         key: 'nav-news' },
+  { to: '/leadership',   key: 'nav-leadership' },
+  { to: '/declarations', key: 'nav-declarations' },
+  { to: '/members',      key: 'nav-members' },
+  { to: '/contact',      key: 'nav-contact' },
 ];
 
 export default function SiteHeader() {

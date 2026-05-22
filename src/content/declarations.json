@@ -1,0 +1,107 @@
+{
+  "banner": {
+    "mr": {
+      "eyebrow": "॥ शिवसेना घोषणापत्र ॥",
+      "title": "घोषणा",
+      "subtitle": "निवडणूक आयोगाच्या निकषांनुसार सादर केलेली शिवसेना पक्षाची अधिकृत घोषणा व पारदर्शक माहिती."
+    },
+    "en": {
+      "eyebrow": "|| OFFICIAL DECLARATIONS ||",
+      "title": "Declarations",
+      "subtitle": "Shiv Sena's official declarations and transparent disclosures, submitted in accordance with Election Commission of India norms."
+    }
+  },
+
+  "intro": {
+    "mr": {
+      "eyebrow": "॥ पारदर्शकता ॥",
+      "title": "पक्षाची भूमिका — स्पष्ट, उघड व जबाबदार",
+      "lede": "लोकशाहीच्या प्रत्येक टप्प्यावर शिवसेनेने पारदर्शकतेच्या तत्त्वावर निष्ठा ठेवली आहे. खालील घोषणा हे त्याच निष्ठेचा भाग आहेत."
+    },
+    "en": {
+      "eyebrow": "|| TRANSPARENCY ||",
+      "title": "Our position — open, declared, accountable",
+      "lede": "At every stage of the democratic process, Shiv Sena has upheld the principle of transparency. The declarations below are part of that commitment."
+    }
+  },
+
+  "items": {
+    "mr": [
+      {
+        "number": "०१",
+        "tag": "निवडणूक आयोग",
+        "title": "ECI नोंदणी व मान्यता",
+        "body": "शिवसेना हा भारत निवडणूक आयोगाकडे रीतसर नोंदणीकृत राजकीय पक्ष आहे. ‘धनुष्यबाण’ हे पक्षाचे अधिकृत चिन्ह असून, सर्व निवडणुकांत याच चिन्हाचा वापर केला जातो."
+      },
+      {
+        "number": "०२",
+        "tag": "आर्थिक पारदर्शकता",
+        "title": "देणग्या व निधी अहवाल",
+        "body": "पक्षाला मिळणाऱ्या सर्व देणग्यांचा वार्षिक अहवाल आयोगाकडे सादर केला जातो. इलेक्टोरल बॉण्ड, चेक व डिजिटल माध्यमातून आलेला निधी कायद्यानुसार जाहीर केला जातो."
+      },
+      {
+        "number": "०३",
+        "tag": "घटना व नियमावली",
+        "title": "पक्षाची घटना",
+        "body": "शिवसेनेची लेखी घटना आयोगाकडे दाखल असून, पक्षाच्या सर्व अंतर्गत निवडणुका, समित्या व पदाधिकाऱ्यांच्या नेमणुका त्यानुसार होतात."
+      },
+      {
+        "number": "०४",
+        "tag": "उमेदवारी प्रतिज्ञापत्र",
+        "title": "उमेदवारांचे शपथपत्र",
+        "body": "प्रत्येक निवडणुकीत उमेदवारांची मालमत्ता, गुन्हेगारी पार्श्वभूमी व शैक्षणिक माहिती आयोगाच्या नमुन्यानुसार जाहीर केली जाते — कोणतीही माहिती लपवली जात नाही."
+      },
+      {
+        "number": "०५",
+        "tag": "आचारसंहिता",
+        "title": "आदर्श आचारसंहितेचे पालन",
+        "body": "निवडणूक प्रक्रियेदरम्यान आयोगाने जाहीर केलेल्या आदर्श आचारसंहितेचे पक्ष पूर्णपणे पालन करतो. कोणतीही तक्रार आल्यास तातडीने पडताळणी केली जाते."
+      }
+    ],
+    "en": [
+      {
+        "number": "01",
+        "tag": "ELECTION COMMISSION",
+        "title": "ECI Registration & Recognition",
+        "body": "Shiv Sena is a duly registered political party with the Election Commission of India. The ‘Bow & Arrow’ is our reserved symbol and is used uniformly across every election we contest."
+      },
+      {
+        "number": "02",
+        "tag": "FINANCIAL TRANSPARENCY",
+        "title": "Contributions & Funding Report",
+        "body": "Annual reports of every contribution received by the party are filed with the Commission. Funds received through electoral bonds, cheques, and digital channels are disclosed as mandated by law."
+      },
+      {
+        "number": "03",
+        "tag": "PARTY CONSTITUTION",
+        "title": "Constitution of the Party",
+        "body": "The written constitution of Shiv Sena is on record with the Commission. Internal elections, committees, and office-bearer appointments are all conducted in strict accordance with it."
+      },
+      {
+        "number": "04",
+        "tag": "CANDIDATE AFFIDAVIT",
+        "title": "Sworn Affidavits of Candidates",
+        "body": "At every election, each candidate's assets, criminal record, and educational background are disclosed in the prescribed ECI format — nothing is concealed from the voter."
+      },
+      {
+        "number": "05",
+        "tag": "MODEL CODE",
+        "title": "Adherence to the Model Code of Conduct",
+        "body": "The party fully complies with the Model Code of Conduct issued by the Commission during the election process. Any complaint received is examined immediately and acted upon."
+      }
+    ]
+  },
+
+  "footer": {
+    "mr": {
+      "title": "अधिक माहितीसाठी",
+      "body": "पक्षाच्या घोषणापत्राचा संपूर्ण मजकूर निवडणूक आयोगाच्या संकेतस्थळावर उपलब्ध आहे.",
+      "cta": "आयोग संकेतस्थळ"
+    },
+    "en": {
+      "title": "For Further Reference",
+      "body": "The complete text of the party's declarations is available on the official Election Commission of India website.",
+      "cta": "Visit ECI Website"
+    }
+  }
+}

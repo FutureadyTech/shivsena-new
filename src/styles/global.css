@@ -117,3 +117,12 @@ html[lang="mr"] a,
 html[lang="mr"] button {
   font-family: 'Mukta', sans-serif;
 }
+
+/* ─── Disable letter-spacing on Devanagari (mr/hi) ─────────
+   Letter-spacing is designed for English uppercase eyebrows,
+   badges, and meta labels — it breaks Devanagari conjuncts
+   and matras, so we zero it out site-wide for those languages. */
+html[lang="mr"] *,
+html[lang="hi"] * {
+  letter-spacing: 0 !important;
+}
