@@ -4,8 +4,8 @@ import { useContent } from '../../../content/_shared/useContent.js';
 import homeContent from '../../../content/home.json';
 import './LeadershipCarousel.css';
 
-export default function LeadershipCarousel() {
-  const t = useContent(homeContent.leadership);
+export default function LeadershipCarousel({ content }) {
+  const t = useContent(content ?? homeContent.leadership);
   const trackRef = useRef(null);
   const headerRef = useScrollReveal(0.25);
 

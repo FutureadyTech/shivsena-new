@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Untrack node_modules; add .gitignore and Vercel SPA rewrites *)",
+      "Bash(git push *)",
+      "Bash(unzip -p \"शिवसेना टाइम लाईन.docx\" word/document.xml)",
+      "Bash(python -c \"import sys, re, html; xml=sys.stdin.read\\(\\); txts=re.findall\\(r'<w:t[^>]*>\\([^<]*\\)</w:t>', xml\\); print\\('\\\\n'.join\\(html.unescape\\(t\\) for t in txts if t.strip\\(\\)\\)\\)\")",
+      "Bash(LC_ALL=en_US.UTF-8 unzip -p \"शिवसेना - ८०_ समाजकारण २०_ राजकारण \\(1\\).docx\" word/document.xml)",
+      "Bash(pdftotext -layout \"Shiv Sena English Version Document.pdf\" -)",
+      "Bash(unzip -p \"Content Mapping - Shivsena.xlsx\" xl/sharedStrings.xml)",
+      "Bash(npm run *)",
+      "Bash(pdftotext --version)",
+      "Bash(pdftotext -layout \"शिवसेना मुख्यनेते यादी ०१-०४-२०२६.pdf\" -)",
+      "Bash(pdftotext -layout pdf-7.pdf -)",
+      "Bash(pdftotext -enc UTF-8 pdf-7.pdf -)",
+      "Bash(pdftotext -raw -enc UTF-8 pdf-7.pdf -)",
+      "Bash(pdftotext -raw -enc UTF-8 pdf-__TRACKED_VAR__.pdf pdf-__TRACKED_VAR__.txt)",
+      "Read(//c/Users/Admin/Downloads/**)",
+      "Bash(rm -rf \"shivsena-clean/shivsena-clean/details/Shared by the client/_extracted\")"
+    ]
+  }
+}

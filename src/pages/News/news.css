@@ -1,0 +1,5 @@
+/* News page root — inherits global tokens */
+.news-page {
+  background: var(--paper, #FAF5EC);
+  color: var(--ink, #1A1410);
+}

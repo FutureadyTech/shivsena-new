@@ -1,0 +1,5 @@
+/* Contact page root */
+.contact-page {
+  background: var(--paper, #FAF5EC);
+  color: var(--ink, #1A1410);
+}

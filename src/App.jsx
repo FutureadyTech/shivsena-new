@@ -2,6 +2,10 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext.jsx';
 import Entrance from './pages/Entrance/index.jsx';
 import Home from './pages/Home/index.jsx';
+import About from './pages/About/index.jsx';
+import News from './pages/News/index.jsx';
+import Contact from './pages/Contact/index.jsx';
+import Leadership from './pages/Leadership/index.jsx';
 
 function ComingSoon({ title }) {
   return (
@@ -39,9 +43,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Entrance />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<ComingSoon title="About" />} />
-          <Route path="/news" element={<ComingSoon title="News & Media" />} />
-          <Route path="/leadership" element={<ComingSoon title="Leadership" />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/leadership" element={<Leadership />} />
           <Route path="/members" element={<ComingSoon title="Members" />} />
           <Route path="*" element={<ComingSoon title="Page Not Found" />} />
         </Routes>

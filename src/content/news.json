@@ -1,0 +1,183 @@
+{
+  "banner": {
+    "mr": {
+      "eyebrow": "॥ माध्यम ॥",
+      "title": "बातम्या आणि माध्यम",
+      "subtitle": "शिवसेनेच्या प्रत्येक क्षणाची गाथा — प्रेस रिलीज, मुलाखती, भाषणे, चित्रफिती आणि छायाचित्रांच्या माध्यमातून."
+    },
+    "en": {
+      "eyebrow": "|| MEDIA ||",
+      "title": "News & Media",
+      "subtitle": "Every moment of the Shiv Sena, told through press releases, interviews, speeches, videos, and photographs."
+    }
+  },
+
+  "pressReleases": {
+    "mr": {
+      "eyebrow": "अधिकृत प्रकाशन",
+      "title": "प्रेस रिलीज",
+      "lede": "पक्षाची अधिकृत वक्तव्ये आणि महत्त्वाच्या घोषणा एका ठिकाणी.",
+      "viewAllLabel": "सर्व प्रेस रिलीज पहा",
+      "readMoreLabel": "अधिक वाचा",
+      "items": [
+        { "id": "pr-1", "date": "१८ मे २०२६", "category": "महायुती", "title": "महापालिका निवडणुकीसाठी महायुतीची जागावाटप अंतिम", "excerpt": "मुंबई, ठाणे आणि पुणे महानगरपालिका निवडणुकांसाठी महायुतीची जागावाटप योजना अंतिम झाली असून लवकरच उमेदवारांच्या नावांची घोषणा होणार आहे.", "image": "/new-imgs/501949-eknath-shinde-group.avif" },
+        { "id": "pr-2", "date": "१२ मे २०२६", "category": "जाहीरनामा", "title": "बीएमसी जाहीरनामा प्रकाशित — पाणीपट्टी पाच वर्षे जैसे थे", "excerpt": "महायुतीच्या बीएमसी जाहीरनाम्यात पाच वर्षे पाणीपट्टी वाढणार नाही, महिलांना बेस्टमध्ये ५०% सवलत, आणि शाश्वत शहर विकासावर भर देण्यात आला आहे.", "image": "/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp" },
+        { "id": "pr-3", "date": "०५ मे २०२६", "category": "योजना", "title": "‘लाडकी बहीण योजना’ अनुदान वाढीची शिफारस", "excerpt": "महिला सक्षमीकरणाच्या दिशेने आणखी एक पाऊल — लाडकी बहीण योजनेच्या लाभार्थींना मासिक अनुदान वाढीची शिफारस उपमुख्यमंत्र्यांकडून.", "image": "/leaders/leader-2.jpg" },
+        { "id": "pr-4", "date": "२८ एप्रिल २०२६", "category": "आरोग्य", "title": "‘बाळासाहेब ठाकरे आपला दवाखाना’ — १००० नवीन केंद्रे", "excerpt": "मुंबई आणि ठाणे जिल्ह्यांत आणखी १००० नवीन ‘बाळासाहेब ठाकरे आपला दवाखाना’ केंद्रे सुरू करण्याची घोषणा. मोफत प्राथमिक आरोग्य सेवा सर्वसामान्यांपर्यंत पोहोचवण्याचा संकल्प.", "image": "/new-imgs/gettyimages-2256018761-612x612.jpg" },
+        { "id": "pr-5", "date": "२० एप्रिल २०२६", "category": "पायाभूत", "title": "मेट्रो-१४ प्रकल्पाच्या तिसऱ्या टप्प्याला मंजुरी", "excerpt": "मुंबई महानगर क्षेत्रासाठी मेट्रो-१४ प्रकल्पाच्या तिसऱ्या टप्प्याला मंत्रीमंडळाची मंजुरी — कनेक्टिविटी आणि वाहतूक सुधारणेच्या दिशेने मोठे पाऊल.", "image": "/img-1.webp" },
+        { "id": "pr-6", "date": "१४ एप्रिल २०२६", "category": "शिक्षण", "title": "ग्रामीण शाळांमध्ये डिजिटल वर्ग — पहिला टप्पा सुरू", "excerpt": "राज्यातील ग्रामीण भागातील ५००० शाळांमध्ये डिजिटल क्लासरूम सुविधा पुरवण्याच्या योजनेचा पहिला टप्पा यशस्वीरीत्या सुरू झाला आहे.", "image": "/new-imgs/G7-8skRaAAAQX6z.png" }
+      ]
+    },
+    "en": {
+      "eyebrow": "OFFICIAL STATEMENTS",
+      "title": "Press Releases",
+      "lede": "Official party statements and major announcements, in one place.",
+      "viewAllLabel": "VIEW ALL PRESS RELEASES",
+      "readMoreLabel": "READ MORE",
+      "items": [
+        { "id": "pr-1", "date": "May 18, 2026", "category": "MAHAYUTI", "title": "Mahayuti finalises seat-sharing for municipal elections", "excerpt": "The seat-sharing arrangement for the Mumbai, Thane and Pune municipal corporation elections has been finalised; candidate names will be announced shortly.", "image": "/new-imgs/501949-eknath-shinde-group.avif" },
+        { "id": "pr-2", "date": "May 12, 2026", "category": "MANIFESTO", "title": "BMC manifesto published — 5-year water charge freeze", "excerpt": "The Mahayuti BMC manifesto promises a five-year freeze on water charges, 50% bus-fare relief for women, and a renewed focus on sustainable city development.", "image": "/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp" },
+        { "id": "pr-3", "date": "May 05, 2026", "category": "WELFARE", "title": "Ladki Bahin Yojana — proposal to raise monthly grant", "excerpt": "Another step toward women's empowerment — the Deputy CM has recommended raising the monthly grant under the Ladki Bahin Yojana scheme.", "image": "/leaders/leader-2.jpg" },
+        { "id": "pr-4", "date": "Apr 28, 2026", "category": "HEALTH", "title": "‘Aapla Dawakhana’ — 1,000 new centres announced", "excerpt": "1,000 new ‘Balasaheb Thackeray Aapla Dawakhana’ centres will be opened across Mumbai and Thane districts, expanding free primary healthcare to the common citizen.", "image": "/new-imgs/gettyimages-2256018761-612x612.jpg" },
+        { "id": "pr-5", "date": "Apr 20, 2026", "category": "INFRA", "title": "Metro-14 Phase 3 cleared by cabinet", "excerpt": "Cabinet approval for the third phase of the Metro-14 project — a major step for connectivity and commuter movement across the MMR.", "image": "/img-1.webp" },
+        { "id": "pr-6", "date": "Apr 14, 2026", "category": "EDUCATION", "title": "Digital classrooms in rural schools — Phase 1 launched", "excerpt": "The first phase of the digital-classroom rollout to 5,000 rural schools across the state has been successfully launched.", "image": "/new-imgs/G7-8skRaAAAQX6z.png" }
+      ]
+    }
+  },
+
+  "interviews": {
+    "mr": {
+      "eyebrow": "मुलाखती व लेख",
+      "title": "नेतृत्वाचे विचार",
+      "lede": "महत्त्वाच्या प्रकाशनांमधील मुलाखती आणि वैचारिक लेख.",
+      "featured": {
+        "id": "int-featured",
+        "source": "लोकमत",
+        "date": "१५ मे २०२६",
+        "readTime": "८ मिनिटे वाचन",
+        "title": "‘८०% समाजकारण २०% राजकारण — हीच शिवसेनेची ओळख आहे’",
+        "summary": "उपमुख्यमंत्री एकनाथ शिंदे यांच्या विशेष मुलाखतीत त्यांनी बाळासाहेबांच्या तत्त्वज्ञानावर, ‘लाडकी बहीण योजने’च्या यशावर आणि आगामी निवडणुकांच्या रणनीतीवर सविस्तर भाष्य केलं.",
+        "image": "/new-imgs/06eknath-shinde.webp"
+      },
+      "articles": [
+        { "id": "int-1", "source": "महाराष्ट्र टाइम्स", "date": "१० मे २०२६", "title": "मुख्य नेते शिंदेंचे मुंबई महापालिकेसाठीचे चार सूत्री व्हिजन", "summary": "महानगर पाणीपुरवठा, स्वच्छता, झोपडपट्टी पुनर्वसन आणि शहरी हरितीकरण — चार स्तंभांवर आधारित विकास आराखडा.", "image": "/new-imgs/TNIE_import_2022_7_7_original_Eknath_Shinde_PTI1_Final.avif" },
+        { "id": "int-2", "source": "सकाळ", "date": "०२ मे २०२६", "title": "मराठी अस्मितेचा झेंडा — आजही तेवढाच महत्त्वाचा", "summary": "मराठी शाळा, मराठी पाट्या आणि मराठी रोजगार — या तीन मुद्द्यांवर शिवसेनेची भूमिका कायम.", "image": "/leaders/thackeray.jpg" },
+        { "id": "int-3", "source": "इंडियन एक्स्प्रेस", "date": "२५ एप्रिल २०२६", "title": "‘शासन आपल्या दारी’ — योजनेच्या यशामागचा अंतर्गत अहवाल", "summary": "महाराष्ट्रात राबवल्या जाणाऱ्या ‘शासन आपल्या दारी’ या उपक्रमाने आत्तापर्यंत १.८ कोटी लाभार्थींपर्यंत मदत पोहोचवली आहे.", "image": "/leaders/shinde.png" },
+        { "id": "int-4", "source": "लोकसत्ता", "date": "१८ एप्रिल २०२६", "title": "धर्मवीर आनंद दिघे यांचे ठाण्यातील वारसा", "summary": "‘धर्मवीर आनंद दिघे नागरी सहायता कक्ष’ कसा हजारो गरजूंसाठी आधार बनला आहे — एक संशोधनात्मक लेख.", "image": "/leaders/dharmaveer.jpg" }
+      ]
+    },
+    "en": {
+      "eyebrow": "INTERVIEWS & ARTICLES",
+      "title": "Voices of Leadership",
+      "lede": "Interviews and op-eds from leading publications.",
+      "featured": {
+        "id": "int-featured",
+        "source": "LOKMAT",
+        "date": "May 15, 2026",
+        "readTime": "8 MIN READ",
+        "title": "‘80% social work, 20% politics — that is the Shiv Sena identity’",
+        "summary": "In a wide-ranging exclusive, Deputy CM Eknath Shinde reflects on Balasaheb's philosophy, the success of the Ladki Bahin Yojana, and the strategy for the upcoming elections.",
+        "image": "/new-imgs/06eknath-shinde.webp"
+      },
+      "articles": [
+        { "id": "int-1", "source": "MAHARASHTRA TIMES", "date": "May 10, 2026", "title": "Chief Leader Shinde's four-pillar vision for BMC", "summary": "Water supply, sanitation, slum rehabilitation and urban greening — a development blueprint built on four pillars.", "image": "/new-imgs/TNIE_import_2022_7_7_original_Eknath_Shinde_PTI1_Final.avif" },
+        { "id": "int-2", "source": "SAKAL", "date": "May 02, 2026", "title": "The Marathi pride flag — as relevant as ever", "summary": "Marathi schools, Marathi signage, Marathi employment — the Shiv Sena's stance on these three issues remains firm.", "image": "/leaders/thackeray.jpg" },
+        { "id": "int-3", "source": "INDIAN EXPRESS", "date": "Apr 25, 2026", "title": "‘Shasan Aaplya Dari’ — the internal report behind a hit scheme", "summary": "The ‘Government at Your Doorstep’ initiative has reached over 1.8 crore beneficiaries across Maharashtra to date.", "image": "/leaders/shinde.png" },
+        { "id": "int-4", "source": "LOKSATTA", "date": "Apr 18, 2026", "title": "Dharmaveer Anand Dighe's legacy in Thane", "summary": "How the ‘Dharmaveer Anand Dighe Civic Assistance Cell’ has become a lifeline for thousands — an investigative feature.", "image": "/leaders/dharmaveer.jpg" }
+      ]
+    }
+  },
+
+  "speeches": {
+    "mr": {
+      "eyebrow": "मैदानावरून",
+      "title": "भाषणे",
+      "lede": "ऐतिहासिक भाषणांच्या क्षणांचा संग्रह — प्रत्येक शब्द, प्रत्येक हुंकार.",
+      "items": [
+        { "id": "sp-1", "date": "१४ मे २०२६", "event": "शिवाजी पार्क, दादर",          "duration": "४२:१८", "title": "महायुती बीएमसी प्रचाराचा शुभारंभ",         "description": "‘मुंबई आमची आहे आणि आमचीच राहणार’ — मुख्य नेते एकनाथ शिंदे यांच्या तेजस्वी भाषणाने प्रचाराला सुरुवात.", "thumbnail": "/new-imgs/501949-eknath-shinde-group.avif",                                "videoId": "dQw4w9WgXcQ" },
+        { "id": "sp-2", "date": "०१ मे २०२६", "event": "मंत्रालय, मुंबई",            "duration": "२८:४५", "title": "महाराष्ट्र दिन — महाराष्ट्र धर्माचा संदेश", "description": "महाराष्ट्र दिनानिमित्त मंत्रालयासमोर झालेल्या सोहळ्यात मराठी अस्मिता आणि महाराष्ट्र धर्माच्या वारशावर भर.",      "thumbnail": "/new-imgs/TNIE_import_2022_7_7_original_Eknath_Shinde_PTI1_Final.avif", "videoId": "dQw4w9WgXcQ" },
+        { "id": "sp-3", "date": "१७ एप्रिल २०२६", "event": "BKC, मुंबई",              "duration": "३६:१२", "title": "‘शिव उद्योग सेना’चा रोडमॅप",                "description": "मराठी तरुणांना उद्योजकतेकडे नेण्यासाठी ‘शिव उद्योग सेना’च्या नवीन उपक्रमांची घोषणा.",                          "thumbnail": "/new-imgs/06eknath-shinde.webp",                                       "videoId": "dQw4w9WgXcQ" }
+      ]
+    },
+    "en": {
+      "eyebrow": "FROM THE PODIUM",
+      "title": "Speeches",
+      "lede": "A collection of historic moments — every word, every roar.",
+      "items": [
+        { "id": "sp-1", "date": "May 14, 2026", "event": "Shivaji Park, Dadar", "duration": "42:18", "title": "Mahayuti BMC campaign launch",            "description": "‘Mumbai is ours and will always remain ours’ — Chief Leader Eknath Shinde kicks off the campaign with a thunderous address.", "thumbnail": "/new-imgs/501949-eknath-shinde-group.avif",                                "videoId": "dQw4w9WgXcQ" },
+        { "id": "sp-2", "date": "May 01, 2026", "event": "Mantralaya, Mumbai",  "duration": "28:45", "title": "Maharashtra Day — the message of Maharashtra Dharma", "description": "At the Mantralaya gathering, an emphasis on Marathi identity and the inheritance of Maharashtra Dharma.",        "thumbnail": "/new-imgs/TNIE_import_2022_7_7_original_Eknath_Shinde_PTI1_Final.avif", "videoId": "dQw4w9WgXcQ" },
+        { "id": "sp-3", "date": "Apr 17, 2026", "event": "BKC, Mumbai",         "duration": "36:12", "title": "The Shiv Udyog Sena roadmap",             "description": "New ‘Shiv Udyog Sena’ initiatives to channel Marathi youth toward entrepreneurship.",                                  "thumbnail": "/new-imgs/06eknath-shinde.webp",                                       "videoId": "dQw4w9WgXcQ" }
+      ]
+    }
+  },
+
+  "videos": {
+    "mr": {
+      "eyebrow": "व्हिडीओ गॅलरी",
+      "title": "चित्रफिती",
+      "lede": "पक्षाच्या ऐतिहासिक क्षणांच्या चित्रफिती.",
+      "items": [
+        { "id": "vid-1", "title": "महायुती बीएमसी प्रचार शुभारंभ — संपूर्ण भाषण", "date": "१४ मे २०२६", "duration": "४२:१८", "thumbnail": "/new-imgs/501949-eknath-shinde-group.avif", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-2", "title": "‘लाडकी बहीण’ लाभार्थींशी संवाद", "date": "०७ मे २०२६", "duration": "१८:४५", "thumbnail": "/leaders/leader-2.jpg", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-3", "title": "महाराष्ट्र दिन सोहळा — संपूर्ण कव्हरेज", "date": "०१ मे २०२६", "duration": "१:०५:३२", "thumbnail": "/img-2.webp", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-4", "title": "‘शासन आपल्या दारी’ — कोल्हापूर शिबीर", "date": "२० एप्रिल २०२६", "duration": "२६:०७", "thumbnail": "/new-imgs/06eknath-shinde.webp", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-5", "title": "धर्मवीर स्मृति सोहळा — ठाणे", "date": "०२ एप्रिल २०२६", "duration": "३२:१४", "thumbnail": "/leaders/dharmaveer.jpg", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-6", "title": "विदर्भ शेतकरी संवाद — वर्धा", "date": "१४ मार्च २०२६", "duration": "२८:५२", "thumbnail": "/new-imgs/images.jpg", "videoId": "dQw4w9WgXcQ" }
+      ]
+    },
+    "en": {
+      "eyebrow": "VIDEO GALLERY",
+      "title": "Videos",
+      "lede": "Visual records of the party's defining moments.",
+      "items": [
+        { "id": "vid-1", "title": "Mahayuti BMC campaign launch — full speech", "date": "May 14, 2026", "duration": "42:18", "thumbnail": "/new-imgs/501949-eknath-shinde-group.avif", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-2", "title": "‘Ladki Bahin’ — conversation with beneficiaries", "date": "May 07, 2026", "duration": "18:45", "thumbnail": "/leaders/leader-2.jpg", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-3", "title": "Maharashtra Day Ceremony — full coverage", "date": "May 01, 2026", "duration": "1:05:32", "thumbnail": "/img-2.webp", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-4", "title": "‘Shasan Aaplya Dari’ — Kolhapur camp", "date": "Apr 20, 2026", "duration": "26:07", "thumbnail": "/new-imgs/06eknath-shinde.webp", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-5", "title": "Dharmaveer memorial ceremony — Thane", "date": "Apr 02, 2026", "duration": "32:14", "thumbnail": "/leaders/dharmaveer.jpg", "videoId": "dQw4w9WgXcQ" },
+        { "id": "vid-6", "title": "Vidarbha farmer dialogue — Wardha", "date": "Mar 14, 2026", "duration": "28:52", "thumbnail": "/new-imgs/images.jpg", "videoId": "dQw4w9WgXcQ" }
+      ]
+    }
+  },
+
+  "photos": {
+    "mr": {
+      "eyebrow": "छायाचित्र संग्रह",
+      "title": "फोटो गॅलरी",
+      "lede": "मैदान, सभा आणि क्षणचित्रांच्या छायांकनात कैद झालेला शिवसेना परिवार.",
+      "items": [
+        { "id": "ph-1",  "title": "शिवाजी पार्क सभा",         "src": "/new-imgs/501949-eknath-shinde-group.avif" },
+        { "id": "ph-2",  "title": "महायुती बैठक",             "src": "/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp" },
+        { "id": "ph-3",  "title": "महाराष्ट्र दिन सोहळा",     "src": "/img-2.webp" },
+        { "id": "ph-4",  "title": "लाडकी बहीण कार्यक्रम",     "src": "/leaders/leader-2.jpg" },
+        { "id": "ph-5",  "title": "ठाणे जिल्हा सभा",          "src": "/leaders/leader-1.jpg" },
+        { "id": "ph-6",  "title": "BMC पत्रकार परिषद",        "src": "/new-imgs/TNIE_import_2022_7_7_original_Eknath_Shinde_PTI1_Final.avif" },
+        { "id": "ph-7",  "title": "धर्मवीर स्मृति सोहळा",     "src": "/leaders/dharmaveer.jpg" },
+        { "id": "ph-8",  "title": "वर्धा जिल्हा रॅली",         "src": "/img-1.jpg" },
+        { "id": "ph-9",  "title": "विधानभवन समारोप",         "src": "/new-imgs/06eknath-shinde.webp" },
+        { "id": "ph-10", "title": "BKC उद्योजकता परिषद",      "src": "/new-imgs/gettyimages-2256018761-612x612.jpg" },
+        { "id": "ph-11", "title": "मराठी अस्मिता कार्यक्रम",  "src": "/leaders/thackeray.jpg" },
+        { "id": "ph-12", "title": "शिवसेना कार्यकर्ता मेळावा", "src": "/new-imgs/G7-8skRaAAAQX6z.png" }
+      ]
+    },
+    "en": {
+      "eyebrow": "PHOTO ARCHIVE",
+      "title": "Photo Gallery",
+      "lede": "The Shiv Sena parivar, captured on the ground, in meetings, and in defining moments.",
+      "items": [
+        { "id": "ph-1",  "title": "Shivaji Park rally",            "src": "/new-imgs/501949-eknath-shinde-group.avif" },
+        { "id": "ph-2",  "title": "Mahayuti meeting",              "src": "/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp" },
+        { "id": "ph-3",  "title": "Maharashtra Day ceremony",      "src": "/img-2.webp" },
+        { "id": "ph-4",  "title": "Ladki Bahin event",             "src": "/leaders/leader-2.jpg" },
+        { "id": "ph-5",  "title": "Thane district meeting",        "src": "/leaders/leader-1.jpg" },
+        { "id": "ph-6",  "title": "BMC press conference",          "src": "/new-imgs/TNIE_import_2022_7_7_original_Eknath_Shinde_PTI1_Final.avif" },
+        { "id": "ph-7",  "title": "Dharmaveer memorial",           "src": "/leaders/dharmaveer.jpg" },
+        { "id": "ph-8",  "title": "Wardha district rally",         "src": "/img-1.jpg" },
+        { "id": "ph-9",  "title": "Vidhan Bhavan closing",         "src": "/new-imgs/06eknath-shinde.webp" },
+        { "id": "ph-10", "title": "BKC Entrepreneurship Summit",   "src": "/new-imgs/gettyimages-2256018761-612x612.jpg" },
+        { "id": "ph-11", "title": "Marathi pride event",           "src": "/leaders/thackeray.jpg" },
+        { "id": "ph-12", "title": "Karyakarta convention",         "src": "/new-imgs/G7-8skRaAAAQX6z.png" }
+      ]
+    }
+  }
+}

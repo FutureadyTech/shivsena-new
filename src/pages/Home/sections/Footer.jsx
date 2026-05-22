@@ -31,15 +31,6 @@ export default function Footer() {
               </div>
             </Link>
             <p className="footer__about">{t.about}</p>
-            <div className="footer__emblem" aria-hidden="true">
-              <svg viewBox="0 0 64 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M 8 12 Q 32 -4 56 12" />
-                <line x1="8" y1="12" x2="56" y2="12" />
-                <line x1="20" y1="12" x2="60" y2="12" strokeWidth="1.8" />
-                <polygon points="60,12 56,9 56,15" fill="currentColor" />
-                <polyline points="22 12 25 9 25 15 22 12" fill="currentColor" />
-              </svg>
-            </div>
           </div>
 
           {/* Link columns */}

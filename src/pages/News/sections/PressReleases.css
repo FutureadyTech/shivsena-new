@@ -1,0 +1,254 @@
+/* ═══════════════════════════════════════════════════════════════
+   PRESS RELEASES — Cream editorial grid
+═══════════════════════════════════════════════════════════════ */
+.pr-section {
+  position: relative;
+  padding: 140px 0 160px;
+  background: var(--paper, #FAF5EC);
+  overflow: hidden;
+}
+
+.pr-section::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 40% 30% at 0% 0%,     rgba(255, 178, 107, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 100% 100%, rgba(196, 77, 14, 0.06) 0%, transparent 60%);
+}
+
+.pr-section__inner {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* Header */
+.pr-section__header {
+  max-width: 720px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.pr-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: var(--saffron-on-light, #B8390A);
+  font-weight: 700;
+}
+
+.pr-section__eyebrow-line {
+  width: 40px; height: 1px;
+  background: var(--saffron-on-light, #B8390A);
+}
+
+.pr-section__title {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: #fa6919;
+  margin: 0 0 20px;
+  letter-spacing: -0.015em;
+}
+
+.pr-section__lede {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  color: rgba(26, 20, 16, 0.7);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Grid */
+.pr-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.pr-card {
+  position: relative;
+  background: #FFFCF5;
+  border: 1px solid rgba(26, 20, 16, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 10px 28px rgba(133, 65, 0, 0.07),
+    0 2px 6px rgba(133, 65, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+}
+
+.pr-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196, 77, 14, 0.22);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 22px 50px rgba(133, 65, 0, 0.14),
+    0 4px 14px rgba(133, 65, 0, 0.08);
+}
+
+.pr-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.pr-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.pr-card:hover .pr-card__img { transform: scale(1.06); }
+
+.pr-card__category {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--saffron, #C44D0E);
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(196, 77, 14, 0.35);
+}
+
+.pr-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px 24px;
+}
+
+.pr-card__date {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(26, 20, 16, 0.5);
+  margin-bottom: 10px;
+}
+
+.pr-card__title {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: var(--ink, #1A1410);
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+.pr-card__excerpt {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.92rem;
+  color: rgba(26, 20, 16, 0.68);
+  line-height: 1.7;
+  margin: 0 0 18px;
+  flex: 1;
+}
+
+.pr-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--saffron, #C44D0E);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.pr-card__cta svg { transition: transform 0.3s ease; }
+.pr-card:hover .pr-card__cta { gap: 12px; }
+.pr-card:hover .pr-card__cta svg { transform: translateX(4px); }
+
+/* View all */
+.pr-section__viewall {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.pr-section__viewall-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--saffron, #C44D0E);
+  background: transparent;
+  border: 1.5px solid var(--saffron, #C44D0E);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, gap 0.3s ease,
+              box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pr-section__viewall-btn:hover {
+  background: var(--saffron, #C44D0E);
+  color: #fff;
+  gap: 14px;
+  box-shadow: 0 14px 28px rgba(196, 77, 14, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Reveal */
+.pr-card.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s ease var(--reveal-delay, 0s),
+              transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s);
+}
+.pr-card.is-revealed { opacity: 1; transform: translateY(0); }
+
+.pr-section__header.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.pr-section__header.is-revealed { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pr-section__grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+}
+@media (max-width: 640px) {
+  .pr-section { padding: 90px 0 100px; }
+  .pr-section__inner { padding: 0 20px; }
+  .pr-section__header { margin-bottom: 44px; }
+  .pr-section__grid { grid-template-columns: 1fr; gap: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pr-card.reveal,
+  .pr-section__header.reveal { opacity: 1; transform: none; transition: none; }
+  .pr-card,
+  .pr-card__img,
+  .pr-section__viewall-btn { transition: none; }
+}

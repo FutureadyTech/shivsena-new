@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { MH_PATHS } from './maharashtraPaths';
 import { useLanguage } from '../../../i18n/LanguageContext';
 import './RegionExplorer.css';
@@ -178,19 +178,48 @@ const REGION_LABELS = {
 };
 
 const UI = {
-  mr: { eyebrow: 'महाराष्ट्रभर', title: 'प्रादेशिक नेतृत्व', regionLabel: 'प्रदेश', hoverHint: 'नकाशावर प्रदेश निवडा' },
-  en: { eyebrow: 'ACROSS MAHARASHTRA', title: 'Regional Leadership', regionLabel: 'Region', hoverHint: 'Select a region on the map' },
+  mr: {
+    eyebrow: 'महाराष्ट्रभर',
+    title: 'प्रादेशिक नेतृत्व',
+    regionLabel: 'प्रदेश',
+    hoverHint: 'नकाशावर प्रदेश निवडा',
+    searchPlaceholder: 'नाव, पद किंवा मतदारसंघ शोधा...',
+    noResults: 'कोणतेही नेते आढळले नाहीत',
+    clearSearch: 'शोध साफ करा',
+  },
+  en: {
+    eyebrow: 'ACROSS MAHARASHTRA',
+    title: 'Regional Leadership',
+    regionLabel: 'Region',
+    hoverHint: 'Select a region on the map',
+    searchPlaceholder: 'Search by name, role, or constituency...',
+    noResults: 'No leaders match your search',
+    clearSearch: 'Clear search',
+  },
 };
 
 export default function RegionExplorer() {
-  const { language } = useLanguage();
+  const { lang: language } = useLanguage();
   const [activeRegion, setActiveRegion] = useState('konkan');
   const [hoverRegion, setHoverRegion]   = useState(null);
+  const [searchQuery, setSearchQuery]   = useState('');
 
   const lang          = (language === 'mr') ? 'mr' : 'en';
   const displayRegion = hoverRegion || activeRegion;
   const regionData    = MEMBERS[displayRegion]?.[lang] || MEMBERS.konkan.en;
   const ui            = UI[lang] || UI.en;
+
+  useEffect(() => { setSearchQuery(''); }, [activeRegion, lang]);
+
+  const filteredMembers = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return regionData.members;
+    return regionData.members.filter(m =>
+      m.name.toLowerCase().includes(q) ||
+      m.role.toLowerCase().includes(q) ||
+      m.constituency.toLowerCase().includes(q)
+    );
+  }, [regionData.members, searchQuery]);
 
   const getRegion = (pcId) => PC_TO_REGION[pcId];
 
@@ -277,20 +306,58 @@ export default function RegionExplorer() {
               <div className="region-panel__divider" />
             </div>
 
+            <div className="region-panel__search">
+              <svg
+                className="region-panel__search-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+              <input
+                type="text"
+                className="region-panel__search-input"
+                placeholder={ui.searchPlaceholder}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label={ui.searchPlaceholder}
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  className="region-panel__search-clear"
+                  onClick={() => setSearchQuery('')}
+                  aria-label={ui.clearSearch}
+                >
+                  ×
+                </button>
+              )}
+            </div>
+
             <div className="region-panel__members">
-              {regionData.members.map((m, i) => (
-                <div key={i} className="region-member" style={{ animationDelay: `${i * 60}ms` }}>
-                  <div className="region-member__avatar">
-                    {m.initials}
+              {filteredMembers.length > 0 ? (
+                filteredMembers.map((m, i) => (
+                  <div key={`${displayRegion}-${m.name}-${i}`} className="region-member" style={{ animationDelay: `${i * 60}ms` }}>
+                    <div className="region-member__avatar">
+                      {m.initials}
+                    </div>
+                    <div className="region-member__info">
+                      <p className="region-member__name">{m.name}</p>
+                      <p className="region-member__role">{m.role}</p>
+                      <p className="region-member__constituency">{m.constituency}</p>
+                    </div>
+                    <div className="region-member__arrow">→</div>
                   </div>
-                  <div className="region-member__info">
-                    <p className="region-member__name">{m.name}</p>
-                    <p className="region-member__role">{m.role}</p>
-                    <p className="region-member__constituency">{m.constituency}</p>
-                  </div>
-                  <div className="region-member__arrow">→</div>
-                </div>
-              ))}
+                ))
+              ) : (
+                <p className="region-panel__no-results">{ui.noResults}</p>
+              )}
             </div>
 
             <p className="region-panel__hint">{ui.hoverHint}</p>

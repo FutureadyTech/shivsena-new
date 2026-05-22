@@ -61,11 +61,13 @@ export default function JoinCTA() {
           <p className="join__lede">{t.lede}</p>
         </div>
 
-        <form ref={formRef} className="join__form reveal" onSubmit={onSubmit}>
-          {status === 'success' ? (
+        {status === 'success' ? (
+          <div ref={formRef} className="join__form reveal">
             <p className="join__success">{t.successMessage}</p>
-          ) : (
-            <>
+          </div>
+        ) : (
+          <>
+            <form ref={formRef} className="join__form reveal" onSubmit={onSubmit}>
               <input
                 type="email"
                 className="join__email"
@@ -78,10 +80,10 @@ export default function JoinCTA() {
               <button type="submit" className="join__submit" data-cursor="link">
                 {t.submitLabel}
               </button>
-              <p className="join__privacy">{t.privacyNote}</p>
-            </>
-          )}
-        </form>
+            </form>
+            <p className="join__privacy">{t.privacyNote}</p>
+          </>
+        )}
 
         <div ref={benefitsRef} className="join__benefits reveal">
           {t.benefits?.map((benefit) => (

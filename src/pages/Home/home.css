@@ -385,32 +385,65 @@ body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
   animation: fadeUp 1s ease 0.8s both;
 }
 
-/* ── CTA BUTTON ── */
+/* ── CTAs WRAPPER ── */
+
+.hero-ctas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  animation: fadeUp 1s ease 1s both;
+}
+
+/* ── CTA BUTTON — matches WelcomeBanner enter button hover ── */
 
 .hero-cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 2.2rem;
+  gap: 14px;
+  padding: 14px 32px;
   background: transparent;
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
   color: #ffffff;
   font-family: 'Noto Sans Devanagari', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.35s ease;
-  animation: fadeUp 1s ease 1s both;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hero-cta-btn svg {
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .hero-cta-btn:hover {
-  background: rgba(255, 215, 0, 0.1);
-  border-color: #FFD700;
-  color: #FFD700;
-  box-shadow: 0 0 28px rgba(255, 215, 0, 0.3);
-  gap: 0.9rem;
+  background: rgba(255, 107, 26, 0.95);
+  border-color: rgba(255, 107, 26, 0.95);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(255, 107, 26, 0.4);
+  text-shadow: none;
+}
+
+.hero-cta-btn:hover svg {
+  transform: translateX(5px);
+}
+
+.hero-cta-btn:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta-btn { transition: opacity 0.3s ease, background 0.3s ease; }
+  .hero-cta-btn:hover,
+  .hero-cta-btn:hover svg { transform: none; }
 }
 
 /* ── PILLARSTRIP WRAPPER ── */
