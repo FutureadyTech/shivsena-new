@@ -3,33 +3,14 @@ import { useContent } from '../../../content/_shared/useContent.js';
 import homeContent from '../../../content/home.json';
 import './VisionIdeology.css';
 
+/* Pillar icons — Flaticon assets dropped into /public/icons/.
+   governance.png  → Freepik "Government" (Flaticon id 1582292)
+   unity.png       → Freepik "Social justice" (Flaticon id 10554213)
+   progress.png    → Freepik "Career development" (Flaticon id 17652288) */
 const PILLAR_ICONS = {
-  governance: (
-    <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 52 L55 52" />
-      <path d="M11 52 L11 24 M30 52 L30 24 M49 52 L49 24" />
-      <path d="M5 24 L55 24" />
-      <path d="M30 8 L7 24 L53 24 Z" />
-      <path d="M11 24 L11 21 M30 24 L30 21 M49 24 L49 21" strokeWidth="2.2" />
-    </svg>
-  ),
-  unity: (
-    <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="15" cy="20" r="5.5" />
-      <circle cx="30" cy="14" r="5.5" />
-      <circle cx="45" cy="20" r="5.5" />
-      <path d="M5 48 Q15 30 26 38" />
-      <path d="M22 38 Q30 28 38 38" />
-      <path d="M34 38 Q45 30 55 48" />
-    </svg>
-  ),
-  progress: (
-    <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 50 L20 35 L30 42 L48 18" />
-      <polyline points="40 18 48 18 48 26" />
-      <path d="M5 54 L55 54" strokeWidth="1" opacity="0.4" />
-    </svg>
-  ),
+  governance: <img src="/icons/governance.png" alt="" className="vision-card__icon-img" />,
+  unity:      <img src="/icons/unity.png"      alt="" className="vision-card__icon-img" />,
+  progress:   <img src="/icons/progress.png"   alt="" className="vision-card__icon-img" />,
 };
 
 export default function VisionIdeology() {
@@ -66,8 +47,9 @@ function Card({ principle, index }) {
       className="vision-card reveal"
       style={{ '--reveal-delay': `${index * 0.12}s` }}
     >
-      <div className="vision-card__number">{principle.number}</div>
-      <div className="vision-card__icon">{PILLAR_ICONS[principle.id] ?? PILLAR_ICONS.progress}</div>
+      <div className="vision-card__icon" aria-hidden="true">
+        {PILLAR_ICONS[principle.id] ?? PILLAR_ICONS.progress}
+      </div>
       <h3 className="vision-card__title">{principle.title}</h3>
       <p className="vision-card__body">{principle.body}</p>
       <div className="vision-card__corner" aria-hidden="true"></div>

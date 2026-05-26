@@ -4,23 +4,78 @@ import { useContent } from '../../../content/_shared/useContent.js';
 import aboutContent from '../../../content/about.json';
 import './AffiliatedOrgs.css';
 
-const ORG_ICONS = {
-  bks:       <PathIcon><path d="M16 4 L4 10 V20 L16 26 L28 20 V10 Z" /><path d="M4 10 L16 16 L28 10" /><path d="M16 16 V26" /></PathIcon>,
-  sls:       <PathIcon><circle cx="16" cy="11" r="5" /><path d="M5 27 Q5 18 16 18 Q27 18 27 27" /></PathIcon>,
-  yuva:      <PathIcon><path d="M16 5 L19 12 L26 12 L20 17 L22 25 L16 20 L10 25 L12 17 L6 12 L13 12 Z" /></PathIcon>,
-  bvs:       <PathIcon><path d="M3 11 L16 5 L29 11 L16 17 Z" /><path d="M8 13 V21 Q16 26 24 21 V13" /><line x1="29" y1="11" x2="29" y2="20" /></PathIcon>,
-  mahila:    <PathIcon><circle cx="16" cy="11" r="6" /><path d="M16 17 V27" /><path d="M10 22 H22" /></PathIcon>,
-  udyog:     <PathIcon><rect x="4" y="11" width="24" height="16" rx="2" /><path d="M11 11 V7 Q11 5 13 5 H19 Q21 5 21 7 V11" /><line x1="4" y1="18" x2="28" y2="18" /></PathIcon>,
-  shikshak:  <PathIcon><path d="M3 11 L16 5 L29 11 L16 17 Z" /><path d="M22 14 V22" /><circle cx="22" cy="23" r="1.5" /></PathIcon>,
-  chitrapat: <PathIcon><rect x="4" y="7" width="24" height="18" rx="1.5" /><line x1="4" y1="12" x2="28" y2="12" /><line x1="4" y1="20" x2="28" y2="20" /><circle cx="8" cy="9.5" r="0.8" /><circle cx="12" cy="9.5" r="0.8" /><circle cx="20" cy="9.5" r="0.8" /><circle cx="24" cy="9.5" r="0.8" /></PathIcon>,
-  arogya:    <PathIcon><path d="M16 4 Q9 4 9 11 Q9 18 16 28 Q23 18 23 11 Q23 4 16 4 Z" /><line x1="16" y1="10" x2="16" y2="18" /><line x1="12" y1="14" x2="20" y2="14" /></PathIcon>,
+/* Party-wide socials used as the default for every org card. If an org
+   later gets its own handles in about.json (`org.socials`), those override. */
+const DEFAULT_SOCIALS = {
+  facebook:  'https://www.facebook.com/Shivsenaofc',
+  twitter:   'https://x.com/Shivsenaofc',
+  instagram: 'https://www.instagram.com/shivsenaofc/',
 };
 
-function PathIcon({ children }) {
+const SOCIAL_META = [
+  {
+    id: 'facebook',
+    label: 'Facebook',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M22 12a10 10 0 1 0-11.56 9.88V14.9H7.9V12h2.54V9.8c0-2.5 1.5-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.27c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.9h-2.33v6.98A10 10 0 0 0 22 12z" />
+      </svg>
+    ),
+  },
+  {
+    id: 'twitter',
+    label: 'X / Twitter',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.79l-5.31-6.94L4.78 22H1.52l8.02-9.17L1 2h6.95l4.8 6.34L18.244 2zm-2.38 18h1.88L7.27 4H5.26l10.6 16z" />
+      </svg>
+    ),
+  },
+  {
+    id: 'instagram',
+    label: 'Instagram',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+];
+
+/* Flaticon PNG assets dropped into /public/icons/orgs/.
+   Picked from outline/lineal styles so they keep their detail
+   after the brand-saffron monochrome filter is applied.
+   bks       — Labour Day             (Flaticon id 4336740)  [user-specified]
+   sls       — Employment             (id 18238810)          [user-specified]
+   yuva      — Youth                  (id 1312651)           [user-specified]
+   bvs       — Graduation cap outline (id 43805)
+   mahila    — Businesswoman          (id 563230)            [user-specified]
+   udyog     — Business idea          (id 8660446)           [user-specified]
+   shikshak  — Teacher                (id 9721094)           [user-specified]
+   chitrapat — Video / clapperboard   (id 1179120)           [user-specified]
+   arogya    — Healthcare             (id 4003747)           [user-specified] */
+const ORG_ICONS = {
+  bks:       <OrgIcon name="bks" />,
+  sls:       <OrgIcon name="sls" />,
+  yuva:      <OrgIcon name="yuva" />,
+  bvs:       <OrgIcon name="bvs" />,
+  mahila:    <OrgIcon name="mahila" />,
+  udyog:     <OrgIcon name="udyog" />,
+  shikshak:  <OrgIcon name="shikshak" />,
+  chitrapat: <OrgIcon name="chitrapat" />,
+  arogya:    <OrgIcon name="arogya" />,
+};
+
+function OrgIcon({ name }) {
   return (
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      {children}
-    </svg>
+    <img
+      src={`/icons/orgs/${name}.png`}
+      alt=""
+      className="org-card__icon-img"
+      loading="lazy"
+    />
   );
 }
 
@@ -68,25 +123,63 @@ function OrgCard({ org, index, ctaLabel }) {
       className="org-card reveal"
       style={{ '--reveal-delay': `${0.05 + (index % 3) * 0.08}s` }}
     >
-      <div className="org-card__head">
-        <div className="org-card__icon" aria-hidden="true">{icon}</div>
-        <span className="org-card__tag">{org.tag}</span>
+      {/* Saffron-tinted icon badge */}
+      <div className="org-card__icon" aria-hidden="true">{icon}</div>
+
+      {/* Content */}
+      <span className="org-card__tag">{org.tag}</span>
+      <h3 className="org-card__name">{org.name}</h3>
+      <p className="org-card__desc">{org.body}</p>
+
+      <span className="org-card__divider" aria-hidden="true" />
+
+      <div className="org-card__footer">
+        <Link
+          to={`/affiliated/${org.id}`}
+          className="org-card__cta"
+          data-cursor="link"
+        >
+          <span>{ctaLabel}</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </Link>
+
+        <OrgSocials socials={org.socials} orgName={org.name} />
       </div>
 
-      <h3 className="org-card__name">{org.name}</h3>
-      <p className="org-card__body">{org.body}</p>
-
-      <Link
-        to={`/affiliated/${org.id}`}
-        className="org-card__join"
-        data-cursor="link"
-      >
-        <span>{ctaLabel}</span>
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <line x1="5" y1="12" x2="19" y2="12" />
-          <polyline points="12 5 19 12 12 19" />
-        </svg>
-      </Link>
+      {/* Left accent rail that fills in on hover */}
+      <span className="org-card__rail" aria-hidden="true" />
     </article>
+  );
+}
+
+/* ── Social row beside the CTA ────────────────────────────
+   Reads URLs from the org's own `socials` field first; falls
+   back to the party-wide DEFAULT_SOCIALS when missing. */
+function OrgSocials({ socials, orgName }) {
+  const resolved = { ...DEFAULT_SOCIALS, ...(socials || {}) };
+  return (
+    <div className="org-card__socials" aria-label={`${orgName} social profiles`}>
+      {SOCIAL_META.map((s) => {
+        const href = resolved[s.id];
+        if (!href || href === '#') return null;
+        return (
+          <a
+            key={s.id}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`org-card__social org-card__social--${s.id}`}
+            aria-label={s.label}
+            title={s.label}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {s.icon}
+          </a>
+        );
+      })}
+    </div>
   );
 }

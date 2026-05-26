@@ -83,6 +83,19 @@
   gap: 28px;
 }
 
+/* The inner <a> tag — kill underline, inherit colour, take full size */
+.news-feature__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* News-side as an <a> needs the same reset */
+.news-side {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    FEATURED ARTICLE
 ═══════════════════════════════════════════════════════════════ */
@@ -107,22 +120,20 @@
 
 .news-feature__media {
   position: relative;
-  aspect-ratio: 21 / 9;
-  max-height: 280px;
+  width: 100%;
   overflow: hidden;
+  background-color: var(--paper-deep);
 }
 
 .news-feature__image {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--paper-deep);
+  display: block;
+  width: 100%;
+  height: 300px;
   transition: transform 1.2s var(--ease-out-expo);
+  object-fit: cover;
 }
 
-.news-feature:hover .news-feature__image { transform: scale(1.05); }
+.news-feature:hover .news-feature__image { transform: scale(1.04); }
 
 .news-feature__badge {
   position: absolute;

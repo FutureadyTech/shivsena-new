@@ -1,12 +1,19 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { MH_PATHS } from '../../Home/sections/maharashtraPaths.js';
 import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
 import { useLanguage } from '../../../i18n/LanguageContext.jsx';
 import leadershipContent from '../../../content/leadership.json';
+import mlasByDistrict from '../../../content/mlas-by-district.json';
+import {
+  DISTRICTS,
+  DIVISION_LABELS,
+  ALL_DISTRICTS,
+} from '../../../config/districts.js';
+import { PC_TO_DISTRICT } from '../../../config/pcToDistrict.js';
 import './RegionMap.css';
 
-/* Same region → PC mapping as RegionExplorer */
+/* Per-division colour used to tint the PC paths on the map */
 const REGION_COLORS = {
   konkan:     '#C44D0E',
   pune:       '#D4602A',
@@ -16,31 +23,40 @@ const REGION_COLORS = {
   vidarbha:   '#8C2200',
 };
 
-const REGION_MAP = {
-  konkan:     ['PC247','PC248','PC249','PC250','PC251','PC252','PC245','PC246','PC255','PC256','PC257','PC258','PC268','PC269','PC270'],
-  pune:       ['PC243','PC244','PC259','PC260','PC261','PC271'],
-  nashik:     ['PC224','PC225','PC226','PC227','PC241','PC242'],
-  marathwada: ['PC228','PC229','PC230','PC238','PC239','PC240','PC262','PC263','PC264','PC265','PC266','PC267'],
-  amravati:   ['PC231','PC237'],
-  vidarbha:   ['PC233','PC234','PC235','PC236'],
-};
+/* Build the district roster once — slug + bilingual meta + MLA count */
+function buildDistricts() {
+  return ALL_DISTRICTS.map((slug) => {
+    const meta = DISTRICTS[slug];
+    const mlaCount = (mlasByDistrict[slug]?.mla || []).length;
+    return {
+      slug,
+      meta,
+      division: meta.division,
+      mlaCount,
+    };
+  });
+}
 
-const PC_TO_REGION = {};
-Object.entries(REGION_MAP).forEach(([region, pcs]) => {
-  pcs.forEach((pc) => { PC_TO_REGION[pc] = region; });
-});
-
-export default function RegionMap({ activeRegion, onSelectRegion }) {
+export default function RegionMap({ activeDistrict, onSelectDistrict }) {
   const { lang: language } = useLanguage();
   const lang = language === 'mr' ? 'mr' : 'en';
   const t = useContent(leadershipContent.map);
-  const regionNames = leadershipContent.regions[lang] || leadershipContent.regions.mr;
   const headerRef = useScrollReveal(0.2);
 
-  const [hoverRegion, setHoverRegion] = useState(null);
-  const displayRegion = hoverRegion || activeRegion;
+  const [query, setQuery]     = useState('');
+  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, label: '' });
 
-  const getRegion = (pcId) => PC_TO_REGION[pcId];
+  const districts = useMemo(buildDistricts, []);
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return districts;
+    return districts.filter((d) =>
+      (d.meta.mr || '').toLowerCase().includes(q) ||
+      (d.meta.en || '').toLowerCase().includes(q) ||
+      d.slug.toLowerCase().includes(q)
+    );
+  }, [districts, query]);
 
   return (
     <section className="rmap">
@@ -63,16 +79,19 @@ export default function RegionMap({ activeRegion, onSelectRegion }) {
               viewBox="0 0 1126.9 940.43"
               xmlns="http://www.w3.org/2000/svg"
               className="rmap__svg"
-              aria-label="Maharashtra map — click a region to view leadership"
+              aria-label="Maharashtra map"
             >
               {MH_PATHS.filter((p) => p.cls === 'cls-2').map(({ id, d }) => (
                 <path key={id} d={d} className="mh-outline" />
               ))}
               {MH_PATHS.filter((p) => p.cls === 'cls-1').map(({ id, d }) => {
-                const region = getRegion(id);
-                if (!region) return null;
-                const isActive = region === displayRegion;
-                const color = REGION_COLORS[region];
+                const district = PC_TO_DISTRICT[id];
+                if (!district) return null;
+                const meta = DISTRICTS[district];
+                if (!meta) return null;
+                const isActive = district === activeDistrict;
+                const color = REGION_COLORS[meta.division];
+                const label = meta[lang] || meta.en || district;
                 return (
                   <path
                     key={id}
@@ -81,44 +100,115 @@ export default function RegionMap({ activeRegion, onSelectRegion }) {
                     style={{
                       '--region-color': color,
                       '--region-color-dim': color + '40',
+                      '--region-color-mid': color + '80',
                     }}
-                    onMouseEnter={() => setHoverRegion(region)}
-                    onMouseLeave={() => setHoverRegion(null)}
-                    onClick={() => onSelectRegion?.(region)}
+                    onMouseEnter={(e) => {
+                      setTooltip({ visible: true, x: e.clientX, y: e.clientY, label });
+                    }}
+                    onMouseMove={(e) => {
+                      setTooltip((t2) => (t2.visible ? { ...t2, x: e.clientX, y: e.clientY } : t2));
+                    }}
+                    onMouseLeave={() => {
+                      setTooltip((t2) => ({ ...t2, visible: false }));
+                    }}
+                    onClick={() => onSelectDistrict?.(district)}
                   />
                 );
               })}
             </svg>
+
+            {tooltip.visible && (
+              <div
+                className="rmap-tooltip"
+                style={{ left: tooltip.x, top: tooltip.y }}
+                role="tooltip"
+              >
+                {tooltip.label}
+              </div>
+            )}
+
             <div className="rmap__hint" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <polyline points="19 12 12 19 5 12" />
               </svg>
-              <span>{lang === 'mr' ? 'क्लिक करा' : 'CLICK A REGION'}</span>
+              <span>{lang === 'mr' ? 'जिल्हा निवडा' : 'PICK A DISTRICT'}</span>
             </div>
           </div>
 
-          {/* ── LEGEND PILLS ── */}
-          <div className="rmap__legend">
-            {Object.keys(REGION_MAP).map((key) => (
-              <button
-                key={key}
-                type="button"
-                className={`rmap__pill ${displayRegion === key ? 'rmap__pill--active' : ''}`}
-                style={{ '--pill-color': REGION_COLORS[key] }}
-                onMouseEnter={() => setHoverRegion(key)}
-                onMouseLeave={() => setHoverRegion(null)}
-                onClick={() => onSelectRegion?.(key)}
-                data-cursor="link"
-              >
-                <span className="rmap__pill-dot" />
-                <span className="rmap__pill-label">{regionNames[key]}</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rmap__pill-arrow" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+          {/* ── DISTRICT LIST (flat, searchable) ── */}
+          <div className="rmap__legend rmap__legend--districts">
+            <div className="rmap__legend-head">
+              <span className="rmap__legend-eyebrow">
+                {lang === 'mr' ? 'सर्व जिल्हे' : 'ALL DISTRICTS'}
+              </span>
+              <h3 className="rmap__legend-title">
+                {filtered.length} / {districts.length}
+              </h3>
+
+              <div className="rmap__legend-search">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg>
-              </button>
-            ))}
+                <input
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder={lang === 'mr' ? 'जिल्हा शोधा' : 'Search district'}
+                  className="rmap__legend-search-input"
+                  aria-label="Search"
+                />
+                {query && (
+                  <button
+                    type="button"
+                    className="rmap__legend-search-clear"
+                    onClick={() => setQuery('')}
+                    aria-label="Clear"
+                  >×</button>
+                )}
+              </div>
+            </div>
+
+            <div className="rmap__legend-list" data-lenis-prevent>
+              {filtered.length === 0 && (
+                <p className="rmap__legend-empty">
+                  {lang === 'mr' ? 'काही सापडले नाही.' : 'No matches found.'}
+                </p>
+              )}
+              {filtered.map((d) => {
+                const color = REGION_COLORS[d.division];
+                const label = d.meta[lang] || d.meta.en;
+                const divLabel =
+                  DIVISION_LABELS[d.division]?.[lang] ||
+                  DIVISION_LABELS[d.division]?.en ||
+                  '';
+                const isActive = d.slug === activeDistrict;
+                const countLabel = d.mlaCount > 0
+                  ? ` · ${d.mlaCount} ${lang === 'mr' ? 'आमदार' : 'MLAs'}`
+                  : '';
+                return (
+                  <button
+                    key={d.slug}
+                    type="button"
+                    className={`rmap__pill rmap__pill--district ${isActive ? 'rmap__pill--active' : ''}`}
+                    style={{ '--pill-color': color }}
+                    onClick={() => onSelectDistrict?.(d.slug)}
+                    data-cursor="link"
+                  >
+                    <span className="rmap__pill-dot" />
+                    <span className="rmap__pill-body">
+                      <span className="rmap__pill-label">{label}</span>
+                      <span className="rmap__pill-sub">{divLabel}{countLabel}</span>
+                    </span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rmap__pill-arrow" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
         </div>

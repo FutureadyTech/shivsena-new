@@ -188,6 +188,7 @@
 }
 
 .join__benefit-icon {
+  position: relative;
   width: 64px;
   height: 64px;
   margin: 0 auto 22px;
@@ -198,12 +199,85 @@
   border: 1.5px solid rgba(255, 245, 216, 0.5);
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.45s ease;
+  /* Gentle continuous breathing — subtle while idle */
+  animation: joinIconBreathe 5s ease-in-out infinite;
 }
+
+/* Expanding ring radiating from each icon, staggered per card */
+.join__benefit-icon::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 245, 216, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  animation: joinIconRing 3s ease-out infinite;
+}
+.join__benefit:nth-child(2) .join__benefit-icon         { animation-delay: 0.6s; }
+.join__benefit:nth-child(3) .join__benefit-icon         { animation-delay: 1.2s; }
+.join__benefit:nth-child(2) .join__benefit-icon::before { animation-delay: 1s; }
+.join__benefit:nth-child(3) .join__benefit-icon::before { animation-delay: 2s; }
 
 .join__benefit-icon svg {
   width: 30px;
   height: 30px;
   display: block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.35s ease;
+}
+
+/* Per-icon idle animation — different motion for each topic */
+.join__benefit:nth-child(1) .join__benefit-icon svg {
+  /* Voice — gentle tilt left/right */
+  animation: joinVoiceWobble 4.4s ease-in-out infinite;
+  transform-origin: 50% 60%;
+}
+.join__benefit:nth-child(2) .join__benefit-icon svg {
+  /* Initiatives — slow drift up & down */
+  animation: joinPersonBob 4s ease-in-out infinite;
+}
+.join__benefit:nth-child(3) .join__benefit-icon svg {
+  /* Informed — soft pulse */
+  animation: joinDocPulse 4.6s ease-in-out infinite;
+}
+
+/* Hover — emphasised lift + colour shift */
+.join__benefit:hover .join__benefit-icon {
+  background: rgba(255, 178, 107, 0.22);
+  border-color: rgba(255, 245, 216, 0.9);
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.45);
+}
+.join__benefit:hover .join__benefit-icon svg {
+  transform: scale(1.12);
+  color: #FFF1C8;
+}
+
+@keyframes joinIconBreathe {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+@keyframes joinIconRing {
+  0%   { transform: scale(0.92); opacity: 0.55; }
+  60%  { opacity: 0.18; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+@keyframes joinVoiceWobble {
+  0%, 100% { transform: rotate(-6deg); }
+  50%      { transform: rotate(6deg); }
+}
+@keyframes joinPersonBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px) scale(1.04); }
+}
+@keyframes joinDocPulse {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%      { transform: scale(1.08); opacity: 0.85; }
 }
 
 .join__benefit-title {
@@ -238,5 +312,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .join__form, .join__submit, .join__submit svg, .join__benefit-icon { transition: none; }
+  .join__form,
+  .join__submit,
+  .join__submit svg,
+  .join__benefit-icon,
+  .join__benefit-icon::before,
+  .join__benefit-icon svg {
+    transition: none !important;
+    animation: none !important;
+  }
 }

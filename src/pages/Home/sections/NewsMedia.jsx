@@ -34,32 +34,43 @@ export default function NewsMedia() {
         </div>
 
         <div className="news__grid">
-          {/* Featured story */}
+          {/* Featured story — entire card links to the source article */}
           <article ref={featuredRef} className="news-feature reveal">
-            <div className="news-feature__media">
-              <div
-                className="news-feature__image"
-                style={{ backgroundImage: `url(${featured.image})` }}
-              ></div>
-              <span className="news-feature__badge">{featured.badge}</span>
-            </div>
-
-            <div className="news-feature__body">
-              <div className="news-feature__meta">
-                <span className="news-feature__date">{featured.date}</span>
-                <span className="news-feature__dot"></span>
-                <span className="news-feature__category">{featured.category}</span>
+            <a
+              href={featured.href || '#'}
+              target={featured.href ? '_blank' : undefined}
+              rel={featured.href ? 'noopener noreferrer' : undefined}
+              className="news-feature__link"
+              data-cursor="link"
+              aria-label={featured.title}
+            >
+              <div className="news-feature__media">
+                <img
+                  src={featured.image}
+                  alt={featured.title}
+                  className="news-feature__image"
+                  loading="lazy"
+                />
+                <span className="news-feature__badge">{featured.badge}</span>
               </div>
-              <h3 className="news-feature__title">{featured.title}</h3>
-              <p className="news-feature__excerpt">{featured.excerpt}</p>
-              <a href="#" className="news-feature__cta">
-                <span>READ FULL ARTICLE</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </a>
-            </div>
+
+              <div className="news-feature__body">
+                <div className="news-feature__meta">
+                  <span className="news-feature__date">{featured.date}</span>
+                  <span className="news-feature__dot"></span>
+                  <span className="news-feature__category">{featured.category}</span>
+                </div>
+                <h3 className="news-feature__title">{featured.title}</h3>
+                <p className="news-feature__excerpt">{featured.excerpt}</p>
+                <span className="news-feature__cta">
+                  <span>{(t.readMoreLabel || 'READ FULL ARTICLE').toUpperCase()}</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
+              </div>
+            </a>
           </article>
 
           {/* Sidebar list */}
@@ -76,11 +87,17 @@ export default function NewsMedia() {
 
 function SidebarItem({ item, index }) {
   const ref = useScrollReveal(0.2);
+  const Tag = item.href ? 'a' : 'article';
+  const linkProps = item.href
+    ? { href: item.href, target: '_blank', rel: 'noopener noreferrer', 'data-cursor': 'link' }
+    : {};
+
   return (
-    <article
+    <Tag
       ref={ref}
       className="news-side reveal"
       style={{ '--reveal-delay': `${0.1 + index * 0.08}s` }}
+      {...linkProps}
     >
       <div
         className="news-side__thumb"
@@ -99,6 +116,6 @@ function SidebarItem({ item, index }) {
           </svg>
         </span>
       </div>
-    </article>
+    </Tag>
   );
 }

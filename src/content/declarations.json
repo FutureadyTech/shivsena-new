@@ -2,13 +2,25 @@
   "banner": {
     "mr": {
       "eyebrow": "॥ शिवसेना घोषणापत्र ॥",
-      "title": "घोषणा",
-      "subtitle": "निवडणूक आयोगाच्या निकषांनुसार सादर केलेली शिवसेना पक्षाची अधिकृत घोषणा व पारदर्शक माहिती."
+      "title": "उमेदवार माहिती",
+      "subtitle": "निवडणूक आयोगाच्या निकषांनुसार सादर केलेली शिवसेना पक्षाची अधिकृत घोषणा व पारदर्शक माहिती.",
+      "stat1Label": "एकूण घोषणा",
+      "stat1Value": "100+",
+      "stat2Label": "निवडणूक चक्रे",
+      "stat2Value": "7",
+      "stat3Label": "अद्ययावत",
+      "stat3Value": "2026"
     },
     "en": {
       "eyebrow": "|| OFFICIAL DECLARATIONS ||",
       "title": "Declarations",
-      "subtitle": "Shiv Sena's official declarations and transparent disclosures, submitted in accordance with Election Commission of India norms."
+      "subtitle": "Shiv Sena's official declarations and transparent disclosures, submitted in accordance with Election Commission of India norms.",
+      "stat1Label": "Filings on record",
+      "stat1Value": "100+",
+      "stat2Label": "Election cycles",
+      "stat2Value": "7",
+      "stat3Label": "Last updated",
+      "stat3Value": "2026"
     }
   },
 
@@ -16,7 +28,7 @@
     "mr": {
       "eyebrow": "॥ पारदर्शकता ॥",
       "title": "पक्षाची भूमिका — स्पष्ट, उघड व जबाबदार",
-      "lede": "लोकशाहीच्या प्रत्येक टप्प्यावर शिवसेनेने पारदर्शकतेच्या तत्त्वावर निष्ठा ठेवली आहे. खालील घोषणा हे त्याच निष्ठेचा भाग आहेत."
+      "lede": "लोकशाहीच्या प्रत्येक टप्प्यावर शिवसेनेने पारदर्शकतेच्या तत्त्वावर निष्ठा ठेवली आहे. खालील घोषणा त्याच निष्ठेचा भाग आहेत."
     },
     "en": {
       "eyebrow": "|| TRANSPARENCY ||",
@@ -27,81 +39,294 @@
 
   "items": {
     "mr": [
-      {
-        "number": "०१",
-        "tag": "निवडणूक आयोग",
-        "title": "ECI नोंदणी व मान्यता",
-        "body": "शिवसेना हा भारत निवडणूक आयोगाकडे रीतसर नोंदणीकृत राजकीय पक्ष आहे. ‘धनुष्यबाण’ हे पक्षाचे अधिकृत चिन्ह असून, सर्व निवडणुकांत याच चिन्हाचा वापर केला जातो."
-      },
-      {
-        "number": "०२",
-        "tag": "आर्थिक पारदर्शकता",
-        "title": "देणग्या व निधी अहवाल",
-        "body": "पक्षाला मिळणाऱ्या सर्व देणग्यांचा वार्षिक अहवाल आयोगाकडे सादर केला जातो. इलेक्टोरल बॉण्ड, चेक व डिजिटल माध्यमातून आलेला निधी कायद्यानुसार जाहीर केला जातो."
-      },
-      {
-        "number": "०३",
-        "tag": "घटना व नियमावली",
-        "title": "पक्षाची घटना",
-        "body": "शिवसेनेची लेखी घटना आयोगाकडे दाखल असून, पक्षाच्या सर्व अंतर्गत निवडणुका, समित्या व पदाधिकाऱ्यांच्या नेमणुका त्यानुसार होतात."
-      },
-      {
-        "number": "०४",
-        "tag": "उमेदवारी प्रतिज्ञापत्र",
-        "title": "उमेदवारांचे शपथपत्र",
-        "body": "प्रत्येक निवडणुकीत उमेदवारांची मालमत्ता, गुन्हेगारी पार्श्वभूमी व शैक्षणिक माहिती आयोगाच्या नमुन्यानुसार जाहीर केली जाते — कोणतीही माहिती लपवली जात नाही."
-      },
-      {
-        "number": "०५",
-        "tag": "आचारसंहिता",
-        "title": "आदर्श आचारसंहितेचे पालन",
-        "body": "निवडणूक प्रक्रियेदरम्यान आयोगाने जाहीर केलेल्या आदर्श आचारसंहितेचे पक्ष पूर्णपणे पालन करतो. कोणतीही तक्रार आल्यास तातडीने पडताळणी केली जाते."
-      }
+      { "number": "०१", "tag": "निवडणूक आयोग",        "title": "ECI नोंदणी व मान्यता",          "body": "शिवसेना हा भारत निवडणूक आयोगाकडे रीतसर नोंदणीकृत राजकीय पक्ष आहे. ‘धनुष्यबाण’ हे पक्षाचे अधिकृत चिन्ह असून, सर्व निवडणुकांत याच चिन्हाचा वापर केला जातो." },
+      { "number": "०२", "tag": "आर्थिक पारदर्शकता",   "title": "देणग्या व निधी अहवाल",          "body": "पक्षाला मिळणाऱ्या सर्व देणग्यांचा वार्षिक अहवाल आयोगाकडे सादर केला जातो. इलेक्टोरल बॉण्ड, चेक व डिजिटल माध्यमातून आलेला निधी कायद्यानुसार जाहीर केला जातो." },
+      { "number": "०३", "tag": "घटना व नियमावली",     "title": "पक्षाची घटना",                 "body": "शिवसेनेची लेखी घटना आयोगाकडे दाखल असून, पक्षाच्या सर्व अंतर्गत निवडणुका, समित्या व पदाधिकाऱ्यांच्या नेमणुका त्यानुसार होतात." },
+      { "number": "०४", "tag": "उमेदवारी प्रतिज्ञापत्र", "title": "उमेदवारांचे शपथपत्र",            "body": "प्रत्येक निवडणुकीत उमेदवारांची मालमत्ता, गुन्हेगारी पार्श्वभूमी व शैक्षणिक माहिती आयोगाच्या नमुन्यानुसार जाहीर केली जाते — कोणतीही माहिती लपवली जात नाही." },
+      { "number": "०५", "tag": "आचारसंहिता",          "title": "आदर्श आचारसंहितेचे पालन",       "body": "निवडणूक प्रक्रियेदरम्यान आयोगाने जाहीर केलेल्या आदर्श आचारसंहितेचे पक्ष पूर्णपणे पालन करतो. कोणतीही तक्रार आल्यास तातडीने पडताळणी केली जाते." }
     ],
     "en": [
-      {
-        "number": "01",
-        "tag": "ELECTION COMMISSION",
-        "title": "ECI Registration & Recognition",
-        "body": "Shiv Sena is a duly registered political party with the Election Commission of India. The ‘Bow & Arrow’ is our reserved symbol and is used uniformly across every election we contest."
-      },
-      {
-        "number": "02",
-        "tag": "FINANCIAL TRANSPARENCY",
-        "title": "Contributions & Funding Report",
-        "body": "Annual reports of every contribution received by the party are filed with the Commission. Funds received through electoral bonds, cheques, and digital channels are disclosed as mandated by law."
-      },
-      {
-        "number": "03",
-        "tag": "PARTY CONSTITUTION",
-        "title": "Constitution of the Party",
-        "body": "The written constitution of Shiv Sena is on record with the Commission. Internal elections, committees, and office-bearer appointments are all conducted in strict accordance with it."
-      },
-      {
-        "number": "04",
-        "tag": "CANDIDATE AFFIDAVIT",
-        "title": "Sworn Affidavits of Candidates",
-        "body": "At every election, each candidate's assets, criminal record, and educational background are disclosed in the prescribed ECI format — nothing is concealed from the voter."
-      },
-      {
-        "number": "05",
-        "tag": "MODEL CODE",
-        "title": "Adherence to the Model Code of Conduct",
-        "body": "The party fully complies with the Model Code of Conduct issued by the Commission during the election process. Any complaint received is examined immediately and acted upon."
-      }
+      { "number": "01", "tag": "ELECTION COMMISSION",  "title": "ECI Registration & Recognition",     "body": "Shiv Sena is a duly registered political party with the Election Commission of India. The ‘Bow & Arrow’ is our reserved symbol and is used uniformly across every election we contest." },
+      { "number": "02", "tag": "FINANCIAL TRANSPARENCY", "title": "Contributions & Funding Report",    "body": "Annual reports of every contribution received by the party are filed with the Commission. Funds received through electoral bonds, cheques, and digital channels are disclosed as mandated by law." },
+      { "number": "03", "tag": "PARTY CONSTITUTION",   "title": "Constitution of the Party",           "body": "The written constitution of Shiv Sena is on record with the Commission. Internal elections, committees, and office-bearer appointments are all conducted in strict accordance with it." },
+      { "number": "04", "tag": "CANDIDATE AFFIDAVIT",  "title": "Sworn Affidavits of Candidates",      "body": "At every election, each candidate's assets, criminal record, and educational background are disclosed in the prescribed ECI format — nothing is concealed from the voter." },
+      { "number": "05", "tag": "MODEL CODE",           "title": "Adherence to the Model Code of Conduct","body": "The party fully complies with the Model Code of Conduct issued by the Commission during the election process. Any complaint received is examined immediately and acted upon." }
     ]
   },
+
+  "formsGuide": {
+    "mr": {
+      "eyebrow": "॥ प्रक्रिया ॥",
+      "title": "ईसीआय प्रतिज्ञापत्रे — पूर्ण चक्र",
+      "lede": "प्रत्येक उमेदवार निवडणुकीच्या प्रत्येक टप्प्यावर आयोगाला आवश्यक दस्तऐवज सादर करतो. खालील तीन टप्पे ती संपूर्ण प्रक्रिया स्पष्ट करतात.",
+      "steps": [
+        { "num": "०१", "title": "नामांकन व C2 प्रतिज्ञापत्र", "body": "उमेदवार आपली मालमत्ता, गुन्हेगारी पार्श्वभूमी व शैक्षणिक माहिती आयोगाच्या C2 नमुन्यानुसार जाहीर करतो." },
+        { "num": "०२", "title": "प्रचार व आदर्श आचारसंहिता", "body": "प्रचार कालावधीत उमेदवार आदर्श आचारसंहितेचे काटेकोर पालन करतो; प्रत्येक खर्चाची नोंद ठेवली जाते." },
+        { "num": "०३", "title": "निकाल व C7 प्रतिज्ञापत्र", "body": "निवडणूक संपताच एकूण खर्चाचा संपूर्ण हिशेब आयोगाला सादर केला जातो — हेच C7 प्रतिज्ञापत्र होय." }
+      ]
+    },
+    "en": {
+      "eyebrow": "|| THE PROCESS ||",
+      "title": "How an ECI affidavit cycle works",
+      "lede": "Every candidate files a sequence of disclosures with the Election Commission of India. The three stages below explain that cycle end to end.",
+      "steps": [
+        { "num": "01", "title": "Nomination & C2 Form",  "body": "The candidate publicly declares their assets, criminal record, and educational background on the ECI's C2 affidavit before contesting." },
+        { "num": "02", "title": "Campaign & Model Code", "body": "Throughout the campaign, the candidate is bound by the Model Code of Conduct, and every rupee of expense is logged." },
+        { "num": "03", "title": "Results & C7 Form",     "body": "After polling concludes, a full statement of election expenses is filed with the Commission — this is the C7 affidavit." }
+      ]
+    }
+  },
+
+  "elections": {
+    "mr": {
+      "eyebrow": "॥ अधिकृत दस्तऐवज ॥",
+      "title": "उमेदवारांच्या ईसीआय घोषणा",
+      "lede": "प्रत्येक निवडणुकीत पक्षाच्या उमेदवारांची C2 (नामांकन प्रतिज्ञापत्र) व C7 (खर्च प्रतिज्ञापत्र) ही प्रतिज्ञापत्रे निवडणूक आयोगाच्या नमुन्यानुसार जाहीर केली जातात.",
+      "searchPlaceholder": "उमेदवार किंवा मतदारसंघ शोधा...",
+      "constituencyLabel": "मतदारसंघ",
+      "candidateLabel": "उमेदवार",
+      "c2Label": "C2 फॉर्म",
+      "c7Label": "C7 फॉर्म",
+      "available": "उपलब्ध",
+      "unavailable": "लवकरच",
+      "noResults": "कोणतीही नोंद आढळली नाही.",
+      "showingLabel": "नोंदी:",
+      "totalLabel": "एकूण",
+      "summaryCandidates": "उमेदवार जाहीर",
+      "summaryFilings": "उपलब्ध प्रतिज्ञापत्रे",
+      "summaryCycles": "निवडणूक चक्रे"
+    },
+    "en": {
+      "eyebrow": "|| OFFICIAL FILINGS ||",
+      "title": "Candidate ECI Declarations",
+      "lede": "For every election, the party's candidates file the C2 (nomination affidavit) and C7 (election expenses affidavit) prescribed by the Election Commission of India.",
+      "searchPlaceholder": "Search candidate or constituency...",
+      "constituencyLabel": "Constituency",
+      "candidateLabel": "Candidate",
+      "c2Label": "C2 Form",
+      "c7Label": "C7 Form",
+      "available": "Available",
+      "unavailable": "Coming soon",
+      "noResults": "No declarations match your search.",
+      "showingLabel": "Showing",
+      "totalLabel": "of",
+      "summaryCandidates": "Candidates declared",
+      "summaryFilings": "Filings available",
+      "summaryCycles": "Election cycles"
+    }
+  },
+
+  "cycles": [
+    {
+      "id": "vidhan-sabha-2024",
+      "labelMr": "विधानसभा 2024",
+      "labelEn": "Vidhan Sabha 2024",
+      "subMr": "महाराष्ट्र विधानसभा निवडणूक",
+      "subEn": "Maharashtra Legislative Assembly",
+      "candidates": [
+        { "no": 1,   "constituency": "Akkalkuwa",          "candidate": "Amshya Fulji Padvi",                 "c2": true,  "c7": true },
+        { "no": 5,   "constituency": "Sakri",               "candidate": "Manjula Tulshiram Gavit",            "c2": false, "c7": false },
+        { "no": 10,  "constituency": "Chopda",              "candidate": "Chandrakant Baliram Sonawane",       "c2": true,  "c7": true },
+        { "no": 14,  "constituency": "Jalgaon Rural",       "candidate": "Gulabrao Raghunath Patil",           "c2": false, "c7": false },
+        { "no": 16,  "constituency": "Erandol",             "candidate": "Amol Chimanrao Patil",               "c2": false, "c7": false },
+        { "no": 18,  "constituency": "Pachora",             "candidate": "Kishor Dhansing Patil",              "c2": false, "c7": false },
+        { "no": 20,  "constituency": "Muktainagar",         "candidate": "Chandrakant Nimba Patil",            "c2": false, "c7": false },
+        { "no": 22,  "constituency": "Buldhana",            "candidate": "Sanjay Rambhau Gaikwad",             "c2": true,  "c7": true },
+        { "no": 24,  "constituency": "Sindkhed Raja",       "candidate": "Khedekar Dr. Shashikant Narsingrao", "c2": false, "c7": false },
+        { "no": 25,  "constituency": "Mehkar",              "candidate": "Sanjay Bhaskar Raymulkar",           "c2": false, "c7": false },
+        { "no": 29,  "constituency": "Balapur",             "candidate": "Baliram Bhagwan Siraskar",           "c2": true,  "c7": true },
+        { "no": 33,  "constituency": "Risod",               "candidate": "Bhavana Pundlikrao Gawali",          "c2": true,  "c7": true },
+        { "no": 40,  "constituency": "Daryapur",            "candidate": "Abhijit Anand Adsul",                "c2": false, "c7": false },
+        { "no": 59,  "constituency": "Ramtek",              "candidate": "Ashish Nandkishore Jaiswal",         "c2": true,  "c7": true },
+        { "no": 61,  "constituency": "Bhandara",            "candidate": "Bhondekar Narendra Bhojraj",         "c2": false, "c7": false },
+        { "no": 79,  "constituency": "Digras",              "candidate": "Rathod Sanjay Dulichand",            "c2": true,  "c7": true },
+        { "no": 84,  "constituency": "Hadgaon",             "candidate": "Sambharao alias Baburao G. Kadam",   "c2": true,  "c7": true },
+        { "no": 86,  "constituency": "Nanded North",        "candidate": "Balaji Devidasrao Kalyankar",        "c2": true,  "c7": true },
+        { "no": 87,  "constituency": "Nanded South",        "candidate": "Anand Shankar Tidke",                "c2": true,  "c7": true },
+        { "no": 93,  "constituency": "Kalamnuri",           "candidate": "Santosh Laxmanrao Bangar",           "c2": true,  "c7": true },
+        { "no": 96,  "constituency": "Parbhani",            "candidate": "Anand Sheshrao Bharose",             "c2": true,  "c7": true },
+        { "no": 100, "constituency": "Ghansawangi",         "candidate": "Hikmat Baliram Udhan",               "c2": true,  "c7": true },
+        { "no": 101, "constituency": "Jalna",               "candidate": "Arjunrao Panditrao Khotkar",         "c2": true,  "c7": true },
+        { "no": 104, "constituency": "Sillod",              "candidate": "Abdul Sattar",                       "c2": true,  "c7": true },
+        { "no": 105, "constituency": "Kannad",              "candidate": "Ranjanatai Harshwardhan Jadhav",     "c2": false, "c7": false },
+        { "no": 107, "constituency": "Aurangabad Central",  "candidate": "Pradip Shivnarayan Jaiswal",         "c2": true,  "c7": true },
+        { "no": 108, "constituency": "Aurangabad West",     "candidate": "Sanjay Pandurang Shirsat",           "c2": true,  "c7": true },
+        { "no": 110, "constituency": "Paithan",             "candidate": "Bhumre Vilas Sandipanrao",           "c2": true,  "c7": true },
+        { "no": 112, "constituency": "Vaijapur",            "candidate": "Bornare Ramesh Nanasaheb",           "c2": true,  "c7": true },
+        { "no": 113, "constituency": "Nandgaon",            "candidate": "Suhas Dwarkanath Kande",             "c2": true,  "c7": true },
+        { "no": 115, "constituency": "Malegaon Outer",      "candidate": "Dadaji Dagdu Bhuse",                 "c2": false, "c7": false },
+        { "no": 126, "constituency": "Deolali",             "candidate": "Dr. Rajashri Harishchandra Ahirrao", "c2": false, "c7": false },
+        { "no": 130, "constituency": "Palghar",             "candidate": "Gavit Rajendra Dhedya",              "c2": true,  "c7": true },
+        { "no": 131, "constituency": "Boisar",              "candidate": "Vilas Sukur Tare",                   "c2": false, "c7": false },
+        { "no": 134, "constituency": "Bhiwandi Rural",      "candidate": "Shantaram Tukaram More",             "c2": false, "c7": false },
+        { "no": 137, "constituency": "Bhiwandi East",       "candidate": "Santosh Manjayya Shetty",            "c2": true,  "c7": true },
+        { "no": 138, "constituency": "Kalyan West",         "candidate": "Vishwanath Atmaram Bhoir",           "c2": true,  "c7": true },
+        { "no": 140, "constituency": "Ambernath",           "candidate": "Balaji Pralhad Kinikar",             "c2": false, "c7": false },
+        { "no": 144, "constituency": "Kalyan Rural",        "candidate": "Rajesh Govardhan More",              "c2": true,  "c7": true },
+        { "no": 146, "constituency": "Ovala – Majiwada",    "candidate": "Pratap Baburao Sarnaik",             "c2": true,  "c7": true },
+        { "no": 147, "constituency": "Kopri – Pachpakhadi", "candidate": "Eknath Sambhaji Shinde",             "c2": true,  "c7": true },
+        { "no": 154, "constituency": "Magathane",           "candidate": "Prakash Rajaram Surve",              "c2": true,  "c7": true },
+        { "no": 156, "constituency": "Vikhroli",            "candidate": "Suvarna Sahdev Karanje",             "c2": true,  "c7": true },
+        { "no": 157, "constituency": "Bhandup West",        "candidate": "Ashok Dharmaraj Patil",              "c2": true,  "c7": true },
+        { "no": 158, "constituency": "Jogeshwari East",     "candidate": "Manisha Ravindra Waikar",            "c2": true,  "c7": true },
+        { "no": 159, "constituency": "Dindoshi",            "candidate": "Sanjay Nirupam",                     "c2": true,  "c7": true },
+        { "no": 166, "constituency": "Andheri East",        "candidate": "Murji Kanji Patel",                  "c2": true,  "c7": true },
+        { "no": 168, "constituency": "Chandivali",          "candidate": "Dilip Bahusaheb Lande",              "c2": true,  "c7": true },
+        { "no": 171, "constituency": "Mankhurd Shivaji Nagar", "candidate": "Suresh Krishnaroa Patil",         "c2": false, "c7": false },
+        { "no": 173, "constituency": "Chembur",             "candidate": "Tukaram Ramkrushna Kate",            "c2": true,  "c7": true },
+        { "no": 174, "constituency": "Kurla",               "candidate": "Mangesh Kudalkar",                   "c2": false, "c7": false },
+        { "no": 178, "constituency": "Dharavi",             "candidate": "Rajesh Shivdas Khandare",            "c2": true,  "c7": true },
+        { "no": 181, "constituency": "Mahim",               "candidate": "Sadanand Shankar Sarvankar",         "c2": true,  "c7": true },
+        { "no": 182, "constituency": "Worli",               "candidate": "Milind Murli Deora",                 "c2": false, "c7": false },
+        { "no": 184, "constituency": "Byculla",             "candidate": "Yamini Yashwant Jadhav",             "c2": false, "c7": false },
+        { "no": 186, "constituency": "Mumbadevi",           "candidate": "Shaina Manish Chudasama Munot",      "c2": false, "c7": false },
+        { "no": 189, "constituency": "Karjat",              "candidate": "Thorve Mahendra Sadashiv",           "c2": true,  "c7": true },
+        { "no": 192, "constituency": "Alibag",              "candidate": "Mahendra Hari Dalvi",                "c2": true,  "c7": true },
+        { "no": 194, "constituency": "Mahad",               "candidate": "Gogawale Bharat Maruti",             "c2": true,  "c7": true },
+        { "no": 202, "constituency": "Purandar",            "candidate": "Vijay Sopanrao Shivtare",            "c2": true,  "c7": true },
+        { "no": 217, "constituency": "Sangamner",           "candidate": "Amol Dhondiba Khatal",               "c2": true,  "c7": true },
+        { "no": 220, "constituency": "Shrirampur",          "candidate": "Bhausaheb Malhari Kamble",           "c2": true,  "c7": true },
+        { "no": 221, "constituency": "Nevasa",              "candidate": "Vitthal Vakilrao Langhe",            "c2": false, "c7": false },
+        { "no": 240, "constituency": "Umarga",              "candidate": "Chougule Dnyanraj Dhondiram",        "c2": false, "c7": false },
+        { "no": 242, "constituency": "Osmanabad",           "candidate": "Ajit Bappasaheb Pingle",             "c2": false, "c7": false },
+        { "no": 243, "constituency": "Paranda",             "candidate": "Tanaji Jayawant Sawant",             "c2": false, "c7": false },
+        { "no": 244, "constituency": "Karmala",             "candidate": "Digvijay Digambarrao Bagal",         "c2": true,  "c7": true },
+        { "no": 246, "constituency": "Barshi",              "candidate": "Rajendra Vitthal Raut",              "c2": true,  "c7": true },
+        { "no": 253, "constituency": "Sangole",             "candidate": "Shahaji Rajaram Patil",              "c2": true,  "c7": true },
+        { "no": 257, "constituency": "Koregaon",            "candidate": "Mahesh Sambhajiraje Shinde",         "c2": true,  "c7": true },
+        { "no": 261, "constituency": "Patan",               "candidate": "Shambhuraj Shivajirao Desai",        "c2": false, "c7": false },
+        { "no": 263, "constituency": "Dapoli",              "candidate": "Kadam Yogesh Ramdas",                "c2": false, "c7": false },
+        { "no": 264, "constituency": "Guhagar",             "candidate": "Bendal Rajesh Ramchandra",           "c2": false, "c7": false },
+        { "no": 266, "constituency": "Ratnagiri",           "candidate": "Uday Ravindra Samant",               "c2": false, "c7": false },
+        { "no": 267, "constituency": "Rajapur",             "candidate": "Kiran Ravindra Samant",              "c2": false, "c7": false },
+        { "no": 269, "constituency": "Kudal",               "candidate": "Nilesh Narayan Rane",                "c2": true,  "c7": true },
+        { "no": 270, "constituency": "Sawantwadi",          "candidate": "Deepak Vasantrao Kesarkar",          "c2": false, "c7": false },
+        { "no": 272, "constituency": "Radhanagari",         "candidate": "Abitkar Prakash Anandrao",           "c2": false, "c7": false },
+        { "no": 275, "constituency": "Karvir",              "candidate": "Chandradip Shashikant Narake",       "c2": true,  "c7": true },
+        { "no": 276, "constituency": "Kolhapur North",      "candidate": "Rajesh Vinayak Kshirsagar",          "c2": true,  "c7": true },
+        { "no": 286, "constituency": "Khanapur",            "candidate": "Suhas Anilrao Babar",                "c2": false, "c7": false }
+      ]
+    },
+    {
+      "id": "lok-sabha-2024",
+      "labelMr": "लोकसभा 2024",
+      "labelEn": "Lok Sabha 2024",
+      "subMr": "केंद्रीय निवडणूक — ५ टप्पे",
+      "subEn": "General Election — 5 phases",
+      "groups": [
+        {
+          "phase": "1st Phase",
+          "phaseMr": "पहिला टप्पा",
+          "candidates": [
+            { "no": 9, "constituency": "Ramtek (SC)", "candidate": "Shri Raju Parve", "c2": true, "c7": true }
+          ]
+        },
+        {
+          "phase": "2nd Phase",
+          "phaseMr": "दुसरा टप्पा",
+          "candidates": [
+            { "no": 5,  "constituency": "Buldhana",            "candidate": "Shri Prataprao Jadhav",                "c2": true, "c7": true },
+            { "no": 14, "constituency": "Yavatmal – Washim",   "candidate": "Smt. Rajshree Hemant Patil",           "c2": true, "c7": true },
+            { "no": 15, "constituency": "Hingoli",              "candidate": "Sambharao alias Baburao G. Kadam",     "c2": true, "c7": true }
+          ]
+        },
+        {
+          "phase": "3rd Phase",
+          "phaseMr": "तिसरा टप्पा",
+          "candidates": [
+            { "no": 47, "constituency": "Kolhapur",      "candidate": "Sanjay Sadashivrao Mandlik",     "c2": true, "c7": true },
+            { "no": 48, "constituency": "Hatkanangale",   "candidate": "Dhairyasheel Sambhajirao Mane",  "c2": true, "c7": true }
+          ]
+        },
+        {
+          "phase": "4th Phase",
+          "phaseMr": "चौथा टप्पा",
+          "candidates": [
+            { "no": 19, "constituency": "Aurangabad (Sambhajinagar)", "candidate": "Shri Sandipan Bhumare",  "c2": true, "c7": true },
+            { "no": 33, "constituency": "Mawal",                       "candidate": "Shri Shrirang Barne",    "c2": true, "c7": true },
+            { "no": 38, "constituency": "Shirdi",                      "candidate": "Shri Sadashiv Lokhande", "c2": true, "c7": true }
+          ]
+        },
+        {
+          "phase": "5th Phase",
+          "phaseMr": "पाचवा टप्पा",
+          "candidates": [
+            { "no": 24, "constituency": "Kalyan",              "candidate": "Shri Shrikant Eknath Shinde", "c2": true, "c7": true },
+            { "no": 25, "constituency": "Thane",                "candidate": "Shri Naresh Ganpat Mhaske",   "c2": true, "c7": true },
+            { "no": 21, "constituency": "Nashik",               "candidate": "Shri Hemant Tukaram Godse",   "c2": true, "c7": true },
+            { "no": 27, "constituency": "Mumbai North West",    "candidate": "Shri Ravindra Waikar",        "c2": true, "c7": true },
+            { "no": 31, "constituency": "Mumbai South",         "candidate": "Smt. Yamini Yashwant Jadhav", "c2": true, "c7": true },
+            { "no": 30, "constituency": "Mumbai South Central", "candidate": "Rahul Ramesh Shewale",        "c2": true, "c7": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "council-2025",
+      "labelMr": "विधान परिषद 2025",
+      "labelEn": "Legislative Council 2025",
+      "subMr": "महाराष्ट्र विधान परिषद निवडणूक",
+      "subEn": "Maharashtra Legislative Council",
+      "candidates": [
+        { "no": 1, "constituency": "—", "candidate": "Sh. Chandrakant Batesingh Raghuvanshi", "c2": false, "c7": true }
+      ]
+    },
+    {
+      "id": "graduate",
+      "labelMr": "पदवीधर मतदारसंघ",
+      "labelEn": "Graduate Constituency",
+      "subMr": "नाशिक विभाग",
+      "subEn": "Nashik Division",
+      "candidates": [
+        { "no": 1, "constituency": "Nashik Division", "candidate": "Shri Kishore Bhikaji Darade", "c2": true, "c7": true }
+      ]
+    },
+    {
+      "id": "council-2024-biennial",
+      "labelMr": "महाराष्ट्र परिषद 2024",
+      "labelEn": "Maharashtra Council 2024",
+      "subMr": "द्विवार्षिक निवडणूक",
+      "subEn": "Biennial Election",
+      "candidates": [
+        { "no": 1, "constituency": "—", "candidate": "Shri Tumane Krupal Hirabai Balaji", "c2": true, "c7": true },
+        { "no": 2, "constituency": "—", "candidate": "Smt. Bhavana Pundlikrao Gawali",    "c2": true, "c7": true }
+      ]
+    },
+    {
+      "id": "rajya-sabha-2026",
+      "labelMr": "राज्यसभा 2026",
+      "labelEn": "Rajya Sabha 2026",
+      "subMr": "द्विवार्षिक निवडणूक",
+      "subEn": "Biennial Election",
+      "candidates": [
+        { "no": 1, "constituency": "—", "candidate": "Doctor Jyoti Naganath Waghmare", "c2": false, "c7": true }
+      ]
+    },
+    {
+      "id": "vidhan-parishad-2026",
+      "labelMr": "विधान परिषद 2026",
+      "labelEn": "Vidhan Parishad 2026",
+      "subMr": "द्विवार्षिक निवडणूक",
+      "subEn": "Biennial Election",
+      "candidates": [
+        { "no": 1, "constituency": "—", "candidate": "Shri Omprakash alias Bachu Babarao Kadu", "c2": false, "c7": true },
+        { "no": 2, "constituency": "—", "candidate": "Smt. Neelam Divakar Gorhe",               "c2": false, "c7": true }
+      ]
+    }
+  ],
 
   "footer": {
     "mr": {
       "title": "अधिक माहितीसाठी",
       "body": "पक्षाच्या घोषणापत्राचा संपूर्ण मजकूर निवडणूक आयोगाच्या संकेतस्थळावर उपलब्ध आहे.",
-      "cta": "आयोग संकेतस्थळ"
+      "cta": "आयोग संकेतस्थळ",
+      "source": "मूळ स्रोत"
     },
     "en": {
       "title": "For Further Reference",
       "body": "The complete text of the party's declarations is available on the official Election Commission of India website.",
-      "cta": "Visit ECI Website"
+      "cta": "Visit ECI Website",
+      "source": "Original source"
     }
   }
 }

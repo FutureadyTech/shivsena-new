@@ -9,7 +9,7 @@ export default function LeadershipBanner() {
     <section className="ldr-banner">
       <div
         className="ldr-banner__image"
-        style={{ backgroundImage: 'url(/new-imgs/gettyimages-2256018761-612x612.jpg)' }}
+        style={{ backgroundImage: 'url(/img-2.webp)' }}
         aria-hidden="true"
       />
 

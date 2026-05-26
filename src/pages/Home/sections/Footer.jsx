@@ -115,6 +115,27 @@ export default function Footer() {
         </div>
       </div>
 
+      {t.addresses?.length > 0 && (
+        <div className="footer__addresses">
+          <div className="footer__inner">
+            <ul className="footer__address-list" aria-label="Office addresses">
+              {t.addresses.map((addr) => (
+                <li key={addr.labelKey} className="footer__address">
+                  <svg className="footer__address-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <div className="footer__address-text">
+                    <span className="footer__address-label">{addr.label}</span>
+                    <span className="footer__address-value">{addr.value}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
       <div className="footer__bottom">
         <div className="footer__inner">
           <p className="footer__copyright">{t.copyright}</p>

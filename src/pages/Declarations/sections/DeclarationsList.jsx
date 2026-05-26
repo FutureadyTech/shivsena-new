@@ -39,10 +39,8 @@ const ICONS = [
 export default function DeclarationsList() {
   const intro = useContent(declarationsContent.intro);
   const items = useContent(declarationsContent.items);
-  const footer = useContent(declarationsContent.footer);
 
   const headerRef = useScrollReveal(0.2);
-  const footerRef = useScrollReveal(0.2);
 
   return (
     <section className="decl">
@@ -72,24 +70,6 @@ export default function DeclarationsList() {
               icon={ICONS[i % ICONS.length]}
             />
           ))}
-        </div>
-
-        {/* ── Footer block ── */}
-        <div ref={footerRef} className="decl__footer reveal">
-          <h3 className="decl__footer-title">{footer.title}</h3>
-          <p className="decl__footer-body">{footer.body}</p>
-          <a
-            href="https://www.eci.gov.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="decl__footer-cta"
-          >
-            <span>{footer.cta}</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>

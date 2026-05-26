@@ -22,7 +22,7 @@ export default function Home() {
       <SiteHeader />
       <Hero />
       <VisionIdeology />
-      <LeadershipCarousel />
+      <LeadershipCarousel gridCols={3} />
       <OurJourney />
       <NewsMedia />
       <SocialFeed />

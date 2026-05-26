@@ -8,8 +8,8 @@
 }
 
 .leadership__inner {
-  max-width: 1500px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 0 48px;
 }
 
@@ -140,6 +140,10 @@ font-family: 'Noto Sans Devanagari', sans-serif;
     border-color 0.35s ease,
     box-shadow 0.5s ease;
   overflow: hidden;
+  /* Reset default <a> underline + colour for the clickable variant */
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .leader-card:hover {

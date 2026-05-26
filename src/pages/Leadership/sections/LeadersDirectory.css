@@ -75,6 +75,48 @@
   backdrop-filter: blur(4px);
 }
 
+/* District-mode variant — groups stacked, each labelled by parent division */
+.dir-section__tabs--districts {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.dir-section__division-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dir-section__division-label {
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(196, 77, 14, 0.85);
+}
+
+.dir-section__division-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dir-section__tabs--districts .dir-section__tab {
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  background: rgba(255, 252, 245, 0.6);
+  border: 1px solid rgba(26, 20, 16, 0.08);
+}
+
 .dir-section__tab {
   padding: 9px 18px;
   border-radius: 999px;
@@ -100,6 +142,38 @@
   flex-direction: column;
   gap: 48px;
   animation: dirCatsIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Section group (State Leadership / Regional & District) ── */
+.dir-section-group {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.dir-group-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: -10px;
+}
+
+.dir-group-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 77, 14, 0.32), transparent);
+}
+
+.dir-group-title {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--saffron-on-light, #C44D0E);
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
 }
 @keyframes dirCatsIn {
   from { opacity: 0; }
@@ -287,7 +361,7 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  padding: 16px 18px 16px;
+  padding: 16px 18px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,7 +415,6 @@
   pointer-events: auto;
 }
 
-.dir-card__phone,
 .dir-card__action,
 .dir-card__socials {
   opacity: 0;
@@ -354,23 +427,23 @@
   transform: translateY(0);
   transition-delay: 0.06s;
 }
-.dir-card:hover .dir-card__phone {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.16s;
-}
 .dir-card:hover .dir-card__action {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.24s;
+  transition-delay: 0.18s;
 }
 
-/* ── Social icons row (revealed on card hover) ── */
+/* ── Social icons row (revealed on card hover) ──────────────
+   Padded so the hover lift/scale isn't clipped by the parent
+   reveal container's overflow:hidden. */
 .dir-card__socials {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  padding: 4px 4px 6px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .dir-card__social {
@@ -380,55 +453,48 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  /* Faded saffron tile with a white glyph at rest; fills to solid
+     saffron on hover. Higher alpha than the cream variant since
+     this sits on a dark photo background. */
+  background: rgba(196, 77, 14, 0.16);
+  border: 1px solid rgba(196, 77, 14, 0.36);
   color: #fff;
   text-decoration: none;
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease,
-              transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  flex-shrink: 0;
+  transition: background 0.25s ease,
+              color 0.25s ease,
+              border-color 0.25s ease,
+              transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.25s ease;
 }
-.dir-card__social svg { width: 12px; height: 12px; }
+.dir-card__social svg { width: 13px; height: 13px; display: block; }
 
 .dir-card__social:hover {
-  background: var(--saffron, #C44D0E);
-  border-color: var(--saffron, #C44D0E);
+  background: var(--saffron-on-light, #C44D0E);
   color: #fff;
-  transform: translateY(-2px) scale(1.08);
+  border-color: var(--saffron-on-light, #C44D0E);
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 8px 16px rgba(196, 77, 14, 0.45);
+}
+.dir-card__social:focus-visible {
+  outline: 2px solid var(--saffron-on-light, #C44D0E);
+  outline-offset: 2px;
 }
 
-/* Brand-tinted hover per platform */
-.dir-card__social--facebook:hover  { background: #1877F2; border-color: #1877F2; }
-.dir-card__social--twitter:hover   { background: #000;    border-color: #000;    }
-.dir-card__social--instagram:hover {
-  background: linear-gradient(45deg, #F58529, #DD2A7B 50%, #515BD4 100%);
-  border-color: transparent;
+/* Muted state — platforms where the leader has no handle. Still rendered
+   so every card shows a complete row of icons (kept on-brand, just faded). */
+.dir-card__social.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: rgba(196, 77, 14, 0.08);
+  border-color: rgba(196, 77, 14, 0.18);
+  color: rgba(255, 255, 255, 0.65);
+  box-shadow: none;
 }
-.dir-card__social--youtube:hover   { background: #FF0000; border-color: #FF0000; }
-
-.dir-card__phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.74rem;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: background 0.25s ease, color 0.25s ease,
-              opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.dir-card__phone:hover {
-  background: rgba(255, 255, 255, 0.22);
-  color: #fff;
+.dir-card__social.is-disabled:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .dir-card__action {
@@ -497,13 +563,11 @@
   .dir-card__bg,
   .dir-card__shade,
   .dir-card__content,
-  .dir-card__phone,
   .dir-card__action,
   .dir-card__socials,
   .dir-card__social { animation: none !important; transition: none; }
 
   .dir-card__reveal { max-height: none; margin-top: 12px; opacity: 1; pointer-events: auto; overflow: visible; }
-  .dir-card__phone,
   .dir-card__action,
   .dir-card__socials { opacity: 1; transform: none; pointer-events: auto; }
 }

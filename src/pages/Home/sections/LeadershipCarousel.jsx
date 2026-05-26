@@ -1,8 +1,13 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
 import homeContent from '../../../content/home.json';
+import leadersContent from '../../../content/leaders.json';
 import './LeadershipCarousel.css';
+
+/* True if a leader has a bio page wired up in leaders.json */
+const hasProfile = (leaderId) => Boolean(leadersContent[leaderId]);
 
 export default function LeadershipCarousel({ content, gridCols }) {
   const t = useContent(content ?? homeContent.leadership);
@@ -94,13 +99,10 @@ export default function LeadershipCarousel({ content, gridCols }) {
 
 function LeaderCard({ leader, index }) {
   const ref = useScrollReveal(0.15);
-  return (
-    <article
-      ref={ref}
-      className="leader-card reveal"
-      style={{ '--reveal-delay': `${0.05 + (index % 4) * 0.08}s` }}
-      data-cursor="link"
-    >
+  const profileAvailable = hasProfile(leader.id);
+
+  const cardInner = (
+    <>
       <div
         className="leader-card__photo"
         style={{ backgroundImage: `url(${leader.image})` }}
@@ -110,12 +112,40 @@ function LeaderCard({ leader, index }) {
       <div className="leader-card__meta">
         <h4 className="leader-card__name">{leader.name}</h4>
         <p className="leader-card__role">{leader.role}</p>
-        <div className="leader-card__arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-          </svg>
-        </div>
+        {profileAvailable && (
+          <div className="leader-card__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+            </svg>
+          </div>
+        )}
       </div>
+    </>
+  );
+
+  /* Whole card becomes a Link when a profile page exists; otherwise
+     stays a plain article so the design doesn't change. */
+  if (profileAvailable) {
+    return (
+      <Link
+        ref={ref}
+        to={`/leader/${leader.id}`}
+        className="leader-card leader-card--clickable reveal"
+        style={{ '--reveal-delay': `${0.05 + (index % 4) * 0.08}s` }}
+        data-cursor="link"
+      >
+        {cardInner}
+      </Link>
+    );
+  }
+
+  return (
+    <article
+      ref={ref}
+      className="leader-card reveal"
+      style={{ '--reveal-delay': `${0.05 + (index % 4) * 0.08}s` }}
+    >
+      {cardInner}
     </article>
   );
 }

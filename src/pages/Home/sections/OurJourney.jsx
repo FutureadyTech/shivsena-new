@@ -123,9 +123,6 @@ export default function OurJourney() {
           <p className="journey__year">{fmtYear(activeEvent.year)}</p>
           {activeEvent.title && <h3 className="journey__event-title">{activeEvent.title}</h3>}
           {activeEvent.body && <p className="journey__body">{activeEvent.body}</p>}
-          {activeEvent.date && (
-            <p className="journey__date">{activeEvent.date}</p>
-          )}
         </div>
 
       </div>

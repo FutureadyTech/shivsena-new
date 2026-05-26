@@ -18,7 +18,9 @@
       "Bash(pdftotext -raw -enc UTF-8 pdf-7.pdf -)",
       "Bash(pdftotext -raw -enc UTF-8 pdf-__TRACKED_VAR__.pdf pdf-__TRACKED_VAR__.txt)",
       "Read(//c/Users/Admin/Downloads/**)",
-      "Bash(rm -rf \"shivsena-clean/shivsena-clean/details/Shared by the client/_extracted\")"
+      "Bash(rm -rf \"shivsena-clean/shivsena-clean/details/Shared by the client/_extracted\")",
+      "WebFetch(domain:www.instagram.com)",
+      "WebSearch"
     ]
   }
 }

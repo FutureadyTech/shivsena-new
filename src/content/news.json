@@ -145,6 +145,7 @@
       "eyebrow": "छायाचित्र संग्रह",
       "title": "फोटो गॅलरी",
       "lede": "मैदान, सभा आणि क्षणचित्रांच्या छायांकनात कैद झालेला शिवसेना परिवार.",
+      "downloadLabel": "फोटो डाउनलोड करा",
       "items": [
         { "id": "ph-1",  "title": "शिवाजी पार्क सभा",         "src": "/new-imgs/gettyimages-2256018761-612x612.jpg" },
         { "id": "ph-2",  "title": "महायुती बैठक",             "src": "/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp" },
@@ -164,6 +165,7 @@
       "eyebrow": "PHOTO ARCHIVE",
       "title": "Photo Gallery",
       "lede": "The Shiv Sena parivar, captured on the ground, in meetings, and in defining moments.",
+      "downloadLabel": "Download photo",
       "items": [
         { "id": "ph-1",  "title": "Shivaji Park rally",            "src": "/new-imgs/gettyimages-2256018761-612x612.jpg" },
         { "id": "ph-2",  "title": "Mahayuti meeting",              "src": "/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp" },

@@ -1,6 +1,14 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { MH_PATHS } from './maharashtraPaths';
 import { useLanguage } from '../../../i18n/LanguageContext';
+import mlasByDistrict from '../../../content/mlas-by-district.json';
+import {
+  DISTRICTS,
+  DIVISIONS_ORDER,
+  DISTRICTS_BY_DIVISION,
+} from '../../../config/districts.js';
+import { PC_TO_DISTRICT } from '../../../config/pcToDistrict.js';
+import LeaderPopup from './LeaderPopup.jsx';
 import './RegionExplorer.css';
 
 /* ─── Region → PC constituency mapping ─────────────────────────── */
@@ -200,26 +208,60 @@ const UI = {
 
 export default function RegionExplorer() {
   const { lang: language } = useLanguage();
-  const [activeRegion, setActiveRegion] = useState('konkan');
-  const [hoverRegion, setHoverRegion]   = useState(null);
-  const [searchQuery, setSearchQuery]   = useState('');
+  const [activeRegion, setActiveRegion]     = useState('konkan');
+  const [activeDistrict, setActiveDistrict] = useState('mumbai-suburban');
+  const [searchQuery, setSearchQuery]       = useState('');
+  const [tooltip, setTooltip]               = useState({ visible: false, x: 0, y: 0, label: '' });
+  const [selectedLeader, setSelectedLeader] = useState(null);
 
-  const lang          = (language === 'mr') ? 'mr' : 'en';
-  const displayRegion = hoverRegion || activeRegion;
-  const regionData    = MEMBERS[displayRegion]?.[lang] || MEMBERS.konkan.en;
-  const ui            = UI[lang] || UI.en;
+  const lang        = (language === 'mr') ? 'mr' : 'en';
+  const regionData  = MEMBERS[activeRegion]?.[lang] || MEMBERS.konkan.en;
+  const ui          = UI[lang] || UI.en;
 
-  useEffect(() => { setSearchQuery(''); }, [activeRegion, lang]);
+  /* Auto-pick the first district of the newly-selected division */
+  useEffect(() => {
+    const districtsInRegion = DISTRICTS_BY_DIVISION[activeRegion] || [];
+    if (districtsInRegion.length && !districtsInRegion.includes(activeDistrict)) {
+      setActiveDistrict(districtsInRegion[0]);
+    }
+  }, [activeRegion, activeDistrict]);
+
+  useEffect(() => { setSearchQuery(''); }, [activeRegion, activeDistrict, lang]);
+
+  const activeDistrictMeta  = DISTRICTS[activeDistrict] || {};
+  const activeDistrictLabel = activeDistrictMeta[lang] || activeDistrictMeta.en || activeDistrict;
+  const districtMlas        = (mlasByDistrict[activeDistrict] || {}).mla || [];
+
+  /* Members shown in the side panel = MLAs from the selected district
+     (if any), with the dummy region-level placeholder list as fallback. */
+  const sourceMembers = useMemo(() => {
+    if (districtMlas.length > 0) {
+      return districtMlas.map((m) => ({
+        initials: (m.name || '')
+          .replace(/^(Shri\.|Smt\.|Dr\.|Prof\.|Adv\.)\s*/i, '')
+          .split(/\s+/)
+          .slice(0, 2)
+          .map((w) => w[0] || '')
+          .join('')
+          .toUpperCase(),
+        name: m.name.replace(/\s*\((Minister|MoS|Chief Whip|Main Leader\/Dy\. CM)\)\s*/i, '').trim(),
+        role: (lang === 'mr' ? 'आमदार · ' : 'MLA · ') + m.constituency,
+        constituency: `${m.constituencyNo}-${m.constituency}`,
+        social: m.social,
+      }));
+    }
+    return regionData.members;
+  }, [districtMlas, regionData.members, lang]);
 
   const filteredMembers = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    if (!q) return regionData.members;
-    return regionData.members.filter(m =>
+    if (!q) return sourceMembers;
+    return sourceMembers.filter(m =>
       m.name.toLowerCase().includes(q) ||
       m.role.toLowerCase().includes(q) ||
       m.constituency.toLowerCase().includes(q)
     );
-  }, [regionData.members, searchQuery]);
+  }, [sourceMembers, searchQuery]);
 
   const getRegion = (pcId) => PC_TO_REGION[pcId];
 
@@ -252,12 +294,18 @@ export default function RegionExplorer() {
                   <path key={id} d={d} className="mh-outline" />
                 ))}
 
-                {/* District paths grouped by region */}
+                {/* PC paths — each colored by its district's parent
+                    division; the hovered or selected district's PCs get
+                    a brighter highlight via `mh-district--active`. */}
                 {MH_PATHS.filter(p => p.cls === 'cls-1').map(({ id, d }) => {
-                  const region = getRegion(id);
-                  if (!region) return null;
-                  const isActive = region === displayRegion;
-                  const color    = REGION_COLORS[region];
+                  const district = PC_TO_DISTRICT[id];
+                  if (!district) return null;
+                  const meta = DISTRICTS[district];
+                  if (!meta) return null;
+                  const division = meta.division;
+                  const isActive = district === activeDistrict;
+                  const color    = REGION_COLORS[division];
+                  const label    = meta[lang] || meta.en || district;
                   return (
                     <path
                       key={id}
@@ -266,43 +314,46 @@ export default function RegionExplorer() {
                       style={{
                         '--region-color': color,
                         '--region-color-dim': color + '40',
+                        '--region-color-mid': color + '80',
                       }}
-                      onMouseEnter={() => setHoverRegion(region)}
-                      onMouseLeave={() => setHoverRegion(null)}
-                      onClick={() => setActiveRegion(region)}
+                      onMouseEnter={(e) => {
+                        setTooltip({ visible: true, x: e.clientX, y: e.clientY, label });
+                      }}
+                      onMouseMove={(e) => {
+                        setTooltip(t => (t.visible ? { ...t, x: e.clientX, y: e.clientY } : t));
+                      }}
+                      onMouseLeave={() => {
+                        setTooltip(t => ({ ...t, visible: false }));
+                      }}
+                      onClick={() => {
+                        setActiveRegion(division);
+                        setActiveDistrict(district);
+                      }}
                     />
                   );
                 })}
               </svg>
+
+              {tooltip.visible && (
+                <div
+                  className="region-tooltip"
+                  style={{ left: tooltip.x, top: tooltip.y }}
+                  role="tooltip"
+                >
+                  {tooltip.label}
+                </div>
+              )}
             </div>
 
-            {/* Legend pills */}
-            <div className="region-explorer__legend">
-              {Object.keys(REGION_MAP).map(key => (
-                <button
-                  key={key}
-                  className={`region-legend-pill ${displayRegion === key ? 'region-legend-pill--active' : ''}`}
-                  style={{ '--pill-color': REGION_COLORS[key] }}
-                  onMouseEnter={() => setHoverRegion(key)}
-                  onMouseLeave={() => setHoverRegion(null)}
-                  onClick={() => setActiveRegion(key)}
-                >
-                  <span className="region-legend-pill__dot" />
-                  {REGION_LABELS[key][lang]}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* ── PANEL SIDE ── */}
           <div
             className="region-explorer__panel"
-            style={{ '--active-color': REGION_COLORS[displayRegion] }}
+            style={{ '--active-color': REGION_COLORS[activeRegion] }}
           >
             <div className="region-panel__head">
-              <span className="region-panel__label">{ui.regionLabel}</span>
-              <h3 className="region-panel__name">{regionData.name}</h3>
-              <p className="region-panel__desc">{regionData.desc}</p>
+              <h3 className="region-panel__name">{activeDistrictLabel}</h3>
               <div className="region-panel__divider" />
             </div>
 
@@ -340,10 +391,17 @@ export default function RegionExplorer() {
               )}
             </div>
 
-            <div className="region-panel__members">
+            <div className="region-panel__members" data-lenis-prevent>
               {filteredMembers.length > 0 ? (
                 filteredMembers.map((m, i) => (
-                  <div key={`${displayRegion}-${m.name}-${i}`} className="region-member" style={{ animationDelay: `${i * 60}ms` }}>
+                  <button
+                    type="button"
+                    key={`${activeRegion}-${m.name}-${i}`}
+                    className="region-member"
+                    style={{ animationDelay: `${i * 60}ms` }}
+                    onClick={() => setSelectedLeader(m)}
+                    aria-label={`${m.name} — ${m.role}`}
+                  >
                     <div className="region-member__avatar">
                       {m.initials}
                     </div>
@@ -353,7 +411,7 @@ export default function RegionExplorer() {
                       <p className="region-member__constituency">{m.constituency}</p>
                     </div>
                     <div className="region-member__arrow">→</div>
-                  </div>
+                  </button>
                 ))
               ) : (
                 <p className="region-panel__no-results">{ui.noResults}</p>
@@ -365,6 +423,15 @@ export default function RegionExplorer() {
 
         </div>
       </div>
+
+      {selectedLeader && (
+        <LeaderPopup
+          leader={selectedLeader}
+          lang={lang}
+          regionColor={REGION_COLORS[activeRegion]}
+          onClose={() => setSelectedLeader(null)}
+        />
+      )}
     </section>
   );
 }

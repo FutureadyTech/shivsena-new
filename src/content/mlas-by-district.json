@@ -1,0 +1,725 @@
+{
+  "mumbai-suburban": {
+    "mla": [
+      {
+        "id": "mla-154",
+        "name": "Shri. Prakash Surve",
+        "constituencyNo": 154,
+        "constituency": "Magathane",
+        "social": {
+          "instagram": "https://www.instagram.com/miprakashsurve?igsh=aWpxYmN4cjBoamRj",
+          "facebook": "https://www.facebook.com/share/1AzXhQmGvj/",
+          "twitter": "https://x.com/miprakashsurve"
+        }
+      },
+      {
+        "id": "mla-157",
+        "name": "Shri. Ashok Patil",
+        "constituencyNo": 157,
+        "constituency": "Bhandup (West)",
+        "social": {
+          "instagram": "https://www.instagram.com/mla_ashokdharmrajpatil?igsh=MXB5ZTl1b2VwdmZzdQ%3D%3D",
+          "facebook": "https://www.facebook.com/share/1ELajGA6yD/?mibextid=wwXIfr",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-166",
+        "name": "Shri. Murji Patel",
+        "constituencyNo": 166,
+        "constituency": "Andheri (East)",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-168",
+        "name": "Shri. Dilip Lande",
+        "constituencyNo": 168,
+        "constituency": "Chandivali",
+        "social": {
+          "instagram": "https://www.instagram.com/dilipmama_lande?utm_source=qr&igsh=MWh0b3I0dDB5eDU2NQ==",
+          "facebook": "https://www.facebook.com/share/17LnCzXGoH/",
+          "twitter": "https://x.com/Mi_DilipLande"
+        }
+      },
+      {
+        "id": "mla-173",
+        "name": "Shri. Tukaram Kate",
+        "constituencyNo": 173,
+        "constituency": "Chembur",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-174",
+        "name": "Shri. Mangesh Kudalkar",
+        "constituencyNo": 174,
+        "constituency": "Kurla (SC)",
+        "social": {
+          "instagram": "https://www.instagram.com/mlamangesh?igsh=NzVueWMxYjM3dDM5",
+          "facebook": "https://www.facebook.com/share/1Eo4GT7cXV/?mibextid=wwXIfr",
+          "twitter": "https://x.com/mlamangesh?s=21"
+        }
+      }
+    ]
+  },
+  "thane": {
+    "mla": [
+      {
+        "id": "mla-134",
+        "name": "Shri. Shantaram More",
+        "constituencyNo": 134,
+        "constituency": "Bhiwandi Rural (ST)",
+        "social": {
+          "instagram": "https://www.instagram.com/mla_shantarammore?igsh=MTFsb2JsZjdjbTcxMw==",
+          "facebook": "https://www.facebook.com/share/1AGL77yDX2/",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-138",
+        "name": "Shri. Vishwanath Bhoir",
+        "constituencyNo": 138,
+        "constituency": "Kalyan West",
+        "social": {
+          "instagram": "https://www.instagram.com/mla_vishwanathbhoir?igsh=MWdheXJncXZleDFsOQ==",
+          "facebook": "https://www.facebook.com/share/1CSrSAQn97/?mibextid=wwXIfr",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-140",
+        "name": "Dr. Shri. Balaji Kinikar",
+        "constituencyNo": 140,
+        "constituency": "Ambernath",
+        "social": {
+          "instagram": "https://www.instagram.com/drbalajikinikar/",
+          "facebook": "https://www.facebook.com/balaji.kinikar.9",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-144",
+        "name": "Shri. Rajesh More",
+        "constituencyNo": 144,
+        "constituency": "Kalyan Rural",
+        "social": {
+          "instagram": "https://www.instagram.com/rajeshmore489?igsh=MTAyb3pncW03amdlbQ==",
+          "facebook": "https://www.facebook.com/share/14Zj7aCuVJS/",
+          "twitter": "https://x.com/RAJESHMORE76"
+        }
+      },
+      {
+        "id": "mla-146",
+        "name": "Shri. Pratap Sarnaik (Minister)",
+        "constituencyNo": 146,
+        "constituency": "Ovala-Majiwada",
+        "social": {
+          "instagram": "https://www.instagram.com/pratap_sarnaik?igsh=MXNudmFvZTBlY3Qxbw==",
+          "facebook": "https://www.facebook.com/share/1HyWSCtwR6/",
+          "twitter": "https://x.com/PratapSarnaik"
+        }
+      },
+      {
+        "id": "mla-147",
+        "name": "Shri. Eknath Sambhaji Shinde (Main Leader/Dy. CM)",
+        "constituencyNo": 147,
+        "constituency": "Kopri Pachpakhadi",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "palghar": {
+    "mla": [
+      {
+        "id": "mla-130",
+        "name": "Shri. Rajendra Gavit",
+        "constituencyNo": 130,
+        "constituency": "Palghar (ST)",
+        "social": {
+          "instagram": "https://www.instagram.com/rajendra1gavit/",
+          "facebook": "https://www.facebook.com/gavitsena",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-131",
+        "name": "Shri. Vilas Tare",
+        "constituencyNo": 131,
+        "constituency": "Boisar (ST)",
+        "social": {
+          "instagram": "https://www.instagram.com/mlavilastare?utm_source=qr&igsh=MWlpZWpxOXc2M2R6cg==",
+          "facebook": "https://www.facebook.com/mlavilastare",
+          "twitter": "https://x.com/MLAVilasTare"
+        }
+      }
+    ]
+  },
+  "raigad": {
+    "mla": [
+      {
+        "id": "mla-189",
+        "name": "Shri. Mahendra Thorve",
+        "constituencyNo": 189,
+        "constituency": "Karjat",
+        "social": {
+          "instagram": "https://www.instagram.com/mla_mahendrathorve_4040?igsh=NGowNHA5N2d1ZGo2&utm_source=qr",
+          "facebook": "https://www.facebook.com/share/1DPVUkALtY/?mibextid=wwXIfr",
+          "twitter": "https://x.com/tho/rvemahendra?s=21"
+        }
+      },
+      {
+        "id": "mla-192",
+        "name": "Shri. Mahendra Dalvi",
+        "constituencyNo": 192,
+        "constituency": "Alibag",
+        "social": {
+          "instagram": "https://www.instagram.com/mahendrahdalvi?utm_source=qr&igsh=azBsZTd0eGh2d2Qw",
+          "facebook": "https://www.facebook.com/mahendraharidalvi?mibextid=ZbWKwL",
+          "twitter": "https://x.com/MahendraD8100"
+        }
+      },
+      {
+        "id": "mla-194",
+        "name": "Shri. Bharatseth Gogawale (Minister)",
+        "constituencyNo": 194,
+        "constituency": "Mahad",
+        "social": {
+          "instagram": "https://www.instagram.com/bharat_gogawale?igsh=Y2NheHlzaWtsMDln",
+          "facebook": "https://www.face/book.com/share/1ENFMf8Y8N/",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "ratnagiri": {
+    "mla": [
+      {
+        "id": "mla-263",
+        "name": "Shri. Yogesh Kadam (MoS)",
+        "constituencyNo": 263,
+        "constituency": "Dapoli",
+        "social": {
+          "instagram": "https://www.instagram.com/iyogeshrkadam?igsh=MXQ1bmxiNXkxbHI5eA==",
+          "facebook": "https://www.facebook.com/share/1Cky3pjQMw/",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-266",
+        "name": "Shri. Uday Samant (Minister)",
+        "constituencyNo": 266,
+        "constituency": "Ratnagiri",
+        "social": {
+          "instagram": "https://www.instagram.com/uday.samant?fbclid=IwY2xjawRUI0xleHRuA2FlbQIxMABicmlkETFnTXpFamtPOXdVeXFUcVFmc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHn5tPC_Patm0z0ajp2Bfej9HF9W7Qr48TAnGytkDKBnh-f_Fn9LzW5kk4I9v_aem_mfZmcJencYbBKAldAjuW4A",
+          "facebook": "https://www.facebook.com/udayravindrasamant",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-267",
+        "name": "Shri. Kiran Samant",
+        "constituencyNo": 267,
+        "constituency": "Rajapur",
+        "social": {
+          "instagram": "https://www.instagram.com/kiran_samant9999?igsh=NHM0b2cweWgwcW1x",
+          "facebook": "https://www.facebook.com/share/1FVhnotHQd/",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "sindhudurg": {
+    "mla": [
+      {
+        "id": "mla-269",
+        "name": "Shri. Nilesh Rane",
+        "constituencyNo": 269,
+        "constituency": "Kudal",
+        "social": {
+          "instagram": "https://www.instagram.com/menileshrane?igsh=MTd6M2kwYnZ4bTdwbg==",
+          "facebook": "https://www.facebook.com/share/1GGFFRQv1C/",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-270",
+        "name": "Shri. Deepak Kesarkar",
+        "constituencyNo": 270,
+        "constituency": "Sawantwadi",
+        "social": {
+          "instagram": "https://www.instagram.com/kesarkar_deepak?igsh=MTFxM3o0OHMwNWI4Ng==",
+          "facebook": "https://www.facebook.com/share/18MBpzq9AD/",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "pune": {
+    "mla": [
+      {
+        "id": "mla-202",
+        "name": "Shri. Vijay Shivtare",
+        "constituencyNo": 202,
+        "constituency": "Purandar",
+        "social": {
+          "instagram": "https://www.instagram.com/vijayshivtare?igsh=MTE1aHJsNDFvOXh5NQ%3D%3D",
+          "facebook": "https://www.facebook.com/ShivtareVijay?mibextid=ZbWKwL",
+          "twitter": "https://x.com/vijayshivtare"
+        }
+      }
+    ]
+  },
+  "satara": {
+    "mla": [
+      {
+        "id": "mla-257",
+        "name": "Shri. Mahesh Shinde",
+        "constituencyNo": 257,
+        "constituency": "Koregaon",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-261",
+        "name": "Shri. Shambhuraj Desai (Minister)",
+        "constituencyNo": 261,
+        "constituency": "Patan",
+        "social": {
+          "instagram": "https://www.instagram.com/mlashambhurajdesai?igsh=ZGZ1bGtzeW5kN3Rt",
+          "facebook": "https://www.facebook.com/watch/desaishambhuraj/",
+          "twitter": "https://x.com/shambhurajdesai"
+        }
+      }
+    ]
+  },
+  "kolhapur": {
+    "mla": [
+      {
+        "id": "mla-272",
+        "name": "Shri. Prakash Abitkar (Minister)",
+        "constituencyNo": 272,
+        "constituency": "Radhanagari",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-273",
+        "name": "Shri. Rajesh Kshirsagar",
+        "constituencyNo": 273,
+        "constituency": "Kolhapur North",
+        "social": {
+          "instagram": "https://www.instagram.com/kshirsagarrajesh?igsh=ZjUwbW9tNGU5MzNi",
+          "facebook": "https://www.facebook.com/rajeshv.kshirsagar?mibextid=wwXIfr&rdid=nUebGMFoehh2oXyM&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1cPHBRyXcs%2F%3Fmibextid%3DwwXIfr#",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-275",
+        "name": "Shri. Chandradip Narke",
+        "constituencyNo": 275,
+        "constituency": "Karveer",
+        "social": {
+          "instagram": "https://www.instagram.com/chandradeep.narake?igsh=MTg5YjU1MTVrc3h2ZQ==",
+          "facebook": "https://www.facebook.com/share/18ZofDs9u4/?mibextid=wwXIfr",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "sangli": {
+    "mla": [
+      {
+        "id": "mla-286",
+        "name": "Shri. Suhas Anil Babar",
+        "constituencyNo": 286,
+        "constituency": "Khanapur",
+        "social": {
+          "instagram": "https://www.instagram.com/suhas0909?igsh=b3E4eTh6MmFtaHJw",
+          "facebook": "https://www.facebook.com/BabarSuhas?mibextid=wwXIfr&rdid=VgYuTVjFjIP6vbMN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18VN7afyKk%2F%3Fmibextid%3DwwXIfr#",
+          "twitter": "https://x.com/suhasbabar1311?s=21"
+        }
+      }
+    ]
+  },
+  "nandurbar": {
+    "mla": [
+      {
+        "id": "mla-1",
+        "name": "Shri. Amshya Padvi",
+        "constituencyNo": 1,
+        "constituency": "Akkalkuwa (ST)",
+        "social": {
+          "instagram": "https://www.instagram.com/amshyadadapadvi/",
+          "facebook": "https://www.facebook.com/profile.php?id=61585574160599&sk=reels_tab",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "dhule": {
+    "mla": [
+      {
+        "id": "mla-5",
+        "name": "Smt. Manjulatai Gavit",
+        "constituencyNo": 5,
+        "constituency": "Sakri (ST)",
+        "social": {
+          "instagram": "https://www.instagram.com/manjulatgavit?igsh=bHR3cXBzdHBhaWhz",
+          "facebook": "https://www.facebook.com/ManjulaTGavit?rdid=4QOgmF5FXBtuNDog&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14dzGGsyneh%2F#",
+          "twitter": "https://x.com/ManjulaTGavit"
+        }
+      }
+    ]
+  },
+  "jalgaon": {
+    "mla": [
+      {
+        "id": "mla-10",
+        "name": "Shri. Chandrakant Sonawane",
+        "constituencyNo": 10,
+        "constituency": "Chopda (ST)",
+        "social": {
+          "instagram": "",
+          "facebook": "https://www.facebook.com/pro.chandrakantsonawane",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-14",
+        "name": "Shri. Gulabrao Patil (Minister)",
+        "constituencyNo": 14,
+        "constituency": "Jalgaon Rural",
+        "social": {
+          "instagram": "https://www.instagram.com/gulabraopatilofficial",
+          "facebook": "https://www.facebook.com/share/1FaNX6Ea9L/",
+          "twitter": "https://x.com/gulabraorpatil"
+        }
+      },
+      {
+        "id": "mla-16",
+        "name": "Shri. Amol Patil",
+        "constituencyNo": 16,
+        "constituency": "Erandol",
+        "social": {
+          "instagram": "https://www.instagram.com/amoldadaofficial?igsh=a2lqdDA4ZHY1YWFm",
+          "facebook": "https://www.facebook.com/share/15ntjxmZzuf/?mibextid=wwXIfr",
+          "twitter": "https://x.com/amolpatilparola?s=11"
+        }
+      },
+      {
+        "id": "mla-18",
+        "name": "Shri. Kishor Appa Patil",
+        "constituencyNo": 18,
+        "constituency": "Pachora",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-20",
+        "name": "Shri. Chandrakant Patil",
+        "constituencyNo": 20,
+        "constituency": "Muktainagar",
+        "social": {
+          "instagram": "https://www.instagram.com/chandrakantnpatilofficial?utm_source=qr&igsh=aWViOTV6bzU0OWxs",
+          "facebook": "https://www.facebook.com/ChandrakantNPatil5?rdid=iChrSKlo8g5Ev1mA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CmzTpWgzd%2F#",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "nashik": {
+    "mla": [
+      {
+        "id": "mla-113",
+        "name": "Shri. Suhas (Anna) Kande",
+        "constituencyNo": 113,
+        "constituency": "Nandgaon",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-115",
+        "name": "Shri. Dadaji Bhuse (Minister)",
+        "constituencyNo": 115,
+        "constituency": "Malegaon Outer",
+        "social": {
+          "instagram": "https://www.instagram.com/dadaji.bhuse?igsh=MXBkZW0ydDI2aXRpeA==",
+          "facebook": "https://www.facebook.com/dadajibhuseofficial?rdid=7ibp9NFz41KflL1D&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18PytswyJY%2F#",
+          "twitter": "https://x.com/dadajibhuse"
+        }
+      }
+    ]
+  },
+  "ahmadnagar": {
+    "mla": [
+      {
+        "id": "mla-217",
+        "name": "Shri. Amol Khatal",
+        "constituencyNo": 217,
+        "constituency": "Sangamner",
+        "social": {
+          "instagram": "https://www.instagram.com/amol_khatal_patil?igsh=eXRqaHV3eW10dTZm",
+          "facebook": "https://www.facebook.com/amol.d.khatal?rdid=vQKLlXjaZLaHPfr5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Qbr7z5wCz%2F#",
+          "twitter": "https://x.com/amolkhatalpatil"
+        }
+      },
+      {
+        "id": "mla-221",
+        "name": "Shri. Vitthalrao Langhe",
+        "constituencyNo": 221,
+        "constituency": "Nevasa",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "nanded": {
+    "mla": [
+      {
+        "id": "mla-84",
+        "name": "Shri. Sambharao (Baburao) Kadam",
+        "constituencyNo": 84,
+        "constituency": "Hadgaon",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-86",
+        "name": "Shri. Balaji Kalyankar",
+        "constituencyNo": 86,
+        "constituency": "Nanded North",
+        "social": {
+          "instagram": "https://www.instagram.com/balaji_kalyankar_official",
+          "facebook": "https://www.facebook.com/balajikalyankarofc",
+          "twitter": "https://twitter.com/BdKalyankar"
+        }
+      },
+      {
+        "id": "mla-87",
+        "name": "Shri. Anand Tidke",
+        "constituencyNo": 87,
+        "constituency": "Nanded South",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "hingoli": {
+    "mla": [
+      {
+        "id": "mla-93",
+        "name": "Shri. Santosh Bangar",
+        "constituencyNo": 93,
+        "constituency": "Kalamnuri",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "jalna": {
+    "mla": [
+      {
+        "id": "mla-100",
+        "name": "Shri. Hikmat Udhan",
+        "constituencyNo": 100,
+        "constituency": "Ghansawangi",
+        "social": {
+          "instagram": "https://www.instagram.com/udhanhikmat?igsh=MXJvNnEydTY0YjRqYg==",
+          "facebook": "https://www.facebook.com/share/18vRQS4kpE/",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-101",
+        "name": "Shri. Arjun Khotkar",
+        "constituencyNo": 101,
+        "constituency": "Jalna",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "aurangabad": {
+    "mla": [
+      {
+        "id": "mla-104",
+        "name": "Shri. Abdul Sattar",
+        "constituencyNo": 104,
+        "constituency": "Sillod",
+        "social": {
+          "instagram": "https://www.instagram.com/abdulsattar_sillod?utm_source=qr&igsh=M3VrOXZwcno5Mmtq",
+          "facebook": "https://www.facebook.com/share/14aEGRkHC2x/",
+          "twitter": "https://x.com/AbdulSattar_99"
+        }
+      },
+      {
+        "id": "mla-105",
+        "name": "Smt. Ranjanatai Jadhav",
+        "constituencyNo": 105,
+        "constituency": "Kannad",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      },
+      {
+        "id": "mla-107",
+        "name": "Shri, Pradip Jiswal",
+        "constituencyNo": 107,
+        "constituency": "Ch. Sambhajinagar Central",
+        "social": {
+          "instagram": "https://www.instagram.com/pradeepjaiswalmla?igsh=MTd0M2ZhNm5iZG5tYg%3D%3D",
+          "facebook": "https://www.facebook.com/share/1DfKUPZvss/?mibextid=wwXIfr",
+          "twitter": "https://x.com/mla_pradeepj?s=21"
+        }
+      },
+      {
+        "id": "mla-108",
+        "name": "Shri. Sanjay Shirsat (Minister)",
+        "constituencyNo": 108,
+        "constituency": "Ch. Sambhajinagar West (SC)",
+        "social": {
+          "instagram": "https://www.instagram.com/sanjayshirsatmla?igsh=NmJrdzdkNnd6OWZw",
+          "facebook": "https://www.facebook.com/share/1Ak8C6SyxU/",
+          "twitter": "https://x.com/SanjayShirsat77"
+        }
+      },
+      {
+        "id": "mla-110",
+        "name": "Shri. Vilas Bhumre",
+        "constituencyNo": 110,
+        "constituency": "Paithan",
+        "social": {
+          "instagram": "https://www.instagram.com/mla_vilasbhumare?igsh=cGs3bnBoeTlsazFh",
+          "facebook": "https://www.facebook.com/VilasBhumarePatil?rdid=DFKvN9WF5644ggvp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TZpqPoZN%2F#",
+          "twitter": "https://x.com/Vilas_Bhumare"
+        }
+      },
+      {
+        "id": "mla-112",
+        "name": "Prof. Ramesh Bornare (Chief Whip)",
+        "constituencyNo": 112,
+        "constituency": "Vaijapur",
+        "social": {
+          "instagram": "https://www.instagram.com/ramesh_bornare_official?igsh=YWFvM2tvM29qajN2",
+          "facebook": "https://www.facebook.com/bornaresir?rdid=gHPa6NSRi0GXqjGT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1833umbiUX%2F#",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "dharashiv": {
+    "mla": [
+      {
+        "id": "mla-243",
+        "name": "Dr. Tanaji Sawant",
+        "constituencyNo": 243,
+        "constituency": "Paranda",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "buldhana": {
+    "mla": [
+      {
+        "id": "mla-22",
+        "name": "Shri. Sanjay Gaikwad",
+        "constituencyNo": 22,
+        "constituency": "Buldhana",
+        "social": {
+          "instagram": "https://www.instagram.com/sanjaygaikwadofficial1?igsh=YWN3Nmg3MHdjZWoy",
+          "facebook": "https://www.facebook.com/sanjaygaikwadofficial1?rdid=tHW1rA98dBrFHvDN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BLTaJkVfd%2F#",
+          "twitter": "https://x.com/sanjaygaikwad34"
+        }
+      }
+    ]
+  },
+  "nagpur": {
+    "mla": [
+      {
+        "id": "mla-59",
+        "name": "Shri. Ashish Jaiswal (MoS)",
+        "constituencyNo": 59,
+        "constituency": "Ramtek",
+        "social": {
+          "instagram": "https://www.instagram.com/adv._ashish_jaiswal/",
+          "facebook": "https://www.facebook.com/ashishjaiswalshivsena",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "bhandara": {
+    "mla": [
+      {
+        "id": "mla-61",
+        "name": "Shri. Narendra Bhondekar",
+        "constituencyNo": 61,
+        "constituency": "Bhandara (SC)",
+        "social": {
+          "instagram": "https://www.instagram.com/narendra_bhondekar?igsh=MTJ0c3c4b2c3ZG80dA==",
+          "facebook": "https://www.facebook.com/share/1DyzUSPRQY/?mibextid=wwXIf",
+          "twitter": ""
+        }
+      }
+    ]
+  },
+  "yavatmal": {
+    "mla": [
+      {
+        "id": "mla-79",
+        "name": "Shri. Sanjay Rathod (Minister)",
+        "constituencyNo": 79,
+        "constituency": "Digras",
+        "social": {
+          "instagram": "https://www.instagram.com/sanjayrathod___?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+          "facebook": "https://www.facebook.com/gorsanjaydr/",
+          "twitter": "https://x.com/SanjayDRathods?s=20"
+        }
+      }
+    ]
+  }
+}

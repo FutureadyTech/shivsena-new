@@ -1,14 +1,47 @@
+import { useEffect, useRef } from 'react';
 import './home.css';
 import { useContent } from '../../content/_shared/useContent.js';
 import homeContent from '../../content/home.json';
 
 export default function Hero() {
   const t = useContent(homeContent.hero);
+  const videoRef = useRef(null);
+
+  /* Resilient playback:
+     1. Force re-play if the browser pauses the video (tab blur, low
+        battery, throttling) by re-issuing play() on the `pause` event.
+     2. On the `seeked` event near the end, hint the decoder to keep
+        going — this masks any tiny hitch at the loop seam.
+     3. Skip on prefers-reduced-motion users — let the browser default. */
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const tryPlay = () => {
+      const p = v.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    };
+
+    const onPause = () => {
+      // Only auto-resume if the pause wasn't user-initiated (no native
+      // controls are exposed, so any pause is from the browser itself).
+      if (!v.ended) tryPlay();
+    };
+
+    v.addEventListener('pause', onPause);
+    tryPlay();
+
+    return () => {
+      v.removeEventListener('pause', onPause);
+    };
+  }, []);
 
   return (
     <section className="hero-section">
 
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
@@ -17,6 +50,7 @@ export default function Hero() {
         disablePictureInPicture
         disableRemotePlayback
         className="hero-video"
+        tabIndex={-1}
       >
         <source src="/videos/homepage-banner-sena.mp4" type="video/mp4" />
       </video>

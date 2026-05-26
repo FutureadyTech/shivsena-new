@@ -30,7 +30,7 @@ const NAV = [
       { to: '/news#photo-gallery',  key: 'nav-photo-gallery' },
     ],
   },
-  { to: '/members',      key: 'nav-members' },
+  { to: '/declarations', key: 'nav-declarations' },
   { to: '/contact',      key: 'nav-contact' },
 ];
 

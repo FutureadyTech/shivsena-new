@@ -12,16 +12,16 @@ import './leadership.css';
 
 export default function Leadership() {
   useLenis();
-  const [activeRegion, setActiveRegion] = useState('konkan');
+  /* District-level selection now — defaults to the first Konkan district */
+  const [activeDistrict, setActiveDistrict] = useState('mumbai-suburban');
   const directoryRef = useRef(null);
 
-  const handleSelectRegion = useCallback((regionKey) => {
-    setActiveRegion(regionKey);
+  const handleSelectDistrict = useCallback((districtSlug) => {
+    setActiveDistrict(districtSlug);
 
     /* Smooth scroll to the directory section */
     const el = directoryRef.current;
     if (!el) return;
-    // Prefer Lenis if available, otherwise native smooth scroll
     if (window.__lenis && typeof window.__lenis.scrollTo === 'function') {
       window.__lenis.scrollTo(el, { offset: -64, duration: 1.1 });
     } else {
@@ -35,9 +35,9 @@ export default function Leadership() {
       <CursorSparks />
       <SiteHeader />
       <LeadershipBanner />
-      <RegionMap activeRegion={activeRegion} onSelectRegion={handleSelectRegion} />
+      <RegionMap activeDistrict={activeDistrict} onSelectDistrict={handleSelectDistrict} />
       <div ref={directoryRef}>
-        <LeadersDirectory activeRegion={activeRegion} onChangeRegion={setActiveRegion} />
+        <LeadersDirectory activeDistrict={activeDistrict} onChangeDistrict={setActiveDistrict} />
       </div>
       <Footer />
     </div>

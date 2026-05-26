@@ -81,6 +81,11 @@
               box-shadow 0.4s ease;
 }
 
+.pg-tile:focus-visible {
+  outline: 2px solid var(--saffron, #C44D0E);
+  outline-offset: 3px;
+}
+
 .pg-tile:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 38px rgba(133, 65, 0, 0.20);
@@ -141,6 +146,61 @@
   left: 0; right: 0;
 }
 
+/* ── Download button on each tile (top-right corner) ── */
+.pg-tile__download {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--saffron, #C44D0E);
+  border: 1px solid rgba(196, 77, 14, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-4px) scale(0.95);
+  transition: opacity 0.25s ease,
+              transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+              background 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.25s ease;
+  z-index: 3;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Reveal on tile hover OR keyboard focus, plus always show on touch (no hover) */
+.pg-tile:hover .pg-tile__download,
+.pg-tile:focus-within .pg-tile__download,
+.pg-tile__download:focus-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (hover: none) {
+  .pg-tile__download {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pg-tile__download:hover {
+  background: var(--saffron, #C44D0E);
+  color: #fff;
+  border-color: var(--saffron, #C44D0E);
+  box-shadow: 0 10px 22px rgba(196, 77, 14, 0.36);
+  transform: translateY(-1px) scale(1.04);
+}
+
+.pg-tile__download:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 /* Reveal */
 .pg-tile.reveal {
   opacity: 0;
@@ -196,6 +256,34 @@
   background: var(--saffron, #C44D0E);
   border-color: var(--saffron, #C44D0E);
   transform: rotate(90deg);
+}
+
+.pg-lightbox__download {
+  position: absolute;
+  top: 22px;
+  right: 78px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  z-index: 2;
+  padding: 0;
+}
+.pg-lightbox__download:hover {
+  background: var(--saffron, #C44D0E);
+  border-color: var(--saffron, #C44D0E);
+  transform: scale(1.06);
+}
+.pg-lightbox__download:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .pg-lightbox__nav {

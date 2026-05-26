@@ -74,156 +74,254 @@
   gap: 26px;
 }
 
-/* ── Card ── */
+/* ═════════════════════════════════════════════════════════════
+   CARD — clean editorial: outlined index watermark, saffron
+   icon badge, restrained color, hover lift with saffron rail
+═════════════════════════════════════════════════════════════ */
 .org-card {
   position: relative;
   background: #FFFCF5;
-  border: 1px solid rgba(26, 20, 16, 0.07);
-  border-radius: 16px;
-  padding: 28px 28px 28px;
+  border: 1px solid rgba(26, 20, 16, 0.08);
+  border-radius: 18px;
+  padding: 34px 30px 28px;
   display: flex;
   flex-direction: column;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.85) inset,
-    0 8px 28px rgba(133, 65, 0, 0.07),
-    0 2px 6px rgba(133, 65, 0, 0.04);
-  transition: transform 0.4s var(--ease-out-expo, cubic-bezier(0.2,0.8,0.2,1)),
-              box-shadow 0.4s ease,
-              border-color 0.3s ease;
   overflow: hidden;
-}
-
-.org-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  height: 3px;
-  width: 100%;
-  background: linear-gradient(90deg, var(--saffron, #C44D0E), #FFB26B, var(--saffron, #C44D0E));
-  background-size: 200% 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.45s ease;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 28px rgba(133, 65, 0, 0.06);
+  transition: transform 0.45s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
+              box-shadow 0.45s ease,
+              border-color 0.3s ease;
 }
 
 .org-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(196, 77, 14, 0.22);
+  border-color: rgba(196, 77, 14, 0.28);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 22px 48px rgba(133, 65, 0, 0.14),
-    0 4px 14px rgba(133, 65, 0, 0.08);
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 26px 50px rgba(133, 65, 0, 0.16);
 }
 
-.org-card:hover::before {
-  transform: scaleX(1);
-  animation: orgRibbon 3s linear infinite;
+/* Watermark index numeral — outlined, sits behind everything */
+.org-card__index {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+  font-size: 4.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.4px rgba(196, 77, 14, 0.18);
+  letter-spacing: -0.02em;
+  user-select: none;
+  pointer-events: none;
+  transition: -webkit-text-stroke 0.4s ease, color 0.4s ease, transform 0.45s ease;
+  z-index: 0;
+}
+.org-card:hover .org-card__index {
+  color: rgba(196, 77, 14, 0.95);
+  -webkit-text-stroke-width: 0;
+  transform: translateY(-2px);
 }
 
-@keyframes orgRibbon {
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+/* Left accent rail — saffron line that fills on hover */
+.org-card__rail {
+  position: absolute;
+  left: 0;
+  top: 24%;
+  bottom: 24%;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, var(--saffron, #C44D0E) 50%, transparent);
+  border-radius: 0 3px 3px 0;
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.55s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
+  z-index: 1;
 }
+.org-card:hover .org-card__rail { transform: scaleY(1); }
 
-/* Head row — icon + tag side by side, properly aligned */
-.org-card__head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-/* Icon */
+/* Saffron-tinted icon badge */
 .org-card__icon {
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: linear-gradient(140deg, rgba(255, 178, 107, 0.22), rgba(196, 77, 14, 0.10));
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(196, 77, 14, 0.08);
   border: 1px solid rgba(196, 77, 14, 0.20);
   color: var(--saffron, #C44D0E);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s ease, background 0.4s ease, border-color 0.3s ease, box-shadow 0.4s ease;
+  margin-bottom: 22px;
+  transition: transform 0.4s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
+              background 0.4s ease,
+              color 0.4s ease,
+              border-color 0.3s ease,
+              box-shadow 0.4s ease;
+}
+.org-card__icon svg,
+.org-card__icon img,
+.org-card__icon-img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  object-fit: contain;
 }
 
-.org-card__icon svg { width: 26px; height: 26px; display: block; }
+/* Tint the Flaticon PNGs to saffron at rest (black → #C44D0E filter chain). */
+.org-card__icon-img {
+  filter: brightness(0) saturate(100%)
+          invert(31%) sepia(95%) saturate(2076%)
+          hue-rotate(8deg) brightness(95%) contrast(95%);
+  transition: filter 0.4s ease;
+}
 
 .org-card:hover .org-card__icon {
-  transform: scale(1.08);
-  background: linear-gradient(140deg, rgba(255, 178, 107, 0.36), rgba(196, 77, 14, 0.20));
-  box-shadow: 0 8px 20px rgba(196, 77, 14, 0.18);
+  background: var(--saffron, #C44D0E);
+  border-color: var(--saffron, #C44D0E);
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0 14px 28px rgba(196, 77, 14, 0.32);
 }
 
-/* Tag */
+/* When the badge fills saffron on hover, flip the PNG to white. */
+.org-card:hover .org-card__icon-img {
+  filter: brightness(0) invert(1);
+}
+
+/* Tag — uppercase line, no pill */
 .org-card__tag {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.66rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--saffron, #C44D0E);
-  line-height: 1.3;
+  margin-bottom: 12px;
+  line-height: 1;
 }
 
-/* Name */
+/* Title — bigger Devanagari */
 .org-card__name {
+  position: relative;
+  z-index: 1;
   font-family: 'Noto Sans Devanagari', sans-serif;
-  font-size: 1.28rem;
+  font-size: clamp(1.32rem, 1.9vw, 1.55rem);
   font-weight: 700;
   color: var(--ink, #1A1410);
   margin: 0 0 12px;
-  line-height: 1.3;
+  line-height: 1.25;
   letter-spacing: -0.005em;
 }
 
-/* Body */
-.org-card__body {
+/* Description */
+.org-card__desc {
+  position: relative;
+  z-index: 1;
   font-family: 'Noto Sans Devanagari', sans-serif;
-  font-size: 0.93rem;
+  font-size: 0.95rem;
   color: rgba(26, 20, 16, 0.7);
-  line-height: 1.7;
-  margin: 0;
+  line-height: 1.75;
+  margin: 0 0 22px;
+  flex: 1;
 }
 
-/* Join button (replaces the floating arrow) */
-.org-card__join {
-  margin-top: 20px;
-  align-self: flex-start;
+/* Thin divider above the footer row */
+.org-card__divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(196, 77, 14, 0.22), transparent);
+  margin: 4px 0 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer row — CTA aligned left, social icons aligned right */
+.org-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA — text-link with arrow that slides right */
+.org-card__cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 18px;
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.94rem;
   font-weight: 700;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
   color: var(--saffron, #C44D0E);
-  background: rgba(196, 77, 14, 0.08);
-  border: 1.5px solid rgba(196, 77, 14, 0.35);
-  border-radius: 999px;
-  cursor: pointer;
-  font-family: inherit;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease, gap 0.3s ease,
-              border-color 0.3s ease, transform 0.3s ease,
-              box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  transition: gap 0.3s ease, color 0.3s ease;
+}
+.org-card__cta svg { transition: transform 0.3s ease; }
+.org-card__cta::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1.5px;
+  width: 0;
+  background: var(--saffron, #C44D0E);
+  transition: width 0.4s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
+}
+.org-card:hover .org-card__cta { gap: 12px; }
+.org-card:hover .org-card__cta svg { transform: translateX(4px); }
+.org-card:hover .org-card__cta::after { width: calc(100% - 28px); }
+
+/* ── Social icon cluster (footer, right side) ── */
+.org-card__socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.org-card__join svg { transition: transform 0.3s ease; }
+.org-card__social {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(196, 77, 14, 0.08);
+  border: 1px solid rgba(196, 77, 14, 0.22);
+  color: var(--saffron, #C44D0E);
+  text-decoration: none;
+  transition: background 0.25s ease,
+              color 0.25s ease,
+              border-color 0.25s ease,
+              transform 0.3s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
+              box-shadow 0.25s ease;
+}
+.org-card__social svg { width: 13px; height: 13px; display: block; }
 
-.org-card__join:hover {
+.org-card__social:hover {
   background: var(--saffron, #C44D0E);
   color: #fff;
   border-color: var(--saffron, #C44D0E);
-  gap: 12px;
-  box-shadow: 0 10px 22px rgba(196, 77, 14, 0.28);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 8px 16px rgba(196, 77, 14, 0.32);
 }
-
-.org-card__join:hover svg { transform: translateX(4px); }
+.org-card__social:focus-visible {
+  outline: 2px solid var(--saffron, #C44D0E);
+  outline-offset: 2px;
+}
 
 /* Reveal animation */
 .org-card.reveal {
@@ -495,9 +593,14 @@
   .affiliated { padding: 90px 0 100px; }
   .affiliated__inner { padding: 0 20px; }
   .affiliated__header { margin-bottom: 44px; }
-  .affiliated__grid { grid-template-columns: 1fr; gap: 18px; }
-  .org-card { padding: 24px 22px; }
-  .org-card__name { font-size: 1.16rem; }
+  .affiliated__grid { grid-template-columns: 1fr; gap: 20px; }
+  .org-card { padding: 28px 24px 24px; }
+  .org-card__index { font-size: 3.4rem; top: 12px; right: 16px; }
+  .org-card__icon { width: 52px; height: 52px; margin-bottom: 18px; }
+  .org-card__icon svg,
+  .org-card__icon img,
+  .org-card__icon-img { width: 28px; height: 28px; }
+  .org-card__name { font-size: 1.2rem; }
 
   /* Modal */
   .org-modal { padding: 14px; }
@@ -511,10 +614,13 @@
   .affiliated__header.reveal { opacity: 1; transform: none; transition: none; }
   .org-card,
   .org-card__icon,
-  .org-card__join,
+  .org-card__index,
+  .org-card__rail,
+  .org-card__cta,
+  .org-card__cta svg,
+  .org-card__social,
   .org-modal,
   .org-modal__panel,
   .org-modal__close,
   .org-modal__success-tick { animation: none !important; transition: none; }
-  .org-card:hover::before { animation: none; }
 }

@@ -4,7 +4,7 @@ import CursorSparks from '../Home/components/CursorSparks.jsx';
 import { useLenis } from '../Home/hooks/useLenis.js';
 
 import DeclarationsBanner from './sections/DeclarationsBanner.jsx';
-import DeclarationsList from './sections/DeclarationsList.jsx';
+import ElectionDeclarations from './sections/ElectionDeclarations.jsx';
 
 import './declarations.css';
 
@@ -16,7 +16,7 @@ export default function Declarations() {
       <CursorSparks />
       <SiteHeader />
       <DeclarationsBanner />
-      <DeclarationsList />
+      <ElectionDeclarations />
       <Footer />
     </div>
   );

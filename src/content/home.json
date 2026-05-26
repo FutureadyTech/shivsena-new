@@ -216,32 +216,37 @@
     "eyebrow": "मैदानावरून",
     "title": "बातम्या आणि माध्यम",
     "viewAllLabel": "सर्व संग्रह पहा",
+    "readMoreLabel": "संपूर्ण लेख वाचा",
     "featured": {
-      "badge": "ताजी बातमी",
-      "date": "२२ मे २०२५",
-      "category": "राजकीय",
-      "title": "महापालिका निवडणुकांसाठी शिवसेना सज्ज — शिंदेंनी कार्यकर्त्यांना दिले मार्गदर्शन",
-      "excerpt": "उपमुख्यमंत्री एकनाथ शिंदे यांनी मुंबईत विविध पक्षांतून शिवसेनेत आलेल्या माजी नगरसेवकांशी संवाद साधला. मुंबई, ठाणे, पुण्यासह राज्यातील महापालिका निवडणुकांच्या पार्श्वभूमीवर त्यांनी कार्यकर्त्यांना तयारी सुरू करण्याचे निर्देश दिले.",
-      "image": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=1600&q=85&auto=format&fit=crop"
+      "badge": "महाराष्ट्र दिन",
+      "date": "१ मे २०२६",
+      "category": "विकास",
+      "title": "उपमुख्यमंत्री शिंदेंचा रोडमॅप — महाराष्ट्र देशाची पहिली $१ ट्रिलियन अर्थव्यवस्था बनवणार",
+      "excerpt": "महाराष्ट्र दिनानिमित्त उपमुख्यमंत्री एकनाथ शिंदे यांनी राज्याच्या सर्वांगीण विकासाचा महत्त्वाकांक्षी रोडमॅप मांडला. पायाभूत सुविधांचा विस्तार, डिजिटल प्रशासन सुधारणा आणि सर्वसमावेशक प्रगती यांच्या जोरावर महाराष्ट्र देशातील पहिली $१ ट्रिलियन अर्थव्यवस्था बनेल असा त्यांचा विश्वास.",
+      "image": "/news/featured-maha-day.jpg",
+      "href": "https://www.freepressjournal.in/mumbai/maharashtra-day-2026-deputy-cm-eknath-shinde-outlines-roadmap-for-states-first-1-trillion-economy"
     },
     "sidebar": [
       {
-        "date": "११ जानेवारी २०२६",
-        "category": "महापालिका",
-        "title": "महायुती बीएमसी जाहीरनामा — पाच वर्षे पाणीपट्टी जैसे थे, महिलांना बेस्टमध्ये ५०% सवलत",
-        "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&q=85&auto=format&fit=crop"
+        "date": "२० मे २०२६",
+        "category": "नेतृत्व",
+        "title": "इंधन बचतीसाठी शिंदे साहेबांचा आदर्श — खाजगी विमानाऐवजी एअर इंडियाच्या कमर्शियल फ्लाइटने दिल्ली प्रवास",
+        "image": "/news/air-india-flight.jpg",
+        "href": "https://www.freepressjournal.in/mumbai/maharashtra-deputy-cm-eknath-shinde-takes-commercial-air-india-flight-to-delhi-instead-of-private-jet-after-pm-modis-fuel-appeal"
       },
       {
-        "date": "१७ जुलै २०२५",
-        "category": "राजकीय",
-        "title": "रिपब्लिकन सेना व शिवसेनेत राजकीय युती — महाराष्ट्रात नवी आघाडी",
-        "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&q=85&auto=format&fit=crop"
+        "date": "१७ जानेवारी २०२६",
+        "category": "विजय",
+        "title": "बीएमसीत महायुतीचा ऐतिहासिक विजय — २५ वर्षांची ठाकरे सत्ता संपुष्टात",
+        "image": "/news/bmc-win.webp",
+        "href": "https://news24online.com/cities/mumbai/maharashtra-election-result-2026-live-vote-counting-updates-maharashtra-bmc-pmc-civic-body-election-result-bjp-shiv-sena-ubt-mns-congress-ncp-latest-news/713552/"
       },
       {
-        "date": "फेब्रुवारी २०२५",
-        "category": "विकास",
-        "title": "बीएमसी बजेट ७४,४२७ कोटी — पायाभूत सुविधा, आरोग्य व पाणीपुरवठ्यावर भर",
-        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=85&auto=format&fit=crop"
+        "date": "६ एप्रिल २०२६",
+        "category": "महिला सशक्तीकरण",
+        "title": "उपमुख्यमंत्री शिंदेंचे महिला आरक्षण विधेयकाला समर्थन — ३३% जागा महिलांसाठी",
+        "image": "/news/womens-bill.jpg",
+        "href": "https://thenewsmill.com/2026/04/maharashtra-deputy-cm-eknath-shinde-endorses-womens-reservation-bill-for-empowerment/"
       }
     ]
   },
@@ -249,32 +254,37 @@
     "eyebrow": "FROM THE GROUND",
     "title": "News & Media",
     "viewAllLabel": "VIEW ALL ARCHIVE",
+    "readMoreLabel": "READ FULL ARTICLE",
     "featured": {
-      "badge": "LATEST NEWS",
-      "date": "May 22, 2025",
-      "category": "POLITICS",
-      "title": "Shiv Sena Gears Up for BMC Elections — Shinde Briefs Former Corporators Across Mumbai",
-      "excerpt": "Deputy Chief Minister Eknath Shinde met with former corporators who have joined Shiv Sena from various parties across Mumbai. With civic body elections in Mumbai, Thane and Pune expected between October and December, Shinde urged workers to begin ground-level preparations immediately.",
-      "image": "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=1600&q=85&auto=format&fit=crop"
+      "badge": "MAHARASHTRA DAY",
+      "date": "May 01, 2026",
+      "category": "DEVELOPMENT",
+      "title": "Deputy CM Shinde outlines roadmap for state's first $1 trillion economy",
+      "excerpt": "On Maharashtra Day, Deputy CM Eknath Shinde presented an ambitious development blueprint targeting the state's emergence as India's inaugural $1 trillion economy, encompassing infrastructure expansion, digital governance reforms and inclusive growth initiatives.",
+      "image": "/news/featured-maha-day.jpg",
+      "href": "https://www.freepressjournal.in/mumbai/maharashtra-day-2026-deputy-cm-eknath-shinde-outlines-roadmap-for-states-first-1-trillion-economy"
     },
     "sidebar": [
       {
-        "date": "Jan 11, 2026",
-        "category": "CIVIC",
-        "title": "Mahayuti BMC Manifesto: 5-year water charge freeze and 50% bus fare relief for women",
-        "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&q=85&auto=format&fit=crop"
+        "date": "May 20, 2026",
+        "category": "LEADERSHIP",
+        "title": "Shinde takes commercial Air India flight to Delhi instead of private jet — answers PM's fuel appeal",
+        "image": "/news/air-india-flight.jpg",
+        "href": "https://www.freepressjournal.in/mumbai/maharashtra-deputy-cm-eknath-shinde-takes-commercial-air-india-flight-to-delhi-instead-of-private-jet-after-pm-modis-fuel-appeal"
       },
       {
-        "date": "Jul 17, 2025",
-        "category": "ALLIANCE",
-        "title": "Republican Sena and Shiv Sena forge political alliance, strengthening Mahayuti in Maharashtra",
-        "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&q=85&auto=format&fit=crop"
+        "date": "Jan 17, 2026",
+        "category": "VICTORY",
+        "title": "Mahayuti sweeps BMC — historic end to 25-year Thackeray stronghold in Mumbai",
+        "image": "/news/bmc-win.webp",
+        "href": "https://news24online.com/cities/mumbai/maharashtra-election-result-2026-live-vote-counting-updates-maharashtra-bmc-pmc-civic-body-election-result-bjp-shiv-sena-ubt-mns-congress-ncp-latest-news/713552/"
       },
       {
-        "date": "Feb 2025",
-        "category": "DEVELOPMENT",
-        "title": "BMC presents record Rs 74,427 crore budget focused on infrastructure, health and water supply",
-        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=85&auto=format&fit=crop"
+        "date": "Apr 06, 2026",
+        "category": "WOMEN'S RIGHTS",
+        "title": "Deputy CM Shinde endorses Women's Reservation Bill — 33% seats reserved for women",
+        "image": "/news/womens-bill.jpg",
+        "href": "https://thenewsmill.com/2026/04/maharashtra-deputy-cm-eknath-shinde-endorses-womens-reservation-bill-for-empowerment/"
       }
     ]
   }
@@ -564,11 +574,12 @@
         {
           "heading": "नेव्हिगेट करा",
           "links": [
-            { "label": "होम",        "href": "/home" },
-            { "label": "आमच्याबद्दल", "href": "/about" },
-            { "label": "बातम्या",     "href": "/news" },
-            { "label": "नेतृत्व",     "href": "/leadership" },
-            { "label": "सदस्य",      "href": "/members" }
+            { "label": "होम",                "href": "/home" },
+            { "label": "आमच्याबद्दल",          "href": "/about" },
+            { "label": "नेतृत्व",              "href": "/leadership" },
+            { "label": "नावीन्यपूर्ण उपक्रम",   "href": "/innovative" },
+            { "label": "बातम्या",             "href": "/news" },
+            { "label": "उमेदवार माहिती",       "href": "/declarations" }
           ]
         },
         {
@@ -577,14 +588,14 @@
             { "label": "स्वयंसेवक",   "href": "#" },
             { "label": "देणगी द्या",   "href": "#" },
             { "label": "कार्यालय शोधा", "href": "#offices" },
-            { "label": "प्रेस रिलीज",  "href": "#" },
+            { "label": "प्रेस रिलीज",  "href": "/news#press-releases" },
             { "label": "वार्षिक अहवाल", "href": "#" }
           ]
         },
         {
           "heading": "संपर्क",
           "links": [
-            { "label": "संपर्क साधा",  "href": "#" },
+            { "label": "संपर्क साधा",  "href": "/contact" },
             { "label": "करिअर",       "href": "#" },
             { "label": "गोपनीयता धोरण", "href": "#" },
             { "label": "वापराच्या अटी", "href": "#" }
@@ -597,6 +608,18 @@
         "emailPlaceholder": "ईमेल पत्ता",
         "submitLabel": "सबस्क्राइब करा"
       },
+      "addresses": [
+        {
+          "labelKey": "reg",
+          "label": "नोंदणीकृत पत्ता",
+          "value": "Agiary Ln, Near Talao Pali, Jambli Naka, Thane West, Thane, Maharashtra 400601"
+        },
+        {
+          "labelKey": "corresp",
+          "label": "पत्रव्यवहाराचा पत्ता",
+          "value": "C-2, Brahmagiri (Balasaheb Bhavan), Madam Cama Road, Opposite Mantralaya, Nariman Point, Mumbai 21"
+        }
+      ],
       "copyright": "© 2026 शिवसेना. सर्व हक्क राखीव."
     },
     "en": {
@@ -607,11 +630,12 @@
         {
           "heading": "Navigate",
           "links": [
-            { "label": "Home",       "href": "/home" },
-            { "label": "About",      "href": "/about" },
-            { "label": "News",       "href": "/news" },
-            { "label": "Leadership", "href": "/leadership" },
-            { "label": "Members",    "href": "/members" }
+            { "label": "Home",                   "href": "/home" },
+            { "label": "About",                  "href": "/about" },
+            { "label": "Leadership",             "href": "/leadership" },
+            { "label": "Innovative Initiatives", "href": "/innovative" },
+            { "label": "News",                   "href": "/news" },
+            { "label": "Declarations",           "href": "/declarations" }
           ]
         },
         {
@@ -620,14 +644,14 @@
             { "label": "Volunteer",      "href": "#" },
             { "label": "Donate",         "href": "#" },
             { "label": "Find Office",    "href": "#offices" },
-            { "label": "Press Releases", "href": "#" },
+            { "label": "Press Releases", "href": "/news#press-releases" },
             { "label": "Annual Reports", "href": "#" }
           ]
         },
         {
           "heading": "Connect",
           "links": [
-            { "label": "Contact",        "href": "#" },
+            { "label": "Contact",        "href": "/contact" },
             { "label": "Careers",        "href": "#" },
             { "label": "Privacy Policy", "href": "#" },
             { "label": "Terms of Use",   "href": "#" }
@@ -640,6 +664,18 @@
         "emailPlaceholder": "Email address",
         "submitLabel": "Subscribe"
       },
+      "addresses": [
+        {
+          "labelKey": "reg",
+          "label": "Registered Address",
+          "value": "Agiary Ln, Near Talao Pali, Jambli Naka, Thane West, Thane, Maharashtra 400601"
+        },
+        {
+          "labelKey": "corresp",
+          "label": "Correspondence Address",
+          "value": "C-2, Brahmagiri (Balasaheb Bhavan), Madam Cama Road, Opposite Mantralaya, Nariman Point, Mumbai 21"
+        }
+      ],
       "copyright": "© 2026 Shiv Sena. All rights reserved."
     }
   }

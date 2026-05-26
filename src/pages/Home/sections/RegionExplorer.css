@@ -68,11 +68,36 @@
 }
 
 .region-explorer__svg-wrap {
+  position: relative;
   background: rgba(26, 20, 16, 0.03);
   border-radius: 16px;
   border: 1px solid rgba(26, 20, 16, 0.07);
   padding: 24px;
   overflow: hidden;
+}
+
+/* Floating district name that follows the cursor */
+.region-tooltip {
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  padding: 6px 12px;
+  background: var(--ink, #1A1410);
+  color: #FAF6EE;
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+  transform: translate(14px, 14px);
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  animation: tooltipFadeIn 0.12s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+  from { opacity: 0; transform: translate(14px, 18px); }
+  to   { opacity: 1; transform: translate(14px, 14px); }
 }
 
 .region-explorer__svg {
@@ -95,11 +120,16 @@
   fill: var(--region-color-dim, rgba(196, 77, 14, 0.15));
   stroke: var(--paper, #FAF6EE);
   stroke-width: 0.8;
-  transition: fill 0.2s ease, filter 0.2s ease;
+  transition: fill 0.2s ease, filter 0.2s ease, stroke-width 0.2s ease;
   cursor: pointer;
 }
 
-.mh-district:hover,
+/* Soft hover hint — interactive feedback only, NOT a selection */
+.mh-district:hover {
+  fill: var(--region-color-mid, rgba(196, 77, 14, 0.5));
+}
+
+/* Active = the district the user actually clicked */
 .mh-district--active {
   fill: var(--region-color, #C44D0E);
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
@@ -112,6 +142,42 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* ── District sub-picker (narrower chips below division pills) ── */
+.region-explorer__districts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(26, 20, 16, 0.12);
+}
+
+.region-district-chip {
+  padding: 5px 11px;
+  background: rgba(26, 20, 16, 0.04);
+  border: 1px solid rgba(26, 20, 16, 0.1);
+  border-radius: 999px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(26, 20, 16, 0.7);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.region-district-chip:hover {
+  color: var(--ink, #1A1410);
+  background: rgba(196, 77, 14, 0.08);
+  border-color: rgba(196, 77, 14, 0.25);
+}
+
+.region-district-chip.is-active {
+  background: var(--pill-color, #C44D0E);
+  border-color: var(--pill-color, #C44D0E);
+  color: #fff;
+  font-weight: 600;
 }
 
 .region-legend-pill {
@@ -238,11 +304,22 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  width: 100%;
   padding: 14px 28px;
+  border: none;
   border-bottom: 1px solid rgba(26, 20, 16, 0.05);
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
   cursor: pointer;
   transition: background 0.15s ease;
   animation: memberFadeIn 0.35s ease both;
+}
+
+.region-member:focus-visible {
+  outline: 2px solid var(--active-color, #C44D0E);
+  outline-offset: -2px;
 }
 
 @keyframes memberFadeIn {

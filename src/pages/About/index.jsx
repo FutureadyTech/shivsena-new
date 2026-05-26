@@ -20,7 +20,7 @@ export default function About() {
       <SiteHeader />
       <AboutBanner />
       <OurJourney />
-      <LeadershipCarousel content={aboutContent.leadership} gridCols={4} />
+      <LeadershipCarousel content={aboutContent.leadership} gridCols={3} />
       <AffiliatedOrgs />
       <Footer />
     </div>

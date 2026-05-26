@@ -426,12 +426,28 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   transform: translate3d(-50%, -50%, 0);
   object-fit: cover;
   z-index: 0;
+  pointer-events: none;
   will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 /* ── OVERLAY STACK ── */
+
+/* All overlay layers below are decorative and must NOT block pointer
+   events on the hero CTAs, and should sit on their own compositor
+   layer so they never trigger a video-element repaint. */
+.hero-section .ov-base,
+.hero-section .ov-pattern,
+.hero-section .ov-spotlight,
+.hero-section .ov-light-tl,
+.hero-section .ov-light-br,
+.hero-section .ov-top,
+.hero-section .ov-bottom {
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: opacity;
+}
 
 .ov-base {
   position: absolute;
@@ -479,7 +495,9 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
     rgba(255, 160, 0, 0.16) 0%,
     transparent 68%
   );
-  animation: flickerGlow 7s ease-in-out infinite;
+  /* flickerGlow animation removed — animating opacity on a viewport-
+     sized gradient was forcing per-frame repaints that contended with
+     the hero video's GPU decoding and caused playback to stutter. */
 }
 
 .ov-light-br {
