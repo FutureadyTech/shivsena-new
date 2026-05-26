@@ -288,6 +288,62 @@
   box-shadow: 0 0 14px rgba(244, 214, 138, 0.15);
 }
 
+/* ─── Address strip (above copyright) ─── */
+.footer__addresses {
+  border-top: 1px solid rgba(244, 214, 138, 0.12);
+  padding: 22px 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.footer__address-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.footer__address {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer__address-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--saffron-glow, #FFB26B);
+}
+
+.footer__address-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.footer__address-label {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--saffron-glow, #FFB26B);
+}
+
+.footer__address-value {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(255, 245, 220, 0.78);
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .footer__address-list { grid-template-columns: 1fr; gap: 18px; }
+}
+
 /* ─── Bottom strip ─── */
 .footer__bottom {
   border-top: 1px solid rgba(244, 214, 138, 0.12);

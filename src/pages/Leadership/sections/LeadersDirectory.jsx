@@ -145,18 +145,24 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
     });
 
     return [
-      {
-        id: 'state',
-        title: t.stateHeader,
-        groups: STATE_CATEGORIES.map((k) => buildGroup(k, stateMap)),
-      },
+      /* District-specific data first — these are the leaders the user
+         expects to see when they click a district pill. */
       {
         id: 'regional',
         title: t.regionalHeader,
+        subtitle: t.regionalSubtitle,
         groups: REGIONAL_CATEGORIES.map((k) => buildGroup(k, regionalMap)),
       },
+      /* State-wide party hierarchy — shown below so it's clearly secondary
+         and labelled as state-wide, not district-specific. */
+      {
+        id: 'state',
+        title: t.stateHeader,
+        subtitle: t.stateSubtitle,
+        groups: STATE_CATEGORIES.map((k) => buildGroup(k, stateMap)),
+      },
     ];
-  }, [activeDistrict, activeDivision, categoryNames, t.stateHeader, t.regionalHeader]);
+  }, [activeDistrict, activeDivision, categoryNames, t.stateHeader, t.regionalHeader, t.stateSubtitle, t.regionalSubtitle]);
 
   const title = (t.titleTemplate || '{region}').replace('{region}', districtLabel);
 
@@ -177,7 +183,12 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
             <div key={section.id} className={`dir-section-group dir-section-group--${section.id}`}>
               <div className="dir-group-head">
                 <span className="dir-group-rule" />
-                <h3 className="dir-group-title">{section.title}</h3>
+                <div className="dir-group-titlewrap">
+                  <h3 className="dir-group-title">{section.title}</h3>
+                  {section.subtitle && (
+                    <p className="dir-group-subtitle">{section.subtitle}</p>
+                  )}
+                </div>
                 <span className="dir-group-rule" />
               </div>
               {section.groups.map((group) => (
