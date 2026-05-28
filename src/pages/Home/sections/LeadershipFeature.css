@@ -1,0 +1,326 @@
+/* ═══════════════════════════════════════════════════════════════
+   LEADERSHIP FEATURE — alternating left/right editorial blocks
+   Same visual language as Innovative Programs, retuned for leader bios.
+═══════════════════════════════════════════════════════════════ */
+.lf {
+  position: relative;
+  padding: clamp(96px, 12vw, 150px) 48px clamp(110px, 13vw, 160px);
+  background: var(--paper, #FAF6EE);
+  overflow: hidden;
+}
+
+/* Ambient glows */
+.lf__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(20px);
+}
+.lf__glow--tl {
+  width: 520px; height: 520px;
+  top: -180px; left: -160px;
+  background: radial-gradient(circle, rgba(255, 178, 107, 0.16) 0%, transparent 70%);
+}
+.lf__glow--br {
+  width: 620px; height: 620px;
+  bottom: -240px; right: -200px;
+  background: radial-gradient(circle, rgba(196, 77, 14, 0.10) 0%, transparent 70%);
+}
+
+.lf__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Section header ── */
+.lf__header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 96px;
+}
+.lf__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: var(--saffron-on-light, #C44D0E);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.lf__eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: var(--saffron-on-light, #C44D0E);
+}
+.lf__title {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink, #1A1410);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ── List of feature blocks ── */
+.lf__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+}
+
+/* ─── Single feature block ─── */
+.lf-feat {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 72px;
+}
+
+/* Right-orientation: swap visual order so the image lands on the right */
+.lf-feat--right .lf-feat__media { order: 2; }
+.lf-feat--right .lf-feat__body  { order: 1; }
+
+/* Big outlined watermark numeral, anchored to the opposite side
+   of the body so it never overlaps the text awkwardly. */
+.lf-feat__index {
+  position: absolute;
+  top: -64px;
+  font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+  font-size: clamp(7rem, 14vw, 13rem);
+  font-weight: 400;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(196, 77, 14, 0.18);
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.02em;
+}
+.lf-feat--left  .lf-feat__index { right: 0; }
+.lf-feat--right .lf-feat__index { left: 0; }
+
+/* ─── Media block ─── */
+.lf-feat__media {
+  position: relative;
+  height: 500px;
+}
+.lf-feat__media:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 50px 90px -34px rgba(196, 77, 14, 0.4),
+    0 0 0 1px rgba(196, 77, 14, 0.22);
+}
+
+.lf-feat__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 22px;
+  background: var(--paper-soft, #FCFBF7);
+  box-shadow:
+    0 30px 70px -28px rgba(26, 20, 16, 0.34),
+    0 0 0 1px var(--hairline, rgba(26, 20, 16, 0.1));
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.6s ease;
+  filter: saturate(0.97) contrast(1.02);
+}
+.lf-feat:hover .lf-feat__media img {
+  transform: scale(1.02);
+  filter: saturate(1.05) contrast(1.04);
+}
+
+/* glow span left inert — no longer used but harmless if rendered */
+.lf-feat__media-glow { display: none; }
+
+/* ─── Body block ─── */
+.lf-feat__body {
+  position: relative;
+  z-index: 1;
+}
+
+.lf-feat__eyebrow {
+  display: inline-block;
+  font-family: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: var(--saffron-on-light, #C44D0E);
+  padding: 7px 16px;
+  background: rgba(255, 107, 26, 0.08);
+  border: 1px solid rgba(255, 107, 26, 0.20);
+  border-radius: 999px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.lf-feat__title {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--saffron-on-light, #C44D0E);
+  margin: 0 0 6px;
+  letter-spacing: -0.005em;
+}
+
+.lf-feat__name {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--ink, #1A1410);
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.lf-feat__role {
+  display: inline-block;
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--ink-soft, #2E2820);
+  background: rgba(26, 20, 16, 0.04);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 0 0 10px;
+}
+
+.lf-feat__dates {
+  font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  color: var(--body-light, #847B6E);
+  margin: 0 0 18px;
+}
+
+.lf-feat__lede {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-style: italic;
+  font-size: clamp(1.02rem, 1.3vw, 1.18rem);
+  color: rgba(196, 77, 14, 0.92);
+  line-height: 1.6;
+  margin: 0 0 18px;
+  padding-left: 16px;
+  border-left: 3px solid rgba(196, 77, 14, 0.55);
+}
+
+.lf-feat__body-text {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--body-text, #5C544A);
+  margin: 0 0 26px;
+}
+
+/* CTA */
+.lf-feat__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--saffron-on-light, #C44D0E);
+  background: transparent;
+  border: 1.5px solid var(--saffron-on-light, #C44D0E);
+  border-radius: 999px;
+  padding: 12px 26px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.35s ease, background 0.35s ease, transform 0.35s ease;
+}
+.lf-feat__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--saffron-on-light, #C44D0E);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 0;
+}
+.lf-feat__cta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+.lf-feat__cta:hover::before { transform: scaleX(1); }
+.lf-feat__cta > * { position: relative; z-index: 1; }
+.lf-feat__cta svg { transition: transform 0.35s ease; }
+.lf-feat__cta:hover svg { transform: translateX(4px); }
+
+/* ─── Reveal animation ─── */
+.lf .reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition:
+    opacity 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)) var(--reveal-delay, 0s),
+    transform 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)) var(--reveal-delay, 0s);
+}
+.lf .reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .lf { padding: 96px 28px 120px; }
+  .lf__header { margin-bottom: 64px; }
+  .lf__list { gap: 90px; }
+  .lf-feat { gap: 48px; }
+  .lf-feat__index { font-size: clamp(6rem, 16vw, 10rem); top: -42px; }
+  .lf-feat__name { font-size: clamp(1.7rem, 4vw, 2.2rem); }
+}
+
+@media (max-width: 768px) {
+  .lf { padding: 72px 18px 96px; }
+  .lf__list { gap: 64px; }
+
+  .lf-feat {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  /* Mobile: image always on top, body below, regardless of orientation */
+  .lf-feat--right .lf-feat__media { order: 0; }
+  .lf-feat--right .lf-feat__body  { order: 1; }
+
+  .lf-feat__media { height: 340px; }
+
+  .lf-feat__index {
+    top: -28px;
+    font-size: clamp(5rem, 18vw, 7rem);
+    -webkit-text-stroke: 1.2px rgba(196, 77, 14, 0.18);
+  }
+  .lf-feat--left  .lf-feat__index,
+  .lf-feat--right .lf-feat__index { left: auto; right: 6px; }
+
+  .lf-feat__title { font-size: 1.2rem; }
+  .lf-feat__name  { font-size: clamp(1.6rem, 6vw, 2rem); }
+  .lf-feat__lede  { font-size: 1rem; padding-left: 12px; }
+  .lf-feat__cta   { padding: 11px 22px; font-size: 0.76rem; letter-spacing: 0.18em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lf-feat__media,
+  .lf-feat__media img,
+  .lf .reveal,
+  .lf-feat__cta::before { transition: none !important; }
+  .lf .reveal { opacity: 1 !important; transform: none !important; }
+}

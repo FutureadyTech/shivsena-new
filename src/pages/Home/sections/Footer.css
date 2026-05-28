@@ -68,7 +68,7 @@
 
 .footer__brand-tag {
   font-family: var(--font-display-dev);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--saffron-glow);
   letter-spacing: 0.2em;
   margin-top: 4px;
@@ -76,7 +76,7 @@
 
 .footer__about {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: rgba(255, 245, 220, 0.7);
   margin-bottom: 24px;
@@ -151,8 +151,8 @@
 /* ─── Link columns ─── */
 .footer__col-title {
   font-family: var(--font-display-en);
-  font-size: 0.74rem;
-  letter-spacing: 0.4em;
+  font-size: 0.88rem;
+  letter-spacing: 0.36em;
   color: var(--gold-bright);
   font-weight: 500;
   margin-bottom: 22px;
@@ -172,8 +172,8 @@
   display: inline-flex;
   align-items: center;
   font-family: var(--font-body);
-  font-size: 0.92rem;
-  color: rgba(255, 245, 220, 0.7);
+  font-size: 1.02rem;
+  color: rgba(255, 245, 220, 0.78);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.4s var(--ease-out-expo);
   position: relative;
@@ -325,8 +325,8 @@
 
 .footer__address-label {
   font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--saffron-glow, #FFB26B);
@@ -334,9 +334,9 @@
 
 .footer__address-value {
   font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.85rem;
-  line-height: 1.55;
-  color: rgba(255, 245, 220, 0.78);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: rgba(255, 245, 220, 0.85);
   letter-spacing: 0.01em;
 }
 
@@ -361,14 +361,14 @@
 
 .footer__copyright {
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: rgba(255, 245, 220, 0.5);
+  font-size: 0.92rem;
+  color: rgba(255, 245, 220, 0.6);
   letter-spacing: 0.02em;
 }
 
 .footer__jai {
   font-family: var(--font-display-dev);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--saffron-glow);
   letter-spacing: 0.1em;
   text-shadow: 0 0 12px rgba(255, 178, 107, 0.25);

@@ -65,7 +65,13 @@ export default function Hero() {
 
       <div className="hero-content">
         <p className="hero-tagline">{t.eyebrow}</p>
-        <h1 className="hero-main-title">{t.title}</h1>
+        <h1 className="hero-main-title">
+          <img
+            src="/Logo/sena-logo.webp"
+            alt={t.title}
+            className="hero-main-title__img"
+          />
+        </h1>
         <p className="hero-para">{t.subtitle}</p>
         <div className="hero-ctas">
           <a href="#join" className="hero-cta-btn" data-cursor="link">

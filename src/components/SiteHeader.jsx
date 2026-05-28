@@ -8,15 +8,7 @@ import LanguageToggle from './LanguageToggle.jsx';
    Children are rendered as a submenu under the parent on hover/focus. */
 const NAV = [
   { to: '/home',         key: 'nav-home' },
-  {
-    key: 'nav-about',
-    to: '/about',
-    children: [
-      { to: '/about#history',    key: 'nav-history' },
-      { to: '/leadership',       key: 'nav-leadership' },
-      { to: '/about#affiliated', key: 'nav-affiliated' },
-    ],
-  },
+  { to: '/about',        key: 'nav-about' },
   { to: '/leadership',   key: 'nav-leadership' },
   { to: '/innovative',   key: 'nav-innovative' },
   {

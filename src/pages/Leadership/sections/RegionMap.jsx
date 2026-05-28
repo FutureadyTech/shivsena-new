@@ -184,9 +184,9 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
                   DIVISION_LABELS[d.division]?.en ||
                   '';
                 const isActive = d.slug === activeDistrict;
-                const countLabel = d.mlaCount > 0
-                  ? ` · ${d.mlaCount} ${lang === 'mr' ? 'आमदार' : 'MLAs'}`
-                  : '';
+                /* Always render the count for consistency — "0 आमदार" is
+                   a real signal that no Shiv Sena MLA is from that district. */
+                const countLabel = ` · ${d.mlaCount} ${lang === 'mr' ? 'आमदार' : 'MLAs'}`;
                 return (
                   <button
                     key={d.slug}

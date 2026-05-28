@@ -1,7 +1,6 @@
 import LanguageSwitcher from './LanguageSwitcher.jsx';
-import SoundToggle from './SoundToggle.jsx';
 
-export default function Header({ soundEnabled, onSoundToggle }) {
+export default function Header() {
   return (
     <header className="site-header" id="header">
       <a href="#" className="brand">
@@ -10,7 +9,6 @@ export default function Header({ soundEnabled, onSoundToggle }) {
 
       <div className="header-controls">
         <LanguageSwitcher />
-        <SoundToggle enabled={soundEnabled} onToggle={onSoundToggle} />
       </div>
     </header>
   );

@@ -1,8 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const FULL_VOLUME = 0.5;
-const FADE_MS     = 700;
+const FULL_VOLUME    = 0.5;
+const FADE_MS        = 600;
+/* How far the user has to scroll down on /home before the audio mutes.
+   ~half the viewport feels natural — past the hero, into content. */
+const SCROLL_MUTE_PX = () => window.innerHeight * 0.5;
 
 /* Smoothly ramp the audio element's volume to a target value over
    `duration` milliseconds. Cancels any in-flight fade first. */
@@ -23,140 +26,123 @@ function makeFader() {
   };
 }
 
-/* Interaction events we listen for to either kick off playback (when
-   the browser has blocked autoplay even with muted=true) or unmute
-   an already-playing-muted track. */
-const INTERACTION_EVENTS = [
-  'pointerdown', 'click', 'touchstart',
-  'keydown', 'mousemove', 'scroll', 'wheel',
-];
-
 /**
- * Global ambient audio.
+ * Global ambient audio controller.
  *
- * Bootstrap strategy:
- *  1. Skip on the entrance ('/') — the WelcomeBanner button starts the
- *     loop with a real user gesture.
- *  2. On every other route (including a direct URL visit to /home, /about,
- *     etc.), immediately create an Audio element and try to play it
- *     **muted** — modern browsers allow muted autoplay even without a
- *     prior user gesture.
- *  3. Once playing (muted), attach one-shot listeners that **unmute** on
- *     the first user interaction (move mouse, scroll, click, …). Result:
- *     audio feels like it starts on visit + becomes audible the moment
- *     the user does anything.
- *  4. If even muted autoplay is blocked, fall back to the original
- *     "wait for first gesture, then play unmuted" path.
- *
- * Scroll-mute on /home is handled in the second effect: fade to 0 when
- * the hero scrolls out of view, fade back when it returns.
+ * Hard rules:
+ *  - Audio plays ONLY on /home. On every other route it's paused.
+ *  - On /home, the audio fades to 0 once the user scrolls past the hero,
+ *    and fades back when they scroll back up.
+ *  - The Entrance ('/') page handles its own audio kickoff via the
+ *    WelcomeBanner "Enter" button (which sets window.__ambientAudio).
+ *    This component only governs playback state from that point on.
  */
 export default function AmbientAudio() {
   const { pathname } = useLocation();
   const faderRef = useRef(null);
   if (!faderRef.current) faderRef.current = makeFader();
 
-  /* ── Bootstrap ── */
   useEffect(() => {
-    if (pathname === '/') return;
-    if (window.__ambientAudio) return;
+    /* ── On routes OTHER than /home: pause audio if it exists ── */
+    if (pathname !== '/home') {
+      const audio = window.__ambientAudio;
+      if (audio && !audio.paused) {
+        /* Fade quickly to 0, then pause so it's a clean stop. */
+        faderRef.current(audio, 0, 300);
+        setTimeout(() => {
+          if (audio && !audio.paused) audio.pause();
+        }, 350);
+      }
+      return;
+    }
+
+    /* ── On /home: ensure audio is alive + playing ── */
+    const ensurePlaying = () => {
+      let audio = window.__ambientAudio;
+      if (!audio) {
+        /* No global instance yet (user landed directly on /home).
+           Create one and try muted-autoplay (browser-allowed),
+           then unmute on first interaction. */
+        audio = new Audio('/ambient.mp3');
+        audio.loop = true;
+        audio.volume = FULL_VOLUME;
+        audio.preload = 'auto';
+        audio.muted = true;
+
+        audio.play()
+          .then(() => {
+            window.__ambientAudio = audio;
+            armUnmuteOnGesture(audio);
+          })
+          .catch(() => {
+            /* Even muted autoplay blocked — wait for first gesture to play. */
+            armPlayOnGesture(audio);
+          });
+        return;
+      }
+
+      /* Existing instance — make sure it's audible + resuming. */
+      audio.muted = false;
+      if (audio.volume === 0) audio.volume = FULL_VOLUME;
+      if (audio.paused) {
+        audio.play().catch(() => {
+          /* Resume might be blocked if user hasn't interacted yet on this
+             session — arm a one-shot gesture listener to try again. */
+          armPlayOnGesture(audio);
+        });
+      }
+    };
 
     let cleanupListeners = () => {};
+    const INTERACTION_EVENTS = ['pointerdown', 'click', 'touchstart', 'keydown', 'mousemove', 'scroll', 'wheel'];
 
-    const armForGesture = (audio) => {
-      /* Either: trigger the first play() (fallback path), or just unmute
-         an already-playing muted track. We decide based on whether the
-         audio has a play state. */
+    function armUnmuteOnGesture(audio) {
       const handler = () => {
-        if (!audio) return;
-        if (audio.paused) {
-          audio.muted = false;
-          audio.play().catch(() => {});
-        } else {
-          audio.muted = false;
-        }
+        audio.muted = false;
         cleanupListeners();
       };
       INTERACTION_EVENTS.forEach((ev) =>
         window.addEventListener(ev, handler, { once: true, passive: true })
       );
-      cleanupListeners = () => {
-        INTERACTION_EVENTS.forEach((ev) =>
-          window.removeEventListener(ev, handler)
-        );
+      cleanupListeners = () => INTERACTION_EVENTS.forEach((ev) =>
+        window.removeEventListener(ev, handler)
+      );
+    }
+    function armPlayOnGesture(audio) {
+      const handler = () => {
+        audio.muted = false;
+        audio.play()
+          .then(() => { window.__ambientAudio = audio; })
+          .catch(() => {});
+        cleanupListeners();
       };
-    };
-
-    const audio = new Audio('/ambient.mp3');
-    audio.loop = true;
-    audio.volume = FULL_VOLUME;
-    audio.preload = 'auto';
-    audio.muted = true; // Muted-autoplay is allowed by most browsers
-
-    audio.play()
-      .then(() => {
-        /* Muted autoplay succeeded. Expose globally and arm the unmute
-           listener for the very next user interaction. */
-        window.__ambientAudio = audio;
-        armForGesture(audio);
-      })
-      .catch(() => {
-        /* Even muted autoplay was blocked. Wait for a user gesture,
-           then create-and-play in one go inside the event handler so
-           the browser sees the activation. */
-        const playOnGesture = () => {
-          audio.muted = false;
-          audio.play()
-            .then(() => { window.__ambientAudio = audio; })
-            .catch(() => {});
-          cleanupListeners();
-        };
-        INTERACTION_EVENTS.forEach((ev) =>
-          window.addEventListener(ev, playOnGesture, { once: true, passive: true })
-        );
-        cleanupListeners = () => {
-          INTERACTION_EVENTS.forEach((ev) =>
-            window.removeEventListener(ev, playOnGesture)
-          );
-        };
-      });
-
-    return () => cleanupListeners();
-  }, [pathname]);
-
-  /* ── Scroll-mute on the home page ── */
-  useEffect(() => {
-    if (pathname !== '/home') {
-      const audio = window.__ambientAudio;
-      if (audio) faderRef.current(audio, FULL_VOLUME);
-      return;
+      INTERACTION_EVENTS.forEach((ev) =>
+        window.addEventListener(ev, handler, { once: true, passive: true })
+      );
+      cleanupListeners = () => INTERACTION_EVENTS.forEach((ev) =>
+        window.removeEventListener(ev, handler)
+      );
     }
 
-    let observer = null;
-    let cancelled = false;
+    ensurePlaying();
 
-    const tryAttach = () => {
-      if (cancelled) return;
-      const hero = document.querySelector('.hero, .hero-section');
-      if (!hero) {
-        setTimeout(tryAttach, 100);
-        return;
-      }
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          const audio = window.__ambientAudio;
-          if (!audio) return;
-          faderRef.current(audio, entry.isIntersecting ? FULL_VOLUME : 0);
-        },
-        { rootMargin: '-40% 0px -40% 0px', threshold: 0 }
-      );
-      observer.observe(hero);
+    /* ── Scroll-mute: fade to 0 once user scrolls past the hero ── */
+    let lastMuted = null;
+    const onScroll = () => {
+      const audio = window.__ambientAudio;
+      if (!audio) return;
+      const shouldMute = window.scrollY > SCROLL_MUTE_PX();
+      if (shouldMute === lastMuted) return;
+      lastMuted = shouldMute;
+      faderRef.current(audio, shouldMute ? 0 : FULL_VOLUME);
     };
-    tryAttach();
+    /* Run once on mount so the volume matches current scroll position. */
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
-      cancelled = true;
-      if (observer) observer.disconnect();
+      window.removeEventListener('scroll', onScroll);
+      cleanupListeners();
     };
   }, [pathname]);
 

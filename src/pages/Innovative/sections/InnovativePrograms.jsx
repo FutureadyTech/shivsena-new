@@ -46,11 +46,6 @@ function Program({ program, index, lang }) {
       ref={ref}
       className={`inn-prog inn-prog--${orientation} reveal`}
     >
-      {/* Big index number for visual rhythm */}
-      <span className="inn-prog__index" aria-hidden="true">
-        {String(index + 1).padStart(2, '0')}
-      </span>
-
       <div className="inn-prog__media">
         <img
           src={program.image}

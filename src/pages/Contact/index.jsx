@@ -6,7 +6,6 @@ import { useLenis } from '../Home/hooks/useLenis.js';
 import ContactBanner from './sections/ContactBanner.jsx';
 import ContactInfo from './sections/ContactInfo.jsx';
 import ContactForm from './sections/ContactForm.jsx';
-import MapSection from './sections/MapSection.jsx';
 import SocialMedia from './sections/SocialMedia.jsx';
 
 import './contact.css';
@@ -21,7 +20,6 @@ export default function Contact() {
       <ContactBanner />
       <ContactInfo />
       <ContactForm />
-      <MapSection />
       <SocialMedia />
       <Footer />
     </div>

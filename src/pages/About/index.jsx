@@ -1,6 +1,6 @@
 import SiteHeader from '../../components/SiteHeader.jsx';
 import Footer from '../Home/sections/Footer.jsx';
-import LeadershipCarousel from '../Home/sections/LeadershipCarousel.jsx';
+import LeadershipFeature from '../Home/sections/LeadershipFeature.jsx';
 import OurJourney from '../Home/sections/OurJourney.jsx';
 import CursorSparks from '../Home/components/CursorSparks.jsx';
 import { useLenis } from '../Home/hooks/useLenis.js';
@@ -20,7 +20,7 @@ export default function About() {
       <SiteHeader />
       <AboutBanner />
       <OurJourney />
-      <LeadershipCarousel content={aboutContent.leadership} gridCols={3} />
+      <LeadershipFeature content={aboutContent.leadership} />
       <AffiliatedOrgs />
       <Footer />
     </div>

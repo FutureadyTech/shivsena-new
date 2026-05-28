@@ -63,11 +63,11 @@
   margin: 0;
 }
 
-/* Grid */
+/* Grid — 5 platforms (FB, IG, X, YT, WA) fit in one row at desktop. */
 .sm-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
 }
 
 /* Card — all platforms share the brand saffron palette */

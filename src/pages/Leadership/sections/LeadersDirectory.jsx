@@ -23,6 +23,7 @@ const REGION_COLORS = {
 const STATE_CATEGORIES = [
   'topLeader',
   'ministers',
+  'mp',
   'mlc',
   'leaders',
   'deputyLeaders',
@@ -117,6 +118,7 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
     const stateMap = {
       topLeader:            state.topLeader            || [],
       ministers:            state.ministers            || [],
+      mp:                   state.mp                   || [],
       mlc:                  state.mlc                  || [],
       leaders:              state.leaders              || [],
       deputyLeaders:        state.deputyLeaders        || [],
@@ -131,11 +133,37 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
       yuvaSena:             state.yuvaSena             || [],
     };
 
+    /* Filter division-wide lists down to entries that explicitly mention
+       the active district in their role text. The PDFs use a consistent
+       pattern: "<district> — <area description>" or "<sub-region> —
+       <district list>". Substring-match on the district's Marathi name
+       works for most entries; the alias map handles the few PDFs that
+       use a shortened or alternate form ("संभाजीनगर" vs the formal
+       "छत्रपती संभाजीनगर"). */
+    const DISTRICT_ALIASES = {
+      'aurangabad':      ['छत्रपती संभाजीनगर', 'संभाजीनगर', 'औरंगाबाद'],
+      'mumbai-city':     ['मुंबई शहर'],
+      'mumbai-suburban': ['मुंबई उपनगर'],
+      'ahmadnagar':      ['अहमदनगर', 'नगर'],
+      'dharashiv':       ['धाराशिव', 'उस्मानाबाद'],
+      'sindhudurg':      ['सिंधुदुर्ग'],
+    };
+    const aliases = DISTRICT_ALIASES[activeDistrict] || [DISTRICTS[activeDistrict]?.mr].filter(Boolean);
+    const districtNameEn = DISTRICTS[activeDistrict]?.en || '';
+    const matchesDistrict = (m) => {
+      if (!m?.role) return false;
+      for (const a of aliases) {
+        if (a && m.role.includes(a)) return true;
+      }
+      if (districtNameEn && m.role.includes(districtNameEn)) return true;
+      return false;
+    };
+
     const regionalMap = {
       mla:                      districtData.mla               || region.mla                     || [],
-      divisionalContactHeads:   region.divisionalContactHeads   || [],
-      divisionalCoContactHeads: region.divisionalCoContactHeads || [],
-      womenDistrictHeads:       region.womenDistrictHeads       || [],
+      divisionalContactHeads:   (region.divisionalContactHeads   || []).filter(matchesDistrict),
+      divisionalCoContactHeads: (region.divisionalCoContactHeads || []).filter(matchesDistrict),
+      womenDistrictHeads:       (region.womenDistrictHeads       || []).filter(matchesDistrict),
     };
 
     const buildGroup = (key, map) => ({
@@ -144,22 +172,19 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
       items: (map[key] || []).slice(0, ITEMS_PER_CATEGORY),
     });
 
+    /* Only show the district-specific section. State-level party hierarchy
+       (Ministers, MLCs, Spokespersons, etc.) is intentionally NOT shown
+       here — the directory is district-scoped per user request.
+       Empty categories are dropped so the page doesn't show stub headers
+       like "Women District Heads (0)" when no one matches. */
     return [
-      /* District-specific data first — these are the leaders the user
-         expects to see when they click a district pill. */
       {
         id: 'regional',
         title: t.regionalHeader,
         subtitle: t.regionalSubtitle,
-        groups: REGIONAL_CATEGORIES.map((k) => buildGroup(k, regionalMap)),
-      },
-      /* State-wide party hierarchy — shown below so it's clearly secondary
-         and labelled as state-wide, not district-specific. */
-      {
-        id: 'state',
-        title: t.stateHeader,
-        subtitle: t.stateSubtitle,
-        groups: STATE_CATEGORIES.map((k) => buildGroup(k, stateMap)),
+        groups: REGIONAL_CATEGORIES
+          .map((k) => buildGroup(k, regionalMap))
+          .filter((g) => g.items.length > 0),
       },
     ];
   }, [activeDistrict, activeDivision, categoryNames, t.stateHeader, t.regionalHeader, t.stateSubtitle, t.regionalSubtitle]);

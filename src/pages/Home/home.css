@@ -558,20 +558,25 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
 }
 
 .hero-main-title {
-    /* Default = Marathi / Hindi look (Khand). Per-lang overrides below
-       switch to Montserrat 900 for English. */
-    font-family: 'Khand', 'Noto Sans Devanagari', sans-serif;
-    font-size: clamp(3.5rem, 9vw, 8rem);
     font-weight: 700;
     color: #F34F00;
     line-height: 1;
-    letter-spacing: -1px;
     text-transform: uppercase;
     margin: 0;
-    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* English headline → Montserrat 900, tighter tracking */
+.hero-main-title__img {
+    width: clamp(200px, 32vw, 460px);
+    height: auto;
+    display: block;
+    animation: fadeUp 1s ease 0.4s both;
+}
+
+/* English headline → Montserrat 900, tighter tracking (only matters
+   if the image is missing — text fallback). */
 html[lang="en"] .hero-main-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;

@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════════════════════════════
+   MAHAYUTI BANNER — cinematic hero shared with other top pages
+═══════════════════════════════════════════════════════════════ */
+.my-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 620px;
+  overflow: hidden;
+  background: #050200;
+}
+
+.my-banner__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: myBannerPan 22s ease-in-out infinite;
+  filter: saturate(1.05) contrast(1.04);
+}
+@keyframes myBannerPan {
+  0%   { transform: scale(1.06) translate3d(0, 0, 0); }
+  50%  { transform: scale(1.10) translate3d(-1.5%, -1%, 0); }
+  100% { transform: scale(1.06) translate3d(0, 0, 0); }
+}
+
+.my-banner .ov-base {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(160deg,
+    rgba(5, 2, 0, 0.78) 0%,
+    rgba(10, 5, 0, 0.58) 45%,
+    rgba(5, 2, 0, 0.84) 100%);
+}
+.my-banner .ov-pattern {
+  position: absolute; inset: 0; z-index: 2;
+  background-image: repeating-linear-gradient(-45deg,
+    rgba(255, 180, 0, 0.022) 0px,
+    rgba(255, 180, 0, 0.022) 1px,
+    transparent 1px,
+    transparent 44px);
+}
+.my-banner .ov-spotlight {
+  position: absolute; inset: 0; z-index: 3;
+  background: radial-gradient(ellipse 60% 55% at 50% 48%,
+    rgba(255, 180, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.22) 55%,
+    rgba(0, 0, 0, 0.55) 100%);
+}
+.my-banner .ov-light-tl {
+  position: absolute; inset: 0; z-index: 3;
+  background: radial-gradient(ellipse 55% 50% at 12% 18%,
+    rgba(255, 160, 0, 0.16) 0%, transparent 68%);
+}
+.my-banner .ov-light-br {
+  position: absolute; inset: 0; z-index: 3;
+  background: radial-gradient(ellipse 45% 40% at 90% 88%,
+    rgba(200, 100, 0, 0.12) 0%, transparent 65%);
+}
+.my-banner .ov-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 22%; z-index: 4;
+  background: linear-gradient(to bottom, rgba(4, 2, 0, 0.7) 0%, transparent 100%);
+}
+.my-banner .ov-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 38%; z-index: 4;
+  background: linear-gradient(to top, rgba(4, 2, 0, 0.94) 0%, transparent 100%);
+}
+
+.my-banner__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 5;
+  text-align: center;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.my-banner__eyebrow {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  letter-spacing: 0.3em;
+  color: rgba(255, 215, 0, 0.85);
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  animation: myFadeUp 1s ease 0.2s both;
+}
+
+.my-banner__title {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(3rem, 7.5vw, 6.5rem);
+  font-weight: 700;
+  color: #fb691a;
+  line-height: 1.05;
+  margin: 0;
+  padding-top: 18px;
+  text-shadow: 0 6px 36px rgba(0, 0, 0, 0.4);
+  animation: myFadeUp 1s ease 0.4s both;
+}
+
+.my-banner__divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFD700, #fff, #FFD700, transparent);
+  background-size: 200% 100%;
+  margin: 26px auto 1.6rem auto;
+  border-radius: 2px;
+  animation: myFadeUp 1s ease 0.6s both;
+}
+
+.my-banner__lede {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.18rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto;
+  letter-spacing: 0.02em;
+  animation: myFadeUp 1s ease 0.85s both;
+}
+
+@keyframes myFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .my-banner { min-height: 520px; }
+  .my-banner__content { transform: translate(-50%, -50%); }
+  .my-banner__lede { max-width: 86vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .my-banner__image { animation: none; }
+  .my-banner__eyebrow,
+  .my-banner__title,
+  .my-banner__divider,
+  .my-banner__lede { animation: none; }
+}

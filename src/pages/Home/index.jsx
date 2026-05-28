@@ -1,7 +1,7 @@
 import SiteHeader from '../../components/SiteHeader.jsx';
 import Hero from './Hero.jsx';
 import VisionIdeology from './sections/VisionIdeology.jsx';
-import LeadershipCarousel from './sections/LeadershipCarousel.jsx';
+import LeadershipFeature from './sections/LeadershipFeature.jsx';
 import OurJourney from './sections/OurJourney.jsx';
 import NewsMedia from './sections/NewsMedia.jsx';
 import SocialFeed from './sections/SocialFeed.jsx';
@@ -22,7 +22,7 @@ export default function Home() {
       <SiteHeader />
       <Hero />
       <VisionIdeology />
-      <LeadershipCarousel gridCols={3} />
+      <LeadershipFeature />
       <OurJourney />
       <NewsMedia />
       <SocialFeed />

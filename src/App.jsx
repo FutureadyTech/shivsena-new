@@ -11,6 +11,7 @@ import Declarations from './pages/Declarations/index.jsx';
 import AffiliatedOrg from './pages/AffiliatedOrg/index.jsx';
 import LeaderProfile from './pages/LeaderProfile/index.jsx';
 import Innovative from './pages/Innovative/index.jsx';
+import Mahayuti from './pages/Mahayuti/index.jsx';
 import AmbientAudio from './components/AmbientAudio.jsx';
 
 /* Reset scroll to the top on every route change.
@@ -95,6 +96,7 @@ export default function App() {
           <Route path="/affiliated/:slug" element={<AffiliatedOrg />} />
           <Route path="/leader/:slug" element={<LeaderProfile />} />
           <Route path="/innovative" element={<Innovative />} />
+          <Route path="/mahayuti" element={<Mahayuti />} />
           <Route path="/shivsena-live" element={<ComingSoon title="शिवसेना लाइव्ह" />} />
           <Route path="/members" element={<ComingSoon title="Members" />} />
           <Route path="*" element={<ComingSoon title="Page Not Found" />} />

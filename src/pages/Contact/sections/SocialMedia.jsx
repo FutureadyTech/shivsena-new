@@ -22,8 +22,8 @@ const SOCIAL_ICONS = {
     </svg>
   ),
   youtube: (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M23 12a11.34 11.34 0 0 0-.18-2.07 2.88 2.88 0 0 0-2-2c-1.78-.46-8.82-.46-8.82-.46s-7.04 0-8.82.46a2.88 2.88 0 0 0-2 2A11.34 11.34 0 0 0 1 12a11.34 11.34 0 0 0 .18 2.07 2.88 2.88 0 0 0 2 2c1.78.46 8.82.46 8.82.46s7.04 0 8.82-.46a2.88 2.88 0 0 0 2-2A11.34 11.34 0 0 0 23 12zM9.75 15.5v-7l5.85 3.5z"/>
+    <svg viewBox="0 0 24 24" fill="currentColor" fillRule="evenodd" aria-hidden="true">
+      <path d="M21.582 6.186a2.506 2.506 0 0 0-1.768-1.768C18.254 4 12 4 12 4s-6.254 0-7.814.418A2.506 2.506 0 0 0 2.418 6.186C2 7.746 2 12 2 12s0 4.254.418 5.814a2.506 2.506 0 0 0 1.768 1.768C5.746 20 12 20 12 20s6.254 0 7.814-.418a2.506 2.506 0 0 0 1.768-1.768C22 16.254 22 12 22 12s0-4.254-.418-5.814zM10 15.464V8.536L16 12l-6 3.464z"/>
     </svg>
   ),
   whatsapp: (
@@ -78,7 +78,6 @@ function SocialCard({ item, index }) {
     >
       <span className="sm-card__icon" aria-hidden="true">{icon}</span>
       <span className="sm-card__name">{item.name}</span>
-      <span className="sm-card__handle">{item.handle}</span>
       <span className="sm-card__arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" />
