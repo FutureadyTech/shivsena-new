@@ -1,45 +1,41 @@
-import { useState, useCallback, useRef } from 'react';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import Footer from '../Home/sections/Footer.jsx';
 import CursorSparks from '../Home/components/CursorSparks.jsx';
 import { useLenis } from '../Home/hooks/useLenis.js';
 
 import LeadershipBanner from './sections/LeadershipBanner.jsx';
-import RegionMap from './sections/RegionMap.jsx';
 import LeadersDirectory from './sections/LeadersDirectory.jsx';
+import RegionExplorer from '../Home/sections/RegionExplorer.jsx';
 
 import './leadership.css';
 
+/* ═══════════════════════════════════════════════════════════════
+   LEADERSHIP PAGE
+
+   1. Banner
+   2. ALL nine category carousels — every leader, no district filter
+      (mode='all' on LeadersDirectory aggregates + dedupes across
+       all districts)
+   3. RegionExplorer — the same district-aware map+side-panel
+      component that the homepage uses, embedded as-is for users
+      who want to drill into a specific district.
+═══════════════════════════════════════════════════════════════ */
 export default function Leadership() {
   useLenis();
-  /* District-level selection now defaults to the first Konkan district */
-  const [activeDistrict, setActiveDistrict] = useState('mumbai');
-  const directoryRef = useRef(null);
-
-  const handleSelectDistrict = useCallback((districtSlug) => {
- setActiveDistrict(districtSlug);
-
- /* Smooth scroll to the directory section */
- const el = directoryRef.current;
- if (!el) return;
- if (window.__lenis && typeof window.__lenis.scrollTo === 'function') {
- window.__lenis.scrollTo(el, { offset: -64, duration: 1.1 });
- } else {
- const top = el.getBoundingClientRect().top + window.scrollY - 64;
- window.scrollTo({ top, behavior: 'smooth' });
- }
-  }, []);
 
   return (
- <div className="leadership-page">
- <CursorSparks />
- <SiteHeader />
- <LeadershipBanner />
- <RegionMap activeDistrict={activeDistrict} onSelectDistrict={handleSelectDistrict} />
- <div ref={directoryRef}>
- <LeadersDirectory activeDistrict={activeDistrict} onChangeDistrict={setActiveDistrict} />
- </div>
- <Footer />
- </div>
+    <div className="leadership-page">
+      <CursorSparks />
+      <SiteHeader />
+      <LeadershipBanner />
+
+      {/* ── All 9 carousels, unfiltered ────────────────────────── */}
+      <LeadersDirectory mode="all" activeDistrict="mumbai" />
+
+      {/* ── Homepage map + district panel, embedded as-is ─────── */}
+      <RegionExplorer />
+
+      <Footer />
+    </div>
   );
 }

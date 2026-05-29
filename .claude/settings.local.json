@@ -20,7 +20,8 @@
       "Read(//c/Users/Admin/Downloads/**)",
       "Bash(rm -rf \"shivsena-clean/shivsena-clean/details/Shared by the client/_extracted\")",
       "WebFetch(domain:www.instagram.com)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(cd \"/c/Users/Admin/Downloads/shivsena-clean/shivsena-clean\" && echo \"=== Hero / Banners ===\" && grep -rh \"\\\\.hero-video\\\\|\\\\.hero-section\\\\|hero-yt\\\\|aboutBanner\\\\|news-banner\\\\|contact-banner\\\\|decl-banner\\\\|inn-banner\\\\|lp-banner__image\\\\|ssj-banner\\\\|my-banner\\\\|ldr-banner\" --include=\"*.css\" src/ 2>/dev/null | grep -E \"height|width|aspect\" | head -15 *)"
     ]
   }
 }

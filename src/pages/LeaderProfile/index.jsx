@@ -57,9 +57,6 @@ export default function LeaderProfile() {
  <section className="lp-body">
  <div className="lp-body__inner">
 
- <div ref={headerRef} className="lp-body__intro reveal">
- <p className="lp-body__lede">{t.lede}</p>
- </div>
 
  <article ref={bodyRef} className="lp-body__article reveal">
  <figure className="lp-body__figure">

@@ -74,7 +74,7 @@ const photoFor = (member) => {
   return isFemale(member.name) ? FEMALE_PLACEHOLDER : MALE_PLACEHOLDER;
 };
 
-export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
+export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mode = 'district' }) {
   const { lang: language } = useLanguage();
   const lang = language === 'mr' ? 'mr' : 'en';
 
@@ -82,11 +82,20 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
   const categoryNames = leadershipContent.categories[lang] || leadershipContent.categories.mr;
   const headerRef = useScrollReveal(0.2);
 
+  const isAllMode = mode === 'all';
+
   /* Resolve the active district's parent division (for fallback data lookups
  against the existing region-level lists). */
   const activeDistrictMeta = DISTRICTS[activeDistrict] || { division: 'konkan' };
   const activeDivision = activeDistrictMeta.division;
   const districtLabel = activeDistrictMeta[lang] || activeDistrictMeta.en || activeDistrict;
+
+  /* "All Leadership" mode header text — shows above the carousels
+     when we're ignoring the district filter. */
+  const allModeTitle = lang === 'mr' ? 'सर्व शिवसेना नेतृत्व' : 'All Shiv Sena Leadership';
+  const allModeSubtitle = lang === 'mr'
+    ? 'संपूर्ण महाराष्ट्रातील सर्व श्रेणींमधील नेतृत्व — कोणत्याही जिल्हा निवडीशिवाय.'
+    : 'Every category, statewide — no district filter applied.';
 
   /* Popup state clicking any member card opens it with that member's info */
   const [selectedLeader, setSelectedLeader] = useState(null);
@@ -115,67 +124,102 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
  });
   }, [lang]);
 
-  /* Build the per-district dataset from leaders-by-district.json.
- Every district shows all 9 categories. When a category has zero
- real members we emit EMPTY_PLACEHOLDER_COUNT placeholders so the
- row never collapses. MLA entries are enriched from mlas-by-district
- (which has social handles + photos) where the data exists. */
+  /* Build the dataset from leaders-by-district.json.
+     - mode='district': filter to the active district (existing behaviour)
+     - mode='all':      aggregate across every district, dedup by
+                        name+role+phone so state-level rosters
+                        (नेते / उपनेते) don't show 35× duplicates.
+     Every category shows all 9 categories. When a category has zero
+     real members we emit EMPTY_PLACEHOLDER_COUNT placeholders so the
+     row never collapses. MLA entries are enriched from mlas-by-district
+     (which has social handles + photos) where the data exists. */
   const sections = useMemo(() => {
- const districtBucket = leadersByDistrict[activeDistrict] || {};
- const mlaWithSocials = (mlasByDistrict[activeDistrict] && mlasByDistrict[activeDistrict].mla) || [];
+    const allMlaSocials = isAllMode
+      ? Object.values(mlasByDistrict || {}).flatMap((d) => (d && d.mla) || [])
+      : ((mlasByDistrict[activeDistrict] && mlasByDistrict[activeDistrict].mla) || []);
 
- /* Merge the per-district MLA list with the social-handle data
- keyed by constituency number. Falls back to the unenriched
- entry from leaders-by-district.json when no match exists. */
- const enrichMlas = (entries) => {
- if (!Array.isArray(entries) || entries.length === 0) return entries || [];
- const byConst = new Map();
- for (const m of mlaWithSocials) {
- if (m.constituencyNo != null) byConst.set(String(m.constituencyNo), m);
- }
- return entries.map((e) => {
- const enrich = e.constituencyNo != null && byConst.get(String(e.constituencyNo));
- return enrich ? { ...e, ...enrich } : e;
- });
- };
+    /* Merge MLA entries with social-handle data keyed by constituency
+       number. Falls back to the unenriched entry from
+       leaders-by-district.json when no match exists. */
+    const enrichMlas = (entries) => {
+      if (!Array.isArray(entries) || entries.length === 0) return entries || [];
+      const byConst = new Map();
+      for (const m of allMlaSocials) {
+        if (m.constituencyNo != null) byConst.set(String(m.constituencyNo), m);
+      }
+      return entries.map((e) => {
+        const enrich = e.constituencyNo != null && byConst.get(String(e.constituencyNo));
+        return enrich ? { ...e, ...enrich } : e;
+      });
+    };
 
- const placeholdersFor = (categoryKey) => {
- const arr = [];
- for (let i = 0; i < EMPTY_PLACEHOLDER_COUNT; i++) {
- arr.push({
- id: `placeholder-${categoryKey}-${i}`,
- isPlaceholder: true,
- name: PLACEHOLDER_LABEL[lang] || PLACEHOLDER_LABEL.mr,
- role: categoryNames[categoryKey] || '',
- /* Use the same male/female placeholder PNG the real cards
- fall back to, so the empty slot looks like a real card. */
- photo: i % 2 === 0 ? MALE_PLACEHOLDER : FEMALE_PLACEHOLDER,
- });
- }
- return arr;
- };
+    const placeholdersFor = (categoryKey) => {
+      const arr = [];
+      for (let i = 0; i < EMPTY_PLACEHOLDER_COUNT; i++) {
+        arr.push({
+          id: `placeholder-${categoryKey}-${i}`,
+          isPlaceholder: true,
+          name: PLACEHOLDER_LABEL[lang] || PLACEHOLDER_LABEL.mr,
+          role: categoryNames[categoryKey] || '',
+          photo: i % 2 === 0 ? MALE_PLACEHOLDER : FEMALE_PLACEHOLDER,
+        });
+      }
+      return arr;
+    };
 
- const buildGroup = (key) => {
- let items = districtBucket[key] || [];
- if (key === 'mla') items = enrichMlas(items);
- const isEmpty = items.length === 0;
- return {
- key,
- label: categoryNames[key] || key,
- items: (isEmpty ? placeholdersFor(key) : items).slice(0, ITEMS_PER_CATEGORY),
- isEmpty,
- };
- };
+    /* "All Leadership" mode: walk every district, concatenate each
+       category, then dedup by name+role+phone. */
+    const collectAllForCategory = (key) => {
+      const seen = new Set();
+      const out = [];
+      for (const districtSlug of Object.keys(leadersByDistrict)) {
+        const arr = leadersByDistrict[districtSlug]?.[key] || [];
+        for (const m of arr) {
+          const dedupKey = (m.name || '') + '|' + (m.role || '') + '|' + (m.phone || '');
+          if (seen.has(dedupKey)) continue;
+          seen.add(dedupKey);
+          out.push(m);
+        }
+      }
+      return out;
+    };
 
- return [{
- id: 'district',
- title: t.regionalHeader,
- subtitle: t.regionalSubtitle,
- groups: DISTRICT_CATEGORIES.map(buildGroup),
- }];
-  }, [activeDistrict, categoryNames, lang, t.regionalHeader, t.regionalSubtitle]);
+    const districtBucket = leadersByDistrict[activeDistrict] || {};
 
-  const title = (t.titleTemplate || '{region}').replace('{region}', districtLabel);
+    const buildGroup = (key) => {
+      let items = isAllMode
+        ? collectAllForCategory(key)
+        : (districtBucket[key] || []);
+      if (key === 'mla') items = enrichMlas(items);
+      const isEmpty = items.length === 0;
+      return {
+        key,
+        label: categoryNames[key] || key,
+        items: (isEmpty ? placeholdersFor(key) : items).slice(0, ITEMS_PER_CATEGORY),
+        isEmpty,
+      };
+    };
+
+    if (isAllMode) {
+      return [{
+        id: 'all',
+        title: allModeTitle,
+        subtitle: allModeSubtitle,
+        groups: DISTRICT_CATEGORIES.map(buildGroup),
+      }];
+    }
+
+    return [{
+      id: 'district',
+      title: t.regionalHeader,
+      subtitle: t.regionalSubtitle,
+      groups: DISTRICT_CATEGORIES.map(buildGroup),
+    }];
+  }, [activeDistrict, categoryNames, lang, t.regionalHeader, t.regionalSubtitle, isAllMode, allModeTitle, allModeSubtitle]);
+
+  const title = isAllMode
+    ? allModeTitle
+    : (t.titleTemplate || '{region}').replace('{region}', districtLabel);
 
   return (
  <section className="dir-section">

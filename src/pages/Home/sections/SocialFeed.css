@@ -83,6 +83,26 @@
   gap: 22px;
 }
 
+/* ─── Elfsight widget container ─────────────────────────────────
+   The widget injects its own internal grid + styles, so we just
+   give it room to breathe and a subtle reveal animation. */
+.social__elfsight {
+  width: 100%;
+  min-height: 320px;
+}
+.social__elfsight.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.social__elfsight.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .social__elfsight.reveal { opacity: 1; transform: none; transition: none; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
  POST CARD
 ═══════════════════════════════════════════════════════════════ */
