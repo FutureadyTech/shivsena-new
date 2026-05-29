@@ -3,7 +3,9 @@
 ═══════════════════════════════════════════════════════════════ */
 .vision {
   position: relative;
-  padding: 140px 48px 160px;
+  /* Tightened from 140 / 160 — too much empty band before the
+     next section on the home page. */
+  padding: 110px 48px 80px;
   background: var(--paper);
   overflow: hidden;
 }

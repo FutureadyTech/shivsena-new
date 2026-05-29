@@ -1,0 +1,417 @@
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE HAMBURGER + OVERLAY MENU
+   Hidden above 1023px. Below that, hamburger appears on the right
+   of the header; tapping it opens a full-screen saffron-tinted
+   slide-in panel with staggered nav reveals.
+═══════════════════════════════════════════════════════════════ */
+
+/* Hidden by default — only shown when viewport ≤ 1023px (below). */
+.site-nav__burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--saffron-on-light);
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  z-index: 110;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.site-nav__burger:hover {
+  background: rgba(255, 107, 26, 0.08);
+}
+.site-nav__burger-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--saffron-on-light);
+  border-radius: 2px;
+  transition:
+    transform 0.5s cubic-bezier(0.5, 0.2, 0.3, 1),
+    opacity 0.3s ease,
+    width 0.4s ease;
+  transform-origin: center;
+}
+
+/* Hamburger → X animation */
+.site-nav__burger.is-open {
+  background: var(--saffron-on-light);
+  border-color: var(--saffron-on-light);
+}
+.site-nav__burger.is-open .site-nav__burger-line { background: #fff; }
+.site-nav__burger.is-open .site-nav__burger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  width: 22px;
+}
+.site-nav__burger.is-open .site-nav__burger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.site-nav__burger.is-open .site-nav__burger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  width: 22px;
+}
+
+/* Burger over dark hero — invert the colors */
+body.has-dark-hero-visible .site-nav__burger {
+  border-color: var(--saffron);
+}
+body.has-dark-hero-visible .site-nav__burger-line { background: var(--gold-bright); }
+body.has-dark-hero-visible .site-nav__burger:hover {
+  background: rgba(255, 178, 107, 0.12);
+}
+
+/* ── Backdrop (dimmer behind the panel) ── */
+.site-mobile__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  background: rgba(10, 5, 0, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.site-mobile__backdrop.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ── Panel itself ── */
+.site-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(420px, 92vw);
+  z-index: 99;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 90% 60% at 100% 0%, rgba(255, 178, 107, 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 70% at 0% 100%, rgba(196, 77, 14, 0.30) 0%, transparent 60%),
+    linear-gradient(165deg, #FFF8EB 0%, #FAF6EE 40%, #F4E4BC 100%);
+  box-shadow: -28px 0 60px -20px rgba(133, 65, 0, 0.4);
+  border-left: 1px solid rgba(196, 77, 14, 0.18);
+  transform: translateX(105%);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+}
+.site-mobile.is-open { transform: translateX(0); }
+
+.site-mobile__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+}
+.site-mobile__glow--tl {
+  top: -120px; left: -90px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(255, 200, 130, 0.55) 0%, transparent 70%);
+}
+.site-mobile__glow--br {
+  bottom: -140px; right: -80px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(196, 77, 14, 0.30) 0%, transparent 70%);
+}
+
+/* Giant Devanagari ornament watermark behind the menu */
+.site-mobile__watermark {
+  position: absolute;
+  top: 30%;
+  right: -40px;
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 280px;
+  line-height: 1;
+  color: rgba(196, 77, 14, 0.08);
+  font-weight: 700;
+  pointer-events: none;
+  user-select: none;
+}
+
+.site-mobile__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 100px 32px 32px;
+  overflow-y: auto;
+}
+
+/* ── Top eyebrow (॥ ब्रॅंड ॥) ── */
+.site-mobile__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 36px;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
+}
+.site-mobile.is-open .site-mobile__head {
+  opacity: 1;
+  transform: translateY(0);
+}
+.site-mobile__ornament {
+  color: var(--saffron-on-light);
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.site-mobile__eyebrow {
+  font-family: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--saffron-on-light);
+  font-weight: 700;
+}
+
+/* ── Nav list ── */
+.site-mobile__nav { flex: 1; }
+.site-mobile__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.site-mobile__item {
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--item-delay, 0s),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) var(--item-delay, 0s);
+}
+.site-mobile.is-open .site-mobile__item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.site-mobile__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+/* Numeral on the left (01, 02, 03 …) */
+.site-mobile__num {
+  font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  color: rgba(196, 77, 14, 0.5);
+  font-weight: 700;
+  min-width: 28px;
+  border-right: 1px solid rgba(196, 77, 14, 0.2);
+  padding-right: 12px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+/* The link */
+.site-mobile__link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 4px;
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.35s ease, padding 0.35s ease;
+}
+.site-mobile__link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  height: 2px;
+  width: 0;
+  background: var(--saffron-on-light);
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.5, 0.2, 0.3, 1);
+}
+.site-mobile__link:hover,
+.site-mobile__link.is-active {
+  color: var(--saffron-on-light);
+}
+.site-mobile__link:hover::before,
+.site-mobile__link.is-active::before {
+  width: 60%;
+}
+.site-mobile__arrow {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.35s ease;
+}
+.site-mobile__link:hover .site-mobile__arrow,
+.site-mobile__link.is-active .site-mobile__arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--saffron-on-light);
+}
+.site-mobile__caret {
+  color: var(--saffron-on-light);
+  opacity: 0.55;
+  transition: transform 0.4s var(--ease-out-expo), opacity 0.3s ease;
+}
+.site-mobile__item.is-expanded .site-mobile__caret {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Sub-list accordion */
+.site-mobile__sublist {
+  list-style: none;
+  padding: 0 0 0 44px;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.site-mobile__item.is-expanded .site-mobile__sublist {
+  max-height: 320px;
+  padding-bottom: 10px;
+}
+.site-mobile__subitem {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.35s ease, transform 0.4s ease;
+}
+.site-mobile__item.is-expanded .site-mobile__subitem {
+  opacity: 1;
+  transform: translateX(0);
+}
+.site-mobile__item.is-expanded .site-mobile__subitem:nth-child(1) { transition-delay: 0.05s; }
+.site-mobile__item.is-expanded .site-mobile__subitem:nth-child(2) { transition-delay: 0.10s; }
+.site-mobile__item.is-expanded .site-mobile__subitem:nth-child(3) { transition-delay: 0.15s; }
+.site-mobile__item.is-expanded .site-mobile__subitem:nth-child(4) { transition-delay: 0.20s; }
+.site-mobile__item.is-expanded .site-mobile__subitem:nth-child(5) { transition-delay: 0.25s; }
+
+.site-mobile__sublink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 4px;
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.95rem;
+  color: var(--body-text);
+  text-decoration: none;
+  transition: color 0.3s ease, padding 0.3s ease;
+}
+.site-mobile__subdot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--saffron-on-light);
+  opacity: 0.4;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.site-mobile__sublink:hover,
+.site-mobile__sublink.is-active {
+  color: var(--saffron-on-light);
+  padding-left: 8px;
+}
+.site-mobile__sublink:hover .site-mobile__subdot,
+.site-mobile__sublink.is-active .site-mobile__subdot {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+/* ── Footer (LIVE + Language toggle) ── */
+.site-mobile__foot {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(196, 77, 14, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.6s ease 0.55s,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.55s;
+}
+.site-mobile.is-open .site-mobile__foot {
+  opacity: 1;
+  transform: translateY(0);
+}
+.site-mobile__live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--saffron-on-light);
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.site-mobile__live:hover {
+  background: #A03908;
+  transform: translateY(-1px);
+}
+.site-mobile__live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: liveDotPulse 1.6s ease-in-out infinite;
+}
+.site-mobile__lang { display: flex; align-items: center; }
+
+/* Closing ornament under the footer */
+.site-mobile__closer-ornament {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.4rem;
+  color: rgba(196, 77, 14, 0.35);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* ── Show / hide based on viewport ── */
+@media (max-width: 1023px) {
+  .site-nav__menu,
+  .site-nav__live,
+  .site-nav .lang-toggle {
+    display: none;
+  }
+  .site-nav__burger { display: inline-flex; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-mobile,
+  .site-mobile__item,
+  .site-mobile__head,
+  .site-mobile__foot,
+  .site-mobile__subitem,
+  .site-nav__burger-line { transition: none !important; }
+}

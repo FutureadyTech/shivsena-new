@@ -299,47 +299,23 @@
   margin: 0;
 }
 
-/* ── Placeholder card shown when a district has no real members in a
- given role. Same dimensions as the real card so the row stays even. */
+/* ── Placeholder member card same layout as a real card, just with a
+   placeholder photo + "to be announced" label. The card is non-
+   interactive no hover lift, no clickable view-more button. */
 .dir-card--placeholder {
-  background:
- linear-gradient(160deg, var(--paper-soft, #FCFBF7) 0%, var(--paper-deep, #F2EBDD) 100%);
-  border: 1px dashed rgba(196, 77, 14, 0.28);
-  box-shadow: 0 8px 22px rgba(133, 65, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 24px;
   cursor: default;
 }
 .dir-card--placeholder:hover {
   transform: none;
-  box-shadow: 0 8px 22px rgba(133, 65, 0, 0.06);
-  border-color: rgba(196, 77, 14, 0.45);
+  box-shadow: 0 10px 28px rgba(133, 65, 0, 0.12);
 }
-.dir-card__placeholder-art {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: rgba(196, 77, 14, 0.08);
-  border: 1px solid rgba(196, 77, 14, 0.18);
-  color: rgba(196, 77, 14, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.dir-card__placeholder-body {
-  text-align: center;
+.dir-card--placeholder .dir-card__bg {
+  opacity: 0.55;
+  filter: grayscale(0.3) saturate(0.85);
 }
 .dir-card--placeholder .dir-card__name {
-  position: static;
-  color: rgba(26, 20, 16, 0.55);
-  font-family: 'Noto Sans Devanagari', 'Mukta', sans-serif;
-  font-size: 0.94rem;
-  letter-spacing: 0.04em;
-  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-style: italic;
 }
 
 /* ── Member card FULL-BLEED PHOTO with overlay content ── */

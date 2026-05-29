@@ -139,13 +139,6 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
  {/* ── DISTRICT LIST (flat, searchable) ── */}
  <div className="rmap__legend rmap__legend--districts">
  <div className="rmap__legend-head">
- <span className="rmap__legend-eyebrow">
- {lang === 'mr' ? 'सर्व जिल्हे' : 'ALL DISTRICTS'}
- </span>
- <h3 className="rmap__legend-title">
- {filtered.length} / {districts.length}
- </h3>
-
  <div className="rmap__legend-search">
  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
  <circle cx="11" cy="11" r="7" />

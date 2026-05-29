@@ -4,7 +4,9 @@
 ═══════════════════════════════════════════════════════════════ */
 .lf {
   position: relative;
-  padding: clamp(96px, 12vw, 150px) 48px clamp(110px, 13vw, 160px);
+  /* Top padding tightened — the section above (VisionIdeology) already
+     has bottom breathing room; we don't need another 150px stacked. */
+  padding: clamp(40px, 5vw, 70px) 48px clamp(90px, 11vw, 140px);
   background: var(--paper, #FAF6EE);
   overflow: hidden;
 }
@@ -281,7 +283,7 @@
  RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .lf { padding: 96px 28px 120px; }
+  .lf { padding: 56px 28px 100px; }
   .lf__header { margin-bottom: 64px; }
   .lf__list { gap: 90px; }
   .lf-feat { gap: 48px; }
@@ -290,7 +292,7 @@
 }
 
 @media (max-width: 768px) {
-  .lf { padding: 72px 18px 96px; }
+  .lf { padding: 40px 18px 80px; }
   .lf__list { gap: 64px; }
 
   .lf-feat {

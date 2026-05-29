@@ -2,6 +2,7 @@ import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { MH_PATHS } from './maharashtraPaths';
 import { useLanguage } from '../../../i18n/LanguageContext';
 import mlasByDistrict from '../../../content/mlas-by-district.json';
+import leadersByDistrict from '../../../content/leaders-by-district.json';
 import {
   DISTRICTS,
   DIVISIONS_ORDER,
@@ -36,147 +37,6 @@ const PC_TO_REGION = {};
 Object.entries(REGION_MAP).forEach(([region, pcs]) => {
   pcs.forEach(pc => { PC_TO_REGION[pc] = region; });
 });
-
-/* ─── Dummy member data ─────────────────────────────────────────── */
-const MEMBERS = {
-  konkan: {
- mr: {
- name: 'कोकण',
- desc: 'मुंबई, ठाणे, रायगड, रत्नागिरी, सिंधुदुर्ग',
- members: [
- { initials: 'एश', name: 'एकनाथ शिंदे', role: 'उपमुख्यमंत्री, महाराष्ट्र', constituency: 'कोपरी-पाचपाखाडी' },
- { initials: 'रव', name: 'रवींद्र वायकर', role: 'खासदार, शिवसेना', constituency: 'मुंबई उत्तर-पश्चिम' },
- { initials: 'नम', name: 'नरेश म्हस्के', role: 'खासदार, शिवसेना', constituency: 'ठाणे' },
- { initials: 'दि', name: 'दिलीप लांडे', role: 'आमदार, शिवसेना', constituency: 'चेंबूर' },
- { initials: 'यक', name: 'योगेश कदम', role: 'जिल्हा प्रमुख', constituency: 'रत्नागिरी' },
- ]
- },
- en: {
- name: 'Konkan',
- desc: 'Mumbai, Thane, Raigad, Ratnagiri, Sindhudurg',
- members: [
- { initials: 'ES', name: 'Eknath Shinde', role: 'Deputy CM, Maharashtra', constituency: 'Kopri-Pachpakhadi' },
- { initials: 'RW', name: 'Ravindra Waikar', role: 'MP, Shiv Sena', constituency: 'Mumbai North-West' },
- { initials: 'NM', name: 'Naresh Mhaske', role: 'MP, Shiv Sena', constituency: 'Thane' },
- { initials: 'DL', name: 'Dilip Lande', role: 'MLA, Shiv Sena', constituency: 'Chembur' },
- { initials: 'YK', name: 'Yogesh Kadam', role: 'District Head', constituency: 'Ratnagiri' },
- ]
- }
-  },
-  pune: {
- mr: {
- name: 'पुणे',
- desc: 'पुणे, सातारा, सांगली, सोलापूर, कोल्हापूर',
- members: [
- { initials: 'सप', name: 'सतेज पाटील', role: 'जिल्हाध्यक्ष, शिवसेना', constituency: 'पुणे' },
- { initials: 'दभ', name: 'दत्तात्रय भरणे', role: 'आमदार, शिवसेना', constituency: 'इंदापूर' },
- { initials: 'रजा', name: 'रमेश जाधव', role: 'महानगरप्रमुख', constituency: 'पुणे शहर' },
- { initials: 'सक', name: 'संजय काळे', role: 'जिल्हा प्रमुख', constituency: 'कोल्हापूर' },
- ]
- },
- en: {
- name: 'Pune',
- desc: 'Pune, Satara, Sangli, Solapur, Kolhapur',
- members: [
- { initials: 'SP', name: 'Satej Patil', role: 'District Head, Shiv Sena', constituency: 'Pune' },
- { initials: 'DB', name: 'Dattatray Bharane', role: 'MLA, Shiv Sena', constituency: 'Indapur' },
- { initials: 'RJ', name: 'Ramesh Jadhav', role: 'City Head', constituency: 'Pune City' },
- { initials: 'SK', name: 'Sanjay Kale', role: 'District Head', constituency: 'Kolhapur' },
- ]
- }
-  },
-  nashik: {
- mr: {
- name: 'नाशिक',
- desc: 'नाशिक, धुळे, नंदुरबार, जळगाव, अहमदनगर',
- members: [
- { initials: 'हव', name: 'हेमंत वाघ', role: 'जिल्हाध्यक्ष, शिवसेना', constituency: 'नाशिक पश्चिम' },
- { initials: 'सभ', name: 'सुनील भुसारा', role: 'आमदार, शिवसेना', constituency: 'जळगाव' },
- { initials: 'दघ', name: 'दीपक घुमरे', role: 'महानगरप्रमुख', constituency: 'नाशिक पूर्व' },
- { initials: 'वप', name: 'विकास पाटील', role: 'जिल्हा प्रमुख', constituency: 'अहमदनगर' },
- ]
- },
- en: {
- name: 'Nashik',
- desc: 'Nashik, Dhule, Nandurbar, Jalgaon, Ahmednagar',
- members: [
- { initials: 'HW', name: 'Hemant Wagh', role: 'District Head, Shiv Sena', constituency: 'Nashik West' },
- { initials: 'SB', name: 'Sunil Bhusara', role: 'MLA, Shiv Sena', constituency: 'Jalgaon' },
- { initials: 'DG', name: 'Deepak Ghumre', role: 'City Head', constituency: 'Nashik East' },
- { initials: 'VP', name: 'Vikas Patil', role: 'District Head', constituency: 'Ahmednagar' },
- ]
- }
-  },
-  marathwada: {
- mr: {
- name: 'मराठवाडा',
- desc: 'छत्रपती संभाजीनगर, जालना, बीड, लातूर, नांदेड',
- members: [
- { initials: 'सभ', name: 'संदीपान भुमरे', role: 'खासदार, शिवसेना', constituency: 'छत्रपती संभाजीनगर' },
- { initials: 'प्रजा', name: 'प्रतापराव जाधव', role: 'खासदार, शिवसेना', constituency: 'बुलढाणा' },
- { initials: 'आभ', name: 'अब्दुल सत्तार', role: 'आमदार, शिवसेना', constituency: 'सिल्लोड' },
- { initials: 'रव', name: 'रमेश बोरनारे', role: 'जिल्हा प्रमुख', constituency: 'नांदेड' },
- { initials: 'पक', name: 'पंकज काळे', role: 'जिल्हाध्यक्ष', constituency: 'लातूर' },
- ]
- },
- en: {
- name: 'Marathwada',
- desc: 'Chh. Sambhajinagar, Jalna, Beed, Latur, Nanded',
- members: [
- { initials: 'SB', name: 'Sandipan Bhumre', role: 'MP, Shiv Sena', constituency: 'Chh. Sambhajinagar' },
- { initials: 'PJ', name: 'Prataprao Jadhav', role: 'MP, Shiv Sena', constituency: 'Buldhana' },
- { initials: 'AS', name: 'Abdul Sattar', role: 'MLA, Shiv Sena', constituency: 'Sillod' },
- { initials: 'RB', name: 'Ramesh Bornare', role: 'District Head', constituency: 'Nanded' },
- { initials: 'PK', name: 'Pankaj Kale', role: 'District Head', constituency: 'Latur' },
- ]
- }
-  },
-  amravati: {
- mr: {
- name: 'अमरावती',
- desc: 'अमरावती, अकोला, वाशीम, बुलढाणा, यवतमाळ',
- members: [
- { initials: 'नव', name: 'नवनीत राणा', role: 'आमदार, शिवसेना', constituency: 'बडनेरा' },
- { initials: 'सघ', name: 'संजय घाटे', role: 'जिल्हा प्रमुख', constituency: 'अकोला' },
- { initials: 'रप', name: 'रमेश पाटील', role: 'जिल्हाध्यक्ष', constituency: 'यवतमाळ' },
- { initials: 'दक', name: 'दीपक काटे', role: 'महानगरप्रमुख', constituency: 'अमरावती' },
- ]
- },
- en: {
- name: 'Amravati',
- desc: 'Amravati, Akola, Washim, Buldhana, Yavatmal',
- members: [
- { initials: 'NR', name: 'Navneet Rana', role: 'MLA, Shiv Sena', constituency: 'Badnera' },
- { initials: 'SG', name: 'Sanjay Ghate', role: 'District Head', constituency: 'Akola' },
- { initials: 'RP', name: 'Ramesh Patil', role: 'District Head', constituency: 'Yavatmal' },
- { initials: 'DK', name: 'Deepak Kate', role: 'City Head', constituency: 'Amravati' },
- ]
- }
-  },
-  vidarbha: {
- mr: {
- name: 'विदर्भ / नागपूर',
- desc: 'नागपूर, वर्धा, भंडारा, गोंदिया, चंद्रपूर, गडचिरोली',
- members: [
- { initials: 'श्र', name: 'श्रीकांत शिंदे', role: 'खासदार, शिवसेना', constituency: 'कल्याण' },
- { initials: 'वक', name: 'विकास कुमठेकर', role: 'जिल्हा प्रमुख', constituency: 'नागपूर' },
- { initials: 'रज', name: 'राजेश जोशी', role: 'महानगरप्रमुख', constituency: 'नागपूर दक्षिण' },
- { initials: 'सम', name: 'सुधीर मुनगंटीवार', role: 'आमदार, युती', constituency: 'बल्लारपूर' },
- ]
- },
- en: {
- name: 'Vidarbha / Nagpur',
- desc: 'Nagpur, Wardha, Bhandara, Gondia, Chandrapur, Gadchiroli',
- members: [
- { initials: 'SS', name: 'Shrikant Shinde', role: 'MP, Shiv Sena', constituency: 'Kalyan' },
- { initials: 'VK', name: 'Vikas Kumthekar', role: 'District Head', constituency: 'Nagpur' },
- { initials: 'RJ', name: 'Rajesh Joshi', role: 'City Head', constituency: 'Nagpur South' },
- { initials: 'SM', name: 'Sudhir Mungantiwar', role: 'MLA, Alliance', constituency: 'Ballarpur' },
- ]
- }
-  }
-};
-
 const REGION_LABELS = {
   konkan: { mr: 'कोकण', en: 'Konkan' },
   pune: { mr: 'पुणे', en: 'Pune' },
@@ -210,13 +70,12 @@ const UI = {
 export default function RegionExplorer() {
   const { lang: language } = useLanguage();
   const [activeRegion, setActiveRegion] = useState('konkan');
-  const [activeDistrict, setActiveDistrict] = useState('mumbai-suburban');
+  const [activeDistrict, setActiveDistrict] = useState('mumbai');
   const [searchQuery, setSearchQuery] = useState('');
   const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, label: '' });
   const [selectedLeader, setSelectedLeader] = useState(null);
 
   const lang = (language === 'mr') ? 'mr' : 'en';
-  const regionData  = MEMBERS[activeRegion]?.[lang] || MEMBERS.konkan.en;
   const ui = UI[lang] || UI.en;
 
   /* Auto-pick the first district of the newly-selected division */
@@ -231,59 +90,103 @@ export default function RegionExplorer() {
 
   const activeDistrictMeta  = DISTRICTS[activeDistrict] || {};
   const activeDistrictLabel = activeDistrictMeta[lang] || activeDistrictMeta.en || activeDistrict;
-  const districtMlas = (mlasByDistrict[activeDistrict] || {}).mla || [];
 
-  /* Members shown in the side panel = MLAs from the selected district
- (if any), with the dummy region-level placeholder list as fallback. */
+  /* Members shown in the side panel pull from leaders-by-district.json
+     across all 9 categories of the selected district, in the order the
+     Leadership page uses. Same source as /leadership, so the homepage
+     map stays in sync. */
   const sourceMembers = useMemo(() => {
- if (districtMlas.length > 0) {
- return districtMlas.map((m) => {
- // For Marathi mode, look up the matching MR record (name + role)
- // from leadership.json so MLA cards aren't stuck in English.
- const mr = lang === 'mr' ? mrMlaFor(m) : null;
+    const bucket = leadersByDistrict[activeDistrict] || {};
+    /* Category labels keyed in Marathi (the JSON is Marathi-native).
+       English fallbacks are computed inline for EN mode. */
+    const CATEGORY_LABELS_MR = {
+      mp: 'खासदार', mla: 'आमदार',
+      leaders: 'नेते', deputyLeaders: 'उपनेते',
+      divisionalContactHeads: 'विभागीय संपर्कप्रमुख',
+      divisionalCoContactHeads: 'विभागीय सह-संपर्कप्रमुख',
+      lokSabhaContactHead: 'लोकसभा संपर्कप्रमुख',
+      districtHead: 'जिल्हाप्रमुख',
+      womenDistrictHeads: 'महिला जिल्हाप्रमुख',
+    };
+    const CATEGORY_LABELS_EN = {
+      mp: 'MP', mla: 'MLA',
+      leaders: 'Leader', deputyLeaders: 'Deputy Leader',
+      divisionalContactHeads: 'Divisional Contact Head',
+      divisionalCoContactHeads: 'Divisional Co-Contact Head',
+      lokSabhaContactHead: 'Lok Sabha Contact Head',
+      districtHead: 'District Head',
+      womenDistrictHeads: 'Women District Head',
+    };
+    /* Walk categories in display order. Only DISTRICT-SPECIFIC roles —
+       the state-level shared rosters (नेते / उपनेते) are intentionally
+       excluded here because they're the same for every district and
+       belong on the Leadership page, not the homepage map. */
+    const seen = new Set();
+    const out = [];
+    const order = ['mp', 'mla',
+                   'divisionalContactHeads', 'divisionalCoContactHeads',
+                   'lokSabhaContactHead', 'districtHead', 'womenDistrictHeads'];
+    for (const cat of order) {
+      const arr = bucket[cat] || [];
+      const catLabel = (lang === 'mr' ? CATEGORY_LABELS_MR : CATEGORY_LABELS_EN)[cat];
+      for (const m of arr) {
+        const dedupKey = (m.name || '') + '|' + (m.role || '') + '|' + (m.phone || '');
+        if (seen.has(dedupKey)) continue;
+        seen.add(dedupKey);
+        /* Build display fields. Names are mostly Marathi; for EN mode
+           we still display the Marathi (no client EN names yet) — same
+           as the Leadership page does today. */
+        const cleanName = (m.name || '').replace(/\s*\|\s*/g, ' · ').trim();
+        /* Initials: first letter of first two name tokens after
+           stripping honorifics. */
+        const initials = cleanName
+          .replace(/^(श्री\.?|श्रीम\.?|श्रीमती\.?|सौ\.?|कु\.?|डॉ\.?|खा\.?|आ\.?|मंत्री|मा\.?|Shri\.?|Smt\.?|Dr\.?|Prof\.?|Kha\.?|Mantri)\s*/gi, '')
+          .split(/[\s.·]+/)
+          .filter(Boolean)
+          .slice(0, 2)
+          .map((w) => [...w][0] || '')
+          .join('')
+          .toUpperCase();
+        /* Suppress the generic "राज्यस्तर" / "State Level" tag — for
+           state-level leaders (नेते, उपनेते) the role field is just
+           that label, which adds no information next to the category
+           it already lives under. Keep specific roles like
+           "१५४-मागाठाणे" or "लोकसभा — मुंबई दक्षिण मध्य". */
+        const isGenericStateLevel = /^(राज्यस्तर|state\s*level)$/i.test((m.role || '').trim());
+        const roleSuffix = (m.role && !isGenericStateLevel) ? ' · ' + m.role : '';
+        const role = catLabel + roleSuffix;
+        out.push({
+          initials: initials || '?',
+          name: cleanName,
+          role,
+          constituency: isGenericStateLevel ? '' : (m.role || ''),
+          social: m.social || {},
+          photo: m.photo || '',
+        });
+      }
+    }
 
- const englishName = m.name.replace(/\s*\((Minister|MoS|Chief Whip|Main Leader\/Dy\. CM)\)\s*/i, '').trim();
- const displayName = mr?.name || englishName;
+    /* MLA enrichment: if the same MLA exists in mlas-by-district.json
+       (which carries social handles + photos), merge those in. */
+    const mlaExtra = (mlasByDistrict[activeDistrict] || {}).mla || [];
+    if (mlaExtra.length) {
+      const byName = new Map();
+      mlaExtra.forEach((m) => {
+        const mr = mrMlaFor(m);
+        const key = (mr?.name || m.name || '').trim();
+        if (key) byName.set(key, m);
+      });
+      out.forEach((entry) => {
+        const enrich = byName.get(entry.name);
+        if (enrich) {
+          if (!entry.photo && enrich.photo) entry.photo = enrich.photo;
+          if (enrich.social) entry.social = { ...enrich.social, ...entry.social };
+        }
+      });
+    }
 
- // Initials always come from the Latin source so the avatar pill stays consistent
- const initials = englishName
- .replace(/^(Shri\.|Smt\.|Dr\.|Prof\.|Adv\.)\s*/i, '')
- .split(/\s+/)
- .slice(0, 2)
- .map((w) => w[0] || '')
- .join('')
- .toUpperCase();
-
- let role;
- if (lang === 'mr') {
- // Use the full MR role string from leadership.json when available;
- // it already includes constituency no. + name (e.g. "आमदार १५४-मागाठाणे").
- role = mr?.role || ('आमदार · ' + m.constituency);
- } else {
- role = 'MLA · ' + m.constituency;
- }
-
- let constituency;
- if (lang === 'mr' && mr) {
- // Extract the "१५४-मागाठाणे" tail from the MR role
- const tail = (mr.role || '').split(' ').pop().trim();
- constituency = tail || `${asciiToDevanagari(m.constituencyNo)}-${m.constituency}`;
- } else {
- constituency = `${m.constituencyNo}-${m.constituency}`;
- }
-
- return {
- initials,
- name: displayName,
- role,
- constituency,
- social: m.social,
- photo: m.photo,
- };
- });
- }
- return regionData.members;
-  }, [districtMlas, regionData.members, lang]);
+    return out;
+  }, [activeDistrict, lang]);
 
   const filteredMembers = useMemo(() => {
  const q = searchQuery.trim().toLowerCase();

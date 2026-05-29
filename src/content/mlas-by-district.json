@@ -1,33 +1,5 @@
 {
-  "mumbai-city": {
-    "mla": [
-      {
-        "id": "mla-173",
-        "name": "Shri. Tukaram Kate",
-        "constituencyNo": 173,
-        "constituency": "Chembur",
-        "social": {
-          "instagram": "",
-          "facebook": "",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/05_Shri%20Tukaram%20Kate.webp"
-      },
-      {
-        "id": "mla-174",
-        "name": "Shri. Mangesh Kudalkar",
-        "constituencyNo": 174,
-        "constituency": "Kurla (SC)",
-        "social": {
-          "instagram": "https://www.instagram.com/mlamangesh?igsh=NzVueWMxYjM3dDM5",
-          "facebook": "https://www.facebook.com/share/1Eo4GT7cXV/?mibextid=wwXIfr",
-          "twitter": "https://x.com/mlamangesh?s=21"
-        },
-        "photo": "/leaders/Mla%20Photos/06_Shri%20Mangesh%20Kudalkar.webp"
-      }
-    ]
-  },
-  "mumbai-suburban": {
+  "mumbai": {
     "mla": [
       {
         "id": "mla-154",
@@ -76,6 +48,30 @@
           "twitter": "https://x.com/Mi_DilipLande"
         },
         "photo": "/leaders/Mla%20Photos/04_Shri%20Dilip%20Lande.webp"
+      },
+      {
+        "id": "mla-173",
+        "name": "Shri. Tukaram Kate",
+        "constituencyNo": 173,
+        "constituency": "Chembur",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        },
+        "photo": "/leaders/Mla%20Photos/05_Shri%20Tukaram%20Kate.webp"
+      },
+      {
+        "id": "mla-174",
+        "name": "Shri. Mangesh Kudalkar",
+        "constituencyNo": 174,
+        "constituency": "Kurla (SC)",
+        "social": {
+          "instagram": "https://www.instagram.com/mlamangesh?igsh=NzVueWMxYjM3dDM5",
+          "facebook": "https://www.facebook.com/share/1Eo4GT7cXV/?mibextid=wwXIfr",
+          "twitter": "https://x.com/mlamangesh?s=21"
+        },
+        "photo": "/leaders/Mla%20Photos/06_Shri%20Mangesh%20Kudalkar.webp"
       }
     ]
   },

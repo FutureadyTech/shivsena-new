@@ -147,6 +147,9 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
  isPlaceholder: true,
  name: PLACEHOLDER_LABEL[lang] || PLACEHOLDER_LABEL.mr,
  role: categoryNames[categoryKey] || '',
+ /* Use the same male/female placeholder PNG the real cards
+ fall back to, so the empty slot looks like a real card. */
+ photo: i % 2 === 0 ? MALE_PLACEHOLDER : FEMALE_PLACEHOLDER,
  });
  }
  return arr;
@@ -313,9 +316,14 @@ function CategoryCarousel({ label, items, isEmpty, noDataLabel, prevLabel, nextL
  ) : (
  <div ref={trackRef} className="dir-cat__track">
  {items.map((m, i) => (
- m.isPlaceholder
- ? <PlaceholderCard key={m.id || i} label={m.name} />
- : <MemberCard key={m.id || i} member={m} index={i} viewMoreLabel={viewMoreLabel} lang={lang} onSelect={onSelect} />
+ <MemberCard
+ key={m.id || i}
+ member={m}
+ index={i}
+ viewMoreLabel={viewMoreLabel}
+ lang={lang}
+ onSelect={onSelect}
+ />
  ))}
  </div>
  )}
@@ -323,35 +331,20 @@ function CategoryCarousel({ label, items, isEmpty, noDataLabel, prevLabel, nextL
   );
 }
 
-/* Placeholder card used when a district has no real members in a
- given category. Looks like a real card but greyed out, with no
- socials / no popup trigger. */
-function PlaceholderCard({ label }) {
-  return (
- <article className="dir-card dir-card--placeholder" aria-hidden="false">
- <div className="dir-card__placeholder-art" aria-hidden="true">
- <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
- <circle cx="12" cy="8" r="4" />
- <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
- </svg>
- </div>
- <div className="dir-card__placeholder-body">
- <h4 className="dir-card__name">{label}</h4>
- </div>
- </article>
-  );
-}
 
 /* ── Member card full-bleed photo, content overlay, hover reveal.
  Only the inline "View more" button opens the LeaderPopup. The card
- itself isn't clickable so social / phone links keep their own behaviour. ── */
+ itself isn't clickable so social / phone links keep their own behaviour.
+ Placeholder members reuse the same layout but skip the socials /
+ view-more action so the card reads as "to be announced". ── */
 function MemberCard({ member, index, viewMoreLabel, lang, onSelect }) {
   const photo = photoFor(member);
   const { name, role } = memberFor(member, lang);
   const socials = member.social || {};
+  const isPlaceholder = !!member.isPlaceholder;
   return (
  <article
- className="dir-card"
+ className={`dir-card${isPlaceholder ? ' dir-card--placeholder' : ''}`}
  style={{ '--card-delay': `${(index % 4) * 0.06}s` }}
  >
  <img src={photo} alt="" loading="lazy" className="dir-card__bg" />
@@ -361,6 +354,7 @@ function MemberCard({ member, index, viewMoreLabel, lang, onSelect }) {
  <h4 className="dir-card__name">{name}</h4>
  {role && <p className="dir-card__role">{role}</p>}
 
+ {!isPlaceholder && (
  <div className="dir-card__reveal">
  <SocialIcons socials={socials} phone={member.phone} />
 
@@ -376,6 +370,7 @@ function MemberCard({ member, index, viewMoreLabel, lang, onSelect }) {
  </svg>
  </button>
  </div>
+ )}
  </div>
  </article>
   );

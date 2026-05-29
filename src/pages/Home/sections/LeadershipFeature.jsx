@@ -90,7 +90,8 @@ function LeaderFeature({ leader, index, lang }) {
   const name = bio?.name || leader.name;
   const role = bio?.role || leader.role;
   const dates = bio?.dates;
-  const lede = bio?.lede;
+  // The "lede" tagline is intentionally omitted — we only display
+  // fields that come from the source documents, not authored summaries.
   const body = trimAtSentence(bio?.paragraphs?.[0]);
   // Prefer the leader.image given in the page content (it includes the
   // leading slash for /-rooted public paths). Fall back to bio image.
@@ -122,7 +123,6 @@ function LeaderFeature({ leader, index, lang }) {
 
  {dates && <p className="lf-feat__dates">{dates}</p>}
 
- {lede && <p className="lf-feat__lede">{lede}</p>}
 
  {body && <p className="lf-feat__body-text">{body}</p>}
 

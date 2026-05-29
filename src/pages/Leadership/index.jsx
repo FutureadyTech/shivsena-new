@@ -13,7 +13,7 @@ import './leadership.css';
 export default function Leadership() {
   useLenis();
   /* District-level selection now defaults to the first Konkan district */
-  const [activeDistrict, setActiveDistrict] = useState('mumbai-suburban');
+  const [activeDistrict, setActiveDistrict] = useState('mumbai');
   const directoryRef = useRef(null);
 
   const handleSelectDistrict = useCallback((districtSlug) => {

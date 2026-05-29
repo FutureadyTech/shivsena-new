@@ -19,8 +19,7 @@ export const DIVISION_LABELS = {
 /* slug → { mr, en, division } */
 export const DISTRICTS = {
   /* ── Konkan ── */
-  'mumbai-city': { mr: 'मुंबई शहर', en: 'Mumbai City', division: 'konkan' },
-  'mumbai-suburban': { mr: 'मुंबई उपनगर', en: 'Mumbai Suburban', division: 'konkan' },
+  'mumbai': { mr: 'मुंबई', en: 'Mumbai', division: 'konkan' },
   'thane': { mr: 'ठाणे', en: 'Thane', division: 'konkan' },
   'palghar': { mr: 'पालघर', en: 'Palghar', division: 'konkan' },
   'raigad': { mr: 'रायगड', en: 'Raigad', division: 'konkan' },
