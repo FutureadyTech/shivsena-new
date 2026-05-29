@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   INTERVIEWS & ARTICLES — Dark editorial section
+ INTERVIEWS & ARTICLES Dark editorial section
 ═══════════════════════════════════════════════════════════════ */
 .ia-section {
   position: relative;
@@ -13,8 +13,8 @@
   content: '';
   position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 50% 40% at 10% 0%,    rgba(255, 178, 107, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(196, 77, 14, 0.10) 0%, transparent 60%);
+ radial-gradient(ellipse 50% 40% at 10% 0%, rgba(255, 178, 107, 0.08) 0%, transparent 60%),
+ radial-gradient(ellipse 50% 40% at 100% 100%, rgba(196, 77, 14, 0.10) 0%, transparent 60%);
 }
 
 .ia-section__inner {
@@ -82,8 +82,8 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-              border-color 0.3s ease,
-              box-shadow 0.4s ease;
+ border-color 0.3s ease,
+ box-shadow 0.4s ease;
 }
 
 .ia-featured:hover {
@@ -113,8 +113,8 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(14, 10, 20, 0.55) 100%);
+ rgba(0, 0, 0, 0) 60%,
+ rgba(14, 10, 20, 0.55) 100%);
   pointer-events: none;
 }
 
@@ -258,8 +258,8 @@
 .ia-item.reveal {
   opacity: 0; transform: translateY(20px);
   transition: opacity 0.7s ease var(--reveal-delay, 0s),
-              transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s),
-              background 0.3s ease, border-color 0.3s ease;
+ transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s),
+ background 0.3s ease, border-color 0.3s ease;
 }
 .ia-item.is-revealed { opacity: 1; transform: translateY(0); }
 

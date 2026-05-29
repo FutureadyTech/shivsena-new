@@ -16,21 +16,21 @@ const CTA_LABEL = {
 const hasProfile = (leaderId) => Boolean(leadersContent[leaderId]);
 
 /* Trim a paragraph at the last sentence-end within `max` chars so we
-   don't cut a word in half. Falls back to a hard slice if no sentence
-   boundary is found. */
+ don't cut a word in half. Falls back to a hard slice if no sentence
+ boundary is found. */
 function trimAtSentence(text, max = 320) {
   if (!text) return '';
   if (text.length <= max) return text;
   const slice = text.slice(0, max);
   const lastStop = Math.max(
-    slice.lastIndexOf('. '),
-    slice.lastIndexOf('. '),
-    slice.lastIndexOf('।'),
-    slice.lastIndexOf('!'),
-    slice.lastIndexOf('?')
+ slice.lastIndexOf('. '),
+ slice.lastIndexOf('. '),
+ slice.lastIndexOf('।'),
+ slice.lastIndexOf('!'),
+ slice.lastIndexOf('?')
   );
   if (lastStop > max * 0.5) return slice.slice(0, lastStop + 1).trim() + '…';
-  // fallback — cut at last space
+  // fallback cut at last space
   const lastSpace = slice.lastIndexOf(' ');
   return slice.slice(0, lastSpace > 0 ? lastSpace : max).trim() + '…';
 }
@@ -44,36 +44,38 @@ export default function LeadershipFeature({ content }) {
   const leaders = Array.isArray(t.leaders) ? t.leaders : [];
 
   return (
-    <section className="lf">
-      {/* soft ambient glows */}
-      <span className="lf__glow lf__glow--tl" aria-hidden="true" />
-      <span className="lf__glow lf__glow--br" aria-hidden="true" />
+ <section className="lf">
+ {/* soft ambient glows */}
+ <span className="lf__glow lf__glow--tl" aria-hidden="true" />
+ <span className="lf__glow lf__glow--br" aria-hidden="true" />
 
-      <div className="lf__inner">
+ <div className="lf__inner">
 
-        {/* ── Section header ── */}
-        <div ref={headerRef} className="lf__header reveal">
-          <div className="lf__eyebrow">
-            <span className="lf__eyebrow-line" />
-            <span>{t.eyebrow}</span>
-            <span className="lf__eyebrow-line" />
-          </div>
-          <h2 className="lf__title">{t.title}</h2>
-        </div>
+ {/* ── Section header ── */}
+ <div ref={headerRef} className="lf__header reveal">
+ {t.eyebrow && (
+ <div className="lf__eyebrow">
+ <span className="lf__eyebrow-line" />
+ <span>{t.eyebrow}</span>
+ <span className="lf__eyebrow-line" />
+ </div>
+ )}
+ <h2 className="lf__title">{t.title}</h2>
+ </div>
 
-        {/* ── Alternating leader blocks ── */}
-        <ol className="lf__list">
-          {leaders.map((leader, i) => (
-            <LeaderFeature
-              key={leader.id}
-              leader={leader}
-              index={i}
-              lang={lang}
-            />
-          ))}
-        </ol>
-      </div>
-    </section>
+ {/* ── Alternating leader blocks ── */}
+ <ol className="lf__list">
+ {leaders.map((leader, i) => (
+ <LeaderFeature
+ key={leader.id}
+ leader={leader}
+ index={i}
+ lang={lang}
+ />
+ ))}
+ </ol>
+ </div>
+ </section>
   );
 }
 
@@ -93,55 +95,55 @@ function LeaderFeature({ leader, index, lang }) {
   // Prefer the leader.image given in the page content (it includes the
   // leading slash for /-rooted public paths). Fall back to bio image.
   const image = leader.image?.startsWith('/')
-    ? leader.image
-    : `/${leader.image || bio?.image?.replace(/^\//, '') || ''}`;
+ ? leader.image
+ : `/${leader.image || bio?.image?.replace(/^\//, '') || ''}`;
 
   const profileAvailable = hasProfile(leader.id);
 
   return (
-    <li
-      ref={ref}
-      className={`lf-feat lf-feat--${orientation} reveal`}
-      style={{ '--reveal-delay': `${0.05 + (index % 3) * 0.06}s` }}
-    >
-      {/* ─── Media ─── */}
-      <div className="lf-feat__media">
-        <img src={image} alt={name} loading="lazy" />
-        <span className="lf-feat__media-glow" aria-hidden="true" />
-      </div>
+ <li
+ ref={ref}
+ className={`lf-feat lf-feat--${orientation} reveal`}
+ style={{ '--reveal-delay': `${0.05 + (index % 3) * 0.06}s` }}
+ >
+ {/* ─── Media ─── */}
+ <div className="lf-feat__media">
+ <img src={image} alt={name} loading="lazy" />
+ <span className="lf-feat__media-glow" aria-hidden="true" />
+ </div>
 
-      {/* ─── Body ─── */}
-      <div className="lf-feat__body">
-        {role && (
-          <span className="lf-feat__role">{role}</span>
-        )}
+ {/* ─── Body ─── */}
+ <div className="lf-feat__body">
+ {role && (
+ <span className="lf-feat__role">{role}</span>
+ )}
 
-        <p className="lf-feat__name">{name}</p>
+ <p className="lf-feat__name">{name}</p>
 
-        {dates && <p className="lf-feat__dates">{dates}</p>}
+ {dates && <p className="lf-feat__dates">{dates}</p>}
 
-        {lede && <p className="lf-feat__lede">{lede}</p>}
+ {lede && <p className="lf-feat__lede">{lede}</p>}
 
-        {body && <p className="lf-feat__body-text">{body}</p>}
+ {body && <p className="lf-feat__body-text">{body}</p>}
 
-        {profileAvailable && (
-          <Link
-            to={`/leader/${leader.id}`}
-            className="lf-feat__cta"
-            data-cursor="link"
-          >
-            <span>{CTA_LABEL[lang]}</span>
-            <svg
-              viewBox="0 0 24 24" width="18" height="18"
-              fill="none" stroke="currentColor"
-              strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </Link>
-        )}
-      </div>
-    </li>
+ {profileAvailable && (
+ <Link
+ to={`/leader/${leader.id}`}
+ className="lf-feat__cta"
+ data-cursor="link"
+ >
+ <span>{CTA_LABEL[lang]}</span>
+ <svg
+ viewBox="0 0 24 24" width="18" height="18"
+ fill="none" stroke="currentColor"
+ strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+ >
+ <line x1="5" y1="12" x2="19" y2="12" />
+ <polyline points="12 5 19 12 12 19" />
+ </svg>
+ </Link>
+ )}
+ </div>
+ </li>
   );
 }

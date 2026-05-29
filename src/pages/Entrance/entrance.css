@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   LOADER
+ LOADER
 ═══════════════════════════════════════════════════════════════ */
 .loader {
   position: fixed; inset: 0; z-index: 9999;
@@ -34,7 +34,7 @@
   animation: emblem-spin 2s linear infinite reverse;
 }
 /* Solid white disc that frames the logo cleanly, with a soft saffron
-   glow so it matches the entrance ambience. */
+ glow so it matches the entrance ambience. */
 .loader-emblem-disc {
   width: 96px;
   height: 96px;
@@ -45,8 +45,8 @@
   justify-content: center;
   overflow: hidden;
   box-shadow:
-    0 0 22px 4px rgba(255, 178, 107, 0.45),
-    0 0 8px 1px rgba(255, 215, 0, 0.35);
+ 0 0 22px 4px rgba(255, 178, 107, 0.45),
+ 0 0 8px 1px rgba(255, 215, 0, 0.35);
   animation: emblem-pulse 2.4s ease-in-out infinite;
 }
 
@@ -58,13 +58,13 @@
   user-select: none;
   pointer-events: none;
   /* Image is saffron-on-white; multiply blends its white background
-     seamlessly with the white disc, leaving the saffron crisp. */
+ seamlessly with the white disc, leaving the saffron crisp. */
   mix-blend-mode: multiply;
 }
 @keyframes emblem-spin { to { transform: rotate(360deg); } }
 @keyframes emblem-pulse {
-  0%, 100% { transform: scale(1);    opacity: 0.95; }
-  50%      { transform: scale(1.05); opacity: 1;    }
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.05); opacity: 1; }
 }
 
 .loader-text {
@@ -100,7 +100,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   3D STAGE
+ 3D STAGE
 ═══════════════════════════════════════════════════════════════ */
 #scene-canvas {
   position: fixed; inset: 0; z-index: 1;
@@ -108,7 +108,7 @@
   pointer-events: none;
 }
 
-/* Vestibule cover — photo entry screen that fades + scales into the 3D hall */
+/* Vestibule cover photo entry screen that fades + scales into the 3D hall */
 .vestibule-cover {
   position: fixed; inset: 0; z-index: 5;
   pointer-events: none;
@@ -123,22 +123,22 @@
   object-position: center 55%;
   display: block;
 }
-/* Soft top/bottom cinematic fade only — dark doorway vignette removed
-   so the entrance archway (portraits + idol) reads clearly. */
+/* Soft top/bottom cinematic fade only dark doorway vignette removed
+ so the entrance archway (portraits + idol) reads clearly. */
 .vestibule-cover::after {
   content: '';
   position: absolute; inset: 0;
   background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.25) 0%,
-    transparent 30%,
-    transparent 75%,
-    rgba(0,0,0,0.55) 100%
+ to bottom,
+ rgba(0,0,0,0.25) 0%,
+ transparent 30%,
+ transparent 75%,
+ rgba(0,0,0,0.55) 100%
   );
   pointer-events: none;
 }
 
-/* Golden bloom — pulses at the doorway midpoint of the transit, blends with 3D scene behind */
+/* Golden bloom pulses at the doorway midpoint of the transit, blends with 3D scene behind */
 .entry-glow {
   position: fixed; inset: 0; z-index: 4;
   pointer-events: none;
@@ -146,25 +146,25 @@
   will-change: opacity, transform;
   transform-origin: 50% 55%;
   background:
-    radial-gradient(ellipse 42% 65% at 50% 55%,
-      rgba(255, 230, 160, 0.88) 0%,
-      rgba(255, 180, 80, 0.66) 18%,
-      rgba(255, 130, 45, 0.42) 42%,
-      rgba(255, 90, 30, 0.18) 68%,
-      transparent 88%),
-    radial-gradient(ellipse 100% 110% at 50% 50%,
-      rgba(255, 140, 40, 0.18) 0%,
-      transparent 78%);
-  mix-blend-mode: screen; /* additive — warmth stacks on whatever is underneath */
+ radial-gradient(ellipse 42% 65% at 50% 55%,
+ rgba(255, 230, 160, 0.88) 0%,
+ rgba(255, 180, 80, 0.66) 18%,
+ rgba(255, 130, 45, 0.42) 42%,
+ rgba(255, 90, 30, 0.18) 68%,
+ transparent 88%),
+ radial-gradient(ellipse 100% 110% at 50% 50%,
+ rgba(255, 140, 40, 0.18) 0%,
+ transparent 78%);
+  mix-blend-mode: screen; /* additive warmth stacks on whatever is underneath */
 }
-/* Extra inner spark layer — small intense gold burst at the doorway core */
+/* Extra inner spark layer small intense gold burst at the doorway core */
 .entry-glow::before {
   content: '';
   position: absolute; inset: 0;
   background: radial-gradient(circle 22% at 50% 55%,
-    rgba(255, 245, 200, 0.55) 0%,
-    rgba(255, 200, 100, 0.30) 30%,
-    transparent 70%);
+ rgba(255, 245, 200, 0.55) 0%,
+ rgba(255, 200, 100, 0.30) 30%,
+ transparent 70%);
   mix-blend-mode: screen;
   filter: blur(8px);
 }
@@ -174,8 +174,8 @@
   position: fixed; inset: 0; z-index: 2;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at center, transparent 35%, rgba(5,3,2,0.5) 90%),
-    linear-gradient(to bottom, rgba(5,3,2,0.35) 0%, transparent 18%, transparent 82%, rgba(5,3,2,0.85) 100%);
+ radial-gradient(ellipse at center, transparent 35%, rgba(5,3,2,0.5) 90%),
+ linear-gradient(to bottom, rgba(5,3,2,0.35) 0%, transparent 18%, transparent 82%, rgba(5,3,2,0.85) 100%);
 }
 
 /* Grain texture */
@@ -188,7 +188,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   HEADER (FIXED)
+ HEADER (FIXED)
 ═══════════════════════════════════════════════════════════════ */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0;
@@ -214,7 +214,7 @@
   width: 22px; height: 22px;
   background: var(--ink-deep);
   -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 L12 22 M5 8 Q12 12 19 8 M5 16 Q12 12 19 16' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>") center/contain no-repeat;
-          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 L12 22 M5 8 Q12 12 19 8 M5 16 Q12 12 19 16' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>") center/contain no-repeat;
+ mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 L12 22 M5 8 Q12 12 19 8 M5 16 Q12 12 19 16' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>") center/contain no-repeat;
 }
 .brand-text {
   font-family: var(--font-display-dev);
@@ -281,7 +281,7 @@
 
 
 /* ═══════════════════════════════════════════════════════════════
-   SOCIAL RAIL
+ SOCIAL RAIL
 ═══════════════════════════════════════════════════════════════ */
 .social-rail {
   position: fixed;
@@ -313,7 +313,7 @@
 .social-link svg { width: 16px; height: 16px; }
 
 /* ═══════════════════════════════════════════════════════════════
-   SCROLL PROGRESS RAIL
+ SCROLL PROGRESS RAIL
 ═══════════════════════════════════════════════════════════════ */
 .progress-rail {
   position: fixed; right: 32px; top: 50%;
@@ -352,7 +352,7 @@
 .progress-dot.active::after { opacity: 1; }
 
 /* ═══════════════════════════════════════════════════════════════
-   SCROLL SECTIONS (drive camera)
+ SCROLL SECTIONS (drive camera)
 ═══════════════════════════════════════════════════════════════ */
 .scroll-track { position: relative; z-index: 10; }
 .scroll-section {
@@ -373,9 +373,9 @@
   font-weight: 400;
   color: var(--gold-bright);
   text-shadow:
-    0 0 40px rgba(255, 107, 26, 0.5),
-    0 0 80px rgba(255, 107, 26, 0.3),
-    0 6px 30px rgba(0,0,0,0.95);
+ 0 0 40px rgba(255, 107, 26, 0.5),
+ 0 0 80px rgba(255, 107, 26, 0.3),
+ 0 6px 30px rgba(0,0,0,0.95);
   line-height: 0.95;
   letter-spacing: 0.02em;
 }
@@ -435,10 +435,10 @@
 /* Wall-side panel readout (right side of screen, at panel sections) */
 .wall-readout {
   position: absolute;
-  right: 10%;            /* more breathing room from right edge (was 8%) */
+  right: 10%; /* more breathing room from right edge (was 8%) */
   top: 50%;
   transform: translateY(-50%);
-  max-width: 400px;      /* wider column — Marathi titles run long (was 360px) */
+  max-width: 400px; /* wider column Marathi titles run long (was 360px) */
   pointer-events: auto;
   text-align: left;
 }
@@ -453,7 +453,7 @@
 }
 .wall-readout .chapter-title {
   font-family: var(--font-display-dev);
-  font-size: clamp(1.8rem, 3vw, 2.6rem);   /* slightly smaller so title fits column (was 2rem-3rem) */
+  font-size: clamp(1.8rem, 3vw, 2.6rem); /* slightly smaller so title fits column (was 2rem-3rem) */
   color: var(--gold-bright);
   line-height: 1.05;
   margin-bottom: 4px;
@@ -530,14 +530,14 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   FINAL CTA + FOOTER (post-scene)
+ FINAL CTA + FOOTER (post-scene)
 ═══════════════════════════════════════════════════════════════ */
 .outro {
   position: relative;
   z-index: 20;
   background:
-    radial-gradient(ellipse at center, rgba(255, 107, 26, 0.12) 0%, transparent 60%),
-    linear-gradient(to bottom, transparent 0%, var(--ink-deep) 30%);
+ radial-gradient(ellipse at center, rgba(255, 107, 26, 0.12) 0%, transparent 60%),
+ linear-gradient(to bottom, transparent 0%, var(--ink-deep) 30%);
   padding: 140px 48px 60px;
   text-align: center;
 }
@@ -626,7 +626,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .site-header { padding: 16px 22px; }
@@ -636,9 +636,9 @@
   .brand-tagline { font-size: 0.55rem; }
   /* Social rail: same alignment trick, just with mobile dimensions */
   .social-rail {
-    left: 22px;
-    transform: translate(calc((68px - 30px) / 2), -50%);
-    gap: 10px;
+ left: 22px;
+ transform: translate(calc((68px - 30px) / 2), -50%);
+ gap: 10px;
   }
   .social-link { width: 30px; height: 30px; }
   .social-link svg { width: 13px; height: 13px; }

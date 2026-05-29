@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   INNOVATIVE PROGRAMS — alternating editorial layout
+ INNOVATIVE PROGRAMS alternating editorial layout
 ═══════════════════════════════════════════════════════════════ */
 .inn {
   position: relative;
@@ -123,8 +123,8 @@
   background: var(--paper-soft, #FCFBF7);
   border: 1px solid var(--hairline, rgba(26, 20, 16, 0.1));
   box-shadow:
-    0 30px 70px -28px rgba(26, 20, 16, 0.30),
-    0 0 0 1px rgba(255, 178, 107, 0.06) inset;
+ 0 30px 70px -28px rgba(26, 20, 16, 0.30),
+ 0 0 0 1px rgba(255, 178, 107, 0.06) inset;
   aspect-ratio: 4 / 3;
 }
 
@@ -142,8 +142,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 60% 50% at 50% 0%,  rgba(0, 0, 0, 0.06), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(0, 0, 0, 0.16), transparent 65%);
+ radial-gradient(ellipse 60% 50% at 50% 0%,  rgba(0, 0, 0, 0.06), transparent 60%),
+ radial-gradient(ellipse 60% 50% at 50% 100%, rgba(0, 0, 0, 0.16), transparent 65%);
 }
 
 /* Saffron corner accent on the image card */
@@ -252,7 +252,7 @@
   opacity: 0;
   transform: translateY(48px);
   transition: opacity 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
-              transform 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
+ transform 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
 }
 .inn .reveal.is-revealed {
   opacity: 1;
@@ -260,7 +260,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .inn { padding: 96px 28px 120px; }
@@ -274,16 +274,16 @@
   .inn { padding: 72px 18px 96px; }
   .inn__programs { gap: 64px; }
   .inn-prog {
-    grid-template-columns: 1fr;
-    gap: 24px;
+ grid-template-columns: 1fr;
+ gap: 24px;
   }
-  /* Mobile reset — image always on top, then body */
+  /* Mobile reset image always on top, then body */
   .inn-prog--right .inn-prog__media { order: 0; }
   .inn-prog--right .inn-prog__body  { order: 1; }
   .inn-prog__index {
-    top: -30px;
-    font-size: clamp(5rem, 18vw, 7rem);
-    -webkit-text-stroke: 1.2px rgba(196, 77, 14, 0.16);
+ top: -30px;
+ font-size: clamp(5rem, 18vw, 7rem);
+ -webkit-text-stroke: 1.2px rgba(196, 77, 14, 0.16);
   }
   .inn-prog--left  .inn-prog__index,
   .inn-prog--right .inn-prog__index { left: auto; right: 8px; }

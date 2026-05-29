@@ -57,7 +57,7 @@ export const PC_TO_DISTRICT = {
   PC271: 'kolhapur',
 };
 
-/* Reverse — list of PCs belonging to each district */
+/* Reverse list of PCs belonging to each district */
 export const DISTRICT_TO_PCS = Object.entries(PC_TO_DISTRICT).reduce((acc, [pc, dist]) => {
   if (!acc[dist]) acc[dist] = [];
   acc[dist].push(pc);

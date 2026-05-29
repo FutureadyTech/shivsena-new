@@ -5,33 +5,33 @@ import mahayutiContent from '../../../content/mahayuti.json';
 import './MahayutiArticle.css';
 
 /* ─────────────────────────────────────────────────────────────
-   Image + era-kicker pairing for each paragraph in mahayuti.json.
-   Index matches the paragraph index.
-   ─────────────────────────────────────────────────────────── */
+ Image + era-kicker pairing for each paragraph in mahayuti.json.
+ Index matches the paragraph index.
+ ─────────────────────────────────────────────────────────── */
 const BLOCKS = [
   {
-    image: '/timeline/image-1.jpg',
-    alt: 'पायाभरणी — हिंदुहृदयसम्राट बाळासाहेब ठाकरे',
-    objectPosition: 'center center',
-    kicker: { mr: 'पायाभरणी', en: 'Foundation' },
+ image: '/timeline/image-1.jpg',
+ alt: 'पायाभरणी हिंदुहृदयसम्राट बाळासाहेब ठाकरे',
+ objectPosition: 'center center',
+ kicker: { mr: 'पायाभरणी', en: 'Foundation' },
   },
   {
-    image: '/timeline/image-8.png',
-    alt: 'युतीची वाटचाल',
-    objectPosition: 'center center',
-    kicker: { mr: 'वाटचाल', en: 'The Rift' },
+ image: '/timeline/image-8.png',
+ alt: 'युतीची वाटचाल',
+ objectPosition: 'center center',
+ kicker: { mr: 'वाटचाल', en: 'The Rift' },
   },
   {
-    image: '/img-1.webp',
-    alt: 'नवे नेतृत्व',
-    objectPosition: 'center center',
-    kicker: { mr: 'नवे नेतृत्व', en: 'New Leadership' },
+ image: '/img-1.webp',
+ alt: 'नवे नेतृत्व',
+ objectPosition: 'center center',
+ kicker: { mr: 'नवे नेतृत्व', en: 'New Leadership' },
   },
   {
-    image: '/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp',
-    alt: 'महायुती २०२४',
-    objectPosition: 'center 30%',
-    kicker: { mr: 'ऐतिहासिक विजय', en: 'Historic Victory' },
+ image: '/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp',
+ alt: 'महायुती २०२४',
+ objectPosition: 'center 30%',
+ kicker: { mr: 'ऐतिहासिक विजय', en: 'Historic Victory' },
   },
 ];
 
@@ -42,41 +42,41 @@ export default function MahayutiArticle() {
 
   const paragraphs = Array.isArray(t.paragraphs) ? t.paragraphs : [];
   const blocks = paragraphs.map((text, i) => ({
-    text,
-    meta: BLOCKS[i] || BLOCKS[BLOCKS.length - 1],
+ text,
+ meta: BLOCKS[i] || BLOCKS[BLOCKS.length - 1],
   }));
 
   return (
-    <section className="my-article">
+ <section className="my-article">
 
-      {/* soft ambient glows */}
-      <span className="my-article__glow my-article__glow--tl" aria-hidden="true" />
-      <span className="my-article__glow my-article__glow--br" aria-hidden="true" />
+ {/* soft ambient glows */}
+ <span className="my-article__glow my-article__glow--tl" aria-hidden="true" />
+ <span className="my-article__glow my-article__glow--br" aria-hidden="true" />
 
-      <div className="my-article__inner">
+ <div className="my-article__inner">
 
-        {/* ── Alternating story blocks ── */}
-        <ol className="my-article__list">
-          {blocks.map((b, i) => (
-            <StoryBlock
-              key={i}
-              index={i}
-              text={b.text}
-              meta={b.meta}
-              lang={lang}
-            />
-          ))}
-        </ol>
+ {/* ── Alternating story blocks ── */}
+ <ol className="my-article__list">
+ {blocks.map((b, i) => (
+ <StoryBlock
+ key={i}
+ index={i}
+ text={b.text}
+ meta={b.meta}
+ lang={lang}
+ />
+ ))}
+ </ol>
 
-        {/* Closing flourish */}
-        <div className="my-article__flourish" aria-hidden="true">
-          <span className="my-article__flourish-line" />
-          <span className="my-article__flourish-mark">॥</span>
-          <span className="my-article__flourish-line" />
-        </div>
+ {/* Closing flourish */}
+ <div className="my-article__flourish" aria-hidden="true">
+ <span className="my-article__flourish-line" />
+ <span className="my-article__flourish-mark">॥</span>
+ <span className="my-article__flourish-line" />
+ </div>
 
-      </div>
-    </section>
+ </div>
+ </section>
   );
 }
 
@@ -86,27 +86,27 @@ function StoryBlock({ index, text, meta, lang }) {
   const orientation = index % 2 === 0 ? 'left' : 'right';
 
   return (
-    <li
-      ref={ref}
-      className={`my-block my-block--${orientation} reveal`}
-      style={{ '--reveal-delay': `${0.05 + (index % 2) * 0.06}s` }}
-    >
-      {/* ─── Image ─── */}
-      <div className="my-block__media">
-        <img
-          src={meta.image}
-          alt={meta.alt}
-          loading="lazy"
-          style={{ objectPosition: meta.objectPosition || 'center top' }}
-        />
-      </div>
+ <li
+ ref={ref}
+ className={`my-block my-block--${orientation} reveal`}
+ style={{ '--reveal-delay': `${0.05 + (index % 2) * 0.06}s` }}
+ >
+ {/* ─── Image ─── */}
+ <div className="my-block__media">
+ <img
+ src={meta.image}
+ alt={meta.alt}
+ loading="lazy"
+ style={{ objectPosition: meta.objectPosition || 'center top' }}
+ />
+ </div>
 
-      {/* ─── Body ─── */}
-      <div className="my-block__body">
-        <span className="my-block__kicker">{meta.kicker[lang]}</span>
-        <p className="my-block__text">{text}</p>
-      </div>
-    </li>
+ {/* ─── Body ─── */}
+ <div className="my-block__body">
+ <span className="my-block__kicker">{meta.kicker[lang]}</span>
+ <p className="my-block__text">{text}</p>
+ </div>
+ </li>
   );
 }
 

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   संकल्प आणि तत्त्वप्रणाली  — Cream Editorial
+ संकल्प आणि तत्त्वप्रणाली Cream Editorial
 ═══════════════════════════════════════════════════════════════ */
 .vision {
   position: relative;
@@ -39,12 +39,12 @@
 }
 
 .vision__title {
-    font-family: 'Noto Sans Devanagari', sans-serif;
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    line-height: 1.1;
-    color: #fa6919;
-    margin-bottom: 24px;
-    letter-spacing: -0.015em;
+ font-family: 'Noto Sans Devanagari', sans-serif;
+ font-size: clamp(2.4rem, 5vw, 4rem);
+ line-height: 1.1;
+ color: #fa6919;
+ margin-bottom: 24px;
+ letter-spacing: -0.015em;
 }
 
 .vision__lede {
@@ -70,9 +70,9 @@
   background: var(--paper-soft);
   border: 1px solid var(--hairline);
   transition:
-    transform 0.5s var(--ease-out-expo),
-    border-color 0.35s ease,
-    box-shadow 0.5s ease;
+ transform 0.5s var(--ease-out-expo),
+ border-color 0.35s ease,
+ box-shadow 0.5s ease;
   overflow: hidden;
 }
 
@@ -94,11 +94,11 @@
   border: 1px solid rgba(196, 77, 14, 0.18);
   color: var(--saffron-on-light);
   transition:
-    color 0.4s ease,
-    background 0.4s ease,
-    border-color 0.4s ease,
-    transform 0.5s var(--ease-out-expo),
-    box-shadow 0.4s ease;
+ color 0.4s ease,
+ background 0.4s ease,
+ border-color 0.4s ease,
+ transform 0.5s var(--ease-out-expo),
+ box-shadow 0.4s ease;
 }
 
 .vision-card__icon svg,
@@ -111,11 +111,11 @@
 }
 
 /* Tint the Flaticon PNGs to saffron at rest. The matrix is a
-   black→#C44D0E colorize chain. */
+ black→#C44D0E colorize chain. */
 .vision-card__icon-img {
   filter: brightness(0) saturate(100%)
-          invert(31%) sepia(95%) saturate(2076%)
-          hue-rotate(8deg) brightness(95%) contrast(95%);
+ invert(31%) sepia(95%) saturate(2076%)
+ hue-rotate(8deg) brightness(95%) contrast(95%);
   transition: filter 0.4s ease;
 }
 
@@ -123,11 +123,11 @@
   color: #fff;
   background: var(--saffron-on-light);
   border-color: var(--saffron-on-light);
-  transform: scale(1.06) rotate(-3deg);
+  transform: scale(1.06);
   box-shadow: 0 12px 28px -8px rgba(196, 77, 14, 0.45);
 }
 
-/* On hover the badge fills saffron — force the PNG icon to white. */
+/* On hover the badge fills saffron force the PNG icon to white. */
 .vision-card:hover .vision-card__icon-img {
   filter: brightness(0) invert(1);
 }
@@ -168,7 +168,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .vision { padding: 100px 28px 120px; }

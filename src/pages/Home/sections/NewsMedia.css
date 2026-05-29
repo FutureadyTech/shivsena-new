@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   NEWS & MEDIA — Cream Editorial
+ NEWS & MEDIA Cream Editorial
 ═══════════════════════════════════════════════════════════════ */
 .news {
   position: relative;
@@ -83,7 +83,7 @@
   gap: 28px;
 }
 
-/* The inner <a> tag — kill underline, inherit colour, take full size */
+/* The inner <a> tag kill underline, inherit colour, take full size */
 .news-feature__link {
   display: block;
   color: inherit;
@@ -97,7 +97,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   FEATURED ARTICLE
+ FEATURED ARTICLE
 ═══════════════════════════════════════════════════════════════ */
 .news-feature {
   position: relative;
@@ -105,7 +105,7 @@
   border: 1px solid var(--hairline);
   overflow: hidden;
   transition: border-color 0.4s ease, transform 0.5s var(--ease-out-expo),
-              box-shadow 0.5s ease;
+ box-shadow 0.5s ease;
   cursor: pointer;
   align-self: start;
   display: flex;
@@ -210,7 +210,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   SIDEBAR
+ SIDEBAR
 ═══════════════════════════════════════════════════════════════ */
 .news-sidebar {
   display: flex;
@@ -228,7 +228,7 @@
   border: 1px solid var(--hairline);
   cursor: pointer;
   transition: border-color 0.4s ease, transform 0.4s var(--ease-out-expo),
-              background 0.3s ease, box-shadow 0.4s ease;
+ background 0.3s ease, box-shadow 0.4s ease;
   overflow: hidden;
 }
 
@@ -317,7 +317,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .news { padding: 100px 28px 120px; }

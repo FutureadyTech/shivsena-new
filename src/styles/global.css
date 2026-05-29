@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   DESIGN TOKENS — site-wide. Used by every page.
+ DESIGN TOKENS site-wide. Used by every page.
 ═══════════════════════════════════════════════════════════════ */
 :root {
   --saffron: #FF6B1A;
@@ -65,7 +65,7 @@ body.has-custom-cursor * {
   opacity: 1;
 }
 
-/* Dot — tiny saffron fill */
+/* Dot tiny saffron fill */
 .cursor-dot {
   width: 6px;
   height: 6px;
@@ -75,7 +75,7 @@ body.has-custom-cursor * {
   transition: opacity 0.2s ease, transform 0.12s ease, background 0.2s ease;
 }
 
-/* Ring — larger hollow circle with spring lag */
+/* Ring larger hollow circle with spring lag */
 .cursor-ring {
   width: 32px;
   height: 32px;
@@ -83,10 +83,10 @@ body.has-custom-cursor * {
   margin-top: -16px;
   border: 1.5px solid rgba(196, 77, 14, 0.55);
   transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease,
-              margin 0.2s ease, border-color 0.2s ease;
+ margin 0.2s ease, border-color 0.2s ease;
 }
 
-/* Link variant — ring expands, dot stays */
+/* Link variant ring expands, dot stays */
 .cursor-dot--link {
   background: var(--saffron-on-light, #C44D0E);
   transform: scale(1.5);
@@ -99,7 +99,7 @@ body.has-custom-cursor * {
   border-color: rgba(196, 77, 14, 0.75);
 }
 
-/* On dark hero background — lighter ring */
+/* On dark hero background lighter ring */
 .hero-section .cursor-ring,
 .hero-section .cursor-dot {
   mix-blend-mode: screen;
@@ -119,10 +119,92 @@ html[lang="mr"] button {
 }
 
 /* ─── Disable letter-spacing on Devanagari (mr/hi) ─────────
-   Letter-spacing is designed for English uppercase eyebrows,
-   badges, and meta labels — it breaks Devanagari conjuncts
-   and matras, so we zero it out site-wide for those languages. */
+ Letter-spacing is designed for English uppercase eyebrows,
+ badges, and meta labels it breaks Devanagari conjuncts
+ and matras, so we zero it out site-wide for those languages. */
 html[lang="mr"] *,
 html[lang="hi"] * {
   letter-spacing: 0 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UNIFIED SECTION TITLE — bold saffron, matches the Vision section.
+
+   Applies to every in-page section heading sitting on a cream/paper
+   background so the site reads with one consistent voice.
+
+   Deliberately NOT in this list:
+   • Banner titles (about-banner__title, contact-banner__title,
+     news-banner__title, lp-banner__title, ldr-banner__title,
+     my-banner__title, decl-banner__title, inn-banner__title,
+     ssj-banner__title) — they sit on dark photo backgrounds and
+     keep their own saffron-on-shadow treatment.
+   • Sub-element / card titles (vision-card__title, news-feature__title,
+     news-side__title, sp-card__title, sp-modal__title, vg-card__title,
+     vg-modal__title, pg-lightbox__title, ia-featured__title,
+     ia-item__title, decl-card__title, ci-card__title, cf-success__title,
+     cf-instructions__title, fstep__title, pillar__title,
+     story-mobile__title, era-text__title, inn-prog__title) — these
+     are intentionally smaller and live inside cards.
+
+   To opt out a specific section, override .my-class with a more
+   specific selector after this block.
+═══════════════════════════════════════════════════════════════ */
+.vision__title,
+.leadership__title,
+.lf__title,
+.news__title,
+.region-explorer__title,
+.sm-section__title,
+.cf-section__title,
+.sp-section__title,
+.ia-section__title,
+.vg-section__title,
+.pg-section__title,
+.dir-section__title,
+.inn__title,
+.affiliated__title,
+.cgn-tl__title,
+.social__title,
+.eci__title,
+.decl__title,
+.fguide__title,
+.rmap__title,
+.map-section__title,
+.ci-section__title,
+.locator__title {
+  font-family: 'Noto Sans Devanagari', sans-serif !important;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fa6919;
+  letter-spacing: -0.015em;
+}
+
+@media (max-width: 768px) {
+  .vision__title,
+  .leadership__title,
+  .lf__title,
+  .news__title,
+  .region-explorer__title,
+  .sm-section__title,
+  .cf-section__title,
+  .sp-section__title,
+  .ia-section__title,
+  .vg-section__title,
+  .pg-section__title,
+  .dir-section__title,
+  .inn__title,
+  .affiliated__title,
+  .cgn-tl__title,
+  .social__title,
+  .eci__title,
+  .decl__title,
+  .fguide__title,
+  .rmap__title,
+  .map-section__title,
+  .ci-section__title,
+  .locator__title {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
 }

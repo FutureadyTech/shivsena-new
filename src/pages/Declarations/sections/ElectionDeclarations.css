@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   ELECTION DECLARATIONS — tabbed cycles + searchable filings
+ ELECTION DECLARATIONS tabbed cycles + searchable filings
 ═══════════════════════════════════════════════════════════════ */
 .eci {
   position: relative;
@@ -15,8 +15,8 @@
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(ellipse 40% 28% at 90% 8%, rgba(255, 178, 107, 0.16) 0%, transparent 60%),
-    radial-gradient(ellipse 30% 22% at 8% 95%, rgba(196, 77, 14, 0.10) 0%, transparent 65%);
+ radial-gradient(ellipse 40% 28% at 90% 8%, rgba(255, 178, 107, 0.16) 0%, transparent 60%),
+ radial-gradient(ellipse 30% 22% at 8% 95%, rgba(196, 77, 14, 0.10) 0%, transparent 65%);
 }
 
 .eci__inner {
@@ -88,8 +88,8 @@
   overflow: hidden;
   box-shadow: 0 14px 36px -22px rgba(26, 20, 16, 0.18);
   transition: transform 0.35s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
-              border-color 0.3s ease,
-              box-shadow 0.35s ease;
+ border-color 0.3s ease,
+ box-shadow 0.35s ease;
 }
 .eci__sumcard::before {
   content: '';
@@ -145,7 +145,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   TAB BAR — premium pill-card selector (wraps on desktop)
+ TAB BAR premium pill-card selector (wraps on desktop)
 ═══════════════════════════════════════════════════════════════ */
 .eci__tabs {
   display: flex;
@@ -174,11 +174,11 @@
   color: var(--ink, #1A1410);
   box-shadow: 0 4px 14px -6px rgba(26, 20, 16, 0.10);
   transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease,
-    transform 0.35s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
-    box-shadow 0.35s ease;
+ background 0.25s ease,
+ border-color 0.25s ease,
+ color 0.25s ease,
+ transform 0.35s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
+ box-shadow 0.35s ease;
   position: relative;
   overflow: hidden;
 }
@@ -209,10 +209,10 @@
   color: var(--body-text, #5C544A);
   border: 1px solid rgba(26, 20, 16, 0.06);
   transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.45s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
+ background 0.3s ease,
+ color 0.3s ease,
+ border-color 0.3s ease,
+ transform 0.45s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
 }
 .eci__tab-icon svg { width: 20px; height: 20px; }
 
@@ -275,14 +275,14 @@
 }
 .eci__tab:hover .eci__tab-sub { color: var(--ink-soft, #2E2820); }
 
-/* Active state — saffron-tinted card with stronger shadow */
+/* Active state saffron-tinted card with stronger shadow */
 .eci__tab--active {
   background: #FFFDF7;
   border-color: var(--saffron-on-light, #C44D0E);
   color: var(--saffron-on-light, #C44D0E);
   box-shadow:
-    0 22px 44px -18px rgba(196, 77, 14, 0.45),
-    0 0 0 3px rgba(196, 77, 14, 0.10);
+ 0 22px 44px -18px rgba(196, 77, 14, 0.45),
+ 0 0 0 3px rgba(196, 77, 14, 0.10);
   transform: translateY(-2px);
 }
 .eci__tab--active::before {
@@ -586,12 +586,12 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
-              transform 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
+ transform 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1));
 }
 .eci .reveal.is-revealed { opacity: 1; transform: translateY(0); }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .eci { padding: 96px 28px 110px; }
@@ -621,19 +621,19 @@
   .eci__toolbar { gap: 12px; }
   .eci__search { max-width: none; }
 
-  /* Stack each candidate row on small screens — number + main + forms (full width) */
+  /* Stack each candidate row on small screens number + main + forms (full width) */
   .eci-row {
-    grid-template-columns: 48px 1fr;
-    grid-template-rows: auto auto;
-    row-gap: 12px;
-    padding: 16px 18px;
+ grid-template-columns: 48px 1fr;
+ grid-template-rows: auto auto;
+ row-gap: 12px;
+ padding: 16px 18px;
   }
   .eci-row:hover { padding-left: 18px; }
   .eci-row__no { width: 40px; height: 40px; }
   .eci-row__forms {
-    grid-column: 1 / -1;
-    flex-wrap: wrap;
-    gap: 8px;
+ grid-column: 1 / -1;
+ flex-wrap: wrap;
+ gap: 8px;
   }
   .eci-chip { padding: 7px 10px; font-size: 0.76rem; }
   .eci__group-head { padding: 18px 18px 8px; }

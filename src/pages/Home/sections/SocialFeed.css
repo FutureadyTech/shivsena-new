@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SOCIAL FEED PREVIEW
+ SOCIAL FEED PREVIEW
 ═══════════════════════════════════════════════════════════════ */
 .social {
   position: relative;
@@ -84,7 +84,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   POST CARD
+ POST CARD
 ═══════════════════════════════════════════════════════════════ */
 .social-card {
   position: relative;
@@ -94,16 +94,16 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  /* Card is now an <a> — kill default underline + inherit colour */
+  /* Card is now an <a> kill default underline + inherit colour */
   color: inherit;
   text-decoration: none;
   transition:
-    transform 0.5s var(--ease-out-expo),
-    border-color 0.35s ease,
-    box-shadow 0.5s ease;
+ transform 0.5s var(--ease-out-expo),
+ border-color 0.35s ease,
+ box-shadow 0.5s ease;
 }
 
-/* LIVE pill — shown on cards backed by real-time data */
+/* LIVE pill shown on cards backed by real-time data */
 .social-card__live {
   position: absolute;
   top: 12px;
@@ -130,8 +130,8 @@
   animation: socialLivePulse 1.6s ease-in-out infinite;
 }
 @keyframes socialLivePulse {
-  0%, 100% { opacity: 1;    transform: scale(1);    }
-  50%      { opacity: 0.55; transform: scale(0.85); }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
 }
 
 /* Behold (Instagram) embed container */
@@ -198,8 +198,8 @@
 .social-card__quote {
   aspect-ratio: 4 / 5;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(196, 77, 14, 0.08) 0%, transparent 55%),
-    linear-gradient(160deg, var(--ink) 0%, #1d1812 100%);
+ radial-gradient(ellipse at 30% 20%, rgba(196, 77, 14, 0.08) 0%, transparent 55%),
+ linear-gradient(160deg, var(--ink) 0%, #1d1812 100%);
   color: var(--cream, #fff5d8);
   padding: 28px 24px;
   position: relative;
@@ -226,7 +226,7 @@
   font-weight: 400;
 }
 
-/* Platform badge — corner */
+/* Platform badge corner */
 .social-card__badge {
   position: absolute;
   top: 14px;
@@ -248,8 +248,8 @@
 /* Per-platform badge color */
 .social-card--instagram .social-card__badge { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743); }
 .social-card--facebook  .social-card__badge { background: #1877f2; }
-.social-card--twitter   .social-card__badge { background: #000; }
-.social-card--youtube   .social-card__badge { background: #ff0000; }
+.social-card--twitter .social-card__badge { background: #000; }
+.social-card--youtube .social-card__badge { background: #ff0000; }
 
 /* Body */
 .social-card__body {
@@ -299,7 +299,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .social { padding: 100px 28px 120px; }

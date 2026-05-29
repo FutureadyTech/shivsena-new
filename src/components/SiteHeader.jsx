@@ -4,34 +4,34 @@ import { useT } from '../i18n/LanguageContext.jsx';
 import LanguageToggle from './LanguageToggle.jsx';
 
 /* ─── Nav structure ─────────────────────────────────────────────
-   Items can be a plain link OR a parent with `children` (dropdown).
-   Children are rendered as a submenu under the parent on hover/focus. */
+ Items can be a plain link OR a parent with `children` (dropdown).
+ Children are rendered as a submenu under the parent on hover/focus. */
 const NAV = [
-  { to: '/home',         key: 'nav-home' },
+  { to: '/home', key: 'nav-home' },
   {
-    key: 'nav-about',
-    to: '/about',
-    children: [
-      { to: '/about',          key: 'nav-about-party' },
-      { to: '/mahayuti',       key: 'nav-mahayuti' },
-      { to: '/shivsena-janma', key: 'nav-shivsena-janma' },
-    ],
+ key: 'nav-about',
+ to: '/about',
+ children: [
+ { to: '/about', key: 'nav-about-party' },
+ { to: '/mahayuti', key: 'nav-mahayuti' },
+ { to: '/shivsena-janma', key: 'nav-shivsena-janma' },
+ ],
   },
-  { to: '/leadership',   key: 'nav-leadership' },
-  { to: '/innovative',   key: 'nav-innovative' },
+  { to: '/leadership', key: 'nav-leadership' },
+  { to: '/innovative', key: 'nav-innovative' },
   {
-    key: 'nav-news',
-    to: '/news',
-    children: [
-      { to: '/news#press-releases', key: 'nav-press' },
-      { to: '/news#interviews',     key: 'nav-interviews' },
-      { to: '/news#speeches',       key: 'nav-speeches' },
-      { to: '/news#video-gallery',  key: 'nav-video-gallery' },
-      { to: '/news#photo-gallery',  key: 'nav-photo-gallery' },
-    ],
+ key: 'nav-news',
+ to: '/news',
+ children: [
+ { to: '/news#press-releases', key: 'nav-press' },
+ { to: '/news#interviews', key: 'nav-interviews' },
+ { to: '/news#speeches', key: 'nav-speeches' },
+ { to: '/news#video-gallery',  key: 'nav-video-gallery' },
+ { to: '/news#photo-gallery',  key: 'nav-photo-gallery' },
+ ],
   },
   { to: '/declarations', key: 'nav-declarations' },
-  { to: '/contact',      key: 'nav-contact' },
+  { to: '/contact', key: 'nav-contact' },
 ];
 
 export default function SiteHeader() {
@@ -41,64 +41,64 @@ export default function SiteHeader() {
   // Toggle a body class while the dark hero is in view, so the header
   // can swap between light (default) and dark style based on background.
   useEffect(() => {
-    const hero = document.querySelector('.hero');
-    if (!hero) {
-      document.body.classList.remove('has-dark-hero-visible');
-      return;
-    }
+ const hero = document.querySelector('.hero');
+ if (!hero) {
+ document.body.classList.remove('has-dark-hero-visible');
+ return;
+ }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        document.body.classList.toggle('has-dark-hero-visible', entry.isIntersecting);
-      },
-      { rootMargin: '-80px 0px 0px 0px', threshold: 0 }
-    );
-    observer.observe(hero);
+ const observer = new IntersectionObserver(
+ ([entry]) => {
+ document.body.classList.toggle('has-dark-hero-visible', entry.isIntersecting);
+ },
+ { rootMargin: '-80px 0px 0px 0px', threshold: 0 }
+ );
+ observer.observe(hero);
 
-    return () => {
-      observer.disconnect();
-      document.body.classList.remove('has-dark-hero-visible');
-    };
+ return () => {
+ observer.disconnect();
+ document.body.classList.remove('has-dark-hero-visible');
+ };
   }, [pathname]);
 
   return (
-    <header className="site-nav">
-      <NavLink to="/home" className="site-nav__brand" aria-label="शिवसेना">
-        <img src="/logo.png" alt="शिवसेना" className="site-nav__logo" />
-      </NavLink>
+ <header className="site-nav">
+ <NavLink to="/home" className="site-nav__brand" aria-label="शिवसेना">
+ <img src="/logo.png" alt="शिवसेना" className="site-nav__logo" />
+ </NavLink>
 
-      <nav className="site-nav__menu">
-        {NAV.map((item) =>
-          item.children ? (
-            <NavDropdown key={item.key} item={item} t={t} />
-          ) : (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`
-              }
-            >
-              {t(item.key)}
-            </NavLink>
-          )
-        )}
-      </nav>
+ <nav className="site-nav__menu">
+ {NAV.map((item) =>
+ item.children ? (
+ <NavDropdown key={item.key} item={item} t={t} />
+ ) : (
+ <NavLink
+ key={item.to}
+ to={item.to}
+ className={({ isActive }) =>
+ `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`
+ }
+ >
+ {t(item.key)}
+ </NavLink>
+ )
+ )}
+ </nav>
 
-      <NavLink to="/shivsena-live" className="site-nav__live">
-        <span className="site-nav__live-dot" aria-hidden="true" />
-        <span>{t('nav-live')}</span>
-      </NavLink>
+ <NavLink to="/shivsena-live" className="site-nav__live">
+ <span className="site-nav__live-dot" aria-hidden="true" />
+ <span>{t('nav-live')}</span>
+ </NavLink>
 
-      <LanguageToggle />
+ <LanguageToggle />
 
-    </header>
+ </header>
   );
 }
 
 /* ────────────────────────────────────────────────────────────────
-   Dropdown — opens on hover (desktop) AND on click/focus (a11y).
-   Closes when clicking outside or pressing Escape.
+ Dropdown opens on hover (desktop) AND on click/focus (a11y).
+ Closes when clicking outside or pressing Escape.
 ─────────────────────────────────────────────────────────────────── */
 function NavDropdown({ item, t }) {
   const { pathname, hash } = useLocation();
@@ -108,103 +108,103 @@ function NavDropdown({ item, t }) {
 
   // Parent counts as "active" if any of its children's paths match.
   const isParentActive =
-    pathname === item.to ||
-    item.children.some((c) => {
-      const [path] = c.to.split('#');
-      return pathname === path;
-    });
+ pathname === item.to ||
+ item.children.some((c) => {
+ const [path] = c.to.split('#');
+ return pathname === path;
+ });
 
   // Close when path changes (after clicking a sub-link)
   useEffect(() => {
-    setOpen(false);
+ setOpen(false);
   }, [pathname, hash]);
 
   // Click-outside + Escape to close
   useEffect(() => {
-    if (!open) return;
-    const onDocClick = (e) => {
-      if (!wrapperRef.current?.contains(e.target)) setOpen(false);
-    };
-    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
-    document.addEventListener('mousedown', onDocClick);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onDocClick);
-      document.removeEventListener('keydown', onKey);
-    };
+ if (!open) return;
+ const onDocClick = (e) => {
+ if (!wrapperRef.current?.contains(e.target)) setOpen(false);
+ };
+ const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
+ document.addEventListener('mousedown', onDocClick);
+ document.addEventListener('keydown', onKey);
+ return () => {
+ document.removeEventListener('mousedown', onDocClick);
+ document.removeEventListener('keydown', onKey);
+ };
   }, [open]);
 
   // Hover with a tiny grace period so the user can move into the panel
   const handleEnter = () => {
-    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-    setOpen(true);
+ if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+ setOpen(true);
   };
   const handleLeave = () => {
-    closeTimerRef.current = setTimeout(() => setOpen(false), 140);
+ closeTimerRef.current = setTimeout(() => setOpen(false), 140);
   };
 
   return (
-    <div
-      ref={wrapperRef}
-      className={`site-nav__dropdown ${open ? 'is-open' : ''}`}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-    >
-      <NavLink
-        to={item.to}
-        className={`site-nav__link site-nav__link--has-children ${
-          isParentActive ? 'site-nav__link--active' : ''
-        }`}
-        onClick={(e) => {
-          // On touch / no-hover devices, the first tap should open the menu
-          // rather than navigate. Once open, a second tap on the parent
-          // proceeds to the parent route.
-          if (!window.matchMedia('(hover: hover)').matches && !open) {
-            e.preventDefault();
-            setOpen(true);
-          }
-        }}
-        aria-haspopup="menu"
-        aria-expanded={open}
-      >
-        {t(item.key)}
-        <svg
-          className="site-nav__caret"
-          viewBox="0 0 12 12"
-          width="10"
-          height="10"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <polyline points="3 5 6 8 9 5" />
-        </svg>
-      </NavLink>
+ <div
+ ref={wrapperRef}
+ className={`site-nav__dropdown ${open ? 'is-open' : ''}`}
+ onMouseEnter={handleEnter}
+ onMouseLeave={handleLeave}
+ >
+ <NavLink
+ to={item.to}
+ className={`site-nav__link site-nav__link--has-children ${
+ isParentActive ? 'site-nav__link--active' : ''
+ }`}
+ onClick={(e) => {
+ // On touch / no-hover devices, the first tap should open the menu
+ // rather than navigate. Once open, a second tap on the parent
+ // proceeds to the parent route.
+ if (!window.matchMedia('(hover: hover)').matches && !open) {
+ e.preventDefault();
+ setOpen(true);
+ }
+ }}
+ aria-haspopup="menu"
+ aria-expanded={open}
+ >
+ {t(item.key)}
+ <svg
+ className="site-nav__caret"
+ viewBox="0 0 12 12"
+ width="10"
+ height="10"
+ fill="none"
+ stroke="currentColor"
+ strokeWidth="1.8"
+ strokeLinecap="round"
+ strokeLinejoin="round"
+ aria-hidden="true"
+ >
+ <polyline points="3 5 6 8 9 5" />
+ </svg>
+ </NavLink>
 
-      <div className="site-nav__submenu" role="menu">
-        {item.children.map((child) => {
-          // NavLink's built-in isActive only compares pathname, so two
-          // sub-items that share a pathname (e.g. /about#history and
-          // /about#affiliated) would BOTH be highlighted at the same time.
-          // We hand-roll the active check so the hash is also compared.
-          const [childPath, childHash = ''] = child.to.split('#');
-          const isChildActive = pathname === childPath && hash === (childHash ? `#${childHash}` : '');
-          return (
-            <NavLink
-              key={child.to}
-              to={child.to}
-              className={`site-nav__sublink ${isChildActive ? 'site-nav__sublink--active' : ''}`}
-              role="menuitem"
-            >
-              <span className="site-nav__sublink-dot" aria-hidden="true" />
-              <span>{t(child.key)}</span>
-            </NavLink>
-          );
-        })}
-      </div>
-    </div>
+ <div className="site-nav__submenu" role="menu">
+ {item.children.map((child) => {
+ // NavLink's built-in isActive only compares pathname, so two
+ // sub-items that share a pathname (e.g. /about#history and
+ // /about#affiliated) would BOTH be highlighted at the same time.
+ // We hand-roll the active check so the hash is also compared.
+ const [childPath, childHash = ''] = child.to.split('#');
+ const isChildActive = pathname === childPath && hash === (childHash ? `#${childHash}` : '');
+ return (
+ <NavLink
+ key={child.to}
+ to={child.to}
+ className={`site-nav__sublink ${isChildActive ? 'site-nav__sublink--active' : ''}`}
+ role="menuitem"
+ >
+ <span className="site-nav__sublink-dot" aria-hidden="true" />
+ <span>{t(child.key)}</span>
+ </NavLink>
+ );
+ })}
+ </div>
+ </div>
   );
 }

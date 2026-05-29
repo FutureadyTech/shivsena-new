@@ -1,20 +1,20 @@
 /* ═══════════════════════════════════════════════════════════════
-   ID CARD — Horizontal Shivsena member card.
-   Layout: photo + signature on the left, brand top-right,
-   5 detail rows on the right, saffron curves at the corners.
-   Fixed pixel dimensions so html2canvas captures it 1:1 for PDF.
+ ID CARD Horizontal Shivsena member card.
+ Layout: photo + signature on the left, brand top-right,
+ 5 detail rows on the right, saffron curves at the corners.
+ Fixed pixel dimensions so html2canvas captures it 1:1 for PDF.
 ═══════════════════════════════════════════════════════════════ */
 
 .idcard {
-  /* Fixed canvas — captured 1:1 by html2canvas */
+  /* Fixed canvas captured 1:1 by html2canvas */
   width: 660px;
   height: 400px;
   background: #FFFFFF;
   border-radius: 18px;
   border: 1px solid rgba(196, 77, 14, 0.10);
   box-shadow:
-    0 24px 60px rgba(196, 77, 14, 0.22),
-    0 4px 14px rgba(0, 0, 0, 0.06);
+ 0 24px 60px rgba(196, 77, 14, 0.22),
+ 0 4px 14px rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
   color: #1A1410;
@@ -23,18 +23,18 @@
 }
 
 /* ── DECORATIVE SAFFRON SHAPES ─────────────────────────────────
-   Five absolutely-positioned shapes mimic the curves seen in the
-   reference design: a quarter-disc top-left, two thin tilted
-   stripes top-right, a big rounded blob bottom-right, and a small
-   tilted stripe bottom-left. Pure CSS so html2canvas reproduces
-   them faithfully in the PDF. */
+ Five absolutely-positioned shapes mimic the curves seen in the
+ reference design: a quarter-disc top-left, two thin tilted
+ stripes top-right, a big rounded blob bottom-right, and a small
+ tilted stripe bottom-left. Pure CSS so html2canvas reproduces
+ them faithfully in the PDF. */
 
 .idcard__shape {
   position: absolute;
   pointer-events: none;
 }
 
-/* Top-left — quarter circle wave coming in from the corner */
+/* Top-left quarter circle wave coming in from the corner */
 .idcard__shape--tl {
   top: -70px;
   left: -70px;
@@ -45,10 +45,10 @@
   opacity: 0.95;
 }
 
-/* Mid-right — two thin tilted stripes, positioned LOW enough that
-   they don't run through the brand text in the top-right corner.
-   They sit between the photo area and the bottom blob, echoing the
-   diagonal flow of the reference card. */
+/* Mid-right two thin tilted stripes, positioned LOW enough that
+ they don't run through the brand text in the top-right corner.
+ They sit between the photo area and the bottom blob, echoing the
+ diagonal flow of the reference card. */
 .idcard__shape--tr-stripe-1 {
   top: 175px;
   right: -110px;
@@ -70,7 +70,7 @@
   opacity: 0.7;
 }
 
-/* Bottom-right — large rounded wave */
+/* Bottom-right large rounded wave */
 .idcard__shape--br {
   bottom: -130px;
   right: -90px;
@@ -81,7 +81,7 @@
   opacity: 0.95;
 }
 
-/* Bottom-left — small tilted stripe to balance composition */
+/* Bottom-left small tilted stripe to balance composition */
 .idcard__shape--bl-stripe {
   bottom: 30px;
   left: -50px;
@@ -161,8 +161,8 @@
   border-radius: 4px;
   overflow: hidden;
   box-shadow:
-    inset 0 0 0 2px #fff,
-    0 6px 14px rgba(196, 77, 14, 0.18);
+ inset 0 0 0 2px #fff,
+ 0 6px 14px rgba(196, 77, 14, 0.18);
 }
 
 .idcard__photo {
@@ -236,8 +236,8 @@
   word-break: break-word;
 }
 
-/* The "muted" row (gender) shows in a smaller weight — keeps the
-   primary 5 rows visually anchored like the reference card. */
+/* The "muted" row (gender) shows in a smaller weight keeps the
+ primary 5 rows visually anchored like the reference card. */
 .idcard__row--muted .idcard__row-label,
 .idcard__row--muted .idcard__row-sep {
   color: #C44D0E;
@@ -292,8 +292,8 @@
 }
 
 /* When the card is captured for PDF, render it off-screen but
-   still laid out (visibility hidden won't work — html2canvas
-   needs the painted node). */
+ still laid out (visibility hidden won't work html2canvas
+ needs the painted node). */
 .idcard--capture-host {
   position: fixed;
   top: -10000px;

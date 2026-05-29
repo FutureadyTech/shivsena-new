@@ -1,19 +1,19 @@
 /* ═══════════════════════════════════════════════════════════════
-   HOME PAGE — Cream Editorial Theme
-   Hero stays dark cinematic. Everything below is light.
+ HOME PAGE Cream Editorial Theme
+ Hero stays dark cinematic. Everything below is light.
 ═══════════════════════════════════════════════════════════════ */
 
 :root {
   /* ─── Light editorial palette (used by everything below hero) ─── */
-  --paper:        #FAF6EE;   /* primary section background */
-  --paper-deep:   #F2EBDD;   /* alternating section / cards */
-  --paper-soft:   #FCFBF7;   /* card surfaces, lightest */
+  --paper: #FAF6EE; /* primary section background */
+  --paper-deep: #F2EBDD; /* alternating section / cards */
+  --paper-soft: #FCFBF7; /* card surfaces, lightest */
 
-  --ink:          #1A1410;   /* headlines */
-  --ink-soft:     #2E2820;   /* secondary headings */
-  --body-text:    #5C544A;   /* body copy */
-  --body-light:   #847B6E;   /* meta text */
-  --hairline:     rgba(26, 20, 16, 0.1);
+  --ink: #1A1410; /* headlines */
+  --ink-soft: #2E2820; /* secondary headings */
+  --body-text: #5C544A; /* body copy */
+  --body-light: #847B6E; /* meta text */
+  --hairline: rgba(26, 20, 16, 0.1);
   --hairline-strong: rgba(26, 20, 16, 0.18);
 
   /* Saffron/gold tokens carried over (used as accents on cream) */
@@ -29,9 +29,9 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   SITE HEADER — Scroll-aware
-   Default = LIGHT style (used on /about, /news, and when scrolled past hero)
-   When body has .has-dark-hero-visible = DARK style (over hero only)
+ SITE HEADER Scroll-aware
+ Default = LIGHT style (used on /about, /news, and when scrolled past hero)
+ When body has .has-dark-hero-visible = DARK style (over hero only)
 ═══════════════════════════════════════════════════════════════ */
 .site-nav {
   position: fixed;
@@ -52,7 +52,7 @@
 
 @keyframes navFadeDown {
   from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ─── DARK mode (over the cinematic hero) ─── */
@@ -197,20 +197,20 @@ body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
   border: 1px solid var(--hairline, rgba(26, 20, 16, 0.1));
   border-radius: 10px;
   box-shadow:
-    0 18px 44px -18px rgba(26, 20, 16, 0.28),
-    0 2px 6px rgba(26, 20, 16, 0.06);
+ 0 18px 44px -18px rgba(26, 20, 16, 0.28),
+ 0 2px 6px rgba(26, 20, 16, 0.06);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition:
-    opacity 0.28s var(--ease-out-expo),
-    transform 0.32s var(--ease-out-expo),
-    visibility 0.28s;
+ opacity 0.28s var(--ease-out-expo),
+ transform 0.32s var(--ease-out-expo),
+ visibility 0.28s;
   z-index: 200;
 }
 
 /* Invisible bridge so the cursor can move from parent → submenu
-   without crossing a gap that closes the menu. */
+ without crossing a gap that closes the menu. */
 .site-nav__submenu::before {
   content: '';
   position: absolute;
@@ -269,13 +269,13 @@ body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
 }
 .site-nav__sublink--active .site-nav__sublink-dot { opacity: 1; }
 
-/* Submenu styling over dark hero — dark surface, cream text */
+/* Submenu styling over dark hero dark surface, cream text */
 body.has-dark-hero-visible .site-nav__submenu {
   background: rgba(10, 6, 4, 0.94);
   border-color: rgba(255, 178, 107, 0.18);
   box-shadow:
-    0 22px 50px -18px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(255, 178, 107, 0.05) inset;
+ 0 22px 50px -18px rgba(0, 0, 0, 0.7),
+ 0 0 0 1px rgba(255, 178, 107, 0.05) inset;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -288,13 +288,13 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
 
 @media (max-width: 768px) {
   .site-nav__submenu {
-    min-width: 200px;
-    left: 0;
-    transform: translateX(0) translateY(-6px);
+ min-width: 200px;
+ left: 0;
+ transform: translateX(0) translateY(-6px);
   }
   .site-nav__dropdown.is-open .site-nav__submenu,
   .site-nav__dropdown:hover .site-nav__submenu {
-    transform: translateX(0) translateY(0);
+ transform: translateX(0) translateY(0);
   }
 }
 
@@ -367,9 +367,9 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
 }
 
 @keyframes liveDotPulse {
-  0%   { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0.7); opacity: 1; }
-  70%  { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);   opacity: 0.85; }
-  100% { box-shadow: 0 0 0 0   rgba(255, 255, 255, 0);   opacity: 1; }
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); opacity: 1; }
+  70%  { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); opacity: 0.85; }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -380,27 +380,27 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(124px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes glowPulse {
   0%, 100% { text-shadow: 0 0 1px rgba(255,215,0,0.3), 0 2px 32px rgba(0,0,0,0.1); }
-  50%       { text-shadow: 0 0 2px #fb691a, 0 2px 32px rgba(0,0,0,0.1); }
+  50% { text-shadow: 0 0 2px #fb691a, 0 2px 32px rgba(0,0,0,0.1); }
 }
 
 @keyframes shimmerLine {
-  0%   { background-position: -200% center; }
+  0% { background-position: -200% center; }
   100% { background-position: 200% center; }
 }
 
 @keyframes flickerGlow {
   0%, 100% { opacity: 0.6; }
-  50%       { opacity: 0.45; }
+  50% { opacity: 0.45; }
 }
 
-/* slowPan Ken-Burns animation removed — the video has its own motion,
-   and continuously animating transform on a video element was forcing
-   per-frame repaints (root cause of the hero lag). */
+/* slowPan Ken-Burns animation removed the video has its own motion,
+ and continuously animating transform on a video element was forcing
+ per-frame repaints (root cause of the hero lag). */
 
 /* ── SECTION ── */
 
@@ -422,7 +422,7 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   height: 56.25vw;
   min-height: 100vh;
   /* translate3d promotes the video to its own compositor layer (GPU),
-     avoiding continuous repaint. */
+ avoiding continuous repaint. */
   transform: translate3d(-50%, -50%, 0);
   object-fit: cover;
   z-index: 0;
@@ -433,12 +433,12 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
 }
 
 /* ── YOUTUBE (embed mode) ──
-   Used when Hero.jsx's SOURCE constant is 'youtube'. The wrapper
-   holds the iframe and a transparent shield that absorbs any
-   click/hover so the YouTube player UI never surfaces. The iframe
-   is sized to 16:9 covering the viewport (mirrors the MP4's
-   object-fit: cover) and scaled 1.25× so any residual YT chrome
-   sits outside the visible viewport. */
+ Used when Hero.jsx's SOURCE constant is 'youtube'. The wrapper
+ holds the iframe and a transparent shield that absorbs any
+ click/hover so the YouTube player UI never surfaces. The iframe
+ is sized to 16:9 covering the viewport (mirrors the MP4's
+ object-fit: cover) and scaled 1.25× so any residual YT chrome
+ sits outside the visible viewport. */
 
 .hero-yt-wrap {
   position: absolute;
@@ -475,8 +475,8 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
 /* ── OVERLAY STACK ── */
 
 /* All overlay layers below are decorative and must NOT block pointer
-   events on the hero CTAs, and should sit on their own compositor
-   layer so they never trigger a video-element repaint. */
+ events on the hero CTAs, and should sit on their own compositor
+ layer so they never trigger a video-element repaint. */
 .hero-section .ov-base,
 .hero-section .ov-pattern,
 .hero-section .ov-spotlight,
@@ -494,10 +494,10 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   inset: 0;
   z-index: 1;
   background: linear-gradient(
-    160deg,
-    rgba(5, 2, 0, 0.75) 0%,
-    rgba(10, 5, 0, 0.55) 45%,
-    rgba(5, 2, 0, 0.80) 100%
+ 160deg,
+ rgba(5, 2, 0, 0.75) 0%,
+ rgba(10, 5, 0, 0.55) 45%,
+ rgba(5, 2, 0, 0.80) 100%
   );
 }
 
@@ -506,11 +506,11 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   inset: 0;
   z-index: 2;
   background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 180, 0, 0.022) 0px,
-    rgba(255, 180, 0, 0.022) 1px,
-    transparent 1px,
-    transparent 44px
+ -45deg,
+ rgba(255, 180, 0, 0.022) 0px,
+ rgba(255, 180, 0, 0.022) 1px,
+ transparent 1px,
+ transparent 44px
   );
 }
 
@@ -519,10 +519,10 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   inset: 0;
   z-index: 3;
   background: radial-gradient(
-    ellipse 60% 55% at 50% 46%,
-    rgba(255, 180, 0, 0.07) 0%,
-    rgba(0, 0, 0, 0.22) 55%,
-    rgba(0, 0, 0, 0.52) 100%
+ ellipse 60% 55% at 50% 46%,
+ rgba(255, 180, 0, 0.07) 0%,
+ rgba(0, 0, 0, 0.22) 55%,
+ rgba(0, 0, 0, 0.52) 100%
   );
 }
 
@@ -531,13 +531,13 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   inset: 0;
   z-index: 3;
   background: radial-gradient(
-    ellipse 55% 50% at 12% 18%,
-    rgba(255, 160, 0, 0.16) 0%,
-    transparent 68%
+ ellipse 55% 50% at 12% 18%,
+ rgba(255, 160, 0, 0.16) 0%,
+ transparent 68%
   );
-  /* flickerGlow animation removed — animating opacity on a viewport-
-     sized gradient was forcing per-frame repaints that contended with
-     the hero video's GPU decoding and caused playback to stutter. */
+  /* flickerGlow animation removed animating opacity on a viewport-
+ sized gradient was forcing per-frame repaints that contended with
+ the hero video's GPU decoding and caused playback to stutter. */
 }
 
 .ov-light-br {
@@ -545,9 +545,9 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   inset: 0;
   z-index: 3;
   background: radial-gradient(
-    ellipse 45% 40% at 90% 88%,
-    rgba(200, 100, 0, 0.12) 0%,
-    transparent 65%
+ ellipse 45% 40% at 90% 88%,
+ rgba(200, 100, 0, 0.12) 0%,
+ transparent 65%
   );
 }
 
@@ -598,29 +598,25 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
 }
 
 .hero-main-title {
-    font-weight: 700;
-    color: #F34F00;
-    line-height: 1;
-    text-transform: uppercase;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-main-title__img {
-    width: clamp(200px, 32vw, 460px);
-    height: auto;
-    display: block;
-    animation: fadeUp 1s ease 0.4s both;
+ font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+ font-size: clamp(3rem, 9vw, 7rem);
+ font-weight: 800;
+ color: #F34F00;
+ line-height: 1;
+ text-transform: uppercase;
+ letter-spacing: 0.02em;
+ margin: 0;
+ text-align: center;
+ text-shadow: 0 8px 36px rgba(0, 0, 0, 0.45);
+ animation: fadeUp 1s ease 0.4s both;
 }
 
 /* English headline → Montserrat 900, tighter tracking (only matters
-   if the image is missing — text fallback). */
+ if the image is missing text fallback). */
 html[lang="en"] .hero-main-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    letter-spacing: -2px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
+ letter-spacing: -2px;
 }
 
 .hero-divider {
@@ -656,7 +652,7 @@ html[lang="en"] .hero-main-title {
   animation: fadeUp 1s ease 1s both;
 }
 
-/* ── CTA BUTTON — matches WelcomeBanner enter button hover ── */
+/* ── CTA BUTTON matches WelcomeBanner enter button hover ── */
 
 .hero-cta-btn {
   display: inline-flex;

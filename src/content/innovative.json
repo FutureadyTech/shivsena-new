@@ -1,175 +1,175 @@
 {
   "banner": {
-    "mr": {
-      "eyebrow": "॥ नावीन्यपूर्ण उपक्रम ॥",
-      "title": "नावीन्यपूर्ण उपक्रम",
-      "subtitle": "जनसेवेसाठी सुरू केलेले शिवसेना व महायुती सरकारचे महत्त्वाचे उपक्रम — आरोग्य, मदत, पारदर्शक प्रशासन व महिलाशक्ती यांच्या दिशेने ठोस पावले."
-    },
-    "en": {
-      "eyebrow": "|| INNOVATIVE INITIATIVES ||",
-      "title": "Innovative Initiatives",
-      "subtitle": "Flagship programmes run by Shiv Sena and the Mahayuti government — concrete steps in healthcare, citizen support, transparent governance, and women's empowerment."
-    }
+ "mr": {
+ "eyebrow": "॥ नावीन्यपूर्ण उपक्रम ॥",
+ "title": "नावीन्यपूर्ण उपक्रम",
+ "subtitle": "जनसेवेसाठी सुरू केलेले शिवसेना व महायुती सरकारचे महत्त्वाचे उपक्रम आरोग्य, मदत, पारदर्शक प्रशासन व महिलाशक्ती यांच्या दिशेने ठोस पावले."
+ },
+ "en": {
+ "eyebrow": "|| INNOVATIVE INITIATIVES ||",
+ "title": "Innovative Initiatives",
+ "subtitle": "Flagship programmes run by Shiv Sena and the Mahayuti government concrete steps in healthcare, citizen support, transparent governance, and women's empowerment."
+ }
   },
 
   "intro": {
-    "mr": {
-      "eyebrow": "॥ जनसेवा ॥",
-      "title": "लोकांच्या जीवनात बदल घडवणारे उपक्रम",
-      "lede": "गावापासून शहरापर्यंत, गरीब रुग्णापासून सक्षम महिलेपर्यंत — खालील उपक्रमांद्वारे शिवसेना व महायुती सरकारने लाखो लोकांच्या आयुष्यात प्रत्यक्ष फरक घडवला आहे."
-    },
-    "en": {
-      "eyebrow": "|| FOR THE PEOPLE ||",
-      "title": "Programmes that have changed lives",
-      "lede": "From village to city, from patient in need to woman seeking dignity — these initiatives by Shiv Sena and the Mahayuti government have made a measurable difference in millions of lives."
-    }
+ "mr": {
+ "eyebrow": "॥ जनसेवा ॥",
+ "title": "लोकांच्या जीवनात बदल घडवणारे उपक्रम",
+ "lede": "गावापासून शहरापर्यंत, गरीब रुग्णापासून सक्षम महिलेपर्यंत खालील उपक्रमांद्वारे शिवसेना व महायुती सरकारने लाखो लोकांच्या आयुष्यात प्रत्यक्ष फरक घडवला आहे."
+ },
+ "en": {
+ "eyebrow": "|| FOR THE PEOPLE ||",
+ "title": "Programmes that have changed lives",
+ "lede": "From village to city, from patient in need to woman seeking dignity these initiatives by Shiv Sena and the Mahayuti government have made a measurable difference in millions of lives."
+ }
   },
 
   "programs": [
-    {
-      "id": "medical-help-cell",
-      "image": "/innovative/shiv-sena-medical-help.jpg",
-      "imageAlt": "Shiv Sena Medical Help Cell",
-      "mr": {
-        "tag": "आरोग्य सेवा",
-        "title": "शिवसेना वैद्यकीय मदत कक्ष",
-        "tagline": "रुग्णसेवा हीच ईश्वरसेवा",
-        "body": "१७ नोव्हेंबर २०१७ रोजी शिवसेना भवनात उद्धवजी ठाकरे व आदित्यजी ठाकरे यांच्या मार्गदर्शनाखाली स्थापन झालेला हा कक्ष, गरीब व गरजू रुग्णांना धर्मादाय रुग्णालयांमध्ये मोफत व सवलतीच्या दरात उपचार मिळवून देतो. पंतप्रधान वैद्यकीय सहाय्यता निधी, मुख्यमंत्री सहाय्यता निधी व विविध न्यासांच्या माध्यमातून आर्थिक मदतही दिली जाते.",
-        "highlights": [
-          "स्थापना — १७ नोव्हेंबर २०१७, शिवसेना भवन",
-          "महाराष्ट्रभर मोफत आरोग्य शिबिरांचे आयोजन",
-          "धर्मादाय रुग्णालयांत मोफत व सवलतीच्या दरात उपचार",
-          "PMNRF, CMRF व विविध न्यासांकडून आर्थिक सहाय्य"
-        ]
-      },
-      "en": {
-        "tag": "HEALTHCARE",
-        "title": "Shiv Sena Medical Help Cell",
-        "tagline": "Service to patients is service to God",
-        "body": "Established on 17 November 2017 at Shiv Sena Bhavan under the guidance of Uddhav Thackeray and Aaditya Thackeray, the cell helps poor and needy patients secure free or subsidised treatment at charitable hospitals. It also routes financial aid through the Prime Minister's National Relief Fund, the Chief Minister's Relief Fund, and various trusts.",
-        "highlights": [
-          "Founded — 17 November 2017, Shiv Sena Bhavan",
-          "Free health camps organised across Maharashtra",
-          "Free / subsidised treatment via charitable hospitals",
-          "Financial assistance through PMNRF, CMRF and trusts"
-        ]
-      }
-    },
-    {
-      "id": "aapla-dawakhana",
-      "image": "/innovative/aapla-dawakhana.webp",
-      "imageAlt": "Balasaheb Thackeray Aapla Dawakhana",
-      "mr": {
-        "tag": "मोफत आरोग्य",
-        "title": "बाळासाहेब ठाकरे आपला दवाखाना",
-        "tagline": "तालुक्या-तालुक्यात मोफत आरोग्यसेवा",
-        "body": "हिंदुहृदयसम्राट बाळासाहेब ठाकरे यांच्या स्मरणार्थ सुरू केलेली ही योजना मुंबईत २ ऑक्टोबर २०२२ रोजी बीएमसीच्या माध्यमातून सुरू झाली. महाराष्ट्र दिनी राज्यभर ३१७ तालुक्यांमध्ये विस्तार करण्यात आला. ताप, रक्तदाब, मधुमेह यांसारख्या प्राथमिक आजारांवर मोफत उपचार आणि सुमारे ३० चाचण्या मोफत केल्या जातात.",
-        "highlights": [
-          "बीएमसी सुरुवात — २ ऑक्टोबर २०२२",
-          "राज्यभर विस्तार — ३१७ तालुक्यांमध्ये",
-          "सुमारे ३० चाचण्या व प्राथमिक उपचार पूर्णतः मोफत",
-          "केवळ एका वर्षात मुंबईत २३ लाख+ रुग्णांवर उपचार"
-        ]
-      },
-      "en": {
-        "tag": "FREE HEALTHCARE",
-        "title": "Balasaheb Thackeray Aapla Dawakhana",
-        "tagline": "Free primary care in every taluka",
-        "body": "Named after Hindu Hridaysamrat Balasaheb Thackeray, the scheme was launched in Mumbai on 2 October 2022 by the BMC and expanded across 317 talukas of Maharashtra on Maharashtra Day. Each clinic provides free primary treatment for conditions like fever, blood pressure, diabetes — plus approximately 30 diagnostic tests at zero cost.",
-        "highlights": [
-          "BMC launch — 2 October 2022",
-          "Statewide expansion — 317 talukas across Maharashtra",
-          "~30 diagnostic tests + primary care, fully free",
-          "23 lakh+ patients treated in BMC clinics in year one"
-        ]
-      }
-    },
-    {
-      "id": "shasan-aplya-dari",
-      "image": "/innovative/shasan-aplya-dari.webp",
-      "imageAlt": "Shasan Aplya Dari camp",
-      "mr": {
-        "tag": "पारदर्शक प्रशासन",
-        "title": "शासन आपल्या दारी",
-        "tagline": "शासन थेट लोकांच्या उंबरठ्यापर्यंत",
-        "body": "मुख्यमंत्री एकनाथ शिंदे यांच्या नेतृत्वाखाली १४ मे २०२३ रोजी सुरू केलेला हा उपक्रम, सरकारच्या सर्व योजना व सेवा एकाच ठिकाणी, थेट गावात व नागरिकांच्या दारी पोहोचवतो. प्रत्येक जिल्ह्यात दोन-दिवसीय शिबिरांच्या माध्यमातून प्रमाणपत्रे, अनुदान व लाभ तातडीने वितरित केले जातात.",
-        "highlights": [
-          "उद्घाटन — १४ मे २०२३, मुख्यमंत्री एकनाथ शिंदे",
-          "जिल्हास्तरीय दोन-दिवसीय शिबिरांचे आयोजन",
-          "योजना, अनुदान व प्रमाणपत्रांचे एकत्रित वितरण",
-          "१.५ कोटीहून अधिक नागरिकांना थेट लाभ"
-        ]
-      },
-      "en": {
-        "tag": "TRANSPARENT GOVERNANCE",
-        "title": "Shasan Aplya Dari",
-        "tagline": "Government delivered to the citizen's door",
-        "body": "Launched by Chief Minister Eknath Shinde on 14 May 2023, this flagship initiative brings every government scheme and service together under one roof — at the village level, at the citizen's doorstep. Two-day camps organised in each district issue certificates, sanction subsidies, and deliver benefits on the spot.",
-        "highlights": [
-          "Launched — 14 May 2023 by CM Eknath Shinde",
-          "Two-day district-level camps across Maharashtra",
-          "Schemes, subsidies and certificates delivered together",
-          "1.5 crore+ citizens directly benefited"
-        ]
-      }
-    },
-    {
-      "id": "ladki-bahin",
-      "image": "/innovative/ladki-bahin-yojana.avif",
-      "imageAlt": "Mukhyamantri Mazi Ladki Bahin Yojana",
-      "mr": {
-        "tag": "महिला सशक्तीकरण",
-        "title": "मुख्यमंत्री माझी लाडकी बहीण योजना",
-        "tagline": "महाराष्ट्रातील प्रत्येक बहिणीला आर्थिक आधार",
-        "body": "१७ ऑगस्ट २०२४ रोजी मुख्यमंत्री एकनाथ शिंदे यांनी सुरू केलेली ही योजना २१ ते ६५ वयोगटातील व वार्षिक उत्पन्न २.५ लाखांपेक्षा कमी असलेल्या प्रत्येक पात्र महिलेला दरमहा ₹१५०० थेट खात्यात (DBT) देते. एप्रिल २०२६ पर्यंत सुमारे १.७५ कोटी सक्रिय लाभार्थी असून २०२६-२७ च्या अर्थसंकल्पात योजनेसाठी ₹२६,००० कोटींची तरतूद करण्यात आली आहे.",
-        "highlights": [
-          "उद्घाटन — १७ ऑगस्ट २०२४, मुख्यमंत्री एकनाथ शिंदे",
-          "दरमहा ₹१५०० थेट लाभार्थींच्या खात्यात (DBT)",
-          "पात्रता — २१ ते ६५ वर्षे, वार्षिक उत्पन्न ₹२.५ लाखांपेक्षा कमी",
-          "१.७५ कोटी+ सक्रिय लाभार्थी (एप्रिल २०२६)"
-        ]
-      },
-      "en": {
-        "tag": "WOMEN'S EMPOWERMENT",
-        "title": "Mukhyamantri Mazi Ladki Bahin Yojana",
-        "tagline": "Financial dignity for every sister in Maharashtra",
-        "body": "Launched by Chief Minister Eknath Shinde on 17 August 2024, the scheme provides ₹1,500 every month — directly deposited (DBT) to every eligible woman aged 21 to 65 whose family income is under ₹2.5 lakh per year. As of April 2026 it had about 1.75 crore active beneficiaries, with ₹26,000 crore allocated in the 2026–27 state budget.",
-        "highlights": [
-          "Launched — 17 August 2024 by CM Eknath Shinde",
-          "₹1,500 monthly transferred directly via DBT",
-          "Eligibility — women 21–65, family income < ₹2.5 lakh / yr",
-          "1.75 crore+ active beneficiaries (April 2026)"
-        ]
-      }
-    },
-    {
-      "id": "anand-dighe-cell",
-      "image": "/innovative/dharmaveer-anand-dighe.jpg",
-      "imageAlt": "Dharmaveer Anand Dighe",
-      "mr": {
-        "tag": "नागरी सहाय्यता",
-        "title": "धर्मवीर आनंद दिघे नागरी सहायता कक्ष",
-        "tagline": "ठाण्याच्या सिंहाच्या वारशाने सुरू असलेली जनता दरबार परंपरा",
-        "body": "धर्मवीर आनंद दिघे साहेबांच्या स्मरणार्थ सुरू केलेला हा सहायता कक्ष त्यांनी आजन्म चालवलेल्या ‘जनता दरबार’ परंपरेला नवचैतन्य देतो. नागरिकांच्या रोजच्या तक्रारी, सरकारी कागदपत्रे, आरोग्य, शिक्षण व सामाजिक प्रश्न शिवसैनिकांच्या मदतीने तातडीने सोडविले जातात. ‘प्रत्येक नागरिकाला न्याय आणि पाठिंबा’ हीच या कक्षाची भूमिका.",
-        "highlights": [
-          "धर्मवीर आनंद दिघे (१९५१–२००१) यांच्या स्मृतीस समर्पित",
-          "टेंभी नाक्यावरील ‘जनता दरबार’ परंपरेचा वारसा",
-          "नागरिकांच्या तक्रारी, कागदपत्रे, सेवांसाठी एकखिडकी",
-          "ठाणे व राज्यभरातून शिवसैनिकांचे जाळे"
-        ]
-      },
-      "en": {
-        "tag": "CITIZEN ASSISTANCE",
-        "title": "Dharmaveer Anand Dighe Citizen Help Cell",
-        "tagline": "Carrying forward the Lion of Thane's Janata Darbar tradition",
-        "body": "Named in memory of Dharmaveer Anand Dighe Saheb, this assistance cell continues the legendary ‘Janata Darbar' tradition he ran throughout his life. Day-to-day grievances, government paperwork, healthcare, education, and social issues are taken up directly by Shiv Sainiks and resolved with urgency. The cell's guiding principle remains his: justice and support, for every citizen.",
-        "highlights": [
-          "Dedicated to the memory of Dharmaveer Anand Dighe (1951–2001)",
-          "Continues the Tembhi Naka ‘Janata Darbar' tradition",
-          "Single-window help for grievances, documents and services",
-          "Network of Shiv Sainiks across Thane and Maharashtra"
-        ]
-      }
-    }
+ {
+ "id": "medical-help-cell",
+ "image": "/innovative/shiv-sena-medical-help.jpg",
+ "imageAlt": "Shiv Sena Medical Help Cell",
+ "mr": {
+ "tag": "आरोग्य सेवा",
+ "title": "शिवसेना वैद्यकीय मदत कक्ष",
+ "tagline": "रुग्णसेवा हीच ईश्वरसेवा",
+ "body": "१७ नोव्हेंबर २०१७ रोजी शिवसेना भवनात उद्धवजी ठाकरे व आदित्यजी ठाकरे यांच्या मार्गदर्शनाखाली स्थापन झालेला हा कक्ष, गरीब व गरजू रुग्णांना धर्मादाय रुग्णालयांमध्ये मोफत व सवलतीच्या दरात उपचार मिळवून देतो. पंतप्रधान वैद्यकीय सहाय्यता निधी, मुख्यमंत्री सहाय्यता निधी व विविध न्यासांच्या माध्यमातून आर्थिक मदतही दिली जाते.",
+ "highlights": [
+ "स्थापना १७ नोव्हेंबर २०१७, शिवसेना भवन",
+ "महाराष्ट्रभर मोफत आरोग्य शिबिरांचे आयोजन",
+ "धर्मादाय रुग्णालयांत मोफत व सवलतीच्या दरात उपचार",
+ "PMNRF, CMRF व विविध न्यासांकडून आर्थिक सहाय्य"
+ ]
+ },
+ "en": {
+ "tag": "HEALTHCARE",
+ "title": "Shiv Sena Medical Help Cell",
+ "tagline": "Service to patients is service to God",
+ "body": "Established on 17 November 2017 at Shiv Sena Bhavan under the guidance of Uddhav Thackeray and Aaditya Thackeray, the cell helps poor and needy patients secure free or subsidised treatment at charitable hospitals. It also routes financial aid through the Prime Minister's National Relief Fund, the Chief Minister's Relief Fund, and various trusts.",
+ "highlights": [
+ "Founded 17 November 2017, Shiv Sena Bhavan",
+ "Free health camps organised across Maharashtra",
+ "Free / subsidised treatment via charitable hospitals",
+ "Financial assistance through PMNRF, CMRF and trusts"
+ ]
+ }
+ },
+ {
+ "id": "aapla-dawakhana",
+ "image": "/innovative/aapla-dawakhana.webp",
+ "imageAlt": "Balasaheb Thackeray Aapla Dawakhana",
+ "mr": {
+ "tag": "मोफत आरोग्य",
+ "title": "बाळासाहेब ठाकरे आपला दवाखाना",
+ "tagline": "तालुक्या-तालुक्यात मोफत आरोग्यसेवा",
+ "body": "हिंदुहृदयसम्राट बाळासाहेब ठाकरे यांच्या स्मरणार्थ सुरू केलेली ही योजना मुंबईत २ ऑक्टोबर २०२२ रोजी बीएमसीच्या माध्यमातून सुरू झाली. महाराष्ट्र दिनी राज्यभर ३१७ तालुक्यांमध्ये विस्तार करण्यात आला. ताप, रक्तदाब, मधुमेह यांसारख्या प्राथमिक आजारांवर मोफत उपचार आणि सुमारे ३० चाचण्या मोफत केल्या जातात.",
+ "highlights": [
+ "बीएमसी सुरुवात २ ऑक्टोबर २०२२",
+ "राज्यभर विस्तार ३१७ तालुक्यांमध्ये",
+ "सुमारे ३० चाचण्या व प्राथमिक उपचार पूर्णतः मोफत",
+ "केवळ एका वर्षात मुंबईत २३ लाख+ रुग्णांवर उपचार"
+ ]
+ },
+ "en": {
+ "tag": "FREE HEALTHCARE",
+ "title": "Balasaheb Thackeray Aapla Dawakhana",
+ "tagline": "Free primary care in every taluka",
+ "body": "Named after Hindu Hridaysamrat Balasaheb Thackeray, the scheme was launched in Mumbai on 2 October 2022 by the BMC and expanded across 317 talukas of Maharashtra on Maharashtra Day. Each clinic provides free primary treatment for conditions like fever, blood pressure, diabetes plus approximately 30 diagnostic tests at zero cost.",
+ "highlights": [
+ "BMC launch 2 October 2022",
+ "Statewide expansion 317 talukas across Maharashtra",
+ "~30 diagnostic tests + primary care, fully free",
+ "23 lakh+ patients treated in BMC clinics in year one"
+ ]
+ }
+ },
+ {
+ "id": "shasan-aplya-dari",
+ "image": "/innovative/shasan-aplya-dari.webp",
+ "imageAlt": "Shasan Aplya Dari camp",
+ "mr": {
+ "tag": "पारदर्शक प्रशासन",
+ "title": "शासन आपल्या दारी",
+ "tagline": "शासन थेट लोकांच्या उंबरठ्यापर्यंत",
+ "body": "मुख्यमंत्री एकनाथ शिंदे यांच्या नेतृत्वाखाली १४ मे २०२३ रोजी सुरू केलेला हा उपक्रम, सरकारच्या सर्व योजना व सेवा एकाच ठिकाणी, थेट गावात व नागरिकांच्या दारी पोहोचवतो. प्रत्येक जिल्ह्यात दोन-दिवसीय शिबिरांच्या माध्यमातून प्रमाणपत्रे, अनुदान व लाभ तातडीने वितरित केले जातात.",
+ "highlights": [
+ "उद्घाटन १४ मे २०२३, मुख्यमंत्री एकनाथ शिंदे",
+ "जिल्हास्तरीय दोन-दिवसीय शिबिरांचे आयोजन",
+ "योजना, अनुदान व प्रमाणपत्रांचे एकत्रित वितरण",
+ "१.५ कोटीहून अधिक नागरिकांना थेट लाभ"
+ ]
+ },
+ "en": {
+ "tag": "TRANSPARENT GOVERNANCE",
+ "title": "Shasan Aplya Dari",
+ "tagline": "Government delivered to the citizen's door",
+ "body": "Launched by Chief Minister Eknath Shinde on 14 May 2023, this flagship initiative brings every government scheme and service together under one roof at the village level, at the citizen's doorstep. Two-day camps organised in each district issue certificates, sanction subsidies, and deliver benefits on the spot.",
+ "highlights": [
+ "Launched 14 May 2023 by CM Eknath Shinde",
+ "Two-day district-level camps across Maharashtra",
+ "Schemes, subsidies and certificates delivered together",
+ "1.5 crore+ citizens directly benefited"
+ ]
+ }
+ },
+ {
+ "id": "ladki-bahin",
+ "image": "/innovative/ladki-bahin-yojana.avif",
+ "imageAlt": "Mukhyamantri Mazi Ladki Bahin Yojana",
+ "mr": {
+ "tag": "महिला सशक्तीकरण",
+ "title": "मुख्यमंत्री माझी लाडकी बहीण योजना",
+ "tagline": "महाराष्ट्रातील प्रत्येक बहिणीला आर्थिक आधार",
+ "body": "१७ ऑगस्ट २०२४ रोजी मुख्यमंत्री एकनाथ शिंदे यांनी सुरू केलेली ही योजना २१ ते ६५ वयोगटातील व वार्षिक उत्पन्न २.५ लाखांपेक्षा कमी असलेल्या प्रत्येक पात्र महिलेला दरमहा ₹१५०० थेट खात्यात (DBT) देते. एप्रिल २०२६ पर्यंत सुमारे १.७५ कोटी सक्रिय लाभार्थी असून २०२६-२७ च्या अर्थसंकल्पात योजनेसाठी ₹२६,००० कोटींची तरतूद करण्यात आली आहे.",
+ "highlights": [
+ "उद्घाटन १७ ऑगस्ट २०२४, मुख्यमंत्री एकनाथ शिंदे",
+ "दरमहा ₹१५०० थेट लाभार्थींच्या खात्यात (DBT)",
+ "पात्रता २१ ते ६५ वर्षे, वार्षिक उत्पन्न ₹२.५ लाखांपेक्षा कमी",
+ "१.७५ कोटी+ सक्रिय लाभार्थी (एप्रिल २०२६)"
+ ]
+ },
+ "en": {
+ "tag": "WOMEN'S EMPOWERMENT",
+ "title": "Mukhyamantri Mazi Ladki Bahin Yojana",
+ "tagline": "Financial dignity for every sister in Maharashtra",
+ "body": "Launched by Chief Minister Eknath Shinde on 17 August 2024, the scheme provides ₹1,500 every month directly deposited (DBT) to every eligible woman aged 21 to 65 whose family income is under ₹2.5 lakh per year. As of April 2026 it had about 1.75 crore active beneficiaries, with ₹26,000 crore allocated in the 2026–27 state budget.",
+ "highlights": [
+ "Launched 17 August 2024 by CM Eknath Shinde",
+ "₹1,500 monthly transferred directly via DBT",
+ "Eligibility women 21–65, family income < ₹2.5 lakh / yr",
+ "1.75 crore+ active beneficiaries (April 2026)"
+ ]
+ }
+ },
+ {
+ "id": "anand-dighe-cell",
+ "image": "/innovative/dharmaveer-anand-dighe.jpg",
+ "imageAlt": "Dharmaveer Anand Dighe",
+ "mr": {
+ "tag": "नागरी सहाय्यता",
+ "title": "धर्मवीर आनंद दिघे नागरी सहायता कक्ष",
+ "tagline": "ठाण्याच्या सिंहाच्या वारशाने सुरू असलेली जनता दरबार परंपरा",
+ "body": "धर्मवीर आनंद दिघे साहेबांच्या स्मरणार्थ सुरू केलेला हा सहायता कक्ष त्यांनी आजन्म चालवलेल्या ‘जनता दरबार’ परंपरेला नवचैतन्य देतो. नागरिकांच्या रोजच्या तक्रारी, सरकारी कागदपत्रे, आरोग्य, शिक्षण व सामाजिक प्रश्न शिवसैनिकांच्या मदतीने तातडीने सोडविले जातात. ‘प्रत्येक नागरिकाला न्याय आणि पाठिंबा’ हीच या कक्षाची भूमिका.",
+ "highlights": [
+ "धर्मवीर आनंद दिघे (१९५१–२००१) यांच्या स्मृतीस समर्पित",
+ "टेंभी नाक्यावरील ‘जनता दरबार’ परंपरेचा वारसा",
+ "नागरिकांच्या तक्रारी, कागदपत्रे, सेवांसाठी एकखिडकी",
+ "ठाणे व राज्यभरातून शिवसैनिकांचे जाळे"
+ ]
+ },
+ "en": {
+ "tag": "CITIZEN ASSISTANCE",
+ "title": "Dharmaveer Anand Dighe Citizen Help Cell",
+ "tagline": "Carrying forward the Lion of Thane's Janata Darbar tradition",
+ "body": "Named in memory of Dharmaveer Anand Dighe Saheb, this assistance cell continues the legendary ‘Janata Darbar' tradition he ran throughout his life. Day-to-day grievances, government paperwork, healthcare, education, and social issues are taken up directly by Shiv Sainiks and resolved with urgency. The cell's guiding principle remains his: justice and support, for every citizen.",
+ "highlights": [
+ "Dedicated to the memory of Dharmaveer Anand Dighe (1951–2001)",
+ "Continues the Tembhi Naka ‘Janata Darbar' tradition",
+ "Single-window help for grievances, documents and services",
+ "Network of Shiv Sainiks across Thane and Maharashtra"
+ ]
+ }
+ }
   ]
 }

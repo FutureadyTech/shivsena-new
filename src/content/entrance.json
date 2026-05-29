@@ -1,103 +1,103 @@
 {
   "welcomeBanner": {
-    "mr": {
-      "eyebrow": "महाराष्ट्राचा अभिमान · शिवसेनेचे बळ",
-      "title": "शिवसेना",
-      "description": "आमच्या राजकीय संघटनेच्या अधिकृत पोर्टलवर आपले स्वागत आहे. बातम्या, नेतृत्व आणि कार्यक्रम पाहण्यासाठी 'प्रवेश करा' वर क्लिक करा.",
-      "ctaLabel": "प्रवेश करा",
-      "ariaLabel": "प्रवेश करा"
-    },
-    "en": {
-      "eyebrow": "PRIDE OF MAHARASHTRA · STRENGTH OF SHIV SENA",
-      "title": "SHIV SENA",
-      "description": "Welcome to the official portal of our political organisation. Click 'Enter' to view news, leadership, and events.",
-      "ctaLabel": "Enter",
-      "ariaLabel": "Enter the site"
-    }
+ "mr": {
+ "eyebrow": "महाराष्ट्राचा अभिमान · शिवसेनेचे बळ",
+ "title": "शिवसेना",
+ "description": "आमच्या राजकीय संघटनेच्या अधिकृत पोर्टलवर आपले स्वागत आहे. बातम्या, नेतृत्व आणि कार्यक्रम पाहण्यासाठी 'प्रवेश करा' वर क्लिक करा.",
+ "ctaLabel": "प्रवेश करा",
+ "ariaLabel": "प्रवेश करा"
+ },
+ "en": {
+ "eyebrow": "PRIDE OF MAHARASHTRA · STRENGTH OF SHIV SENA",
+ "title": "SHIV SENA",
+ "description": "Welcome to the official portal of our political organisation. Click 'Enter' to view news, leadership, and events.",
+ "ctaLabel": "Enter",
+ "ariaLabel": "Enter the site"
+ }
   },
 
   "hero": {
-    "mr": {
-      "title": "शिवसेना",
-      "tagline": "वाचला जनतेची",
-      "meta": "A Movement · A Mandate · A Legacy",
-      "scrollCue": "आत प्रवेश करा"
-    },
-    "en": {
-      "title": "SHIV SENA",
-      "tagline": "For the People",
-      "meta": "A Movement · A Mandate · A Legacy",
-      "scrollCue": "Step Inside"
-    }
+ "mr": {
+ "title": "शिवसेना",
+ "tagline": "वाचला जनतेची",
+ "meta": "A Movement · A Mandate · A Legacy",
+ "scrollCue": "आत प्रवेश करा"
+ },
+ "en": {
+ "title": "SHIV SENA",
+ "tagline": "For the People",
+ "meta": "A Movement · A Mandate · A Legacy",
+ "scrollCue": "Step Inside"
+ }
   },
 
   "chapters": {
-    "mr": {
-      "s2Label": "पावले हलवा",
-      "chapters": [
-        {
-          "id": "history",
-          "title": "आमचा इतिहास",
-          "titleEn": "OUR HISTORY",
-          "body": "१९६६ पासून — मराठी माणसाच्या अस्मितेसाठी मुंबईच्या रस्त्यांवर जन्मलेली चळवळ. मातीच्या लेकरांची गाथा, ज्यांनी कधीही हार मानली नाही.",
-          "cta": "गाथा पहा →"
-        },
-        {
-          "id": "leadership",
-          "title": "नेतृत्व",
-          "titleEn": "LEADERSHIP",
-          "body": "हातात धनुष्यबाण — संस्थापकांपासून ते आजच्या महाराष्ट्राच्या जनादेशापर्यंत हिंदुत्व आणि मराठी स्वाभिमानाची ज्योत तेवणारे नेते.",
-          "cta": "नेतृत्वाला भेटा →"
-        },
-        {
-          "id": "join",
-          "title": "सहभागी व्हा",
-          "titleEn": "JOIN THE MOVEMENT",
-          "body": "चळवळ म्हणजे तिचे लोक. तुमचा आवाज. तुमचा वेळ. तुमचे मत. कार्यकर्ता बना आणि धनुष पुढे न्या.",
-          "cta": "कार्यकर्ता बना →"
-        }
-      ]
-    },
-    "en": {
-      "s2Label": "Walk Into the Hall",
-      "chapters": [
-        {
-          "id": "history",
-          "title": "Our History",
-          "titleEn": "OUR HISTORY",
-          "body": "Since 1966 — a movement born on the streets of Bombay to defend the dignity of the Marathi manoos. A saga of sons of the soil who refused to be pushed aside.",
-          "cta": "Explore the Saga →"
-        },
-        {
-          "id": "leadership",
-          "title": "Leadership",
-          "titleEn": "LEADERSHIP",
-          "body": "Bow and arrow in hand — leaders who carried the flame of Hindutva and Marathi pride from the founding all the way to the present mandate of Maharashtra.",
-          "cta": "Meet the Leadership →"
-        },
-        {
-          "id": "join",
-          "title": "Join The Movement",
-          "titleEn": "JOIN THE MOVEMENT",
-          "body": "A movement is its people. Your voice. Your time. Your vote. Become a kāryakartā and carry the bow forward.",
-          "cta": "Become a Kāryakartā →"
-        }
-      ]
-    }
+ "mr": {
+ "s2Label": "पावले हलवा",
+ "chapters": [
+ {
+ "id": "history",
+ "title": "आमचा इतिहास",
+ "titleEn": "OUR HISTORY",
+ "body": "१९६६ पासून मराठी माणसाच्या अस्मितेसाठी मुंबईच्या रस्त्यांवर जन्मलेली चळवळ. मातीच्या लेकरांची गाथा, ज्यांनी कधीही हार मानली नाही.",
+ "cta": "गाथा पहा →"
+ },
+ {
+ "id": "leadership",
+ "title": "नेतृत्व",
+ "titleEn": "LEADERSHIP",
+ "body": "हातात धनुष्यबाण संस्थापकांपासून ते आजच्या महाराष्ट्राच्या जनादेशापर्यंत हिंदुत्व आणि मराठी स्वाभिमानाची ज्योत तेवणारे नेते.",
+ "cta": "नेतृत्वाला भेटा →"
+ },
+ {
+ "id": "join",
+ "title": "सहभागी व्हा",
+ "titleEn": "JOIN THE MOVEMENT",
+ "body": "चळवळ म्हणजे तिचे लोक. तुमचा आवाज. तुमचा वेळ. तुमचे मत. कार्यकर्ता बना आणि धनुष पुढे न्या.",
+ "cta": "कार्यकर्ता बना →"
+ }
+ ]
+ },
+ "en": {
+ "s2Label": "Walk Into the Hall",
+ "chapters": [
+ {
+ "id": "history",
+ "title": "Our History",
+ "titleEn": "OUR HISTORY",
+ "body": "Since 1966 a movement born on the streets of Bombay to defend the dignity of the Marathi manoos. A saga of sons of the soil who refused to be pushed aside.",
+ "cta": "Explore the Saga →"
+ },
+ {
+ "id": "leadership",
+ "title": "Leadership",
+ "titleEn": "LEADERSHIP",
+ "body": "Bow and arrow in hand leaders who carried the flame of Hindutva and Marathi pride from the founding all the way to the present mandate of Maharashtra.",
+ "cta": "Meet the Leadership →"
+ },
+ {
+ "id": "join",
+ "title": "Join The Movement",
+ "titleEn": "JOIN THE MOVEMENT",
+ "body": "A movement is its people. Your voice. Your time. Your vote. Become a kāryakartā and carry the bow forward.",
+ "cta": "Become a Kāryakartā →"
+ }
+ ]
+ }
   },
 
   "outro": {
-    "mr": {
-      "title": "स्वागत आहे",
-      "sub": "Take Your Place in History",
-      "body": "आमच्या राजकीय संघटनेच्या अधिकृत पोर्टलवर आपले स्वागत आहे. बातम्या, नेतृत्व आणि कार्यक्रम पाहण्यासाठी प्रवेश करा.",
-      "cta": "प्रवेश करा"
-    },
-    "en": {
-      "title": "Take Your Place in History",
-      "sub": "",
-      "body": "The hall has shown you the past and the leaders. Now the bow is in your hand. Carry it forward — for Maharashtra, for the Marathi manoos, for tomorrow.",
-      "cta": "Join The Movement"
-    }
+ "mr": {
+ "title": "स्वागत आहे",
+ "sub": "Take Your Place in History",
+ "body": "आमच्या राजकीय संघटनेच्या अधिकृत पोर्टलवर आपले स्वागत आहे. बातम्या, नेतृत्व आणि कार्यक्रम पाहण्यासाठी प्रवेश करा.",
+ "cta": "प्रवेश करा"
+ },
+ "en": {
+ "title": "Take Your Place in History",
+ "sub": "",
+ "body": "The hall has shown you the past and the leaders. Now the bow is in your hand. Carry it forward for Maharashtra, for the Marathi manoos, for tomorrow.",
+ "cta": "Join The Movement"
+ }
   }
 }

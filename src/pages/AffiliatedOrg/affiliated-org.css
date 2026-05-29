@@ -1,15 +1,15 @@
 /* ═══════════════════════════════════════════════════════════════
-   AFFILIATED ORG — placeholder "Coming Soon" page
+ AFFILIATED ORG placeholder "Coming Soon" page
 ═══════════════════════════════════════════════════════════════ */
 .aff-org-page {
-  --paper:           #FAF6EE;
-  --paper-deep:      #F2EBDD;
-  --paper-soft:      #FCFBF7;
-  --ink:             #1A1410;
-  --ink-soft:        #2E2820;
-  --body-text:       #5C544A;
-  --body-light:      #847B6E;
-  --hairline:        rgba(26, 20, 16, 0.1);
+  --paper: #FAF6EE;
+  --paper-deep: #F2EBDD;
+  --paper-soft: #FCFBF7;
+  --ink: #1A1410;
+  --ink-soft: #2E2820;
+  --body-text: #5C544A;
+  --body-light: #847B6E;
+  --hairline: rgba(26, 20, 16, 0.1);
   --hairline-strong: rgba(26, 20, 16, 0.18);
   --saffron-on-light:#C44D0E;
 
@@ -36,8 +36,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 55% 50% at 50% 30%, rgba(255, 178, 107, 0.22) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 50% at 50% 110%, rgba(196, 77, 14, 0.10) 0%, transparent 70%);
+ radial-gradient(ellipse 55% 50% at 50% 30%, rgba(255, 178, 107, 0.22) 0%, transparent 65%),
+ radial-gradient(ellipse 60% 50% at 50% 110%, rgba(196, 77, 14, 0.10) 0%, transparent 70%);
 }
 
 .aff-org__inner {
@@ -50,7 +50,7 @@
 
 @keyframes affOrgRise {
   from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .aff-org__tag {
@@ -112,7 +112,7 @@
 
 @keyframes affOrgPulse {
   0%, 100% { opacity: 0.7; }
-  50%      { opacity: 1;   }
+  50% { opacity: 1; }
 }
 
 .aff-org__body {

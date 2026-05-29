@@ -27,64 +27,64 @@ export default function LeaderProfile() {
   const backLabel = lang === 'mr' ? '← सर्व नेतृत्व पहा' : '← BACK TO LEADERSHIP';
 
   return (
-    <div className="leader-profile-page">
-      <CursorSparks />
-      <SiteHeader />
+ <div className="leader-profile-page">
+ <CursorSparks />
+ <SiteHeader />
 
-      {/* ─── Banner (matches the design rhythm of About/Declarations banners) ─── */}
-      <section className="lp-banner">
-        <div
-          className="lp-banner__image"
-          style={{ backgroundImage: `url(${t.bannerImage})` }}
-          aria-hidden="true"
-        />
-        <div className="lp-banner__ov-base" />
-        <div className="lp-banner__ov-spotlight" />
-        <div className="lp-banner__ov-top" />
-        <div className="lp-banner__ov-bottom" />
+ {/* ─── Banner (matches the design rhythm of About/Declarations banners) ─── */}
+ <section className="lp-banner">
+ <div
+ className="lp-banner__image"
+ style={{ backgroundImage: `url(${t.bannerImage})` }}
+ aria-hidden="true"
+ />
+ <div className="lp-banner__ov-base" />
+ <div className="lp-banner__ov-spotlight" />
+ <div className="lp-banner__ov-top" />
+ <div className="lp-banner__ov-bottom" />
 
-        <div className="lp-banner__content">
-          <p className="lp-banner__eyebrow">{t.eyebrow}</p>
-          <h1 className="lp-banner__title">{t.name}</h1>
-          <div className="lp-banner__divider" aria-hidden="true" />
-          <p className="lp-banner__role">{t.title}</p>
-          {t.role && <p className="lp-banner__sub">{t.role}</p>}
-          <p className="lp-banner__dates">{t.dates}</p>
-        </div>
-      </section>
+ <div className="lp-banner__content">
+ <p className="lp-banner__eyebrow">{t.eyebrow}</p>
+ <h1 className="lp-banner__title">{t.name}</h1>
+ <div className="lp-banner__divider" aria-hidden="true" />
+ <p className="lp-banner__role">{t.title}</p>
+ {t.role && <p className="lp-banner__sub">{t.role}</p>}
+ <p className="lp-banner__dates">{t.dates}</p>
+ </div>
+ </section>
 
-      {/* ─── Bio body — float-left portrait, text wraps around ─── */}
-      <section className="lp-body">
-        <div className="lp-body__inner">
+ {/* ─── Bio body float-left portrait, text wraps around ─── */}
+ <section className="lp-body">
+ <div className="lp-body__inner">
 
-          <div ref={headerRef} className="lp-body__intro reveal">
-            <p className="lp-body__lede">{t.lede}</p>
-          </div>
+ <div ref={headerRef} className="lp-body__intro reveal">
+ <p className="lp-body__lede">{t.lede}</p>
+ </div>
 
-          <article ref={bodyRef} className="lp-body__article reveal">
-            <figure className="lp-body__figure">
-              <img src={t.image} alt={t.name} className="lp-body__photo" loading="lazy" />
-              <figcaption className="lp-body__caption">{t.name}</figcaption>
-            </figure>
+ <article ref={bodyRef} className="lp-body__article reveal">
+ <figure className="lp-body__figure">
+ <img src={t.image} alt={t.name} className="lp-body__photo" loading="lazy" />
+ <figcaption className="lp-body__caption">{t.name}</figcaption>
+ </figure>
 
-            {t.paragraphs?.map((p, i) => (
-              <p key={i} className="lp-body__paragraph">{p}</p>
-            ))}
+ {t.paragraphs?.map((p, i) => (
+ <p key={i} className="lp-body__paragraph">{p}</p>
+ ))}
 
-            {/* Clear the float at the end so the next element starts cleanly */}
-            <div className="lp-body__clear" aria-hidden="true" />
-          </article>
+ {/* Clear the float at the end so the next element starts cleanly */}
+ <div className="lp-body__clear" aria-hidden="true" />
+ </article>
 
-          <div className="lp-body__back">
-            <Link to="/leadership" className="lp-body__back-link" data-cursor="link">
-              <span>{backLabel}</span>
-            </Link>
-          </div>
+ <div className="lp-body__back">
+ <Link to="/leadership" className="lp-body__back-link" data-cursor="link">
+ <span>{backLabel}</span>
+ </Link>
+ </div>
 
-        </div>
-      </section>
+ </div>
+ </section>
 
-      <Footer />
-    </div>
+ <Footer />
+ </div>
   );
 }

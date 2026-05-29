@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   OFFICE LOCATOR — Real Maharashtra Map + Picker Tool
+ OFFICE LOCATOR Real Maharashtra Map + Picker Tool
 ═══════════════════════════════════════════════════════════════ */
 .locator {
   position: relative;
@@ -136,7 +136,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   MAP CONTAINER — aspect matches new SVG viewBox 1126.9:940.43
+ MAP CONTAINER aspect matches new SVG viewBox 1126.9:940.43
 ═══════════════════════════════════════════════════════════════ */
 .locator__map {
   position: relative;
@@ -250,7 +250,7 @@
 }
 
 @keyframes pinPulse {
-  0%   { transform: scale(0.5); opacity: 0.5; }
+  0% { transform: scale(0.5); opacity: 0.5; }
   100% { transform: scale(2.2); opacity: 0; }
 }
 
@@ -266,7 +266,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   OFFICE LIST
+ OFFICE LIST
 ═══════════════════════════════════════════════════════════════ */
 .locator__list {
   display: flex;
@@ -298,10 +298,10 @@
   border: 1px solid var(--hairline);
   cursor: pointer;
   transition:
-    border-color 0.4s ease,
-    background 0.3s ease,
-    transform 0.4s var(--ease-out-expo),
-    box-shadow 0.4s ease;
+ border-color 0.4s ease,
+ background 0.3s ease,
+ transform 0.4s var(--ease-out-expo),
+ box-shadow 0.4s ease;
 }
 
 .office-card:hover {
@@ -314,8 +314,8 @@
   background: #fff;
   border-color: var(--saffron);
   box-shadow:
-    0 0 0 1px rgba(255, 107, 26, 0.15),
-    0 18px 40px -22px rgba(255, 107, 26, 0.25);
+ 0 0 0 1px rgba(255, 107, 26, 0.15),
+ 0 18px 40px -22px rgba(255, 107, 26, 0.25);
 }
 
 .office-card.is-active::before {
@@ -406,7 +406,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   🛠️ PICKER PANEL — delete in Phase 2
+ 🛠️ PICKER PANEL delete in Phase 2
 ═══════════════════════════════════════════════════════════════ */
 .picker-panel {
   background: var(--paper-soft);
@@ -556,7 +556,7 @@
 .picker-btn--ghost:hover { border-color: var(--ink); color: var(--ink); }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .locator { padding: 100px 28px 120px; }

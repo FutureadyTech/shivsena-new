@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SHIVSENA JANMA BANNER — cinematic hero (mirrors Mahayuti banner)
+ SHIVSENA JANMA BANNER cinematic hero (mirrors Mahayuti banner)
 ═══════════════════════════════════════════════════════════════ */
 .ssj-banner {
   position: relative;
@@ -20,20 +20,20 @@
   filter: saturate(1.05) contrast(1.04);
   /* Cinematic dolly-out on entry, then a slow ambient pan forever. */
   animation:
-    ssjBannerDollyOut 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both,
-    ssjBannerPan 22s ease-in-out 1.8s infinite;
+ ssjBannerDollyOut 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both,
+ ssjBannerPan 22s ease-in-out 1.8s infinite;
 }
 @keyframes ssjBannerDollyOut {
-  0%   { transform: scale(1.30) translate3d(0, 1.5%, 0); filter: saturate(0.85) contrast(1.1) brightness(0.85); }
-  100% { transform: scale(1.06) translate3d(0, 0, 0);     filter: saturate(1.05) contrast(1.04) brightness(1); }
+  0% { transform: scale(1.30) translate3d(0, 1.5%, 0); filter: saturate(0.85) contrast(1.1) brightness(0.85); }
+  100% { transform: scale(1.06) translate3d(0, 0, 0); filter: saturate(1.05) contrast(1.04) brightness(1); }
 }
 @keyframes ssjBannerPan {
-  0%   { transform: scale(1.06) translate3d(0, 0, 0); }
+  0% { transform: scale(1.06) translate3d(0, 0, 0); }
   50%  { transform: scale(1.10) translate3d(-1.5%, -1%, 0); }
   100% { transform: scale(1.06) translate3d(0, 0, 0); }
 }
 
-/* Ambient saffron pulse behind the title — gentle, infinite. */
+/* Ambient saffron pulse behind the title gentle, infinite. */
 .ssj-banner__content::before {
   content: '';
   position: absolute;
@@ -51,40 +51,40 @@
 }
 @keyframes ssjGlowPulse {
   0%, 100% { opacity: 0.45; transform: translate(-50%, -50%) scale(0.95); }
-  50%      { opacity: 0.85; transform: translate(-50%, -50%) scale(1.10); }
+  50% { opacity: 0.85; transform: translate(-50%, -50%) scale(1.10); }
 }
 
 .ssj-banner .ov-base {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(160deg,
-    rgba(5, 2, 0, 0.78) 0%,
-    rgba(10, 5, 0, 0.58) 45%,
-    rgba(5, 2, 0, 0.84) 100%);
+ rgba(5, 2, 0, 0.78) 0%,
+ rgba(10, 5, 0, 0.58) 45%,
+ rgba(5, 2, 0, 0.84) 100%);
 }
 .ssj-banner .ov-pattern {
   position: absolute; inset: 0; z-index: 2;
   background-image: repeating-linear-gradient(-45deg,
-    rgba(255, 180, 0, 0.022) 0px,
-    rgba(255, 180, 0, 0.022) 1px,
-    transparent 1px,
-    transparent 44px);
+ rgba(255, 180, 0, 0.022) 0px,
+ rgba(255, 180, 0, 0.022) 1px,
+ transparent 1px,
+ transparent 44px);
 }
 .ssj-banner .ov-spotlight {
   position: absolute; inset: 0; z-index: 3;
   background: radial-gradient(ellipse 60% 55% at 50% 48%,
-    rgba(255, 180, 0, 0.08) 0%,
-    rgba(0, 0, 0, 0.22) 55%,
-    rgba(0, 0, 0, 0.55) 100%);
+ rgba(255, 180, 0, 0.08) 0%,
+ rgba(0, 0, 0, 0.22) 55%,
+ rgba(0, 0, 0, 0.55) 100%);
 }
 .ssj-banner .ov-light-tl {
   position: absolute; inset: 0; z-index: 3;
   background: radial-gradient(ellipse 55% 50% at 12% 18%,
-    rgba(255, 160, 0, 0.16) 0%, transparent 68%);
+ rgba(255, 160, 0, 0.16) 0%, transparent 68%);
 }
 .ssj-banner .ov-light-br {
   position: absolute; inset: 0; z-index: 3;
   background: radial-gradient(ellipse 45% 40% at 90% 88%,
-    rgba(200, 100, 0, 0.12) 0%, transparent 65%);
+ rgba(200, 100, 0, 0.12) 0%, transparent 65%);
 }
 .ssj-banner .ov-top {
   position: absolute; top: 0; left: 0; right: 0; height: 22%; z-index: 4;
@@ -98,7 +98,7 @@
 .ssj-banner__content {
   position: relative;
   /* anchor stays the same, but kept relative so the ::before glow
-     can sit behind everything inside */
+ can sit behind everything inside */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -129,22 +129,22 @@
   margin: 0;
   padding-top: 18px;
   text-shadow: 0 6px 36px rgba(0, 0, 0, 0.4);
-  /* Clip-path curtain rise — title appears as if a stage curtain
-     lifts from below, then settles. Letter-spacing exhale gives it
-     a final breath. */
+  /* Clip-path curtain rise title appears as if a stage curtain
+ lifts from below, then settles. Letter-spacing exhale gives it
+ a final breath. */
   clip-path: inset(0 0 100% 0);
   animation:
-    ssjTitleReveal 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 1.2s both,
-    ssjTitleBreathe 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 1.2s both;
+ ssjTitleReveal 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 1.2s both,
+ ssjTitleBreathe 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 1.2s both;
 }
 @keyframes ssjTitleReveal {
-  0%   { clip-path: inset(0 0 100% 0); }
+  0% { clip-path: inset(0 0 100% 0); }
   100% { clip-path: inset(0 0 0 0); }
 }
 @keyframes ssjTitleBreathe {
-  0%   { letter-spacing: 0.15em; transform: translateY(14px); opacity: 0; }
+  0% { letter-spacing: 0.15em; transform: translateY(14px); opacity: 0; }
   60%  { opacity: 1; }
-  100% { letter-spacing: 0;       transform: translateY(0);    opacity: 1; }
+  100% { letter-spacing: 0; transform: translateY(0); opacity: 1; }
 }
 
 .ssj-banner__divider {
@@ -156,15 +156,15 @@
   border-radius: 2px;
   /* Draws outward from the center to its full 80px width. */
   animation:
-    ssjDividerDraw 1s cubic-bezier(0.2, 0.7, 0.2, 1) 2.0s both,
-    ssjDividerShine 4s linear 3s infinite;
+ ssjDividerDraw 1s cubic-bezier(0.2, 0.7, 0.2, 1) 2.0s both,
+ ssjDividerShine 4s linear 3s infinite;
 }
 @keyframes ssjDividerDraw {
-  0%   { width: 0; opacity: 0; }
+  0% { width: 0; opacity: 0; }
   100% { width: 80px; opacity: 1; }
 }
 @keyframes ssjDividerShine {
-  0%   { background-position: 200% 0; }
+  0% { background-position: 200% 0; }
   100% { background-position: -100% 0; }
 }
 
@@ -182,18 +182,18 @@
   animation: ssjLedeFocus 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) 2.4s both;
 }
 @keyframes ssjLedeFocus {
-  0%   { filter: blur(6px); opacity: 0; transform: translateY(8px); }
-  100% { filter: blur(0);   opacity: 1; transform: translateY(0); }
+  0% { filter: blur(6px); opacity: 0; transform: translateY(8px); }
+  100% { filter: blur(0); opacity: 1; transform: translateY(0); }
 }
 
 @keyframes ssjDropIn {
-  0%   { opacity: 0; transform: translateY(-12px); }
+  0% { opacity: 0; transform: translateY(-12px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes ssjFadeUp {
   from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
@@ -211,5 +211,5 @@
   .ssj-banner__lede { animation: none !important; }
   .ssj-banner__title { clip-path: none; letter-spacing: 0; opacity: 1; transform: none; }
   .ssj-banner__divider { width: 80px; opacity: 1; }
-  .ssj-banner__lede   { filter: none; opacity: 1; }
+  .ssj-banner__lede { filter: none; opacity: 1; }
 }

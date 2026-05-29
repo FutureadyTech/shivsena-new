@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   AFFILIATED ORGS — Cream Editorial Grid
+ AFFILIATED ORGS Cream Editorial Grid
 ═══════════════════════════════════════════════════════════════ */
 .affiliated {
   position: relative;
@@ -14,8 +14,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 40% 30% at 0% 0%,   rgba(255, 178, 107, 0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 100% 100%, rgba(196, 77, 14, 0.08) 0%, transparent 60%);
+ radial-gradient(ellipse 40% 30% at 0% 0%, rgba(255, 178, 107, 0.10) 0%, transparent 60%),
+ radial-gradient(ellipse 40% 30% at 100% 100%, rgba(196, 77, 14, 0.08) 0%, transparent 60%);
 }
 
 .affiliated__inner {
@@ -75,8 +75,8 @@
 }
 
 /* ═════════════════════════════════════════════════════════════
-   CARD — clean editorial: outlined index watermark, saffron
-   icon badge, restrained color, hover lift with saffron rail
+ CARD clean editorial: outlined index watermark, saffron
+ icon badge, restrained color, hover lift with saffron rail
 ═════════════════════════════════════════════════════════════ */
 .org-card {
   position: relative;
@@ -88,22 +88,22 @@
   flex-direction: column;
   overflow: hidden;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 10px 28px rgba(133, 65, 0, 0.06);
+ 0 1px 0 rgba(255, 255, 255, 0.9) inset,
+ 0 10px 28px rgba(133, 65, 0, 0.06);
   transition: transform 0.45s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
-              box-shadow 0.45s ease,
-              border-color 0.3s ease;
+ box-shadow 0.45s ease,
+ border-color 0.3s ease;
 }
 
 .org-card:hover {
   transform: translateY(-6px);
   border-color: rgba(196, 77, 14, 0.28);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.95) inset,
-    0 26px 50px rgba(133, 65, 0, 0.16);
+ 0 1px 0 rgba(255, 255, 255, 0.95) inset,
+ 0 26px 50px rgba(133, 65, 0, 0.16);
 }
 
-/* Watermark index numeral — outlined, sits behind everything */
+/* Watermark index numeral outlined, sits behind everything */
 .org-card__index {
   position: absolute;
   top: 14px;
@@ -126,7 +126,7 @@
   transform: translateY(-2px);
 }
 
-/* Left accent rail — saffron line that fills on hover */
+/* Left accent rail saffron line that fills on hover */
 .org-card__rail {
   position: absolute;
   left: 0;
@@ -157,10 +157,10 @@
   justify-content: center;
   margin-bottom: 22px;
   transition: transform 0.4s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
-              background 0.4s ease,
-              color 0.4s ease,
-              border-color 0.3s ease,
-              box-shadow 0.4s ease;
+ background 0.4s ease,
+ color 0.4s ease,
+ border-color 0.3s ease,
+ box-shadow 0.4s ease;
 }
 .org-card__icon svg,
 .org-card__icon img,
@@ -174,8 +174,8 @@
 /* Tint the Flaticon PNGs to saffron at rest (black → #C44D0E filter chain). */
 .org-card__icon-img {
   filter: brightness(0) saturate(100%)
-          invert(31%) sepia(95%) saturate(2076%)
-          hue-rotate(8deg) brightness(95%) contrast(95%);
+ invert(31%) sepia(95%) saturate(2076%)
+ hue-rotate(8deg) brightness(95%) contrast(95%);
   transition: filter 0.4s ease;
 }
 
@@ -192,7 +192,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* Tag — uppercase line, no pill */
+/* Tag uppercase line, no pill */
 .org-card__tag {
   position: relative;
   z-index: 1;
@@ -206,7 +206,7 @@
   line-height: 1;
 }
 
-/* Title — bigger Devanagari */
+/* Title bigger Devanagari */
 .org-card__name {
   position: relative;
   z-index: 1;
@@ -241,7 +241,7 @@
   z-index: 1;
 }
 
-/* Footer row — CTA aligned left, social icons aligned right */
+/* Footer row CTA aligned left, social icons aligned right */
 .org-card__footer {
   display: flex;
   align-items: center;
@@ -252,7 +252,7 @@
   z-index: 1;
 }
 
-/* CTA — text-link with arrow that slides right */
+/* CTA text-link with arrow that slides right */
 .org-card__cta {
   display: inline-flex;
   align-items: center;
@@ -304,10 +304,10 @@
   color: var(--saffron, #C44D0E);
   text-decoration: none;
   transition: background 0.25s ease,
-              color 0.25s ease,
-              border-color 0.25s ease,
-              transform 0.3s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
-              box-shadow 0.25s ease;
+ color 0.25s ease,
+ border-color 0.25s ease,
+ transform 0.3s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)),
+ box-shadow 0.25s ease;
 }
 .org-card__social svg { width: 13px; height: 13px; display: block; }
 
@@ -328,7 +328,7 @@
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.7s ease var(--reveal-delay, 0s),
-              transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s);
+ transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s);
 }
 .org-card.is-revealed { opacity: 1; transform: translateY(0); }
 
@@ -339,7 +339,7 @@
 .affiliated__header.is-revealed { opacity: 1; transform: translateY(0); }
 
 /* ═══════════════════════════════════════════════════════════════
-   MODAL FORM (shared across all orgs)
+ MODAL FORM (shared across all orgs)
 ═══════════════════════════════════════════════════════════════ */
 .org-modal {
   position: fixed;
@@ -356,7 +356,7 @@
 }
 @keyframes orgModalFadeIn {
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
 }
 
 .org-modal__panel {
@@ -373,7 +373,7 @@
 }
 @keyframes orgPanelIn {
   from { opacity: 0; transform: translateY(20px) scale(0.96); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .org-modal__close {
@@ -526,7 +526,7 @@
 }
 @keyframes orgSuccessIn {
   from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .org-modal__success-tick {
@@ -544,7 +544,7 @@
   animation: orgTickPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
 }
 @keyframes orgTickPop {
-  0%   { transform: scale(0.2); opacity: 0; }
+  0% { transform: scale(0.2); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 

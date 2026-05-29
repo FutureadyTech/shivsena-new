@@ -12,12 +12,12 @@ import './LeadersDirectory.css';
 
 /* Per-division accent colour used for the popup's accent bar / icon hover */
 const REGION_COLORS = {
-  konkan:     '#C44D0E',
-  pune:       '#D4602A',
-  nashik:     '#B8390A',
+  konkan: '#C44D0E',
+  pune: '#D4602A',
+  nashik: '#B8390A',
   marathwada: '#E07840',
-  amravati:   '#A02808',
-  vidarbha:   '#8C2200',
+  amravati: '#A02808',
+  vidarbha: '#8C2200',
 };
 
 /* Categories shown in the "State Leadership" group (state-wide, not region-filtered) */
@@ -41,28 +41,28 @@ const STATE_CATEGORIES = [
 
 /* The 9 district-level sections, in the exact order requested by client. */
 const DISTRICT_CATEGORIES = [
-  'mp',                        // खासदार
-  'mla',                       // आमदार
-  'leaders',                   // नेते
-  'deputyLeaders',             // उपनेते
-  'divisionalContactHeads',    // विभागीय संपर्क प्रमुख
+  'mp', // खासदार
+  'mla', // आमदार
+  'leaders', // नेते
+  'deputyLeaders', // उपनेते
+  'divisionalContactHeads', // विभागीय संपर्क प्रमुख
   'divisionalCoContactHeads',  // विभागीय सह संपर्क प्रमुख
-  'lokSabhaContactHead',       // लोकसभा संपर्क प्रमुख
-  'districtHead',              // जिल्हाप्रमुख
-  'womenDistrictHeads',        // महिला जिल्हाप्रमुख
+  'lokSabhaContactHead', // लोकसभा संपर्क प्रमुख
+  'districtHead', // जिल्हाप्रमुख
+  'womenDistrictHeads', // महिला जिल्हाप्रमुख
 ];
 
 /* When a category has no real entries for this district, show this
-   many placeholder cards so the layout never collapses. */
+ many placeholder cards so the layout never collapses. */
 const EMPTY_PLACEHOLDER_COUNT = 2;
 const PLACEHOLDER_LABEL = { mr: 'लवकरच जाहीर', en: 'To be announced' };
 
 /* Per-category display caps. MLA uses district data so a real cap doesn't help;
-   everyone else caps at 200 (effectively no cap given real list sizes). */
+ everyone else caps at 200 (effectively no cap given real list sizes). */
 const ITEMS_PER_CATEGORY = 200;
 
 /* Gender placeholders (override per-member by setting `photo` in JSON) */
-const MALE_PLACEHOLDER   = '/placeholder/placeholder-men.png';
+const MALE_PLACEHOLDER = '/placeholder/placeholder-men.png';
 const FEMALE_PLACEHOLDER = '/placeholder/placeholder-women.png';
 
 /* Detect female from Marathi honorifics + the ताई suffix */
@@ -83,155 +83,155 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
   const headerRef = useScrollReveal(0.2);
 
   /* Resolve the active district's parent division (for fallback data lookups
-     against the existing region-level lists). */
+ against the existing region-level lists). */
   const activeDistrictMeta = DISTRICTS[activeDistrict] || { division: 'konkan' };
   const activeDivision = activeDistrictMeta.division;
   const districtLabel = activeDistrictMeta[lang] || activeDistrictMeta.en || activeDistrict;
 
-  /* Popup state — clicking any member card opens it with that member's info */
+  /* Popup state clicking any member card opens it with that member's info */
   const [selectedLeader, setSelectedLeader] = useState(null);
 
   const openLeader = useCallback((member) => {
-    const { name, role } = memberFor(member, lang);
-    let constituency = '';
-    if (member.constituencyNo && member.constituency) {
-      constituency = `${member.constituencyNo}-${member.constituency}`;
-    } else if (member.constituency) {
-      constituency = member.constituency;
-    }
-    const rawSocial = member.social || {};
-    setSelectedLeader({
-      name,
-      role: role || '',
-      constituency,
-      photo: member.photo || photoFor(member),
-      description: member.description,
-      social: {
-        instagram: rawSocial.instagram || '',
-        facebook:  rawSocial.facebook  || '',
-        twitter:   rawSocial.twitter   || rawSocial.x || '',
-        youtube:   rawSocial.youtube   || '',
-      },
-    });
+ const { name, role } = memberFor(member, lang);
+ let constituency = '';
+ if (member.constituencyNo && member.constituency) {
+ constituency = `${member.constituencyNo}-${member.constituency}`;
+ } else if (member.constituency) {
+ constituency = member.constituency;
+ }
+ const rawSocial = member.social || {};
+ setSelectedLeader({
+ name,
+ role: role || '',
+ constituency,
+ photo: member.photo || photoFor(member),
+ description: member.description,
+ social: {
+ instagram: rawSocial.instagram || '',
+ facebook:  rawSocial.facebook  || '',
+ twitter: rawSocial.twitter || rawSocial.x || '',
+ youtube: rawSocial.youtube || '',
+ },
+ });
   }, [lang]);
 
   /* Build the per-district dataset from leaders-by-district.json.
-     Every district shows all 9 categories. When a category has zero
-     real members we emit EMPTY_PLACEHOLDER_COUNT placeholders so the
-     row never collapses. MLA entries are enriched from mlas-by-district
-     (which has social handles + photos) where the data exists. */
+ Every district shows all 9 categories. When a category has zero
+ real members we emit EMPTY_PLACEHOLDER_COUNT placeholders so the
+ row never collapses. MLA entries are enriched from mlas-by-district
+ (which has social handles + photos) where the data exists. */
   const sections = useMemo(() => {
-    const districtBucket = leadersByDistrict[activeDistrict] || {};
-    const mlaWithSocials = (mlasByDistrict[activeDistrict] && mlasByDistrict[activeDistrict].mla) || [];
+ const districtBucket = leadersByDistrict[activeDistrict] || {};
+ const mlaWithSocials = (mlasByDistrict[activeDistrict] && mlasByDistrict[activeDistrict].mla) || [];
 
-    /* Merge the per-district MLA list with the social-handle data
-       keyed by constituency number. Falls back to the unenriched
-       entry from leaders-by-district.json when no match exists. */
-    const enrichMlas = (entries) => {
-      if (!Array.isArray(entries) || entries.length === 0) return entries || [];
-      const byConst = new Map();
-      for (const m of mlaWithSocials) {
-        if (m.constituencyNo != null) byConst.set(String(m.constituencyNo), m);
-      }
-      return entries.map((e) => {
-        const enrich = e.constituencyNo != null && byConst.get(String(e.constituencyNo));
-        return enrich ? { ...e, ...enrich } : e;
-      });
-    };
+ /* Merge the per-district MLA list with the social-handle data
+ keyed by constituency number. Falls back to the unenriched
+ entry from leaders-by-district.json when no match exists. */
+ const enrichMlas = (entries) => {
+ if (!Array.isArray(entries) || entries.length === 0) return entries || [];
+ const byConst = new Map();
+ for (const m of mlaWithSocials) {
+ if (m.constituencyNo != null) byConst.set(String(m.constituencyNo), m);
+ }
+ return entries.map((e) => {
+ const enrich = e.constituencyNo != null && byConst.get(String(e.constituencyNo));
+ return enrich ? { ...e, ...enrich } : e;
+ });
+ };
 
-    const placeholdersFor = (categoryKey) => {
-      const arr = [];
-      for (let i = 0; i < EMPTY_PLACEHOLDER_COUNT; i++) {
-        arr.push({
-          id: `placeholder-${categoryKey}-${i}`,
-          isPlaceholder: true,
-          name: PLACEHOLDER_LABEL[lang] || PLACEHOLDER_LABEL.mr,
-          role: categoryNames[categoryKey] || '',
-        });
-      }
-      return arr;
-    };
+ const placeholdersFor = (categoryKey) => {
+ const arr = [];
+ for (let i = 0; i < EMPTY_PLACEHOLDER_COUNT; i++) {
+ arr.push({
+ id: `placeholder-${categoryKey}-${i}`,
+ isPlaceholder: true,
+ name: PLACEHOLDER_LABEL[lang] || PLACEHOLDER_LABEL.mr,
+ role: categoryNames[categoryKey] || '',
+ });
+ }
+ return arr;
+ };
 
-    const buildGroup = (key) => {
-      let items = districtBucket[key] || [];
-      if (key === 'mla') items = enrichMlas(items);
-      const isEmpty = items.length === 0;
-      return {
-        key,
-        label: categoryNames[key] || key,
-        items: (isEmpty ? placeholdersFor(key) : items).slice(0, ITEMS_PER_CATEGORY),
-        isEmpty,
-      };
-    };
+ const buildGroup = (key) => {
+ let items = districtBucket[key] || [];
+ if (key === 'mla') items = enrichMlas(items);
+ const isEmpty = items.length === 0;
+ return {
+ key,
+ label: categoryNames[key] || key,
+ items: (isEmpty ? placeholdersFor(key) : items).slice(0, ITEMS_PER_CATEGORY),
+ isEmpty,
+ };
+ };
 
-    return [{
-      id: 'district',
-      title: t.regionalHeader,
-      subtitle: t.regionalSubtitle,
-      groups: DISTRICT_CATEGORIES.map(buildGroup),
-    }];
+ return [{
+ id: 'district',
+ title: t.regionalHeader,
+ subtitle: t.regionalSubtitle,
+ groups: DISTRICT_CATEGORIES.map(buildGroup),
+ }];
   }, [activeDistrict, categoryNames, lang, t.regionalHeader, t.regionalSubtitle]);
 
   const title = (t.titleTemplate || '{region}').replace('{region}', districtLabel);
 
   return (
-    <section className="dir-section">
-      <div className="dir-section__inner">
+ <section className="dir-section">
+ <div className="dir-section__inner">
 
-        <div ref={headerRef} className="dir-section__header reveal">
-          <div className="dir-section__eyebrow">
-            <span className="dir-section__eyebrow-line" />
-            <span>{t.eyebrow}</span>
-          </div>
-          <h2 key={`title-${activeDistrict}`} className="dir-section__title">{title}</h2>
-        </div>
+ <div ref={headerRef} className="dir-section__header reveal">
+ <div className="dir-section__eyebrow">
+ <span className="dir-section__eyebrow-line" />
+ <span>{t.eyebrow}</span>
+ </div>
+ <h2 key={`title-${activeDistrict}`} className="dir-section__title">{title}</h2>
+ </div>
 
-        <div className="dir-categories" key={`cats-${activeDistrict}`}>
-          {sections.map((section) => (
-            <div key={section.id} className={`dir-section-group dir-section-group--${section.id}`}>
-              <div className="dir-group-head">
-                <span className="dir-group-rule" />
-                <div className="dir-group-titlewrap">
-                  <h3 className="dir-group-title">{section.title}</h3>
-                  {section.subtitle && (
-                    <p className="dir-group-subtitle">{section.subtitle}</p>
-                  )}
-                </div>
-                <span className="dir-group-rule" />
-              </div>
-              {section.groups.map((group) => (
-                <CategoryCarousel
-                  key={group.key}
-                  label={group.label}
-                  items={group.items}
-                  isEmpty={group.isEmpty}
-                  noDataLabel={t.noData}
-                  prevLabel={t.prevLabel}
-                  nextLabel={t.nextLabel}
-                  viewMoreLabel={t.viewMoreLabel}
-                  lang={lang}
-                  onSelect={openLeader}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
+ <div className="dir-categories" key={`cats-${activeDistrict}`}>
+ {sections.map((section) => (
+ <div key={section.id} className={`dir-section-group dir-section-group--${section.id}`}>
+ <div className="dir-group-head">
+ <span className="dir-group-rule" />
+ <div className="dir-group-titlewrap">
+ <h3 className="dir-group-title">{section.title}</h3>
+ {section.subtitle && (
+ <p className="dir-group-subtitle">{section.subtitle}</p>
+ )}
+ </div>
+ <span className="dir-group-rule" />
+ </div>
+ {section.groups.map((group) => (
+ <CategoryCarousel
+ key={group.key}
+ label={group.label}
+ items={group.items}
+ isEmpty={group.isEmpty}
+ noDataLabel={t.noData}
+ prevLabel={t.prevLabel}
+ nextLabel={t.nextLabel}
+ viewMoreLabel={t.viewMoreLabel}
+ lang={lang}
+ onSelect={openLeader}
+ />
+ ))}
+ </div>
+ ))}
+ </div>
 
-      </div>
+ </div>
 
-      {selectedLeader && (
-        <LeaderPopup
-          leader={selectedLeader}
-          lang={lang}
-          regionColor={REGION_COLORS[activeDivision] || '#C44D0E'}
-          onClose={() => setSelectedLeader(null)}
-        />
-      )}
-    </section>
+ {selectedLeader && (
+ <LeaderPopup
+ leader={selectedLeader}
+ lang={lang}
+ regionColor={REGION_COLORS[activeDivision] || '#C44D0E'}
+ onClose={() => setSelectedLeader(null)}
+ />
+ )}
+ </section>
   );
 }
 
-/* ── Category carousel — horizontal scroll w/ snap + arrow buttons ── */
+/* ── Category carousel horizontal scroll w/ snap + arrow buttons ── */
 function CategoryCarousel({ label, items, isEmpty, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
   const ref = useScrollReveal(0.12);
   const trackRef = useRef(null);
@@ -239,171 +239,171 @@ function CategoryCarousel({ label, items, isEmpty, noDataLabel, prevLabel, nextL
   const [canNext, setCanNext] = useState(false);
 
   const updateArrows = useCallback(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    setCanPrev(el.scrollLeft > 8);
-    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
+ const el = trackRef.current;
+ if (!el) return;
+ setCanPrev(el.scrollLeft > 8);
+ setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
   }, []);
 
   useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    updateArrows();
-    el.addEventListener('scroll', updateArrows, { passive: true });
-    window.addEventListener('resize', updateArrows);
-    return () => {
-      el.removeEventListener('scroll', updateArrows);
-      window.removeEventListener('resize', updateArrows);
-    };
+ const el = trackRef.current;
+ if (!el) return;
+ updateArrows();
+ el.addEventListener('scroll', updateArrows, { passive: true });
+ window.addEventListener('resize', updateArrows);
+ return () => {
+ el.removeEventListener('scroll', updateArrows);
+ window.removeEventListener('resize', updateArrows);
+ };
   }, [updateArrows, items]);
 
   const scroll = (dir) => {
-    const el = trackRef.current;
-    if (!el) return;
-    const card = el.querySelector('.dir-card');
-    const gap = parseInt(getComputedStyle(el).gap) || 18;
-    const step = card ? card.offsetWidth + gap : el.clientWidth * 0.8;
-    el.scrollBy({ left: dir * step, behavior: 'smooth' });
+ const el = trackRef.current;
+ if (!el) return;
+ const card = el.querySelector('.dir-card');
+ const gap = parseInt(getComputedStyle(el).gap) || 18;
+ const step = card ? card.offsetWidth + gap : el.clientWidth * 0.8;
+ el.scrollBy({ left: dir * step, behavior: 'smooth' });
   };
 
   /* `isEmpty` from the parent already tells us if the items are
-     real or placeholders. We still render the carousel even when
-     empty — just with placeholder cards inside. */
+ real or placeholders. We still render the carousel even when
+ empty just with placeholder cards inside. */
   const noItems = !items || items.length === 0;
   const realCount = isEmpty ? 0 : items.length;
   const showArrows = !isEmpty && items.length > 1;
 
   return (
-    <div ref={ref} className="dir-cat reveal">
-      <div className="dir-cat__head">
-        <h3 className="dir-cat__label">
-          {label}
-          {!isEmpty && <span className="dir-cat__count">{realCount}</span>}
-        </h3>
-        {showArrows && (
-          <div className="dir-cat__controls">
-            <button
-              type="button"
-              className={`dir-cat__arrow ${canPrev ? '' : 'is-disabled'}`}
-              onClick={() => scroll(-1)}
-              aria-label={prevLabel}
-              disabled={!canPrev}
-            >
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              className={`dir-cat__arrow ${canNext ? '' : 'is-disabled'}`}
-              onClick={() => scroll(1)}
-              aria-label={nextLabel}
-              disabled={!canNext}
-            >
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </button>
-          </div>
-        )}
-      </div>
+ <div ref={ref} className="dir-cat reveal">
+ <div className="dir-cat__head">
+ <h3 className="dir-cat__label">
+ {label}
+ {!isEmpty && <span className="dir-cat__count">{realCount}</span>}
+ </h3>
+ {showArrows && (
+ <div className="dir-cat__controls">
+ <button
+ type="button"
+ className={`dir-cat__arrow ${canPrev ? '' : 'is-disabled'}`}
+ onClick={() => scroll(-1)}
+ aria-label={prevLabel}
+ disabled={!canPrev}
+ >
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+ <polyline points="15 18 9 12 15 6" />
+ </svg>
+ </button>
+ <button
+ type="button"
+ className={`dir-cat__arrow ${canNext ? '' : 'is-disabled'}`}
+ onClick={() => scroll(1)}
+ aria-label={nextLabel}
+ disabled={!canNext}
+ >
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+ <polyline points="9 18 15 12 9 6" />
+ </svg>
+ </button>
+ </div>
+ )}
+ </div>
 
-      {noItems ? (
-        <p className="dir-cat__empty">{noDataLabel}</p>
-      ) : (
-        <div ref={trackRef} className="dir-cat__track">
-          {items.map((m, i) => (
-            m.isPlaceholder
-              ? <PlaceholderCard key={m.id || i} label={m.name} />
-              : <MemberCard key={m.id || i} member={m} index={i} viewMoreLabel={viewMoreLabel} lang={lang} onSelect={onSelect} />
-          ))}
-        </div>
-      )}
-    </div>
+ {noItems ? (
+ <p className="dir-cat__empty">{noDataLabel}</p>
+ ) : (
+ <div ref={trackRef} className="dir-cat__track">
+ {items.map((m, i) => (
+ m.isPlaceholder
+ ? <PlaceholderCard key={m.id || i} label={m.name} />
+ : <MemberCard key={m.id || i} member={m} index={i} viewMoreLabel={viewMoreLabel} lang={lang} onSelect={onSelect} />
+ ))}
+ </div>
+ )}
+ </div>
   );
 }
 
-/* Placeholder card — used when a district has no real members in a
-   given category. Looks like a real card but greyed out, with no
-   socials / no popup trigger. */
+/* Placeholder card used when a district has no real members in a
+ given category. Looks like a real card but greyed out, with no
+ socials / no popup trigger. */
 function PlaceholderCard({ label }) {
   return (
-    <article className="dir-card dir-card--placeholder" aria-hidden="false">
-      <div className="dir-card__placeholder-art" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="8" r="4" />
-          <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
-        </svg>
-      </div>
-      <div className="dir-card__placeholder-body">
-        <h4 className="dir-card__name">{label}</h4>
-      </div>
-    </article>
+ <article className="dir-card dir-card--placeholder" aria-hidden="false">
+ <div className="dir-card__placeholder-art" aria-hidden="true">
+ <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+ <circle cx="12" cy="8" r="4" />
+ <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+ </svg>
+ </div>
+ <div className="dir-card__placeholder-body">
+ <h4 className="dir-card__name">{label}</h4>
+ </div>
+ </article>
   );
 }
 
-/* ── Member card — full-bleed photo, content overlay, hover reveal.
-   Only the inline "View more" button opens the LeaderPopup. The card
-   itself isn't clickable so social / phone links keep their own behaviour. ── */
+/* ── Member card full-bleed photo, content overlay, hover reveal.
+ Only the inline "View more" button opens the LeaderPopup. The card
+ itself isn't clickable so social / phone links keep their own behaviour. ── */
 function MemberCard({ member, index, viewMoreLabel, lang, onSelect }) {
   const photo = photoFor(member);
   const { name, role } = memberFor(member, lang);
   const socials = member.social || {};
   return (
-    <article
-      className="dir-card"
-      style={{ '--card-delay': `${(index % 4) * 0.06}s` }}
-    >
-      <img src={photo} alt="" loading="lazy" className="dir-card__bg" />
-      <div className="dir-card__shade" aria-hidden="true" />
+ <article
+ className="dir-card"
+ style={{ '--card-delay': `${(index % 4) * 0.06}s` }}
+ >
+ <img src={photo} alt="" loading="lazy" className="dir-card__bg" />
+ <div className="dir-card__shade" aria-hidden="true" />
 
-      <div className="dir-card__content">
-        <h4 className="dir-card__name">{name}</h4>
-        {role && <p className="dir-card__role">{role}</p>}
+ <div className="dir-card__content">
+ <h4 className="dir-card__name">{name}</h4>
+ {role && <p className="dir-card__role">{role}</p>}
 
-        <div className="dir-card__reveal">
-          <SocialIcons socials={socials} phone={member.phone} />
+ <div className="dir-card__reveal">
+ <SocialIcons socials={socials} phone={member.phone} />
 
-          <button
-            type="button"
-            className="dir-card__action"
-            data-cursor="link"
-            onClick={() => onSelect?.(member)}
-          >
-            <span>{viewMoreLabel}</span>
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </article>
+ <button
+ type="button"
+ className="dir-card__action"
+ data-cursor="link"
+ onClick={() => onSelect?.(member)}
+ >
+ <span>{viewMoreLabel}</span>
+ <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+ <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+ </svg>
+ </button>
+ </div>
+ </div>
+ </article>
   );
 }
 
 /* ── Glyph map: one SVG per social platform ── */
 const SOCIAL_GLYPHS = {
   facebook: (
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-      <path d="M22 12a10 10 0 1 0-11.56 9.88V14.9H8v-2.9h2.44V9.84c0-2.4 1.44-3.73 3.63-3.73 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.2 0-1.57.74-1.57 1.5V12h2.67l-.43 2.9h-2.24v6.98A10 10 0 0 0 22 12Z" />
-    </svg>
+ <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+ <path d="M22 12a10 10 0 1 0-11.56 9.88V14.9H8v-2.9h2.44V9.84c0-2.4 1.44-3.73 3.63-3.73 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.2 0-1.57.74-1.57 1.5V12h2.67l-.43 2.9h-2.24v6.98A10 10 0 0 0 22 12Z" />
+ </svg>
   ),
   twitter: (
-    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
-      <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.84l-5.36-6.93L4.56 22H1.3l8.04-9.18L1 2h6.98l4.84 6.36L18.244 2Zm-1.2 18h1.9L7.04 4H5.05l11.994 16Z" />
-    </svg>
+ <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
+ <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.84l-5.36-6.93L4.56 22H1.3l8.04-9.18L1 2h6.98l4.84 6.36L18.244 2Zm-1.2 18h1.9L7.04 4H5.05l11.994 16Z" />
+ </svg>
   ),
   instagram: (
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
+ <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+ <rect x="3" y="3" width="18" height="18" rx="5" />
+ <circle cx="12" cy="12" r="4" />
+ <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+ </svg>
   ),
   phone: (
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" />
-    </svg>
+ <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+ <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" />
+ </svg>
   ),
 };
 
@@ -413,58 +413,58 @@ const isValidSocial = (v) => {
 };
 
 /* ── Social icons row (revealed on card hover) ───────────────────
-   Renders Facebook, X/Twitter, Instagram, and a Call icon (only when
-   the member has a phone number). Social platforms with no handle
-   show as muted, non-clickable spans so every card stays visually
-   consistent; the phone slot is omitted entirely when no number. */
+ Renders Facebook, X/Twitter, Instagram, and a Call icon (only when
+ the member has a phone number). Social platforms with no handle
+ show as muted, non-clickable spans so every card stays visually
+ consistent; the phone slot is omitted entirely when no number. */
 function SocialIcons({ socials, phone }) {
   const safe = socials || {};
   const candidates = [
-    { key: 'facebook',  href: safe.facebook,                  label: 'Facebook' },
-    { key: 'twitter',   href: safe.twitter || safe.x,         label: 'X / Twitter' },
-    { key: 'instagram', href: safe.instagram,                 label: 'Instagram' },
+ { key: 'facebook',  href: safe.facebook, label: 'Facebook' },
+ { key: 'twitter', href: safe.twitter || safe.x, label: 'X / Twitter' },
+ { key: 'instagram', href: safe.instagram, label: 'Instagram' },
   ];
 
   const cleanPhone = (phone || '').toString().trim();
   if (cleanPhone) {
-    candidates.push({
-      key: 'phone',
-      href: `tel:${cleanPhone.replace(/\s+/g, '')}`,
-      label: `Call ${cleanPhone}`,
-    });
+ candidates.push({
+ key: 'phone',
+ href: `tel:${cleanPhone.replace(/\s+/g, '')}`,
+ label: `Call ${cleanPhone}`,
+ });
   }
 
   return (
-    <div className="dir-card__socials" aria-label="Social profiles">
-      {candidates.map((s) => {
-        const hasLink = isValidSocial(s.href);
-        const className = `dir-card__social dir-card__social--${s.key}${hasLink ? '' : ' is-disabled'}`;
-        const glyph = SOCIAL_GLYPHS[s.key];
-        if (!hasLink) {
-          return (
-            <span
-              key={s.key}
-              className={className}
-              aria-label={`${s.label} (unavailable)`}
-              aria-disabled="true"
-            >
-              {glyph}
-            </span>
-          );
-        }
-        return (
-          <a
-            key={s.key}
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={className}
-            aria-label={s.label}
-          >
-            {glyph}
-          </a>
-        );
-      })}
-    </div>
+ <div className="dir-card__socials" aria-label="Social profiles">
+ {candidates.map((s) => {
+ const hasLink = isValidSocial(s.href);
+ const className = `dir-card__social dir-card__social--${s.key}${hasLink ? '' : ' is-disabled'}`;
+ const glyph = SOCIAL_GLYPHS[s.key];
+ if (!hasLink) {
+ return (
+ <span
+ key={s.key}
+ className={className}
+ aria-label={`${s.label} (unavailable)`}
+ aria-disabled="true"
+ >
+ {glyph}
+ </span>
+ );
+ }
+ return (
+ <a
+ key={s.key}
+ href={s.href}
+ target="_blank"
+ rel="noopener noreferrer"
+ className={className}
+ aria-label={s.label}
+ >
+ {glyph}
+ </a>
+ );
+ })}
+ </div>
   );
 }

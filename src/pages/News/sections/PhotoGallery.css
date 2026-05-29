@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   PHOTO GALLERY — CSS columns masonry + lightbox
+ PHOTO GALLERY CSS columns masonry + lightbox
 ═══════════════════════════════════════════════════════════════ */
 .pg-section {
   position: relative;
@@ -78,7 +78,7 @@
   page-break-inside: avoid;
   box-shadow: 0 6px 22px rgba(133, 65, 0, 0.10);
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 0.4s ease;
+ box-shadow 0.4s ease;
 }
 
 .pg-tile:focus-visible {
@@ -165,10 +165,10 @@
   opacity: 0;
   transform: translateY(-4px) scale(0.95);
   transition: opacity 0.25s ease,
-              transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
-              background 0.2s ease,
-              color 0.2s ease,
-              box-shadow 0.25s ease;
+ transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+ background 0.2s ease,
+ color 0.2s ease,
+ box-shadow 0.25s ease;
   z-index: 3;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
@@ -183,8 +183,8 @@
 
 @media (hover: none) {
   .pg-tile__download {
-    opacity: 1;
-    transform: none;
+ opacity: 1;
+ transform: none;
   }
 }
 
@@ -205,8 +205,8 @@
 .pg-tile.reveal {
   opacity: 0;
   transition: opacity 0.7s ease var(--reveal-delay, 0s),
-              transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s),
-              box-shadow 0.4s ease;
+ transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s),
+ box-shadow 0.4s ease;
 }
 .pg-tile.is-revealed { opacity: 1; }
 
@@ -232,7 +232,7 @@
 }
 @keyframes pgLightboxIn {
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
 }
 
 .pg-lightbox__close {
@@ -323,7 +323,7 @@
 }
 @keyframes pgFrameIn {
   from { opacity: 0; transform: scale(0.96); }
-  to   { opacity: 1; transform: scale(1); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .pg-lightbox__img {
@@ -336,7 +336,7 @@
 }
 @keyframes pgImgFade {
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
 }
 
 .pg-lightbox__caption {

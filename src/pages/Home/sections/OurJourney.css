@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
-   OUR JOURNEY — full-bleed timeline (reference: BJP "Our Journey")
-   Fixed 600px section, year strip pinned to the bottom.
+ OUR JOURNEY full-bleed timeline (reference: BJP "Our Journey")
+ Fixed 600px section, year strip pinned to the bottom.
 ═══════════════════════════════════════════════════════════════ */
 .journey {
   position: relative;
@@ -26,31 +26,31 @@
 
 @keyframes journeyBgIn {
   from { opacity: 0; transform: scale(1.04); }
-  to   { opacity: 1; transform: scale(1); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* Heavier scrim on the left ~half so the year + body text always stays
-   readable, even against very light photos (newspaper scans etc.).
-   Right side fades to ~25% so the photo still reads as the hero. */
+ readable, even against very light photos (newspaper scans etc.).
+ Right side fades to ~25% so the photo still reads as the hero. */
 .journey__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    /* Strong vertical scrim across the entire section for baseline contrast */
-    linear-gradient(180deg,
-      rgba(0, 0, 0, 0.45) 0%,
-      rgba(0, 0, 0, 0.55) 100%
-    ),
-    /* Left-half horizontal scrim — densest where the panel text sits */
-    linear-gradient(95deg,
-      rgba(8, 4, 0, 0.85) 0%,
-      rgba(8, 4, 0, 0.70) 32%,
-      rgba(8, 4, 0, 0.35) 60%,
-      rgba(8, 4, 0, 0.20) 100%
-    ),
-    /* Extra darkening at the bottom for the year strip */
-    linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 26%);
+ /* Strong vertical scrim across the entire section for baseline contrast */
+ linear-gradient(180deg,
+ rgba(0, 0, 0, 0.45) 0%,
+ rgba(0, 0, 0, 0.55) 100%
+ ),
+ /* Left-half horizontal scrim densest where the panel text sits */
+ linear-gradient(95deg,
+ rgba(8, 4, 0, 0.85) 0%,
+ rgba(8, 4, 0, 0.70) 32%,
+ rgba(8, 4, 0, 0.35) 60%,
+ rgba(8, 4, 0, 0.20) 100%
+ ),
+ /* Extra darkening at the bottom for the year strip */
+ linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, transparent 26%);
 }
 
 /* ── Layout shell ── */
@@ -66,23 +66,23 @@
   gap: 18px;
 }
 
-/* ── Big year + event copy panel — left-aligned, vertically centred ── */
+/* ── Big year + event copy panel left-aligned, vertically centred ── */
 .journey__panel {
-  align-self: flex-start;     /* hug left edge of the column */
+  align-self: flex-start; /* hug left edge of the column */
   text-align: left;
   max-width: 640px;
   margin-top: auto;
-  margin-bottom: auto;        /* vertically centre within the inner shell */
+  margin-bottom: auto; /* vertically centre within the inner shell */
   /* Reserve enough vertical space for the longest event copy so the
-     flex column doesn't re-centre + shift the panel up/down when
-     switching between short and long descriptions. */
+ flex column doesn't re-centre + shift the panel up/down when
+ switching between short and long descriptions. */
   min-height: 320px;
   animation: panelIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes panelIn {
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
 }
 
 .journey__year {
@@ -94,8 +94,8 @@
   color: #fff;
   margin: 0 0 12px;
   text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.8),
-    0 6px 28px rgba(0, 0, 0, 0.7);
+ 0 2px 4px rgba(0, 0, 0, 0.8),
+ 0 6px 28px rgba(0, 0, 0, 0.7);
 }
 
 .journey__event-title {
@@ -106,8 +106,8 @@
   color: #FFB26B;
   margin: 0 0 14px;
   text-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.85),
-    0 4px 18px rgba(0, 0, 0, 0.6);
+ 0 1px 3px rgba(0, 0, 0, 0.85),
+ 0 4px 18px rgba(0, 0, 0, 0.6);
 }
 
 .journey__body {
@@ -119,8 +119,8 @@
   margin: 0 0 14px;
   max-width: 620px;
   text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.85),
-    0 3px 12px rgba(0, 0, 0, 0.55);
+ 0 1px 2px rgba(0, 0, 0, 0.85),
+ 0 3px 12px rgba(0, 0, 0, 0.55);
 }
 
 .journey__date {
@@ -133,9 +133,9 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   FOOTER: year strip is its own full-bleed element; nav buttons are
-   positioned absolutely at the bottom-right so they don't shrink the
-   strip's available width.
+ FOOTER: year strip is its own full-bleed element; nav buttons are
+ positioned absolutely at the bottom-right so they don't shrink the
+ strip's available width.
 ═══════════════════════════════════════════════════════════════ */
 .journey__footer {
   position: absolute;
@@ -147,9 +147,9 @@
 }
 
 /* Horizontal dot-rail (mirrors the About page's vertical year rail).
-   The dot is rendered first inside the flex column → its vertical
-   centre sits at padding-top + (dot height / 2). The connecting line
-   uses the same math so the dots sit ON the line, not above it. */
+ The dot is rendered first inside the flex column → its vertical
+ centre sits at padding-top + (dot height / 2). The connecting line
+ uses the same math so the dots sit ON the line, not above it. */
 .journey__years {
   --dot-size: 14px;
   --strip-pad-top: 14px;
@@ -167,7 +167,7 @@
 }
 .journey__years::-webkit-scrollbar { display: none; }
 
-/* Horizontal hairline — sits exactly on the vertical centre of the dots */
+/* Horizontal hairline sits exactly on the vertical centre of the dots */
 .journey__years-line {
   position: absolute;
   left: 0;
@@ -182,7 +182,7 @@
 
 .journey__year-tick {
   position: relative;
-  flex: 1 1 0;          /* equal spacing across the full width */
+  flex: 1 1 0; /* equal spacing across the full width */
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -194,7 +194,7 @@
   cursor: pointer;
   color: rgba(255, 255, 255, 0.55);
   transition: color 0.25s ease, transform 0.25s ease;
-  z-index: 1;            /* keep dots above the line */
+  z-index: 1; /* keep dots above the line */
 }
 
 .journey__year-dot {
@@ -202,10 +202,10 @@
   height: var(--dot-size);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.45);
-  border: 2px solid #0a0806;       /* darker outline lifts the dot off the line */
+  border: 2px solid #0a0806; /* darker outline lifts the dot off the line */
   box-shadow: 0 0 0 0 rgba(255, 107, 26, 0);
   transition: background 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.4s ease;
+ box-shadow 0.4s ease;
 }
 
 .journey__year-label {
@@ -233,13 +233,13 @@
 }
 .journey__year-tick.is-active .journey__year-label {
   color: #fff;
-  /* Keep weight identical to inactive labels — bumping to 700 here was
-     changing the label's measured width and visibly shifting siblings
-     along the flex strip on every click. */
+  /* Keep weight identical to inactive labels bumping to 700 here was
+ changing the label's measured width and visibly shifting siblings
+ along the flex strip on every click. */
 }
 
-/* Nav arrows — anchored to the section's bottom-right, lifted well
-   above the year strip so they never collide with it. */
+/* Nav arrows anchored to the section's bottom-right, lifted well
+ above the year strip so they never collide with it. */
 .journey__nav {
   position: absolute;
   right: 32px;
@@ -262,7 +262,7 @@
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease, border-color 0.3s ease,
-              transform 0.3s ease, opacity 0.3s ease;
+ transform 0.3s ease, opacity 0.3s ease;
 }
 
 .journey__nav-btn:hover:not(:disabled) {
@@ -281,7 +281,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+ transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .journey .reveal.is-revealed {
   opacity: 1;
@@ -289,19 +289,19 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .journey__inner  { padding: 56px 32px 130px 32px; }
   .journey__years  { padding-right: 110px; }
-  .journey__nav    { right: 24px; }
+  .journey__nav { right: 24px; }
 }
 
 @media (max-width: 768px) {
   .journey { height: auto; min-height: 560px; }
   .journey__inner {
-    padding: 56px 22px 170px 22px;
-    gap: 16px;
+ padding: 56px 22px 170px 22px;
+ gap: 16px;
   }
   .journey__title { font-size: clamp(2rem, 8vw, 2.6rem); }
   .journey__year  { font-size: clamp(3rem, 13vw, 4.5rem); }
@@ -310,8 +310,8 @@
   .journey__years { padding: var(--strip-pad-top) 16px 6px 16px; --dot-size: 10px; gap: 8px; }
   .journey__year-label { font-size: 0.82rem; }
   .journey__nav {
-    right: 16px;
-    bottom: 78px;
+ right: 16px;
+ bottom: 78px;
   }
 }
 

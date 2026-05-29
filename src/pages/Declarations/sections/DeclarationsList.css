@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   DECLARATIONS LIST — Cream Editorial card system
+ DECLARATIONS LIST Cream Editorial card system
 ═══════════════════════════════════════════════════════════════ */
 .decl {
   position: relative;
@@ -111,7 +111,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   CARD
+ CARD
 ═══════════════════════════════════════════════════════════════ */
 .decl-card {
   position: relative;
@@ -120,10 +120,10 @@
   padding: 32px 30px 34px;
   overflow: hidden;
   transition:
-    border-color 0.4s ease,
-    transform 0.5s var(--ease-out-expo),
-    box-shadow 0.5s ease,
-    background 0.4s ease;
+ border-color 0.4s ease,
+ transform 0.5s var(--ease-out-expo),
+ box-shadow 0.5s ease,
+ background 0.4s ease;
   cursor: default;
 }
 
@@ -131,12 +131,12 @@
   border-color: var(--hairline-strong);
   transform: translateY(-4px);
   box-shadow:
-    0 28px 60px -28px rgba(26, 20, 16, 0.22),
-    0 0 0 1px rgba(255, 107, 26, 0.05) inset;
+ 0 28px 60px -28px rgba(26, 20, 16, 0.22),
+ 0 0 0 1px rgba(255, 107, 26, 0.05) inset;
   background: #fff;
 }
 
-/* left accent rail — animates on hover */
+/* left accent rail animates on hover */
 .decl-card__rail {
   position: absolute;
   left: 0;
@@ -197,9 +197,9 @@
   color: var(--saffron-on-light);
   background: rgba(255, 178, 107, 0.08);
   transition:
-    transform 0.5s var(--ease-out-expo),
-    background 0.4s ease,
-    border-color 0.4s ease;
+ transform 0.5s var(--ease-out-expo),
+ background 0.4s ease,
+ border-color 0.4s ease;
 }
 .decl-card__icon svg { width: 22px; height: 22px; }
 .decl-card:hover .decl-card__icon {
@@ -239,7 +239,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   FOOTER CTA BLOCK
+ FOOTER CTA BLOCK
 ═══════════════════════════════════════════════════════════════ */
 .decl__footer {
   position: relative;
@@ -247,8 +247,8 @@
   padding: 56px 48px;
   text-align: center;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(252, 251, 247, 0.4) 100%),
-    radial-gradient(ellipse at top, rgba(255, 178, 107, 0.18) 0%, transparent 70%);
+ linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(252, 251, 247, 0.4) 100%),
+ radial-gradient(ellipse at top, rgba(255, 178, 107, 0.18) 0%, transparent 70%);
   border: 1px solid var(--hairline);
   overflow: hidden;
 }
@@ -305,14 +305,14 @@
 .decl__footer-cta:hover svg { transform: translateX(3px); }
 
 /* ═══════════════════════════════════════════════════════════════
-   SCROLL REVEAL
+ SCROLL REVEAL
 ═══════════════════════════════════════════════════════════════ */
 .decl .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition:
-    opacity 0.9s var(--ease-out-expo),
-    transform 0.9s var(--ease-out-expo);
+ opacity 0.9s var(--ease-out-expo),
+ transform 0.9s var(--ease-out-expo);
   transition-delay: var(--reveal-delay, 0s);
 }
 .decl .reveal.is-revealed {
@@ -321,7 +321,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .decl { padding: 100px 28px 120px; }

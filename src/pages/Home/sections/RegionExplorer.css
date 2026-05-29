@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════
-   RegionExplorer — Maharashtra Region Map Section
-   Theme: cream editorial, saffron palette
+ RegionExplorer Maharashtra Region Map Section
+ Theme: cream editorial, saffron palette
 ═══════════════════════════════════════════════ */
 
 .region-explorer {
@@ -59,7 +59,7 @@
 }
 
 /* ═══════════════════════════════════════════════
-   MAP SIDE
+ MAP SIDE
 ═══════════════════════════════════════════════ */
 .region-explorer__map-side {
   display: flex;
@@ -97,7 +97,7 @@
 
 @keyframes tooltipFadeIn {
   from { opacity: 0; transform: translate(14px, 18px); }
-  to   { opacity: 1; transform: translate(14px, 14px); }
+  to { opacity: 1; transform: translate(14px, 14px); }
 }
 
 .region-explorer__svg {
@@ -124,7 +124,7 @@
   cursor: pointer;
 }
 
-/* Soft hover hint — interactive feedback only, NOT a selection */
+/* Soft hover hint interactive feedback only, NOT a selection */
 .mh-district:hover {
   fill: var(--region-color-mid, rgba(196, 77, 14, 0.5));
 }
@@ -222,7 +222,7 @@
 }
 
 /* ═══════════════════════════════════════════════
-   PANEL SIDE
+ PANEL SIDE
 ═══════════════════════════════════════════════ */
 .region-explorer__panel {
   position: sticky;
@@ -324,7 +324,7 @@
 
 @keyframes memberFadeIn {
   from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .region-member:last-child {
@@ -350,6 +350,23 @@
   flex-shrink: 0;
   transition: background 0.3s ease;
   letter-spacing: 0.02em;
+  overflow: hidden;
+}
+
+/* Photo variant — when a leader has a portrait we use it as a full-bleed
+   circular avatar instead of the initials pill. The image fills the
+   circle with object-fit: cover; a 1.5px saffron ring keeps the brand
+   accent visible without crowding the photo. */
+.region-member__avatar--photo {
+  background: var(--paper-soft, #FCFBF7);
+  box-shadow: 0 0 0 1.5px var(--active-color, #C44D0E);
+}
+.region-member__avatar--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
 }
 
 .region-member__info {
@@ -492,36 +509,36 @@
 }
 
 /* ═══════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .region-explorer__body {
-    grid-template-columns: 1fr;
-    gap: 32px;
+ grid-template-columns: 1fr;
+ gap: 32px;
   }
   .region-explorer__panel {
-    position: static;
+ position: static;
   }
   .region-panel__members {
-    max-height: 320px;
+ max-height: 320px;
   }
 }
 
 @media (max-width: 640px) {
   .region-explorer {
-    padding: 72px 0 80px;
+ padding: 72px 0 80px;
   }
   .region-explorer__inner {
-    padding: 0 20px;
+ padding: 0 20px;
   }
   .region-explorer__svg-wrap {
-    padding: 12px;
+ padding: 12px;
   }
   .region-explorer__legend {
-    gap: 6px;
+ gap: 6px;
   }
   .region-legend-pill {
-    font-size: 11px;
-    padding: 5px 11px 5px 8px;
+ font-size: 11px;
+ padding: 5px 11px 5px 8px;
   }
 }

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   REGION MAP — Interactive Maharashtra map + legend pills
+ REGION MAP Interactive Maharashtra map + legend pills
 ═══════════════════════════════════════════════════════════════ */
 .rmap {
   position: relative;
@@ -12,8 +12,8 @@
   content: '';
   position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 40% 30% at 0% 0%,     rgba(255, 178, 107, 0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 100% 100%, rgba(196, 77, 14, 0.08) 0%, transparent 60%);
+ radial-gradient(ellipse 40% 30% at 0% 0%, rgba(255, 178, 107, 0.10) 0%, transparent 60%),
+ radial-gradient(ellipse 40% 30% at 100% 100%, rgba(196, 77, 14, 0.08) 0%, transparent 60%);
 }
 
 .rmap__inner {
@@ -63,7 +63,7 @@
   margin: 0;
 }
 
-/* Layout: map on left, legend pills on right — both stretch full height */
+/* Layout: map on left, legend pills on right both stretch full height */
 .rmap__layout {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -78,8 +78,8 @@
   border-radius: 18px;
   padding: 22px;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.85) inset,
-    0 14px 36px rgba(133, 65, 0, 0.10);
+ 0 1px 0 rgba(255, 255, 255, 0.85) inset,
+ 0 14px 36px rgba(133, 65, 0, 0.10);
 }
 
 .rmap__svg {
@@ -105,7 +105,7 @@
   cursor: pointer;
 }
 
-/* Soft hover hint — interactive feedback only, NOT a selection */
+/* Soft hover hint interactive feedback only, NOT a selection */
 .rmap__svg .mh-district:hover {
   fill: var(--region-color-mid, rgba(196, 77, 14, 0.5));
 }
@@ -138,7 +138,7 @@
 }
 @keyframes rmapTooltipIn {
   from { opacity: 0; transform: translate(14px, 18px); }
-  to   { opacity: 1; transform: translate(14px, 14px); }
+  to { opacity: 1; transform: translate(14px, 14px); }
 }
 
 /* Hint bubble bottom-right inside the map */
@@ -164,10 +164,10 @@
 }
 @keyframes rmapHintBob {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-3px); }
+  50% { transform: translateY(-3px); }
 }
 
-/* ── Legend pills — distribute vertically across full height ── */
+/* ── Legend pills distribute vertically across full height ── */
 .rmap__legend {
   display: flex;
   flex-direction: column;
@@ -243,7 +243,7 @@
   margin: 0;
 }
 
-/* 2-line pill body — used by both constituency and district modes */
+/* 2-line pill body used by both constituency and district modes */
 .rmap__pill--constituency,
 .rmap__pill--district {
   align-items: flex-start;
@@ -287,7 +287,7 @@
   text-overflow: ellipsis;
 }
 .rmap__pill--constituency.rmap__pill--active .rmap__pill-sub,
-.rmap__pill--district.rmap__pill--active    .rmap__pill-sub {
+.rmap__pill--district.rmap__pill--active .rmap__pill-sub {
   color: rgba(26, 20, 16, 0.7);
 }
 .rmap__legend-head {
@@ -350,10 +350,10 @@
   color: var(--ink, #1A1410);
   box-shadow: 0 6px 18px rgba(133, 65, 0, 0.06);
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-              border-color 0.3s ease,
-              background 0.3s ease,
-              box-shadow 0.35s ease,
-              gap 0.3s ease;
+ border-color 0.3s ease,
+ background 0.3s ease,
+ box-shadow 0.35s ease,
+ gap 0.3s ease;
 }
 
 .rmap__pill-dot {
@@ -383,7 +383,7 @@
   background: #fff;
   gap: 18px;
   box-shadow: 0 14px 28px rgba(133, 65, 0, 0.14),
-              0 0 0 4px color-mix(in srgb, var(--pill-color, #C44D0E) 12%, transparent);
+ 0 0 0 4px color-mix(in srgb, var(--pill-color, #C44D0E) 12%, transparent);
 }
 .rmap__pill:hover .rmap__pill-dot {
   transform: scale(1.25);
@@ -398,7 +398,7 @@
   border-color: var(--pill-color, var(--saffron, #C44D0E));
   background: #fff;
   box-shadow: 0 14px 30px rgba(133, 65, 0, 0.16),
-              0 0 0 4px color-mix(in srgb, var(--pill-color, #C44D0E) 14%, transparent);
+ 0 0 0 4px color-mix(in srgb, var(--pill-color, #C44D0E) 14%, transparent);
 }
 .rmap__pill--active .rmap__pill-dot {
   transform: scale(1.18);

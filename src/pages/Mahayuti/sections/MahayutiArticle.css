@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
-   MAHAYUTI ARTICLE — alternating left/right story blocks.
-   Pattern mirrors the Leadership Feature on Home/About so the
-   editorial language across the site stays consistent.
+ MAHAYUTI ARTICLE alternating left/right story blocks.
+ Pattern mirrors the Leadership Feature on Home/About so the
+ editorial language across the site stays consistent.
 ═══════════════════════════════════════════════════════════════ */
 .my-article {
   position: relative;
@@ -74,10 +74,10 @@
   display: block;
   background: var(--paper-soft, #FCFBF7);
   box-shadow:
-    0 30px 70px -28px rgba(26, 20, 16, 0.34),
-    0 0 0 1px var(--hairline, rgba(26, 20, 16, 0.1));
+ 0 30px 70px -28px rgba(26, 20, 16, 0.34),
+ 0 0 0 1px var(--hairline, rgba(26, 20, 16, 0.1));
   transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
-              filter 0.6s ease;
+ filter 0.6s ease;
   filter: saturate(0.97) contrast(1.02);
 }
 .my-block:hover .my-block__media img {
@@ -91,9 +91,9 @@
   z-index: 1;
 }
 
-/* Section title for each story block — sits above the paragraph
-   like a chapter heading. Saffron, bold, with a short underline
-   rail to give it that editorial-headline feel. */
+/* Section title for each story block sits above the paragraph
+ like a chapter heading. Saffron, bold, with a short underline
+ rail to give it that editorial-headline feel. */
 .my-block__kicker {
   display: block;
   font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
@@ -135,9 +135,9 @@
   padding: 50px 48px 44px;
   text-align: center;
   background:
-    linear-gradient(180deg,
-      rgba(255, 178, 107, 0.06) 0%,
-      transparent 100%);
+ linear-gradient(180deg,
+ rgba(255, 178, 107, 0.06) 0%,
+ transparent 100%);
   border-top: 1px solid var(--hairline, rgba(26, 20, 16, 0.1));
   border-bottom: 1px solid var(--hairline, rgba(26, 20, 16, 0.1));
 }
@@ -186,10 +186,10 @@
   flex: 0 1 140px;
   height: 1px;
   background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(196, 77, 14, 0.4) 50%,
-    transparent 100%
+ to right,
+ transparent 0%,
+ rgba(196, 77, 14, 0.4) 50%,
+ transparent 100%
   );
 }
 .my-article__flourish-mark {
@@ -202,7 +202,7 @@
 /* ─── Reveal animation ─── */
 
 /* Block-level shell: just fade-in so the children can do their
-   own direction-aware moves without fighting a parent transform. */
+ own direction-aware moves without fighting a parent transform. */
 .my-article .reveal {
   opacity: 0;
   transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s);
@@ -210,14 +210,14 @@
 .my-article .reveal.is-revealed { opacity: 1; }
 
 /* Image floats in from OUTSIDE the page edge with a gentle scale.
-   Left-orientation blocks: image enters from left.
-   Right-orientation blocks: image enters from right. */
+ Left-orientation blocks: image enters from left.
+ Right-orientation blocks: image enters from right. */
 .my-block .my-block__media {
   opacity: 0;
   transform: scale(0.94);
   transition:
-    opacity 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0s),
-    transform 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0s);
+ opacity 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0s),
+ transform 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0s);
 }
 .my-block--left  .my-block__media { transform: translateX(-64px) scale(0.94); }
 .my-block--right .my-block__media { transform: translateX( 64px) scale(0.94); }
@@ -227,13 +227,13 @@
   transform: translateX(0) scale(1);
 }
 
-/* Body sweeps in from the OPPOSITE side — feels like the two halves
-   meet at the centre line. */
+/* Body sweeps in from the OPPOSITE side feels like the two halves
+ meet at the centre line. */
 .my-block .my-block__body {
   opacity: 0;
   transition:
-    opacity 1s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--reveal-delay, 0s) + 0.15s),
-    transform 1s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--reveal-delay, 0s) + 0.15s);
+ opacity 1s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--reveal-delay, 0s) + 0.15s),
+ transform 1s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--reveal-delay, 0s) + 0.15s);
 }
 .my-block--left  .my-block__body { transform: translateX( 48px); }
 .my-block--right .my-block__body { transform: translateX(-48px); }
@@ -244,13 +244,13 @@
 }
 
 /* Inside the body, the kicker pops first, then the paragraph
-   settles in just behind it — micro-stagger. */
+ settles in just behind it micro-stagger. */
 .my-block .my-block__kicker {
   opacity: 0;
   transform: translateY(8px) scale(0.92);
   transition:
-    opacity 0.6s ease calc(var(--reveal-delay, 0s) + 0.45s),
-    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) calc(var(--reveal-delay, 0s) + 0.45s);
+ opacity 0.6s ease calc(var(--reveal-delay, 0s) + 0.45s),
+ transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) calc(var(--reveal-delay, 0s) + 0.45s);
 }
 .my-block.is-revealed .my-block__kicker {
   opacity: 1;
@@ -261,8 +261,8 @@
   opacity: 0;
   transform: translateY(14px);
   transition:
-    opacity 0.9s ease calc(var(--reveal-delay, 0s) + 0.60s),
-    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--reveal-delay, 0s) + 0.60s);
+ opacity 0.9s ease calc(var(--reveal-delay, 0s) + 0.60s),
+ transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--reveal-delay, 0s) + 0.60s);
 }
 .my-block.is-revealed .my-block__text {
   opacity: 1;
@@ -270,7 +270,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .my-article { padding: 96px 28px 120px; }
@@ -285,8 +285,8 @@
   .my-article__list { gap: 60px; }
 
   .my-block {
-    grid-template-columns: 1fr;
-    gap: 26px;
+ grid-template-columns: 1fr;
+ gap: 26px;
   }
   /* Mobile: image always on top regardless of orientation */
   .my-block--right .my-block__media { order: 0; }

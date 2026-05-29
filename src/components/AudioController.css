@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
-   Floating ambient-audio mute toggle.
-   Sits in the top-right of the viewport, above the page header,
-   blends with both light and dark hero backgrounds.
+ Floating ambient-audio mute toggle.
+ Sits in the top-right of the viewport, above the page header,
+ blends with both light and dark hero backgrounds.
 ═══════════════════════════════════════════════════════════════ */
 .audio-toggle {
   position: fixed;
@@ -22,10 +22,10 @@
   justify-content: center;
   box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.35);
   transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+ background 0.3s ease,
+ color 0.3s ease,
+ border-color 0.3s ease,
+ transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .audio-toggle:hover {
@@ -35,7 +35,7 @@
   color: #fff;
 }
 
-/* Muted state — dimmer, redder hint */
+/* Muted state dimmer, redder hint */
 .audio-toggle.is-muted {
   background: rgba(8, 4, 0, 0.45);
   border-color: rgba(255, 178, 107, 0.28);
@@ -53,19 +53,19 @@
   animation: audioPulseRing 2s ease-out infinite;
 }
 @keyframes audioPulseRing {
-  0%   { transform: scale(0.95); opacity: 0.55; }
+  0% { transform: scale(0.95); opacity: 0.55; }
   70%  { opacity: 0.12; }
-  100% { transform: scale(1.4);  opacity: 0;    }
+  100% { transform: scale(1.4);  opacity: 0; }
 }
 
-/* Light-hero variant — softer fill so it doesn't punch out of cream */
+/* Light-hero variant softer fill so it doesn't punch out of cream */
 .audio-toggle:not(.is-muted) svg {
   color: #FFE6C8;
 }
 
-/* Light background pages — invert the colours so the button stays
-   visible on cream sections (this kicks in on Home below the hero
-   and on About / News / Leadership / Contact). */
+/* Light background pages invert the colours so the button stays
+ visible on cream sections (this kicks in on Home below the hero
+ and on About / News / Leadership / Contact). */
 body:not(.has-dark-hero-visible) .audio-toggle {
   background: #FFFFFF;
   border-color: rgba(196, 77, 14, 0.4);
@@ -88,10 +88,10 @@ body:not(.has-dark-hero-visible) .audio-toggle__ring {
 
 @media (max-width: 768px) {
   .audio-toggle {
-    top: 14px;
-    right: 14px;
-    width: 38px;
-    height: 38px;
+ top: 14px;
+ right: 14px;
+ width: 38px;
+ height: 38px;
   }
 }
 

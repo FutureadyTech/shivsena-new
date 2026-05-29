@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   LEADERS DIRECTORY — 7 category carousels per region
+ LEADERS DIRECTORY 7 category carousels per region
 ═══════════════════════════════════════════════════════════════ */
 .dir-section {
   position: relative;
@@ -12,11 +12,11 @@
   content: '';
   position: absolute; inset: 0; pointer-events: none;
   background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(196, 77, 14, 0.025) 0px,
-    rgba(196, 77, 14, 0.025) 1px,
-    transparent 1px,
-    transparent 56px);
+ -45deg,
+ rgba(196, 77, 14, 0.025) 0px,
+ rgba(196, 77, 14, 0.025) 1px,
+ transparent 1px,
+ transparent 56px);
 }
 
 .dir-section__inner {
@@ -59,7 +59,7 @@
 }
 @keyframes dirTitleIn {
   from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Region tabs */
@@ -75,7 +75,7 @@
   backdrop-filter: blur(4px);
 }
 
-/* District-mode variant — groups stacked, each labelled by parent division */
+/* District-mode variant groups stacked, each labelled by parent division */
 .dir-section__tabs--districts {
   display: flex;
   flex-direction: column;
@@ -196,7 +196,7 @@
 }
 @keyframes dirCatsIn {
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
 }
 
 /* ── Category row ── */
@@ -257,7 +257,7 @@
   justify-content: center;
   cursor: pointer;
   transition: background 0.25s ease, border-color 0.25s ease,
-              transform 0.25s ease, box-shadow 0.25s ease;
+ transform 0.25s ease, box-shadow 0.25s ease;
 }
 .dir-cat__arrow:hover:not(:disabled) {
   background: var(--saffron, #C44D0E);
@@ -269,7 +269,7 @@
 .dir-cat__arrow.is-disabled,
 .dir-cat__arrow:disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* Track — horizontal scrollable carousel */
+/* Track horizontal scrollable carousel */
 .dir-cat__track {
   display: flex;
   gap: 18px;
@@ -299,11 +299,11 @@
   margin: 0;
 }
 
-/* ── Placeholder card — shown when a district has no real members in a
-   given role. Same dimensions as the real card so the row stays even. */
+/* ── Placeholder card shown when a district has no real members in a
+ given role. Same dimensions as the real card so the row stays even. */
 .dir-card--placeholder {
   background:
-    linear-gradient(160deg, var(--paper-soft, #FCFBF7) 0%, var(--paper-deep, #F2EBDD) 100%);
+ linear-gradient(160deg, var(--paper-soft, #FCFBF7) 0%, var(--paper-deep, #F2EBDD) 100%);
   border: 1px dashed rgba(196, 77, 14, 0.28);
   box-shadow: 0 8px 22px rgba(133, 65, 0, 0.06);
   display: flex;
@@ -342,7 +342,7 @@
   margin: 0;
 }
 
-/* ── Member card — FULL-BLEED PHOTO with overlay content ── */
+/* ── Member card FULL-BLEED PHOTO with overlay content ── */
 .dir-card {
   /* (100% - 3 gaps × 18px) / 4 = ((100% − 54px) / 4) */
   flex: 0 0 calc((100% - 54px) / 4);
@@ -354,24 +354,24 @@
   overflow: hidden;
   cursor: pointer;
   /* Dark radial gradient so transparent placeholder PNGs read on a dark backdrop
-     (matches the look of the women placeholder which has a built-in dark BG). */
+ (matches the look of the women placeholder which has a built-in dark BG). */
   background:
-    radial-gradient(ellipse at 50% 30%, #3a322c 0%, #14100c 70%, #050302 100%);
+ radial-gradient(ellipse at 50% 30%, #3a322c 0%, #14100c 70%, #050302 100%);
   box-shadow: 0 10px 28px rgba(133, 65, 0, 0.12);
   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 0.45s ease;
+ box-shadow 0.45s ease;
   animation: dirCardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) var(--card-delay, 0s) both;
 }
 @keyframes dirCardIn {
   from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .dir-card:hover {
   transform: translateY(-8px);
   box-shadow:
-    0 28px 50px rgba(133, 65, 0, 0.22),
-    0 0 0 1px rgba(255, 178, 107, 0.35);
+ 0 28px 50px rgba(133, 65, 0, 0.22),
+ 0 0 0 1px rgba(255, 178, 107, 0.35);
 }
 
 /* Background photo fills the entire card */
@@ -385,7 +385,7 @@
   display: block;
   filter: saturate(1.08) contrast(1.02);
   transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-              filter 0.5s ease;
+ filter 0.5s ease;
   z-index: 0;
 }
 
@@ -394,29 +394,29 @@
   filter: saturate(1.12) contrast(1.05) brightness(0.95);
 }
 
-/* Bottom-up gradient shade for legibility — darkens further on hover */
+/* Bottom-up gradient shade for legibility darkens further on hover */
 .dir-card__shade {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(180deg,
-    rgba(5, 2, 0, 0)    0%,
-    rgba(5, 2, 0, 0)    35%,
-    rgba(5, 2, 0, 0.55) 65%,
-    rgba(5, 2, 0, 0.92) 100%);
+ rgba(5, 2, 0, 0) 0%,
+ rgba(5, 2, 0, 0) 35%,
+ rgba(5, 2, 0, 0.55) 65%,
+ rgba(5, 2, 0, 0.92) 100%);
   transition: background 0.45s ease;
   pointer-events: none;
 }
 
 .dir-card:hover .dir-card__shade {
   background: linear-gradient(180deg,
-    rgba(5, 2, 0, 0.15) 0%,
-    rgba(5, 2, 0, 0.40) 35%,
-    rgba(5, 2, 0, 0.80) 65%,
-    rgba(5, 2, 0, 0.96) 100%);
+ rgba(5, 2, 0, 0.15) 0%,
+ rgba(5, 2, 0, 0.40) 35%,
+ rgba(5, 2, 0, 0.80) 65%,
+ rgba(5, 2, 0, 0.96) 100%);
 }
 
-/* Content overlay — sits over the photo, anchored to bottom */
+/* Content overlay sits over the photo, anchored to bottom */
 .dir-card__content {
   position: absolute;
   left: 0;
@@ -453,7 +453,7 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover-reveal stack — collapses to 0 at rest so name/role sit at bottom */
+/* Hover-reveal stack collapses to 0 at rest so name/role sit at bottom */
 .dir-card__reveal {
   width: 100%;
   display: flex;
@@ -466,8 +466,8 @@
   overflow: hidden;
   pointer-events: none;
   transition: max-height 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
-              margin-top 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
-              opacity 0.4s ease;
+ margin-top 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+ opacity 0.4s ease;
 }
 
 .dir-card:hover .dir-card__reveal {
@@ -496,8 +496,8 @@
 }
 
 /* ── Social icons row (revealed on card hover) ──────────────
-   Padded so the hover lift/scale isn't clipped by the parent
-   reveal container's overflow:hidden. */
+ Padded so the hover lift/scale isn't clipped by the parent
+ reveal container's overflow:hidden. */
 .dir-card__socials {
   display: flex;
   align-items: center;
@@ -516,18 +516,18 @@
   height: 28px;
   border-radius: 50%;
   /* Faded saffron tile with a white glyph at rest; fills to solid
-     saffron on hover. Higher alpha than the cream variant since
-     this sits on a dark photo background. */
+ saffron on hover. Higher alpha than the cream variant since
+ this sits on a dark photo background. */
   background: rgba(196, 77, 14, 0.16);
   border: 1px solid rgba(196, 77, 14, 0.36);
   color: #fff;
   text-decoration: none;
   flex-shrink: 0;
   transition: background 0.25s ease,
-              color 0.25s ease,
-              border-color 0.25s ease,
-              transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 0.25s ease;
+ color 0.25s ease,
+ border-color 0.25s ease,
+ transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+ box-shadow 0.25s ease;
 }
 .dir-card__social svg { width: 13px; height: 13px; display: block; }
 
@@ -543,8 +543,8 @@
   outline-offset: 2px;
 }
 
-/* Muted state — platforms where the leader has no handle. Still rendered
-   so every card shows a complete row of icons (kept on-brand, just faded). */
+/* Muted state platforms where the leader has no handle. Still rendered
+ so every card shows a complete row of icons (kept on-brand, just faded). */
 .dir-card__social.is-disabled {
   opacity: 0.45;
   cursor: not-allowed;
@@ -576,8 +576,8 @@
   cursor: pointer;
   box-shadow: 0 10px 22px rgba(196, 77, 14, 0.28);
   transition: background 0.25s ease, gap 0.25s ease,
-              opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 0.25s ease;
+ opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+ box-shadow 0.25s ease;
 }
 .dir-card__action svg { transition: transform 0.3s ease; }
 .dir-card__action:hover {

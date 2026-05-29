@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
-   LEADERSHIP FEATURE — alternating left/right editorial blocks
-   Same visual language as Innovative Programs, retuned for leader bios.
+ LEADERSHIP FEATURE alternating left/right editorial blocks
+ Same visual language as Innovative Programs, retuned for leader bios.
 ═══════════════════════════════════════════════════════════════ */
 .lf {
   position: relative;
@@ -92,7 +92,7 @@
 .lf-feat--right .lf-feat__body  { order: 1; }
 
 /* Big outlined watermark numeral, anchored to the opposite side
-   of the body so it never overlaps the text awkwardly. */
+ of the body so it never overlaps the text awkwardly. */
 .lf-feat__index {
   position: absolute;
   top: -64px;
@@ -117,8 +117,8 @@
 .lf-feat__media:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 50px 90px -34px rgba(196, 77, 14, 0.4),
-    0 0 0 1px rgba(196, 77, 14, 0.22);
+ 0 50px 90px -34px rgba(196, 77, 14, 0.4),
+ 0 0 0 1px rgba(196, 77, 14, 0.22);
 }
 
 .lf-feat__media img {
@@ -130,10 +130,10 @@
   border-radius: 22px;
   background: var(--paper-soft, #FCFBF7);
   box-shadow:
-    0 30px 70px -28px rgba(26, 20, 16, 0.34),
-    0 0 0 1px var(--hairline, rgba(26, 20, 16, 0.1));
+ 0 30px 70px -28px rgba(26, 20, 16, 0.34),
+ 0 0 0 1px var(--hairline, rgba(26, 20, 16, 0.1));
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
-              filter 0.6s ease;
+ filter 0.6s ease;
   filter: saturate(0.97) contrast(1.02);
 }
 .lf-feat:hover .lf-feat__media img {
@@ -141,7 +141,7 @@
   filter: saturate(1.05) contrast(1.04);
 }
 
-/* glow span left inert — no longer used but harmless if rendered */
+/* glow span left inert no longer used but harmless if rendered */
 .lf-feat__media-glow { display: none; }
 
 /* ─── Body block ─── */
@@ -269,8 +269,8 @@
   opacity: 0;
   transform: translateY(48px);
   transition:
-    opacity 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)) var(--reveal-delay, 0s),
-    transform 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)) var(--reveal-delay, 0s);
+ opacity 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)) var(--reveal-delay, 0s),
+ transform 0.9s var(--ease-out-expo, cubic-bezier(0.2, 0.8, 0.2, 1)) var(--reveal-delay, 0s);
 }
 .lf .reveal.is-revealed {
   opacity: 1;
@@ -278,7 +278,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .lf { padding: 96px 28px 120px; }
@@ -294,8 +294,8 @@
   .lf__list { gap: 64px; }
 
   .lf-feat {
-    grid-template-columns: 1fr;
-    gap: 28px;
+ grid-template-columns: 1fr;
+ gap: 28px;
   }
   /* Mobile: image always on top, body below, regardless of orientation */
   .lf-feat--right .lf-feat__media { order: 0; }
@@ -304,9 +304,9 @@
   .lf-feat__media { height: 340px; }
 
   .lf-feat__index {
-    top: -28px;
-    font-size: clamp(5rem, 18vw, 7rem);
-    -webkit-text-stroke: 1.2px rgba(196, 77, 14, 0.18);
+ top: -28px;
+ font-size: clamp(5rem, 18vw, 7rem);
+ -webkit-text-stroke: 1.2px rgba(196, 77, 14, 0.18);
   }
   .lf-feat--left  .lf-feat__index,
   .lf-feat--right .lf-feat__index { left: auto; right: 6px; }
@@ -314,7 +314,7 @@
   .lf-feat__title { font-size: 1.2rem; }
   .lf-feat__name  { font-size: clamp(1.6rem, 6vw, 2rem); }
   .lf-feat__lede  { font-size: 1rem; padding-left: 12px; }
-  .lf-feat__cta   { padding: 11px 22px; font-size: 0.76rem; letter-spacing: 0.18em; }
+  .lf-feat__cta { padding: 11px 22px; font-size: 0.76rem; letter-spacing: 0.18em; }
 }
 
 @media (prefers-reduced-motion: reduce) {

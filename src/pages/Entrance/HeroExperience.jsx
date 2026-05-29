@@ -3,7 +3,7 @@ import { initScene } from './scene.js';
 import WelcomeBanner from './WelcomeBanner.jsx';
 
 /**
- * HeroExperience — thin React wrapper around the Three.js scene.
+ * HeroExperience thin React wrapper around the Three.js scene.
  *
  * `scene.js` is a 1,889-line vanilla module. It now returns a destroy()
  * function from initScene() so we can stop its RAF loop + listener callbacks
@@ -16,38 +16,38 @@ import WelcomeBanner from './WelcomeBanner.jsx';
  */
 export default function HeroExperience() {
   useEffect(() => {
-    let destroy;
-    let active = true;
+ let destroy;
+ let active = true;
 
-    Promise.resolve().then(() => {
-      if (!active) return;
-      destroy = initScene();
-    });
+ Promise.resolve().then(() => {
+ if (!active) return;
+ destroy = initScene();
+ });
 
-    return () => {
-      active = false;
-      if (destroy) destroy();
-    };
+ return () => {
+ active = false;
+ if (destroy) destroy();
+ };
   }, []);
 
   return (
-    <>
-      {/* 3D stage */}
-      <canvas id="scene-canvas" />
+ <>
+ {/* 3D stage */}
+ <canvas id="scene-canvas" />
 
-      {/* Photorealistic vestibule cover — fades + scales to reveal the 3D hall */}
-      <div className="vestibule-cover" id="vestibule-cover" aria-hidden="true">
-        <img src="/entrance-banner-v2.webp" alt="" />
-      </div>
+ {/* Photorealistic vestibule cover fades + scales to reveal the 3D hall */}
+ <div className="vestibule-cover" id="vestibule-cover" aria-hidden="true">
+ <img src="/entrance-banner-v2.webp" alt="" />
+ </div>
 
-      {/* Golden bloom from the doorway */}
-      <div className="entry-glow" id="entry-glow" aria-hidden="true"></div>
-      <div className="vignette"></div>
-      <div className="grain"></div>
+ {/* Golden bloom from the doorway */}
+ <div className="entry-glow" id="entry-glow" aria-hidden="true"></div>
+ <div className="vignette"></div>
+ <div className="grain"></div>
 
 
-            <WelcomeBanner />
+ <WelcomeBanner />
 
-    </>
+ </>
   );
 }

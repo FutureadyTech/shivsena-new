@@ -1,15 +1,15 @@
-/* Declarations page — re-declares the cream editorial palette
-   (these tokens are defined in home.css but home.css isn't loaded
-   on a direct visit to /declarations). */
+/* Declarations page re-declares the cream editorial palette
+ (these tokens are defined in home.css but home.css isn't loaded
+ on a direct visit to /declarations). */
 .declarations-page {
-  --paper:           #FAF6EE;
-  --paper-deep:      #F2EBDD;
-  --paper-soft:      #FCFBF7;
-  --ink:             #1A1410;
-  --ink-soft:        #2E2820;
-  --body-text:       #5C544A;
-  --body-light:      #847B6E;
-  --hairline:        rgba(26, 20, 16, 0.1);
+  --paper: #FAF6EE;
+  --paper-deep: #F2EBDD;
+  --paper-soft: #FCFBF7;
+  --ink: #1A1410;
+  --ink-soft: #2E2820;
+  --body-text: #5C544A;
+  --body-light: #847B6E;
+  --hairline: rgba(26, 20, 16, 0.1);
   --hairline-strong: rgba(26, 20, 16, 0.18);
   --saffron-on-light:#C44D0E;
 

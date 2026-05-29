@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════
-   Devanagari (Marathi) → Latin transliteration
-   - Handles schwa deletion at end of words (natural Marathi reading)
-   - Capitalises each word for English presentation
-   - Pass-through for non-Devanagari content (spaces, punctuation, digits)
+ Devanagari (Marathi) → Latin transliteration
+ - Handles schwa deletion at end of words (natural Marathi reading)
+ - Capitalises each word for English presentation
+ - Pass-through for non-Devanagari content (spaces, punctuation, digits)
 ═══════════════════════════════════════════════════════════════ */
 
 import leadershipContent from '../../../content/leadership.json';
@@ -42,42 +42,42 @@ function transliterateWord(word) {
   let lastWasConsonant = false;
 
   for (let i = 0; i < chars.length; i++) {
-    const ch = chars[i];
-    const next = chars[i + 1];
+ const ch = chars[i];
+ const next = chars[i + 1];
 
-    if (CONSONANTS[ch]) {
-      result += CONSONANTS[ch];
-      lastWasConsonant = true;
+ if (CONSONANTS[ch]) {
+ result += CONSONANTS[ch];
+ lastWasConsonant = true;
 
-      if (next === '्') {                       // halant — kill inherent 'a'
-        i++;
-        lastWasConsonant = false;
-      } else if (VOWEL_SIGNS[next]) {           // explicit vowel sign overrides 'a'
-        result += VOWEL_SIGNS[next];
-        i++;
-        lastWasConsonant = false;
-      } else if (OTHERS[next]) {                // anusvara/visarga still need 'a'
-        result += 'a' + OTHERS[next];
-        i++;
-        lastWasConsonant = false;
-      } else if (i === chars.length - 1) {
-        // last char of word — schwa deletion (skip inherent 'a' for Marathi reading)
-      } else {
-        result += 'a';
-      }
-    } else if (VOWELS[ch]) {
-      result += VOWELS[ch];
-      lastWasConsonant = false;
-    } else if (OTHERS[ch]) {
-      result += OTHERS[ch];
-      lastWasConsonant = false;
-    } else if (DEV_DIGITS[ch]) {
-      result += DEV_DIGITS[ch];
-      lastWasConsonant = false;
-    } else {
-      result += ch;
-      lastWasConsonant = false;
-    }
+ if (next === '्') { // halant kill inherent 'a'
+ i++;
+ lastWasConsonant = false;
+ } else if (VOWEL_SIGNS[next]) { // explicit vowel sign overrides 'a'
+ result += VOWEL_SIGNS[next];
+ i++;
+ lastWasConsonant = false;
+ } else if (OTHERS[next]) { // anusvara/visarga still need 'a'
+ result += 'a' + OTHERS[next];
+ i++;
+ lastWasConsonant = false;
+ } else if (i === chars.length - 1) {
+ // last char of word schwa deletion (skip inherent 'a' for Marathi reading)
+ } else {
+ result += 'a';
+ }
+ } else if (VOWELS[ch]) {
+ result += VOWELS[ch];
+ lastWasConsonant = false;
+ } else if (OTHERS[ch]) {
+ result += OTHERS[ch];
+ lastWasConsonant = false;
+ } else if (DEV_DIGITS[ch]) {
+ result += DEV_DIGITS[ch];
+ lastWasConsonant = false;
+ } else {
+ result += ch;
+ lastWasConsonant = false;
+ }
   }
 
   return result;
@@ -85,31 +85,30 @@ function transliterateWord(word) {
 
 const HAS_DEVANAGARI = /[ऀ-ॿঀ-৿]/;
 
-/* Common honorifics + role tags that appear inside personal names —
-   substituted token-by-token so "डॉ. श्रीमती. निलमताई" becomes
-   "Dr. Smt. Nilamtai" instead of "Do. Shrimati. Nilamtai". */
+/* Common honorifics + role tags that appear inside personal names substituted token-by-token so "डॉ. श्रीमती. निलमताई" becomes
+ "Dr. Smt. Nilamtai" instead of "Do. Shrimati. Nilamtai". */
 const NAME_TOKEN_MAP = {
-  'डॉ.':     'Dr.',
-  'श्री.':    'Shri',
-  'श्री':     'Shri',
-  'सौ.':     'Smt.',
+  'डॉ.': 'Dr.',
+  'श्री.': 'Shri',
+  'श्री': 'Shri',
+  'सौ.': 'Smt.',
   'श्रीमती.': 'Smt.',
   'श्रीमती':  'Smt.',
-  'श्रीम.':   'Smt.',
-  'श्रीम':    'Smt.',
-  'कु.':     'Ku.',
-  'ॲड.':    'Adv.',
-  'प्रा.':    'Prof.',
+  'श्रीम.': 'Smt.',
+  'श्रीम': 'Smt.',
+  'कु.': 'Ku.',
+  'ॲड.': 'Adv.',
+  'प्रा.': 'Prof.',
   'प्रा.सौ.': 'Prof. Smt.',
-  'कॅ.':     'Capt.',
+  'कॅ.': 'Capt.',
   'कॅ.श्री.': 'Capt. Shri',
   'डॉ.श्री.': 'Dr. Shri',
-  'मा.':     'Hon.',
-  'कै.':     'Late',
-  'आ.':      'Hon.',
+  'मा.': 'Hon.',
+  'कै.': 'Late',
+  'आ.': 'Hon.',
   'आ.श्री.':  'Hon. Shri',
-  'खा.':     'MP',
-  'मंत्री':    'Minister',
+  'खा.': 'MP',
+  'मंत्री': 'Minister',
   'मा.खा.':  'Former MP',
   'मा.आ.':  'Former MLA',
 };
@@ -117,21 +116,21 @@ const NAME_TOKEN_MAP = {
 export function transliterateName(text) {
   if (!text) return '';
   return text
-    .split(/(\s+)/)
-    .map((token) => {
-      if (/^\s+$/.test(token)) return token;
-      if (!HAS_DEVANAGARI.test(token)) return token;
-      if (NAME_TOKEN_MAP[token]) return NAME_TOKEN_MAP[token];
-      const t = transliterateWord(token);
-      if (!t) return '';
-      return t.charAt(0).toUpperCase() + t.slice(1);
-    })
-    .join('');
+ .split(/(\s+)/)
+ .map((token) => {
+ if (/^\s+$/.test(token)) return token;
+ if (!HAS_DEVANAGARI.test(token)) return token;
+ if (NAME_TOKEN_MAP[token]) return NAME_TOKEN_MAP[token];
+ const t = transliterateWord(token);
+ if (!t) return '';
+ return t.charAt(0).toUpperCase() + t.slice(1);
+ })
+ .join('');
 }
 
 /* ─── Role / title translations (longest match first) ─── */
 const ROLE_PHRASES = [
-  /* Long compound phrases — must come first so they match before substrings */
+  /* Long compound phrases must come first so they match before substrings */
   ['माननीय उप-मुख्यमंत्री, महाराष्ट्र राज्य', 'Hon. Deputy CM, State of Maharashtra'],
   ['महाराष्ट्र विधानसभा सदस्यांद्वारा', 'via Vidhan Sabha members'],
   ['विधानसभा सदस्यांद्वारा', 'via Vidhan Sabha members'],
@@ -248,22 +247,22 @@ export function translateRole(text) {
   if (!text) return '';
   let result = text;
   for (const [mr, en] of ROLE_PHRASES) {
-    if (result.includes(mr)) result = result.split(mr).join(en);
+ if (result.includes(mr)) result = result.split(mr).join(en);
   }
   // Anything still in Devanagari → transliterate
   return transliterateName(result);
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Cross-reference lookup: MLAs in mlas-by-district.json are stored
-   with English names + social handles + photos, but the corresponding
-   Marathi names (and full role strings like "आमदार — १५४-मागाठाणे")
-   live in leadership.json under byRegion.<division>.mla.
+ Cross-reference lookup: MLAs in mlas-by-district.json are stored
+ with English names + social handles + photos, but the corresponding
+ Marathi names (and full role strings like "आमदार १५४-मागाठाणे")
+ live in leadership.json under byRegion.<division>.mla.
 
-   We build a one-time photo-path index so that when the UI is in
-   Marathi mode, we can return the MR name/role for any English-source
-   MLA card. ConstituencyNo (extracted from the MR role string) is a
-   fallback in case photo paths don't match.
+ We build a one-time photo-path index so that when the UI is in
+ Marathi mode, we can return the MR name/role for any English-source
+ MLA card. ConstituencyNo (extracted from the MR role string) is a
+ fallback in case photo paths don't match.
 ═══════════════════════════════════════════════════════════════ */
 
 const DEV_DIGIT_TO_ASCII = { '०':'0','१':'1','२':'2','३':'3','४':'4','५':'5','६':'6','७':'7','८':'8','९':'9' };
@@ -281,17 +280,17 @@ const MR_MLA_BY_PHOTO = {};
 const MR_MLA_BY_CONSTITUENCY = {};
 (() => {
   /* The Marathi MLA list lives at `stateLevel.mla` (one flat array of all
-     MLAs party-wide). `byRegion.<division>` only carries the regional roles
-     like contact heads — it has no `mla` field, so don't look there. */
+ MLAs party-wide). `byRegion.<division>` only carries the regional roles
+ like contact heads it has no `mla` field, so don't look there. */
   const indexMla = (m) => {
-    if (!m) return;
-    if (m.photo) MR_MLA_BY_PHOTO[m.photo] = m;
-    // Role pattern: "आमदार — १५४-मागाठाणे" / "आमदार, उपमुख्यमंत्री — १४७-कोपरी पाचपाखाडी"
-    const numMatch = m.role && m.role.match(/[०-९]+/);
-    if (numMatch) {
-      const num = Number(devToAscii(numMatch[0]));
-      if (num && !MR_MLA_BY_CONSTITUENCY[num]) MR_MLA_BY_CONSTITUENCY[num] = m;
-    }
+ if (!m) return;
+ if (m.photo) MR_MLA_BY_PHOTO[m.photo] = m;
+ // Role pattern: "आमदार १५४-मागाठाणे" / "आमदार, उपमुख्यमंत्री १४७-कोपरी पाचपाखाडी"
+ const numMatch = m.role && m.role.match(/[०-९]+/);
+ if (numMatch) {
+ const num = Number(devToAscii(numMatch[0]));
+ if (num && !MR_MLA_BY_CONSTITUENCY[num]) MR_MLA_BY_CONSTITUENCY[num] = m;
+ }
   };
 
   // Primary source: top-level stateLevel.mla (where all MR MLAs actually live)
@@ -299,17 +298,17 @@ const MR_MLA_BY_CONSTITUENCY = {};
 
   // Defensive: also walk byRegion.*.mla in case future entries get added there
   Object.values(leadershipContent?.byRegion || {}).forEach((region) => {
-    (region.mla || []).forEach(indexMla);
+ (region.mla || []).forEach(indexMla);
   });
 })();
 
 /* Look up the Marathi record for an English-source MLA member.
-   Tries photo path first (exact match), then constituency number. */
+ Tries photo path first (exact match), then constituency number. */
 export function mrMlaFor(member) {
   if (!member) return null;
   if (member.photo && MR_MLA_BY_PHOTO[member.photo]) return MR_MLA_BY_PHOTO[member.photo];
   if (member.constituencyNo && MR_MLA_BY_CONSTITUENCY[member.constituencyNo]) {
-    return MR_MLA_BY_CONSTITUENCY[member.constituencyNo];
+ return MR_MLA_BY_CONSTITUENCY[member.constituencyNo];
   }
   return null;
 }
@@ -317,13 +316,13 @@ export function mrMlaFor(member) {
 /* Convenience helper used by leader cards */
 export function memberFor(member, lang) {
   if (lang !== 'en') {
-    /* English-source MLAs: pull the MR name/role from leadership.json */
-    const mr = mrMlaFor(member);
-    if (mr) return { name: mr.name, role: mr.role };
-    return { name: member.name, role: member.role };
+ /* English-source MLAs: pull the MR name/role from leadership.json */
+ const mr = mrMlaFor(member);
+ if (mr) return { name: mr.name, role: mr.role };
+ return { name: member.name, role: member.role };
   }
   return {
-    name: member.name_en || transliterateName(member.name),
-    role: member.role_en || translateRole(member.role),
+ name: member.name_en || transliterateName(member.name),
+ role: member.role_en || translateRole(member.role),
   };
 }

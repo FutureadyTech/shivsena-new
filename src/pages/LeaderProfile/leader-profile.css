@@ -1,15 +1,15 @@
 /* ═══════════════════════════════════════════════════════════════
-   LEADER PROFILE — banner + magazine-style float-left article
+ LEADER PROFILE banner + magazine-style float-left article
 ═══════════════════════════════════════════════════════════════ */
 .leader-profile-page {
-  --paper:           #FAF6EE;
-  --paper-deep:      #F2EBDD;
-  --paper-soft:      #FCFBF7;
-  --ink:             #1A1410;
-  --ink-soft:        #2E2820;
-  --body-text:       #3F3830;
-  --body-light:      #847B6E;
-  --hairline:        rgba(26, 20, 16, 0.1);
+  --paper: #FAF6EE;
+  --paper-deep: #F2EBDD;
+  --paper-soft: #FCFBF7;
+  --ink: #1A1410;
+  --ink-soft: #2E2820;
+  --body-text: #3F3830;
+  --body-light: #847B6E;
+  --hairline: rgba(26, 20, 16, 0.1);
   --hairline-strong: rgba(26, 20, 16, 0.18);
   --saffron-on-light:#C44D0E;
 
@@ -20,7 +20,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   BANNER
+ BANNER
 ═══════════════════════════════════════════════════════════════ */
 .lp-banner {
   position: relative;
@@ -44,7 +44,7 @@
 }
 
 @keyframes lpBannerPan {
-  0%   { transform: scale(1.06) translate3d(0, 0, 0); }
+  0% { transform: scale(1.06) translate3d(0, 0, 0); }
   50%  { transform: scale(1.10) translate3d(-1.5%, -1%, 0); }
   100% { transform: scale(1.06) translate3d(0, 0, 0); }
 }
@@ -52,19 +52,19 @@
 .lp-banner__ov-base {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(
-    160deg,
-    rgba(5, 2, 0, 0.82) 0%,
-    rgba(10, 5, 0, 0.62) 45%,
-    rgba(5, 2, 0, 0.86) 100%
+ 160deg,
+ rgba(5, 2, 0, 0.82) 0%,
+ rgba(10, 5, 0, 0.62) 45%,
+ rgba(5, 2, 0, 0.86) 100%
   );
 }
 .lp-banner__ov-spotlight {
   position: absolute; inset: 0; z-index: 2;
   background: radial-gradient(
-    ellipse 60% 55% at 50% 48%,
-    rgba(255, 180, 0, 0.08) 0%,
-    rgba(0, 0, 0, 0.22) 55%,
-    rgba(0, 0, 0, 0.55) 100%
+ ellipse 60% 55% at 50% 48%,
+ rgba(255, 180, 0, 0.08) 0%,
+ rgba(0, 0, 0, 0.22) 55%,
+ rgba(0, 0, 0, 0.55) 100%
   );
 }
 .lp-banner__ov-top {
@@ -151,7 +151,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   BIO BODY — magazine layout
+ BIO BODY magazine layout
 ═══════════════════════════════════════════════════════════════ */
 .lp-body {
   position: relative;
@@ -164,7 +164,7 @@
   margin: 0 auto;
 }
 
-/* Intro lede paragraph — italic pull quote */
+/* Intro lede paragraph italic pull quote */
 .lp-body__intro {
   text-align: center;
   margin-bottom: 64px;
@@ -204,7 +204,7 @@
 }
 
 .lp-body__figure {
-  /* The reference layout — image on the left, text wraps around */
+  /* The reference layout image on the left, text wraps around */
   float: left;
   margin: 6px 32px 18px 0;
   max-width: 360px;
@@ -219,7 +219,7 @@
   height: auto;
   border-radius: 4px;
   box-shadow: 0 22px 50px -22px rgba(26, 20, 16, 0.35),
-              0 0 0 1px var(--hairline);
+ 0 0 0 1px var(--hairline);
 }
 
 .lp-body__caption {
@@ -287,7 +287,7 @@
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+ transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .lp-body .reveal.is-revealed {
   opacity: 1;
@@ -295,11 +295,11 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .lp-banner { height: 60vh; min-height: 460px; }
-  .lp-body   { padding: 72px 24px 96px; }
+  .lp-body { padding: 72px 24px 96px; }
   .lp-body__figure { max-width: 320px; width: 42%; }
 }
 
@@ -310,10 +310,10 @@
 
   /* On mobile, drop the float so the image stacks above the text */
   .lp-body__figure {
-    float: none;
-    width: 100%;
-    max-width: 460px;
-    margin: 0 auto 28px;
+ float: none;
+ width: 100%;
+ max-width: 460px;
+ margin: 0 auto 28px;
   }
   .lp-body__paragraph { text-align: left; }
 }

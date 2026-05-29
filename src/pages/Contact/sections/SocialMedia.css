@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SOCIAL MEDIA — 4 platform cards with brand glow on hover
+ SOCIAL MEDIA 4 platform cards with brand glow on hover
 ═══════════════════════════════════════════════════════════════ */
 .sm-section {
   position: relative;
@@ -12,8 +12,8 @@
   content: '';
   position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 45% 35% at 12% 8%,   rgba(255, 178, 107, 0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 35% at 92% 92%, rgba(196, 77, 14, 0.08) 0%, transparent 60%);
+ radial-gradient(ellipse 45% 35% at 12% 8%, rgba(255, 178, 107, 0.10) 0%, transparent 60%),
+ radial-gradient(ellipse 45% 35% at 92% 92%, rgba(196, 77, 14, 0.08) 0%, transparent 60%);
 }
 
 .sm-section__inner {
@@ -63,14 +63,14 @@
   margin: 0;
 }
 
-/* Grid — 5 platforms (FB, IG, X, YT, WA) fit in one row at desktop. */
+/* Grid 5 platforms (FB, IG, X, YT, WA) fit in one row at desktop. */
 .sm-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 18px;
 }
 
-/* Card — all platforms share the brand saffron palette */
+/* Card all platforms share the brand saffron palette */
 .sm-card {
   --brand: var(--saffron, #C44D0E);
   --brand-glow: rgba(196, 77, 14, 0.32);
@@ -89,25 +89,25 @@
   cursor: pointer;
   overflow: hidden;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.85) inset,
-    0 8px 24px rgba(133, 65, 0, 0.07);
+ 0 1px 0 rgba(255, 255, 255, 0.85) inset,
+ 0 8px 24px rgba(133, 65, 0, 0.07);
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 0.4s ease,
-              border-color 0.3s ease,
-              background 0.3s ease;
+ box-shadow 0.4s ease,
+ border-color 0.3s ease,
+ background 0.3s ease;
 }
 
-/* (All platforms inherit the saffron brand palette — no per-platform override.) */
+/* (All platforms inherit the saffron brand palette no per-platform override.) */
 
 .sm-card:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: var(--brand);
   background: #fff;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 24px 50px rgba(0, 0, 0, 0.10),
-    0 0 0 1px var(--brand-glow),
-    0 14px 40px var(--brand-glow);
+ 0 1px 0 rgba(255, 255, 255, 0.9) inset,
+ 0 24px 50px rgba(0, 0, 0, 0.10),
+ 0 0 0 1px var(--brand-glow),
+ 0 14px 40px var(--brand-glow);
 }
 
 /* Decorative corner glow that lights up on hover */
@@ -141,10 +141,10 @@
   color: var(--saffron, #C44D0E);
   margin-bottom: 4px;
   transition: background 0.4s ease,
-              color 0.4s ease,
-              transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.4s ease,
-              border-color 0.3s ease;
+ color 0.4s ease,
+ transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+ box-shadow 0.4s ease,
+ border-color 0.3s ease;
 }
 .sm-card__icon svg { width: 28px; height: 28px; display: block; }
 
@@ -208,8 +208,8 @@
 .sm-card.reveal {
   opacity: 0; transform: translateY(28px);
   transition: opacity 0.7s ease var(--reveal-delay, 0s),
-              transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s),
-              box-shadow 0.4s ease, border-color 0.3s ease, background 0.3s ease;
+ transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s),
+ box-shadow 0.4s ease, border-color 0.3s ease, background 0.3s ease;
 }
 .sm-card.is-revealed { opacity: 1; transform: translateY(0); }
 

@@ -1,13 +1,13 @@
 /* ═══════════════════════════════════════════════════════════════
-   JOIN CTA — Saffron conversion section
+ JOIN CTA Saffron conversion section
 ═══════════════════════════════════════════════════════════════ */
 .join {
   position: relative;
   padding: 140px 48px 160px;
   background:
-    radial-gradient(ellipse at 30% 0%, rgba(255, 178, 107, 0.35) 0%, transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(196, 77, 14, 0.4) 0%, transparent 55%),
-    linear-gradient(160deg, var(--saffron) 0%, var(--saffron-deep) 100%);
+ radial-gradient(ellipse at 30% 0%, rgba(255, 178, 107, 0.35) 0%, transparent 55%),
+ radial-gradient(ellipse at 100% 100%, rgba(196, 77, 14, 0.4) 0%, transparent 55%),
+ linear-gradient(160deg, var(--saffron) 0%, var(--saffron-deep) 100%);
   color: #fff;
   overflow: hidden;
 }
@@ -200,11 +200,11 @@
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.18);
   transition:
-    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-    background 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.45s ease;
-  /* Gentle continuous breathing — subtle while idle */
+ transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+ background 0.35s ease,
+ border-color 0.35s ease,
+ box-shadow 0.45s ease;
+  /* Gentle continuous breathing subtle while idle */
   animation: joinIconBreathe 5s ease-in-out infinite;
 }
 
@@ -219,8 +219,8 @@
   pointer-events: none;
   animation: joinIconRing 3s ease-out infinite;
 }
-.join__benefit:nth-child(2) .join__benefit-icon         { animation-delay: 0.6s; }
-.join__benefit:nth-child(3) .join__benefit-icon         { animation-delay: 1.2s; }
+.join__benefit:nth-child(2) .join__benefit-icon { animation-delay: 0.6s; }
+.join__benefit:nth-child(3) .join__benefit-icon { animation-delay: 1.2s; }
 .join__benefit:nth-child(2) .join__benefit-icon::before { animation-delay: 1s; }
 .join__benefit:nth-child(3) .join__benefit-icon::before { animation-delay: 2s; }
 
@@ -231,22 +231,22 @@
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.35s ease;
 }
 
-/* Per-icon idle animation — different motion for each topic */
+/* Per-icon idle animation different motion for each topic */
 .join__benefit:nth-child(1) .join__benefit-icon svg {
-  /* Voice — gentle tilt left/right */
+  /* Voice gentle tilt left/right */
   animation: joinVoiceWobble 4.4s ease-in-out infinite;
   transform-origin: 50% 60%;
 }
 .join__benefit:nth-child(2) .join__benefit-icon svg {
-  /* Initiatives — slow drift up & down */
+  /* Initiatives slow drift up & down */
   animation: joinPersonBob 4s ease-in-out infinite;
 }
 .join__benefit:nth-child(3) .join__benefit-icon svg {
-  /* Informed — soft pulse */
+  /* Informed soft pulse */
   animation: joinDocPulse 4.6s ease-in-out infinite;
 }
 
-/* Hover — emphasised lift + colour shift */
+/* Hover emphasised lift + colour shift */
 .join__benefit:hover .join__benefit-icon {
   background: rgba(255, 178, 107, 0.22);
   border-color: rgba(255, 245, 216, 0.9);
@@ -260,24 +260,24 @@
 
 @keyframes joinIconBreathe {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-3px); }
+  50% { transform: translateY(-3px); }
 }
 @keyframes joinIconRing {
-  0%   { transform: scale(0.92); opacity: 0.55; }
+  0% { transform: scale(0.92); opacity: 0.55; }
   60%  { opacity: 0.18; }
   100% { transform: scale(1.35); opacity: 0; }
 }
 @keyframes joinVoiceWobble {
   0%, 100% { transform: rotate(-6deg); }
-  50%      { transform: rotate(6deg); }
+  50% { transform: rotate(6deg); }
 }
 @keyframes joinPersonBob {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-3px) scale(1.04); }
+  50% { transform: translateY(-3px) scale(1.04); }
 }
 @keyframes joinDocPulse {
-  0%, 100% { transform: scale(1);    opacity: 1; }
-  50%      { transform: scale(1.08); opacity: 0.85; }
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
 }
 
 .join__benefit-title {
@@ -299,7 +299,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
+ RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   .join { padding: 90px 24px 100px; }
@@ -318,7 +318,7 @@
   .join__benefit-icon,
   .join__benefit-icon::before,
   .join__benefit-icon svg {
-    transition: none !important;
-    animation: none !important;
+ transition: none !important;
+ animation: none !important;
   }
 }
