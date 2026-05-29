@@ -8,6 +8,7 @@ import {
   DISTRICTS_BY_DIVISION,
 } from '../../../config/districts.js';
 import { PC_TO_DISTRICT } from '../../../config/pcToDistrict.js';
+import { mrMlaFor, asciiToDevanagari } from '../../Leadership/utils/transliterate.js';
 import LeaderPopup from './LeaderPopup.jsx';
 import './RegionExplorer.css';
 
@@ -188,7 +189,7 @@ const REGION_LABELS = {
 const UI = {
   mr: {
     eyebrow: 'महाराष्ट्रभर',
-    title: 'प्रादेशिक नेतृत्व',
+    title: 'शिवसेनेचे प्रतिनिधी',
     regionLabel: 'प्रदेश',
     hoverHint: 'नकाशावर प्रदेश निवडा',
     searchPlaceholder: 'नाव, पद किंवा मतदारसंघ शोधा...',
@@ -197,7 +198,7 @@ const UI = {
   },
   en: {
     eyebrow: 'ACROSS MAHARASHTRA',
-    title: 'Regional Leadership',
+    title: 'Shivsena Representatives',
     regionLabel: 'Region',
     hoverHint: 'Select a region on the map',
     searchPlaceholder: 'Search by name, role, or constituency...',
@@ -236,19 +237,50 @@ export default function RegionExplorer() {
      (if any), with the dummy region-level placeholder list as fallback. */
   const sourceMembers = useMemo(() => {
     if (districtMlas.length > 0) {
-      return districtMlas.map((m) => ({
-        initials: (m.name || '')
+      return districtMlas.map((m) => {
+        // For Marathi mode, look up the matching MR record (name + role)
+        // from leadership.json so MLA cards aren't stuck in English.
+        const mr = lang === 'mr' ? mrMlaFor(m) : null;
+
+        const englishName = m.name.replace(/\s*\((Minister|MoS|Chief Whip|Main Leader\/Dy\. CM)\)\s*/i, '').trim();
+        const displayName = mr?.name || englishName;
+
+        // Initials always come from the Latin source so the avatar pill stays consistent
+        const initials = englishName
           .replace(/^(Shri\.|Smt\.|Dr\.|Prof\.|Adv\.)\s*/i, '')
           .split(/\s+/)
           .slice(0, 2)
           .map((w) => w[0] || '')
           .join('')
-          .toUpperCase(),
-        name: m.name.replace(/\s*\((Minister|MoS|Chief Whip|Main Leader\/Dy\. CM)\)\s*/i, '').trim(),
-        role: (lang === 'mr' ? 'आमदार · ' : 'MLA · ') + m.constituency,
-        constituency: `${m.constituencyNo}-${m.constituency}`,
-        social: m.social,
-      }));
+          .toUpperCase();
+
+        let role;
+        if (lang === 'mr') {
+          // Use the full MR role string from leadership.json when available;
+          // it already includes constituency no. + name (e.g. "आमदार — १५४-मागाठाणे").
+          role = mr?.role || ('आमदार · ' + m.constituency);
+        } else {
+          role = 'MLA · ' + m.constituency;
+        }
+
+        let constituency;
+        if (lang === 'mr' && mr) {
+          // Extract the "१५४-मागाठाणे" tail from the MR role
+          const tail = (mr.role || '').split('—').pop().trim();
+          constituency = tail || `${asciiToDevanagari(m.constituencyNo)}-${m.constituency}`;
+        } else {
+          constituency = `${m.constituencyNo}-${m.constituency}`;
+        }
+
+        return {
+          initials,
+          name: displayName,
+          role,
+          constituency,
+          social: m.social,
+          photo: m.photo,
+        };
+      });
     }
     return regionData.members;
   }, [districtMlas, regionData.members, lang]);

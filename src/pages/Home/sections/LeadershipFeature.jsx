@@ -85,7 +85,6 @@ function LeaderFeature({ leader, index, lang }) {
   const profile = leadersContent[leader.id];
   const bio = profile ? (profile[lang] || profile.en || profile.mr) : null;
 
-  const title = bio?.title || leader.name;
   const name = bio?.name || leader.name;
   const role = bio?.role || leader.role;
   const dates = bio?.dates;
@@ -113,12 +112,11 @@ function LeaderFeature({ leader, index, lang }) {
 
       {/* ─── Body ─── */}
       <div className="lf-feat__body">
-        <h3 className="lf-feat__title">{title}</h3>
-        <p className="lf-feat__name">{name}</p>
-
         {role && (
           <span className="lf-feat__role">{role}</span>
         )}
+
+        <p className="lf-feat__name">{name}</p>
 
         {dates && <p className="lf-feat__dates">{dates}</p>}
 

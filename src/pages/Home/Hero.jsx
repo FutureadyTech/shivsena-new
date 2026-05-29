@@ -3,17 +3,42 @@ import './home.css';
 import { useContent } from '../../content/_shared/useContent.js';
 import homeContent from '../../content/home.json';
 
+/* ─────────────────────────────────────────────────────────────
+   HERO BACKGROUND SOURCE TOGGLE
+   ─────────────────────────────────────────────────────────────
+   Change SOURCE to swap between a local MP4 file and a YouTube
+   embed. Everything else (overlays, text, CTAs) stays identical.
+
+     SOURCE = 'mp4'      → uses MP4_SRC (default, currently
+                           /youtube-banner-video.mp4)
+     SOURCE = 'youtube'  → uses the YouTube embed for YT_VIDEO_ID
+
+   To switch to the YouTube version:
+     1. Set SOURCE to 'youtube' below.
+     2. (Optional) Change YT_VIDEO_ID to whatever video the
+        client wants — it's the part after `watch?v=` in any
+        youtube.com URL.
+   ───────────────────────────────────────────────────────────── */
+const SOURCE = 'youtube'; // 'mp4' | 'youtube'
+
+const MP4_SRC = '/youtube-banner-video.mp4';
+
+const YT_VIDEO_ID = 'c82ukzAhwPg';
+const YT_SRC =
+  `https://www.youtube-nocookie.com/embed/${YT_VIDEO_ID}` +
+  `?autoplay=1&mute=1&loop=1&playlist=${YT_VIDEO_ID}` +
+  `&controls=0&modestbranding=1&rel=0&iv_load_policy=3` +
+  `&disablekb=1&fs=0&cc_load_policy=0&playsinline=1`;
+
 export default function Hero() {
   const t = useContent(homeContent.hero);
   const videoRef = useRef(null);
 
-  /* Resilient playback:
-     1. Force re-play if the browser pauses the video (tab blur, low
-        battery, throttling) by re-issuing play() on the `pause` event.
-     2. On the `seeked` event near the end, hint the decoder to keep
-        going — this masks any tiny hitch at the loop seam.
-     3. Skip on prefers-reduced-motion users — let the browser default. */
+  /* MP4-only performance hooks: pause when off-screen / tab hidden,
+     resume when back. Skipped entirely when SOURCE is 'youtube' —
+     YouTube manages its own decode lifecycle. */
   useEffect(() => {
+    if (SOURCE !== 'mp4') return;
     const v = videoRef.current;
     if (!v) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -23,37 +48,70 @@ export default function Hero() {
       if (p && typeof p.catch === 'function') p.catch(() => {});
     };
 
-    const onPause = () => {
-      // Only auto-resume if the pause wasn't user-initiated (no native
-      // controls are exposed, so any pause is from the browser itself).
-      if (!v.ended) tryPlay();
-    };
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) tryPlay();
+        else if (!v.paused) v.pause();
+      },
+      { threshold: 0 }
+    );
+    io.observe(v);
 
-    v.addEventListener('pause', onPause);
+    const onVisibility = () => {
+      if (document.hidden) {
+        if (!v.paused) v.pause();
+      } else {
+        const rect = v.getBoundingClientRect();
+        const inView = rect.bottom > 0 && rect.top < window.innerHeight;
+        if (inView) tryPlay();
+      }
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+
     tryPlay();
 
     return () => {
-      v.removeEventListener('pause', onPause);
+      io.disconnect();
+      document.removeEventListener('visibilitychange', onVisibility);
     };
   }, []);
 
   return (
-    <section className="hero-section">
+    <section id="home-hero-banner" className="hero-section">
 
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        disablePictureInPicture
-        disableRemotePlayback
-        className="hero-video"
-        tabIndex={-1}
-      >
-        <source src="/videos/homepage-banner-sena.mp4" type="video/mp4" />
-      </video>
+      {/* ─── BACKGROUND ─── */}
+      {SOURCE === 'mp4' ? (
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/entrance-banner-v2.webp"
+          disablePictureInPicture
+          disableRemotePlayback
+          className="hero-video"
+          tabIndex={-1}
+        >
+          <source src={MP4_SRC} type="video/mp4" />
+        </video>
+      ) : (
+        <div className="hero-yt-wrap" aria-hidden="true">
+          <iframe
+            className="hero-yt-iframe"
+            src={YT_SRC}
+            title="शिवसेना"
+            loading="eager"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            referrerPolicy="strict-origin-when-cross-origin"
+            tabIndex={-1}
+          />
+          {/* Shield catches clicks/hovers so YouTube's player UI never
+              has a reason to surface. */}
+          <div className="hero-yt-shield" />
+        </div>
+      )}
 
       <div className="ov-base" />
       <div className="ov-pattern" />

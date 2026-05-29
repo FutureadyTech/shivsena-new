@@ -43,6 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   box-shadow:
     0 0 22px 4px rgba(255, 178, 107, 0.45),
     0 0 8px 1px rgba(255, 215, 0, 0.35);
@@ -50,11 +51,15 @@
 }
 
 .loader-emblem-logo {
-  width: 70px;
-  height: 70px;
+  width: 84px;
+  height: 84px;
   object-fit: contain;
+  display: block;
   user-select: none;
   pointer-events: none;
+  /* Image is saffron-on-white; multiply blends its white background
+     seamlessly with the white disc, leaving the saffron crisp. */
+  mix-blend-mode: multiply;
 }
 @keyframes emblem-spin { to { transform: rotate(360deg); } }
 @keyframes emblem-pulse {
@@ -188,7 +193,7 @@
 .site-header {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 50;
-  padding: 26px 48px;
+  padding: 22px 42px;
   display: flex; justify-content: space-between; align-items: center;
   pointer-events: none;
   transition: opacity 0.6s ease;
@@ -262,7 +267,7 @@
 
 
 .brand-logo {
-  height: 56px;
+  height: 60px;
   width: auto;
   display: block;
   filter: drop-shadow(0 0 18px rgba(244, 214, 138, 0.4));
@@ -279,8 +284,10 @@
    SOCIAL RAIL
 ═══════════════════════════════════════════════════════════════ */
 .social-rail {
-  position: fixed; left: 32px; top: 50%;
-  transform: translateY(-50%);
+  position: fixed;
+  left: 15px;
+  top: 50%;
+  transform: translate(calc((96px - 36px) / 2), -50%);
   z-index: 40;
   display: flex; flex-direction: column; gap: 14px;
   transition: opacity 0.5s ease;
@@ -622,11 +629,17 @@
    RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-  .site-header { padding: 18px 22px; }
+  .site-header { padding: 16px 22px; }
   .lang-switcher { font-size: 0.78rem; gap: 10px; }
+  .brand-logo { height: 68px; }
   .brand-text { font-size: 1.2rem; }
   .brand-tagline { font-size: 0.55rem; }
-  .social-rail { left: 12px; gap: 10px; }
+  /* Social rail: same alignment trick, just with mobile dimensions */
+  .social-rail {
+    left: 22px;
+    transform: translate(calc((68px - 30px) / 2), -50%);
+    gap: 10px;
+  }
   .social-link { width: 30px; height: 30px; }
   .social-link svg { width: 13px; height: 13px; }
   .progress-rail { right: 14px; gap: 12px; }

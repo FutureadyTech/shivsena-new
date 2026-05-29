@@ -52,11 +52,13 @@ export default function JoinCTA() {
       <div className="join__inner">
 
         <div ref={headerRef} className="join__header reveal">
-          <div className="join__eyebrow">
-            <span className="join__eyebrow-line"></span>
-            <span>{t.eyebrow}</span>
-            <span className="join__eyebrow-line"></span>
-          </div>
+          {t.eyebrow && (
+            <div className="join__eyebrow">
+              <span className="join__eyebrow-line"></span>
+              <span>{t.eyebrow}</span>
+              <span className="join__eyebrow-line"></span>
+            </div>
+          )}
           <h2 className="join__title">{t.title}</h2>
           <p className="join__lede">{t.lede}</p>
         </div>

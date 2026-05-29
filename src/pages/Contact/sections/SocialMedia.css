@@ -3,7 +3,7 @@
 ═══════════════════════════════════════════════════════════════ */
 .sm-section {
   position: relative;
-  padding: 110px 0 150px;
+  padding: 70px 0 150px;
   background: var(--paper-deep, #F4E4BC);
   overflow: hidden;
 }

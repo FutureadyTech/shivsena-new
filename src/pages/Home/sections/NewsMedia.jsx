@@ -17,10 +17,12 @@ export default function NewsMedia() {
       <div className="news__inner">
         <div ref={headerRef} className="news__header reveal">
           <div>
-            <div className="news__eyebrow">
-              <span className="news__eyebrow-line"></span>
-              <span>{t.eyebrow}</span>
-            </div>
+            {t.eyebrow && (
+              <div className="news__eyebrow">
+                <span className="news__eyebrow-line"></span>
+                <span>{t.eyebrow}</span>
+              </div>
+            )}
             <h2 className="news__title">{t.title}</h2>
           </div>
 

@@ -91,7 +91,9 @@
       "divisionalContactHeads": "विभागीय संपर्क प्रमुख",
       "divisionalCoContactHeads": "विभागीय सह संपर्क प्रमुख",
       "womenDistrictHeads": "महिला जिल्हाप्रमुख",
-      "mp": "खासदार"
+      "mp": "खासदार",
+      "lokSabhaContactHead": "लोकसभा संपर्क प्रमुख",
+      "districtHead": "जिल्हाप्रमुख"
     },
     "en": {
       "topLeader": "Top Leader",
@@ -112,7 +114,9 @@
       "divisionalContactHeads": "Divisional Contact Heads",
       "divisionalCoContactHeads": "Divisional Co-Contact Heads",
       "womenDistrictHeads": "Women District Heads",
-      "mp": "MPs"
+      "mp": "MPs",
+      "lokSabhaContactHead": "Lok Sabha Contact Head",
+      "districtHead": "District Head"
     }
   },
   "stateLevel": {

@@ -5,6 +5,8 @@
    - Pass-through for non-Devanagari content (spaces, punctuation, digits)
 ═══════════════════════════════════════════════════════════════ */
 
+import leadershipContent from '../../../content/leadership.json';
+
 const VOWELS = {
   'अ':'a','आ':'aa','इ':'i','ई':'i','उ':'u','ऊ':'u',
   'ऋ':'ri','ए':'e','ऐ':'ai','ओ':'o','औ':'au','ॲ':'a','ऑ':'o',
@@ -252,9 +254,74 @@ export function translateRole(text) {
   return transliterateName(result);
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   Cross-reference lookup: MLAs in mlas-by-district.json are stored
+   with English names + social handles + photos, but the corresponding
+   Marathi names (and full role strings like "आमदार — १५४-मागाठाणे")
+   live in leadership.json under byRegion.<division>.mla.
+
+   We build a one-time photo-path index so that when the UI is in
+   Marathi mode, we can return the MR name/role for any English-source
+   MLA card. ConstituencyNo (extracted from the MR role string) is a
+   fallback in case photo paths don't match.
+═══════════════════════════════════════════════════════════════ */
+
+const DEV_DIGIT_TO_ASCII = { '०':'0','१':'1','२':'2','३':'3','४':'4','५':'5','६':'6','७':'7','८':'8','९':'9' };
+const ASCII_DIGIT_TO_DEV = ['०','१','२','३','४','५','६','७','८','९'];
+
+function devToAscii(s) {
+  return String(s).replace(/[०-९]/g, (d) => DEV_DIGIT_TO_ASCII[d] ?? d);
+}
+
+export function asciiToDevanagari(s) {
+  return String(s).replace(/\d/g, (d) => ASCII_DIGIT_TO_DEV[Number(d)] ?? d);
+}
+
+const MR_MLA_BY_PHOTO = {};
+const MR_MLA_BY_CONSTITUENCY = {};
+(() => {
+  /* The Marathi MLA list lives at `stateLevel.mla` (one flat array of all
+     MLAs party-wide). `byRegion.<division>` only carries the regional roles
+     like contact heads — it has no `mla` field, so don't look there. */
+  const indexMla = (m) => {
+    if (!m) return;
+    if (m.photo) MR_MLA_BY_PHOTO[m.photo] = m;
+    // Role pattern: "आमदार — १५४-मागाठाणे" / "आमदार, उपमुख्यमंत्री — १४७-कोपरी पाचपाखाडी"
+    const numMatch = m.role && m.role.match(/[०-९]+/);
+    if (numMatch) {
+      const num = Number(devToAscii(numMatch[0]));
+      if (num && !MR_MLA_BY_CONSTITUENCY[num]) MR_MLA_BY_CONSTITUENCY[num] = m;
+    }
+  };
+
+  // Primary source: top-level stateLevel.mla (where all MR MLAs actually live)
+  (leadershipContent?.stateLevel?.mla || []).forEach(indexMla);
+
+  // Defensive: also walk byRegion.*.mla in case future entries get added there
+  Object.values(leadershipContent?.byRegion || {}).forEach((region) => {
+    (region.mla || []).forEach(indexMla);
+  });
+})();
+
+/* Look up the Marathi record for an English-source MLA member.
+   Tries photo path first (exact match), then constituency number. */
+export function mrMlaFor(member) {
+  if (!member) return null;
+  if (member.photo && MR_MLA_BY_PHOTO[member.photo]) return MR_MLA_BY_PHOTO[member.photo];
+  if (member.constituencyNo && MR_MLA_BY_CONSTITUENCY[member.constituencyNo]) {
+    return MR_MLA_BY_CONSTITUENCY[member.constituencyNo];
+  }
+  return null;
+}
+
 /* Convenience helper used by leader cards */
 export function memberFor(member, lang) {
-  if (lang !== 'en') return { name: member.name, role: member.role };
+  if (lang !== 'en') {
+    /* English-source MLAs: pull the MR name/role from leadership.json */
+    const mr = mrMlaFor(member);
+    if (mr) return { name: mr.name, role: mr.role };
+    return { name: member.name, role: member.role };
+  }
   return {
     name: member.name_en || transliterateName(member.name),
     role: member.role_en || translateRole(member.role),

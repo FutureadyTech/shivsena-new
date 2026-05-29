@@ -4,9 +4,48 @@ import { useLanguage } from '../../i18n/LanguageContext.jsx';
 import './WelcomeBanner.css';
 
 /* ═══════════════════════════════════════════════════════════════
-   WELCOME BANNER — Two language-entry buttons.
-   Clicking either sets the site language, then navigates to /home.
+   JOIN.MP3 — click stinger
+   ───────────────────────────────────────────────────────────────
+   Plays every time the Enter button is clicked. Tracked via a
+   module-level reference (not a closure) so the unmount cleanup
+   below can stop it — otherwise the Audio would keep playing into
+   /home after navigation, which was the original bug.
+
+   No "played once" lock — the stinger is meant to fire on every
+   Enter click. The only guarantee is: it can never bleed into
+   /home, because the WelcomeBanner unmount cleanup kills it.
 ═══════════════════════════════════════════════════════════════ */
+let joinAudio = null;
+
+/* Exposed on window so HomeBannerAudio can ask us to stop the
+   stinger if the user scrolls past the banner or navigates away
+   from /home before the audio ends naturally. Avoids a cross-
+   module circular import. */
+if (typeof window !== 'undefined') {
+  window.__stopJoin = () => stopJoin();
+}
+
+function playJoinClick() {
+  /* If a previous click is still playing, stop it first so two
+     clicks don't overlap and double-up. */
+  stopJoin();
+  try {
+    joinAudio = new Audio('/join.mp3');
+    joinAudio.volume = 0.85;
+    joinAudio.addEventListener('ended', stopJoin, { once: true });
+    joinAudio.play().catch(() => { stopJoin(); });
+  } catch {
+    stopJoin();
+  }
+}
+
+function stopJoin() {
+  if (!joinAudio) return;
+  try { joinAudio.pause(); } catch {}
+  try { joinAudio.src = ''; } catch {}
+  joinAudio = null;
+}
+
 export default function WelcomeBanner() {
   const [opacity, setOpacity] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
@@ -26,6 +65,11 @@ export default function WelcomeBanner() {
     return () => {
       clearTimeout(fadeInTimer);
       window.removeEventListener('scroll', onScroll);
+      /* Do NOT stop join.mp3 here. The stinger is allowed to keep
+         playing through the route transition into /home, where it
+         overlaps with ambient.mp3 and plays through to its own
+         natural end (via the 'ended' listener wired up in
+         playJoinClick). */
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -36,33 +80,10 @@ export default function WelcomeBanner() {
 
     setLang(targetLang);
 
-    // 1) Play the click "join" stinger.
-    // 2) When it ends, start the ambient bed as a window-scoped Audio object
-    //    so it survives the route change to /home and keeps looping.
-    //    Guarded so we don't stack multiple ambient instances on re-entry.
-    try {
-      const click = new Audio('/join.mp3');
-      click.volume = 0.85;
-
-      const startAmbient = () => {
-        if (window.__ambientAudio) return; // already playing from a prior entry
-        const ambient = new Audio('/ambient.mp3');
-        ambient.loop = true;
-        ambient.volume = 0.5;
-        ambient.play().catch(() => {});
-        window.__ambientAudio = ambient;
-      };
-
-      click.addEventListener('ended', startAmbient, { once: true });
-      // Safety: if the stinger errors out, still kick off ambient.
-      click.addEventListener('error', startAmbient, { once: true });
-
-      click.play().catch(() => {
-        // If even the click can't play, start ambient immediately so the
-        // user still gets the audio experience after their gesture.
-        startAmbient();
-      });
-    } catch (err) {}
+    // Play the "Enter" click stinger. Tracked at module scope so the
+    // unmount cleanup can stop it — that's what stops it from bleeding
+    // into /home. The ambient bed is handled by HomeBannerAudio.
+    playJoinClick();
 
     setIsExiting(true);
     setOpacity(0);

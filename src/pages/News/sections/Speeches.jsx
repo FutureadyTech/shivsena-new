@@ -29,10 +29,12 @@ export default function Speeches() {
       <div className="sp-section__inner">
 
         <div ref={headerRef} className="sp-section__header reveal">
-          <div className="sp-section__eyebrow">
-            <span className="sp-section__eyebrow-line" />
-            <span>{t.eyebrow}</span>
-          </div>
+          {t.eyebrow && (
+            <div className="sp-section__eyebrow">
+              <span className="sp-section__eyebrow-line" />
+              <span>{t.eyebrow}</span>
+            </div>
+          )}
           <h2 className="sp-section__title">{t.title}</h2>
           <p className="sp-section__lede">{t.lede}</p>
         </div>

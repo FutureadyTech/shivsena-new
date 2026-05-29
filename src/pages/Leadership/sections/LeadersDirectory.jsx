@@ -4,6 +4,7 @@ import { useContent } from '../../../content/_shared/useContent.js';
 import { useLanguage } from '../../../i18n/LanguageContext.jsx';
 import leadershipContent from '../../../content/leadership.json';
 import mlasByDistrict from '../../../content/mlas-by-district.json';
+import leadersByDistrict from '../../../content/leaders-by-district.json';
 import { DISTRICTS } from '../../../config/districts.js';
 import { memberFor } from '../utils/transliterate.js';
 import LeaderPopup from '../../Home/sections/LeaderPopup.jsx';
@@ -38,13 +39,23 @@ const STATE_CATEGORIES = [
   'yuvaSena',
 ];
 
-/* Categories shown in the "Regional & District" group (filtered by activeDivision) */
-const REGIONAL_CATEGORIES = [
-  'mla',
-  'divisionalContactHeads',
-  'divisionalCoContactHeads',
-  'womenDistrictHeads',
+/* The 9 district-level sections, in the exact order requested by client. */
+const DISTRICT_CATEGORIES = [
+  'mp',                        // खासदार
+  'mla',                       // आमदार
+  'leaders',                   // नेते
+  'deputyLeaders',             // उपनेते
+  'divisionalContactHeads',    // विभागीय संपर्क प्रमुख
+  'divisionalCoContactHeads',  // विभागीय सह संपर्क प्रमुख
+  'lokSabhaContactHead',       // लोकसभा संपर्क प्रमुख
+  'districtHead',              // जिल्हाप्रमुख
+  'womenDistrictHeads',        // महिला जिल्हाप्रमुख
 ];
+
+/* When a category has no real entries for this district, show this
+   many placeholder cards so the layout never collapses. */
+const EMPTY_PLACEHOLDER_COUNT = 2;
+const PLACEHOLDER_LABEL = { mr: 'लवकरच जाहीर', en: 'To be announced' };
 
 /* Per-category display caps. MLA uses district data so a real cap doesn't help;
    everyone else caps at 200 (effectively no cap given real list sizes). */
@@ -104,90 +115,62 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
     });
   }, [lang]);
 
-  /* Build the merged dataset.
-     State-level categories come from leadershipContent.stateLevel and are NOT
-     filtered by district — they're the party-wide leadership directory.
-     Regional categories come from leadershipContent.byRegion[activeDivision].
-     MLA is special: the active district's MLAs are fetched from mlasByDistrict
-     (which has the social-handle data) and fall back to the regional MLA list. */
+  /* Build the per-district dataset from leaders-by-district.json.
+     Every district shows all 9 categories. When a category has zero
+     real members we emit EMPTY_PLACEHOLDER_COUNT placeholders so the
+     row never collapses. MLA entries are enriched from mlas-by-district
+     (which has social handles + photos) where the data exists. */
   const sections = useMemo(() => {
-    const state = leadershipContent.stateLevel || {};
-    const region = leadershipContent.byRegion?.[activeDivision] || {};
-    const districtData = mlasByDistrict[activeDistrict] || {};
+    const districtBucket = leadersByDistrict[activeDistrict] || {};
+    const mlaWithSocials = (mlasByDistrict[activeDistrict] && mlasByDistrict[activeDistrict].mla) || [];
 
-    const stateMap = {
-      topLeader:            state.topLeader            || [],
-      ministers:            state.ministers            || [],
-      mp:                   state.mp                   || [],
-      mlc:                  state.mlc                  || [],
-      leaders:              state.leaders              || [],
-      deputyLeaders:        state.deputyLeaders        || [],
-      treasurer:            state.treasurer            || [],
-      generalSecretary:     state.generalSecretary     || [],
-      secretaries:          state.secretaries          || [],
-      coSecretaries:        state.coSecretaries        || [],
-      nationalSpokesperson: state.nationalSpokesperson || [],
-      spokespersons:        state.spokespersons        || [],
-      coordinators:         state.coordinators         || [],
-      socialMedia:          state.socialMedia          || [],
-      yuvaSena:             state.yuvaSena             || [],
-    };
-
-    /* Filter division-wide lists down to entries that explicitly mention
-       the active district in their role text. The PDFs use a consistent
-       pattern: "<district> — <area description>" or "<sub-region> —
-       <district list>". Substring-match on the district's Marathi name
-       works for most entries; the alias map handles the few PDFs that
-       use a shortened or alternate form ("संभाजीनगर" vs the formal
-       "छत्रपती संभाजीनगर"). */
-    const DISTRICT_ALIASES = {
-      'aurangabad':      ['छत्रपती संभाजीनगर', 'संभाजीनगर', 'औरंगाबाद'],
-      'mumbai-city':     ['मुंबई शहर'],
-      'mumbai-suburban': ['मुंबई उपनगर'],
-      'ahmadnagar':      ['अहमदनगर', 'नगर'],
-      'dharashiv':       ['धाराशिव', 'उस्मानाबाद'],
-      'sindhudurg':      ['सिंधुदुर्ग'],
-    };
-    const aliases = DISTRICT_ALIASES[activeDistrict] || [DISTRICTS[activeDistrict]?.mr].filter(Boolean);
-    const districtNameEn = DISTRICTS[activeDistrict]?.en || '';
-    const matchesDistrict = (m) => {
-      if (!m?.role) return false;
-      for (const a of aliases) {
-        if (a && m.role.includes(a)) return true;
+    /* Merge the per-district MLA list with the social-handle data
+       keyed by constituency number. Falls back to the unenriched
+       entry from leaders-by-district.json when no match exists. */
+    const enrichMlas = (entries) => {
+      if (!Array.isArray(entries) || entries.length === 0) return entries || [];
+      const byConst = new Map();
+      for (const m of mlaWithSocials) {
+        if (m.constituencyNo != null) byConst.set(String(m.constituencyNo), m);
       }
-      if (districtNameEn && m.role.includes(districtNameEn)) return true;
-      return false;
+      return entries.map((e) => {
+        const enrich = e.constituencyNo != null && byConst.get(String(e.constituencyNo));
+        return enrich ? { ...e, ...enrich } : e;
+      });
     };
 
-    const regionalMap = {
-      mla:                      districtData.mla               || region.mla                     || [],
-      divisionalContactHeads:   (region.divisionalContactHeads   || []).filter(matchesDistrict),
-      divisionalCoContactHeads: (region.divisionalCoContactHeads || []).filter(matchesDistrict),
-      womenDistrictHeads:       (region.womenDistrictHeads       || []).filter(matchesDistrict),
+    const placeholdersFor = (categoryKey) => {
+      const arr = [];
+      for (let i = 0; i < EMPTY_PLACEHOLDER_COUNT; i++) {
+        arr.push({
+          id: `placeholder-${categoryKey}-${i}`,
+          isPlaceholder: true,
+          name: PLACEHOLDER_LABEL[lang] || PLACEHOLDER_LABEL.mr,
+          role: categoryNames[categoryKey] || '',
+        });
+      }
+      return arr;
     };
 
-    const buildGroup = (key, map) => ({
-      key,
-      label: categoryNames[key] || key,
-      items: (map[key] || []).slice(0, ITEMS_PER_CATEGORY),
-    });
+    const buildGroup = (key) => {
+      let items = districtBucket[key] || [];
+      if (key === 'mla') items = enrichMlas(items);
+      const isEmpty = items.length === 0;
+      return {
+        key,
+        label: categoryNames[key] || key,
+        items: (isEmpty ? placeholdersFor(key) : items).slice(0, ITEMS_PER_CATEGORY),
+        isEmpty,
+      };
+    };
 
-    /* Only show the district-specific section. State-level party hierarchy
-       (Ministers, MLCs, Spokespersons, etc.) is intentionally NOT shown
-       here — the directory is district-scoped per user request.
-       Empty categories are dropped so the page doesn't show stub headers
-       like "Women District Heads (0)" when no one matches. */
-    return [
-      {
-        id: 'regional',
-        title: t.regionalHeader,
-        subtitle: t.regionalSubtitle,
-        groups: REGIONAL_CATEGORIES
-          .map((k) => buildGroup(k, regionalMap))
-          .filter((g) => g.items.length > 0),
-      },
-    ];
-  }, [activeDistrict, activeDivision, categoryNames, t.stateHeader, t.regionalHeader, t.stateSubtitle, t.regionalSubtitle]);
+    return [{
+      id: 'district',
+      title: t.regionalHeader,
+      subtitle: t.regionalSubtitle,
+      groups: DISTRICT_CATEGORIES.map(buildGroup),
+    }];
+  }, [activeDistrict, categoryNames, lang, t.regionalHeader, t.regionalSubtitle]);
 
   const title = (t.titleTemplate || '{region}').replace('{region}', districtLabel);
 
@@ -221,6 +204,7 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
                   key={group.key}
                   label={group.label}
                   items={group.items}
+                  isEmpty={group.isEmpty}
                   noDataLabel={t.noData}
                   prevLabel={t.prevLabel}
                   nextLabel={t.nextLabel}
@@ -248,7 +232,7 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict }) {
 }
 
 /* ── Category carousel — horizontal scroll w/ snap + arrow buttons ── */
-function CategoryCarousel({ label, items, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
+function CategoryCarousel({ label, items, isEmpty, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
   const ref = useScrollReveal(0.12);
   const trackRef = useRef(null);
   const [canPrev, setCanPrev] = useState(false);
@@ -282,16 +266,21 @@ function CategoryCarousel({ label, items, noDataLabel, prevLabel, nextLabel, vie
     el.scrollBy({ left: dir * step, behavior: 'smooth' });
   };
 
-  const isEmpty = !items || items.length === 0;
+  /* `isEmpty` from the parent already tells us if the items are
+     real or placeholders. We still render the carousel even when
+     empty — just with placeholder cards inside. */
+  const noItems = !items || items.length === 0;
+  const realCount = isEmpty ? 0 : items.length;
+  const showArrows = !isEmpty && items.length > 1;
 
   return (
     <div ref={ref} className="dir-cat reveal">
       <div className="dir-cat__head">
         <h3 className="dir-cat__label">
           {label}
-          {!isEmpty && <span className="dir-cat__count">{items.length}</span>}
+          {!isEmpty && <span className="dir-cat__count">{realCount}</span>}
         </h3>
-        {!isEmpty && (
+        {showArrows && (
           <div className="dir-cat__controls">
             <button
               type="button"
@@ -319,16 +308,37 @@ function CategoryCarousel({ label, items, noDataLabel, prevLabel, nextLabel, vie
         )}
       </div>
 
-      {isEmpty ? (
+      {noItems ? (
         <p className="dir-cat__empty">{noDataLabel}</p>
       ) : (
         <div ref={trackRef} className="dir-cat__track">
           {items.map((m, i) => (
-            <MemberCard key={m.id || i} member={m} index={i} viewMoreLabel={viewMoreLabel} lang={lang} onSelect={onSelect} />
+            m.isPlaceholder
+              ? <PlaceholderCard key={m.id || i} label={m.name} />
+              : <MemberCard key={m.id || i} member={m} index={i} viewMoreLabel={viewMoreLabel} lang={lang} onSelect={onSelect} />
           ))}
         </div>
       )}
     </div>
+  );
+}
+
+/* Placeholder card — used when a district has no real members in a
+   given category. Looks like a real card but greyed out, with no
+   socials / no popup trigger. */
+function PlaceholderCard({ label }) {
+  return (
+    <article className="dir-card dir-card--placeholder" aria-hidden="false">
+      <div className="dir-card__placeholder-art" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+        </svg>
+      </div>
+      <div className="dir-card__placeholder-body">
+        <h4 className="dir-card__name">{label}</h4>
+      </div>
+    </article>
   );
 }
 

@@ -127,48 +127,118 @@
 
   "form": {
     "mr": {
-      "eyebrow": "संदेश पाठवा",
-      "title": "तुमची प्रतिक्रिया द्या",
-      "lede": "खालील फॉर्म भरा. आम्ही लवकरच तुमच्याशी संपर्क साधू.",
+      "eyebrow": "सदस्यता नोंदणी",
+      "title": "शिवसेना सदस्यत्व नोंदणी",
+      "lede": "खालील फॉर्म पूर्णपणे भरा. नोंदणी पूर्ण झाल्यावर तुमचे ओळखपत्र PDF स्वरूपात डाउनलोड होईल.",
+      "instructionsTitle": "",
+      "instructions": [],
       "labels": {
-        "name": "तुमचे पूर्ण नाव",
-        "phone": "दूरध्वनी क्रमांक",
-        "email": "ईमेल पत्ता",
-        "message": "तुमचा संदेश"
+        "name": "पूर्ण नाव",
+        "phone": "मोबाईल नंबर",
+        "email": "ईमेल",
+        "address": "पत्ता",
+        "district": "शहर / जिल्हा",
+        "dob": "जन्मतारीख",
+        "age": "वय",
+        "gender": "लिंग",
+        "occupation": "व्यवसाय",
+        "photo": "छायाचित्र (पर्यायी)"
       },
       "placeholders": {
         "name": "उदा. राहुल पाटील",
         "phone": "९८XXXXXXXX",
         "email": "you@example.com",
-        "message": "तुम्हाला काय सांगायचे आहे ते लिहा..."
+        "address": "तुमचा संपूर्ण पत्ता",
+        "district": "उदा. ठाणे",
+        "occupation": "उदा. शिक्षक, शेतकरी, व्यापारी"
       },
-      "submitLabel": "संदेश पाठवा",
-      "submitting": "पाठवत आहे...",
-      "successTitle": "धन्यवाद!",
-      "successMessage": "तुमचा संदेश आम्हाला यशस्वीरीत्या प्राप्त झाला आहे. आम्ही लवकरच तुमच्याशी संपर्क साधू.",
-      "resetLabel": "नवीन संदेश पाठवा"
+      "genderOptions": {
+        "male": "पुरुष",
+        "female": "स्त्री",
+        "other": "इतर"
+      },
+      "photoHint": "JPG/PNG · 2 MB पर्यंत. न दिल्यास पर्यायी चित्र वापरले जाईल.",
+      "submitLabel": "नोंदणी पूर्ण करा",
+      "submitting": "ओळखपत्र तयार करत आहे...",
+      "privacyNote": "तुमच्या माहितीची गोपनीयता राखली जाईल.",
+      "successTitle": "नोंदणी यशस्वी!",
+      "successMessage": "शिवसेना परिवारात स्वागत आहे. तुमचे ओळखपत्र डाउनलोड झाले आहे.",
+      "downloadAgainLabel": "ओळखपत्र पुन्हा डाउनलोड करा",
+      "resetLabel": "नवीन नोंदणी करा",
+      "idCard": {
+        "headerLine1": "शिव सेना",
+        "headerLine2": "सदस्य ओळखपत्र",
+        "memberIdLabel": "सदस्य क्र.",
+        "issuedLabel": "जारी दिनांक",
+        "nameLabel": "नाव",
+        "dobLabel": "जन्मतारीख",
+        "ageLabel": "वय",
+        "genderLabel": "लिंग",
+        "phoneLabel": "मोबाईल",
+        "districtLabel": "जिल्हा",
+        "occupationLabel": "व्यवसाय",
+        "addressLabel": "पत्ता",
+        "tagline": "जय हिंद · जय महाराष्ट्र",
+        "signatureLabel": "अधिकृत स्वाक्षरी",
+        "fileName": "Shivsena-Sadasya-Olkhpatra"
+      }
     },
     "en": {
-      "eyebrow": "SEND A MESSAGE",
-      "title": "Share Your Thoughts",
-      "lede": "Fill in the form below. We'll get back to you shortly.",
+      "eyebrow": "MEMBERSHIP REGISTRATION",
+      "title": "Shiv Sena Membership Registration",
+      "lede": "Fill in the form below. Once registration is complete, your ID card will be available as a PDF download.",
+      "instructionsTitle": "",
+      "instructions": [],
       "labels": {
         "name": "Full Name",
-        "phone": "Phone Number",
-        "email": "Email Address",
-        "message": "Your Message"
+        "phone": "Mobile Number",
+        "email": "Email ID",
+        "address": "Address",
+        "district": "City / District",
+        "dob": "Date of Birth",
+        "age": "Age",
+        "gender": "Gender",
+        "occupation": "Occupation",
+        "photo": "Photo (Optional)"
       },
       "placeholders": {
         "name": "e.g. Rahul Patil",
         "phone": "98XXXXXXXX",
         "email": "you@example.com",
-        "message": "Tell us what's on your mind..."
+        "address": "Your full address",
+        "district": "e.g. Thane",
+        "occupation": "e.g. Teacher, Farmer, Trader"
       },
-      "submitLabel": "SEND MESSAGE",
-      "submitting": "Sending...",
-      "successTitle": "Thank you!",
-      "successMessage": "Your message has been received. We'll be in touch shortly.",
-      "resetLabel": "Send Another Message"
+      "genderOptions": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
+      "photoHint": "JPG/PNG · Up to 2 MB. A default avatar will be used if no photo is uploaded.",
+      "submitLabel": "COMPLETE REGISTRATION",
+      "submitting": "Generating ID card...",
+      "privacyNote": "Your information will be kept confidential.",
+      "successTitle": "Registration Successful!",
+      "successMessage": "Welcome to the Shiv Sena family. Your ID card has been downloaded.",
+      "downloadAgainLabel": "Download ID Card Again",
+      "resetLabel": "Register Another Member",
+      "idCard": {
+        "headerLine1": "SHIV SENA",
+        "headerLine2": "Member ID Card",
+        "memberIdLabel": "Member ID",
+        "issuedLabel": "Issued",
+        "nameLabel": "Name",
+        "dobLabel": "DOB",
+        "ageLabel": "Age",
+        "genderLabel": "Gender",
+        "phoneLabel": "Mobile",
+        "districtLabel": "District",
+        "occupationLabel": "Occupation",
+        "addressLabel": "Address",
+        "tagline": "Jai Hind · Jai Maharashtra",
+        "signatureLabel": "Authorised Signatory",
+        "fileName": "Shivsena-Member-IDCard"
+      }
     }
   },
 
@@ -194,7 +264,7 @@
   "social": {
     "mr": {
       "eyebrow": "सोशल मीडिया",
-      "title": "आमच्यासोबत जोडलेले रहा",
+      "title": "अधिकृत सोशल मिडिया",
       "lede": "ताज्या अपडेट्ससाठी आम्हाला सोशल मीडियावर फॉलो करा.",
       "items": [
         { "id": "facebook",  "name": "फेसबुक",      "handle": "@Shivsenaofc", "href": "https://www.facebook.com/Shivsenaofc" },
@@ -206,7 +276,7 @@
     },
     "en": {
       "eyebrow": "SOCIAL MEDIA",
-      "title": "Stay Connected",
+      "title": "Official Social Media",
       "lede": "Follow us on social media for the latest updates.",
       "items": [
         { "id": "facebook",  "name": "Facebook",        "handle": "@Shivsenaofc", "href": "https://www.facebook.com/Shivsenaofc" },

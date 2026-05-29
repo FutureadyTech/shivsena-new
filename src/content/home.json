@@ -71,8 +71,8 @@
 
   "leadership": {
     "mr": {
-      "eyebrow": "आमचा परिवार",
-      "title": "आमचे नेतृत्व",
+      "eyebrow": "",
+      "title": "वारसा हिंदुत्वाचा",
       "leaders": [
         {
           "id": "thackeray",
@@ -95,8 +95,8 @@
       ]
     },
     "en": {
-      "eyebrow": "OUR FAMILY",
-      "title": "Our Leadership",
+      "eyebrow": "",
+      "title": "Legacy of Hindutva",
       "leaders": [
         {
           "id": "thackeray",
@@ -133,7 +133,7 @@
           "yearLatin": "19 June 1966",
           "title": "शिवसेनेची स्थापना",
           "short": "मराठी अस्मितेच्या लढ्याची सुरुवात.",
-          "description": "'मार्मिक'ला मिळालेल्या प्रतिसादामुळे उत्साह वाढला. मराठी माणसांची उर्जा एकत्र आणण्यासाठी संघटनेची गरज सगळीकडून व्यक्त होऊ लागली. प्रबोधनकारांनाही तसा आग्रह केला. त्यातून शिवसेनेचा जन्म झाला.",
+          "description": "'मार्मिक'ला मिळालेल्या प्रतिसादामुळे उत्साह वाढला. मराठी माणसांची उर्जा एकत्र आणण्यासाठी संघटनेची गरज सगळीकडून व्यक्त होऊ लागली. प्रबोधनकारांनी तसा आग्रह केला. त्यातून शिवसेनेचा जन्म झाला.",
           "image": "/img-1.webp"
         },
         {
@@ -213,7 +213,7 @@
 
 "news": {
   "mr": {
-    "eyebrow": "मैदानावरून",
+    "eyebrow": "",
     "title": "बातम्या आणि माध्यम",
     "viewAllLabel": "सर्व संग्रह पहा",
     "readMoreLabel": "संपूर्ण लेख वाचा",
@@ -251,7 +251,7 @@
     ]
   },
   "en": {
-    "eyebrow": "FROM THE GROUND",
+    "eyebrow": "",
     "title": "News & Media",
     "viewAllLabel": "VIEW ALL ARCHIVE",
     "readMoreLabel": "READ FULL ARTICLE",
@@ -293,7 +293,7 @@
 "socialFeed": {
   "mr": {
     "eyebrow": "सोशल मीडिया",
-    "title": "आमच्याशी जोडलेले राहा",
+    "title": "अधिकृत सोशल मिडिया",
     "followLabel": "फॉलो करा",
     "posts": [
       {
@@ -335,7 +335,7 @@
   },
   "en": {
     "eyebrow": "SOCIAL MEDIA",
-    "title": "Stay Connected With Us",
+    "title": "Official Social Media",
     "followLabel": "Follow",
     "posts": [
       {
@@ -512,7 +512,7 @@
 
   "joinCta": {
     "mr": {
-      "eyebrow": "चळवळीत सामील व्हा",
+      "eyebrow": "",
       "title": "हिंदुत्वाचा आवाज बुलंद करण्यासाठी शिवसेनेत सामील व्हा!",
       "lede": "लोकसेवेचा वारसा पुढे नेण्यासाठी शिवसैनिक व्हा!",
       "emailPlaceholder": "तुमचा ईमेल पत्ता",
@@ -538,7 +538,7 @@
       ]
     },
     "en": {
-      "eyebrow": "JOIN THE MOVEMENT",
+      "eyebrow": "",
       "title": "Join Shiv Sena to raise the voice of Hindutva!",
       "lede": "Become a Shiv Sainik and carry forward the legacy of public service!",
       "emailPlaceholder": "Your email address",
@@ -588,7 +588,7 @@
             { "label": "स्वयंसेवक",   "href": "#" },
             { "label": "देणगी द्या",   "href": "#" },
             { "label": "कार्यालय शोधा", "href": "#offices" },
-            { "label": "प्रेस रिलीज",  "href": "/news#press-releases" },
+            { "label": "प्रसिद्धीपत्रक",  "href": "/news#press-releases" },
             { "label": "वार्षिक अहवाल", "href": "#" }
           ]
         },

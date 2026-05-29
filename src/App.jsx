@@ -12,7 +12,7 @@ import AffiliatedOrg from './pages/AffiliatedOrg/index.jsx';
 import LeaderProfile from './pages/LeaderProfile/index.jsx';
 import Innovative from './pages/Innovative/index.jsx';
 import Mahayuti from './pages/Mahayuti/index.jsx';
-import AmbientAudio from './components/AmbientAudio.jsx';
+import ShivSenaJanma from './pages/ShivSenaJanma/index.jsx';
 
 /* Reset scroll to the top on every route change.
    Tries Lenis (if it's been mounted by the active page) first for a clean
@@ -50,6 +50,22 @@ function ScrollToTop() {
   return null;
 }
 
+/* Always-mounted route watcher that kills the home banner audios
+   (ambient.mp3 + join.mp3) the instant pathname leaves /home.
+   Lives at App level — HomeBannerAudio itself can't do this
+   because it unmounts on the same commit that the route changes,
+   so its own useEffect would never run in time. */
+function HomeAudioRouteGuard() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (pathname === '/home') return;
+    if (typeof window === 'undefined') return;
+    try { window.__stopAmbient?.(); } catch {}
+    try { window.__stopJoin?.(); } catch {}
+  }, [pathname]);
+  return null;
+}
+
 function ComingSoon({ title }) {
   return (
     <div style={{
@@ -84,7 +100,7 @@ export default function App() {
     <LanguageProvider defaultLang="mr">
       <BrowserRouter>
         <ScrollToTop />
-        <AmbientAudio />
+        <HomeAudioRouteGuard />
         <Routes>
           <Route path="/" element={<Entrance />} />
           <Route path="/home" element={<Home />} />
@@ -97,6 +113,7 @@ export default function App() {
           <Route path="/leader/:slug" element={<LeaderProfile />} />
           <Route path="/innovative" element={<Innovative />} />
           <Route path="/mahayuti" element={<Mahayuti />} />
+          <Route path="/shivsena-janma" element={<ShivSenaJanma />} />
           <Route path="/shivsena-live" element={<ComingSoon title="शिवसेना लाइव्ह" />} />
           <Route path="/members" element={<ComingSoon title="Members" />} />
           <Route path="*" element={<ComingSoon title="Page Not Found" />} />

@@ -3,7 +3,7 @@
 ═══════════════════════════════════════════════════════════════ */
 .cf-section {
   position: relative;
-  padding: 120px 0 140px;
+  padding: 120px 0 70px;
   background: var(--paper-deep, #F4E4BC);
   overflow: hidden;
 }
@@ -176,6 +176,18 @@
 
 .cf-submit:disabled { opacity: 0.7; cursor: progress; }
 
+/* Privacy note — rendered below the submit button */
+.cf-privacy {
+  margin: 18px 0 0 0;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--body-light, #847B6E);
+  text-align: center;
+  line-height: 1.5;
+}
+
 /* Success state */
 .cf-success {
   display: flex;
@@ -226,7 +238,8 @@
   max-width: 460px;
 }
 
-.cf-success__reset {
+.cf-success__reset,
+.cf-success__download {
   padding: 12px 26px;
   background: transparent;
   border: 1.5px solid var(--saffron, #C44D0E);
@@ -238,11 +251,171 @@
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, gap 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
-.cf-success__reset:hover {
+.cf-success__reset:hover,
+.cf-success__download:hover {
   background: var(--saffron, #C44D0E);
   color: #fff;
+}
+.cf-success__download {
+  background: var(--saffron, #C44D0E);
+  color: #fff;
+}
+.cf-success__download:hover {
+  background: #FF6B1A;
+  border-color: #FF6B1A;
+}
+
+.cf-success__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.cf-success__preview {
+  margin: 4px 0 8px;
+  padding: 18px;
+  background: rgba(196, 77, 14, 0.04);
+  border: 1px dashed rgba(196, 77, 14, 0.28);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  /* Card has fixed 640px width — let it scroll horizontally on
+     narrower screens rather than scaling and getting blurry. */
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* ── INSTRUCTIONS PANEL ─────────────────────────────────────── */
+.cf-instructions {
+  max-width: 640px;
+  margin: 0 auto 32px;
+  padding: 18px 22px;
+  background: rgba(196, 77, 14, 0.05);
+  border-left: 3px solid var(--saffron, #C44D0E);
+  border-radius: 6px;
+}
+.cf-instructions__title {
+  margin: 0 0 10px;
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--saffron, #C44D0E);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cf-instructions__title span {
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--saffron, #C44D0E);
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  font-family: 'Inter', serif;
+}
+.cf-instructions__list {
+  margin: 0;
+  padding: 0 0 0 22px;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.92rem;
+  color: rgba(26, 20, 16, 0.85);
+  line-height: 1.6;
+}
+.cf-instructions__list li {
+  padding: 3px 0;
+}
+.cf-instructions__list li::marker {
+  color: var(--saffron, #C44D0E);
+  font-weight: 700;
+}
+
+/* ── PHOTO FIELD + FILE INPUT ───────────────────────────────── */
+.cf-field--photo {
+  display: flex;
+  flex-direction: column;
+}
+.cf-field__file {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  background: #FCFBF7;
+  border: 1.5px dashed rgba(196, 77, 14, 0.4);
+  border-radius: 8px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.86rem;
+  color: var(--body-text, #3F3830);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.cf-field__file::file-selector-button {
+  margin-right: 12px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  background: var(--saffron, #C44D0E);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cf-field__file:hover { border-color: var(--saffron, #C44D0E); }
+.cf-field__file::file-selector-button:hover { background: #FF6B1A; }
+.cf-field__photo-preview {
+  margin-top: 10px;
+  width: 100px; height: 120px;
+  object-fit: cover;
+  border: 2px solid var(--saffron, #C44D0E);
+  border-radius: 6px;
+  background: #F2EBDD;
+}
+.cf-field__hint {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  color: var(--body-light, #847B6E);
+  line-height: 1.4;
+}
+
+/* select arrow consistency */
+.cf-field__input--select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23C44D0E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='1 1 6 6 11 1'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
+/* date input picker color */
+.cf-field__input[type="date"] {
+  font-family: 'Inter', sans-serif;
+  color-scheme: light;
+}
+
+/* form-level error message */
+.cf-form__error {
+  margin: 0;
+  padding: 10px 14px;
+  background: rgba(196, 30, 30, 0.06);
+  border-left: 3px solid #C41E1E;
+  border-radius: 4px;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.86rem;
+  color: #8C1A1A;
 }
 
 /* Reveals */

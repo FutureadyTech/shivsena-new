@@ -1,0 +1,304 @@
+/* ═══════════════════════════════════════════════════════════════
+   ID CARD — Horizontal Shivsena member card.
+   Layout: photo + signature on the left, brand top-right,
+   5 detail rows on the right, saffron curves at the corners.
+   Fixed pixel dimensions so html2canvas captures it 1:1 for PDF.
+═══════════════════════════════════════════════════════════════ */
+
+.idcard {
+  /* Fixed canvas — captured 1:1 by html2canvas */
+  width: 660px;
+  height: 400px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid rgba(196, 77, 14, 0.10);
+  box-shadow:
+    0 24px 60px rgba(196, 77, 14, 0.22),
+    0 4px 14px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  color: #1A1410;
+  font-family: 'Noto Sans Devanagari', 'Inter', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── DECORATIVE SAFFRON SHAPES ─────────────────────────────────
+   Five absolutely-positioned shapes mimic the curves seen in the
+   reference design: a quarter-disc top-left, two thin tilted
+   stripes top-right, a big rounded blob bottom-right, and a small
+   tilted stripe bottom-left. Pure CSS so html2canvas reproduces
+   them faithfully in the PDF. */
+
+.idcard__shape {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Top-left — quarter circle wave coming in from the corner */
+.idcard__shape--tl {
+  top: -70px;
+  left: -70px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #FF6B1A 0%, #C44D0E 100%);
+  border-radius: 50%;
+  opacity: 0.95;
+}
+
+/* Mid-right — two thin tilted stripes, positioned LOW enough that
+   they don't run through the brand text in the top-right corner.
+   They sit between the photo area and the bottom blob, echoing the
+   diagonal flow of the reference card. */
+.idcard__shape--tr-stripe-1 {
+  top: 175px;
+  right: -110px;
+  width: 260px;
+  height: 14px;
+  background: #FF6B1A;
+  border-radius: 999px;
+  transform: rotate(-26deg);
+  opacity: 0.85;
+}
+.idcard__shape--tr-stripe-2 {
+  top: 205px;
+  right: -90px;
+  width: 210px;
+  height: 8px;
+  background: #C44D0E;
+  border-radius: 999px;
+  transform: rotate(-26deg);
+  opacity: 0.7;
+}
+
+/* Bottom-right — large rounded wave */
+.idcard__shape--br {
+  bottom: -130px;
+  right: -90px;
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(135deg, #FF6B1A 0%, #C44D0E 100%);
+  border-radius: 50%;
+  opacity: 0.95;
+}
+
+/* Bottom-left — small tilted stripe to balance composition */
+.idcard__shape--bl-stripe {
+  bottom: 30px;
+  left: -50px;
+  width: 170px;
+  height: 8px;
+  background: #FF6B1A;
+  border-radius: 999px;
+  transform: rotate(-26deg);
+  opacity: 0.65;
+}
+
+/* ── BRAND (top-right) ───────────────────────────────────────── */
+.idcard__brand {
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10; /* always above any decorative shape */
+}
+.idcard__logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.idcard__brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+.idcard__brand-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1A1410;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.idcard__brand-sub {
+  margin-top: 4px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #FF6B1A;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── BODY ────────────────────────────────────────────────────── */
+.idcard__body {
+  position: absolute;
+  top: 100px;
+  left: 38px;
+  right: 38px;
+  bottom: 60px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  z-index: 2;
+}
+
+/* ── PHOTO BLOCK ─────────────────────────────────────────────── */
+.idcard__photo-block {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.idcard__photo-frame {
+  width: 160px;
+  height: 160px;
+  background: #F2EBDD;
+  border: 3px solid #FF6B1A;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 2px #fff,
+    0 6px 14px rgba(196, 77, 14, 0.18);
+}
+
+.idcard__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.idcard__signature {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.idcard__signature-line {
+  display: block;
+  width: 130px;
+  height: 1.5px;
+  background: #1A1410;
+  margin-bottom: 4px;
+}
+.idcard__signature-label {
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: #847B6E;
+  text-align: center;
+}
+
+/* ── DETAILS GRID (right side) ───────────────────────────────── */
+.idcard__details {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 4px;
+}
+
+.idcard__row {
+  display: grid;
+  grid-template-columns: 96px 14px 1fr;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.idcard__row-label {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FF6B1A;
+  letter-spacing: 0.01em;
+}
+
+.idcard__row-sep {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FF6B1A;
+  text-align: center;
+}
+
+.idcard__row-value {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1A1410;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+/* The "muted" row (gender) shows in a smaller weight — keeps the
+   primary 5 rows visually anchored like the reference card. */
+.idcard__row--muted .idcard__row-label,
+.idcard__row--muted .idcard__row-sep {
+  color: #C44D0E;
+  opacity: 0.75;
+  font-size: 0.86rem;
+}
+.idcard__row--muted .idcard__row-value {
+  color: #3F3830;
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+/* ── TAGLINE (bottom-left over the bottom decoration) ────────── */
+.idcard__tagline {
+  position: absolute;
+  bottom: 22px;
+  left: 38px;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #C44D0E;
+  letter-spacing: 0.04em;
+  z-index: 3;
+}
+
+/* ── ISSUED STAMP (bottom-right, over the saffron blob) ──────── */
+.idcard__issued-stamp {
+  position: absolute;
+  bottom: 22px;
+  right: 30px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  z-index: 3;
+  text-align: right;
+}
+.idcard__issued-stamp span {
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #FFE5CC;
+  font-family: 'Inter', sans-serif;
+}
+.idcard__issued-stamp strong {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* When the card is captured for PDF, render it off-screen but
+   still laid out (visibility hidden won't work — html2canvas
+   needs the painted node). */
+.idcard--capture-host {
+  position: fixed;
+  top: -10000px;
+  left: -10000px;
+  pointer-events: none;
+  opacity: 1;
+  z-index: -1;
+}

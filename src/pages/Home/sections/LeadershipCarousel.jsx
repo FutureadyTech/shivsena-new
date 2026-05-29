@@ -53,10 +53,12 @@ export default function LeadershipCarousel({ content, gridCols }) {
       <div className="leadership__inner">
         <div ref={headerRef} className="leadership__header reveal">
           <div>
-            <div className="leadership__eyebrow">
-              <span className="leadership__eyebrow-line"></span>
-              <span>{t.eyebrow}</span>
-            </div>
+            {t.eyebrow && (
+              <div className="leadership__eyebrow">
+                <span className="leadership__eyebrow-line"></span>
+                <span>{t.eyebrow}</span>
+              </div>
+            )}
             <h2 className="leadership__title">{t.title}</h2>
           </div>
 

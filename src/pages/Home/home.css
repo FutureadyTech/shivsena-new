@@ -411,7 +411,7 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   overflow: hidden;
 }
 
-/* ── VIDEO ── */
+/* ── VIDEO (MP4 mode) ── */
 
 .hero-video {
   position: absolute;
@@ -430,6 +430,46 @@ body.has-dark-hero-visible .site-nav__sublink--active { color: var(--saffron); }
   will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+}
+
+/* ── YOUTUBE (embed mode) ──
+   Used when Hero.jsx's SOURCE constant is 'youtube'. The wrapper
+   holds the iframe and a transparent shield that absorbs any
+   click/hover so the YouTube player UI never surfaces. The iframe
+   is sized to 16:9 covering the viewport (mirrors the MP4's
+   object-fit: cover) and scaled 1.25× so any residual YT chrome
+   sits outside the visible viewport. */
+
+.hero-yt-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #0a0500 url('/entrance-banner-v2.webp') center/cover no-repeat;
+}
+
+.hero-yt-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  min-width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  transform: translate3d(-50%, -50%, 0) scale(1.25);
+  border: 0;
+  pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.hero-yt-shield {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: transparent;
+  cursor: default;
 }
 
 /* ── OVERLAY STACK ── */
