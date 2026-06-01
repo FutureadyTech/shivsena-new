@@ -3,6 +3,7 @@ import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
 import { useLanguage } from '../../../i18n/LanguageContext.jsx';
 import declarationsContent from '../../../content/declarations.json';
+import { mrMlaFor, asciiToDevanagari } from '../../Leadership/utils/transliterate.js';
 import './ElectionDeclarations.css';
 
 const SOURCE_URL = 'https://shivsenacentraloffice.com/main.asp?page=ecinorm';
@@ -235,19 +236,47 @@ export default function ElectionDeclarations() {
   );
 }
 
-function CandidateRow({ c, t }) {
+function CandidateRow({ c, t, lang }) {
   const c2Href = formLink(c.c2);
   const c7Href = formLink(c.c7);
+
+  /* In Marathi mode, look up the matching MR record for this
+     candidate using the constituency number (`c.no`). The MR data
+     in leaders-by-district.json already has the Marathi name + a
+     role string like "आमदार — १-अक्कलकुवा" we can split. */
+  let displayName = c.candidate;
+  let displayConstituency = c.constituency;
+  let displayNo = c.no;
+
+  if (lang === 'mr') {
+    const mr = mrMlaFor({ constituencyNo: c.no });
+    if (mr) {
+      if (mr.name) displayName = mr.name;
+      /* Role format: "आमदार — १-मतदारसंघ-नाव". Extract the trailing
+         part after the em-dash so we can show just the Marathi
+         constituency name. */
+      const tail = (mr.role || '').split('—').pop().trim();
+      const tailParts = tail.split('-');
+      if (tailParts.length > 1) {
+        /* Skip the leading Devanagari number — keep the name portion. */
+        displayConstituency = tailParts.slice(1).join('-').trim() || displayConstituency;
+      } else if (tail) {
+        displayConstituency = tail;
+      }
+    }
+    /* Constituency number in Devanagari digits */
+    displayNo = asciiToDevanagari(String(c.no));
+  }
 
   return (
  <li className="eci-row">
  <span className="eci-row__no" aria-label={t.constituencyLabel}>
- {c.no}
+ {displayNo}
  </span>
  <div className="eci-row__main">
- <h5 className="eci-row__name">{c.candidate}</h5>
- {c.constituency && c.constituency !== ' ' && (
- <p className="eci-row__const">{c.constituency}</p>
+ <h5 className="eci-row__name">{displayName}</h5>
+ {displayConstituency && displayConstituency !== ' ' && (
+ <p className="eci-row__const">{displayConstituency}</p>
  )}
  </div>
  <div className="eci-row__forms">

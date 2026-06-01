@@ -192,8 +192,20 @@
   font-weight: 700;
   line-height: 1.18;
   color: var(--ink, #1A1410);
-  margin: 0 0 12px;
+  margin: 0 0 22px;
+  padding-bottom: 14px;
   letter-spacing: -0.01em;
+  position: relative;
+}
+.inn-prog__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 2px;
+  background: var(--saffron-on-light, #C44D0E);
+  border-radius: 2px;
 }
 
 .inn-prog__tagline {

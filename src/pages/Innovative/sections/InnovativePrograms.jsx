@@ -56,7 +56,7 @@ function Program({ program, index, lang }) {
       </div>
 
       <div className="inn-prog__body">
-        <span className="inn-prog__tag">{data.tag}</span>
+        {data.tag && <span className="inn-prog__tag">{data.tag}</span>}
         <h3 className="inn-prog__title">{data.title}</h3>
         {data.tagline && <p className="inn-prog__tagline">{data.tagline}</p>}
         <p className="inn-prog__text">{data.body}</p>

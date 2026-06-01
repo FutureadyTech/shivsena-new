@@ -8,6 +8,14 @@
   overflow: hidden;
 }
 
+/* When two .affiliated sections sit back-to-back (अंगीकृत संघटना +
+   सलंग्न सेना on the About page), the stacked 160 + 140 = 300px of
+   vertical padding reads as a huge empty gap. Collapse both edges
+   so the two sliders feel like one continuous "Shiv Sena Parivar"
+   region instead of two disconnected sections. */
+.affiliated + .affiliated { padding-top: 40px; }
+.affiliated:has(+ .affiliated) { padding-bottom: 40px; }
+
 .affiliated::before {
   content: '';
   position: absolute;
@@ -67,11 +75,117 @@
   margin: 0;
 }
 
-/* ── Grid ── */
-.affiliated__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* ── Slider ──
+   Horizontal scroll-snap track + prev/next arrow buttons. The
+   track holds the .org-card elements; each card has a fixed
+   flex-basis so 3 fit per row on desktop, 2 on tablet, 1 on
+   mobile. Arrows are positioned outside the track so the cards
+   themselves stay flush with the inner container. */
+.affiliated__slider {
+  position: relative;
+}
+
+.affiliated__track {
+  display: flex;
   gap: 26px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 14px; /* room for hover-lift box-shadow */
+  /* allow the cards' transform on hover to spill outside without
+     being clipped by the overflow:auto on this track */
+  scroll-padding: 0 8px;
+}
+.affiliated__track::-webkit-scrollbar { display: none; }
+
+/* Each card snaps to the left edge. flex-basis controls how
+   many show per viewport. min-width prevents flex shrink. */
+.affiliated__track > .org-card {
+  flex: 0 0 calc((100% - 26px * 2) / 3); /* 3 cards × 26px gaps */
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+/* Prev / Next arrows */
+.affiliated__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(196, 77, 14, 0.25);
+  background: #FFFCF5;
+  color: var(--saffron-on-light, #C44D0E);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 12px 24px -10px rgba(133, 65, 0, 0.30);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.2, 0.85, 0.3, 1),
+    opacity 0.25s ease,
+    box-shadow 0.3s ease;
+}
+.affiliated__nav--prev { left: -22px; }
+.affiliated__nav--next { right: -22px; }
+.affiliated__nav:hover:not(:disabled) {
+  background: var(--saffron, #FF6B1A);
+  color: #FFFFFF;
+  border-color: var(--saffron, #FF6B1A);
+  transform: translateY(-50%) scale(1.06);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 16px 30px -10px rgba(255, 107, 26, 0.55);
+}
+.affiliated__nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.affiliated__nav:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(255, 107, 26, 0.25),
+    0 12px 24px -10px rgba(133, 65, 0, 0.30);
+}
+
+@media (max-width: 980px) {
+  .affiliated__track > .org-card {
+    flex: 0 0 calc((100% - 26px) / 2); /* 2 per row */
+  }
+  .affiliated__nav--prev { left: -10px; }
+  .affiliated__nav--next { right: -10px; }
+}
+@media (max-width: 640px) {
+  .affiliated__track {
+    gap: 18px;
+    /* Edge padding so the first/last card has visual breathing
+       room instead of butting against the section wall. */
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .affiliated__track > .org-card {
+    flex: 0 0 84%; /* 1 + peek of the next */
+  }
+  .affiliated__nav {
+    width: 40px;
+    height: 40px;
+  }
+  .affiliated__nav--prev { left: -6px; }
+  .affiliated__nav--next { right: -6px; }
+}
+
+/* Reduced motion: skip the smooth scroll animation */
+@media (prefers-reduced-motion: reduce) {
+  .affiliated__track { scroll-behavior: auto; }
+  .affiliated__nav { transition: none; }
 }
 
 /* ═════════════════════════════════════════════════════════════
@@ -164,7 +278,8 @@
 }
 .org-card__icon svg,
 .org-card__icon img,
-.org-card__icon-img {
+.org-card__icon-img,
+.org-card__icon-svg {
   width: 32px;
   height: 32px;
   display: block;
@@ -177,6 +292,17 @@
  invert(31%) sepia(95%) saturate(2076%)
  hue-rotate(8deg) brightness(95%) contrast(95%);
   transition: filter 0.4s ease;
+}
+
+/* Generic inline-SVG icon (used for the 55 PDF-driven orgs that
+   don't have a bespoke PNG). Strokes the icon in brand saffron;
+   the colour flips to cream on card hover, matching the badge. */
+.org-card__icon-svg {
+  color: var(--saffron-on-light, #C44D0E);
+  transition: color 0.4s ease;
+}
+.org-card:hover .org-card__icon-svg {
+  color: #FAF6EE;
 }
 
 .org-card:hover .org-card__icon {

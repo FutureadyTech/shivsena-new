@@ -1,6 +1,5 @@
 import SiteHeader from '../../components/SiteHeader.jsx';
 import Footer from '../Home/sections/Footer.jsx';
-import LeadershipFeature from '../Home/sections/LeadershipFeature.jsx';
 import OurJourney from '../Home/sections/OurJourney.jsx';
 import CursorSparks from '../Home/components/CursorSparks.jsx';
 import { useLenis } from '../Home/hooks/useLenis.js';
@@ -20,8 +19,13 @@ export default function About() {
       <SiteHeader />
       <AboutBanner />
       <OurJourney />
-      <LeadershipFeature content={aboutContent.leadership} />
       <AffiliatedOrgs />
+      {aboutContent.salangna && (
+        <AffiliatedOrgs
+          content={aboutContent.salangna}
+          sectionId="salangna"
+        />
+      )}
       <Footer />
     </div>
   );

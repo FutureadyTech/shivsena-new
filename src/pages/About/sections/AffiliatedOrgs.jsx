@@ -1,8 +1,31 @@
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
 import aboutContent from '../../../content/about.json';
+import { iconForOrgId } from './orgIcons.jsx';
 import './AffiliatedOrgs.css';
+
+/* PNG-first, SVG-fallback icon component.
+   Loads /public/icons/orgs/{slug}.png; if that 404s, the onError
+   handler silently swaps in the themed inline SVG from orgIcons.
+   No code change needed to switch from inline to Flaticon PNGs —
+   just drop the file at the slug path. */
+function OrgIconAuto({ orgId }) {
+  const [pngFailed, setPngFailed] = useState(false);
+  if (pngFailed) {
+    return iconForOrgId(orgId) ?? <GenericOrgIcon />;
+  }
+  return (
+    <img
+      src={`/icons/orgs/${orgId}.png`}
+      alt=""
+      className="org-card__icon-img"
+      loading="lazy"
+      onError={() => setPngFailed(true)}
+    />
+  );
+}
 
 /* Party-wide socials used as the default for every org card. If an org
  later gets its own handles in about.json (`org.socials`), those override. */
@@ -44,19 +67,13 @@ const SOCIAL_META = [
   },
 ];
 
-/* Flaticon PNG assets dropped into /public/icons/orgs/.
- Picked from outline/lineal styles so they keep their detail
- after the brand-saffron monochrome filter is applied.
- bks Labour Day (Flaticon id 4336740)  [user-specified]
- sls Employment (id 18238810) [user-specified]
- yuva Youth (id 1312651) [user-specified]
- bvs Graduation cap outline (id 43805)
- mahila Businesswoman (id 563230) [user-specified]
- udyog Business idea (id 8660446) [user-specified]
- shikshak Teacher (id 9721094) [user-specified]
- chitrapat Video / clapperboard (id 1179120) [user-specified]
- arogya Healthcare (id 4003747) [user-specified] */
+/* Optional per-org Flaticon overrides (kept for back-compat with
+   the original 9 org IDs that had bespoke PNG icons). When the
+   current PDF-driven list has no entry here, we fall back to
+   GenericOrgIcon, a clean inline SVG that styles with the saffron
+   filter the same way the PNGs do. */
 const ORG_ICONS = {
+  // legacy IDs — left in place in case the PNG art is reused
   bks: <OrgIcon name="bks" />,
   sls: <OrgIcon name="sls" />,
   yuva: <OrgIcon name="yuva" />,
@@ -79,12 +96,97 @@ function OrgIcon({ name }) {
   );
 }
 
-export default function AffiliatedOrgs() {
-  const t = useContent(aboutContent.affiliated);
+/* Generic inline-SVG icon — used when an org's `id` doesn't match
+   any of the hand-curated PNGs above. Shaped like a stylised
+   Shiv Sena emblem (bow + arrow + base). */
+function GenericOrgIcon() {
+  return (
+    <svg
+      viewBox="0 0 48 48"
+      className="org-card__icon-svg"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {/* Arrow shaft pointing up */}
+      <line x1="24" y1="8" x2="24" y2="34" />
+      {/* Arrow head */}
+      <polyline points="18 14 24 8 30 14" />
+      {/* Bow curve underneath */}
+      <path d="M10 30 Q24 42 38 30" />
+      {/* Base ribbon */}
+      <line x1="14" y1="38" x2="34" y2="38" />
+    </svg>
+  );
+}
+
+/**
+ * AffiliatedOrgs / sister-section renderer.
+ *
+ * `content` — the bilingual content block to render (defaults to
+ *             `aboutContent.affiliated` so the original About page
+ *             call site keeps working unchanged). Pass
+ *             `aboutContent.salangna` (or any future block with the
+ *             same `{ orgs: [...] }` shape) to render a second
+ *             instance of this section with different data.
+ * `sectionId` — DOM id for anchor links (defaults to "affiliated").
+ *               Pass a unique id when rendering more than one
+ *               instance on the same page.
+ */
+export default function AffiliatedOrgs({
+  content,
+  sectionId = 'affiliated',
+} = {}) {
+  const t = useContent(content ?? aboutContent.affiliated);
   const headerRef = useScrollReveal(0.25);
 
+  const orgs = t.orgs || [];
+  const trackRef = useRef(null);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(false);
+
+  /* Recompute arrow-disabled state from the track's scroll offset.
+     8px tolerance covers sub-pixel rounding at either edge. */
+  const updateArrows = useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    setCanPrev(el.scrollLeft > 8);
+    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
+  }, []);
+
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    updateArrows();
+    el.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    return () => {
+      el.removeEventListener('scroll', updateArrows);
+      window.removeEventListener('resize', updateArrows);
+    };
+  }, [updateArrows, orgs.length]);
+
+  /* Step = one card-width + the gap between cards. We measure from
+     the live DOM so any future width tweak in CSS picks up
+     automatically. Falls back to ~80% of viewport on the rare
+     case where no card has rendered yet. */
+  const scroll = (dir) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const card = el.querySelector('.org-card');
+    const gap = parseInt(getComputedStyle(el).columnGap || getComputedStyle(el).gap, 10) || 26;
+    const step = card ? card.offsetWidth + gap : el.clientWidth * 0.8;
+    el.scrollBy({ left: dir * step, behavior: 'smooth' });
+  };
+
+  const prevLabel = t.prevLabel || (t._lang === 'mr' ? 'मागे' : 'Previous');
+  const nextLabel = t.nextLabel || (t._lang === 'mr' ? 'पुढे' : 'Next');
+
   return (
- <section className="affiliated" id="affiliated">
+ <section className="affiliated" id={sectionId}>
  <div className="affiliated__inner">
 
  <div ref={headerRef} className="affiliated__header reveal">
@@ -96,8 +198,22 @@ export default function AffiliatedOrgs() {
  <p className="affiliated__lede">{t.lede}</p>
  </div>
 
- <div className="affiliated__grid">
- {t.orgs?.map((org, i) => (
+ {/* ── Slider: horizontal scroll-snap track + prev/next arrows ── */}
+ <div className="affiliated__slider">
+ <button
+ type="button"
+ className="affiliated__nav affiliated__nav--prev"
+ onClick={() => scroll(-1)}
+ disabled={!canPrev}
+ aria-label={prevLabel}
+ >
+ <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+ <polyline points="15 18 9 12 15 6" />
+ </svg>
+ </button>
+
+ <div className="affiliated__track" ref={trackRef} data-lenis-prevent>
+ {orgs.map((org, i) => (
  <OrgCard
  key={org.id}
  org={org}
@@ -105,6 +221,19 @@ export default function AffiliatedOrgs() {
  ctaLabel={t.readMoreLabel ?? t.joinLabel}
  />
  ))}
+ </div>
+
+ <button
+ type="button"
+ className="affiliated__nav affiliated__nav--next"
+ onClick={() => scroll(1)}
+ disabled={!canNext}
+ aria-label={nextLabel}
+ >
+ <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+ <polyline points="9 18 15 12 9 6" />
+ </svg>
+ </button>
  </div>
 
  </div>
@@ -115,7 +244,9 @@ export default function AffiliatedOrgs() {
 /* ── Card ──────────────────────────────────────────────────── */
 function OrgCard({ org, index, ctaLabel }) {
   const ref = useScrollReveal(0.15);
-  const icon = ORG_ICONS[org.id] ?? ORG_ICONS.yuva;
+  /* Auto-fallback icon: try PNG at /icons/orgs/{slug}.png first,
+     drop to themed inline SVG (or generic bow-and-arrow) on 404. */
+  const icon = <OrgIconAuto orgId={org.id} />;
 
   return (
  <article
@@ -126,10 +257,12 @@ function OrgCard({ org, index, ctaLabel }) {
  {/* Saffron-tinted icon badge */}
  <div className="org-card__icon" aria-hidden="true">{icon}</div>
 
- {/* Content */}
- <span className="org-card__tag">{org.tag}</span>
+ {/* Content — tag + body are optional now (the 55-org list from
+     the master PDF only carries names; legacy entries may still
+     have tag + body filled in). */}
+ {org.tag && <span className="org-card__tag">{org.tag}</span>}
  <h3 className="org-card__name">{org.name}</h3>
- <p className="org-card__desc">{org.body}</p>
+ {org.body && <p className="org-card__desc">{org.body}</p>}
 
  <span className="org-card__divider" aria-hidden="true" />
 

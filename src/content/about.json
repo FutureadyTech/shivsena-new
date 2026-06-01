@@ -217,60 +217,61 @@
         "closeLabel": "बंद करा"
       },
       "orgs": [
-        {
-          "id": "bks",
-          "name": "भारतीय कामगार सेना",
-          "tag": "कामगार आघाडी",
-          "body": "मराठी कामगार आणि कर्मचाऱ्यांच्या न्याय्य हक्कांसाठी लढणारी, १९६८ साली स्थापन झालेली कामगार आघाडी."
-        },
-        {
-          "id": "sls",
-          "name": "स्थानीय लोकाधिकार समिती",
-          "tag": "रोजगार हक्क",
-          "body": "स्थानिक मराठी तरुणांना रोजगारात प्राधान्य मिळावे यासाठी आवाज उठवणारी संघटना."
-        },
-        {
-          "id": "yuva",
-          "name": "युवा सेना",
-          "tag": "युवा आघाडी",
-          "body": "शिवसेनेची तरुणाई विद्यापीठांपासून रस्त्यांपर्यंत, संघर्ष आणि सेवेच्या पाठीशी ठामपणे उभी."
-        },
-        {
-          "id": "bvs",
-          "name": "भारतीय विद्यार्थी सेना",
-          "tag": "विद्यार्थी आघाडी",
-          "body": "शाळा-महाविद्यालयांमध्ये विद्यार्थ्यांचे प्रश्न सोडवणारी आणि नेतृत्व घडवणारी विद्यार्थी संघटना."
-        },
-        {
-          "id": "mahila",
-          "name": "शिवसेना महिला आघाडी",
-          "tag": "महिला आघाडी",
-          "body": "महिलांच्या सुरक्षिततेसाठी, सक्षमीकरणासाठी आणि समान संधीसाठी पाठपुरावा करणारी सशक्त आघाडी."
-        },
-        {
-          "id": "udyog",
-          "name": "शिव उद्योग सेना",
-          "tag": "उद्योजक आघाडी",
-          "body": "मराठी उद्योजकांना संधी, मार्गदर्शन आणि व्यासपीठ देणारी संघटना."
-        },
-        {
-          "id": "shikshak",
-          "name": "शिक्षक सेना",
-          "tag": "शिक्षक आघाडी",
-          "body": "शिक्षक आणि शिक्षण क्षेत्रातील कर्मचाऱ्यांच्या समस्यांसाठी कार्यरत आघाडी."
-        },
-        {
-          "id": "chitrapat",
-          "name": "चित्रपट सेना",
-          "tag": "मराठी चित्रपट",
-          "body": "मराठी चित्रपटसृष्टीला बळ देणारी आणि कलाकारांच्या हक्कांसाठी उभी राहणारी आघाडी."
-        },
-        {
-          "id": "arogya",
-          "name": "आरोग्य सेना",
-          "tag": "आरोग्य सेवा",
-          "body": "वैद्यकीय मदत, आरोग्य शिबिरे आणि गरजूंना तातडीची सेवा देणारी आरोग्य आघाडी."
-        }
+        { "id": "shetkari-sena",        "name": "शिवसेना शेतकरी सेना",                          "tag": "शेतकरी आघाडी" },
+        { "id": "shikshak-sena",        "name": "महाराष्ट्र राज्य शिक्षक व शिक्षकेतर सेना",         "tag": "शिक्षण विभाग" },
+        { "id": "lokadhikar",           "name": "स्थानीय लोकाधिकार सेना महासंघ",                 "tag": "रोजगार हक्क" },
+        { "id": "dharmaveer-adhyatmik", "name": "शिवसेना धर्मवीर आध्यात्मिक सेना",                "tag": "आध्यात्मिक" },
+        { "id": "samajik-nyay",         "name": "सामाजिक न्याय विभाग",                          "tag": "सामाजिक न्याय" },
+        { "id": "obc-balutedar",        "name": "ओ.बी.सी. बारा बलुतेदार विभाग",                  "tag": "ओ.बी.सी. विभाग" },
+        { "id": "uttar-bhartiya",       "name": "उत्तर भारतीय संघटना",                          "tag": "भाषिक विभाग" },
+        { "id": "rajasthani",           "name": "राजस्थानी विभाग",                              "tag": "भाषिक विभाग" },
+        { "id": "mali-samaj",           "name": "माळी समाज क्रांती सेना",                         "tag": "समाज विभाग" },
+        { "id": "granthalay",           "name": "राज्य ग्रंथालय सेल",                             "tag": "ग्रंथालय" },
+        { "id": "khristi-minority",     "name": "ख्रिश्चन मायनॉरिटी सेल",                         "tag": "अल्पसंख्यांक" },
+        { "id": "sikh-punjabi",         "name": "सिख पंजाबी सेल",                                "tag": "अल्पसंख्यांक" },
+        { "id": "nabhik-samaj",         "name": "नाभिक समाज सेना",                              "tag": "समाज विभाग" },
+        { "id": "maji-sainik",          "name": "माजी सैनिक सेल",                               "tag": "माजी सैनिक" },
+        { "id": "udyog-sahakar",        "name": "शिव उद्योग सहकार सेना",                        "tag": "उद्योजक" },
+        { "id": "bandhkam-kamgar",      "name": "शिवसेना बांधकाम कामगार सेना",                   "tag": "कामगार आघाडी" },
+        { "id": "dakshin-bharat",       "name": "शिवसेना दक्षिण भारत विभाग",                     "tag": "प्रादेशिक" },
+        { "id": "telugu-samaj",         "name": "तेलगु समाज विभाग",                              "tag": "भाषिक विभाग" },
+        { "id": "kannada-samaj",        "name": "शिवसेना कन्नड समाज सेल",                       "tag": "भाषिक विभाग" },
+        { "id": "tamil-samaj",          "name": "शिवसेना तामिळ समाज सेल",                       "tag": "भाषिक विभाग" },
+        { "id": "kayde-vibhag",         "name": "शिवसेना प्रणित कायदे विभाग संघटना",             "tag": "कायदा विभाग" },
+        { "id": "adivasi-samaj",        "name": "शिवसेना आदिवासी समाज",                          "tag": "समाज विभाग" },
+        { "id": "alpsankhyak",          "name": "अल्पसंख्यांक सेना",                             "tag": "अल्पसंख्यांक" },
+        { "id": "grahak-sanrakshan",    "name": "शिवसेना ग्राहक संरक्षण कक्ष",                    "tag": "ग्राहक हक्क" },
+        { "id": "jhopadpatti",          "name": "झोपडपट्टी महासंघ महाराष्ट्र राज्य",                "tag": "झोपडपट्टी" },
+        { "id": "vjnt-vibhag",          "name": "व्ही.जे.एन.टी. (ब) विभाग, महाराष्ट्र राज्य",         "tag": "समाज विभाग" },
+        { "id": "vanjari-samaj",        "name": "वंजारी समाज सेना",                             "tag": "समाज विभाग" },
+        { "id": "doctor-sel",           "name": "शिवसेना डॉक्टर सेल",                            "tag": "वैद्यकीय" },
+        { "id": "gruh-nivaran",         "name": "शिवसेना प्रणित गृह संकुल निवारण कक्ष",            "tag": "गृहनिर्माण" },
+        { "id": "mehtar-balmiki",       "name": "शिवसेना प्रणित मेहतर, रुखी, बाल्मीकी विभाग",     "tag": "समाज विभाग" },
+        { "id": "bhatkya-vimukta",      "name": "शिवसेना प्रणित भटक्या विमुक्त जाती-जमाती विभाग", "tag": "समाज विभाग" },
+        { "id": "shiv-lahusena",        "name": "शिवसेना प्रणित शिव लहूसेना संघटना",              "tag": "रक्तदान" },
+        { "id": "shikshaketar-sena",    "name": "शिवसेना शिक्षकेत्तर सेना",                       "tag": "शिक्षण विभाग" },
+        { "id": "chitrapat-sena",       "name": "शिवसेना चित्रपट सेना",                          "tag": "मराठी चित्रपट" },
+        { "id": "vyapari-sena",         "name": "शिवसेना व्यापारी सेना",                         "tag": "व्यापारी" },
+        { "id": "nav-kranti-kamgar",    "name": "शिवसेना प्रणित नव क्रांती कामगार नाविक सेना",   "tag": "कामगार आघाडी" },
+        { "id": "anusuchit-jati",       "name": "शिवसेना अनुसूचित जाती विभाग",                  "tag": "समाज विभाग" },
+        { "id": "rajya-udyog",          "name": "शिवसेना राज्य उद्योग सेना",                     "tag": "उद्योजक" },
+        { "id": "gujarati-vibhag",      "name": "शिवसेना गुजराती विभाग",                        "tag": "भाषिक विभाग" },
+        { "id": "prasar-madhyam",       "name": "शिवसेना प्रसार माध्यम व प्रसिद्धी विभाग",        "tag": "माध्यम विभाग" },
+        { "id": "malyalam-samaj",       "name": "शिवसेना मलयाळम समाज सेल",                     "tag": "भाषिक विभाग" },
+        { "id": "sindhi-samaj",         "name": "शिवसेना प्रणित सिंधी समाज संघटना",              "tag": "भाषिक विभाग" },
+        { "id": "nepali-sena",          "name": "शिवसेना नेपाळी सेना",                          "tag": "भाषिक विभाग" },
+        { "id": "shaskiya-karmachari",  "name": "धर्मवीर आनंद दिघे शासकीय कर्मचारी सेवा संघ",    "tag": "शासकीय सेवक" },
+        { "id": "agri-koli",            "name": "शिवसेना आगरी कोळी समाज",                       "tag": "समाज विभाग" },
+        { "id": "nirankari-mandal",     "name": "संत निरंकारी मंडळ",                            "tag": "आध्यात्मिक" },
+        { "id": "sanrakshan-dal",       "name": "शिवसेना सरंक्षण दल प्रशिक्षण विभाग संघटना",     "tag": "प्रशिक्षण विभाग" },
+        { "id": "police-parivar",       "name": "शिवसेना पोलीस परिवार कल्याण विभाग संघटना",     "tag": "पोलीस परिवार" },
+        { "id": "sainik-aghadi",        "name": "शिवसेना सैनिक आघाडी संघटना",                  "tag": "सैनिक आघाडी" },
+        { "id": "shivkalin-maidani",    "name": "शिवकालीन मदानी खेळ प्रशिक्षण सेना",             "tag": "क्रीडा प्रशिक्षण" },
+        { "id": "shivpratap-sena",      "name": "शिवप्रताप सेना",                                "tag": "संघटना" },
+        { "id": "mahila-saksham",       "name": "महिला सक्षमीकरण विभाग",                        "tag": "महिला विभाग" },
+        { "id": "swayam-rojgar",        "name": "शिवसेना प्रणित स्वयं रोजगार कक्ष संघटना",      "tag": "स्वयंरोजगार" },
+        { "id": "shiv-udyog-cell",      "name": "शिवसेना प्रणित शिव उद्योग सेल",                "tag": "उद्योजक" },
+        { "id": "dighe-nagari-sahaayata","name": "धर्मवीर आनंद दिघे नागरी सहाय्यता कक्ष",        "tag": "नागरी सेवा" }
       ]
     },
     "en": {
@@ -302,60 +303,117 @@
         "closeLabel": "Close"
       },
       "orgs": [
-        {
-          "id": "bks",
-          "name": "Bharatiya Kamgar Sena",
-          "tag": "LABOUR WING",
-          "body": "Founded in 1968, the labour front fighting for the rightful entitlements of Marathi workers and employees."
-        },
-        {
-          "id": "sls",
-          "name": "Sthaniya Lokadhikar Samiti",
-          "tag": "EMPLOYMENT RIGHTS",
-          "body": "An organisation raising its voice for priority employment for local Marathi youth."
-        },
-        {
-          "id": "yuva",
-          "name": "Yuva Sena",
-          "tag": "YOUTH WING",
-          "body": "The youth of Shiv Sena from universities to the streets, standing firm behind every struggle and act of service."
-        },
-        {
-          "id": "bvs",
-          "name": "Bharatiya Vidyarthi Sena",
-          "tag": "STUDENT WING",
-          "body": "The student body that solves student issues across schools and colleges and shapes the next generation of leaders."
-        },
-        {
-          "id": "mahila",
-          "name": "Shiv Sena Mahila Aghadi",
-          "tag": "WOMEN'S WING",
-          "body": "A powerful front pursuing women's safety, empowerment, and equal opportunity."
-        },
-        {
-          "id": "udyog",
-          "name": "Shiv Udyog Sena",
-          "tag": "ENTREPRENEURS",
-          "body": "An organisation giving Marathi entrepreneurs opportunity, mentorship, and a platform."
-        },
-        {
-          "id": "shikshak",
-          "name": "Shikshak Sena",
-          "tag": "TEACHERS' WING",
-          "body": "A front working for the concerns of teachers and education-sector employees."
-        },
-        {
-          "id": "chitrapat",
-          "name": "Chitrapat Sena",
-          "tag": "MARATHI CINEMA",
-          "body": "The wing supporting Marathi cinema and standing up for the rights of artists."
-        },
-        {
-          "id": "arogya",
-          "name": "Arogya Sena",
-          "tag": "HEALTH SERVICES",
-          "body": "A health front offering medical aid, health camps, and urgent care to those in need."
-        }
+        { "id": "shetkari-sena",        "name": "Shiv Sena Shetkari Sena",                                  "tag": "FARMERS WING" },
+        { "id": "shikshak-sena",        "name": "Maharashtra Rajya Shikshak va Shikshaketar Sena",          "tag": "EDUCATION WING" },
+        { "id": "lokadhikar",           "name": "Sthaniya Lokadhikar Sena Mahasangh",                       "tag": "EMPLOYMENT RIGHTS" },
+        { "id": "dharmaveer-adhyatmik", "name": "Shiv Sena Dharmaveer Adhyatmik Sena",                       "tag": "SPIRITUAL" },
+        { "id": "samajik-nyay",         "name": "Social Justice Division",                                  "tag": "SOCIAL JUSTICE" },
+        { "id": "obc-balutedar",        "name": "OBC Bara Balutedar Division",                              "tag": "OBC WING" },
+        { "id": "uttar-bhartiya",       "name": "North Indian Organisation",                                "tag": "NORTH INDIAN" },
+        { "id": "rajasthani",           "name": "Rajasthani Division",                                      "tag": "RAJASTHANI" },
+        { "id": "mali-samaj",           "name": "Mali Samaj Kranti Sena",                                   "tag": "MALI COMMUNITY" },
+        { "id": "granthalay",           "name": "State Library Cell",                                       "tag": "LIBRARY" },
+        { "id": "khristi-minority",     "name": "Christian Minority Cell",                                  "tag": "MINORITY" },
+        { "id": "sikh-punjabi",         "name": "Sikh Punjabi Cell",                                        "tag": "MINORITY" },
+        { "id": "nabhik-samaj",         "name": "Nabhik Samaj Sena",                                        "tag": "COMMUNITY" },
+        { "id": "maji-sainik",          "name": "Ex-Servicemen Cell",                                       "tag": "EX-SERVICEMEN" },
+        { "id": "udyog-sahakar",        "name": "Shiv Udyog Sahakar Sena",                                  "tag": "ENTREPRENEURS" },
+        { "id": "bandhkam-kamgar",      "name": "Shiv Sena Bandhkam Kamgar Sena",                           "tag": "LABOUR WING" },
+        { "id": "dakshin-bharat",       "name": "Shiv Sena South India Division",                           "tag": "SOUTH INDIA" },
+        { "id": "telugu-samaj",         "name": "Telugu Samaj Division",                                    "tag": "TELUGU" },
+        { "id": "kannada-samaj",        "name": "Shiv Sena Kannada Samaj Cell",                             "tag": "KANNADA" },
+        { "id": "tamil-samaj",          "name": "Shiv Sena Tamil Samaj Cell",                               "tag": "TAMIL" },
+        { "id": "kayde-vibhag",         "name": "Shiv Sena Pranit Legal Affairs Wing",                      "tag": "LEGAL" },
+        { "id": "adivasi-samaj",        "name": "Shiv Sena Adivasi Samaj",                                  "tag": "TRIBAL" },
+        { "id": "alpsankhyak",          "name": "Minority Sena",                                            "tag": "MINORITY" },
+        { "id": "grahak-sanrakshan",    "name": "Shiv Sena Consumer Protection Cell",                       "tag": "CONSUMER" },
+        { "id": "jhopadpatti",          "name": "Slum Federation Maharashtra State",                        "tag": "SLUM WELFARE" },
+        { "id": "vjnt-vibhag",          "name": "V.J.N.T. (B) Division, Maharashtra State",                  "tag": "VJNT" },
+        { "id": "vanjari-samaj",        "name": "Vanjari Samaj Sena",                                       "tag": "COMMUNITY" },
+        { "id": "doctor-sel",           "name": "Shiv Sena Doctor Cell",                                    "tag": "MEDICAL" },
+        { "id": "gruh-nivaran",         "name": "Shiv Sena Housing Welfare Cell",                           "tag": "HOUSING" },
+        { "id": "mehtar-balmiki",       "name": "Shiv Sena Mehtar, Rukhi, Balmiki Division",                "tag": "COMMUNITY" },
+        { "id": "bhatkya-vimukta",      "name": "Shiv Sena Nomadic & De-Notified Tribes Division",          "tag": "NOMADIC TRIBES" },
+        { "id": "shiv-lahusena",        "name": "Shiv Sena Pranit Shiv Lahusena Organisation",              "tag": "BLOOD DONORS" },
+        { "id": "shikshaketar-sena",    "name": "Shiv Sena Shikshaketar Sena",                              "tag": "EDUCATION SUPPORT" },
+        { "id": "chitrapat-sena",       "name": "Shiv Sena Chitrapat Sena",                                 "tag": "MARATHI CINEMA" },
+        { "id": "vyapari-sena",         "name": "Shiv Sena Vyapari Sena",                                   "tag": "TRADERS" },
+        { "id": "nav-kranti-kamgar",    "name": "Shiv Sena Nav Kranti Kamgar Navik Sena",                   "tag": "LABOUR WING" },
+        { "id": "anusuchit-jati",       "name": "Shiv Sena Scheduled Caste Division",                       "tag": "SCHEDULED CASTE" },
+        { "id": "rajya-udyog",          "name": "Shiv Sena State Industry Sena",                            "tag": "INDUSTRY" },
+        { "id": "gujarati-vibhag",      "name": "Shiv Sena Gujarati Division",                              "tag": "GUJARATI" },
+        { "id": "prasar-madhyam",       "name": "Shiv Sena Media & Publicity Division",                     "tag": "MEDIA" },
+        { "id": "malyalam-samaj",       "name": "Shiv Sena Malayalam Samaj Cell",                           "tag": "MALAYALAM" },
+        { "id": "sindhi-samaj",         "name": "Shiv Sena Pranit Sindhi Samaj Organisation",               "tag": "SINDHI" },
+        { "id": "nepali-sena",          "name": "Shiv Sena Nepali Sena",                                    "tag": "NEPALI" },
+        { "id": "shaskiya-karmachari",  "name": "Dharmaveer Anand Dighe Govt. Employees Service Union",     "tag": "GOVT EMPLOYEES" },
+        { "id": "agri-koli",            "name": "Shiv Sena Agri-Koli Samaj",                                "tag": "AGRI-KOLI" },
+        { "id": "nirankari-mandal",     "name": "Sant Nirankari Mandal",                                    "tag": "SPIRITUAL" },
+        { "id": "sanrakshan-dal",       "name": "Shiv Sena Defence Training Division",                      "tag": "DEFENCE TRAINING" },
+        { "id": "police-parivar",       "name": "Shiv Sena Police Family Welfare Division",                 "tag": "POLICE FAMILY" },
+        { "id": "sainik-aghadi",        "name": "Shiv Sena Sainik Aghadi Organisation",                     "tag": "DEFENCE FRONT" },
+        { "id": "shivkalin-maidani",    "name": "Shivkalin Maidani Khel Training Sena",                     "tag": "SPORTS" },
+        { "id": "shivpratap-sena",      "name": "Shivpratap Sena",                                          "tag": "ORGANISATION" },
+        { "id": "mahila-saksham",       "name": "Women Empowerment Division",                               "tag": "WOMEN" },
+        { "id": "swayam-rojgar",        "name": "Shiv Sena Self-Employment Cell",                           "tag": "SELF-EMPLOYMENT" },
+        { "id": "shiv-udyog-cell",      "name": "Shiv Sena Shiv Udyog Cell",                                "tag": "INDUSTRY" },
+        { "id": "dighe-nagari-sahaayata","name": "Dharmaveer Anand Dighe Civic Assistance Cell",            "tag": "CIVIC SERVICE" }
+      ]
+    }
+  },
+  "salangna": {
+    "mr": {
+      "eyebrow": "शिवसेना परिवार",
+      "title": "सलंग्न सेना",
+      "lede": "शिवसेनेच्या विचाराशी सलंग्न असलेल्या आणि विविध क्षेत्रांत समाजासाठी कार्यरत असणाऱ्या सेना — प्रत्येक घटकाचा आवाज पक्षाच्या परिवारापर्यंत पोहोचतो.",
+      "readMoreLabel": "अधिक वाचा",
+      "joinLabel": "सहभागी व्हा",
+      "orgs": [
+        { "id": "rashtriya-karmachari",     "name": "शिवसेना राष्ट्रीय कर्मचारी सेना",                     "tag": "कर्मचारी" },
+        { "id": "sahakar-sena",             "name": "शिवसेना सहकार सेना",                                 "tag": "सहकार" },
+        { "id": "shiv-kamgar",              "name": "शिव कामगार सेना",                                    "tag": "कामगार आघाडी" },
+        { "id": "samarthya-sanghatana",     "name": "शिवसेना प्रणित शिव सामर्थ्य संघटना",                 "tag": "संघटना" },
+        { "id": "bhartiya-kamgar-sanghatana","name": "शिवसेना प्रणित भारतीय कामगार संघटना",               "tag": "कामगार आघाडी" },
+        { "id": "jay-mh-mathadi",           "name": "शिवसेना जय महाराष्ट्र माथाडी आणि जनरल कामगार सेना",   "tag": "कामगार आघाडी" },
+        { "id": "feriwala-sena",            "name": "शिव फेरीवाला सेना",                                  "tag": "फेरीवाला" },
+        { "id": "mehtar-safai-cell",        "name": "शिवसेना महाराष्ट्र मुस्लिम मेहत्तर सफाई कामगार संघटना सेल", "tag": "अल्पसंख्यांक" },
+        { "id": "vahatuk-sena",             "name": "शिव वाहतूक सेना",                                   "tag": "वाहतूक" },
+        { "id": "charmodyog-kamgar",        "name": "स्वाभिमानी चर्मोद्योग कामगार संस्था",                "tag": "कामगार आघाडी" },
+        { "id": "hindusthan-chitrapat",     "name": "हिंदुस्थान चित्रपट कामगार संघटना",                  "tag": "चित्रपट" },
+        { "id": "bhim-sena-foundation",     "name": "शिव भीम सेना फाऊंडेशन",                             "tag": "संघटना" },
+        { "id": "republican-charmkar",      "name": "रिपब्लिकन चर्मकार महासंघ, महाराष्ट्र राज्य",         "tag": "समाज विभाग" },
+        { "id": "bhartiya-lokshakti",       "name": "भारतीय लोकशक्ती पक्ष",                              "tag": "संघटना" },
+        { "id": "cable-sena",               "name": "अखिल भारतीय केबल सेना",                              "tag": "केबल" },
+        { "id": "mahila-kamgar",            "name": "महिला कामगार संघटना महाराष्ट्र राज्य",                "tag": "महिला विभाग" },
+        { "id": "rashtriya-kamgar-union",   "name": "राष्ट्रीय कामगार युनियन",                            "tag": "कामगार आघाडी" },
+        { "id": "bandhkam-udyog",           "name": "महाराष्ट्र बांधकाम उद्योग सेना",                     "tag": "बांधकाम" }
+      ]
+    },
+    "en": {
+      "eyebrow": "SHIV SENA PARIVAR",
+      "title": "Allied Senas",
+      "lede": "Senas aligned with Shiv Sena's vision and active in different fields — every voice of every constituency reaches the party family.",
+      "readMoreLabel": "Read More",
+      "joinLabel": "Join Now",
+      "orgs": [
+        { "id": "rashtriya-karmachari",     "name": "Shiv Sena National Employees Sena",                  "tag": "EMPLOYEES" },
+        { "id": "sahakar-sena",             "name": "Shiv Sena Sahakar Sena",                             "tag": "COOPERATIVE" },
+        { "id": "shiv-kamgar",              "name": "Shiv Kamgar Sena",                                   "tag": "LABOUR WING" },
+        { "id": "samarthya-sanghatana",     "name": "Shiv Sena Pranit Shiv Samarthya Organisation",        "tag": "ORGANISATION" },
+        { "id": "bhartiya-kamgar-sanghatana","name": "Shiv Sena Pranit Bhartiya Kamgar Sanghatana",        "tag": "LABOUR WING" },
+        { "id": "jay-mh-mathadi",           "name": "Shiv Sena Jay Maharashtra Mathadi & General Kamgar Sena","tag": "LABOUR WING" },
+        { "id": "feriwala-sena",            "name": "Shiv Feriwala Sena",                                 "tag": "HAWKERS" },
+        { "id": "mehtar-safai-cell",        "name": "Shiv Sena Maharashtra Muslim Mehtar Safai Kamgar Cell","tag": "MINORITY" },
+        { "id": "vahatuk-sena",             "name": "Shiv Vahatuk Sena",                                  "tag": "TRANSPORT" },
+        { "id": "charmodyog-kamgar",        "name": "Swabhimani Charmodyog Kamgar Sanstha",                "tag": "LABOUR WING" },
+        { "id": "hindusthan-chitrapat",     "name": "Hindusthan Chitrapat Kamgar Sanghatana",              "tag": "CINEMA" },
+        { "id": "bhim-sena-foundation",     "name": "Shiv Bhim Sena Foundation",                          "tag": "ORGANISATION" },
+        { "id": "republican-charmkar",      "name": "Republican Charmkar Mahasangh, Maharashtra State",    "tag": "COMMUNITY" },
+        { "id": "bhartiya-lokshakti",       "name": "Bhartiya Lokshakti Paksha",                           "tag": "ORGANISATION" },
+        { "id": "cable-sena",               "name": "Akhil Bhartiya Cable Sena",                           "tag": "CABLE" },
+        { "id": "mahila-kamgar",            "name": "Women Workers' Organisation Maharashtra",             "tag": "WOMEN" },
+        { "id": "rashtriya-kamgar-union",   "name": "Rashtriya Kamgar Union",                              "tag": "LABOUR WING" },
+        { "id": "bandhkam-udyog",           "name": "Maharashtra Bandhkam Udyog Sena",                     "tag": "CONSTRUCTION" }
       ]
     }
   },
