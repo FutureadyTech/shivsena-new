@@ -49,31 +49,105 @@
   letter-spacing: -0.015em;
 }
 
-/* Platform handles row */
+/* ─── Platform tab buttons (top-right of the section) ──────
+   <button> elements that switch which feed is shown below.
+   States:
+     - default : neutral outlined chip
+     - hover   : saffron tint, slight lift
+     - active  : saffron filled, white icon, with a glowing
+                 halo ring so the selection is unmistakable
+   The selectors below are scoped tightly to `button.social__handle`
+   so they beat the generic <button> reset. */
 .social__handles {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  align-items: center;
 }
 
-.social__handle {
-  width: 44px;
-  height: 44px;
-  border: 1.5px solid var(--hairline-strong);
+button.social__handle {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1.5px solid rgba(26, 20, 16, 0.14);
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink-soft, #2E2820);
+  cursor: pointer;
+  font: inherit;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink-soft);
-  text-decoration: none;
-  transition: all 0.3s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s cubic-bezier(0.2, 0.85, 0.3, 1),
+    box-shadow 0.3s ease;
 }
 
-.social__handle svg { width: 18px; height: 18px; }
+button.social__handle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s ease;
+}
 
-.social__handle:hover {
-  border-color: var(--saffron);
-  color: var(--saffron);
-  background: rgba(255, 107, 26, 0.05);
+/* Hover: light saffron tint, subtle lift. */
+button.social__handle:hover {
+  background: rgba(255, 107, 26, 0.08);
+  border-color: rgba(196, 77, 14, 0.55);
+  color: var(--saffron-on-light, #C44D0E);
+  transform: translateY(-2px);
+}
+button.social__handle:hover svg {
+  transform: scale(1.06);
+}
+
+/* Keyboard focus — same visual cue as hover plus a focus ring. */
+button.social__handle:focus-visible {
+  outline: none;
+  border-color: var(--saffron, #FF6B1A);
+  box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.22);
+}
+
+/* Active platform: saffron filled, white icon, glow halo
+   that reads as "this tab is selected" even on small screens. */
+button.social__handle.social__handle--active {
+  background: var(--saffron, #FF6B1A);
+  border-color: var(--saffron, #FF6B1A);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 4px rgba(255, 107, 26, 0.18),
+    0 10px 22px -8px rgba(255, 107, 26, 0.55);
+}
+button.social__handle.social__handle--active:hover {
+  background: var(--saffron-deep, #C44D0E);
+  border-color: var(--saffron-deep, #C44D0E);
+  color: #FFFFFF;
+}
+button.social__handle.social__handle--active svg {
+  transform: scale(1.05);
+}
+
+/* Decorative pulse ring on the active tab — purely visual, points
+   at the selected platform without competing with the icon. */
+button.social__handle.social__handle--active::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 107, 26, 0.35);
+  pointer-events: none;
+  animation: handlePulse 2.2s ease-in-out infinite;
+}
+@keyframes handlePulse {
+  0%, 100% { transform: scale(1);   opacity: 0.55; }
+  50%      { transform: scale(1.08); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  button.social__handle.social__handle--active::before { animation: none; }
+  button.social__handle { transition: none; }
 }
 
 /* ─── Grid ─── */
@@ -83,24 +157,120 @@
   gap: 22px;
 }
 
-/* ─── Elfsight widget container ─────────────────────────────────
-   The widget injects its own internal grid + styles, so we just
-   give it room to breathe and a subtle reveal animation. */
-.social__elfsight {
+/* ─── Active-platform feed body ─────────────────────────────────
+   The selected tab renders ONE native embed inside this container:
+   Behold for Instagram, Page Plugin iframe for Facebook, Twitter
+   widgets.js timeline for X, YouTube iframe for YouTube. Each embed
+   manages its own internal styling — we just give the container
+   room to breathe + the reveal-on-scroll animation. */
+.social__feed-body {
   width: 100%;
-  min-height: 320px;
+  min-height: 480px;
+  display: flex;
+  justify-content: center;
 }
-.social__elfsight.reveal {
+.social__feed-body.reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.social__elfsight.is-revealed {
+.social__feed-body.is-revealed {
   opacity: 1;
   transform: translateY(0);
 }
 @media (prefers-reduced-motion: reduce) {
-  .social__elfsight.reveal { opacity: 1; transform: none; transition: none; }
+  .social__feed-body.reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Inner slot wrapping the keyed embed component — full width so
+   the Elfsight grid (or any future per-platform widget) gets the
+   entire section. */
+.social__feed-slot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Embed-specific containers — fill the feed-body box edge-to-edge. */
+.social__embed {
+  width: 100%;
+}
+
+/* Facebook iframe — official Page Plugin renders at 500px max. */
+.social__fb-iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Instagram reels iframe (SociableKit) — full-width, tall. */
+.social__ig-iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* YouTube featured video — 16:9 responsive wrapper. */
+.social__yt-iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -18px rgba(196, 77, 14, 0.30);
+}
+.social__yt-iframe-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* "Coming soon" placeholder shown when a per-platform widget ID
+   hasn't been configured yet. */
+.social__placeholder {
+  width: 100%;
+  max-width: 520px;
+  padding: 56px 40px;
+  background: rgba(255, 107, 26, 0.04);
+  border: 1px dashed rgba(196, 77, 14, 0.28);
+  border-radius: 14px;
+  text-align: center;
+  color: var(--ink-soft, #2E2820);
+}
+.social__placeholder-msg {
+  margin: 0 0 18px;
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+.social__placeholder-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  background: var(--saffron, #FF6B1A);
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.social__placeholder-cta:hover {
+  background: var(--saffron-deep, #C44D0E);
+  transform: translateY(-1px);
 }
 
 /* ═══════════════════════════════════════════════════════════════

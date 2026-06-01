@@ -1,0 +1,134 @@
+{
+  "topLeader": [
+    {
+      "id": "topLeader-1",
+      "name": "श्री. एकनाथ संभाजी शिंदे — मतदारसंघ : १४७-कोपरी पाचपाखाडी, ठाणे",
+      "note": "उपमुख्यमंत्री"
+    }
+  ],
+  "nationalSpokesperson": [
+    {
+      "id": "nationalSpokesperson-1",
+      "name": "श्रीम. शायना एनसी",
+      "note": "राष्ट्रीय प्रवक्त्या"
+    }
+  ],
+  "spokespersons": [
+    {
+      "id": "spokespersons-1",
+      "name": "श्री. दीपक केसरकर",
+      "note": "आमदार",
+      "photo": "/leaders/Mla%20Photos/22_Shri%20Deepak%20Kesarkar.webp",
+      "phone": "9422096887"
+    },
+    {
+      "id": "spokespersons-2",
+      "name": "श्री. उदय सामंत",
+      "note": "मंत्री",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp",
+      "phone": "9860390909"
+    },
+    {
+      "id": "spokespersons-3",
+      "name": "श्री. किरण पावसकर"
+    },
+    {
+      "id": "spokespersons-4",
+      "name": "श्री. नरेश म्हस्के",
+      "note": "खासदार",
+      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
+    },
+    {
+      "id": "spokespersons-5",
+      "name": "सौ. शितल म्हात्रे",
+      "phone": "9870337777"
+    },
+    {
+      "id": "spokespersons-6",
+      "name": "श्री. राहुल लोंढे"
+    },
+    {
+      "id": "spokespersons-7",
+      "name": "श्री. संजीव बबनराव भोर"
+    },
+    {
+      "id": "spokespersons-8",
+      "name": "श्री. विजय शिवतारे",
+      "note": "आमदार",
+      "photo": "/leaders/Mla%20Photos/23_Shri%20Vijay%20Shivtare.webp",
+      "phone": "9820081817"
+    },
+    {
+      "id": "spokespersons-9",
+      "name": "श्री. गुलाबचंद दुबे",
+      "note": "हिंदी प्रवक्ते"
+    },
+    {
+      "id": "spokespersons-10",
+      "name": "श्री. केदार शिवकुमार काळे"
+    },
+    {
+      "id": "spokespersons-11",
+      "name": "श्री. संजय शिरसाट",
+      "note": "मंत्री",
+      "photo": "/leaders/Mla%20Photos/50_Shri%20%20Sanjay%20Shirsat%20(Minister).webp",
+      "phone": "9422203930"
+    },
+    {
+      "id": "spokespersons-12",
+      "name": "डॉ. ज्योती नागनाथ वाघमारे"
+    },
+    {
+      "id": "spokespersons-13",
+      "name": "सौ. मनिषा कायंदे",
+      "note": "वि.स.स."
+    },
+    {
+      "id": "spokespersons-14",
+      "name": "श्री. अरुण सावंत"
+    },
+    {
+      "id": "spokespersons-15",
+      "name": "श्रीम. सुशीबेन शहा",
+      "note": "हिंदी / इंग्रजी"
+    },
+    {
+      "id": "spokespersons-16",
+      "name": "श्री. सुशील व्यास",
+      "note": "हिंदी / इंग्रजी"
+    },
+    {
+      "id": "spokespersons-17",
+      "name": "श्री. किरण सोनावणे"
+    },
+    {
+      "id": "spokespersons-18",
+      "name": "श्री. राजीव साबळे"
+    },
+    {
+      "id": "spokespersons-19",
+      "name": "डॉ. राजु वाघमारे"
+    },
+    {
+      "id": "spokespersons-20",
+      "name": "श्री. शिरीष दत्तात्रय शिवदे"
+    },
+    {
+      "id": "spokespersons-21",
+      "name": "सौ. संजना संजय घाडी",
+      "phone": "9702251818"
+    },
+    {
+      "id": "spokespersons-22",
+      "name": "श्री. अक्षयमहाराज भोसले"
+    },
+    {
+      "id": "spokespersons-23",
+      "name": "श्री. प्रकाश महाजन"
+    },
+    {
+      "id": "spokespersons-24",
+      "name": "श्री. अविनाश बर्वे"
+    }
+  ]
+}

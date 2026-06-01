@@ -38,7 +38,9 @@ export const DISTRICTS = {
   'dhule': { mr: 'धुळे', en: 'Dhule', division: 'nashik' },
   'nandurbar': { mr: 'नंदुरबार', en: 'Nandurbar', division: 'nashik' },
   'jalgaon': { mr: 'जळगाव', en: 'Jalgaon', division: 'nashik' },
-  'ahmadnagar': { mr: 'अहमदनगर', en: 'Ahmadnagar', division: 'nashik' },
+  /* Renamed officially to "Ahilyanagar" — slug kept as 'ahmadnagar'
+     so existing URLs / deep-links don't break. */
+  'ahmadnagar': { mr: 'अहिल्यानगर', en: 'Ahilyanagar', division: 'nashik' },
 
   /* ── Marathwada ── */
   'aurangabad': { mr: 'छत्रपती संभाजीनगर', en: 'Chh. Sambhajinagar', division: 'marathwada' },

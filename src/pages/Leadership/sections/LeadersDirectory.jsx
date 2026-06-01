@@ -5,6 +5,7 @@ import { useLanguage } from '../../../i18n/LanguageContext.jsx';
 import leadershipContent from '../../../content/leadership.json';
 import mlasByDistrict from '../../../content/mlas-by-district.json';
 import leadersByDistrict from '../../../content/leaders-by-district.json';
+import stateLeaders from '../../../content/state-leaders.json';
 import { DISTRICTS } from '../../../config/districts.js';
 import { memberFor } from '../utils/transliterate.js';
 import LeaderPopup from '../../Home/sections/LeaderPopup.jsx';
@@ -39,8 +40,11 @@ const STATE_CATEGORIES = [
   'yuvaSena',
 ];
 
-/* The 9 district-level sections, in the exact order requested by client. */
+/* The district-level sections, in the order requested by client.
+   "ministers" was added at the top per the new master XLSX (11 MLAs
+   who also hold cabinet posts). */
 const DISTRICT_CATEGORIES = [
+  'ministers', // मंत्री
   'mp', // खासदार
   'mla', // आमदार
   'leaders', // नेते
@@ -50,6 +54,17 @@ const DISTRICT_CATEGORIES = [
   'lokSabhaContactHead', // लोकसभा संपर्क प्रमुख
   'districtHead', // जिल्हाप्रमुख
   'womenDistrictHeads', // महिला जिल्हाप्रमुख
+];
+
+/* State-level sections rendered ABOVE the district carousels so
+   the chief leader + national/state spokespersons are always
+   visible regardless of district selection. Data comes from
+   state-leaders.json (built from the राज्यस्तरीय sheet of the
+   master XLSX). */
+const STATE_LEVEL_CATEGORIES = [
+  'topLeader',            // शिवसेना मुख्य नेते (Shinde)
+  'nationalSpokesperson', // राष्ट्रीय प्रवक्त्या
+  'spokespersons',        // शिवसेना प्रवक्ते
 ];
 
 /* When a category has no real entries for this district, show this
@@ -203,25 +218,52 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
       };
     };
 
+    /* State-level groups pull from state-leaders.json. These render
+       above the district section so the chief leader and statewide
+       spokespersons are always visible. Empty arrays fall back to
+       placeholders via the same buildGroup-style logic. */
+    const buildStateGroup = (key) => {
+      const items = (stateLeaders && stateLeaders[key]) || [];
+      const isEmpty = items.length === 0;
+      return {
+        key,
+        label: categoryNames[key] || key,
+        items: (isEmpty ? placeholdersFor(key) : items).slice(0, ITEMS_PER_CATEGORY),
+        isEmpty,
+      };
+    };
+
+    const stateSection = {
+      id: 'state',
+      title: lang === 'mr' ? 'शिवसेनेचे अधिकृत प्रतिनिधी' : 'Official Representatives of Shiv Sena',
+      subtitle: '',
+      groups: STATE_LEVEL_CATEGORIES.map(buildStateGroup),
+    };
+
     if (isAllMode) {
-      /* All-mode: the page H2 ALREADY shows "सर्व शिवसेना नेतृत्व",
-         so we leave title/subtitle empty here. The inner group head
-         (rule + title + subtitle + rule) is suppressed below when
-         there is no title — avoids the duplicated header band. */
-      return [{
-        id: 'all',
-        title: '',
-        subtitle: '',
-        groups: DISTRICT_CATEGORIES.map(buildGroup),
-      }];
+      /* All-mode: the page H2 ALREADY shows the slogan title, so
+         the all-mode district block leaves title/subtitle empty.
+         The state-level block keeps its own header band. */
+      return [
+        stateSection,
+        {
+          id: 'all',
+          title: '',
+          subtitle: '',
+          groups: DISTRICT_CATEGORIES.map(buildGroup),
+        },
+      ];
     }
 
-    return [{
-      id: 'district',
-      title: t.regionalHeader,
-      subtitle: t.regionalSubtitle,
-      groups: DISTRICT_CATEGORIES.map(buildGroup),
-    }];
+    return [
+      stateSection,
+      {
+        id: 'district',
+        title: t.regionalHeader,
+        subtitle: t.regionalSubtitle,
+        groups: DISTRICT_CATEGORIES.map(buildGroup),
+      },
+    ];
   }, [activeDistrict, categoryNames, lang, t.regionalHeader, t.regionalSubtitle, isAllMode, allModeTitle, allModeSubtitle]);
 
   const title = isAllMode
@@ -237,14 +279,7 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
  <div className="dir-section__inner">
 
  <div ref={headerRef} className="dir-section__header reveal">
- <div className="dir-section__eyebrow">
- <span className="dir-section__eyebrow-line" />
- <span>{t.eyebrow}</span>
- </div>
  <h2 key={`title-${activeDistrict}`} className="dir-section__title">{title}</h2>
- {subtitle && (
- <p key={`sub-${activeDistrict}`} className="dir-section__subtitle">{subtitle}</p>
- )}
  </div>
 
  <div className="dir-categories" key={`cats-${activeDistrict}`}>

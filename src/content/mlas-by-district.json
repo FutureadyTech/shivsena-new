@@ -2,780 +2,911 @@
   "mumbai": {
     "mla": [
       {
-        "id": "mla-154",
-        "name": "Shri. Prakash Surve",
+        "id": "mla-mumbai-1",
+        "name": "श्री. प्रकाश सुर्वे",
+        "constituency": "मागाठाणे",
         "constituencyNo": 154,
-        "constituency": "Magathane",
+        "photo": "/leaders/Mla%20Photos/01_Shri%20Prakash%20Surve.webp",
         "social": {
           "instagram": "https://www.instagram.com/miprakashsurve?igsh=aWpxYmN4cjBoamRj",
           "facebook": "https://www.facebook.com/share/1AzXhQmGvj/",
           "twitter": "https://x.com/miprakashsurve"
         },
-        "photo": "/leaders/Mla%20Photos/01_Shri%20Prakash%20Surve.webp"
+        "phone": "9821034923"
       },
       {
-        "id": "mla-157",
-        "name": "Shri. Ashok Patil",
+        "id": "mla-mumbai-2",
+        "name": "श्री. अशोक पाटील",
+        "constituency": "भांडुप पश्चिम",
         "constituencyNo": 157,
-        "constituency": "Bhandup (West)",
+        "photo": "/leaders/Mla%20Photos/02_Shri%20%20Ashok%20Patil.webp",
         "social": {
           "instagram": "https://www.instagram.com/mla_ashokdharmrajpatil?igsh=MXB5ZTl1b2VwdmZzdQ%3D%3D",
           "facebook": "https://www.facebook.com/share/1ELajGA6yD/?mibextid=wwXIfr",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/02_Shri%20%20Ashok%20Patil.webp"
+        "phone": "9821143980"
       },
       {
-        "id": "mla-166",
-        "name": "Shri. Murji Patel",
+        "id": "mla-mumbai-3",
+        "name": "श्री. मुरजी पटेल",
+        "constituency": "अंधेरी पूर्व",
         "constituencyNo": 166,
-        "constituency": "Andheri (East)",
+        "photo": "/leaders/Mla%20Photos/03_Shri%20%20Murji%20Patel.webp",
         "social": {
           "instagram": "",
           "facebook": "",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/03_Shri%20%20Murji%20Patel.webp"
+        "phone": "9820130950"
       },
       {
-        "id": "mla-168",
-        "name": "Shri. Dilip Lande",
+        "id": "mla-mumbai-4",
+        "name": "श्री. दिलीप लांडे",
+        "constituency": "चांदिवली",
         "constituencyNo": 168,
-        "constituency": "Chandivali",
+        "photo": "/leaders/Mla%20Photos/04_Shri%20Dilip%20Lande.webp",
         "social": {
           "instagram": "https://www.instagram.com/dilipmama_lande?utm_source=qr&igsh=MWh0b3I0dDB5eDU2NQ==",
           "facebook": "https://www.facebook.com/share/17LnCzXGoH/",
           "twitter": "https://x.com/Mi_DilipLande"
         },
-        "photo": "/leaders/Mla%20Photos/04_Shri%20Dilip%20Lande.webp"
+        "phone": "9833201646"
       },
       {
-        "id": "mla-173",
-        "name": "Shri. Tukaram Kate",
+        "id": "mla-mumbai-5",
+        "name": "श्री. तुकाराम काते",
+        "constituency": "चेंबूर",
         "constituencyNo": 173,
-        "constituency": "Chembur",
+        "photo": "/leaders/Mla%20Photos/05_Shri%20Tukaram%20Kate.webp",
         "social": {
           "instagram": "",
           "facebook": "",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/05_Shri%20Tukaram%20Kate.webp"
+        "phone": "8850309090 / 9702490887"
       },
       {
-        "id": "mla-174",
-        "name": "Shri. Mangesh Kudalkar",
+        "id": "mla-mumbai-6",
+        "name": "श्री. मंगेश कुडाळकर",
+        "constituency": "कुर्ला, अजा",
         "constituencyNo": 174,
-        "constituency": "Kurla (SC)",
+        "photo": "/leaders/Mla%20Photos/06_Shri%20Mangesh%20Kudalkar.webp",
         "social": {
           "instagram": "https://www.instagram.com/mlamangesh?igsh=NzVueWMxYjM3dDM5",
           "facebook": "https://www.facebook.com/share/1Eo4GT7cXV/?mibextid=wwXIfr",
           "twitter": "https://x.com/mlamangesh?s=21"
         },
-        "photo": "/leaders/Mla%20Photos/06_Shri%20Mangesh%20Kudalkar.webp"
+        "phone": "9322278925"
+      },
+      {
+        "id": "mla-mumbai-7",
+        "name": "प्रा.डॉ. मनीषा कायंदे",
+        "note": "विधानपरिषद — मुंबई शहर, मुख्य प्रतोद",
+        "photo": "/leaders/07_%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%20%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF/03_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%20%E0%A4%A1%E0%A5%89%20%20%E0%A4%AE%E0%A4%A8%E0%A5%80%E0%A4%B7%E0%A4%BE%20%E0%A4%95%E0%A4%BE%E0%A4%AF%E0%A4%82%E0%A4%A6%E0%A5%87.webp"
       }
     ]
   },
   "thane": {
     "mla": [
       {
-        "id": "mla-134",
-        "name": "Shri. Shantaram More",
-        "constituencyNo": 134,
-        "constituency": "Bhiwandi Rural (ST)",
+        "id": "mla-thane-1",
+        "name": "श्री. एकनाथ संभाजी शिंदे",
+        "constituency": "कोपरी पाचपाखाडी",
+        "constituencyNo": 147,
+        "photo": "/leaders/Mla%20Photos/07_Shri%20Eknath%20Sambhaji%20Shinde%20(Main%20Leader%20Dy%20CM).webp",
         "social": {
-          "instagram": "https://www.instagram.com/mla_shantarammore?igsh=MTFsb2JsZjdjbTcxMw==",
-          "facebook": "https://www.facebook.com/share/1AGL77yDX2/",
+          "instagram": "",
+          "facebook": "",
           "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/10_Shri%20Shantaram%20More.webp"
+        }
       },
       {
-        "id": "mla-138",
-        "name": "Shri. Vishwanath Bhoir",
-        "constituencyNo": 138,
-        "constituency": "Kalyan West",
-        "social": {
-          "instagram": "https://www.instagram.com/mla_vishwanathbhoir?igsh=MWdheXJncXZleDFsOQ==",
-          "facebook": "https://www.facebook.com/share/1CSrSAQn97/?mibextid=wwXIfr",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/11_Shri.%20Vishwanath%20Bhoir.webp"
-      },
-      {
-        "id": "mla-140",
-        "name": "Dr. Shri. Balaji Kinikar",
-        "constituencyNo": 140,
-        "constituency": "Ambernath",
-        "social": {
-          "instagram": "https://www.instagram.com/drbalajikinikar/",
-          "facebook": "https://www.facebook.com/balaji.kinikar.9",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/12_Dr%20Shri%20Balaji%20Kinikar.webp"
-      },
-      {
-        "id": "mla-144",
-        "name": "Shri. Rajesh More",
-        "constituencyNo": 144,
-        "constituency": "Kalyan Rural",
-        "social": {
-          "instagram": "https://www.instagram.com/rajeshmore489?igsh=MTAyb3pncW03amdlbQ==",
-          "facebook": "https://www.facebook.com/share/14Zj7aCuVJS/",
-          "twitter": "https://x.com/RAJESHMORE76"
-        },
-        "photo": "/leaders/Mla%20Photos/13_Shri%20Rajesh%20More.webp"
-      },
-      {
-        "id": "mla-146",
-        "name": "Shri. Pratap Sarnaik (Minister)",
+        "id": "mla-thane-2",
+        "name": "श्री. प्रताप सरनाईक",
+        "constituency": "ओवळा-माजिवडा, मंत्री",
         "constituencyNo": 146,
-        "constituency": "Ovala-Majiwada",
+        "photo": "/leaders/Mla%20Photos/14_Shri%20Pratap%20Sarnaik%20(Minister).webp",
         "social": {
           "instagram": "https://www.instagram.com/pratap_sarnaik?igsh=MXNudmFvZTBlY3Qxbw==",
           "facebook": "https://www.facebook.com/share/1HyWSCtwR6/",
           "twitter": "https://x.com/PratapSarnaik"
         },
-        "photo": "/leaders/Mla%20Photos/14_Shri%20Pratap%20Sarnaik%20(Minister).webp"
+        "phone": "9821505000"
       },
       {
-        "id": "mla-147",
-        "name": "Shri. Eknath Sambhaji Shinde (Main Leader/Dy. CM)",
-        "constituencyNo": 147,
-        "constituency": "Kopri Pachpakhadi",
+        "id": "mla-thane-3",
+        "name": "श्री. शांताराम मोरे",
+        "constituency": "भिवंडी ग्रामीण, अ.ज.",
+        "constituencyNo": 134,
+        "photo": "/leaders/Mla%20Photos/10_Shri%20Shantaram%20More.webp",
         "social": {
-          "instagram": "",
-          "facebook": "",
+          "instagram": "https://www.instagram.com/mla_shantarammore?igsh=MTFsb2JsZjdjbTcxMw==",
+          "facebook": "https://www.facebook.com/share/1AGL77yDX2/",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/07_Shri%20Eknath%20Sambhaji%20Shinde%20(Main%20Leader%20Dy%20CM).webp"
+        "phone": "9503591581"
+      },
+      {
+        "id": "mla-thane-4",
+        "name": "श्री. विश्वनाथ भोईर",
+        "constituency": "कल्याण पश्चिम",
+        "constituencyNo": 138,
+        "photo": "/leaders/Mla%20Photos/11_Shri.%20Vishwanath%20Bhoir.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/mla_vishwanathbhoir?igsh=MWdheXJncXZleDFsOQ==",
+          "facebook": "https://www.facebook.com/share/1CSrSAQn97/?mibextid=wwXIfr",
+          "twitter": ""
+        },
+        "phone": "9819623160"
+      },
+      {
+        "id": "mla-thane-5",
+        "name": "डॉ. बालाजी किणीकर",
+        "constituency": "अंबरनाथ",
+        "constituencyNo": 140,
+        "photo": "/leaders/Mla%20Photos/12_Dr%20Shri%20Balaji%20Kinikar.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/drbalajikinikar/",
+          "facebook": "https://www.facebook.com/balaji.kinikar.9",
+          "twitter": ""
+        },
+        "phone": "9823195200"
+      },
+      {
+        "id": "mla-thane-6",
+        "name": "श्री. राजेश मोरे",
+        "constituency": "कल्याण ग्रामीण",
+        "constituencyNo": 144,
+        "photo": "/leaders/Mla%20Photos/13_Shri%20Rajesh%20More.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/rajeshmore489?igsh=MTAyb3pncW03amdlbQ==",
+          "facebook": "https://www.facebook.com/share/14Zj7aCuVJS/",
+          "twitter": "https://x.com/RAJESHMORE76"
+        },
+        "phone": "9820337684"
       }
     ]
   },
   "palghar": {
     "mla": [
       {
-        "id": "mla-130",
-        "name": "Shri. Rajendra Gavit",
+        "id": "mla-palghar-1",
+        "name": "श्री. राजेंद्र गावित",
+        "constituency": "पालघर, अ.ज.",
         "constituencyNo": 130,
-        "constituency": "Palghar (ST)",
+        "photo": "/leaders/Mla%20Photos/08_Shri%20Rajendra%20Gavit.webp",
         "social": {
           "instagram": "https://www.instagram.com/rajendra1gavit/",
           "facebook": "https://www.facebook.com/gavitsena",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/08_Shri%20Rajendra%20Gavit.webp"
+        "phone": "9821239044"
       },
       {
-        "id": "mla-131",
-        "name": "Shri. Vilas Tare",
+        "id": "mla-palghar-2",
+        "name": "श्री. विलास तरे",
+        "constituency": "बोईसर, अ.ज.",
         "constituencyNo": 131,
-        "constituency": "Boisar (ST)",
+        "photo": "/leaders/Mla%20Photos/09_Shri%20Vilas%20Tare.webp",
         "social": {
           "instagram": "https://www.instagram.com/mlavilastare?utm_source=qr&igsh=MWlpZWpxOXc2M2R6cg==",
           "facebook": "https://www.facebook.com/mlavilastare",
           "twitter": "https://x.com/MLAVilasTare"
         },
-        "photo": "/leaders/Mla%20Photos/09_Shri%20Vilas%20Tare.webp"
+        "phone": "8459346101"
       }
     ]
   },
   "raigad": {
     "mla": [
       {
-        "id": "mla-189",
-        "name": "Shri. Mahendra Thorve",
+        "id": "mla-raigad-1",
+        "name": "श्री. महेंद्र थोरवे",
+        "constituency": "कर्जत",
         "constituencyNo": 189,
-        "constituency": "Karjat",
+        "photo": "/leaders/Mla%20Photos/15_Shri%20Mahendra%20Thorve.webp",
         "social": {
           "instagram": "https://www.instagram.com/mla_mahendrathorve_4040?igsh=NGowNHA5N2d1ZGo2&utm_source=qr",
           "facebook": "https://www.facebook.com/share/1DPVUkALtY/?mibextid=wwXIfr",
           "twitter": "https://x.com/tho/rvemahendra?s=21"
         },
-        "photo": "/leaders/Mla%20Photos/15_Shri%20Mahendra%20Thorve.webp"
+        "phone": "9921414040"
       },
       {
-        "id": "mla-192",
-        "name": "Shri. Mahendra Dalvi",
+        "id": "mla-raigad-2",
+        "name": "श्री. महेंद्र दळवी",
+        "constituency": "अलिबाग",
         "constituencyNo": 192,
-        "constituency": "Alibag",
+        "photo": "/leaders/Mla%20Photos/16_Shri%20Mahendra%20Dalvi.webp",
         "social": {
           "instagram": "https://www.instagram.com/mahendrahdalvi?utm_source=qr&igsh=azBsZTd0eGh2d2Qw",
           "facebook": "https://www.facebook.com/mahendraharidalvi?mibextid=ZbWKwL",
           "twitter": "https://x.com/MahendraD8100"
         },
-        "photo": "/leaders/Mla%20Photos/16_Shri%20Mahendra%20Dalvi.webp"
+        "phone": "9372210485"
       },
       {
-        "id": "mla-194",
-        "name": "Shri. Bharatseth Gogawale (Minister)",
+        "id": "mla-raigad-3",
+        "name": "श्री. भरतशेठ गोगावले",
+        "constituency": "महाड, मंत्री",
         "constituencyNo": 194,
-        "constituency": "Mahad",
+        "photo": "/leaders/Mla%20Photos/17_Shri%20Bharatseth%20Gogawale%20(Minister).webp",
         "social": {
           "instagram": "https://www.instagram.com/bharat_gogawale?igsh=Y2NheHlzaWtsMDln",
           "facebook": "https://www.face/book.com/share/1ENFMf8Y8N/",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/17_Shri%20Bharatseth%20Gogawale%20(Minister).webp"
+        "phone": "9422095889"
       }
     ]
   },
   "ratnagiri": {
     "mla": [
       {
-        "id": "mla-263",
-        "name": "Shri. Yogesh Kadam (MoS)",
+        "id": "mla-ratnagiri-1",
+        "name": "श्री. योगेश कदम",
+        "constituency": "दापोली, राज्यमंत्री",
         "constituencyNo": 263,
-        "constituency": "Dapoli",
+        "photo": "/leaders/Mla%20Photos/18_Shri%20Yogesh%20Kadam%20(MoS).webp",
         "social": {
           "instagram": "https://www.instagram.com/iyogeshrkadam?igsh=MXQ1bmxiNXkxbHI5eA==",
           "facebook": "https://www.facebook.com/share/1Cky3pjQMw/",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/18_Shri%20Yogesh%20Kadam%20(MoS).webp"
+        "phone": "9867996252"
       },
       {
-        "id": "mla-266",
-        "name": "Shri. Uday Samant (Minister)",
+        "id": "mla-ratnagiri-2",
+        "name": "श्री. उदय सामंत",
+        "constituency": "रत्नागिरी, मंत्री",
         "constituencyNo": 266,
-        "constituency": "Ratnagiri",
+        "photo": "/leaders/Mla%20Photos/19_Shri%20Uday%20Samant%20(Minister).webp",
         "social": {
           "instagram": "https://www.instagram.com/uday.samant?fbclid=IwY2xjawRUI0xleHRuA2FlbQIxMABicmlkETFnTXpFamtPOXdVeXFUcVFmc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHn5tPC_Patm0z0ajp2Bfej9HF9W7Qr48TAnGytkDKBnh-f_Fn9LzW5kk4I9v_aem_mfZmcJencYbBKAldAjuW4A",
           "facebook": "https://www.facebook.com/udayravindrasamant",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/19_Shri%20Uday%20Samant%20(Minister).webp"
+        "phone": "9860390909"
       },
       {
-        "id": "mla-267",
-        "name": "Shri. Kiran Samant",
+        "id": "mla-ratnagiri-3",
+        "name": "श्री. किरण सामंत",
+        "constituency": "राजापूर",
         "constituencyNo": 267,
-        "constituency": "Rajapur",
+        "photo": "/leaders/Mla%20Photos/20_Shri%20Kiran%20Samant.webp",
         "social": {
           "instagram": "https://www.instagram.com/kiran_samant9999?igsh=NHM0b2cweWgwcW1x",
           "facebook": "https://www.facebook.com/share/1FVhnotHQd/",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/20_Shri%20Kiran%20Samant.webp"
+        "phone": "9960490909"
       }
     ]
   },
   "sindhudurg": {
     "mla": [
       {
-        "id": "mla-269",
-        "name": "Shri. Nilesh Rane",
+        "id": "mla-sindhudurg-1",
+        "name": "श्री. निलेश राणे",
+        "constituency": "कुडाळ",
         "constituencyNo": 269,
-        "constituency": "Kudal",
+        "photo": "/leaders/Mla%20Photos/21_Shri%20Nilesh%20Rane.webp",
         "social": {
           "instagram": "https://www.instagram.com/menileshrane?igsh=MTd6M2kwYnZ4bTdwbg==",
           "facebook": "https://www.facebook.com/share/1GGFFRQv1C/",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/21_Shri%20Nilesh%20Rane.webp"
+        "phone": "9867999999"
       },
       {
-        "id": "mla-270",
-        "name": "Shri. Deepak Kesarkar",
+        "id": "mla-sindhudurg-2",
+        "name": "श्री. दीपक केसरकर",
+        "constituency": "सावंतवाडी",
         "constituencyNo": 270,
-        "constituency": "Sawantwadi",
+        "photo": "/leaders/Mla%20Photos/22_Shri%20Deepak%20Kesarkar.webp",
         "social": {
           "instagram": "https://www.instagram.com/kesarkar_deepak?igsh=MTFxM3o0OHMwNWI4Ng==",
           "facebook": "https://www.facebook.com/share/18MBpzq9AD/",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/22_Shri%20Deepak%20Kesarkar.webp"
-      }
-    ]
-  },
-  "pune": {
-    "mla": [
-      {
-        "id": "mla-202",
-        "name": "Shri. Vijay Shivtare",
-        "constituencyNo": 202,
-        "constituency": "Purandar",
-        "social": {
-          "instagram": "https://www.instagram.com/vijayshivtare?igsh=MTE1aHJsNDFvOXh5NQ%3D%3D",
-          "facebook": "https://www.facebook.com/ShivtareVijay?mibextid=ZbWKwL",
-          "twitter": "https://x.com/vijayshivtare"
-        },
-        "photo": "/leaders/Mla%20Photos/23_Shri%20Vijay%20Shivtare.webp"
-      }
-    ]
-  },
-  "satara": {
-    "mla": [
-      {
-        "id": "mla-257",
-        "name": "Shri. Mahesh Shinde",
-        "constituencyNo": 257,
-        "constituency": "Koregaon",
-        "social": {
-          "instagram": "",
-          "facebook": "",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/24_Shri%20Mahesh%20Shinde.webp"
-      },
-      {
-        "id": "mla-261",
-        "name": "Shri. Shambhuraj Desai (Minister)",
-        "constituencyNo": 261,
-        "constituency": "Patan",
-        "social": {
-          "instagram": "https://www.instagram.com/mlashambhurajdesai?igsh=ZGZ1bGtzeW5kN3Rt",
-          "facebook": "https://www.facebook.com/watch/desaishambhuraj/",
-          "twitter": "https://x.com/shambhurajdesai"
-        },
-        "photo": "/leaders/Mla%20Photos/25_Shri%20Shambhuraj%20Desai%20(Minister).webp"
-      }
-    ]
-  },
-  "kolhapur": {
-    "mla": [
-      {
-        "id": "mla-272",
-        "name": "Shri. Prakash Abitkar (Minister)",
-        "constituencyNo": 272,
-        "constituency": "Radhanagari",
-        "social": {
-          "instagram": "",
-          "facebook": "",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/26_Shri%20Prakash%20Abitkar%20(Minister).webp"
-      },
-      {
-        "id": "mla-273",
-        "name": "Shri. Rajesh Kshirsagar",
-        "constituencyNo": 273,
-        "constituency": "Kolhapur North",
-        "social": {
-          "instagram": "https://www.instagram.com/kshirsagarrajesh?igsh=ZjUwbW9tNGU5MzNi",
-          "facebook": "https://www.facebook.com/rajeshv.kshirsagar?mibextid=wwXIfr&rdid=nUebGMFoehh2oXyM&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1cPHBRyXcs%2F%3Fmibextid%3DwwXIfr#",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/28_Shri%20Rajesh%20Kshirsagar.webp"
-      },
-      {
-        "id": "mla-275",
-        "name": "Shri. Chandradip Narke",
-        "constituencyNo": 275,
-        "constituency": "Karveer",
-        "social": {
-          "instagram": "https://www.instagram.com/chandradeep.narake?igsh=MTg5YjU1MTVrc3h2ZQ==",
-          "facebook": "https://www.facebook.com/share/18ZofDs9u4/?mibextid=wwXIfr",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/27_Shri%20Chandradip%20Narke.webp"
-      }
-    ]
-  },
-  "sangli": {
-    "mla": [
-      {
-        "id": "mla-286",
-        "name": "Shri. Suhas Anil Babar",
-        "constituencyNo": 286,
-        "constituency": "Khanapur",
-        "social": {
-          "instagram": "https://www.instagram.com/suhas0909?igsh=b3E4eTh6MmFtaHJw",
-          "facebook": "https://www.facebook.com/BabarSuhas?mibextid=wwXIfr&rdid=VgYuTVjFjIP6vbMN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18VN7afyKk%2F%3Fmibextid%3DwwXIfr#",
-          "twitter": "https://x.com/suhasbabar1311?s=21"
-        },
-        "photo": "/leaders/Mla%20Photos/29_Shri%20Suhas%20Anil%20Babar.webp"
-      }
-    ]
-  },
-  "nandurbar": {
-    "mla": [
-      {
-        "id": "mla-1",
-        "name": "Shri. Amshya Padvi",
-        "constituencyNo": 1,
-        "constituency": "Akkalkuwa (ST)",
-        "social": {
-          "instagram": "https://www.instagram.com/amshyadadapadvi/",
-          "facebook": "https://www.facebook.com/profile.php?id=61585574160599&sk=reels_tab",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/30_Shri%20Amshya%20Padvi.webp"
-      }
-    ]
-  },
-  "dhule": {
-    "mla": [
-      {
-        "id": "mla-5",
-        "name": "Smt. Manjulatai Gavit",
-        "constituencyNo": 5,
-        "constituency": "Sakri (ST)",
-        "social": {
-          "instagram": "https://www.instagram.com/manjulatgavit?igsh=bHR3cXBzdHBhaWhz",
-          "facebook": "https://www.facebook.com/ManjulaTGavit?rdid=4QOgmF5FXBtuNDog&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14dzGGsyneh%2F#",
-          "twitter": "https://x.com/ManjulaTGavit"
-        },
-        "photo": "/leaders/Mla%20Photos/31_Smt%20Manjulatai%20Gavit.webp"
-      }
-    ]
-  },
-  "jalgaon": {
-    "mla": [
-      {
-        "id": "mla-10",
-        "name": "Shri. Chandrakant Sonawane",
-        "constituencyNo": 10,
-        "constituency": "Chopda (ST)",
-        "social": {
-          "instagram": "",
-          "facebook": "https://www.facebook.com/pro.chandrakantsonawane",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/32_Shri%20Chandrakant%20Sonawane.webp"
-      },
-      {
-        "id": "mla-14",
-        "name": "Shri. Gulabrao Patil (Minister)",
-        "constituencyNo": 14,
-        "constituency": "Jalgaon Rural",
-        "social": {
-          "instagram": "https://www.instagram.com/gulabraopatilofficial",
-          "facebook": "https://www.facebook.com/share/1FaNX6Ea9L/",
-          "twitter": "https://x.com/gulabraorpatil"
-        },
-        "photo": "/leaders/Mla%20Photos/33_Shri%20Gulabrao%20Patil%20(Minister).webp"
-      },
-      {
-        "id": "mla-16",
-        "name": "Shri. Amol Patil",
-        "constituencyNo": 16,
-        "constituency": "Erandol",
-        "social": {
-          "instagram": "https://www.instagram.com/amoldadaofficial?igsh=a2lqdDA4ZHY1YWFm",
-          "facebook": "https://www.facebook.com/share/15ntjxmZzuf/?mibextid=wwXIfr",
-          "twitter": "https://x.com/amolpatilparola?s=11"
-        },
-        "photo": "/leaders/Mla%20Photos/34_Shri%20Amol%20Patil.webp"
-      },
-      {
-        "id": "mla-18",
-        "name": "Shri. Kishor Appa Patil",
-        "constituencyNo": 18,
-        "constituency": "Pachora",
-        "social": {
-          "instagram": "",
-          "facebook": "",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/35_Shri%20Kishor%20Appa%20Patil.webp"
-      },
-      {
-        "id": "mla-20",
-        "name": "Shri. Chandrakant Patil",
-        "constituencyNo": 20,
-        "constituency": "Muktainagar",
-        "social": {
-          "instagram": "https://www.instagram.com/chandrakantnpatilofficial?utm_source=qr&igsh=aWViOTV6bzU0OWxs",
-          "facebook": "https://www.facebook.com/ChandrakantNPatil5?rdid=iChrSKlo8g5Ev1mA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CmzTpWgzd%2F#",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/36_Shri%20Chandrakant%20Patil.webp"
+        "phone": "9422096887"
       }
     ]
   },
   "nashik": {
     "mla": [
       {
-        "id": "mla-113",
-        "name": "Shri. Suhas (Anna) Kande",
+        "id": "mla-nashik-1",
+        "name": "श्री. सुहास कांदे",
+        "constituency": "नांदगाव",
         "constituencyNo": 113,
-        "constituency": "Nandgaon",
+        "note": "आण्णा",
+        "photo": "/leaders/Mla%20Photos/37_Shri%20Suhas%20(Anna)%20Kande.webp",
         "social": {
           "instagram": "",
           "facebook": "",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/37_Shri%20Suhas%20(Anna)%20Kande.webp"
+        "phone": "8308599786"
       },
       {
-        "id": "mla-115",
-        "name": "Shri. Dadaji Bhuse (Minister)",
+        "id": "mla-nashik-2",
+        "name": "श्री. दादाजी भुसे",
+        "constituency": "मालेगाव बाह्य, मंत्री",
         "constituencyNo": 115,
-        "constituency": "Malegaon Outer",
+        "photo": "/leaders/Mla%20Photos/38_Shri%20Dadaji%20Bhuse%20(Minister).webp",
         "social": {
           "instagram": "https://www.instagram.com/dadaji.bhuse?igsh=MXBkZW0ydDI2aXRpeA==",
           "facebook": "https://www.facebook.com/dadajibhuseofficial?rdid=7ibp9NFz41KflL1D&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18PytswyJY%2F#",
           "twitter": "https://x.com/dadajibhuse"
         },
-        "photo": "/leaders/Mla%20Photos/38_Shri%20Dadaji%20Bhuse%20(Minister).webp"
+        "phone": "9422236892"
+      },
+      {
+        "id": "mla-nashik-3",
+        "name": "श्री. किशोर दराडे",
+        "note": "विधानपरिषद — नाशिक शिक्षक विभाग",
+        "photo": "/leaders/07_%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%20%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF/06_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A5%8B%E0%A4%B0%20%E0%A4%A6%E0%A4%B0%E0%A4%BE%E0%A4%A1%E0%A5%87.webp"
       }
     ]
   },
   "ahmadnagar": {
     "mla": [
       {
-        "id": "mla-217",
-        "name": "Shri. Amol Khatal",
+        "id": "mla-ahmadnagar-1",
+        "name": "श्री. अमोल खताळ",
+        "constituency": "संगमनेर",
         "constituencyNo": 217,
-        "constituency": "Sangamner",
+        "photo": "/leaders/Mla%20Photos/39_Shri%20Amol%20Khatal.webp",
         "social": {
           "instagram": "https://www.instagram.com/amol_khatal_patil?igsh=eXRqaHV3eW10dTZm",
           "facebook": "https://www.facebook.com/amol.d.khatal?rdid=vQKLlXjaZLaHPfr5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Qbr7z5wCz%2F#",
           "twitter": "https://x.com/amolkhatalpatil"
         },
-        "photo": "/leaders/Mla%20Photos/39_Shri%20Amol%20Khatal.webp"
+        "phone": "9922270001"
       },
       {
-        "id": "mla-221",
-        "name": "Shri. Vitthalrao Langhe",
+        "id": "mla-ahmadnagar-2",
+        "name": "श्री. विठ्ठलराव लंघे",
+        "constituency": "नेवासा",
         "constituencyNo": 221,
-        "constituency": "Nevasa",
+        "photo": "/leaders/Mla%20Photos/40_Shri%20Vitthalrao%20Langhe.webp",
         "social": {
           "instagram": "",
           "facebook": "",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/40_Shri%20Vitthalrao%20Langhe.webp"
+        "phone": "9423753523"
       }
     ]
   },
-  "nanded": {
+  "dhule": {
     "mla": [
       {
-        "id": "mla-84",
-        "name": "Shri. Sambharao (Baburao) Kadam",
-        "constituencyNo": 84,
-        "constituency": "Hadgaon",
+        "id": "mla-dhule-1",
+        "name": "श्रीमती मंजुळाताई गावित",
+        "constituency": "साक्री, अज",
+        "constituencyNo": 5,
+        "photo": "/leaders/Mla%20Photos/31_Smt%20Manjulatai%20Gavit.webp",
         "social": {
-          "instagram": "",
-          "facebook": "",
-          "twitter": ""
+          "instagram": "https://www.instagram.com/manjulatgavit?igsh=bHR3cXBzdHBhaWhz",
+          "facebook": "https://www.facebook.com/ManjulaTGavit?rdid=4QOgmF5FXBtuNDog&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14dzGGsyneh%2F#",
+          "twitter": "https://x.com/ManjulaTGavit"
         },
-        "photo": "/leaders/Mla%20Photos/41_Shri%20Sambharao%20(Baburao)%20Kadam.webp"
-      },
-      {
-        "id": "mla-86",
-        "name": "Shri. Balaji Kalyankar",
-        "constituencyNo": 86,
-        "constituency": "Nanded North",
-        "social": {
-          "instagram": "https://www.instagram.com/balaji_kalyankar_official",
-          "facebook": "https://www.facebook.com/balajikalyankarofc",
-          "twitter": "https://twitter.com/BdKalyankar"
-        },
-        "photo": "/leaders/Mla%20Photos/42_Shri%20Balaji%20Kalyankar.webp"
-      },
-      {
-        "id": "mla-87",
-        "name": "Shri. Anand Tidke",
-        "constituencyNo": 87,
-        "constituency": "Nanded South",
-        "social": {
-          "instagram": "",
-          "facebook": "",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/43_Shri%20Anand%20Tidke.webp"
+        "phone": "8208937464"
       }
     ]
   },
-  "hingoli": {
+  "nandurbar": {
     "mla": [
       {
-        "id": "mla-93",
-        "name": "Shri. Santosh Bangar",
-        "constituencyNo": 93,
-        "constituency": "Kalamnuri",
+        "id": "mla-nandurbar-1",
+        "name": "श्री. आमश्या पाडवी",
+        "constituency": "अक्कलकुआ, अज",
+        "constituencyNo": 1,
+        "photo": "/leaders/Mla%20Photos/30_Shri%20Amshya%20Padvi.webp",
         "social": {
-          "instagram": "",
-          "facebook": "",
+          "instagram": "https://www.instagram.com/amshyadadapadvi/",
+          "facebook": "https://www.facebook.com/profile.php?id=61585574160599&sk=reels_tab",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/44_Shri%20Santosh%20Bangar.webp"
+        "phone": "9494142727 / 9423496727"
+      },
+      {
+        "id": "mla-nandurbar-2",
+        "name": "श्री. चंद्रकांत रघुवंशी",
+        "note": "विधानपरिषद — नंदुरबार"
       }
     ]
   },
-  "jalna": {
+  "jalgaon": {
     "mla": [
       {
-        "id": "mla-100",
-        "name": "Shri. Hikmat Udhan",
-        "constituencyNo": 100,
-        "constituency": "Ghansawangi",
+        "id": "mla-jalgaon-1",
+        "name": "श्री. चंद्रकांत सोनवणे",
+        "constituency": "चोपडा, अज",
+        "constituencyNo": 10,
+        "photo": "/leaders/Mla%20Photos/32_Shri%20Chandrakant%20Sonawane.webp",
         "social": {
-          "instagram": "https://www.instagram.com/udhanhikmat?igsh=MXJvNnEydTY0YjRqYg==",
-          "facebook": "https://www.facebook.com/share/18vRQS4kpE/",
+          "instagram": "",
+          "facebook": "https://www.facebook.com/pro.chandrakantsonawane",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/45_Shri%20Hikmat%20Udhan.webp"
+        "phone": "9422277999 / 9284491339"
       },
       {
-        "id": "mla-101",
-        "name": "Shri. Arjun Khotkar",
-        "constituencyNo": 101,
-        "constituency": "Jalna",
+        "id": "mla-jalgaon-2",
+        "name": "श्री. गुलाबराव पाटील",
+        "constituency": "जळगाव ग्रामीण, मंत्री",
+        "constituencyNo": 14,
+        "photo": "/leaders/Mla%20Photos/33_Shri%20Gulabrao%20Patil%20(Minister).webp",
+        "social": {
+          "instagram": "https://www.instagram.com/gulabraopatilofficial",
+          "facebook": "https://www.facebook.com/share/1FaNX6Ea9L/",
+          "twitter": "https://x.com/gulabraorpatil"
+        },
+        "phone": "9881730620"
+      },
+      {
+        "id": "mla-jalgaon-3",
+        "name": "श्री. अमोल पाटील",
+        "constituency": "एरंडोल",
+        "constituencyNo": 16,
+        "photo": "/leaders/Mla%20Photos/34_Shri%20Amol%20Patil.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/amoldadaofficial?igsh=a2lqdDA4ZHY1YWFm",
+          "facebook": "https://www.facebook.com/share/15ntjxmZzuf/?mibextid=wwXIfr",
+          "twitter": "https://x.com/amolpatilparola?s=11"
+        },
+        "phone": "9405559999"
+      },
+      {
+        "id": "mla-jalgaon-4",
+        "name": "श्री. किशोर आप्पा पाटील",
+        "constituency": "पाचोरा",
+        "constituencyNo": 18,
+        "photo": "/leaders/Mla%20Photos/35_Shri%20Kishor%20Appa%20Patil.webp",
         "social": {
           "instagram": "",
           "facebook": "",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/46_Shri%20%20Arjun%20Khotkar.webp"
+        "phone": "9860899091"
+      },
+      {
+        "id": "mla-jalgaon-5",
+        "name": "श्री. चंद्रकांत पाटील",
+        "constituency": "मुक्ताईनगर",
+        "constituencyNo": 20,
+        "photo": "/leaders/Mla%20Photos/36_Shri%20Chandrakant%20Patil.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/chandrakantnpatilofficial?utm_source=qr&igsh=aWViOTV6bzU0OWxs",
+          "facebook": "https://www.facebook.com/ChandrakantNPatil5?rdid=iChrSKlo8g5Ev1mA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CmzTpWgzd%2F#",
+          "twitter": ""
+        },
+        "phone": "9422976555 / 9970811555"
+      }
+    ]
+  },
+  "pune": {
+    "mla": [
+      {
+        "id": "mla-pune-1",
+        "name": "श्री. विजय शिवतारे",
+        "constituency": "पुरंदर",
+        "constituencyNo": 202,
+        "photo": "/leaders/Mla%20Photos/23_Shri%20Vijay%20Shivtare.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/vijayshivtare?igsh=MTE1aHJsNDFvOXh5NQ%3D%3D",
+          "facebook": "https://www.facebook.com/ShivtareVijay?mibextid=ZbWKwL",
+          "twitter": "https://x.com/vijayshivtare"
+        },
+        "phone": "9820081817"
+      },
+      {
+        "id": "mla-pune-2",
+        "name": "श्री. शरद सोनवणे",
+        "constituency": "जुन्नर, अपक्ष",
+        "constituencyNo": 195,
+        "phone": "9867404567"
+      },
+      {
+        "id": "mla-pune-3",
+        "name": "डॉ. निलमताई गोऱ्हे",
+        "note": "विधानपरिषद — उपसभापती",
+        "photo": "/leaders/07_%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%20%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF/01_%E0%A4%A1%E0%A5%89%20%E0%A4%A8%E0%A4%BF%E0%A4%B2%E0%A4%AE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%97%E0%A5%8B%E0%A4%B1%E0%A5%8D%E0%A4%B9%E0%A5%87.webp"
+      }
+    ]
+  },
+  "satara": {
+    "mla": [
+      {
+        "id": "mla-satara-1",
+        "name": "श्री. महेश शिंदे",
+        "constituency": "कोरेगांव",
+        "constituencyNo": 257,
+        "photo": "/leaders/Mla%20Photos/24_Shri%20Mahesh%20Shinde.webp",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        },
+        "phone": "7709039993"
+      },
+      {
+        "id": "mla-satara-2",
+        "name": "श्री. शंभूराज देसाई",
+        "constituency": "पाटण, मंत्री",
+        "constituencyNo": 261,
+        "photo": "/leaders/Mla%20Photos/25_Shri%20Shambhuraj%20Desai%20(Minister).webp",
+        "social": {
+          "instagram": "https://www.instagram.com/mlashambhurajdesai?igsh=ZGZ1bGtzeW5kN3Rt",
+          "facebook": "https://www.facebook.com/watch/desaishambhuraj/",
+          "twitter": "https://x.com/shambhurajdesai"
+        },
+        "phone": "9822771555"
+      }
+    ]
+  },
+  "sangli": {
+    "mla": [
+      {
+        "id": "mla-sangli-1",
+        "name": "श्री. सुहास अनिल बाबर",
+        "constituency": "खानापूर",
+        "constituencyNo": 286,
+        "photo": "/leaders/Mla%20Photos/29_Shri%20Suhas%20Anil%20Babar.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/suhas0909?igsh=b3E4eTh6MmFtaHJw",
+          "facebook": "https://www.facebook.com/BabarSuhas?mibextid=wwXIfr&rdid=VgYuTVjFjIP6vbMN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18VN7afyKk%2F%3Fmibextid%3DwwXIfr#",
+          "twitter": "https://x.com/suhasbabar1311?s=21"
+        },
+        "phone": "9923064999 / 9130117755"
+      }
+    ]
+  },
+  "kolhapur": {
+    "mla": [
+      {
+        "id": "mla-kolhapur-1",
+        "name": "श्री. प्रकाश आबिटकर",
+        "constituency": "राधानगरी, मंत्री",
+        "constituencyNo": 272,
+        "photo": "/leaders/Mla%20Photos/26_Shri%20Prakash%20Abitkar%20(Minister).webp",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        },
+        "phone": "9422421600"
+      },
+      {
+        "id": "mla-kolhapur-2",
+        "name": "श्री. चंद्रदिप नरके",
+        "constituency": "करवीर",
+        "constituencyNo": 275,
+        "photo": "/leaders/Mla%20Photos/27_Shri%20Chandradip%20Narke.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/chandradeep.narake?igsh=MTg5YjU1MTVrc3h2ZQ==",
+          "facebook": "https://www.facebook.com/share/18ZofDs9u4/?mibextid=wwXIfr",
+          "twitter": ""
+        },
+        "phone": "9890199115"
+      },
+      {
+        "id": "mla-kolhapur-3",
+        "name": "श्री. राजेश क्षीरसागर",
+        "constituency": "कोल्हापूर उत्तर",
+        "constituencyNo": 273,
+        "photo": "/leaders/Mla%20Photos/28_Shri%20Rajesh%20Kshirsagar.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/kshirsagarrajesh?igsh=ZjUwbW9tNGU5MzNi",
+          "facebook": "https://www.facebook.com/rajeshv.kshirsagar?mibextid=wwXIfr&rdid=nUebGMFoehh2oXyM&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1cPHBRyXcs%2F%3Fmibextid%3DwwXIfr#",
+          "twitter": ""
+        },
+        "phone": "9665677988"
+      },
+      {
+        "id": "mla-kolhapur-4",
+        "name": "श्री. अशोकराव माने",
+        "constituency": "हातकणंगले, सहयोगी",
+        "constituencyNo": 278,
+        "phone": "9823277799"
+      },
+      {
+        "id": "mla-kolhapur-5",
+        "name": "श्री. राजेंद्र पाटील-यड्रावकर",
+        "constituency": "शिरोळ, सहयोगी",
+        "constituencyNo": 280,
+        "phone": "9822265555"
       }
     ]
   },
   "aurangabad": {
     "mla": [
       {
-        "id": "mla-104",
-        "name": "Shri. Abdul Sattar",
+        "id": "mla-aurangabad-1",
+        "name": "श्री. अब्दुल सत्तार",
+        "constituency": "सिल्लोड",
         "constituencyNo": 104,
-        "constituency": "Sillod",
+        "photo": "/leaders/Mla%20Photos/47_Shri%20Abdul%20Sattar.webp",
         "social": {
           "instagram": "https://www.instagram.com/abdulsattar_sillod?utm_source=qr&igsh=M3VrOXZwcno5Mmtq",
           "facebook": "https://www.facebook.com/share/14aEGRkHC2x/",
           "twitter": "https://x.com/AbdulSattar_99"
         },
-        "photo": "/leaders/Mla%20Photos/47_Shri%20Abdul%20Sattar.webp"
+        "phone": "9922204367"
       },
       {
-        "id": "mla-105",
-        "name": "Smt. Ranjanatai Jadhav",
+        "id": "mla-aurangabad-2",
+        "name": "श्रीमती रंजनाताई जाधव",
+        "constituency": "कन्नड",
         "constituencyNo": 105,
-        "constituency": "Kannad",
+        "photo": "/leaders/Mla%20Photos/48_Smt%20Ranjanatai%20Jadhav.webp",
         "social": {
           "instagram": "",
           "facebook": "",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/48_Smt%20Ranjanatai%20Jadhav.webp"
+        "phone": "8806666827"
       },
       {
-        "id": "mla-107",
-        "name": "Shri, Pradip Jiswal",
+        "id": "mla-aurangabad-3",
+        "name": "श्री. प्रदिप जैस्वाल",
+        "constituency": "छ. संभाजीनगर मध्य",
         "constituencyNo": 107,
-        "constituency": "Ch. Sambhajinagar Central",
+        "photo": "/leaders/Mla%20Photos/49_Shri%20%20Pradip%20Jiswal.webp",
         "social": {
           "instagram": "https://www.instagram.com/pradeepjaiswalmla?igsh=MTd0M2ZhNm5iZG5tYg%3D%3D",
           "facebook": "https://www.facebook.com/share/1DfKUPZvss/?mibextid=wwXIfr",
           "twitter": "https://x.com/mla_pradeepj?s=21"
         },
-        "photo": "/leaders/Mla%20Photos/49_Shri%20%20Pradip%20Jiswal.webp"
+        "phone": "9823006357"
       },
       {
-        "id": "mla-108",
-        "name": "Shri. Sanjay Shirsat (Minister)",
+        "id": "mla-aurangabad-4",
+        "name": "श्री. संजय शिरसाट",
+        "constituency": "छ. संभाजीनगर पश्चिम, मंत्री",
         "constituencyNo": 108,
-        "constituency": "Ch. Sambhajinagar West (SC)",
+        "photo": "/leaders/Mla%20Photos/50_Shri%20%20Sanjay%20Shirsat%20(Minister).webp",
         "social": {
           "instagram": "https://www.instagram.com/sanjayshirsatmla?igsh=NmJrdzdkNnd6OWZw",
           "facebook": "https://www.facebook.com/share/1Ak8C6SyxU/",
           "twitter": "https://x.com/SanjayShirsat77"
         },
-        "photo": "/leaders/Mla%20Photos/50_Shri%20%20Sanjay%20Shirsat%20(Minister).webp"
+        "phone": "9422203930"
       },
       {
-        "id": "mla-110",
-        "name": "Shri. Vilas Bhumre",
+        "id": "mla-aurangabad-5",
+        "name": "श्री. विलास भुमरे",
+        "constituency": "पैठण",
         "constituencyNo": 110,
-        "constituency": "Paithan",
+        "photo": "/leaders/Mla%20Photos/51_Shri%20%20Vilas%20Bhumre.webp",
         "social": {
           "instagram": "https://www.instagram.com/mla_vilasbhumare?igsh=cGs3bnBoeTlsazFh",
           "facebook": "https://www.facebook.com/VilasBhumarePatil?rdid=DFKvN9WF5644ggvp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TZpqPoZN%2F#",
           "twitter": "https://x.com/Vilas_Bhumare"
         },
-        "photo": "/leaders/Mla%20Photos/51_Shri%20%20Vilas%20Bhumre.webp"
+        "phone": "9422652880"
       },
       {
-        "id": "mla-112",
-        "name": "Prof. Ramesh Bornare (Chief Whip)",
+        "id": "mla-aurangabad-6",
+        "name": "प्रा. रमेश बोरनारे",
+        "constituency": "वैजापूर, मुख्य प्रतोद",
         "constituencyNo": 112,
-        "constituency": "Vaijapur",
+        "photo": "/leaders/Mla%20Photos/52_Prof%20Ramesh%20Bornare%20(Chief%20Whip).webp",
         "social": {
           "instagram": "https://www.instagram.com/ramesh_bornare_official?igsh=YWFvM2tvM29qajN2",
           "facebook": "https://www.facebook.com/bornaresir?rdid=gHPa6NSRi0GXqjGT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1833umbiUX%2F#",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/52_Prof%20Ramesh%20Bornare%20(Chief%20Whip).webp"
+        "phone": "9422236892"
+      }
+    ]
+  },
+  "jalna": {
+    "mla": [
+      {
+        "id": "mla-jalna-1",
+        "name": "श्री. हिकमत उढाण",
+        "constituency": "घनसवांगी",
+        "constituencyNo": 100,
+        "photo": "/leaders/Mla%20Photos/45_Shri%20Hikmat%20Udhan.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/udhanhikmat?igsh=MXJvNnEydTY0YjRqYg==",
+          "facebook": "https://www.facebook.com/share/18vRQS4kpE/",
+          "twitter": ""
+        },
+        "phone": "9892033333"
+      },
+      {
+        "id": "mla-jalna-2",
+        "name": "श्री. अर्जुन खोतकर",
+        "constituency": "जालना",
+        "constituencyNo": 101,
+        "photo": "/leaders/Mla%20Photos/46_Shri%20%20Arjun%20Khotkar.webp",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        },
+        "phone": "9423051111"
       }
     ]
   },
   "dharashiv": {
     "mla": [
       {
-        "id": "mla-243",
-        "name": "Dr. Tanaji Sawant",
+        "id": "mla-dharashiv-1",
+        "name": "डॉ. तानाजी सावंत",
+        "constituency": "परांडा",
         "constituencyNo": 243,
-        "constituency": "Paranda",
+        "photo": "/leaders/Mla%20Photos/53_Dr%20%20Tanaji%20Sawant.webp",
         "social": {
           "instagram": "",
           "facebook": "",
           "twitter": ""
         },
-        "photo": "/leaders/Mla%20Photos/53_Dr%20%20Tanaji%20Sawant.webp"
+        "phone": "9822091983"
+      }
+    ]
+  },
+  "nanded": {
+    "mla": [
+      {
+        "id": "mla-nanded-1",
+        "name": "श्री. संभाराव उर्फ बाबुराव कदम कोहळीकर",
+        "constituency": "हदगाव",
+        "constituencyNo": 84,
+        "photo": "/leaders/Mla%20Photos/41_Shri%20Sambharao%20(Baburao)%20Kadam.webp",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        },
+        "phone": "9822221003 / 9420415921"
+      },
+      {
+        "id": "mla-nanded-2",
+        "name": "श्री. बालाजी कल्याणकर",
+        "constituency": "नांदेड उत्तर",
+        "constituencyNo": 86,
+        "photo": "/leaders/Mla%20Photos/42_Shri%20Balaji%20Kalyankar.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/balaji_kalyankar_official",
+          "facebook": "https://www.facebook.com/balajikalyankarofc",
+          "twitter": "https://twitter.com/BdKalyankar"
+        },
+        "phone": "9850975641"
+      },
+      {
+        "id": "mla-nanded-3",
+        "name": "श्री. आनंद तिडके",
+        "constituency": "नांदेड दक्षिण",
+        "constituencyNo": 87,
+        "photo": "/leaders/Mla%20Photos/43_Shri%20Anand%20Tidke.webp",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        },
+        "phone": "9921511023"
+      },
+      {
+        "id": "mla-nanded-4",
+        "name": "श्री. हेमंत पाटील",
+        "note": "विधानपरिषद — गटनेते, नांदेड"
+      }
+    ]
+  },
+  "hingoli": {
+    "mla": [
+      {
+        "id": "mla-hingoli-1",
+        "name": "श्री. संतोष बांगर",
+        "constituency": "कळमनुरी",
+        "constituencyNo": 93,
+        "photo": "/leaders/Mla%20Photos/44_Shri%20Santosh%20Bangar.webp",
+        "social": {
+          "instagram": "",
+          "facebook": "",
+          "twitter": ""
+        },
+        "phone": "9822221177"
+      }
+    ]
+  },
+  "amravati": {
+    "mla": [
+      {
+        "id": "mla-amravati-1",
+        "name": "श्री. किरण सरनाईक",
+        "note": "विधानपरिषद — अमरावती शिक्षक विभाग, सहयोगी"
+      }
+    ]
+  },
+  "washim": {
+    "mla": [
+      {
+        "id": "mla-washim-1",
+        "name": "श्रीम. भावनाताई गवळी",
+        "note": "विधानपरिषद — यवतमाळ-वाशीम",
+        "photo": "/leaders/07_%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8%20%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A4%A6%20%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF/04_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%20%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%A8%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%97%E0%A4%B5%E0%A4%B3%E0%A5%80.webp"
       }
     ]
   },
   "buldhana": {
     "mla": [
       {
-        "id": "mla-22",
-        "name": "Shri. Sanjay Gaikwad",
+        "id": "mla-buldhana-1",
+        "name": "श्री. संजय गायकवाड",
+        "constituency": "बुलढाणा",
         "constituencyNo": 22,
-        "constituency": "Buldhana",
+        "photo": "/leaders/Mla%20Photos/54_Shri%20%20Sanjay%20Gaikwad.webp",
         "social": {
           "instagram": "https://www.instagram.com/sanjaygaikwadofficial1?igsh=YWN3Nmg3MHdjZWoy",
           "facebook": "https://www.facebook.com/sanjaygaikwadofficial1?rdid=tHW1rA98dBrFHvDN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BLTaJkVfd%2F#",
           "twitter": "https://x.com/sanjaygaikwad34"
         },
-        "photo": "/leaders/Mla%20Photos/54_Shri%20%20Sanjay%20Gaikwad.webp"
-      }
-    ]
-  },
-  "nagpur": {
-    "mla": [
-      {
-        "id": "mla-59",
-        "name": "Shri. Ashish Jaiswal (MoS)",
-        "constituencyNo": 59,
-        "constituency": "Ramtek",
-        "social": {
-          "instagram": "https://www.instagram.com/adv._ashish_jaiswal/",
-          "facebook": "https://www.facebook.com/ashishjaiswalshivsena",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/55_Shri%20Ashish%20Jaiswal%20(MoS).webp"
-      }
-    ]
-  },
-  "bhandara": {
-    "mla": [
-      {
-        "id": "mla-61",
-        "name": "Shri. Narendra Bhondekar",
-        "constituencyNo": 61,
-        "constituency": "Bhandara (SC)",
-        "social": {
-          "instagram": "https://www.instagram.com/narendra_bhondekar?igsh=MTJ0c3c4b2c3ZG80dA==",
-          "facebook": "https://www.facebook.com/share/1DyzUSPRQY/?mibextid=wwXIf",
-          "twitter": ""
-        },
-        "photo": "/leaders/Mla%20Photos/56_Shri%20Narendra%20Bhondekar.webp"
+        "phone": "9881234234"
       }
     ]
   },
   "yavatmal": {
     "mla": [
       {
-        "id": "mla-79",
-        "name": "Shri. Sanjay Rathod (Minister)",
+        "id": "mla-yavatmal-1",
+        "name": "श्री. संजय राठोड",
+        "constituency": "दिग्रस, मंत्री",
         "constituencyNo": 79,
-        "constituency": "Digras",
+        "photo": "/leaders/Mla%20Photos/57_Shri%20%20Sanjay%20Rathod%20(Minister).webp",
         "social": {
           "instagram": "https://www.instagram.com/sanjayrathod___?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
           "facebook": "https://www.facebook.com/gorsanjaydr/",
           "twitter": "https://x.com/SanjayDRathods?s=20"
         },
-        "photo": "/leaders/Mla%20Photos/57_Shri%20%20Sanjay%20Rathod%20(Minister).webp"
+        "phone": "7448166222 / 8007222222"
+      }
+    ]
+  },
+  "nagpur": {
+    "mla": [
+      {
+        "id": "mla-nagpur-1",
+        "name": "श्री. आशिष जयस्वाल",
+        "constituency": "रामटेक, राज्यमंत्री",
+        "constituencyNo": 59,
+        "photo": "/leaders/Mla%20Photos/55_Shri%20Ashish%20Jaiswal%20(MoS).webp",
+        "social": {
+          "instagram": "https://www.instagram.com/adv._ashish_jaiswal/",
+          "facebook": "https://www.facebook.com/ashishjaiswalshivsena",
+          "twitter": ""
+        },
+        "phone": "9881713138"
+      },
+      {
+        "id": "mla-nagpur-2",
+        "name": "श्री. कृपाल तुमाने",
+        "note": "विधानपरिषद — नागपूर",
+        "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/08_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%20%E0%A4%95%E0%A5%83%E0%A4%AA%E0%A4%BE%E0%A4%B2%20%E0%A4%A4%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%87.webp"
+      }
+    ]
+  },
+  "bhandara": {
+    "mla": [
+      {
+        "id": "mla-bhandara-1",
+        "name": "श्री. नरेंद्र भोंडेकर",
+        "constituency": "भंडारा, अजा",
+        "constituencyNo": 61,
+        "photo": "/leaders/Mla%20Photos/56_Shri%20Narendra%20Bhondekar.webp",
+        "social": {
+          "instagram": "https://www.instagram.com/narendra_bhondekar?igsh=MTJ0c3c4b2c3ZG80dA==",
+          "facebook": "https://www.facebook.com/share/1DyzUSPRQY/?mibextid=wwXIf",
+          "twitter": ""
+        },
+        "phone": "9326910461"
       }
     ]
   }
