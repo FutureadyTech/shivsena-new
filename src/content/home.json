@@ -544,30 +544,13 @@
         {
           "heading": "नेव्हिगेट करा",
           "links": [
-            {
-              "label": "होम",
-              "href": "/home"
-            },
-            {
-              "label": "आमच्याबद्दल",
-              "href": "/about"
-            },
-            {
-              "label": "नेतृत्व",
-              "href": "/leadership"
-            },
-            {
-              "label": "नावीन्यपूर्ण उपक्रम",
-              "href": "/innovative"
-            },
-            {
-              "label": "बातम्या",
-              "href": "/news"
-            },
-            {
-              "label": "उमेदवार माहिती",
-              "href": "/declarations"
-            }
+            { "label": "मुख्यपृष्ठ",          "href": "/home"         },
+            { "label": "पक्ष",                "href": "/about"        },
+            { "label": "नेतृत्व",             "href": "/leadership"   },
+            { "label": "नावीन्यपूर्ण उपक्रम",  "href": "/innovative"   },
+            { "label": "मीडिया रिसोर्सेस",     "href": "/news"         },
+            { "label": "उमेदवार माहिती",      "href": "/declarations" },
+            { "label": "सहभागी व्हा",         "href": "/contact"      }
           ]
         },
         {
@@ -645,30 +628,13 @@
         {
           "heading": "Navigate",
           "links": [
-            {
-              "label": "Home",
-              "href": "/home"
-            },
-            {
-              "label": "About",
-              "href": "/about"
-            },
-            {
-              "label": "Leadership",
-              "href": "/leadership"
-            },
-            {
-              "label": "Innovative Initiatives",
-              "href": "/innovative"
-            },
-            {
-              "label": "News",
-              "href": "/news"
-            },
-            {
-              "label": "Declarations",
-              "href": "/declarations"
-            }
+            { "label": "Home",                   "href": "/home"         },
+            { "label": "Party",                  "href": "/about"        },
+            { "label": "Leadership",             "href": "/leadership"   },
+            { "label": "Innovative Initiatives", "href": "/innovative"   },
+            { "label": "Media Resources",        "href": "/news"         },
+            { "label": "Candidate Info",         "href": "/declarations" },
+            { "label": "Join Us",                "href": "/contact"      }
           ]
         },
         {

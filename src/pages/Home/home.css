@@ -776,16 +776,22 @@ html[lang="en"] .hero-main-title {
   width: clamp(60px, 9vw, 130px);
   height: 1.5px;
 }
-.hero-quote__ornament--top .hero-quote__ornament-line:first-child,
-.hero-quote__ornament--bottom .hero-quote__ornament-line:last-child {
+/* Both ornament rows now mirror each other: the LEFT line on
+   each row fades transparent-to-saffron going inward (toward the
+   centre star), and the RIGHT line fades transparent-to-saffron
+   going inward from the opposite side. Previously the bottom row
+   paired first/last children with the top row's last/first, so
+   its gradient direction came out reversed. */
+.hero-quote__ornament--top    .hero-quote__ornament-line:first-child,
+.hero-quote__ornament--bottom .hero-quote__ornament-line:first-child {
   background: linear-gradient(
     to right,
     rgba(255, 107, 26, 0) 0%,
     rgba(255, 107, 26, 0.95) 100%
   );
 }
-.hero-quote__ornament--top .hero-quote__ornament-line:last-child,
-.hero-quote__ornament--bottom .hero-quote__ornament-line:first-child {
+.hero-quote__ornament--top    .hero-quote__ornament-line:last-child,
+.hero-quote__ornament--bottom .hero-quote__ornament-line:last-child {
   background: linear-gradient(
     to left,
     rgba(255, 107, 26, 0) 0%,

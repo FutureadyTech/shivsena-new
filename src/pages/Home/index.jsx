@@ -10,6 +10,7 @@ import RegionExplorer from './sections/RegionExplorer.jsx';
 import JoinCTA from './sections/JoinCTA.jsx';
 import Footer from './sections/Footer.jsx';
 import CursorSparks from './components/CursorSparks.jsx';
+import SectionDivider from './components/SectionDivider.jsx';
 import HomeBannerAudio from './HomeBannerAudio.jsx';
 import { useLenis } from './hooks/useLenis.js';
 import './home.css';
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <VisionIdeology />
       <LeadershipFeature />
+      <SectionDivider />
       <OurJourney />
       <NewsMedia />
       <SocialFeed />

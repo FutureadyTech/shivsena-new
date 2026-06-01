@@ -1,0 +1,60 @@
+/* ═══════════════════════════════════════════════════════════════
+   SECTION DIVIDER — saffron fade line · ✦ · saffron fade line
+   Used between major page sections so back-to-back blocks read
+   as distinct chapters instead of running into each other.
+═══════════════════════════════════════════════════════════════ */
+.section-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 24px;
+  max-width: 1320px;
+  margin: 0 auto;
+  /* Keep the gradient lines visible against the page background */
+  background: transparent;
+  color: var(--saffron, #FF6B1A);
+  pointer-events: none;
+}
+
+.section-divider__line {
+  flex: 1 1 auto;
+  max-width: 320px;
+  height: 1.5px;
+  border-radius: 1px;
+}
+
+/* Both lines fade transparent at the outer edge → saffron at
+   the centre (toward the star), matching the hero quote ornament. */
+.section-divider__line--left {
+  background: linear-gradient(
+    to right,
+    rgba(255, 107, 26, 0) 0%,
+    rgba(255, 107, 26, 0.9) 100%
+  );
+}
+.section-divider__line--right {
+  background: linear-gradient(
+    to left,
+    rgba(255, 107, 26, 0) 0%,
+    rgba(255, 107, 26, 0.9) 100%
+  );
+}
+
+.section-divider__star {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 26, 0.35));
+}
+
+/* Mobile — keep the same proportions but tighter on padding. */
+@media (max-width: 720px) {
+  .section-divider {
+    padding: 36px 16px;
+    gap: 14px;
+  }
+  .section-divider__line { max-width: 160px; }
+  .section-divider__star { width: 12px; height: 12px; }
+}
