@@ -11,33 +11,28 @@ const toDevDigits = (s) => String(s ?? '').replace(/[0-9]/g, (d) => DEV_DIGITS[+
 
 const YEAR_ROW_PX = 72;
 
-/* Files in /public/timeline/ flat URL-safe names. */
+/* Maps each timeline event-id to the new year-named image at
+   /public/timeline/{year}.jpg. The new images have the year,
+   title, and body text baked into the artwork itself — so the
+   HTML title / divider / body overlays below are intentionally
+   not rendered (they'd duplicate what's in the image).
+
+   Events not in this map are filtered out of the timeline until
+   matching artwork is supplied. */
 const EVENT_IMAGES = {
-  'marmik': '/timeline/image-1.png',
-  'founding': '/timeline/image-2.png',
-  'first-elections': '/timeline/image-3.png',
-  'border-arrest': '/timeline/image-4.png',
-  'first-mla': '/timeline/image-5.png',
-  'first-mayor': '/timeline/image-6.png',
-  'navalkar': '/timeline/image-7.png',
-  'pradhan-mayor': '/timeline/image-8.png',
-  'first-alliance': '/timeline/image-9.png',
-  'alliance-renewed': '/timeline/image-10.png',
-  'bhujbal-exit': '/timeline/image-12.png',
-  'saffron-1995': '/timeline/image-13.png',
-  'rane-cm': '/timeline/image-14.png',
-  'uddhav-exec': '/timeline/image-15.png',
-  'rane-exit': '/timeline/image-16.png',
-  'naik-exit': '/timeline/image-17.png',
-  'balasaheb-passing': '/timeline/image-18.png',
-  'fadnavis-cm': '/timeline/image-19.png',
-  'uddhav-cm': '/timeline/image-20.png',
-  'shinde-not-reachable':'/timeline/image-21.png',
-  'shinde-cm': '/timeline/image-22.png',
-  'official-shivsena': '/timeline/image-1.jpg',
-  'ls-2024': '/timeline/image-2.jpg',
-  'va-2024': '/timeline/image-3.jpg',
-  'shinde-dcm': '/timeline/main.png',
+  'marmik':           '/timeline/1960.jpg',
+  'founding':         '/timeline/1966.jpg',
+  'first-elections':  '/timeline/1967.jpg',
+  'border-arrest':    '/timeline/1969.jpg',
+  'first-mla':        '/timeline/1970.jpg',
+  'first-mayor':      '/timeline/1971.jpg',
+  'navalkar':         '/timeline/1972.jpg',
+  'pradhan-mayor':    '/timeline/1972-2.jpg',
+  'first-alliance':   '/timeline/1984.jpg',
+  'alliance-renewed': '/timeline/1989.jpg',
+  'saffron-1995':     '/timeline/1995.jpg',
+  'rane-cm':          '/timeline/1995-2.jpg',
+  'balasaheb-passing':'/timeline/2012.jpg',
 };
 
 export default function AboutTimeline() {
@@ -45,7 +40,10 @@ export default function AboutTimeline() {
   const { lang } = useLanguage();
   const isMr = lang === 'mr';
   const fmtYear = (y) => (isMr ? toDevDigits(y) : y);
-  const events = t.events || [];
+  /* Show only events that have a matching image. Anything without
+     artwork is hidden until the client supplies it — prevents the
+     "year-only" empty-image card the user reported. */
+  const events = (t.events || []).filter((ev) => Boolean(EVENT_IMAGES[ev.id]));
   const headerRef = useScrollReveal(0.2);
 
   const yearGroups = useMemo(() => {
@@ -67,7 +65,10 @@ export default function AboutTimeline() {
 
   if (events.length === 0) return null;
 
-  const activeEvent = events[activeIdx];
+  /* Guard activeIdx if the filter shrinks the list below the
+     stored index (e.g. on a hot-reload). */
+  const safeIdx = Math.min(activeIdx, events.length - 1);
+  const activeEvent = events[safeIdx];
   const activeImage = EVENT_IMAGES[activeEvent.id] || '/img-1.jpg';
   const activeYear = activeEvent.year;
   const activeYearIdx = yearGroups.findIndex(g => g.year === activeYear);
@@ -118,28 +119,18 @@ export default function AboutTimeline() {
  </div>
  </div>
 
- {/* ── Right: image + content ── */}
- <div className="cgn-tl__content">
- <div className="cgn-tl__media">
+ {/* ── Right: image only (the artwork already contains the
+        year + title + body text, so HTML overlays were dropped). ── */}
+ <div className="cgn-tl__content cgn-tl__content--image-only">
+ <div className="cgn-tl__media cgn-tl__media--full">
  <img
- key={`img-${activeIdx}`}
+ key={`img-${safeIdx}`}
  src={activeImage}
- alt=""
+ alt={activeEvent.title || ''}
  className="cgn-tl__img"
  loading="lazy"
  />
  </div>
- <h3 key={`title-${activeIdx}`} className="cgn-tl__title">{activeEvent.title}</h3>
- <div key={`div-${activeIdx}`} className="cgn-tl__divider" aria-hidden="true">
- <span className="cgn-tl__divider-line" />
- <svg className="cgn-tl__divider-mark" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
- <path d="M8 0 L9.4 6.6 L16 8 L9.4 9.4 L8 16 L6.6 9.4 L0 8 L6.6 6.6 Z" fill="currentColor" />
- </svg>
- <span className="cgn-tl__divider-line" />
- </div>
- {activeEvent.body && (
- <p key={`body-${activeIdx}`} className="cgn-tl__body">{activeEvent.body}</p>
- )}
  </div>
 
  </div>

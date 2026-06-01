@@ -8,9 +8,13 @@ import './VisionIdeology.css';
  unity.png → Freepik "Social justice" (Flaticon id 10554213)
  progress.png → Freepik "Career development" (Flaticon id 17652288) */
 const PILLAR_ICONS = {
+  /* New (2-card layout): ध्येय / धोरण */
+  dhyey:  <img src="/icons/progress.png"   alt="" className="vision-card__icon-img" />,
+  dhoran: <img src="/icons/governance.png" alt="" className="vision-card__icon-img" />,
+  /* Legacy keys kept for safety in case any content still uses them */
   governance: <img src="/icons/governance.png" alt="" className="vision-card__icon-img" />,
-  unity: <img src="/icons/unity.png" alt="" className="vision-card__icon-img" />,
-  progress: <img src="/icons/progress.png" alt="" className="vision-card__icon-img" />,
+  unity:      <img src="/icons/unity.png"      alt="" className="vision-card__icon-img" />,
+  progress:   <img src="/icons/progress.png"   alt="" className="vision-card__icon-img" />,
 };
 
 export default function VisionIdeology() {

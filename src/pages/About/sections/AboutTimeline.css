@@ -373,3 +373,30 @@
   .cgn-tl__year-dot,
   .cgn-tl__year-label { transition: none !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   IMAGE-ONLY VARIANT (added when timeline artwork became the
+   primary content). Lets the right-hand column become a full-
+   bleed image with no title / divider / body underneath.
+═══════════════════════════════════════════════════════════════ */
+.cgn-tl__content--image-only {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cgn-tl__media--full {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cgn-tl__media--full .cgn-tl__img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 18px 42px -18px rgba(26, 20, 16, 0.28);
+}

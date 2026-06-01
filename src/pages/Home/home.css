@@ -73,8 +73,9 @@ body.has-dark-hero-visible .site-nav {
 }
 
 .site-nav__logo {
-  height: 60px;
+  height: 70px;
   width: auto;
+  display: block;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -231,13 +232,15 @@ body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
 .site-nav__sublink {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 7px;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  /* Match the main top-level nav link styling so the dropdown
+     items read with the same visual weight as the parent menu. */
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   color: var(--body-text, #5C544A);
   text-decoration: none;
   transition: background 0.25s ease, color 0.25s ease, padding 0.3s var(--ease-out-expo);
@@ -709,4 +712,162 @@ html[lang="en"] .hero-main-title {
   bottom: 0;
   width: 100%;
   z-index: 6;
+}
+/* ═══════════════════════════════════════════════════════════════
+   HERO QUOTE OVERLAY (Samarth Ramdas — "मराठा तितुका मेळवावा,
+   महाराष्ट्र धर्म वाढवावा").
+
+   Layered over the video:
+     1. .hero-quote__veil  — soft radial vignette so the centre
+        of the frame darkens for readability while the edges stay
+        bright (festive video remains visible at the corners).
+     2. .hero-quote        — text block: eyebrow / ornament /
+        line / ornament / attribution, with gold-foil gradient
+        type and warm glow.
+═══════════════════════════════════════════════════════════════ */
+
+/* Full-screen dark veil — strong solid base across the whole
+   frame so the busy video footage doesn't fight with the text,
+   plus a deeper radial accent so the centre is even darker. */
+.hero-quote__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 75% 65% at 50% 50%,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.25) 55%,
+      rgba(0, 0, 0, 0)    100%
+    ),
+    linear-gradient(
+      rgba(8, 5, 2, 0.62),
+      rgba(8, 5, 2, 0.62)
+    );
+  animation: heroVeilIn 1.4s ease 0.1s both;
+}
+
+.hero-quote {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  pointer-events: none;
+  animation: heroQuoteIn 1.2s cubic-bezier(0.2, 0.85, 0.3, 1) 0.35s both;
+}
+
+/* ─── Star ornaments (line · ✦ · line) — brand saffron ─── */
+.hero-quote__ornament {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: #FF6B1A;
+  filter: drop-shadow(0 0 14px rgba(255, 107, 26, 0.45));
+}
+.hero-quote__ornament--top    { margin-bottom: 26px; }
+.hero-quote__ornament--bottom { margin: 28px 0 14px; }
+.hero-quote__ornament-line {
+  width: clamp(60px, 9vw, 130px);
+  height: 1.5px;
+}
+.hero-quote__ornament--top .hero-quote__ornament-line:first-child,
+.hero-quote__ornament--bottom .hero-quote__ornament-line:last-child {
+  background: linear-gradient(
+    to right,
+    rgba(255, 107, 26, 0) 0%,
+    rgba(255, 107, 26, 0.95) 100%
+  );
+}
+.hero-quote__ornament--top .hero-quote__ornament-line:last-child,
+.hero-quote__ornament--bottom .hero-quote__ornament-line:first-child {
+  background: linear-gradient(
+    to left,
+    rgba(255, 107, 26, 0) 0%,
+    rgba(255, 107, 26, 0.95) 100%
+  );
+}
+
+/* ─── Main quote line (white, smooth word-by-word entrance) ─── */
+.hero-quote__line {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Sans Devanagari', serif;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0.005em;
+  margin: 0;
+  max-width: 14em;
+  color: #FFFFFF;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.65);
+}
+
+/* Each line is a flex row that holds individual word spans.
+   Devanagari has a top headline (shirorekha) so words need a
+   little extra vertical breathing room when each one starts in
+   its own inline-block. */
+.hero-quote__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.34em;
+  line-height: 1.32;
+}
+
+/* Words rise up + fade in — no blur, no 3D rotation. Pure
+   transform + opacity for buttery-smooth GPU compositing. */
+.hero-quote__word {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  will-change: transform, opacity;
+  animation: heroWordIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Line 1 — words land left-to-right with a smoother 0.16s stagger */
+.hero-quote__row--1 .hero-quote__word:nth-child(1) { animation-delay: 0.40s; }
+.hero-quote__row--1 .hero-quote__word:nth-child(2) { animation-delay: 0.56s; }
+.hero-quote__row--1 .hero-quote__word:nth-child(3) { animation-delay: 0.72s; }
+/* Line 2 — flows in continuously with line 1, slight gap for breath */
+.hero-quote__row--2 .hero-quote__word:nth-child(1) { animation-delay: 0.96s; }
+.hero-quote__row--2 .hero-quote__word:nth-child(2) { animation-delay: 1.12s; }
+.hero-quote__row--2 .hero-quote__word:nth-child(3) { animation-delay: 1.28s; }
+
+@keyframes heroWordIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroQuoteIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroVeilIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 720px) {
+  .hero-quote { padding: 18px; }
+  .hero-quote__ornament-line { width: clamp(40px, 18vw, 80px); }
+  .hero-quote__ornament--top    { margin-bottom: 16px; }
+  .hero-quote__ornament--bottom { margin: 18px 0 10px; }
+  .hero-quote__line          { font-size: clamp(1.6rem, 7.5vw, 2.6rem); line-height: 1.35; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-quote,
+  .hero-quote__veil,
+  .hero-quote__word { animation: none; }
+  .hero-quote__word {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }

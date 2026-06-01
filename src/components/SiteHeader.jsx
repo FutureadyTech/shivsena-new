@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useT } from '../i18n/LanguageContext.jsx';
 import LanguageToggle from './LanguageToggle.jsx';
+import NotificationsBell from './NotificationsBell.jsx';
 import './SiteHeader.css';
 
 /* ─── Nav structure ─────────────────────────────────────────────
@@ -13,9 +14,10 @@ const NAV = [
     key: 'nav-about',
     to: '/about',
     children: [
-      { to: '/about', key: 'nav-about-party' },
-      { to: '/mahayuti', key: 'nav-mahayuti' },
       { to: '/shivsena-janma', key: 'nav-shivsena-janma' },
+      { to: '/about',          key: 'nav-about-party' },
+      { to: '/about#history',  key: 'nav-timeline' },
+      { to: '/mahayuti',       key: 'nav-mahayuti' },
     ],
   },
   { to: '/leadership', key: 'nav-leadership' },
@@ -83,7 +85,7 @@ export default function SiteHeader() {
     <>
       <header className={`site-nav ${mobileOpen ? 'site-nav--mobile-open' : ''}`}>
         <NavLink to="/home" className="site-nav__brand" aria-label="शिवसेना">
-          <img src="/logo.png" alt="शिवसेना" className="site-nav__logo" />
+          <img src="/Logos/header-logo.png" alt="शिवसेना" className="site-nav__logo" />
         </NavLink>
 
         <nav className="site-nav__menu">
@@ -109,6 +111,7 @@ export default function SiteHeader() {
           <span>{t('nav-live')}</span>
         </NavLink>
 
+        <NotificationsBell />
         <LanguageToggle />
 
         {/* ───────── MOBILE HAMBURGER (only visible < 1024px) ───────── */}
@@ -285,6 +288,7 @@ function MobileMenu({ open, onClose, t }) {
               <span>{t('nav-live')}</span>
             </NavLink>
             <div className="site-mobile__lang">
+              <NotificationsBell />
               <LanguageToggle />
             </div>
           </footer>

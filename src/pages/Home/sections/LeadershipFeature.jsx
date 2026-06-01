@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
@@ -66,12 +67,20 @@ export default function LeadershipFeature({ content }) {
  {/* ── Alternating leader blocks ── */}
  <ol className="lf__list">
  {leaders.map((leader, i) => (
+ <Fragment key={leader.id}>
+ {leader.sectionHeader && (
+ <li className="lf__divider" aria-hidden="false">
+ <span className="lf__divider-rule" />
+ <h3 className="lf__divider-title">{leader.sectionHeader}</h3>
+ <span className="lf__divider-rule" />
+ </li>
+ )}
  <LeaderFeature
- key={leader.id}
  leader={leader}
  index={i}
  lang={lang}
  />
+ </Fragment>
  ))}
  </ol>
  </div>

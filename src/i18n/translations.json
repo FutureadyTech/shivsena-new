@@ -6,9 +6,10 @@
 
     "nav-home":         "मुख्यपृष्ठ",
     "nav-about":        "पक्ष",
-    "nav-about-party":  "आमच्याविषयी",
+    "nav-about-party":  "संघटने विषयी",
     "nav-mahayuti":     "महायुती",
     "nav-shivsena-janma":"अशी जन्माला आली शिवसेना",
+    "nav-timeline":     "टाईमलाईन",
     "nav-history":      "इतिहास",
     "nav-news":         "मीडिया रिसोर्सेस",
     "nav-leadership":   "नेतृत्व",
@@ -54,9 +55,10 @@
 
     "nav-home":         "Home",
     "nav-about":        "About Us",
-    "nav-about-party":  "About Us",
+    "nav-about-party":  "About the Organisation",
     "nav-mahayuti":     "Mahayuti",
     "nav-shivsena-janma":"How Shiv Sena Was Born",
+    "nav-timeline":     "Timeline",
     "nav-history":      "History",
     "nav-news":         "Media Resources",
     "nav-leadership":   "Leadership",

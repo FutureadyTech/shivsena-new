@@ -9,34 +9,22 @@ import './OurJourney.css';
 const DEV_DIGITS = ['०','१','२','३','४','५','६','७','८','९'];
 const toDevDigits = (s) => String(s ?? '').replace(/[0-9]/g, (d) => DEV_DIGITS[+d]);
 
-/* Same image map AboutTimeline uses keeps the home journey in lock-step
- with the detailed About page. */
+/* Year-keyed image map — each new timeline image has the year + title +
+   body baked in, so the panel text overlays have been removed. */
 const EVENT_IMAGES = {
-  'marmik': '/timeline/image-1.png',
-  'founding': '/timeline/image-2.png',
-  'first-elections': '/timeline/image-3.png',
-  'border-arrest': '/timeline/image-4.png',
-  'first-mla': '/timeline/image-5.png',
-  'first-mayor': '/timeline/image-6.png',
-  'navalkar': '/timeline/image-7.png',
-  'pradhan-mayor': '/timeline/image-8.png',
-  'first-alliance': '/timeline/image-9.png',
-  'alliance-renewed': '/timeline/image-10.png',
-  'bhujbal-exit': '/timeline/image-12.png',
-  'saffron-1995': '/timeline/image-13.png',
-  'rane-cm': '/timeline/image-14.png',
-  'uddhav-exec': '/timeline/image-15.png',
-  'rane-exit': '/timeline/image-16.png',
-  'naik-exit': '/timeline/image-17.png',
-  'balasaheb-passing': '/timeline/image-18.png',
-  'fadnavis-cm': '/timeline/image-19.png',
-  'uddhav-cm': '/timeline/image-20.png',
-  'shinde-not-reachable':'/timeline/image-21.png',
-  'shinde-cm': '/timeline/image-22.png',
-  'official-shivsena': '/timeline/image-1.jpg',
-  'ls-2024': '/timeline/image-2.jpg',
-  'va-2024': '/timeline/image-3.jpg',
-  'shinde-dcm': '/timeline/main.png',
+  'year-1960':  '/timeline/1960.jpg',
+  'year-1966':  '/timeline/1966.jpg',
+  'year-1967':  '/timeline/1967.jpg',
+  'year-1969':  '/timeline/1969.jpg',
+  'year-1970':  '/timeline/1970.jpg',
+  'year-1971':  '/timeline/1971.jpg',
+  'year-1972a': '/timeline/1972.jpg',
+  'year-1972b': '/timeline/1972-2.jpg',
+  'year-1984':  '/timeline/1984.jpg',
+  'year-1989':  '/timeline/1989.jpg',
+  'year-1995a': '/timeline/1995.jpg',
+  'year-1995b': '/timeline/1995-2.jpg',
+  'year-2012':  '/timeline/2012.jpg',
 };
 
 export default function OurJourney() {
@@ -114,16 +102,19 @@ export default function OurJourney() {
  style={{ backgroundImage: `url(${activeImage})` }}
  aria-hidden="true"
  />
- <div className="journey__overlay" aria-hidden="true" />
 
  <div ref={headerRef} className="journey__inner reveal">
 
- {/* Big year + active event text (left-aligned, no title above) */}
+ {/* Image-only mode: panel renders ONLY when text content exists.
+     New timeline images have year + title + body baked in, so the
+     text overlays are skipped. */}
+ {(activeEvent.title || activeEvent.body) && (
  <div className="journey__panel" key={`panel-${activeIdx}`}>
  <p className="journey__year">{fmtYear(activeEvent.year)}</p>
  {activeEvent.title && <h3 className="journey__event-title">{activeEvent.title}</h3>}
  {activeEvent.body && <p className="journey__body">{activeEvent.body}</p>}
  </div>
+ )}
 
  </div>
 

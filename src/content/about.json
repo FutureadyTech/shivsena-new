@@ -18,179 +18,56 @@
       "lede": "एका साप्ताहिकातून ठिणगी पडली. त्या ठिणगीची आज मराठी अस्मितेची ज्योत झाली आहे.",
       "events": [
         {
-          "id": "marmik",
-          "date": "१३ ऑगस्ट १९६०",
-          "year": "1960",
-          "title": "‘मार्मिक’ या व्यंगचित्र साप्ताहिकाची सुरुवात",
-          "body": "मराठी माणसांची गळचेपी सहन न होऊन, ती व्यक्त करण्यासाठीचं माध्यम म्हणून ‘व्यंगचित्रकार बाळ ठाकरे’ यांनी हे साप्ताहिक सुरु केलं."
+          "id": "year-1960",
+          "year": "1960"
         },
         {
-          "id": "founding",
-          "date": "१९ जून १९६६",
-          "year": "1966",
-          "title": "शिवसेनेची स्थापना",
-          "body": "‘मार्मिक’ला मिळालेल्या प्रतिसादामुळे उत्साह वाढला. मराठी माणसांची उर्जा एकत्र आणण्यासाठी संघटनेची गरज सगळीकडून व्यक्त होऊ लागली. प्रबोधनकारांनी तसा आग्रह केला. त्यातून शिवसेनेचा जन्म झाला. ‘शिवसेनाप्रमुख बाळासाहेब ठाकरे’ हे पदही जन्माला आले."
+          "id": "year-1966",
+          "year": "1966"
         },
         {
-          "id": "first-elections",
-          "date": "१९६७",
-          "year": "1967",
-          "title": "शिवसेनेचा राजकारणात प्रवेश",
-          "body": "स्थापनेनंतर लगेचच शिवसेनेने राजकारणात प्रवेश केला तो ठाणे महानगरपालिकेची निवडणूक लढवून. लगेचच १९६८ साली प्रजा समाजवादी पक्षाबरोबर निवडणूक लढवून मुंबई महानगरपालिकेतही प्रवेश केला. त्यानंतर शिवसेनेच्या शाखा सर्वत्र दिसू लागल्या. शिवसेना शाखांकडे आपले प्रश्न सोडवण्याचं एक व्यासपीठ म्हणून लोक पाहू लागले."
+          "id": "year-1967",
+          "year": "1967"
         },
         {
-          "id": "border-arrest",
-          "date": "१९६९",
-          "year": "1969",
-          "title": "बाळासाहेब ठाकरे यांना अटक",
-          "body": "सीमावादाच्या प्रश्नावरुन निर्माण झालेल्या पेचप्रसंगात बाळासाहेब ठाकरे यांना अटक झाली."
+          "id": "year-1969",
+          "year": "1969"
         },
         {
-          "id": "first-mla",
-          "date": "१९७०",
-          "year": "1970",
-          "title": "शिवसेनेचे पहिले आमदार वामनराव महाडिक",
-          "body": "पोटनिवडणुकीमध्ये शिवसेनेचे वामनराव महाडिक विजयी झाले. शिवसेनेचे ते पहिले आमदार."
+          "id": "year-1970",
+          "year": "1970"
         },
         {
-          "id": "first-mayor",
-          "date": "१९७१",
-          "year": "1971",
-          "title": "शिवसेनेचे पहिले महापौर झाले डॉ. हेमचंद्र गुप्ते",
-          "body": "दादरचे डॉ. हेमचंद्र गुप्ते शिवसेनेचे पहिले महापौर झाले."
+          "id": "year-1971",
+          "year": "1971"
         },
         {
-          "id": "navalkar",
-          "date": "१९७२",
-          "year": "1972",
-          "title": "प्रमोद नवलकर विधानसभेवर निवडून आले",
-          "body": ""
+          "id": "year-1972a",
+          "year": "1972"
         },
         {
-          "id": "pradhan-mayor",
-          "date": "१९७४",
-          "year": "1974",
-          "title": "सतीश प्रधान ठाण्याचे महापौर झाले",
-          "body": ""
+          "id": "year-1972b",
+          "year": "1972"
         },
         {
-          "id": "first-alliance",
-          "date": "१९८४",
-          "year": "1984",
-          "title": "शिवसेनेने भाजपबरोबर पहिल्यांदा युती केली",
-          "body": "परंतु भाजप पुढे पुलोदमध्ये सहभागी झाल्याने ही युती तुटली."
+          "id": "year-1984",
+          "year": "1984"
         },
         {
-          "id": "alliance-renewed",
-          "date": "१९८९",
-          "year": "1989",
-          "title": "भाजप आणि शिवसेना यांची पुन्हा युती झाली",
-          "body": ""
+          "id": "year-1989",
+          "year": "1989"
         },
         {
-          "id": "bhujbal-exit",
-          "date": "डिसेबर १९९१",
-          "year": "1991",
-          "title": "छगन भुजबळ यांनी शिवसेना सोडली",
-          "body": ""
+          "id": "year-1995a",
+          "year": "1995"
         },
         {
-          "id": "saffron-1995",
-          "date": "१९९५",
-          "year": "1995",
-          "title": "विधानसभेवर भगवा फडकला",
-          "body": "शिवसेना-भाजपा युतीची पहिल्यांदाच महाराष्ट्रात सत्ता आली. शिवसेनेचे मनोहर जोशी युतीचे पहिले मुख्यमंत्री झाले."
+          "id": "year-1995b",
+          "year": "1995"
         },
         {
-          "id": "rane-cm",
-          "date": "१९९९",
-          "year": "1999",
-          "title": "नारायण राणे मुख्यमंत्री झाले",
-          "body": ""
-        },
-        {
-          "id": "uddhav-exec",
-          "date": "२००३",
-          "year": "2003",
-          "title": "उद्धव ठाकरे यांची कार्यकारी प्रमुख पदी निवड",
-          "body": "महाबळेश्वर येथे झालेल्या अधिवेशनात शिवसेनेचे कार्यकारी प्रमुख म्हणून उद्धव ठाकरे यांची निवड करण्यात आली. (परिणामी २००५ साली राज ठाकरे यांनी पक्ष सोडला.)"
-        },
-        {
-          "id": "rane-exit",
-          "date": "जुलै २००५",
-          "year": "2005",
-          "title": "नारायण राणे यांनी शिवसेना सोडली",
-          "body": ""
-        },
-        {
-          "id": "naik-exit",
-          "date": "२००५",
-          "year": "2005",
-          "title": "गणेश नाईक शिवसेनेतून बाहेर पडले",
-          "body": ""
-        },
-        {
-          "id": "balasaheb-passing",
-          "date": "१७ नोव्हेंबर २०१२",
-          "year": "2012",
-          "title": "हिंदुह्दयसम्राट वंदनीय बाळासाहेब ठाकरे यांचे निधन",
-          "body": "१७ नोव्हेंबर रोजी हिंदुह्दयसम्राट वंदनीय बाळासाहेब ठाकरे यांचे निधन झाले."
-        },
-        {
-          "id": "fadnavis-cm",
-          "date": "२०१४",
-          "year": "2014",
-          "title": "देवेंद्र फडणवीस शिवसेना-भाजप युतीचे मुख्यमंत्री",
-          "body": "भाजपचे देवेंद्र फडणवीस हे शिवसेना- भाजप युतीचे मुख्यमंत्री झाले."
-        },
-        {
-          "id": "uddhav-cm",
-          "date": "२०१९",
-          "year": "2019",
-          "title": "उद्धव ठाकरे मुख्यमंत्री झाले",
-          "body": "ठाकरे कुटुंबातील कोणतीही व्यक्ती सत्तेचे पद स्वीकारणार नाही हा बाळासाहेबांचा शब्द मोडून उद्धव ठाकरे मुख्यमंत्री झाले. ज्या काँग्रेसला बाळासाहेब गाडायला निघाले होते त्यांच्यासोबतच उद्धव ठाकरे यांनी हातमिळवणी केली."
-        },
-        {
-          "id": "shinde-not-reachable",
-          "date": "२० जून २०२२",
-          "year": "2022",
-          "title": "एकनाथ शिंदे नॉट रिचेबल झाले",
-          "body": "विधानपरिषदेची निवडणूक पार पडल्यानंतर २० जून रोजी एकनाथ शिंदे नॉट रिचेबल झाले. पुढील आठवडाभरात उद्धव ठाकरे यांचे नेतृत्व झूगारत आणखी ४० आमदार एकनाथ शिंदेंना येऊन मिळाले."
-        },
-        {
-          "id": "shinde-cm",
-          "date": "३० जून २०२२",
-          "year": "2022",
-          "title": "एकनाथ शिंदे यांना महाराष्ट्राच्या मुख्यमंत्री पदाची शपथ",
-          "body": "ठाणे, सुरत, गोहाटी, गोवा असा प्रवास करत अखेर ते एकनाथ शिंदे थेट मुंबईच्या राजभवनावर दाखल झाले. ३० जून २०२२ एकनाथ शिंदे यांना महाराष्ट्राच्या मुख्यमंत्री पदाची शपथ दिली गेली."
-        },
-        {
-          "id": "official-shivsena",
-          "date": "२०२३",
-          "year": "2023",
-          "title": "अधिकृत शिवसेना पक्ष ‘धनुष्यबाण’ चिन्ह",
-          "body": "केंद्रीय निवडणूक आयोगाने ‘शिवसेना’ हे पक्षाचं नाव आणि निवडणूक चिन्ह ‘धनुष्यबाण’ एकनाथ शिंदे यांच्या गटाला दिल्याने त्यांचा गट हाच अधिकृत शिवसेना पक्ष ठरला. त्यानंतर शिवसेनेच्या राष्ट्रीय कार्यकारिणीची पहिली बैठक मंगळवार २१ फेब्रुवारी रोजा रात्री पार पडली. या बैठकीत शिवसेनेचे मुख्य नेते म्हणून एकनाथ शिंदे यांच्याकडे अधिकार देण्यात आले."
-        },
-        {
-          "id": "ls-2024",
-          "date": "२०२४",
-          "year": "2024",
-          "title": "लोकसभा निवडणूकीत शिवसेनेचे ७ खासदार निवडून आले",
-          "body": ""
-        },
-        {
-          "id": "va-2024",
-          "date": "२०२४",
-          "year": "2024",
-          "title": "विधानसभा निवडणूकीत ५७ आमदार निवडून आले",
-          "body": ""
-        },
-        {
-          "id": "shinde-dcm",
-          "date": "५ डिसेंबर २०२४",
-          "year": "2024",
-          "title": "एकनाथ शिंदे यांनी उपमुख्यमंत्रीपदाची शपथ घेतली",
-          "body": "५ डिसेंबर रोजी एकनाथ शिंदे यांनी उपमुख्यमंत्रीपदाची शपथ घेतली."
+          "id": "year-2012",
+          "year": "2012"
         }
       ]
     },
@@ -200,179 +77,56 @@
       "lede": "A spark from a weekly magazine became, over six decades, the flame of Marathi pride.",
       "events": [
         {
-          "id": "marmik",
-          "date": "13 August 1960",
-          "year": "1960",
-          "title": "'Marmik' Begins",
-          "body": "Cartoonist Bal Thackeray launched 'Marmik', a weekly satirical magazine, to give voice to the silencing of the Marathi people."
+          "id": "year-1960",
+          "year": "1960"
         },
         {
-          "id": "founding",
-          "date": "19 June 1966",
-          "year": "1966",
-          "title": "Founding of Shiv Sena",
-          "body": "The enthusiastic response to 'Marmik' fuelled calls for an organisation to channel Marathi energy. At Prabodhankar's insistence, Shiv Sena was born and so was the title 'Shiv Sena Pramukh Balasaheb Thackeray'."
+          "id": "year-1966",
+          "year": "1966"
         },
         {
-          "id": "first-elections",
-          "date": "1967",
-          "year": "1967",
-          "title": "Entry Into Politics",
-          "body": "Soon after founding, Shiv Sena entered politics by contesting the Thane Municipal Corporation election. In 1968 it entered the Mumbai Municipal Corporation alongside the Praja Socialist Party, and shakhas began appearing everywhere."
+          "id": "year-1967",
+          "year": "1967"
         },
         {
-          "id": "border-arrest",
-          "date": "1969",
-          "year": "1969",
-          "title": "The Border Struggle",
-          "body": "Balasaheb Thackeray was arrested amid the tensions arising from the border dispute."
+          "id": "year-1969",
+          "year": "1969"
         },
         {
-          "id": "first-mla",
-          "date": "1970",
-          "year": "1970",
-          "title": "First MLA",
-          "body": "In a by-election, Shiv Sena's Wamanrao Mahadik won becoming the party's first MLA."
+          "id": "year-1970",
+          "year": "1970"
         },
         {
-          "id": "first-mayor",
-          "date": "1971",
-          "year": "1971",
-          "title": "First Mayor Dr. Hemchandra Gupte",
-          "body": "Dr. Hemchandra Gupte of Dadar became Shiv Sena's first Mayor."
+          "id": "year-1971",
+          "year": "1971"
         },
         {
-          "id": "navalkar",
-          "date": "1972",
-          "year": "1972",
-          "title": "Pramod Navalkar Elected MLA",
-          "body": "Pramod Navalkar was elected to the Legislative Assembly."
+          "id": "year-1972a",
+          "year": "1972"
         },
         {
-          "id": "pradhan-mayor",
-          "date": "1974",
-          "year": "1974",
-          "title": "Thane Mayor Satish Pradhan",
-          "body": "Satish Pradhan became the Mayor of Thane."
+          "id": "year-1972b",
+          "year": "1972"
         },
         {
-          "id": "first-alliance",
-          "date": "1984",
-          "year": "1984",
-          "title": "First Shiv Sena–BJP Alliance",
-          "body": "Shiv Sena allied with the BJP for the first time. The alliance later broke when the BJP joined the Pulod front."
+          "id": "year-1984",
+          "year": "1984"
         },
         {
-          "id": "alliance-renewed",
-          "date": "1989",
-          "year": "1989",
-          "title": "Alliance Renewed",
-          "body": "Shiv Sena and the BJP came together once again."
+          "id": "year-1989",
+          "year": "1989"
         },
         {
-          "id": "bhujbal-exit",
-          "date": "December 1991",
-          "year": "1991",
-          "title": "Chhagan Bhujbal Departs",
-          "body": "Chhagan Bhujbal left Shiv Sena."
+          "id": "year-1995a",
+          "year": "1995"
         },
         {
-          "id": "saffron-1995",
-          "date": "1995",
-          "year": "1995",
-          "title": "Saffron Over the Assembly",
-          "body": "The Shiv Sena–BJP alliance came to power in Maharashtra for the first time. Shiv Sena's Manohar Joshi became the alliance's first Chief Minister."
+          "id": "year-1995b",
+          "year": "1995"
         },
         {
-          "id": "rane-cm",
-          "date": "1999",
-          "year": "1999",
-          "title": "Narayan Rane Chief Minister",
-          "body": "Narayan Rane became the Chief Minister."
-        },
-        {
-          "id": "uddhav-exec",
-          "date": "2003",
-          "year": "2003",
-          "title": "Uddhav Thackeray Executive Chief",
-          "body": "At the Mahabaleshwar convention, Uddhav Thackeray was elected Executive President of Shiv Sena. (Consequently, in 2005 Raj Thackeray left the party.)"
-        },
-        {
-          "id": "rane-exit",
-          "date": "July 2005",
-          "year": "2005",
-          "title": "Narayan Rane Departs",
-          "body": "Narayan Rane left Shiv Sena."
-        },
-        {
-          "id": "naik-exit",
-          "date": "2005",
-          "year": "2005",
-          "title": "Ganesh Naik Departs",
-          "body": "Ganesh Naik left Shiv Sena."
-        },
-        {
-          "id": "balasaheb-passing",
-          "date": "17 November 2012",
-          "year": "2012",
-          "title": "Hinduhrudaysamrat Passes Away",
-          "body": "Hinduhrudaysamrat Vandaniya Balasaheb Thackeray passed away. Maharashtra fell silent."
-        },
-        {
-          "id": "fadnavis-cm",
-          "date": "2014",
-          "year": "2014",
-          "title": "Devendra Fadnavis Chief Minister",
-          "body": "BJP's Devendra Fadnavis became the Chief Minister of the Shiv Sena–BJP alliance government."
-        },
-        {
-          "id": "uddhav-cm",
-          "date": "2019",
-          "year": "2019",
-          "title": "Balasaheb's Word Broken",
-          "body": "Breaking Balasaheb's word that 'no member of the Thackeray family will accept a position of power,' Uddhav Thackeray became Chief Minister. He joined hands with the very Congress that Balasaheb had vowed to bury."
-        },
-        {
-          "id": "shinde-not-reachable",
-          "date": "20 June 2022",
-          "year": "2022",
-          "title": "'Not Reachable' Change Begins",
-          "body": "After the Legislative Council election on 20 June, Eknath Shinde became 'not reachable.' Within a week, another 40 MLAs rejected Uddhav Thackeray's leadership and joined him."
-        },
-        {
-          "id": "shinde-cm",
-          "date": "30 June 2022",
-          "year": "2022",
-          "title": "Eknath Shinde Chief Minister",
-          "body": "After a journey via Thane, Surat, Guwahati and Goa, Eknath Shinde arrived at Mumbai's Raj Bhavan. On 30 June 2022, he was sworn in as Chief Minister of Maharashtra."
-        },
-        {
-          "id": "official-shivsena",
-          "date": "2023",
-          "year": "2023",
-          "title": "The Official Shiv Sena Bow and Arrow",
-          "body": "The Election Commission of India recognised Eknath Shinde's faction as the official Shiv Sena, granting it the party name and the 'bow and arrow' symbol. At the first National Executive meeting on 21 February, Eknath Shinde was given full authority as Chief Leader."
-        },
-        {
-          "id": "ls-2024",
-          "date": "2024",
-          "year": "2024",
-          "title": "Lok Sabha 7 MPs",
-          "body": "Shiv Sena won 7 Lok Sabha seats."
-        },
-        {
-          "id": "va-2024",
-          "date": "2024",
-          "year": "2024",
-          "title": "Assembly 57 MLAs",
-          "body": "57 MLAs were elected to the Maharashtra Legislative Assembly."
-        },
-        {
-          "id": "shinde-dcm",
-          "date": "5 December 2024",
-          "year": "2024",
-          "title": "Sworn In As Deputy CM",
-          "body": "On 5 December, Eknath Shinde took oath as Deputy Chief Minister back at the centre of power."
+          "id": "year-2012",
+          "year": "2012"
         }
       ]
     }

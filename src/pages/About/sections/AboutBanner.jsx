@@ -9,7 +9,7 @@ export default function AboutBanner() {
     <section className="about-banner">
       <div
         className="about-banner__image"
-        style={{ backgroundImage: 'url(/img-1.jpg)' }}
+        style={{ backgroundImage: 'url(/banners/aboutUs.webp)' }}
         aria-hidden="true"
       />
 

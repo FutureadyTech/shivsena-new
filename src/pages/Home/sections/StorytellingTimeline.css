@@ -585,3 +585,41 @@
  transform: none !important;
  }
   }
+/* ═══════════════════════════════════════════════════════════════
+   IMAGE-ONLY VARIANTS (added 2026)
+
+   The new timeline images at public/timeline/{YEAR}.jpg already
+   have year + title + body baked into the artwork, so we skip
+   every HTML text overlay and just render the image clean.
+═══════════════════════════════════════════════════════════════ */
+
+/* Desktop panel — full-bleed image, no gradients / overlays */
+.era-panel--image-only {
+  background: #0A0806;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.era-panel--image-only .era-panel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;          /* show the whole composition */
+  object-position: center center;
+  display: block;
+}
+
+/* Mobile card — image fills its row, plain background, no overlay */
+.story-mobile__era--image-only {
+  background: transparent;
+  padding: 0;
+  margin: 0 0 24px 0;
+  border: none;
+  box-shadow: none;
+}
+.story-mobile__img-full {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px -14px rgba(10, 8, 6, 0.28);
+}

@@ -9,7 +9,7 @@ export default function InnovativeBanner() {
     <section className="inn-banner">
       <div
         className="inn-banner__image"
-        style={{ backgroundImage: 'url(/img-2.webp)' }}
+        style={{ backgroundImage: 'url(/banners/InnovativeInitiatives.webp)' }}
         aria-hidden="true"
       />
 

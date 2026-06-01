@@ -12,6 +12,27 @@
   isolation: isolate;
 }
 
+/* Bottom-only scrim that sits behind the year strip so the
+   Devanagari labels stay legible against bright photos without
+   needing to push the strip up off the section's bottom edge. */
+.journey::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.65) 45%,
+    rgba(0, 0, 0, 0.25) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
 /* ── Background image ── */
 .journey__bg {
   position: absolute;

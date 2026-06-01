@@ -1,0 +1,84 @@
+{
+  "labels": {
+    "mr": {
+      "title": "सूचना पाटी",
+      "all": "सर्व",
+      "notice": "अधिपत्रके",
+      "appointment": "नियुक्तीपत्रे",
+      "rally": "मेळावे",
+      "order": "आदेश",
+      "noItems": "सध्या कोणतीही सूचना नाही.",
+      "downloadPdf": "PDF डाउनलोड करा",
+      "readMore": "अधिक वाचा",
+      "markAllRead": "सर्व वाचले",
+      "urgentBadge": "तातडीचे",
+      "closeLabel": "बंद करा",
+      "openLabel": "सूचना पाटी उघडा"
+    },
+    "en": {
+      "title": "Notifications",
+      "all": "All",
+      "notice": "Notices",
+      "appointment": "Appointments",
+      "rally": "Rallies",
+      "order": "Orders",
+      "noItems": "No notifications at the moment.",
+      "downloadPdf": "Download PDF",
+      "readMore": "Read more",
+      "markAllRead": "Mark all read",
+      "urgentBadge": "Urgent",
+      "closeLabel": "Close",
+      "openLabel": "Open notifications"
+    }
+  },
+  "items": [
+    {
+      "id": "n-2026-05-29-thane-appointment",
+      "date": "2026-05-29",
+      "category": "appointment",
+      "priority": "normal",
+      "title": {
+        "mr": "ठाणे जिल्हाप्रमुख नियुक्तीपत्र",
+        "en": "Thane District Head Appointment Letter"
+      },
+      "body": {
+        "mr": "मा. श्री. एकनाथजी शिंदे साहेब यांच्या आदेशानुसार ठाणे जिल्हाप्रमुख म्हणून नवीन नियुक्ती करण्यात आली आहे. संपूर्ण नियुक्तीपत्र खाली डाउनलोड करता येईल.",
+        "en": "As per the order of Hon. Shri Eknathji Shinde Saheb, a new Thane District Head has been appointed. The full appointment letter can be downloaded below."
+      },
+      "pdf": "",
+      "externalLink": ""
+    },
+    {
+      "id": "n-2026-05-25-mumbai-rally",
+      "date": "2026-05-25",
+      "category": "rally",
+      "priority": "urgent",
+      "title": {
+        "mr": "मुंबई शिवसंवाद दौरा — पत्रकार परिषद",
+        "en": "Mumbai Shivsamvad Tour — Press Conference"
+      },
+      "body": {
+        "mr": "२९ मे २०२६ रोजी आष्टी, बीड येथे शिवसंवाद दौऱ्याची पत्रकार परिषद आयोजित करण्यात आली आहे. सर्व जिल्हाप्रमुख, शाखाप्रमुख व कार्यकर्त्यांनी आवर्जून उपस्थित राहावे.",
+        "en": "A press conference for the Shivsamvad tour has been organised at Ashti, Beed on 29 May 2026. All district heads, branch heads, and workers are requested to attend without fail."
+      },
+      "pdf": "",
+      "externalLink": ""
+    },
+    {
+      "id": "n-2026-05-20-organisation-restructure",
+      "date": "2026-05-20",
+      "category": "notice",
+      "priority": "normal",
+      "title": {
+        "mr": "शिवसेना संघटना पुनर्रचना — अधिपत्रक",
+        "en": "Shiv Sena Organisation Restructure — Notice"
+      },
+      "body": {
+        "mr": "शिवसेना संघटनेच्या प्रदेश, विभाग व जिल्हास्तरीय पुनर्रचनेसंदर्भात अधिकृत अधिपत्रक जारी करण्यात आले आहे. नवीन रचनेची संपूर्ण माहिती PDF स्वरूपात उपलब्ध आहे.",
+        "en": "An official notice has been issued regarding the state, divisional, and district-level restructuring of the Shiv Sena organisation. Full details of the new structure are available in PDF."
+      },
+      "pdf": "",
+      "externalLink": ""
+    }
+  ]
+}
