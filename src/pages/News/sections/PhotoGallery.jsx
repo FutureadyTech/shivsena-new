@@ -116,6 +116,27 @@ export default function PhotoGallery() {
  ))}
  </div>
 
+ {/* "Download HD Images" CTA — opens the curated Google Drive
+     folder of full-resolution photos in a new tab. The Drive URL
+     is configured in news.json (`photos.mr.bulkDownloadUrl` /
+     `photos.en.bulkDownloadUrl`) so it can be changed without
+     touching this file. */}
+ {t.bulkDownloadUrl && (
+ <div className="pg-section__cta-wrap">
+ <a
+ href={t.bulkDownloadUrl}
+ target="_blank"
+ rel="noopener noreferrer"
+ className="pg-section__bulk-cta"
+ >
+ <span className="pg-section__bulk-cta-icon" aria-hidden="true">
+ {DownloadIcon}
+ </span>
+ <span>{t.bulkDownloadLabel || 'Download HD Images'}</span>
+ </a>
+ </div>
+ )}
+
  </div>
 
  {activePhoto && (
