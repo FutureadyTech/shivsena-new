@@ -240,31 +240,32 @@ function CandidateRow({ c, t, lang }) {
   const c2Href = formLink(c.c2);
   const c7Href = formLink(c.c7);
 
-  /* In Marathi mode, look up the matching MR record for this
-     candidate using the constituency number (`c.no`). The MR data
-     in leaders-by-district.json already has the Marathi name + a
-     role string like "आमदार — १-अक्कलकुवा" we can split. */
+  /* Marathi mode resolution order:
+       1. Explicit candidateMr / constituencyMr fields in JSON
+          (added by scripts/marathify-declarations.cjs — uses a
+          curated override dict + elected MLA lookup).
+       2. Live MLA lookup by constituency number (fallback).
+       3. English (last-resort fallback).                              */
   let displayName = c.candidate;
   let displayConstituency = c.constituency;
   let displayNo = c.no;
 
   if (lang === 'mr') {
-    const mr = mrMlaFor({ constituencyNo: c.no });
-    if (mr) {
-      if (mr.name) displayName = mr.name;
-      /* Role format: "आमदार — १-मतदारसंघ-नाव". Extract the trailing
-         part after the em-dash so we can show just the Marathi
-         constituency name. */
-      const tail = (mr.role || '').split('—').pop().trim();
-      const tailParts = tail.split('-');
-      if (tailParts.length > 1) {
-        /* Skip the leading Devanagari number — keep the name portion. */
-        displayConstituency = tailParts.slice(1).join('-').trim() || displayConstituency;
-      } else if (tail) {
-        displayConstituency = tail;
-      }
+    if (c.candidateMr) {
+      displayName = c.candidateMr;
+    } else {
+      const mr = mrMlaFor({ constituencyNo: c.no });
+      if (mr?.name) displayName = mr.name;
     }
-    /* Constituency number in Devanagari digits */
+    if (c.constituencyMr) {
+      displayConstituency = c.constituencyMr;
+    } else {
+      const mr = mrMlaFor({ constituencyNo: c.no });
+      const tail = (mr?.role || '').split('—').pop().trim();
+      const tailParts = tail.split('-');
+      if (tailParts.length > 1) displayConstituency = tailParts.slice(1).join('-').trim() || displayConstituency;
+      else if (tail) displayConstituency = tail;
+    }
     displayNo = asciiToDevanagari(String(c.no));
   }
 

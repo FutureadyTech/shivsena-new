@@ -40,31 +40,28 @@ const STATE_CATEGORIES = [
   'yuvaSena',
 ];
 
-/* The district-level sections, in the order requested by client.
-   "ministers" was added at the top per the new master XLSX (11 MLAs
-   who also hold cabinet posts). */
-const DISTRICT_CATEGORIES = [
-  'ministers', // मंत्री
-  'mp', // खासदार
-  'mla', // आमदार
-  'leaders', // नेते
-  'deputyLeaders', // उपनेते
-  'divisionalContactHeads', // विभागीय संपर्क प्रमुख
-  'divisionalCoContactHeads',  // विभागीय सह संपर्क प्रमुख
-  'lokSabhaContactHead', // लोकसभा संपर्क प्रमुख
-  'districtHead', // जिल्हाप्रमुख
-  'womenDistrictHeads', // महिला जिल्हाप्रमुख
-];
+/* Unified rendering order — exactly as the client specified.
+   State-level rows (topLeader / spokespersons) and district-level
+   rows interleave inside one continuous list so the page reads
+   as one ordered roster instead of two stacked bands.
 
-/* State-level sections rendered ABOVE the district carousels so
-   the chief leader + national/state spokespersons are always
-   visible regardless of district selection. Data comes from
-   state-leaders.json (built from the राज्यस्तरीय sheet of the
-   master XLSX). */
-const STATE_LEVEL_CATEGORIES = [
-  'topLeader',            // शिवसेना मुख्य नेते (Shinde)
-  'nationalSpokesperson', // राष्ट्रीय प्रवक्त्या
-  'spokespersons',        // शिवसेना प्रवक्ते
+   `source` tells the renderer where to pull entries from:
+     - 'state'    → state-leaders.json (same data for every district)
+     - 'district' → leaders-by-district.json filtered to active district
+*/
+const UNIFIED_CATEGORIES = [
+  { key: 'topLeader',                source: 'state'    }, // 1. शिवसेना मुख्य नेते
+  { key: 'ministers',                source: 'district' }, // 2. मंत्री
+  { key: 'mp',                       source: 'district' }, // 3. खासदार
+  { key: 'mla',                      source: 'district' }, // 4. आमदार
+  { key: 'leaders',                  source: 'district' }, // 5. नेते
+  { key: 'deputyLeaders',            source: 'district' }, // 6. उपनेते
+  { key: 'spokespersons',            source: 'state'    }, // 7. प्रवक्ते (state-level)
+  { key: 'divisionalContactHeads',   source: 'district' }, // 8. विभागीय संपर्क प्रमुख
+  { key: 'divisionalCoContactHeads', source: 'district' }, // 9. विभागीय सह संपर्क प्रमुख
+  { key: 'lokSabhaContactHead',      source: 'district' }, // 10. लोकसभा संपर्क प्रमुख
+  { key: 'districtHead',             source: 'district' }, // 11. जिल्हा प्रमुख
+  { key: 'womenDistrictHeads',       source: 'district' }, // 12. महिला जिल्हा प्रमुख
 ];
 
 /* When a category has no real entries for this district, show this
@@ -204,10 +201,25 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
 
     const districtBucket = leadersByDistrict[activeDistrict] || {};
 
-    const buildGroup = (key) => {
-      let items = isAllMode
-        ? collectAllForCategory(key)
-        : (districtBucket[key] || []);
+    /* Pull items for a single row in the unified list. The `source`
+       tag on each entry decides whether we read from district data
+       or from the statewide roster. The उ-spokespersons row also
+       absorbs the राष्ट्रीय प्रवक्त्या entry so Shayna NC sits next
+       to the rest of the प्रवक्ते instead of in a row of one. */
+    const itemsFor = (key, source) => {
+      if (source === 'state') {
+        if (key === 'spokespersons') {
+          const nat = (stateLeaders?.nationalSpokesperson) || [];
+          const reg = (stateLeaders?.spokespersons)        || [];
+          return [...nat, ...reg];
+        }
+        return (stateLeaders && stateLeaders[key]) || [];
+      }
+      return isAllMode ? collectAllForCategory(key) : (districtBucket[key] || []);
+    };
+
+    const buildGroup = ({ key, source }) => {
+      let items = itemsFor(key, source);
       if (key === 'mla') items = enrichMlas(items);
       const isEmpty = items.length === 0;
       return {
@@ -218,53 +230,18 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
       };
     };
 
-    /* State-level groups pull from state-leaders.json. These render
-       above the district section so the chief leader and statewide
-       spokespersons are always visible. Empty arrays fall back to
-       placeholders via the same buildGroup-style logic. */
-    const buildStateGroup = (key) => {
-      const items = (stateLeaders && stateLeaders[key]) || [];
-      const isEmpty = items.length === 0;
-      return {
-        key,
-        label: categoryNames[key] || key,
-        items: (isEmpty ? placeholdersFor(key) : items).slice(0, ITEMS_PER_CATEGORY),
-        isEmpty,
-      };
-    };
-
-    const stateSection = {
-      id: 'state',
-      title: lang === 'mr' ? 'शिवसेनेचे अधिकृत प्रतिनिधी' : 'Official Representatives of Shiv Sena',
-      subtitle: '',
-      groups: STATE_LEVEL_CATEGORIES.map(buildStateGroup),
-    };
-
-    if (isAllMode) {
-      /* All-mode: the page H2 ALREADY shows the slogan title, so
-         the all-mode district block leaves title/subtitle empty.
-         The state-level block keeps its own header band. */
-      return [
-        stateSection,
-        {
-          id: 'all',
-          title: '',
-          subtitle: '',
-          groups: DISTRICT_CATEGORIES.map(buildGroup),
-        },
-      ];
-    }
-
+    /* Single ordered section — exactly the 12-step sequence the
+       client specified (मुख्य नेते → मंत्री → ... → महिला जिल्हा प्रमुख).
+       No more split between state-level and district-level bands. */
     return [
-      stateSection,
       {
-        id: 'district',
-        title: t.regionalHeader,
-        subtitle: t.regionalSubtitle,
-        groups: DISTRICT_CATEGORIES.map(buildGroup),
+        id: isAllMode ? 'all' : 'district',
+        title: '',
+        subtitle: '',
+        groups: UNIFIED_CATEGORIES.map(buildGroup),
       },
     ];
-  }, [activeDistrict, categoryNames, lang, t.regionalHeader, t.regionalSubtitle, isAllMode, allModeTitle, allModeSubtitle]);
+  }, [activeDistrict, categoryNames, lang, isAllMode]);
 
   const title = isAllMode
     ? allModeTitle
