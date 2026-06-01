@@ -1,31 +1,20 @@
 /* ═══════════════════════════════════════════════════════════════
- INNOVATIVE BANNER same overlay/animation system as the
- declarations & leadership banners
+ INNOVATIVE BANNER — image-only (text + ornaments are baked
+ into the artwork, so overlays + content block are removed).
 ═══════════════════════════════════════════════════════════════ */
 .inn-banner {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 620px;
   overflow: hidden;
   background: #050200;
+  line-height: 0;
 }
 
 .inn-banner__image {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: innBannerPan 22s ease-in-out infinite;
-  filter: saturate(1.05) contrast(1.04);
-}
-
-@keyframes innBannerPan {
-  0% { transform: scale(1.06) translate3d(0, 0, 0); }
-  50%  { transform: scale(1.10) translate3d(-1.5%, -1%, 0); }
-  100% { transform: scale(1.06) translate3d(0, 0, 0); }
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
 }
 
 .inn-banner .ov-base {

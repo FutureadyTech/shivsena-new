@@ -96,9 +96,12 @@ function LeaderFeature({ leader, index, lang }) {
   const profile = leadersContent[leader.id];
   const bio = profile ? (profile[lang] || profile.en || profile.mr) : null;
 
-  const name = bio?.name || leader.name;
-  const role = bio?.role || leader.role;
-  const dates = bio?.dates;
+  /* Page-content fields (home.json / about.json) WIN over the
+     bio fields in leaders.json — the per-page content is the
+     single source of truth for what shows in the Legacy block. */
+  const name = leader.name || bio?.name;
+  const role = leader.role || bio?.role;
+  const dates = leader.dates || bio?.dates;
   // The "lede" tagline is intentionally omitted — we only display
   // fields that come from the source documents, not authored summaries.
   const body = trimAtSentence(bio?.paragraphs?.[0]);

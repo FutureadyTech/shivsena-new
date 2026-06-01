@@ -51,11 +51,29 @@
 .dir-section__title {
   font-family: 'Noto Sans Devanagari', sans-serif;
   font-size: clamp(2.2rem, 4.4vw, 3.4rem);
-  line-height: 1.1;
+  line-height: 1.18;
   color: #fa6919;
-  margin: 0 0 28px;
+  margin: 0 0 14px;
   letter-spacing: -0.015em;
+  /* Honour the \n in slogan-style titles (व्रत जनसेवेचे, /
+     नेतृत्व शिवसेनेचे!) while still wrapping naturally on
+     narrow viewports. */
+  white-space: pre-line;
   animation: dirTitleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Subtitle that lives under the H2 — short single-line note like
+   "संपूर्ण महाराष्ट्रातील सर्व श्रेणींमधील नेतृत्व — कोणत्याही
+   जिल्हा निवडीशिवाय." */
+.dir-section__subtitle {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  line-height: 1.55;
+  color: rgba(26, 20, 16, 0.72);
+  margin: 0 auto 28px;
+  max-width: 720px;
+  text-align: center;
+  animation: dirTitleIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
 }
 @keyframes dirTitleIn {
   from { opacity: 0; transform: translateY(12px); }

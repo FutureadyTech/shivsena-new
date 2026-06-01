@@ -91,8 +91,11 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
   const districtLabel = activeDistrictMeta[lang] || activeDistrictMeta.en || activeDistrict;
 
   /* "All Leadership" mode header text — shows above the carousels
-     when we're ignoring the district filter. */
-  const allModeTitle = lang === 'mr' ? 'सर्व शिवसेना नेतृत्व' : 'All Shiv Sena Leadership';
+     when we're ignoring the district filter. Two-line slogan
+     rendered via a \n + CSS white-space: pre-line. */
+  const allModeTitle = lang === 'mr'
+    ? 'व्रत जनसेवेचे,\nनेतृत्व शिवसेनेचे!'
+    : 'A Pledge of Public Service,\nThe Leadership of Shiv Sena!';
   const allModeSubtitle = lang === 'mr'
     ? 'संपूर्ण महाराष्ट्रातील सर्व श्रेणींमधील नेतृत्व — कोणत्याही जिल्हा निवडीशिवाय.'
     : 'Every category, statewide — no district filter applied.';
@@ -201,10 +204,14 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
     };
 
     if (isAllMode) {
+      /* All-mode: the page H2 ALREADY shows "सर्व शिवसेना नेतृत्व",
+         so we leave title/subtitle empty here. The inner group head
+         (rule + title + subtitle + rule) is suppressed below when
+         there is no title — avoids the duplicated header band. */
       return [{
         id: 'all',
-        title: allModeTitle,
-        subtitle: allModeSubtitle,
+        title: '',
+        subtitle: '',
         groups: DISTRICT_CATEGORIES.map(buildGroup),
       }];
     }
@@ -221,6 +228,10 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
     ? allModeTitle
     : (t.titleTemplate || '{region}').replace('{region}', districtLabel);
 
+  /* Subtitle text — restored under the H2 (it used to sit inside
+     the inner group-head band which we removed earlier). */
+  const subtitle = isAllMode ? allModeSubtitle : t.regionalSubtitle;
+
   return (
  <section className="dir-section">
  <div className="dir-section__inner">
@@ -231,11 +242,15 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
  <span>{t.eyebrow}</span>
  </div>
  <h2 key={`title-${activeDistrict}`} className="dir-section__title">{title}</h2>
+ {subtitle && (
+ <p key={`sub-${activeDistrict}`} className="dir-section__subtitle">{subtitle}</p>
+ )}
  </div>
 
  <div className="dir-categories" key={`cats-${activeDistrict}`}>
  {sections.map((section) => (
  <div key={section.id} className={`dir-section-group dir-section-group--${section.id}`}>
+ {section.title && (
  <div className="dir-group-head">
  <span className="dir-group-rule" />
  <div className="dir-group-titlewrap">
@@ -246,6 +261,7 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
  </div>
  <span className="dir-group-rule" />
  </div>
+ )}
  {section.groups.map((group) => (
  <CategoryCarousel
  key={group.key}

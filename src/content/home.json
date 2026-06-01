@@ -62,22 +62,24 @@
       "leaders": [
         {
           "id": "thackeray",
-          "name": "हिंदुहृदयसम्राट शिवसेनाप्रमुख बाळासाहेब ठाकरे",
-          "role": "संस्थापक",
-          "image": "leaders/thackeray.jpg"
+          "role": "शिवसेनाप्रमुख",
+          "name": "हिंदुहृदयसम्राट बाळासाहेब ठाकरे",
+          "dates": "जन्म : २३ जानेवारी १९२६ – निधन : १७ नोव्हेंबर २०१२",
+          "image": "leaders/Legacy%20of%20Hindutva/Balasaheb%20Thackeray.webp"
         },
         {
           "id": "dighe",
-          "name": "धर्मवीर आनंद दिघे साहेब",
           "role": "गुरुवर्य",
-          "image": "leaders/dharmaveer.jpg"
+          "name": "धर्मवीर आनंद दिघे साहेब",
+          "dates": "जन्म : २७ जानेवारी १९५१ – निधन : २६ ऑगस्ट २००१",
+          "image": "leaders/Legacy%20of%20Hindutva/Dharmaveer%20Anand%20Dighe.webp"
         },
         {
           "id": "shinde",
           "sectionHeader": "शिवसेना मुख्य नेते",
-          "name": "श्री. एकनाथजी शिंदे साहेब",
-          "role": "मुख्य नेते · माजी मुख्यमंत्री तथा विद्यमान उपमुख्यमंत्री · महाराष्ट्र राज्य",
-          "image": "leaders/shinde-white.png"
+          "name": "श्री.एकनाथजी शिंदे",
+          "dates": "माजी मुख्यमंत्री तथा विद्यमान उपमुख्यमंत्री, महाराष्ट्र राज्य",
+          "image": "leaders/Legacy%20of%20Hindutva/Shri%20Eknathji%20Shinde%20Saheb.webp"
         }
       ]
     },
@@ -87,22 +89,24 @@
       "leaders": [
         {
           "id": "thackeray",
-          "name": "Hinduhrudaysamrat Shivsenapramukh Balasaheb Thackeray",
-          "role": "Founder",
-          "image": "leaders/thackeray.jpg"
+          "role": "शिवसेनाप्रमुख",
+          "name": "हिंदुहृदयसम्राट बाळासाहेब ठाकरे",
+          "dates": "जन्म : २३ जानेवारी १९२६ – निधन : १७ नोव्हेंबर २०१२",
+          "image": "leaders/Legacy%20of%20Hindutva/Balasaheb%20Thackeray.webp"
         },
         {
           "id": "dighe",
-          "name": "Dharmaveer Anand Dighe Saheb",
-          "role": "Guruvarya",
-          "image": "leaders/dharmaveer.jpg"
+          "role": "गुरुवर्य",
+          "name": "धर्मवीर आनंद दिघे साहेब",
+          "dates": "जन्म : २७ जानेवारी १९५१ – निधन : २६ ऑगस्ट २००१",
+          "image": "leaders/Legacy%20of%20Hindutva/Dharmaveer%20Anand%20Dighe.webp"
         },
         {
           "id": "shinde",
           "sectionHeader": "शिवसेना मुख्य नेते",
-          "name": "Shri Eknathji Shinde Saheb",
-          "role": "Chief Leader · Former CM & Current Deputy CM · Maharashtra",
-          "image": "leaders/shinde-white.png"
+          "name": "श्री.एकनाथजी शिंदे",
+          "dates": "माजी मुख्यमंत्री तथा विद्यमान उपमुख्यमंत्री, महाराष्ट्र राज्य",
+          "image": "leaders/Legacy%20of%20Hindutva/Shri%20Eknathji%20Shinde%20Saheb.webp"
         }
       ]
     }
