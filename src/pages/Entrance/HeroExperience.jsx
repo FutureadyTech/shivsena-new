@@ -1,53 +1,42 @@
 import { useEffect } from 'react';
-import { initScene } from './scene.js';
 import WelcomeBanner from './WelcomeBanner.jsx';
 
 /**
- * HeroExperience thin React wrapper around the Three.js scene.
+ * HeroExperience static entrance banner + welcome CTAs.
  *
- * `scene.js` is a 1,889-line vanilla module. It now returns a destroy()
- * function from initScene() so we can stop its RAF loop + listener callbacks
- * when the user navigates away (e.g. to /home).
- *
- * The Promise.resolve() defer is a StrictMode trick: in dev, React mounts →
- * cleans up → mounts again. By deferring init past the synchronous cleanup,
- * we avoid the init-then-immediately-destroy cycle. In production this is
- * just a microtask delay, imperceptible.
+ * Earlier this mounted a 1,889-line Three.js scene (palace pillars,
+ * walls, throne, god-rays, dust motes, scroll-driven camera, etc.).
+ * The brief is now just a single hero image (entrance-banner-v2.webp)
+ * + the language CTAs from WelcomeBanner — so the entire 3D stack
+ * has been removed. Faster initial paint, no WebGL context, no
+ * texture generation on the main thread, and no glitchy loader
+ * (because there's nothing left to load).
  */
 export default function HeroExperience() {
+  /* Hold the loader on screen for a beat before fading it out, so
+     the spinner reads as an intentional boot moment instead of a
+     flash. The .hidden class then triggers the 1.2s opacity
+     transition defined in entrance.css. */
   useEffect(() => {
- let destroy;
- let active = true;
-
- Promise.resolve().then(() => {
- if (!active) return;
- destroy = initScene();
- });
-
- return () => {
- active = false;
- if (destroy) destroy();
- };
+    const id = setTimeout(() => {
+      const el = document.getElementById('loader');
+      if (el) el.classList.add('hidden');
+    }, 1600);
+    return () => clearTimeout(id);
   }, []);
 
   return (
- <>
- {/* 3D stage */}
- <canvas id="scene-canvas" />
+    <>
+      {/* Full-bleed static entrance banner. */}
+      <div className="vestibule-cover" id="vestibule-cover" aria-hidden="true">
+        <img src="/entrance-banner-v2.webp" alt="" />
+      </div>
 
- {/* Photorealistic vestibule cover fades + scales to reveal the 3D hall */}
- <div className="vestibule-cover" id="vestibule-cover" aria-hidden="true">
- <img src="/entrance-banner-v2.webp" alt="" />
- </div>
+      {/* Subtle ambient overlays kept for visual polish (no JS). */}
+      <div className="vignette"></div>
+      <div className="grain"></div>
 
- {/* Golden bloom from the doorway */}
- <div className="entry-glow" id="entry-glow" aria-hidden="true"></div>
- <div className="vignette"></div>
- <div className="grain"></div>
-
-
- <WelcomeBanner />
-
- </>
+      <WelcomeBanner />
+    </>
   );
 }
