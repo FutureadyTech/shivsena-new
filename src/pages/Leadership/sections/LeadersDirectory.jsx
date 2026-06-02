@@ -424,6 +424,10 @@ function MemberCard({ member, index, catKey, viewMoreLabel, lang, onSelect }) {
 
   /* खासदार cards show the लोकसभा क्षेत्र (constituency) below the name.
      Falls back to the `note` (e.g. राज्यसभा) when there's no constituency. */
+  /* नेते (leaders) and उपनेते (deputyLeaders) cards show the name only —
+     the role badge is hidden for these two categories. */
+  const hideRole = catKey === 'leaders' || catKey === 'deputyLeaders';
+
   let constituency = '';
   if (catKey === 'mp' && !isPlaceholder) {
  if (member.constituency) {
@@ -447,7 +451,7 @@ function MemberCard({ member, index, catKey, viewMoreLabel, lang, onSelect }) {
 
  <div className="dir-card__content">
  <h4 className="dir-card__name">{name}</h4>
- {role && <p className="dir-card__role">{role}</p>}
+ {role && !hideRole && <p className="dir-card__role">{role}</p>}
  {constituency && <p className="dir-card__role dir-card__constituency">{constituency}</p>}
 
  {!isPlaceholder && (

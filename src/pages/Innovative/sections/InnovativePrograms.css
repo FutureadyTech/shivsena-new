@@ -146,25 +146,6 @@
  radial-gradient(ellipse 60% 50% at 50% 100%, rgba(0, 0, 0, 0.16), transparent 65%);
 }
 
-/* Saffron corner accent on the image card */
-.inn-prog__media::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 56px;
-  height: 56px;
-  border-bottom: 3px solid var(--saffron-on-light, #C44D0E);
-  border-left: 3px solid var(--saffron-on-light, #C44D0E);
-  pointer-events: none;
-}
-.inn-prog--right .inn-prog__media::after {
-  left: auto;
-  right: 0;
-  border-left: 0;
-  border-right: 3px solid var(--saffron-on-light, #C44D0E);
-}
-
 /* ─── Body block ─── */
 .inn-prog__body {
   position: relative;
