@@ -10,25 +10,25 @@ import './MahayutiArticle.css';
  ─────────────────────────────────────────────────────────── */
 const BLOCKS = [
   {
- image: '/timeline/image-1.jpg',
+ image: '/mahayuti/payabharani.webp',
  alt: 'पायाभरणी हिंदुहृदयसम्राट बाळासाहेब ठाकरे',
  objectPosition: 'center center',
  kicker: { mr: 'पायाभरणी', en: 'Foundation' },
   },
   {
- image: '/timeline/image-8.png',
+ image: '/mahayuti/vatchal.webp',
  alt: 'युतीची वाटचाल',
  objectPosition: 'center center',
  kicker: { mr: 'वाटचाल', en: 'The Rift' },
   },
   {
- image: '/img-1.webp',
+ image: '/mahayuti/nave.webp',
  alt: 'नवे नेतृत्व',
  objectPosition: 'center center',
  kicker: { mr: 'नवे नेतृत्व', en: 'New Leadership' },
   },
   {
- image: '/new-imgs/mumbai_-maharashtra-cm-eknath-shinde-with-rebel-shiv-sena-mlas-during-the-specia-.webp',
+ image: '/mahayuti/aitihasik.webp',
  alt: 'महायुती २०२४',
  objectPosition: 'center 30%',
  kicker: { mr: 'ऐतिहासिक विजय', en: 'Historic Victory' },

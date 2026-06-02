@@ -67,6 +67,14 @@ function HomeAudioRouteGuard() {
   return null;
 }
 
+/* Floating WhatsApp button on every page EXCEPT the entrance ("/"),
+   which is a full-screen immersive cover with its own CTAs. */
+function GlobalWhatsApp() {
+  const { pathname } = useLocation();
+  if (pathname === '/') return null;
+  return <WhatsAppButton />;
+}
+
 function ComingSoon({ title }) {
   return (
  <div style={{
@@ -119,7 +127,7 @@ export default function App() {
  <Route path="/members" element={<ComingSoon title="Members" />} />
  <Route path="*" element={<ComingSoon title="Page Not Found" />} />
  </Routes>
- <WhatsAppButton />
+ <GlobalWhatsApp />
  </BrowserRouter>
  </LanguageProvider>
   );
