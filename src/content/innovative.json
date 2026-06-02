@@ -26,7 +26,7 @@
   "programs": [
     {
       "id": "medical-help-cell",
-      "image": "/innovative/shiv-sena-medical-help.jpg",
+      "image": "/innovative/shiv-sena-medical-help.webp",
       "imageAlt": "Shiv Sena Medical Help Cell",
       "mr": {
         "title": "शिवसेना वैद्यकीय मदत कक्ष",
@@ -65,7 +65,7 @@
     },
     {
       "id": "ladki-bahin",
-      "image": "/innovative/ladki-bahin-yojana.avif",
+      "image": "/innovative/ladki-bahin-yojana.webp",
       "imageAlt": "Mukhyamantri Mazi Ladki Bahin Yojana",
       "mr": {
         "title": "लाडकी बहीण योजना",
@@ -78,7 +78,7 @@
     },
     {
       "id": "anand-dighe-cell",
-      "image": "/innovative/dharmaveer-anand-dighe.jpg",
+      "image": "/innovative/dharmaveer-anand-dighe.webp",
       "imageAlt": "Dharmaveer Anand Dighe",
       "mr": {
         "title": "धर्मवीर आनंद दिघे नागरी सहायता कक्ष",
