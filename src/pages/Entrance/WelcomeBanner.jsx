@@ -26,6 +26,8 @@ if (typeof window !== 'undefined') {
 }
 
 function playJoinClick() {
+  /* User has muted the intro audio (header toggle) — don't play. */
+  if (typeof window !== 'undefined' && window.__audioMuted) return;
   /* If a previous click is still playing, stop it first so two
  clicks don't overlap and double-up. */
   stopJoin();

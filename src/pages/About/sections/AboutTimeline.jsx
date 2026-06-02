@@ -20,19 +20,25 @@ const YEAR_ROW_PX = 72;
    Events not in this map are filtered out of the timeline until
    matching artwork is supplied. */
 const EVENT_IMAGES = {
-  'marmik':           '/timeline/1960.jpg',
-  'founding':         '/timeline/1966.jpg',
-  'first-elections':  '/timeline/1967.jpg',
-  'border-arrest':    '/timeline/1969.jpg',
-  'first-mla':        '/timeline/1970.jpg',
-  'first-mayor':      '/timeline/1971.jpg',
-  'navalkar':         '/timeline/1972.jpg',
-  'pradhan-mayor':    '/timeline/1972-2.jpg',
-  'first-alliance':   '/timeline/1984.jpg',
-  'alliance-renewed': '/timeline/1989.jpg',
-  'saffron-1995':     '/timeline/1995.jpg',
-  'rane-cm':          '/timeline/1995-2.jpg',
-  'balasaheb-passing':'/timeline/2012.jpg',
+  'year-1960':  '/timeline/1960.webp',
+  'year-1966':  '/timeline/1966.webp',
+  'year-1967':  '/timeline/1967.webp',
+  'year-1969':  '/timeline/1969.webp',
+  'year-1970':  '/timeline/1970.webp',
+  'year-1971':  '/timeline/1971.webp',
+  'year-1972a': '/timeline/1972.webp',
+  'year-1972b': '/timeline/1972-2.webp',
+  'year-1984':  '/timeline/1984.webp',
+  'year-1989':  '/timeline/1989.webp',
+  'year-1995a': '/timeline/1995.webp',
+  'year-1995b': '/timeline/1995-2.webp',
+  'year-2012':  '/timeline/2012.webp',
+  'year-2014':  '/timeline/2014.webp',
+  'year-2022':  '/timeline/2022.webp',
+  'year-2023':  '/timeline/2023.webp',
+  'year-2024a': '/timeline/2024.webp',
+  'year-2024b': '/timeline/2024-2.webp',
+  'year-2024c': '/timeline/2024-3.webp',
 };
 
 export default function AboutTimeline() {

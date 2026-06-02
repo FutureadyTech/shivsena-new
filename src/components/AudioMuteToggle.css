@@ -1,0 +1,42 @@
+/* ═══════════════════════════════════════════════════════════════
+   AUDIO MUTE TOGGLE — matches the notifications bell button so the
+   two header controls read as one set.
+═══════════════════════════════════════════════════════════════ */
+.audio-mute {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--body-text, #5C544A);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  flex-shrink: 0;
+}
+.audio-mute:hover {
+  background: rgba(255, 107, 26, 0.08);
+  color: var(--saffron-on-light, #C44D0E);
+  transform: translateY(-1px);
+}
+.audio-mute:active { transform: translateY(0); }
+
+/* When muted, keep the saffron accent so the state is obvious. */
+.audio-mute.is-muted {
+  color: var(--saffron-on-light, #C44D0E);
+}
+
+/* Brand-aware: turn cream when sitting over the dark hero. */
+body.has-dark-hero-visible .audio-mute {
+  color: var(--warm-cream-dim, rgba(244, 228, 188, 0.7));
+}
+body.has-dark-hero-visible .audio-mute:hover,
+body.has-dark-hero-visible .audio-mute.is-muted {
+  color: var(--saffron, #FF6B1A);
+}
+body.has-dark-hero-visible .audio-mute:hover {
+  background: rgba(255, 107, 26, 0.15);
+}

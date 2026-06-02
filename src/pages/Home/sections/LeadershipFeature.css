@@ -205,22 +205,33 @@
   font-size: clamp(1.9rem, 3.4vw, 2.7rem);
   font-weight: 700;
   line-height: 1.12;
-  color: var(--ink, #1A1410);
+  color: #fa6919;
   margin: 0 0 14px;
   letter-spacing: -0.01em;
 }
 
 .lf-feat__role {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
   font-size: 0.92rem;
   line-height: 1.5;
-  font-weight: 600;
-  color: var(--ink-soft, #2E2820);
-  background: rgba(26, 20, 16, 0.04);
-  border-radius: 6px;
-  padding: 6px 12px;
-  margin: 0 0 10px;
+  font-weight: 700;
+  color: #fff;
+  background: #fa6919;
+  border-radius: 999px;
+  padding: 7px 16px;
+  margin: 0 0 20px;
+  box-shadow: 0 6px 18px -8px rgba(250, 105, 25, 0.6);
+}
+.lf-feat__role::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
 }
 
 .lf-feat__dates {
@@ -260,9 +271,9 @@
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--saffron-on-light, #C44D0E);
+  color: #fa6919;
   background: transparent;
-  border: 1.5px solid var(--saffron-on-light, #C44D0E);
+  border: 1.5px solid #fa6919;
   border-radius: 999px;
   padding: 12px 26px;
   text-decoration: none;
@@ -274,7 +285,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--saffron-on-light, #C44D0E);
+  background: #fa6919;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);

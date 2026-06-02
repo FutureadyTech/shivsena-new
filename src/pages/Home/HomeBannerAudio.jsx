@@ -110,6 +110,8 @@ function armGestureRetry() {
 
 function startPlay() {
   if (state !== 'IDLE') return;
+  /* User has muted the intro audio (header toggle) — skip playback. */
+  if (typeof window !== 'undefined' && window.__audioMuted) return;
   state = 'PLAYING';
   const audio = getAudio();
   const p = audio.play();

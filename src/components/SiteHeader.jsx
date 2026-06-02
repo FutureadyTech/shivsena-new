@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useT } from '../i18n/LanguageContext.jsx';
 import LanguageToggle from './LanguageToggle.jsx';
 import NotificationsBell from './NotificationsBell.jsx';
+import AudioMuteToggle from './AudioMuteToggle.jsx';
 import './SiteHeader.css';
 
 /* ─── Nav structure ─────────────────────────────────────────────
@@ -111,7 +112,10 @@ export default function SiteHeader() {
           <span>{t('nav-live')}</span>
         </NavLink>
 
-        <NotificationsBell />
+        <div className="site-nav__utils">
+          <AudioMuteToggle />
+          <NotificationsBell />
+        </div>
         <LanguageToggle />
 
         {/* ───────── MOBILE HAMBURGER (only visible < 1024px) ───────── */}
@@ -288,6 +292,7 @@ function MobileMenu({ open, onClose, t }) {
               <span>{t('nav-live')}</span>
             </NavLink>
             <div className="site-mobile__lang">
+              <AudioMuteToggle />
               <NotificationsBell />
               <LanguageToggle />
             </div>

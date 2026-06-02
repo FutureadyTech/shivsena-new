@@ -5,6 +5,16 @@
    slide-in panel with staggered nav reveals.
 ═══════════════════════════════════════════════════════════════ */
 
+/* Header utility cluster — keeps the mute toggle + notifications bell
+   tight together (the header's 32px flex gap only applies between this
+   group and its neighbours, not inside it). */
+.site-nav__utils {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
 /* Hidden by default — only shown when viewport ≤ 1023px (below). */
 .site-nav__burger {
   display: none;

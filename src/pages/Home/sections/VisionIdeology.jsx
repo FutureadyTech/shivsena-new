@@ -8,9 +8,11 @@ import './VisionIdeology.css';
  unity.png → Freepik "Social justice" (Flaticon id 10554213)
  progress.png → Freepik "Career development" (Flaticon id 17652288) */
 const PILLAR_ICONS = {
-  /* New (2-card layout): ध्येय / धोरण */
-  dhyey:  <img src="/icons/progress.png"   alt="" className="vision-card__icon-img" />,
-  dhoran: <img src="/icons/governance.png" alt="" className="vision-card__icon-img" />,
+  /* New (2-card layout): ध्येय / धोरण
+     Icons from Flaticon — task/plan (2098313) + preventive/strategy (18290118).
+     Recoloured to saffron via the .vision-card__icon-img filter. */
+  dhyey:  <img src="/icons/plan-task.png"          alt="" className="vision-card__icon-img" />,
+  dhoran: <img src="/icons/strategy-preventive.png" alt="" className="vision-card__icon-img" />,
   /* Legacy keys kept for safety in case any content still uses them */
   governance: <img src="/icons/governance.png" alt="" className="vision-card__icon-img" />,
   unity:      <img src="/icons/unity.png"      alt="" className="vision-card__icon-img" />,
@@ -25,10 +27,6 @@ export default function VisionIdeology() {
  <section className="vision">
  <div className="vision__inner">
  <div ref={headerRef} className="vision__header reveal">
- <div className="vision__eyebrow">
- <span className="vision__eyebrow-line"></span>
- <span>{t.eyebrow}</span>
- </div>
  <h2 className="vision__title">{t.title}</h2>
  <p className="vision__lede">{t.lede}</p>
  </div>

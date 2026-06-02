@@ -12,19 +12,25 @@ const toDevDigits = (s) => String(s ?? '').replace(/[0-9]/g, (d) => DEV_DIGITS[+
 /* Year-keyed image map — each new timeline image has the year + title +
    body baked in, so the panel text overlays have been removed. */
 const EVENT_IMAGES = {
-  'year-1960':  '/timeline/1960.jpg',
-  'year-1966':  '/timeline/1966.jpg',
-  'year-1967':  '/timeline/1967.jpg',
-  'year-1969':  '/timeline/1969.jpg',
-  'year-1970':  '/timeline/1970.jpg',
-  'year-1971':  '/timeline/1971.jpg',
-  'year-1972a': '/timeline/1972.jpg',
-  'year-1972b': '/timeline/1972-2.jpg',
-  'year-1984':  '/timeline/1984.jpg',
-  'year-1989':  '/timeline/1989.jpg',
-  'year-1995a': '/timeline/1995.jpg',
-  'year-1995b': '/timeline/1995-2.jpg',
-  'year-2012':  '/timeline/2012.jpg',
+  'year-1960':  '/timeline/1960.webp',
+  'year-1966':  '/timeline/1966.webp',
+  'year-1967':  '/timeline/1967.webp',
+  'year-1969':  '/timeline/1969.webp',
+  'year-1970':  '/timeline/1970.webp',
+  'year-1971':  '/timeline/1971.webp',
+  'year-1972a': '/timeline/1972.webp',
+  'year-1972b': '/timeline/1972-2.webp',
+  'year-1984':  '/timeline/1984.webp',
+  'year-1989':  '/timeline/1989.webp',
+  'year-1995a': '/timeline/1995.webp',
+  'year-1995b': '/timeline/1995-2.webp',
+  'year-2012':  '/timeline/2012.webp',
+  'year-2014':  '/timeline/2014.webp',
+  'year-2022':  '/timeline/2022.webp',
+  'year-2023':  '/timeline/2023.webp',
+  'year-2024a': '/timeline/2024.webp',
+  'year-2024b': '/timeline/2024-2.webp',
+  'year-2024c': '/timeline/2024-3.webp',
 };
 
 export default function OurJourney() {

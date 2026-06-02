@@ -5,7 +5,13 @@
 .journey {
   position: relative;
   width: 100%;
-  height: 600px;
+  /* Match the timeline banner artwork's native aspect ratio (2560×808)
+     so the full image always shows and never crops, on any viewport.
+     min-height keeps room for the year strip + nav on narrow screens —
+     there the wide banner letterboxes against the dark backdrop instead
+     of being cropped. */
+  aspect-ratio: 2560 / 808;
+  min-height: 340px;
   overflow: hidden;
   background: #0a0806;
   color: #fff;
@@ -37,8 +43,11 @@
 .journey__bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: top center;
+  /* contain (not cover) guarantees the entire banner is visible — when
+     the section is taller than the image's ratio (narrow screens), the
+     image centres and the dark backdrop fills the rest. */
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
   animation: journeyBgIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -319,7 +328,9 @@
 }
 
 @media (max-width: 768px) {
-  .journey { height: auto; min-height: 560px; }
+  /* Let the aspect-ratio rule govern; just keep enough height for the
+     year strip + nav to sit in the letterbox area below the banner. */
+  .journey { min-height: 300px; }
   .journey__inner {
  padding: 56px 22px 170px 22px;
  gap: 16px;
