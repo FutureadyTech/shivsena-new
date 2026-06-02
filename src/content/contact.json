@@ -15,7 +15,7 @@
   "info": {
  "mr": {
  "eyebrow": "संपर्क माहिती",
- "title": "तुम्ही आमच्यापर्यंत पोहोचा",
+ "title": "आमच्याशी संपर्क साधा",
  "lede": "मुख्य कार्यालयापासून ते जिल्हा शाखेपर्यंत आम्ही उपलब्ध आहोत.",
  "cards": [
  {
@@ -70,7 +70,7 @@
  },
  "en": {
  "eyebrow": "CONTACT INFORMATION",
- "title": "Reach Out To Us",
+ "title": "Get in Touch With Us",
  "lede": "From the central office to your district shakha we're available.",
  "cards": [
  {

@@ -90,7 +90,8 @@
   overflow: hidden;
   background: #000;
 }
-.vestibule-cover img {
+.vestibule-cover img,
+.vestibule-cover video {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 55%;

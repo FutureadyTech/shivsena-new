@@ -1,32 +1,16 @@
-import { useContent } from '../../../content/_shared/useContent.js';
-import shivsenajanmaContent from '../../../content/shivsenajanma.json';
 import './ShivSenaJanmaBanner.css';
 
+/* Image-only banner — all eyebrow / title / text is baked into the
+   artwork, so the JSX is just the <img>. Same approach as the About
+   page banner. No overlays, no text, no JSON dependency. */
 export default function ShivSenaJanmaBanner() {
-  const t = useContent(shivsenajanmaContent.banner);
-
   return (
     <section className="ssj-banner">
-      <div
+      <img
+        src="/banners/shivsena-janma/shivsena-janma.webp"
+        alt=""
         className="ssj-banner__image"
-        style={{ backgroundImage: 'url(/img-1.jpg)' }}
-        aria-hidden="true"
       />
-
-      <div className="ov-base" />
-      <div className="ov-pattern" />
-      <div className="ov-spotlight" />
-      <div className="ov-light-tl" />
-      <div className="ov-light-br" />
-      <div className="ov-top" />
-      <div className="ov-bottom" />
-
-      <div className="ssj-banner__content">
-        <p className="ssj-banner__eyebrow">{t.eyebrow}</p>
-        <h1 className="ssj-banner__title">{t.title}</h1>
-        <div className="ssj-banner__divider" aria-hidden="true" />
-        <p className="ssj-banner__lede">{t.subtitle}</p>
-      </div>
     </section>
   );
 }

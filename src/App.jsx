@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext.jsx';
+import WhatsAppButton from './components/WhatsAppButton.jsx';
 import Entrance from './pages/Entrance/index.jsx';
 import Home from './pages/Home/index.jsx';
 import About from './pages/About/index.jsx';
@@ -118,6 +119,7 @@ export default function App() {
  <Route path="/members" element={<ComingSoon title="Members" />} />
  <Route path="*" element={<ComingSoon title="Page Not Found" />} />
  </Routes>
+ <WhatsAppButton />
  </BrowserRouter>
  </LanguageProvider>
   );

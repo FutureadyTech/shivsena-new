@@ -41,12 +41,7 @@ export default function ContactInfo() {
       <div className="ci-section__inner">
 
         <div ref={headerRef} className="ci-section__header reveal">
-          <div className="ci-section__eyebrow">
-            <span className="ci-section__eyebrow-line" />
-            <span>{t.eyebrow}</span>
-          </div>
           <h2 className="ci-section__title">{t.title}</h2>
-          <p className="ci-section__lede">{t.lede}</p>
         </div>
 
         <div className="ci-grid">

@@ -27,9 +27,23 @@ export default function HeroExperience() {
 
   return (
     <>
-      {/* Full-bleed static entrance banner. */}
+      {/* Full-bleed entrance banner — looping muted video, no controls.
+          No `poster`: a looping <video> repaints its poster for one frame
+          on every loop, which read as a glitch since the poster still
+          differs from the clip's first frame. The dark .vestibule-cover
+          background covers the brief moment before the clip loads. */}
       <div className="vestibule-cover" id="vestibule-cover" aria-hidden="true">
-        <img src="/entrance-banner-v2.webp" alt="" />
+        <video
+          src="/entrance/Flag-1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
+          tabIndex={-1}
+        />
       </div>
 
       {/* Subtle ambient overlays kept for visual polish (no JS). */}
