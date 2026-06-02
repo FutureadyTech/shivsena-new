@@ -1,4 +1,170 @@
 {
+  "ministers": [
+    {
+      "id": "ministers-1",
+      "name": "श्री. प्रतापराव जाधव",
+      "role": "केंद्रीय राज्य मंत्री",
+      "phone": "9013180003",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/01_Prataprao%20Jadhav.webp"
+    },
+    {
+      "id": "ministers-2",
+      "name": "श्री. उदय सामंत",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9860390909",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp"
+    },
+    {
+      "id": "ministers-3",
+      "name": "श्री. भरतशेठ गोगावले",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9422095889",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/03_Shri%20Bharatseth%20Gogawale%20(Minister).webp"
+    },
+    {
+      "id": "ministers-4",
+      "name": "श्री. दादाजी भुसे",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9422270593",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/04_Shri%20Dadaji%20Bhuse%20(Minister).webp"
+    },
+    {
+      "id": "ministers-5",
+      "name": "श्री. संजय शिरसाठ",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9422203930",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/05_Shri%20%20Sanjay%20Shirsat%20(Minister).webp"
+    },
+    {
+      "id": "ministers-6",
+      "name": "श्री. शंभुराज देसाई",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9822771555",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/06_Shri%20Shambhuraj%20Desai%20(Minister).webp"
+    },
+    {
+      "id": "ministers-7",
+      "name": "श्री. गुलाबराव पाटील",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9881730620",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/07_Shri%20Gulabrao%20Patil%20(Minister).webp"
+    },
+    {
+      "id": "ministers-8",
+      "name": "श्री. संजय राठोड",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "7448166222",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/08_Shri%20%20Sanjay%20Rathod%20(Minister).webp"
+    },
+    {
+      "id": "ministers-9",
+      "name": "श्री. प्रताप सरनाईक",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9821505000",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/09_Shri%20Pratap%20Sarnaik%20(Minister).webp"
+    },
+    {
+      "id": "ministers-10",
+      "name": "श्री. प्रकाश आबिटकर",
+      "role": "कॅबिनेट मंत्री",
+      "phone": "9422421600",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/10_Shri%20Prakash%20Abitkar%20(Minister).webp"
+    },
+    {
+      "id": "ministers-11",
+      "name": "श्री. आशिष जयस्वाल",
+      "role": "राज्यमंत्री",
+      "phone": "8830450945",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/11_Shri%20Ashish%20Jaiswal%20(MoS).webp"
+    },
+    {
+      "id": "ministers-12",
+      "name": "श्री. योगेश कदम",
+      "role": "राज्यमंत्री",
+      "phone": "9867996252",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/12_Shri%20Yogesh%20Kadam%20(MoS).webp"
+    }
+  ],
+  "mp": [
+    {
+      "id": "mp-1",
+      "name": "श्री. श्रीकांत एकनाथ शिंदे",
+      "constituency": "कल्याण",
+      "constituencyNo": 24,
+      "phone": "9867112820",
+      "email": "mpoffice.dombivli87@gmail.com",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "mp-2",
+      "name": "श्री. प्रतापराव गणपतराव जाधव",
+      "constituency": "बुलडाणा",
+      "constituencyNo": 5,
+      "phone": "9013180003",
+      "email": "jadhaoprataprao25@gmail.com",
+      "photo": "/leaders/MP%20Photos/01_Prataprao%20Jadhav.webp"
+    },
+    {
+      "id": "mp-3",
+      "name": "श्री. धैर्यशिल संभाजीराव माने",
+      "constituency": "हातकणंगले",
+      "constituencyNo": 48,
+      "phone": "9588667712",
+      "email": "dhairyasheelmane@gmail.com",
+      "photo": "/leaders/MP%20Photos/02_Dhairyasheel%20Mane%EF%BB%BF.webp"
+    },
+    {
+      "id": "mp-4",
+      "name": "श्री. श्रीरंग चंदु बारणे",
+      "constituency": "मावळ",
+      "constituencyNo": 33,
+      "phone": "9822004494",
+      "email": "appabarne@gmail.com",
+      "photo": "/leaders/MP%20Photos/03_Shrirang%20Appa%20Barne.webp"
+    },
+    {
+      "id": "mp-5",
+      "name": "श्री. संदीपानराव आसाराम भुमरे",
+      "constituency": "छत्रपती संभाजीनगर",
+      "constituencyNo": 19,
+      "phone": "7020257742",
+      "email": "sandipanbhumare@gmail.com",
+      "photo": "/leaders/MP%20Photos/04_Sandipan%20Bhumare.webp"
+    },
+    {
+      "id": "mp-6",
+      "name": "श्री. रविंद्र दत्ताराम वायकर",
+      "constituency": "मुंबई उत्तर पश्चिम",
+      "constituencyNo": 27,
+      "phone": "9594011111",
+      "email": "waikarravindra@gmail.com",
+      "photo": "/leaders/MP%20Photos/05_Ravindra%20Waikar.webp"
+    },
+    {
+      "id": "mp-7",
+      "name": "श्री. नरेश गणपत म्हस्के",
+      "constituency": "ठाणे",
+      "constituencyNo": 25,
+      "phone": "9819389080",
+      "email": "nareshmhaske@gmail.com",
+      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
+    },
+    {
+      "id": "mp-8",
+      "name": "श्री. मिलिंद मुरली देवरा",
+      "note": "राज्यसभा",
+      "phone": "9819997000",
+      "email": "mdeoraoffice@gmail.com",
+      "photo": "/leaders/MP%20Photos/08_Milind%20Deora.webp"
+    },
+    {
+      "id": "mp-9",
+      "name": "श्रीम. ज्योतीताई वाघमारे",
+      "note": "राज्यसभा",
+      "phone": "9850001807",
+      "photo": "/leaders/MP%20Photos/06_Dr%20Jyoti%20Waghmare.webp"
+    }
+  ],
   "topLeader": [
     {
       "id": "topLeader-1",

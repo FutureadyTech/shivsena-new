@@ -51,8 +51,8 @@ const STATE_CATEGORIES = [
 */
 const UNIFIED_CATEGORIES = [
   { key: 'topLeader',                source: 'state'    }, // 1. शिवसेना मुख्य नेते
-  { key: 'ministers',                source: 'district' }, // 2. मंत्री
-  { key: 'mp',                       source: 'district' }, // 3. खासदार
+  { key: 'ministers',                source: 'state'    }, // 2. मंत्री
+  { key: 'mp',                       source: 'state'    }, // 3. खासदार
   { key: 'mla',                      source: 'district' }, // 4. आमदार
   { key: 'leaders',                  source: 'district' }, // 5. नेते
   { key: 'deputyLeaders',            source: 'district' }, // 6. उपनेते
@@ -307,6 +307,20 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
   );
 }
 
+/* Saffron line + ✦ star flourish — same brand ornament as SectionDivider.
+   Used to frame the centred Top Leader header above and below. */
+function CatOrnament() {
+  return (
+ <span className="dir-cat__ornament" aria-hidden="true">
+ <span className="dir-cat__ornament-line" />
+ <svg viewBox="0 0 16 16" className="dir-cat__ornament-star" fill="currentColor">
+ <path d="M8 0 L9.4 6.6 L16 8 L9.4 9.4 L8 16 L6.6 9.4 L0 8 L6.6 6.6 Z" />
+ </svg>
+ <span className="dir-cat__ornament-line" />
+ </span>
+  );
+}
+
 /* ── Category carousel horizontal scroll w/ snap + arrow buttons ── */
 function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
   const ref = useScrollReveal(0.12);
@@ -349,13 +363,17 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabe
   const realCount = isEmpty ? 0 : items.length;
   const showArrows = !isEmpty && items.length > 1;
 
+  const isTopLeader = catKey === 'topLeader';
+
   return (
  <div ref={ref} className={`dir-cat reveal${catKey ? ` dir-cat--${catKey}` : ''}`}>
- <div className="dir-cat__head">
+ <div className={`dir-cat__head${isTopLeader ? ' dir-cat__head--centered' : ''}`}>
+ {isTopLeader && <CatOrnament />}
  <h3 className="dir-cat__label">
  {label}
- {!isEmpty && <span className="dir-cat__count">{realCount}</span>}
+ {!isEmpty && !isTopLeader && <span className="dir-cat__count">{realCount}</span>}
  </h3>
+ {isTopLeader && <CatOrnament />}
  {showArrows && (
  <div className="dir-cat__controls">
  <button
@@ -429,7 +447,7 @@ function MemberCard({ member, index, viewMoreLabel, lang, onSelect }) {
 
  {!isPlaceholder && (
  <div className="dir-card__reveal">
- <SocialIcons socials={socials} phone={member.phone} />
+ <SocialIcons socials={socials} phone={member.phone} email={member.email} />
 
  <button
  type="button"
@@ -473,6 +491,12 @@ const SOCIAL_GLYPHS = {
  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" />
  </svg>
   ),
+  email: (
+ <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+ <rect x="2" y="4" width="20" height="16" rx="2" />
+ <path d="m22 6-10 7L2 6" />
+ </svg>
+  ),
 };
 
 const isValidSocial = (v) => {
@@ -485,7 +509,7 @@ const isValidSocial = (v) => {
  the member has a phone number). Social platforms with no handle
  show as muted, non-clickable spans so every card stays visually
  consistent; the phone slot is omitted entirely when no number. */
-function SocialIcons({ socials, phone }) {
+function SocialIcons({ socials, phone, email }) {
   const safe = socials || {};
   const candidates = [
  { key: 'facebook',  href: safe.facebook, label: 'Facebook' },
@@ -499,6 +523,15 @@ function SocialIcons({ socials, phone }) {
  key: 'phone',
  href: `tel:${cleanPhone.replace(/\s+/g, '')}`,
  label: `Call ${cleanPhone}`,
+ });
+  }
+
+  const cleanEmail = (email || '').toString().trim();
+  if (cleanEmail) {
+ candidates.push({
+ key: 'email',
+ href: `mailto:${cleanEmail}`,
+ label: `Email ${cleanEmail}`,
  });
   }
 

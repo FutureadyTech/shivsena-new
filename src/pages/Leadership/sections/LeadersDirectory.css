@@ -234,7 +234,7 @@
   font-family: 'Noto Sans Devanagari', sans-serif;
   font-size: clamp(1.3rem, 2vw, 1.7rem);
   font-weight: 700;
-  color: var(--ink, #1A1410);
+  color: #fa6919;
   letter-spacing: -0.005em;
   margin: 0;
   display: inline-flex;
@@ -261,6 +261,40 @@
 .dir-cat__controls {
   display: inline-flex;
   gap: 8px;
+}
+
+/* ── Centred header variant (Top Leader) — title framed by the saffron
+   line + ✦ ornament above and below, matching the brand divider. ── */
+.dir-cat__head--centered {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.dir-cat__ornament {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 360px;
+  color: #fa6919;
+}
+.dir-cat__ornament-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to var(--dir-orn-dir, right),
+    transparent, rgba(250, 105, 25, 0.65));
+}
+.dir-cat__ornament-line:last-child {
+  --dir-orn-dir: left;
+}
+.dir-cat__ornament-star {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .dir-cat__arrow {
