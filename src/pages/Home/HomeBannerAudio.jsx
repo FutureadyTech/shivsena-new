@@ -29,6 +29,10 @@ const BANNER_ID = 'home-hero-banner';
 let state = 'IDLE';
 let audioEl = null;
 let pendingGestureCleanup = null;
+/* True while the track is paused specifically by the header mute
+   toggle (as opposed to retired). Lets us resume from the same spot
+   when the user un-mutes, instead of losing the song entirely. */
+let pausedByMute = false;
 
 function clearPendingGesture() {
   if (pendingGestureCleanup) {
@@ -47,6 +51,7 @@ function clearPendingGesture() {
 function markDone() {
   if (state === 'DONE') return;
   state = 'DONE';
+  pausedByMute = false;
   clearPendingGesture();
   if (audioEl) {
  try { audioEl.pause(); } catch {}
@@ -70,6 +75,35 @@ function stopJoinStinger() {
 if (typeof window !== 'undefined') {
   window.__stopAmbient = () => {
  if (state === 'PLAYING') markDone();
+  };
+
+  /* Header mute toggle: pause WITHOUT retiring, so we can pick the
+     song back up from the same position on un-mute. */
+  window.__pauseAmbient = () => {
+ if (state === 'PLAYING' && audioEl) {
+ try { audioEl.pause(); } catch {}
+ pausedByMute = true;
+ }
+  };
+
+  /* Header un-mute toggle: resume a mute-paused track, or kick off
+     playback from the top if the banner is in view and we never
+     started (e.g. the user un-muted before the song first played). */
+  window.__resumeAmbient = () => {
+ if (window.__audioMuted) return; // still muted ignore
+ if (pausedByMute && audioEl) {
+ pausedByMute = false;
+ const p = audioEl.play();
+ if (p && typeof p.catch === 'function') p.catch(() => {});
+ return;
+ }
+ if (state === 'IDLE') {
+ const banner = document.getElementById(BANNER_ID);
+ if (!banner) return;
+ const rect = banner.getBoundingClientRect();
+ const inView = rect.top < window.innerHeight && rect.bottom > 0;
+ if (inView) startPlay();
+ }
   };
 }
 

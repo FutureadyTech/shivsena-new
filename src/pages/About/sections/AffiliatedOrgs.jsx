@@ -190,12 +190,7 @@ export default function AffiliatedOrgs({
  <div className="affiliated__inner">
 
  <div ref={headerRef} className="affiliated__header reveal">
- <div className="affiliated__eyebrow">
- <span className="affiliated__eyebrow-line" />
- <span>{t.eyebrow}</span>
- </div>
  <h2 className="affiliated__title">{t.title}</h2>
- <p className="affiliated__lede">{t.lede}</p>
  </div>
 
  {/* ── Slider: horizontal scroll-snap track + prev/next arrows ── */}

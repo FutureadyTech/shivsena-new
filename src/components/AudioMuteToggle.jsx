@@ -45,10 +45,15 @@ export default function AudioMuteToggle() {
         /* localStorage unavailable — silently fail */
       }
       window.__audioMuted = next;
-      /* Muting should also silence anything already playing. */
       if (next) {
-        try { window.__stopAmbient?.(); } catch {}
+        /* Muting: pause the ambient song (resumable) and silence the
+           short Enter stinger. */
+        try { window.__pauseAmbient?.(); } catch {}
         try { window.__stopJoin?.(); } catch {}
+      } else {
+        /* Un-muting: resume the song from where it left off (or start
+           it if it never played yet). */
+        try { window.__resumeAmbient?.(); } catch {}
       }
       return next;
     });
