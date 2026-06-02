@@ -277,6 +277,7 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
  {section.groups.map((group) => (
  <CategoryCarousel
  key={group.key}
+ catKey={group.key}
  label={group.label}
  items={group.items}
  isEmpty={group.isEmpty}
@@ -307,7 +308,7 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
 }
 
 /* ── Category carousel horizontal scroll w/ snap + arrow buttons ── */
-function CategoryCarousel({ label, items, isEmpty, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
+function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
   const ref = useScrollReveal(0.12);
   const trackRef = useRef(null);
   const [canPrev, setCanPrev] = useState(false);
@@ -349,7 +350,7 @@ function CategoryCarousel({ label, items, isEmpty, noDataLabel, prevLabel, nextL
   const showArrows = !isEmpty && items.length > 1;
 
   return (
- <div ref={ref} className="dir-cat reveal">
+ <div ref={ref} className={`dir-cat reveal${catKey ? ` dir-cat--${catKey}` : ''}`}>
  <div className="dir-cat__head">
  <h3 className="dir-cat__label">
  {label}

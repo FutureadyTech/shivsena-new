@@ -610,12 +610,12 @@
         {
           "labelKey": "reg",
           "label": "नोंदणीकृत पत्ता",
-          "value": "अग्यारी लेन, तलाव पाळीजवळ, जांभळी नाका, ठाणे (पश्चिम), ठाणे, महाराष्ट्र ४००६०१"
+          "value": "गाळा क्र.१, अरुणोदय चाळ, विद्या हॉस्पिटलच्या समोर, टेंभी नाका, धोबी आळी, चरई, ठाणे पश्चिम, महाराष्ट्र ४००६०१"
         },
         {
           "labelKey": "corresp",
-          "label": "पत्रव्यवहाराचा पत्ता",
-          "value": "सी-२, ब्रह्मगिरी (बाळासाहेब भवन), मादाम कामा रोड, मंत्रालयासमोर, नरीमन पॉइंट, मुंबई २१"
+          "label": "कार्यालयीन पत्ता",
+          "value": "सी-२, बाळासाहेब भवन, मादाम कामा मार्ग, नरिमन पॉईंट, मुंबई - ४०००३२"
         }
       ],
       "copyright": "© 2026 शिवसेना. सर्व हक्क राखीव."
@@ -694,12 +694,12 @@
         {
           "labelKey": "reg",
           "label": "Registered Address",
-          "value": "Agiary Ln, Near Talao Pali, Jambli Naka, Thane West, Thane, Maharashtra 400601"
+          "value": "Gala No. 1, Arunoday Chawl, Opp. Vidya Hospital, Tembhi Naka, Dhobi Ali, Charai, Thane West, Maharashtra 400601"
         },
         {
           "labelKey": "corresp",
-          "label": "Correspondence Address",
-          "value": "C-2, Brahmagiri (Balasaheb Bhavan), Madam Cama Road, Opposite Mantralaya, Nariman Point, Mumbai 21"
+          "label": "Office Address",
+          "value": "C-2, Balasaheb Bhavan, Madam Cama Marg, Nariman Point, Mumbai - 400032"
         }
       ],
       "copyright": "© 2026 Shiv Sena. All rights reserved."

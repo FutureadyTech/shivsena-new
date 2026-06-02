@@ -21,15 +21,15 @@
  {
  "id": "address-mumbai",
  "icon": "pin",
- "tag": "पत्रव्यवहार कार्यालय",
+ "tag": "कार्यालयीन पत्ता",
  "title": "मुख्य कार्यालय मुंबई",
  "lines": [
- "C-2, ब्रह्मगिरी (बाळासाहेब भवन),",
- "मादाम कामा रोड, मंत्रालयासमोर,",
- "नरीमन पॉइंट, मुंबई - ४००६२१"
+ "सी-२, बाळासाहेब भवन,",
+ "मादाम कामा मार्ग, नरिमन पॉईंट,",
+ "मुंबई - ४०००३२"
  ],
  "linkLabel": "नकाशा पहा",
- "linkHref": "https://www.google.com/maps/search/?api=1&query=Brahmagiri+Balasaheb+Bhavan+Madam+Cama+Road+Nariman+Point+Mumbai"
+ "linkHref": "https://www.google.com/maps/search/?api=1&query=Balasaheb+Bhavan+Madam+Cama+Marg+Nariman+Point+Mumbai"
  },
  {
  "id": "address-thane",
@@ -37,12 +37,12 @@
  "tag": "नोंदणीकृत कार्यालय",
  "title": "नोंदणीकृत पत्ता ठाणे",
  "lines": [
- "अग्यारी लेन, तळाव पाली जवळ,",
- "जांभळी नाका, ठाणे (पश्चिम),",
- "ठाणे, महाराष्ट्र - ४००६०१"
+ "गाळा क्र.१, अरुणोदय चाळ, विद्या हॉस्पिटलच्या समोर,",
+ "टेंभी नाका, धोबी आळी, चरई,",
+ "ठाणे पश्चिम, महाराष्ट्र - ४००६०१"
  ],
  "linkLabel": "नकाशा पहा",
- "linkHref": "https://www.google.com/maps/search/?api=1&query=Agiary+Lane+Talao+Pali+Jambli+Naka+Thane+West"
+ "linkHref": "https://www.google.com/maps/search/?api=1&query=Arunoday+Chawl+Tembhi+Naka+Charai+Thane+West"
  },
  {
  "id": "phone",
@@ -76,15 +76,15 @@
  {
  "id": "address-mumbai",
  "icon": "pin",
- "tag": "CORRESPONDENCE OFFICE",
+ "tag": "OFFICE ADDRESS",
  "title": "Central Office Mumbai",
  "lines": [
- "C-2, Brahmagiri (Balasaheb Bhavan),",
- "Madam Cama Road, Opposite Mantralaya,",
- "Nariman Point, Mumbai - 400021"
+ "C-2, Balasaheb Bhavan,",
+ "Madam Cama Marg, Nariman Point,",
+ "Mumbai - 400032"
  ],
  "linkLabel": "VIEW ON MAP",
- "linkHref": "https://www.google.com/maps/search/?api=1&query=Brahmagiri+Balasaheb+Bhavan+Madam+Cama+Road+Nariman+Point+Mumbai"
+ "linkHref": "https://www.google.com/maps/search/?api=1&query=Balasaheb+Bhavan+Madam+Cama+Marg+Nariman+Point+Mumbai"
  },
  {
  "id": "address-thane",
@@ -92,12 +92,12 @@
  "tag": "REGISTERED OFFICE",
  "title": "Registered Address Thane",
  "lines": [
- "Agiary Lane, Near Talao Pali,",
- "Jambli Naka, Thane (West),",
- "Thane, Maharashtra - 400601"
+ "Gala No. 1, Arunoday Chawl, Opp. Vidya Hospital,",
+ "Tembhi Naka, Dhobi Ali, Charai,",
+ "Thane West, Maharashtra - 400601"
  ],
  "linkLabel": "VIEW ON MAP",
- "linkHref": "https://www.google.com/maps/search/?api=1&query=Agiary+Lane+Talao+Pali+Jambli+Naka+Thane+West"
+ "linkHref": "https://www.google.com/maps/search/?api=1&query=Arunoday+Chawl+Tembhi+Naka+Charai+Thane+West"
  },
  {
  "id": "phone",

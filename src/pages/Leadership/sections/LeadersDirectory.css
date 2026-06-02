@@ -300,6 +300,13 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(196, 77, 14, 0.3) transparent;
 }
+/* Top Leader (शिवसेना मुख्य नेते) is a single-card category — centre it
+   in the row. `safe` keeps cards left-aligned + scrollable if more are
+   ever added. Scoped to this category only; all others stay left-aligned. */
+.dir-cat--topLeader .dir-cat__track {
+  justify-content: safe center;
+}
+
 .dir-cat__track::-webkit-scrollbar { height: 6px; }
 .dir-cat__track::-webkit-scrollbar-track { background: transparent; }
 .dir-cat__track::-webkit-scrollbar-thumb { background: rgba(196, 77, 14, 0.25); border-radius: 4px; }
