@@ -165,6 +165,1969 @@
       "photo": "/leaders/MP%20Photos/06_Dr%20Jyoti%20Waghmare.webp"
     }
   ],
+  "mla": [
+    {
+      "id": "mla-1",
+      "name": "श्री. एकनाथ संभाजी शिंदे",
+      "role": "आमदार, उपमुख्यमंत्री १४७-कोपरी पाचपाखाडी",
+      "constituencyNo": 147,
+      "phone": "",
+      "photo": "/leaders/Mla%20Photos/07_Shri%20Eknath%20Sambhaji%20Shinde%20(Main%20Leader%20Dy%20CM).webp"
+    },
+    {
+      "id": "mla-2",
+      "name": "श्री. प्रकाश सुर्वे",
+      "role": "आमदार १५४-मागाठाणे",
+      "constituencyNo": 154,
+      "phone": "9821034923",
+      "photo": "/leaders/Mla%20Photos/01_Shri%20Prakash%20Surve.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/miprakashsurve?igsh=aWpxYmN4cjBoamRj",
+        "facebook": "https://www.facebook.com/share/1AzXhQmGvj/",
+        "twitter": "https://x.com/miprakashsurve"
+      }
+    },
+    {
+      "id": "mla-3",
+      "name": "श्री. अशोक पाटील",
+      "role": "आमदार १५७-भांडुप (पश्चिम)",
+      "constituencyNo": 157,
+      "phone": "9821143980",
+      "photo": "/leaders/Mla%20Photos/02_Shri%20%20Ashok%20Patil.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mla_ashokdharmrajpatil?igsh=MXB5ZTl1b2VwdmZzdQ%3D%3D",
+        "facebook": "https://www.facebook.com/share/1ELajGA6yD/?mibextid=wwXIfr"
+      }
+    },
+    {
+      "id": "mla-4",
+      "name": "श्री. मुरजी पटेल",
+      "role": "आमदार १६६-अंधेरी (पूर्व)",
+      "constituencyNo": 166,
+      "phone": "9820130950",
+      "photo": "/leaders/Mla%20Photos/03_Shri%20%20Murji%20Patel.webp"
+    },
+    {
+      "id": "mla-5",
+      "name": "श्री. दिलीप लांडे",
+      "role": "आमदार १६८-चांदिवली",
+      "constituencyNo": 168,
+      "phone": "9833201646",
+      "photo": "/leaders/Mla%20Photos/04_Shri%20Dilip%20Lande.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/dilipmama_lande?utm_source=qr&igsh=MWh0b3I0dDB5eDU2NQ==",
+        "facebook": "https://www.facebook.com/share/17LnCzXGoH/",
+        "twitter": "https://x.com/Mi_DilipLande"
+      }
+    },
+    {
+      "id": "mla-6",
+      "name": "श्री. तुकाराम काते",
+      "role": "आमदार १७३-चेंबूर",
+      "constituencyNo": 173,
+      "phone": "8850309090",
+      "photo": "/leaders/Mla%20Photos/05_Shri%20Tukaram%20Kate.webp"
+    },
+    {
+      "id": "mla-7",
+      "name": "श्री. मंगेश कुडाळकर",
+      "role": "आमदार १७४-कुर्ला (अजा)",
+      "constituencyNo": 174,
+      "phone": "9322278925",
+      "photo": "/leaders/Mla%20Photos/06_Shri%20Mangesh%20Kudalkar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mlamangesh?igsh=NzVueWMxYjM3dDM5",
+        "facebook": "https://www.facebook.com/share/1Eo4GT7cXV/?mibextid=wwXIfr",
+        "twitter": "https://x.com/mlamangesh?s=21"
+      }
+    },
+    {
+      "id": "mla-8",
+      "name": "श्री. राजेंद्र गावित",
+      "role": "आमदार १३०-पालघर (अ.ज.)",
+      "constituencyNo": 130,
+      "phone": "9821239044",
+      "photo": "/leaders/Mla%20Photos/08_Shri%20Rajendra%20Gavit.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/rajendra1gavit/",
+        "facebook": "https://www.facebook.com/gavitsena"
+      }
+    },
+    {
+      "id": "mla-9",
+      "name": "श्री. विलास तरे",
+      "role": "आमदार १३१-बोईसर (अ.ज.)",
+      "constituencyNo": 131,
+      "phone": "8459346101",
+      "photo": "/leaders/Mla%20Photos/09_Shri%20Vilas%20Tare.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mlavilastare?utm_source=qr&igsh=MWlpZWpxOXc2M2R6cg==",
+        "facebook": "https://www.facebook.com/mlavilastare",
+        "twitter": "https://x.com/MLAVilasTare"
+      }
+    },
+    {
+      "id": "mla-10",
+      "name": "श्री. शांताराम मोरे",
+      "role": "आमदार १३४-भिवंडी ग्रामीण (अ.ज.)",
+      "constituencyNo": 134,
+      "phone": "9503591581",
+      "photo": "/leaders/Mla%20Photos/10_Shri%20Shantaram%20More.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mla_shantarammore?igsh=MTFsb2JsZjdjbTcxMw==",
+        "facebook": "https://www.facebook.com/share/1AGL77yDX2/"
+      }
+    },
+    {
+      "id": "mla-11",
+      "name": "श्री. विश्वनाथ भोईर",
+      "role": "आमदार १३८-कल्याण पश्चिम",
+      "constituencyNo": 138,
+      "phone": "9819623160",
+      "photo": "/leaders/Mla%20Photos/11_Shri.%20Vishwanath%20Bhoir.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mla_vishwanathbhoir?igsh=MWdheXJncXZleDFsOQ==",
+        "facebook": "https://www.facebook.com/share/1CSrSAQn97/?mibextid=wwXIfr"
+      }
+    },
+    {
+      "id": "mla-12",
+      "name": "डॉ. श्री. बालाजी किणीकर",
+      "role": "आमदार १४०-अंबरनाथ",
+      "constituencyNo": 140,
+      "phone": "9823195200",
+      "photo": "/leaders/Mla%20Photos/12_Dr%20Shri%20Balaji%20Kinikar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/drbalajikinikar/",
+        "facebook": "https://www.facebook.com/balaji.kinikar.9"
+      }
+    },
+    {
+      "id": "mla-13",
+      "name": "श्री. राजेश मोरे",
+      "role": "आमदार १४४-कल्याण ग्रामीण",
+      "constituencyNo": 144,
+      "phone": "9820337684",
+      "photo": "/leaders/Mla%20Photos/13_Shri%20Rajesh%20More.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/rajeshmore489?igsh=MTAyb3pncW03amdlbQ==",
+        "facebook": "https://www.facebook.com/share/14Zj7aCuVJS/",
+        "twitter": "https://x.com/RAJESHMORE76"
+      }
+    },
+    {
+      "id": "mla-14",
+      "name": "श्री. प्रताप सरनाईक",
+      "role": "आमदार, मंत्री १४६-ओवळा-माजिवडा",
+      "constituencyNo": 146,
+      "phone": "9821505000",
+      "photo": "/leaders/Mla%20Photos/14_Shri%20Pratap%20Sarnaik%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/pratap_sarnaik?igsh=MXNudmFvZTBlY3Qxbw==",
+        "facebook": "https://www.facebook.com/share/1HyWSCtwR6/",
+        "twitter": "https://x.com/PratapSarnaik"
+      }
+    },
+    {
+      "id": "mla-15",
+      "name": "श्री. महेंद्र थोरवे",
+      "role": "आमदार १८९-कर्जत",
+      "constituencyNo": 189,
+      "phone": "9921414040",
+      "photo": "/leaders/Mla%20Photos/15_Shri%20Mahendra%20Thorve.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mla_mahendrathorve_4040?igsh=NGowNHA5N2d1ZGo2&utm_source=qr",
+        "facebook": "https://www.facebook.com/share/1DPVUkALtY/?mibextid=wwXIfr",
+        "twitter": "https://x.com/tho/rvemahendra?s=21"
+      }
+    },
+    {
+      "id": "mla-16",
+      "name": "श्री. महेंद्र दळवी",
+      "role": "आमदार १९२-अलिबाग",
+      "constituencyNo": 192,
+      "phone": "9372210485",
+      "photo": "/leaders/Mla%20Photos/16_Shri%20Mahendra%20Dalvi.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mahendrahdalvi?utm_source=qr&igsh=azBsZTd0eGh2d2Qw",
+        "facebook": "https://www.facebook.com/mahendraharidalvi?mibextid=ZbWKwL",
+        "twitter": "https://x.com/MahendraD8100"
+      }
+    },
+    {
+      "id": "mla-17",
+      "name": "श्री. भरतशेठ गोगावले",
+      "role": "आमदार, मंत्री १९४-महाड",
+      "constituencyNo": 194,
+      "phone": "9422095889",
+      "photo": "/leaders/Mla%20Photos/17_Shri%20Bharatseth%20Gogawale%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/bharat_gogawale?igsh=Y2NheHlzaWtsMDln",
+        "facebook": "https://www.face/book.com/share/1ENFMf8Y8N/"
+      }
+    },
+    {
+      "id": "mla-18",
+      "name": "श्री. योगेश कदम",
+      "role": "आमदार, राज्यमंत्री २६३-दापोली",
+      "constituencyNo": 263,
+      "phone": "9867996252",
+      "photo": "/leaders/Mla%20Photos/18_Shri%20Yogesh%20Kadam%20(MoS).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/iyogeshrkadam?igsh=MXQ1bmxiNXkxbHI5eA==",
+        "facebook": "https://www.facebook.com/share/1Cky3pjQMw/"
+      }
+    },
+    {
+      "id": "mla-19",
+      "name": "श्री. उदय सामंत",
+      "role": "आमदार, मंत्री २६६-रत्नागिरी",
+      "constituencyNo": 266,
+      "phone": "9860390909",
+      "photo": "/leaders/Mla%20Photos/19_Shri%20Uday%20Samant%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/uday.samant?fbclid=IwY2xjawRUI0xleHRuA2FlbQIxMABicmlkETFnTXpFamtPOXdVeXFUcVFmc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHn5tPC_Patm0z0ajp2Bfej9HF9W7Qr48TAnGytkDKBnh-f_Fn9LzW5kk4I9v_aem_mfZmcJencYbBKAldAjuW4A",
+        "facebook": "https://www.facebook.com/udayravindrasamant"
+      }
+    },
+    {
+      "id": "mla-20",
+      "name": "श्री. किरण सामंत",
+      "role": "आमदार २६७-राजापूर",
+      "constituencyNo": 267,
+      "phone": "9960490909",
+      "photo": "/leaders/Mla%20Photos/20_Shri%20Kiran%20Samant.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/kiran_samant9999?igsh=NHM0b2cweWgwcW1x",
+        "facebook": "https://www.facebook.com/share/1FVhnotHQd/"
+      }
+    },
+    {
+      "id": "mla-21",
+      "name": "श्री. निलेश राणे",
+      "role": "आमदार २६९-कुडाळ",
+      "constituencyNo": 269,
+      "phone": "9867999999",
+      "photo": "/leaders/Mla%20Photos/21_Shri%20Nilesh%20Rane.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/menileshrane?igsh=MTd6M2kwYnZ4bTdwbg==",
+        "facebook": "https://www.facebook.com/share/1GGFFRQv1C/"
+      }
+    },
+    {
+      "id": "mla-22",
+      "name": "श्री. दीपक केसरकर",
+      "role": "आमदार २७०-सावंतवाडी",
+      "constituencyNo": 270,
+      "phone": "9422096887",
+      "photo": "/leaders/Mla%20Photos/22_Shri%20Deepak%20Kesarkar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/kesarkar_deepak?igsh=MTFxM3o0OHMwNWI4Ng==",
+        "facebook": "https://www.facebook.com/share/18MBpzq9AD/"
+      }
+    },
+    {
+      "id": "mla-23",
+      "name": "श्री. विजय शिवतारे",
+      "role": "आमदार २०२-पुरंदर",
+      "constituencyNo": 202,
+      "phone": "9820081817",
+      "photo": "/leaders/Mla%20Photos/23_Shri%20Vijay%20Shivtare.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/vijayshivtare?igsh=MTE1aHJsNDFvOXh5NQ%3D%3D",
+        "facebook": "https://www.facebook.com/ShivtareVijay?mibextid=ZbWKwL",
+        "twitter": "https://x.com/vijayshivtare"
+      }
+    },
+    {
+      "id": "mla-24",
+      "name": "श्री. महेश शिंदे",
+      "role": "आमदार २५७-कोरेगांव",
+      "constituencyNo": 257,
+      "phone": "7709039993",
+      "photo": "/leaders/Mla%20Photos/24_Shri%20Mahesh%20Shinde.webp"
+    },
+    {
+      "id": "mla-25",
+      "name": "श्री. शंभूराज देसाई",
+      "role": "आमदार, मंत्री २६१-पाटण",
+      "constituencyNo": 261,
+      "phone": "9822771555",
+      "photo": "/leaders/Mla%20Photos/25_Shri%20Shambhuraj%20Desai%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mlashambhurajdesai?igsh=ZGZ1bGtzeW5kN3Rt",
+        "facebook": "https://www.facebook.com/watch/desaishambhuraj/",
+        "twitter": "https://x.com/shambhurajdesai"
+      }
+    },
+    {
+      "id": "mla-26",
+      "name": "श्री. प्रकाश आबिटकर",
+      "role": "आमदार, मंत्री २७२-राधानगरी",
+      "constituencyNo": 272,
+      "phone": "9422421600",
+      "photo": "/leaders/Mla%20Photos/26_Shri%20Prakash%20Abitkar%20(Minister).webp"
+    },
+    {
+      "id": "mla-27",
+      "name": "श्री. चंद्रदिप नरके",
+      "role": "आमदार २७५-करवीर",
+      "constituencyNo": 275,
+      "phone": "9890199115",
+      "photo": "/leaders/Mla%20Photos/27_Shri%20Chandradip%20Narke.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/chandradeep.narake?igsh=MTg5YjU1MTVrc3h2ZQ==",
+        "facebook": "https://www.facebook.com/share/18ZofDs9u4/?mibextid=wwXIfr"
+      }
+    },
+    {
+      "id": "mla-28",
+      "name": "श्री. राजेश क्षीरसागर",
+      "role": "आमदार २७३-कोल्हापूर उत्तर",
+      "constituencyNo": 273,
+      "phone": "9665677788",
+      "photo": "/leaders/Mla%20Photos/28_Shri%20Rajesh%20Kshirsagar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/kshirsagarrajesh?igsh=ZjUwbW9tNGU5MzNi",
+        "facebook": "https://www.facebook.com/rajeshv.kshirsagar?mibextid=wwXIfr&rdid=nUebGMFoehh2oXyM&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1cPHBRyXcs%2F%3Fmibextid%3DwwXIfr#"
+      }
+    },
+    {
+      "id": "mla-29",
+      "name": "श्री. सुहास अनिल बाबर",
+      "role": "आमदार २८६-खानापूर",
+      "constituencyNo": 286,
+      "phone": "9923064999",
+      "photo": "/leaders/Mla%20Photos/29_Shri%20Suhas%20Anil%20Babar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/suhas0909?igsh=b3E4eTh6MmFtaHJw",
+        "facebook": "https://www.facebook.com/BabarSuhas?mibextid=wwXIfr&rdid=VgYuTVjFjIP6vbMN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18VN7afyKk%2F%3Fmibextid%3DwwXIfr#",
+        "twitter": "https://x.com/suhasbabar1311?s=21"
+      }
+    },
+    {
+      "id": "mla-30",
+      "name": "श्री. आमश्या पाडवी",
+      "role": "आमदार १-अक्कलकुआ (अज)",
+      "constituencyNo": 1,
+      "phone": "9494142727",
+      "photo": "/leaders/Mla%20Photos/30_Shri%20Amshya%20Padvi.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/amshyadadapadvi/",
+        "facebook": "https://www.facebook.com/profile.php?id=61585574160599&sk=reels_tab"
+      }
+    },
+    {
+      "id": "mla-31",
+      "name": "श्रीमती मंजुळाताई गावित",
+      "role": "आमदार ५-साक्री (अज)",
+      "constituencyNo": 5,
+      "phone": "8208937464",
+      "photo": "/leaders/Mla%20Photos/31_Smt%20Manjulatai%20Gavit.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/manjulatgavit?igsh=bHR3cXBzdHBhaWhz",
+        "facebook": "https://www.facebook.com/ManjulaTGavit?rdid=4QOgmF5FXBtuNDog&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14dzGGsyneh%2F#",
+        "twitter": "https://x.com/ManjulaTGavit"
+      }
+    },
+    {
+      "id": "mla-32",
+      "name": "श्री. चंद्रकांत सोनवणे",
+      "role": "आमदार १०-चोपडा (अज)",
+      "constituencyNo": 10,
+      "phone": "9422779999",
+      "photo": "/leaders/Mla%20Photos/32_Shri%20Chandrakant%20Sonawane.webp",
+      "social": {
+        "facebook": "https://www.facebook.com/pro.chandrakantsonawane"
+      }
+    },
+    {
+      "id": "mla-33",
+      "name": "श्री. गुलाबराव पाटील",
+      "role": "आमदार, मंत्री १४-जळगाव ग्रामीण",
+      "constituencyNo": 14,
+      "phone": "9881730620",
+      "photo": "/leaders/Mla%20Photos/33_Shri%20Gulabrao%20Patil%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/gulabraopatilofficial",
+        "facebook": "https://www.facebook.com/share/1FaNX6Ea9L/",
+        "twitter": "https://x.com/gulabraorpatil"
+      }
+    },
+    {
+      "id": "mla-34",
+      "name": "श्री. अमोल पाटील",
+      "role": "आमदार १६-एरंडोल",
+      "constituencyNo": 16,
+      "phone": "9405559999",
+      "photo": "/leaders/Mla%20Photos/34_Shri%20Amol%20Patil.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/amoldadaofficial?igsh=a2lqdDA4ZHY1YWFm",
+        "facebook": "https://www.facebook.com/share/15ntjxmZzuf/?mibextid=wwXIfr",
+        "twitter": "https://x.com/amolpatilparola?s=11"
+      }
+    },
+    {
+      "id": "mla-35",
+      "name": "श्री. किशोर आप्पा पाटील",
+      "role": "आमदार १८-पाचोरा",
+      "constituencyNo": 18,
+      "phone": "9860899091",
+      "photo": "/leaders/Mla%20Photos/35_Shri%20Kishor%20Appa%20Patil.webp"
+    },
+    {
+      "id": "mla-36",
+      "name": "श्री. चंद्रकांत पाटील",
+      "role": "आमदार २०-मुक्ताईनगर",
+      "constituencyNo": 20,
+      "phone": "9422976555",
+      "photo": "/leaders/Mla%20Photos/36_Shri%20Chandrakant%20Patil.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/chandrakantnpatilofficial?utm_source=qr&igsh=aWViOTV6bzU0OWxs",
+        "facebook": "https://www.facebook.com/ChandrakantNPatil5?rdid=iChrSKlo8g5Ev1mA&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CmzTpWgzd%2F#"
+      }
+    },
+    {
+      "id": "mla-37",
+      "name": "श्री. सुहास (आण्णा) कांदे",
+      "role": "आमदार ११३-नांदगाव",
+      "constituencyNo": 113,
+      "phone": "8308599786",
+      "photo": "/leaders/Mla%20Photos/37_Shri%20Suhas%20(Anna)%20Kande.webp"
+    },
+    {
+      "id": "mla-38",
+      "name": "श्री. दादाजी भुसे",
+      "role": "आमदार, मंत्री ११५-मालेगाव बाह्य",
+      "constituencyNo": 115,
+      "phone": "9422236892",
+      "photo": "/leaders/Mla%20Photos/38_Shri%20Dadaji%20Bhuse%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/dadaji.bhuse?igsh=MXBkZW0ydDI2aXRpeA==",
+        "facebook": "https://www.facebook.com/dadajibhuseofficial?rdid=7ibp9NFz41KflL1D&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18PytswyJY%2F#",
+        "twitter": "https://x.com/dadajibhuse"
+      }
+    },
+    {
+      "id": "mla-39",
+      "name": "श्री. अमोल खताळ",
+      "role": "आमदार २१७-संगमनेर",
+      "constituencyNo": 217,
+      "phone": "9922270001",
+      "photo": "/leaders/Mla%20Photos/39_Shri%20Amol%20Khatal.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/amol_khatal_patil?igsh=eXRqaHV3eW10dTZm",
+        "facebook": "https://www.facebook.com/amol.d.khatal?rdid=vQKLlXjaZLaHPfr5&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Qbr7z5wCz%2F#",
+        "twitter": "https://x.com/amolkhatalpatil"
+      }
+    },
+    {
+      "id": "mla-40",
+      "name": "श्री. विठ्ठलराव लंघे",
+      "role": "आमदार २२१-नेवासा",
+      "constituencyNo": 221,
+      "phone": "9423753523",
+      "photo": "/leaders/Mla%20Photos/40_Shri%20Vitthalrao%20Langhe.webp"
+    },
+    {
+      "id": "mla-41",
+      "name": "श्री. संभाराव उर्फ बाबुराव कदम कोहळीकर",
+      "role": "आमदार ८४-हदगाव",
+      "constituencyNo": 84,
+      "phone": "9822221003",
+      "photo": "/leaders/Mla%20Photos/41_Shri%20Sambharao%20(Baburao)%20Kadam.webp"
+    },
+    {
+      "id": "mla-42",
+      "name": "श्री. बालाजी कल्याणकर",
+      "role": "आमदार ८६-नांदेड उत्तर",
+      "constituencyNo": 86,
+      "phone": "9850975641",
+      "photo": "/leaders/Mla%20Photos/42_Shri%20Balaji%20Kalyankar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/balaji_kalyankar_official",
+        "facebook": "https://www.facebook.com/balajikalyankarofc"
+      }
+    },
+    {
+      "id": "mla-43",
+      "name": "श्री. आनंद तिडके",
+      "role": "आमदार ८७-नांदेड दक्षिण",
+      "constituencyNo": 87,
+      "phone": "9921511023",
+      "photo": "/leaders/Mla%20Photos/43_Shri%20Anand%20Tidke.webp"
+    },
+    {
+      "id": "mla-44",
+      "name": "श्री. संतोष बांगर",
+      "role": "आमदार ९३-कळमनुरी",
+      "constituencyNo": 93,
+      "phone": "9822221177",
+      "photo": "/leaders/Mla%20Photos/44_Shri%20Santosh%20Bangar.webp"
+    },
+    {
+      "id": "mla-45",
+      "name": "श्री. हिकमत उढाण",
+      "role": "आमदार १००-घनसवांगी",
+      "constituencyNo": 100,
+      "phone": "9892033333",
+      "photo": "/leaders/Mla%20Photos/45_Shri%20Hikmat%20Udhan.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/udhanhikmat?igsh=MXJvNnEydTY0YjRqYg==",
+        "facebook": "https://www.facebook.com/share/18vRQS4kpE/"
+      }
+    },
+    {
+      "id": "mla-46",
+      "name": "श्री. अर्जुन खोतकर",
+      "role": "आमदार १०१-जालना",
+      "constituencyNo": 101,
+      "phone": "9423051111",
+      "photo": "/leaders/Mla%20Photos/46_Shri%20%20Arjun%20Khotkar.webp"
+    },
+    {
+      "id": "mla-47",
+      "name": "श्री. अब्दुल सत्तार",
+      "role": "आमदार १०४-सिल्लोड",
+      "constituencyNo": 104,
+      "phone": "9922204367",
+      "photo": "/leaders/Mla%20Photos/47_Shri%20Abdul%20Sattar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/abdulsattar_sillod?utm_source=qr&igsh=M3VrOXZwcno5Mmtq",
+        "facebook": "https://www.facebook.com/share/14aEGRkHC2x/",
+        "twitter": "https://x.com/AbdulSattar_99"
+      }
+    },
+    {
+      "id": "mla-48",
+      "name": "श्रीमती रंजनाताई जाधव",
+      "role": "आमदार १०५-कन्नड",
+      "constituencyNo": 105,
+      "phone": "8806666827",
+      "photo": "/leaders/Mla%20Photos/48_Smt%20Ranjanatai%20Jadhav.webp"
+    },
+    {
+      "id": "mla-49",
+      "name": "श्री. प्रदिप जैस्वाल",
+      "role": "आमदार १०७-छ. संभाजीनगर मध्य",
+      "constituencyNo": 107,
+      "phone": "9823006357",
+      "photo": "/leaders/Mla%20Photos/49_Shri%20%20Pradip%20Jiswal.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/pradeepjaiswalmla?igsh=MTd0M2ZhNm5iZG5tYg%3D%3D",
+        "facebook": "https://www.facebook.com/share/1DfKUPZvss/?mibextid=wwXIfr",
+        "twitter": "https://x.com/mla_pradeepj?s=21"
+      }
+    },
+    {
+      "id": "mla-50",
+      "name": "श्री. संजय शिरसाट",
+      "role": "आमदार, मंत्री १०८-छ. संभाजीनगर पश्चिम",
+      "constituencyNo": 108,
+      "phone": "9422203930",
+      "photo": "/leaders/Mla%20Photos/50_Shri%20%20Sanjay%20Shirsat%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/sanjayshirsatmla?igsh=NmJrdzdkNnd6OWZw",
+        "facebook": "https://www.facebook.com/share/1Ak8C6SyxU/",
+        "twitter": "https://x.com/SanjayShirsat77"
+      }
+    },
+    {
+      "id": "mla-51",
+      "name": "श्री. विलास भुमरे",
+      "role": "आमदार ११०-पैठण",
+      "constituencyNo": 110,
+      "phone": "9422652880",
+      "photo": "/leaders/Mla%20Photos/51_Shri%20%20Vilas%20Bhumre.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/mla_vilasbhumare?igsh=cGs3bnBoeTlsazFh",
+        "facebook": "https://www.facebook.com/VilasBhumarePatil?rdid=DFKvN9WF5644ggvp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TZpqPoZN%2F#",
+        "twitter": "https://x.com/Vilas_Bhumare"
+      }
+    },
+    {
+      "id": "mla-52",
+      "name": "प्रा. रमेश बोरनारे",
+      "role": "आमदार, मुख्य प्रतोद ११२-वैजापूर",
+      "constituencyNo": 112,
+      "phone": "9422236892",
+      "photo": "/leaders/Mla%20Photos/52_Prof%20Ramesh%20Bornare%20(Chief%20Whip).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/ramesh_bornare_official?igsh=YWFvM2tvM29qajN2",
+        "facebook": "https://www.facebook.com/bornaresir?rdid=gHPa6NSRi0GXqjGT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1833umbiUX%2F#"
+      }
+    },
+    {
+      "id": "mla-53",
+      "name": "डॉ. तानाजी सावंत",
+      "role": "आमदार २४३-परांडा",
+      "constituencyNo": 243,
+      "phone": "9822091983",
+      "photo": "/leaders/Mla%20Photos/53_Dr%20%20Tanaji%20Sawant.webp"
+    },
+    {
+      "id": "mla-54",
+      "name": "श्री. संजय गायकवाड",
+      "role": "आमदार २२-बुलढाणा",
+      "constituencyNo": 22,
+      "phone": "9881234234",
+      "photo": "/leaders/Mla%20Photos/54_Shri%20%20Sanjay%20Gaikwad.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/sanjaygaikwadofficial1?igsh=YWN3Nmg3MHdjZWoy",
+        "facebook": "https://www.facebook.com/sanjaygaikwadofficial1?rdid=tHW1rA98dBrFHvDN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BLTaJkVfd%2F#",
+        "twitter": "https://x.com/sanjaygaikwad34"
+      }
+    },
+    {
+      "id": "mla-55",
+      "name": "श्री. आशिष जयस्वाल",
+      "role": "आमदार, राज्यमंत्री ५९-रामटेक",
+      "constituencyNo": 59,
+      "phone": "9881713138",
+      "photo": "/leaders/Mla%20Photos/55_Shri%20Ashish%20Jaiswal%20(MoS).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/adv._ashish_jaiswal/",
+        "facebook": "https://www.facebook.com/ashishjaiswalshivsena"
+      }
+    },
+    {
+      "id": "mla-56",
+      "name": "श्री. नरेंद्र भोंडेकर",
+      "role": "आमदार ६१-भंडारा (अजा)",
+      "constituencyNo": 61,
+      "phone": "9326910461",
+      "photo": "/leaders/Mla%20Photos/56_Shri%20Narendra%20Bhondekar.webp",
+      "social": {
+        "instagram": "https://www.instagram.com/narendra_bhondekar?igsh=MTJ0c3c4b2c3ZG80dA==",
+        "facebook": "https://www.facebook.com/share/1DyzUSPRQY/?mibextid=wwXIf"
+      }
+    },
+    {
+      "id": "mla-57",
+      "name": "श्री. संजय राठोड",
+      "role": "आमदार, मंत्री ७९-दिग्रस",
+      "constituencyNo": 79,
+      "phone": "7448166222",
+      "photo": "/leaders/Mla%20Photos/57_Shri%20%20Sanjay%20Rathod%20(Minister).webp",
+      "social": {
+        "instagram": "https://www.instagram.com/sanjayrathod___?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        "facebook": "https://www.facebook.com/gorsanjaydr/",
+        "twitter": "https://x.com/SanjayDRathods?s=20"
+      }
+    }
+  ],
+  "leaders": [
+    {
+      "id": "leaders-1",
+      "name": "श्री. रामदास कदम",
+      "role": "नेते",
+      "phone": "9821083468"
+    },
+    {
+      "id": "leaders-2",
+      "name": "श्री. गजानन कीर्तीकर",
+      "role": "मा. खासदार",
+      "phone": "9821114872"
+    },
+    {
+      "id": "leaders-3",
+      "name": "श्री. आनंदराव अडसुळ",
+      "role": "नेते",
+      "phone": "9821072192"
+    },
+    {
+      "id": "leaders-4",
+      "name": "श्री. गुलाबराव पाटील",
+      "role": "मंत्री",
+      "phone": "9881730620",
+      "photo": "/leaders/%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/02_Shri%20Gulabrao%20Patil%20(Minister).webp"
+    },
+    {
+      "id": "leaders-5",
+      "name": "श्री. प्रतापराव जाधव",
+      "role": "केंद्रीय मंत्री, खासदार",
+      "phone": "8888647777",
+      "photo": "/leaders/%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/03_Prataprao%20Jadhav.webp"
+    },
+    {
+      "id": "leaders-6",
+      "name": "डॉ. श्रीमती. निलमताई गोऱ्हे",
+      "role": "उपसभापती, विधान परिषद",
+      "phone": "9820351275",
+      "photo": "/leaders/%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/04_%E0%A4%A1%E0%A5%89%20%E0%A4%A8%E0%A4%BF%E0%A4%B2%E0%A4%AE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%97%E0%A5%8B%E0%A4%B1%E0%A5%8D%E0%A4%B9%E0%A5%87.webp"
+    },
+    {
+      "id": "leaders-7",
+      "name": "श्रीमती. भावनाताई गवळी",
+      "role": "वि.प.स.",
+      "phone": "9868180222",
+      "photo": "/leaders/%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/05_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%20%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%A8%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%97%E0%A4%B5%E0%A4%B3%E0%A5%80.webp"
+    },
+    {
+      "id": "leaders-8",
+      "name": "सौ. मीनाताई कांबळी",
+      "role": "नेते",
+      "phone": "9967300508"
+    },
+    {
+      "id": "leaders-9",
+      "name": "श्री. प्रकाश पाटील",
+      "role": "नेते",
+      "phone": "9765004888",
+      "photo": "/leaders/%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/07_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%B6%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.webp"
+    }
+  ],
+  "deputyLeaders": [
+    {
+      "id": "deputy-1",
+      "name": "श्री. श्रीरंग बारणे",
+      "role": "खासदार",
+      "phone": "9822004494",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/01_Shrirang%20Appa%20Barne.webp"
+    },
+    {
+      "id": "deputy-2",
+      "name": "श्री. भरत गोगावले",
+      "role": "मंत्री",
+      "phone": "9422095889",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/02_Shri%20Bharatseth%20Gogawale%20(Minister).webp"
+    },
+    {
+      "id": "deputy-3",
+      "name": "श्री. दादाजी भुसे",
+      "role": "मंत्री",
+      "phone": "9422270593",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/03_Shri%20Dadaji%20Bhuse%20(Minister).webp"
+    },
+    {
+      "id": "deputy-4",
+      "name": "श्री. शंभुराज देसाई",
+      "role": "मंत्री",
+      "phone": "9822771555",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/04_Shri%20Shambhuraj%20Desai%20(Minister).webp"
+    },
+    {
+      "id": "deputy-5",
+      "name": "श्री. संजय राठोड",
+      "role": "मंत्री",
+      "phone": "7448166222",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/08_Shri%20%20Sanjay%20Rathod%20(Minister).webp"
+    },
+    {
+      "id": "deputy-6",
+      "name": "श्री. उदय सामंत",
+      "role": "मंत्री",
+      "phone": "9860390909",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/06_Shri%20Uday%20Samant%20(Minister).webp"
+    },
+    {
+      "id": "deputy-7",
+      "name": "श्री. नरेंद्र भोंडेकर",
+      "role": "आमदार",
+      "phone": "9326910461",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/07_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%A8%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AD%E0%A5%8B%E0%A4%82%E0%A4%A1%E0%A5%87%E0%A4%95%E0%A4%B0.webp"
+    },
+    {
+      "id": "deputy-8",
+      "name": "श्री. कृपाल तुमाने",
+      "role": "वि.प.स., मा. खासदार",
+      "phone": "9823288322",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/08_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%20%E0%A4%95%E0%A5%83%E0%A4%AA%E0%A4%BE%E0%A4%B2%20%E0%A4%A4%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%87.webp"
+    },
+    {
+      "id": "deputy-9",
+      "name": "श्री. हेमंत पाटील",
+      "role": "वि.प.स., मा. खासदार",
+      "phone": "7030990000"
+    },
+    {
+      "id": "deputy-10",
+      "name": "श्री. राहुल शेवाळे",
+      "role": "मा. खासदार",
+      "phone": "9869982244",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/10_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%81%E0%A4%B2%20%E0%A4%B6%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%B3%E0%A5%87.webp"
+    },
+    {
+      "id": "deputy-11",
+      "name": "श्री. दीपक केसरकर",
+      "role": "मा. मंत्री",
+      "phone": "9422096887",
+      "photo": "/leaders/Mla%20Photos/22_Shri%20Deepak%20Kesarkar.webp"
+    },
+    {
+      "id": "deputy-12",
+      "name": "श्री. तानाजी सावंत",
+      "role": "मा. मंत्री",
+      "phone": "9822091983",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/12_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A4%BE%E0%A4%9C%E0%A5%80%20%E0%A4%B8%E0%A4%BE%E0%A4%B5%E0%A4%82%E0%A4%A4.webp"
+    },
+    {
+      "id": "deputy-13",
+      "name": "श्री. विजय शिवतारे",
+      "role": "आमदार",
+      "phone": "9820081817",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/13_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A5%87.webp"
+    },
+    {
+      "id": "deputy-14",
+      "name": "श्री. अर्जुन खोतकर",
+      "role": "आमदार",
+      "phone": "9423051111",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/14_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C%E0%A5%81%E0%A4%A8%20%E0%A4%96%E0%A5%8B%E0%A4%A4%E0%A4%95%E0%A4%B0.webp"
+    },
+    {
+      "id": "deputy-15",
+      "name": "श्री. ज्ञानराज चौगुले",
+      "role": "मा. आमदार",
+      "phone": "9422069943",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/15_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%E0%A4%B0%E0%A4%BE%E0%A4%9C%20%E0%A4%9A%E0%A5%8C%E0%A4%97%E0%A5%81%E0%A4%B2%E0%A5%87.webp"
+    },
+    {
+      "id": "deputy-16",
+      "name": "श्री. चिमणराव पाटील",
+      "role": "मा. आमदार",
+      "phone": "9422771967"
+    },
+    {
+      "id": "deputy-17",
+      "name": "श्री. शहाजी बापु पाटील",
+      "role": "मा. आमदार",
+      "phone": "9049301000",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/17_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B6%E0%A4%B9%E0%A4%BE%E0%A4%9C%E0%A5%80%20%E0%A4%AC%E0%A4%BE%E0%A4%AA%E0%A5%81%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.webp"
+    },
+    {
+      "id": "deputy-18",
+      "name": "श्री. सदा सरवणकर",
+      "role": "मा. आमदार",
+      "phone": "9820033117",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/18_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A4%A6%E0%A4%BE%20%E0%A4%B8%E0%A4%B0%E0%A4%B5%E0%A4%A3%E0%A4%95%E0%A4%B0.webp"
+    },
+    {
+      "id": "deputy-19",
+      "name": "डॉ. दिपक सावंत",
+      "role": "मा. आमदार",
+      "phone": "9820207600"
+    },
+    {
+      "id": "deputy-20",
+      "name": "श्री. गोपीकिशन बजोरीया",
+      "role": "मा. आमदार",
+      "phone": "9823278787",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/20_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%97%E0%A5%8B%E0%A4%AA%E0%A5%80%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A4%A8%20%E0%A4%AC%E0%A4%9C%E0%A5%8B%E0%A4%B0%E0%A5%80%E0%A4%AF%E0%A4%BE.webp"
+    },
+    {
+      "id": "deputy-21",
+      "name": "श्री. रविंद्र फाटक",
+      "role": "मा. आमदार",
+      "phone": "9819089999"
+    },
+    {
+      "id": "deputy-22",
+      "name": "श्री. सदानंद चव्हाण",
+      "role": "मा. आमदार",
+      "phone": "9822129642"
+    },
+    {
+      "id": "deputy-23",
+      "name": "श्री. कृष्णा हेगडे",
+      "role": "मा. आमदार",
+      "phone": "9821372777"
+    },
+    {
+      "id": "deputy-24",
+      "name": "श्री. संजय कदम",
+      "role": "मा. आमदार",
+      "phone": "9673639639"
+    },
+    {
+      "id": "deputy-25",
+      "name": "श्री. यशवंत जाधव",
+      "role": "उपनेते",
+      "phone": "9987147222"
+    },
+    {
+      "id": "deputy-26",
+      "name": "श्री. आनंदराव जाधव",
+      "role": "उपनेते",
+      "phone": "9869157853"
+    },
+    {
+      "id": "deputy-27",
+      "name": "ॲड. अरुणजी जगताप",
+      "role": "ग्राहक संरक्षण कक्ष",
+      "phone": "9820140878"
+    },
+    {
+      "id": "deputy-28",
+      "name": "श्री. अनिल पडवळ",
+      "role": "शिक्षकेत्तर कर्मचारी सेना",
+      "phone": "9930194202"
+    },
+    {
+      "id": "deputy-29",
+      "name": "श्री. इरफान सय्यद",
+      "role": "अल्प संख्यांक विभाग",
+      "phone": "9850417575"
+    },
+    {
+      "id": "deputy-30",
+      "name": "श्री. कमलेश राय",
+      "role": "उपनेते",
+      "phone": "9820006067"
+    },
+    {
+      "id": "deputy-31",
+      "name": "श्री. सुनील नरसाळे",
+      "role": "उपनेते",
+      "phone": "9821206960"
+    },
+    {
+      "id": "deputy-32",
+      "name": "श्री. राजू वाघमारे",
+      "role": "उपनेते",
+      "phone": "9920252363"
+    },
+    {
+      "id": "deputy-33",
+      "name": "श्री. अजय बोरस्ते",
+      "role": "उपनेते",
+      "phone": "9890975999"
+    },
+    {
+      "id": "deputy-34",
+      "name": "श्री. विजय करंजकर",
+      "role": "उपनेते",
+      "phone": "9767277999"
+    },
+    {
+      "id": "deputy-35",
+      "name": "श्री. संजय आंग्रे",
+      "role": "उपनेते",
+      "phone": "9423881071"
+    },
+    {
+      "id": "deputy-36",
+      "name": "श्री. रुपेश म्हात्रे",
+      "role": "उपनेते",
+      "phone": "9320959000"
+    },
+    {
+      "id": "deputy-37",
+      "name": "श्री. विजय चौगुले",
+      "role": "उपनेते",
+      "phone": "9892221000"
+    },
+    {
+      "id": "deputy-38",
+      "name": "श्री. निलेश सांबरे",
+      "role": "उपनेते",
+      "phone": "9833921789"
+    },
+    {
+      "id": "deputy-39",
+      "name": "श्री. दत्ता दळवी",
+      "role": "उपनेते",
+      "phone": "9819001100"
+    },
+    {
+      "id": "deputy-40",
+      "name": "श्री. शिशिर शिंदे",
+      "role": "मा. आमदार",
+      "phone": "9820056100"
+    },
+    {
+      "id": "deputy-41",
+      "name": "श्री. ज्ञानेश्वर धाने–पाटील",
+      "role": "मा. आमदार",
+      "phone": "9422157301"
+    },
+    {
+      "id": "deputy-42",
+      "name": "श्री. दिलीप शिंदे",
+      "role": "उपनेते",
+      "phone": "9819322322"
+    },
+    {
+      "id": "deputy-43",
+      "name": "सौ. आशाताई परमेश विचारे–मामिडी",
+      "role": "सहकार विभाग",
+      "phone": "9892939633"
+    },
+    {
+      "id": "deputy-44",
+      "name": "सौ. शितल म्हात्रे",
+      "role": "उपनेते",
+      "phone": "9870337777"
+    },
+    {
+      "id": "deputy-45",
+      "name": "श्रीमती. संध्या वढावकर",
+      "role": "उपनेते",
+      "phone": "9820743044"
+    },
+    {
+      "id": "deputy-46",
+      "name": "सौ. कला प्रदिप शिंदे",
+      "role": "उपनेते",
+      "phone": "9833352435"
+    },
+    {
+      "id": "deputy-47",
+      "name": "डॉ. शिल्पा देशमुख",
+      "role": "उपनेते",
+      "phone": "7021551154"
+    },
+    {
+      "id": "deputy-48",
+      "name": "ज्योती मेहेर",
+      "role": "उपनेते",
+      "phone": "7248988858"
+    },
+    {
+      "id": "deputy-49",
+      "name": "सौ. सुवर्णा करंजे",
+      "role": "उपनेते",
+      "phone": "9821913889"
+    },
+    {
+      "id": "deputy-50",
+      "name": "सौ. तृष्णा विश्वासराव",
+      "role": "उपनेते",
+      "phone": "9920326416"
+    },
+    {
+      "id": "deputy-51",
+      "name": "सौ. विजया पोटे",
+      "role": "उपनेते",
+      "phone": "9967288548"
+    },
+    {
+      "id": "deputy-52",
+      "name": "श्रीम. जयश्रीताई चंद्रकांत जाधव",
+      "role": "उपनेते",
+      "phone": "9552073100"
+    },
+    {
+      "id": "deputy-53",
+      "name": "श्रीम. सुलभा रामभाऊ उबाळे",
+      "role": "उपनेते",
+      "phone": "9850240999"
+    },
+    {
+      "id": "deputy-54",
+      "name": "सौ. संजना संजय घाडी",
+      "role": "उपनेते",
+      "phone": "9702251818"
+    },
+    {
+      "id": "deputy-55",
+      "name": "श्रीम. राजूल पटेल",
+      "role": "उपनेते",
+      "phone": "9323801469"
+    },
+    {
+      "id": "deputy-56",
+      "name": "श्रीम. प्रिती बंड",
+      "role": "उपनेते",
+      "phone": "8698955666"
+    },
+    {
+      "id": "deputy-57",
+      "name": "प्रा.सौ. संगीता विजयप्रकाश ठोंबरे",
+      "role": "उपनेते",
+      "phone": "7057984780"
+    }
+  ],
+  "divisionalContactHeads": [
+    {
+      "id": "dch-1",
+      "name": "आ.श्री. किरण सामंत",
+      "role": "उत्तर कोकण रत्नागिरी, सिंधुदुर्ग",
+      "phone": "9960490909",
+      "photo": "/leaders/02_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/01_KIRAN%20SAWANT.webp"
+    },
+    {
+      "id": "dch-2",
+      "name": "मंत्री श्री. भरतशेठ गोगावले",
+      "role": "दक्षिण कोकण रायगड, पालघर",
+      "phone": "9422095889",
+      "photo": "/leaders/02_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/02_Shri%20Bharatseth%20Gogawale%20(Minister).webp"
+    },
+    {
+      "id": "dch-3",
+      "name": "श्री. रविंद्र फाटक",
+      "role": "कोकण भिवंडी, पालघर",
+      "phone": "9819089999",
+      "photo": "/leaders/02_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/03_RAVINDRA%20FATAK.webp"
+    },
+    {
+      "id": "dch-4",
+      "name": "श्री. दगडूदादा सकपाळ",
+      "role": "पश्चिम महाराष्ट्र पुणे, सातारा, सांगली, सोलापूर, कोल्हापूर",
+      "phone": "9820059385"
+    },
+    {
+      "id": "dch-5",
+      "name": "मंत्री श्री. प्रकाश आबिटकर",
+      "role": "मराठवाडा धाराशिव, लातूर, बीड, नांदेड",
+      "phone": "9422421600"
+    },
+    {
+      "id": "dch-6",
+      "name": "माजी मंत्री डॉ. दिपक सावंत",
+      "role": "पूर्व विदर्भ नागपूर, भंडारा, गोंदिया",
+      "phone": "9821627600"
+    },
+    {
+      "id": "dch-7",
+      "name": "आ.डॉ. मनिषा कायंदे",
+      "role": "पूर्व विदर्भ वर्धा, चंद्रपूर, गडचिरोली",
+      "phone": "9820236304"
+    },
+    {
+      "id": "dch-8",
+      "name": "मंत्री श्री. संजय राठोड",
+      "role": "पश्चिम विदर्भ अमरावती, अकोला, वाशिम, यवतमाळ, बुलढाणा",
+      "phone": "7448166222"
+    }
+  ],
+  "divisionalCoContactHeads": [
+    {
+      "id": "dcch-1",
+      "name": "श्री. प्रदीप (भाई) खाडे",
+      "role": "उत्तर कोकण रायगड, पालघर",
+      "phone": "9820322222"
+    },
+    {
+      "id": "dcch-2",
+      "name": "श्री. हनुमान जगदाळे",
+      "role": "पश्चिम महाराष्ट्र पुणे, सातारा, सांगली, सोलापूर, कोल्हापूर",
+      "phone": "9370070072"
+    },
+    {
+      "id": "dcch-3",
+      "name": "श्री. विकास रेपाळे",
+      "role": "पश्चिम महाराष्ट्र मावळ, शिरूर",
+      "phone": "9822242866"
+    },
+    {
+      "id": "dcch-4",
+      "name": "श्री. पराग पिंगळे",
+      "role": "पश्चिम विदर्भ अमरावती, अकोला, वाशिम, यवतमाळ, बुलढाणा",
+      "phone": "9860934327"
+    }
+  ],
+  "lokSabhaContactHead": [
+    {
+      "id": "lsch-1",
+      "name": "मा. आ. श्री. शिरीष चौधरी",
+      "role": "नंदुरबार",
+      "phone": "8806111111"
+    },
+    {
+      "id": "lsch-2",
+      "name": "श्री. भाऊसाहेब चौधरी, शिवसेना सचिव",
+      "role": "धुळे",
+      "phone": "9820306730"
+    },
+    {
+      "id": "lsch-3",
+      "name": "आ. श्री. दिलीप लांडे",
+      "role": "जळगाव",
+      "phone": "9833201646",
+      "photo": "/leaders/Mla%20Photos/04_Shri%20Dilip%20Lande.webp"
+    },
+    {
+      "id": "lsch-4",
+      "name": "आ. श्री. तुकाराम काते",
+      "role": "रावेर",
+      "phone": "8850309090",
+      "photo": "/leaders/Mla%20Photos/05_Shri%20Tukaram%20Kate.webp"
+    },
+    {
+      "id": "lsch-5",
+      "name": "श्री. संजय सोनार",
+      "role": "बुलढाणा",
+      "phone": "9920255111"
+    },
+    {
+      "id": "lsch-6",
+      "name": "मा. आ. श्री. राजन साळवी",
+      "role": "अकोला",
+      "phone": "9422429025"
+    },
+    {
+      "id": "lsch-7",
+      "name": "आ. श्री. किशोर अप्पा पाटील",
+      "role": "अमरावती",
+      "phone": "9860899091"
+    },
+    {
+      "id": "lsch-8",
+      "name": "श्री. राज दीक्षित",
+      "role": "वर्धा",
+      "phone": "9821456389"
+    },
+    {
+      "id": "lsch-9",
+      "name": "श्री. अनिल कोकीळ",
+      "role": "रामटेक",
+      "phone": "7039081155"
+    },
+    {
+      "id": "lsch-10",
+      "name": "मा. खा. श्री. संजय निरुपम",
+      "role": "नागपूर",
+      "phone": "9821345666"
+    },
+    {
+      "id": "lsch-11",
+      "name": "श्री. विलास चावरी",
+      "role": "भंडारा - गोंदिया",
+      "phone": "9820613898"
+    },
+    {
+      "id": "lsch-12",
+      "name": "मा. मंत्री श्री. जगदीश गुप्ता",
+      "role": "गडचिरोली - चिमूर",
+      "phone": "9422157070"
+    },
+    {
+      "id": "lsch-13",
+      "name": "आ. श्री. कृपाल तुमाने",
+      "role": "चंद्रपूर",
+      "phone": "9823208322",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/08_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%20%E0%A4%95%E0%A5%83%E0%A4%AA%E0%A4%BE%E0%A4%B2%20%E0%A4%A4%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%87.webp"
+    },
+    {
+      "id": "lsch-14",
+      "name": "श्रीमती प्रीती बंड",
+      "role": "यवतमाळ - वाशिम",
+      "phone": "8698955666"
+    },
+    {
+      "id": "lsch-15",
+      "name": "श्री. आनंदराव जाधव",
+      "role": "हिंगोली",
+      "phone": "9869157853"
+    },
+    {
+      "id": "lsch-16",
+      "name": "श्री. रमाकांत मढवी",
+      "role": "नांदेड",
+      "phone": "9892733755"
+    },
+    {
+      "id": "lsch-17",
+      "name": "श्री. भास्कर आंबेकर",
+      "role": "परभणी",
+      "phone": "8329296323"
+    },
+    {
+      "id": "lsch-18",
+      "name": "खा. श्री. संदीपान भूमरे",
+      "role": "जालना",
+      "phone": "7020257742"
+    },
+    {
+      "id": "lsch-19",
+      "name": "श्री. विलास पारकर",
+      "role": "छत्रपती संभाजीनगर",
+      "phone": "9967068628"
+    },
+    {
+      "id": "lsch-20",
+      "name": "श्री. भाऊसाहेब चौधरी",
+      "role": "दिंडोरी",
+      "phone": "9820306730"
+    },
+    {
+      "id": "lsch-21",
+      "name": "आ. श्री. सुहास कांदे",
+      "role": "नाशिक",
+      "phone": "8308599786",
+      "photo": "/leaders/Mla%20Photos/37_Shri%20Suhas%20(Anna)%20Kande.webp"
+    },
+    {
+      "id": "lsch-22",
+      "name": "श्री. पांडुरंग पाटील",
+      "role": "पालघर",
+      "phone": "9821423737"
+    },
+    {
+      "id": "lsch-23",
+      "name": "खा. श्री. नरेश म्हस्के",
+      "role": "भिवंडी",
+      "phone": "9819389080",
+      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
+    },
+    {
+      "id": "lsch-24",
+      "name": "खा. श्री. नरेश म्हस्के",
+      "role": "कल्याण",
+      "phone": "9819389080",
+      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
+    },
+    {
+      "id": "lsch-25",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "ठाणे",
+      "phone": "9324588400",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "lsch-26",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "मुंबई उत्तर",
+      "phone": "9867996252",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "lsch-27",
+      "name": "मंत्री श्री. योगेश कदम",
+      "role": "मुंबई उत्तर",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/12_Shri%20Yogesh%20Kadam%20(MoS).webp"
+    },
+    {
+      "id": "lsch-28",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "मुंबई उत्तर पश्चिम",
+      "phone": "9867996252",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "lsch-29",
+      "name": "मंत्री श्री. योगेश कदम",
+      "role": "मुंबई उत्तर पश्चिम",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/12_Shri%20Yogesh%20Kadam%20(MoS).webp"
+    },
+    {
+      "id": "lsch-30",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "मुंबई उत्तर पूर्व",
+      "phone": "9867999999",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "lsch-31",
+      "name": "आ. श्री. निलेश राणे",
+      "role": "मुंबई उत्तर पूर्व",
+      "photo": "/leaders/Mla%20Photos/21_Shri%20Nilesh%20Rane.webp"
+    },
+    {
+      "id": "lsch-32",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "मुंबई उत्तर मध्य",
+      "phone": "9324726710",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "lsch-33",
+      "name": "मा. खा. श्री. राहुल शेवाळे",
+      "role": "मुंबई उत्तर मध्य",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/10_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%81%E0%A4%B2%20%E0%A4%B6%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%B3%E0%A5%87.webp"
+    },
+    {
+      "id": "lsch-34",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "मुंबई दक्षिण मध्य",
+      "phone": "9324726710",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "lsch-35",
+      "name": "मा. खा. श्री. राहुल शेवाळे",
+      "role": "मुंबई दक्षिण मध्य",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/10_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%81%E0%A4%B2%20%E0%A4%B6%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%B3%E0%A5%87.webp"
+    },
+    {
+      "id": "lsch-36",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "मुंबई दक्षिण",
+      "phone": "9867999999",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
+      "id": "lsch-37",
+      "name": "आ. श्री. निलेश राणे",
+      "role": "मुंबई दक्षिण",
+      "photo": "/leaders/Mla%20Photos/21_Shri%20Nilesh%20Rane.webp"
+    },
+    {
+      "id": "lsch-38",
+      "name": "श्री. अनिल नवघरे",
+      "role": "रायगड",
+      "phone": "7775809568"
+    },
+    {
+      "id": "lsch-39",
+      "name": "मंत्री श्री. उदय सामंत",
+      "role": "मावळ",
+      "phone": "9860390909",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp"
+    },
+    {
+      "id": "lsch-40",
+      "name": "मंत्री श्री. उदय सामंत",
+      "role": "पुणे",
+      "phone": "9860390909",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp"
+    },
+    {
+      "id": "lsch-41",
+      "name": "श्री. किरण लांडे",
+      "role": "बारामती",
+      "phone": "9930513335"
+    },
+    {
+      "id": "lsch-42",
+      "name": "आ. श्री. शरद सोनवणे",
+      "role": "शिरूर",
+      "phone": "9867404567"
+    },
+    {
+      "id": "lsch-43",
+      "name": "श्री. राम रेपाळे",
+      "role": "अहिल्यानगर",
+      "phone": "9987373333"
+    },
+    {
+      "id": "lsch-44",
+      "name": "खा. डॉ. ज्योती वाघमारे",
+      "role": "शिर्डी",
+      "phone": "9850001807"
+    },
+    {
+      "id": "lsch-45",
+      "name": "श्री. मनोज शिंदे",
+      "role": "बीड",
+      "phone": "9869204080"
+    },
+    {
+      "id": "lsch-46",
+      "name": "मा. खा. श्री. उन्मेष पाटील",
+      "role": "धाराशिव",
+      "phone": "8600110957"
+    },
+    {
+      "id": "lsch-47",
+      "name": "आ. श्री. मंगेश कुडाळकर",
+      "role": "लातूर",
+      "phone": "9322278925",
+      "photo": "/leaders/Mla%20Photos/06_Shri%20Mangesh%20Kudalkar.webp"
+    },
+    {
+      "id": "lsch-48",
+      "name": "खा. श्री. धैर्यशील माने",
+      "role": "सोलापूर",
+      "phone": "9588667712"
+    },
+    {
+      "id": "lsch-49",
+      "name": "श्री. चंद्रहार पाटील",
+      "role": "माढा",
+      "phone": "9822555365"
+    },
+    {
+      "id": "lsch-50",
+      "name": "श्री. योगेश जानकर",
+      "role": "सांगली",
+      "phone": "9773284474"
+    },
+    {
+      "id": "lsch-51",
+      "name": "श्री. शरद कणसे",
+      "role": "सातारा",
+      "phone": "9892983203"
+    },
+    {
+      "id": "lsch-52",
+      "name": "श्री. राजेश मोरे, नगरसेवक",
+      "role": "रत्नागिरी - सिंधुदुर्ग",
+      "phone": "9867788165",
+      "photo": "/leaders/Mla%20Photos/13_Shri%20Rajesh%20More.webp"
+    },
+    {
+      "id": "lsch-53",
+      "name": "श्री. बाळा चिंदरकर",
+      "role": "रत्नागिरी - सिंधुदुर्ग",
+      "phone": "9819881392"
+    },
+    {
+      "id": "lsch-54",
+      "name": "मंत्री श्री. उदय सामंत",
+      "role": "कोल्हापूर",
+      "phone": "9860390909",
+      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp"
+    },
+    {
+      "id": "lsch-55",
+      "name": "आ. श्री. सुहास बाबर",
+      "role": "हातकणंगले",
+      "phone": "9923064999",
+      "photo": "/leaders/Mla%20Photos/29_Shri%20Suhas%20Anil%20Babar.webp"
+    }
+  ],
+  "districtHead": [
+    {
+      "id": "districtHead-1",
+      "name": "खा. श्री. नरेश म्हस्के",
+      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
+    },
+    {
+      "id": "districtHead-2",
+      "name": "श्री. देवानंद थळे"
+    },
+    {
+      "id": "districtHead-3",
+      "name": "श्री. मारुती धिंडे"
+    },
+    {
+      "id": "districtHead-4",
+      "name": "श्री. राजू यशवंत भोईर"
+    },
+    {
+      "id": "districtHead-5",
+      "name": "श्री. गोपाळ रामचंद्र लांडगे"
+    },
+    {
+      "id": "districtHead-6",
+      "name": "श्री. द्वारकानाथ बाबू भोईर"
+    },
+    {
+      "id": "districtHead-7",
+      "name": "श्री. किशोर पाटकर"
+    },
+    {
+      "id": "districtHead-8",
+      "name": "श्री. निलेश तेंडोलकर"
+    },
+    {
+      "id": "districtHead-9",
+      "name": "श्री. वसंत चव्हाण"
+    },
+    {
+      "id": "districtHead-10",
+      "name": "श्री. कुंदन संख्ये"
+    },
+    {
+      "id": "districtHead-11",
+      "name": "श्री. संतोष भोईर"
+    },
+    {
+      "id": "districtHead-12",
+      "name": "श्री. राजा जगन्नाथ केणी"
+    },
+    {
+      "id": "districtHead-13",
+      "name": "श्री. प्रमोद घोसाळकर"
+    },
+    {
+      "id": "districtHead-14",
+      "name": "श्री. विनोद सदाशिव साबळे"
+    },
+    {
+      "id": "districtHead-15",
+      "name": "श्री. रामदास वामनराव शेवाळे"
+    },
+    {
+      "id": "districtHead-16",
+      "name": "श्री. शशिकांत चव्हाण"
+    },
+    {
+      "id": "districtHead-17",
+      "name": "श्री. राहुल पंडित"
+    },
+    {
+      "id": "districtHead-18",
+      "name": "श्री. सच्चिदानंद उर्फ संजू जगन्नाथ परब"
+    },
+    {
+      "id": "districtHead-19",
+      "name": "श्री. देवदत्त सामंत"
+    },
+    {
+      "id": "districtHead-20",
+      "name": "आ. श्री. सुहास कांदे",
+      "photo": "/leaders/Mla%20Photos/37_Shri%20Suhas%20(Anna)%20Kande.webp"
+    },
+    {
+      "id": "districtHead-21",
+      "name": "श्री. संजय दुसाने"
+    },
+    {
+      "id": "districtHead-22",
+      "name": "श्री. अनिल ढिकले"
+    },
+    {
+      "id": "districtHead-23",
+      "name": "श्री. भाऊलाल तांबडे"
+    },
+    {
+      "id": "districtHead-24",
+      "name": "श्री. अजय बोरस्ते"
+    },
+    {
+      "id": "districtHead-25",
+      "name": "श्री. अनिल माधवराव शिंदे"
+    },
+    {
+      "id": "districtHead-26",
+      "name": "श्री. बाबू कामलात उर्फ बाबूशेठ टायरवाले"
+    },
+    {
+      "id": "districtHead-27",
+      "name": "श्री. कमलाकर गणपत कोते"
+    },
+    {
+      "id": "districtHead-28",
+      "name": "श्री. नितीनराव औताडे"
+    },
+    {
+      "id": "districtHead-29",
+      "name": "डॉ. तुळशीराम गावित"
+    },
+    {
+      "id": "districtHead-30",
+      "name": "श्री. सतीश दिगंबर महाले"
+    },
+    {
+      "id": "districtHead-31",
+      "name": "श्री. मनोज दादासाहेब मोरे"
+    },
+    {
+      "id": "districtHead-32",
+      "name": "श्री. राम चंद्रकांत रघुवंशी"
+    },
+    {
+      "id": "districtHead-33",
+      "name": "श्री. गणेश रूपसिंग पऱ्हाडकर"
+    },
+    {
+      "id": "districtHead-34",
+      "name": "श्री. रावसाहेब मनोहर गिरीधर पाटील"
+    },
+    {
+      "id": "districtHead-35",
+      "name": "श्री. विष्णू भंगाळे"
+    },
+    {
+      "id": "districtHead-36",
+      "name": "श्री. वासुदेव सुभाष पाटील"
+    },
+    {
+      "id": "districtHead-37",
+      "name": "श्री. समाधान महाजन"
+    },
+    {
+      "id": "districtHead-38",
+      "name": "श्री. देविदास दत्तात्रय दरेकर"
+    },
+    {
+      "id": "districtHead-39",
+      "name": "श्री. रमेश कोंडे"
+    },
+    {
+      "id": "districtHead-40",
+      "name": "श्री. प्रमोद नाना भानगिरे"
+    },
+    {
+      "id": "districtHead-41",
+      "name": "श्री. राजेश शशिकांत खांडभोर"
+    },
+    {
+      "id": "districtHead-42",
+      "name": "श्री. भगवान नारायण पोखरकर"
+    },
+    {
+      "id": "districtHead-43",
+      "name": "श्री. महेश प्रभाकर पासलकर"
+    },
+    {
+      "id": "districtHead-44",
+      "name": "श्री. सुरेंद्र शामसुंदर जेवरे"
+    },
+    {
+      "id": "districtHead-45",
+      "name": "श्री. बाळासाहेब चांदेरे"
+    },
+    {
+      "id": "districtHead-46",
+      "name": "श्री. अतुल रमेश म्हस्के"
+    },
+    {
+      "id": "districtHead-47",
+      "name": "श्री. रणजितसिंह गजानन भोसले"
+    },
+    {
+      "id": "districtHead-48",
+      "name": "श्री. चंद्रकांत बाळासाहेब जाधव"
+    },
+    {
+      "id": "districtHead-49",
+      "name": "श्री. जयवंतराव देवजी शेलार"
+    },
+    {
+      "id": "districtHead-50",
+      "name": "श्री. आनंदराव रामचंद्र पवार"
+    },
+    {
+      "id": "districtHead-51",
+      "name": "श्री. बजरंग पाटील"
+    },
+    {
+      "id": "districtHead-52",
+      "name": "श्री. संजय विभूते"
+    },
+    {
+      "id": "districtHead-53",
+      "name": "श्री. सुजित रामभाऊ चव्हाण"
+    },
+    {
+      "id": "districtHead-54",
+      "name": "श्री. विजय रघुनाथ बलुगडे"
+    },
+    {
+      "id": "districtHead-55",
+      "name": "श्री. रविंद्र माने"
+    },
+    {
+      "id": "districtHead-56",
+      "name": "श्री. चरण हणमंत चवरे"
+    },
+    {
+      "id": "districtHead-57",
+      "name": "श्री. महेश चिवटे"
+    },
+    {
+      "id": "districtHead-58",
+      "name": "श्री. अमर रतिकांत पाटील"
+    },
+    {
+      "id": "districtHead-59",
+      "name": "श्री. अमोल बाळासाहेब शिंदे"
+    },
+    {
+      "id": "districtHead-60",
+      "name": "श्री. लक्ष्मीकांत ठोंगे पाटील"
+    },
+    {
+      "id": "districtHead-61",
+      "name": "श्री. राजेंद्र जंजाळ"
+    },
+    {
+      "id": "districtHead-62",
+      "name": "श्री. बाबासाहेब पा. जगताप"
+    },
+    {
+      "id": "districtHead-63",
+      "name": "श्री. रमेश पवार"
+    },
+    {
+      "id": "districtHead-64",
+      "name": "श्री. राजेंद्र पेलाद राठोड"
+    },
+    {
+      "id": "districtHead-65",
+      "name": "श्री. भाऊसाहेब एकनाथराव घुगे"
+    },
+    {
+      "id": "districtHead-66",
+      "name": "श्री. ए.जे. पाटील बोराडे उर्फ आसाराम बोराडे"
+    },
+    {
+      "id": "districtHead-67",
+      "name": "श्री. स्वप्नील मधुकरराव गलधर"
+    },
+    {
+      "id": "districtHead-68",
+      "name": "श्री. चंद्रकांत निवृत्तीराव नवले"
+    },
+    {
+      "id": "districtHead-69",
+      "name": "श्री. सचिन मुळूक"
+    },
+    {
+      "id": "districtHead-70",
+      "name": "श्री. अनिल जगताप"
+    },
+    {
+      "id": "districtHead-71",
+      "name": "श्री. शिवाजी माने"
+    },
+    {
+      "id": "districtHead-72",
+      "name": "श्री. सचिन दाने"
+    },
+    {
+      "id": "districtHead-73",
+      "name": "श्री. चंद्रकांत टेंगे"
+    },
+    {
+      "id": "districtHead-74",
+      "name": "श्री. दत्तात्रय ज्ञानोबा साळुंखे"
+    },
+    {
+      "id": "districtHead-75",
+      "name": "श्री. अजित बाप्पासाहेब पिंगळे"
+    },
+    {
+      "id": "districtHead-76",
+      "name": "श्री. मोहन शिवयोगी पनुरे"
+    },
+    {
+      "id": "districtHead-77",
+      "name": "श्री. उमेश मुंडे"
+    },
+    {
+      "id": "districtHead-78",
+      "name": "श्री. विनय गिरडे-पाटील"
+    },
+    {
+      "id": "districtHead-79",
+      "name": "श्री. विवेक माधवराव देशमुख"
+    },
+    {
+      "id": "districtHead-80",
+      "name": "श्री. गंगाधर बडुरे"
+    },
+    {
+      "id": "districtHead-81",
+      "name": "श्री. विशाल विजयकुमार कदम"
+    },
+    {
+      "id": "districtHead-82",
+      "name": "श्री. आनंद शेषराव भरोसे"
+    },
+    {
+      "id": "districtHead-83",
+      "name": "श्री. सईद खान शेरगुल खान"
+    },
+    {
+      "id": "districtHead-84",
+      "name": "आ. श्री. संतोष लक्ष्मणराव बांगर"
+    },
+    {
+      "id": "districtHead-85",
+      "name": "श्री. संतोष बद्रे"
+    },
+    {
+      "id": "districtHead-86",
+      "name": "श्री. सुनील डिके"
+    },
+    {
+      "id": "districtHead-87",
+      "name": "श्री. आशिष धमाळे"
+    },
+    {
+      "id": "districtHead-88",
+      "name": "श्री. ठाकूर प्रमोदसिंह गडरेल"
+    },
+    {
+      "id": "districtHead-89",
+      "name": "श्री. अश्विन उद्धवराव नवले"
+    },
+    {
+      "id": "districtHead-90",
+      "name": "श्री. श्रीरंग पिंजरकर"
+    },
+    {
+      "id": "districtHead-91",
+      "name": "श्री. चंद्रशेखर पांडे"
+    },
+    {
+      "id": "districtHead-92",
+      "name": "श्री. नारायणराव गव्हाणकर"
+    },
+    {
+      "id": "districtHead-93",
+      "name": "श्री. विजय ज्ञानबा खानझोडे"
+    },
+    {
+      "id": "districtHead-94",
+      "name": "श्री. महादेव नारायणराव ठाकरे"
+    },
+    {
+      "id": "districtHead-95",
+      "name": "श्री. संतोष शंकर डिवरे"
+    },
+    {
+      "id": "districtHead-96",
+      "name": "श्री. बळीराम बारकुजी मापारी"
+    },
+    {
+      "id": "districtHead-97",
+      "name": "श्री. ओमसिंग किसनसिंग रजपूत"
+    },
+    {
+      "id": "districtHead-98",
+      "name": "श्री. यशवंत पवार"
+    },
+    {
+      "id": "districtHead-99",
+      "name": "श्री. गजानन डोमाळे"
+    },
+    {
+      "id": "districtHead-100",
+      "name": "श्री. राजुदास जाधव"
+    },
+    {
+      "id": "districtHead-101",
+      "name": "श्री. सुरज गोजे"
+    },
+    {
+      "id": "districtHead-102",
+      "name": "श्री. संदीप वसंत ईटकेलवार"
+    },
+    {
+      "id": "districtHead-103",
+      "name": "श्री. विनोद सातंगे"
+    },
+    {
+      "id": "districtHead-104",
+      "name": "प्रशांत शहागडकर"
+    },
+    {
+      "id": "districtHead-105",
+      "name": "श्री. राजेशजी सराफ"
+    },
+    {
+      "id": "districtHead-106",
+      "name": "श्री. नितीन केशव मते"
+    },
+    {
+      "id": "districtHead-107",
+      "name": "श्री. बंडू मेगाजी हजारे"
+    },
+    {
+      "id": "districtHead-108",
+      "name": "श्री. युवराज धानोरकर"
+    },
+    {
+      "id": "districtHead-109",
+      "name": "श्री. राकेश लक्ष्मणराव बेलसारे"
+    },
+    {
+      "id": "districtHead-110",
+      "name": "श्री. संदिप राजीव ठाकूर"
+    },
+    {
+      "id": "districtHead-111",
+      "name": "श्री. अनिल श्रीराम गायधने"
+    },
+    {
+      "id": "districtHead-112",
+      "name": "श्री. पद्माकर बावनकर"
+    },
+    {
+      "id": "districtHead-113",
+      "name": "श्री. रुपेश कुथे"
+    },
+    {
+      "id": "districtHead-114",
+      "name": "श्री. सुरेंद्र पी. नायडू"
+    }
+  ],
   "topLeader": [
     {
       "id": "topLeader-1",
@@ -177,7 +2140,9 @@
     {
       "id": "nationalSpokesperson-1",
       "name": "श्रीम. शायना एनसी",
-      "note": "राष्ट्रीय प्रवक्त्या"
+      "note": "राष्ट्रीय प्रवक्त्या",
+      "role": "राष्ट्रीय प्रवक्त्या",
+      "phone": "9820436706"
     }
   ],
   "spokespersons": [
@@ -186,24 +2151,29 @@
       "name": "श्री. दीपक केसरकर",
       "note": "आमदार",
       "photo": "/leaders/Mla%20Photos/22_Shri%20Deepak%20Kesarkar.webp",
-      "phone": "9422096887"
+      "phone": "9422096887",
+      "role": "आमदार"
     },
     {
       "id": "spokespersons-2",
       "name": "श्री. उदय सामंत",
       "note": "मंत्री",
       "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp",
-      "phone": "9860390909"
+      "phone": "9860390909",
+      "role": "मंत्री"
     },
     {
       "id": "spokespersons-3",
-      "name": "श्री. किरण पावसकर"
+      "name": "श्री. किरण पावसकर",
+      "phone": "9821082800"
     },
     {
       "id": "spokespersons-4",
       "name": "श्री. नरेश म्हस्के",
       "note": "खासदार",
-      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
+      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp",
+      "phone": "9930998007",
+      "role": "खासदार"
     },
     {
       "id": "spokespersons-5",
@@ -212,73 +2182,92 @@
     },
     {
       "id": "spokespersons-6",
-      "name": "श्री. राहुल लोंढे"
+      "name": "श्री. राहुल लोंढे",
+      "phone": "9833314001"
     },
     {
       "id": "spokespersons-7",
-      "name": "श्री. संजीव बबनराव भोर"
+      "name": "श्री. संजीव बबनराव भोर",
+      "phone": "8182837979"
     },
     {
       "id": "spokespersons-8",
       "name": "श्री. विजय शिवतारे",
       "note": "आमदार",
       "photo": "/leaders/Mla%20Photos/23_Shri%20Vijay%20Shivtare.webp",
-      "phone": "9820081817"
+      "phone": "9820081817",
+      "role": "आमदार"
     },
     {
       "id": "spokespersons-9",
       "name": "श्री. गुलाबचंद दुबे",
-      "note": "हिंदी प्रवक्ते"
+      "note": "हिंदी प्रवक्ते",
+      "phone": "9869058002",
+      "role": "हिंदी प्रवक्ते"
     },
     {
       "id": "spokespersons-10",
-      "name": "श्री. केदार शिवकुमार काळे"
+      "name": "श्री. केदार शिवकुमार काळे",
+      "phone": "9890623946"
     },
     {
       "id": "spokespersons-11",
       "name": "श्री. संजय शिरसाट",
       "note": "मंत्री",
       "photo": "/leaders/Mla%20Photos/50_Shri%20%20Sanjay%20Shirsat%20(Minister).webp",
-      "phone": "9422203930"
+      "phone": "9422203930",
+      "role": "मंत्री"
     },
     {
       "id": "spokespersons-12",
-      "name": "डॉ. ज्योती नागनाथ वाघमारे"
+      "name": "डॉ. ज्योती नागनाथ वाघमारे",
+      "phone": "9850001807"
     },
     {
       "id": "spokespersons-13",
       "name": "सौ. मनिषा कायंदे",
-      "note": "वि.स.स."
+      "note": "वि.स.स.",
+      "phone": "9820236304",
+      "role": "वि.स.स."
     },
     {
       "id": "spokespersons-14",
-      "name": "श्री. अरुण सावंत"
+      "name": "श्री. अरुण सावंत",
+      "phone": "9869044446"
     },
     {
       "id": "spokespersons-15",
       "name": "श्रीम. सुशीबेन शहा",
-      "note": "हिंदी / इंग्रजी"
+      "note": "हिंदी / इंग्रजी",
+      "phone": "9821228125",
+      "role": "हिंदी/इंग्रजी प्रवक्ते"
     },
     {
       "id": "spokespersons-16",
       "name": "श्री. सुशील व्यास",
-      "note": "हिंदी / इंग्रजी"
+      "note": "हिंदी / इंग्रजी",
+      "phone": "9320707999",
+      "role": "हिंदी/इंग्रजी प्रवक्ते"
     },
     {
       "id": "spokespersons-17",
-      "name": "श्री. किरण सोनावणे"
+      "name": "श्री. किरण सोनावणे",
+      "phone": "9922666607"
     },
     {
       "id": "spokespersons-18",
-      "name": "श्री. राजीव साबळे"
+      "name": "श्री. राजीव साबळे",
+      "phone": "9323323323"
     },
     {
       "id": "spokespersons-19",
-      "name": "डॉ. राजु वाघमारे"
+      "name": "डॉ. राजु वाघमारे",
+      "phone": "9920252363"
     },
     {
       "id": "spokespersons-20",
-      "name": "श्री. शिरीष दत्तात्रय शिवदे"
+      "name": "श्री. शिरीष दत्तात्रय शिवदे",
+      "phone": "9067778822"
     },
     {
       "id": "spokespersons-21",
@@ -287,11 +2276,13 @@
     },
     {
       "id": "spokespersons-22",
-      "name": "श्री. अक्षयमहाराज भोसले"
+      "name": "श्री. अक्षयमहाराज भोसले",
+      "phone": "8451822772"
     },
     {
       "id": "spokespersons-23",
-      "name": "श्री. प्रकाश महाजन"
+      "name": "श्री. प्रकाश महाजन",
+      "phone": "9422201871"
     },
     {
       "id": "spokespersons-24",

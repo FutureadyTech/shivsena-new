@@ -223,9 +223,10 @@
 }
 
 .dir-cat__head {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;   /* centre every category title */
   gap: 16px;
   margin-bottom: 18px;
 }
@@ -258,43 +259,14 @@
   letter-spacing: 0.02em;
 }
 
+/* Arrows float to the right edge so the title stays centred. */
 .dir-cat__controls {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-flex;
   gap: 8px;
-}
-
-/* ── Centred header variant (Top Leader) — title framed by the saffron
-   line + ✦ ornament above and below, matching the brand divider. ── */
-.dir-cat__head--centered {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  text-align: center;
-}
-
-.dir-cat__ornament {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  width: 100%;
-  max-width: 360px;
-  color: #fa6919;
-}
-.dir-cat__ornament-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to var(--dir-orn-dir, right),
-    transparent, rgba(250, 105, 25, 0.65));
-}
-.dir-cat__ornament-line:last-child {
-  --dir-orn-dir: left;
-}
-.dir-cat__ornament-star {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
 }
 
 .dir-cat__arrow {
@@ -400,6 +372,13 @@
 @keyframes dirCardIn {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Real leader photos are transparent cutout PNGs — sit them on a flat
+   neutral grey so the cutout reads consistently. Placeholders keep the
+   dark radial gradient above (their silhouettes are built for a dark BG). */
+.dir-card:not(.dir-card--placeholder) {
+  background: rgb(189, 189, 189);
 }
 
 .dir-card:hover {

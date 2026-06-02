@@ -109,37 +109,12 @@ export default function Hero() {
  </div>
  )}
 
- {/* ─── HERO HEADING (only the quote — no eyebrow, no
-        attribution, no extra text). The veil and decorative
-        ornaments stay because they're visual not textual. */}
+ {/* ─── HERO LOGO — banner content is just the white Shiv Sena
+        logo, centred over the dimmed video. The veil stays so the
+        logo reads clearly against the footage. ─── */}
  <div className="hero-quote__veil" aria-hidden="true" />
- <div className="hero-quote">
- <div className="hero-quote__ornament hero-quote__ornament--top" aria-hidden="true">
- <span className="hero-quote__ornament-line" />
- <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
- <path d="M8 0 L9.4 6.6 L16 8 L9.4 9.4 L8 16 L6.6 9.4 L0 8 L6.6 6.6 Z" />
- </svg>
- <span className="hero-quote__ornament-line" />
- </div>
- <h1 className="hero-quote__line">
- <span className="hero-quote__row hero-quote__row--1">
- <span className="hero-quote__word">मराठा</span>
- <span className="hero-quote__word">तितुका</span>
- <span className="hero-quote__word">मेळवावा,</span>
- </span>
- <span className="hero-quote__row hero-quote__row--2">
- <span className="hero-quote__word">महाराष्ट्र</span>
- <span className="hero-quote__word">धर्म</span>
- <span className="hero-quote__word">वाढवावा</span>
- </span>
- </h1>
- <div className="hero-quote__ornament hero-quote__ornament--bottom" aria-hidden="true">
- <span className="hero-quote__ornament-line" />
- <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor">
- <path d="M8 0 L9.4 6.6 L16 8 L9.4 9.4 L8 16 L6.6 9.4 L0 8 L6.6 6.6 Z" />
- </svg>
- <span className="hero-quote__ornament-line" />
- </div>
+ <div className="hero-logo">
+ <img src="/Logo/white-logo.png" alt="शिवसेना" className="hero-logo__img" />
  </div>
 
  </section>

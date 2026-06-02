@@ -21,7 +21,6 @@ export default function LeaderProfile() {
   if (!data) return <Navigate to="/home" replace />;
 
   const t = useContent(data);
-  const headerRef = useScrollReveal(0.2);
   const bodyRef = useScrollReveal(0.15);
 
   const backLabel = lang === 'mr' ? '← सर्व नेतृत्व पहा' : '← BACK TO LEADERSHIP';
@@ -31,26 +30,15 @@ export default function LeaderProfile() {
  <CursorSparks />
  <SiteHeader />
 
- {/* ─── Banner (matches the design rhythm of About/Declarations banners) ─── */}
+ {/* ─── Banner — image-only (all eyebrow / title / dates artwork is
+     baked into the banner image, same approach as the About page).
+     Driven per-leader by `bannerImage` in leaders.json. ─── */}
  <section className="lp-banner">
- <div
+ <img
+ src={t.bannerImage}
+ alt={t.name}
  className="lp-banner__image"
- style={{ backgroundImage: `url(${t.bannerImage})` }}
- aria-hidden="true"
  />
- <div className="lp-banner__ov-base" />
- <div className="lp-banner__ov-spotlight" />
- <div className="lp-banner__ov-top" />
- <div className="lp-banner__ov-bottom" />
-
- <div className="lp-banner__content">
- <p className="lp-banner__eyebrow">{t.eyebrow}</p>
- <h1 className="lp-banner__title">{t.name}</h1>
- <div className="lp-banner__divider" aria-hidden="true" />
- <p className="lp-banner__role">{t.title}</p>
- {t.role && <p className="lp-banner__sub">{t.role}</p>}
- <p className="lp-banner__dates">{t.dates}</p>
- </div>
  </section>
 
  {/* ─── Bio body float-left portrait, text wraps around ─── */}
@@ -61,7 +49,6 @@ export default function LeaderProfile() {
  <article ref={bodyRef} className="lp-body__article reveal">
  <figure className="lp-body__figure">
  <img src={t.image} alt={t.name} className="lp-body__photo" loading="lazy" />
- <figcaption className="lp-body__caption">{t.name}</figcaption>
  </figure>
 
  {t.paragraphs?.map((p, i) => (

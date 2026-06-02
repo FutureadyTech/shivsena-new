@@ -7,7 +7,7 @@ import mlasByDistrict from '../../../content/mlas-by-district.json';
 import leadersByDistrict from '../../../content/leaders-by-district.json';
 import stateLeaders from '../../../content/state-leaders.json';
 import { DISTRICTS } from '../../../config/districts.js';
-import { memberFor } from '../utils/transliterate.js';
+import { memberFor, translateRole, asciiToDevanagari } from '../utils/transliterate.js';
 import LeaderPopup from '../../Home/sections/LeaderPopup.jsx';
 import './LeadersDirectory.css';
 
@@ -53,14 +53,14 @@ const UNIFIED_CATEGORIES = [
   { key: 'topLeader',                source: 'state'    }, // 1. शिवसेना मुख्य नेते
   { key: 'ministers',                source: 'state'    }, // 2. मंत्री
   { key: 'mp',                       source: 'state'    }, // 3. खासदार
-  { key: 'mla',                      source: 'district' }, // 4. आमदार
-  { key: 'leaders',                  source: 'district' }, // 5. नेते
-  { key: 'deputyLeaders',            source: 'district' }, // 6. उपनेते
+  { key: 'mla',                      source: 'state'    }, // 4. आमदार
+  { key: 'leaders',                  source: 'state'    }, // 5. नेते
+  { key: 'deputyLeaders',            source: 'state'    }, // 6. उपनेते
   { key: 'spokespersons',            source: 'state'    }, // 7. प्रवक्ते (state-level)
-  { key: 'divisionalContactHeads',   source: 'district' }, // 8. विभागीय संपर्क प्रमुख
-  { key: 'divisionalCoContactHeads', source: 'district' }, // 9. विभागीय सह संपर्क प्रमुख
-  { key: 'lokSabhaContactHead',      source: 'district' }, // 10. लोकसभा संपर्क प्रमुख
-  { key: 'districtHead',             source: 'district' }, // 11. जिल्हा प्रमुख
+  { key: 'divisionalContactHeads',   source: 'state'    }, // 8. विभागीय संपर्क प्रमुख
+  { key: 'divisionalCoContactHeads', source: 'state'    }, // 9. विभागीय सह संपर्क प्रमुख
+  { key: 'lokSabhaContactHead',      source: 'state'    }, // 10. लोकसभा संपर्क प्रमुख
+  { key: 'districtHead',             source: 'state'    }, // 11. जिल्हा प्रमुख
   { key: 'womenDistrictHeads',       source: 'district' }, // 12. महिला जिल्हा प्रमुख
 ];
 
@@ -220,7 +220,10 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
 
     const buildGroup = ({ key, source }) => {
       let items = itemsFor(key, source);
-      if (key === 'mla') items = enrichMlas(items);
+      /* Only enrich the district-sourced MLA list from mlas-by-district.
+         The state-sourced आमदार roster already carries its own Marathi
+         names, photos, and social handles, so enriching would clobber them. */
+      if (key === 'mla' && source === 'district') items = enrichMlas(items);
       const isEmpty = items.length === 0;
       return {
         key,
@@ -307,20 +310,6 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
   );
 }
 
-/* Saffron line + ✦ star flourish — same brand ornament as SectionDivider.
-   Used to frame the centred Top Leader header above and below. */
-function CatOrnament() {
-  return (
- <span className="dir-cat__ornament" aria-hidden="true">
- <span className="dir-cat__ornament-line" />
- <svg viewBox="0 0 16 16" className="dir-cat__ornament-star" fill="currentColor">
- <path d="M8 0 L9.4 6.6 L16 8 L9.4 9.4 L8 16 L6.6 9.4 L0 8 L6.6 6.6 Z" />
- </svg>
- <span className="dir-cat__ornament-line" />
- </span>
-  );
-}
-
 /* ── Category carousel horizontal scroll w/ snap + arrow buttons ── */
 function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
   const ref = useScrollReveal(0.12);
@@ -367,13 +356,11 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabe
 
   return (
  <div ref={ref} className={`dir-cat reveal${catKey ? ` dir-cat--${catKey}` : ''}`}>
- <div className={`dir-cat__head${isTopLeader ? ' dir-cat__head--centered' : ''}`}>
- {isTopLeader && <CatOrnament />}
+ <div className="dir-cat__head">
  <h3 className="dir-cat__label">
  {label}
  {!isEmpty && !isTopLeader && <span className="dir-cat__count">{realCount}</span>}
  </h3>
- {isTopLeader && <CatOrnament />}
  {showArrows && (
  <div className="dir-cat__controls">
  <button
@@ -411,6 +398,7 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabe
  key={m.id || i}
  member={m}
  index={i}
+ catKey={catKey}
  viewMoreLabel={viewMoreLabel}
  lang={lang}
  onSelect={onSelect}
@@ -428,11 +416,27 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabe
  itself isn't clickable so social / phone links keep their own behaviour.
  Placeholder members reuse the same layout but skip the socials /
  view-more action so the card reads as "to be announced". ── */
-function MemberCard({ member, index, viewMoreLabel, lang, onSelect }) {
+function MemberCard({ member, index, catKey, viewMoreLabel, lang, onSelect }) {
   const photo = photoFor(member);
   const { name, role } = memberFor(member, lang);
   const socials = member.social || {};
   const isPlaceholder = !!member.isPlaceholder;
+
+  /* खासदार cards show the लोकसभा क्षेत्र (constituency) below the name.
+     Falls back to the `note` (e.g. राज्यसभा) when there's no constituency. */
+  let constituency = '';
+  if (catKey === 'mp' && !isPlaceholder) {
+ if (member.constituency) {
+ const place = lang === 'mr' ? member.constituency : translateRole(member.constituency);
+ const num = member.constituencyNo != null
+ ? (lang === 'mr' ? asciiToDevanagari(String(member.constituencyNo)) : String(member.constituencyNo))
+ : '';
+ constituency = num ? `${num} - ${place}` : place;
+ } else if (member.note) {
+ constituency = lang === 'mr' ? member.note : translateRole(member.note);
+ }
+  }
+
   return (
  <article
  className={`dir-card${isPlaceholder ? ' dir-card--placeholder' : ''}`}
@@ -444,6 +448,7 @@ function MemberCard({ member, index, viewMoreLabel, lang, onSelect }) {
  <div className="dir-card__content">
  <h4 className="dir-card__name">{name}</h4>
  {role && <p className="dir-card__role">{role}</p>}
+ {constituency && <p className="dir-card__role dir-card__constituency">{constituency}</p>}
 
  {!isPlaceholder && (
  <div className="dir-card__reveal">

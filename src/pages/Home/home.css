@@ -762,6 +762,25 @@ html[lang="en"] .hero-main-title {
   animation: heroQuoteIn 1.2s cubic-bezier(0.2, 0.85, 0.3, 1) 0.35s both;
 }
 
+/* ── Hero logo (replaces the quote — banner is logo-only) ── */
+.hero-logo {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+  animation: heroQuoteIn 1.2s cubic-bezier(0.2, 0.85, 0.3, 1) 0.35s both;
+}
+.hero-logo__img {
+  width: clamp(220px, 32vw, 460px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 36px rgba(0, 0, 0, 0.45));
+}
+
 /* ─── Star ornaments (line · ✦ · line) — brand saffron ─── */
 .hero-quote__ornament {
   display: inline-flex;
