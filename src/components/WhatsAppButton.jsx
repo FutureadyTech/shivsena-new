@@ -1,9 +1,8 @@
 import './WhatsAppButton.css';
 
 /* Floating sticky WhatsApp button — fixed to the bottom-right on every
-   page. The link is a placeholder for now; swap WHATSAPP_LINK for the
-   real wa.me / chat URL when it's available. */
-const WHATSAPP_LINK = 'https://wa.me/910000000000'; // TODO: replace with real number/link
+   page. Opens the official Shiv Sena WhatsApp channel. */
+const WHATSAPP_LINK = 'https://www.whatsapp.com/channel/0029Va9nyyVDDmFQ61SOyT1A';
 
 export default function WhatsAppButton() {
   return (

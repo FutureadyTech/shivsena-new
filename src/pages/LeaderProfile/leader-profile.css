@@ -36,7 +36,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 60px; /* clear the fixed site header */
+  margin-top: var(--header-h); /* clear the fixed site header */
 }
 
 /* ═══════════════════════════════════════════════════════════════

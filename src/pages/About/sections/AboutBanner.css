@@ -14,7 +14,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: var(--header-h);
 }
 
 /* ── OVERLAY STACK mirrored from Hero, scoped ── */

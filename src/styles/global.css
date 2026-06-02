@@ -2,6 +2,9 @@
  DESIGN TOKENS site-wide. Used by every page.
 ═══════════════════════════════════════════════════════════════ */
 :root {
+  /* Height of the fixed SiteHeader — banners offset by this so their
+     full image is visible below the header (logo 70px + 18px×2 padding). */
+  --header-h: 106px;
   --saffron: #FF6B1A;
   --saffron-deep: #B8420A;
   --saffron-glow: #FFB26B;
