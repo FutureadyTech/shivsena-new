@@ -106,6 +106,8 @@ export default function WelcomeBanner() {
  disabled={isExiting}
  aria-label="मराठी"
  >
+ <span className="welcome-banner__cta-border" aria-hidden="true" />
+ <span className="welcome-banner__cta-inner">
  <span className="welcome-banner__cta-label">मराठी</span>
  <svg
  className="welcome-banner__cta-arrow"
@@ -121,6 +123,7 @@ export default function WelcomeBanner() {
  <line x1="5" y1="12" x2="19" y2="12" />
  <polyline points="12 5 19 12 12 19" />
  </svg>
+ </span>
  </button>
 
  <button
@@ -130,6 +133,8 @@ export default function WelcomeBanner() {
  disabled={isExiting}
  aria-label="English"
  >
+ <span className="welcome-banner__cta-border" aria-hidden="true" />
+ <span className="welcome-banner__cta-inner">
  <span className="welcome-banner__cta-label">English</span>
  <svg
  className="welcome-banner__cta-arrow"
@@ -145,6 +150,7 @@ export default function WelcomeBanner() {
  <line x1="5" y1="12" x2="19" y2="12" />
  <polyline points="12 5 19 12 12 19" />
  </svg>
+ </span>
  </button>
  </div>
  </div>

@@ -32,7 +32,7 @@ if (typeof window !== 'undefined' && typeof window.__audioMuted === 'undefined')
   window.__audioMuted = readMuted();
 }
 
-export default function AudioMuteToggle() {
+export default function AudioMuteToggle({ className = '' }) {
   const { lang } = useLanguage();
   const [muted, setMuted] = useState(() => readMuted());
 
@@ -66,7 +66,7 @@ export default function AudioMuteToggle() {
   return (
     <button
       type="button"
-      className={`audio-mute ${muted ? 'is-muted' : ''}`}
+      className={`audio-mute ${muted ? 'is-muted' : ''} ${className}`.trim()}
       aria-label={label}
       aria-pressed={muted}
       title={label}

@@ -40,3 +40,45 @@ body.has-dark-hero-visible .audio-mute.is-muted {
 body.has-dark-hero-visible .audio-mute:hover {
   background: rgba(255, 107, 26, 0.15);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO VARIANT — sits inside the home video banner (bottom-left).
+   Glassy dark circle with a white icon so it stays visible over the
+   footage; turns saffron on hover / when muted.
+═══════════════════════════════════════════════════════════════ */
+.audio-mute--hero {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  z-index: 6;
+  width: 52px;
+  height: 52px;
+  color: #fff;
+  background: rgba(10, 8, 6, 0.42);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.55);
+}
+.audio-mute--hero:hover {
+  color: #fff;
+  background: var(--saffron, #FF6B1A);
+  border-color: var(--saffron, #FF6B1A);
+  transform: translateY(-2px);
+}
+/* Keep it white-on-glass even when the dark-hero body class is active
+   (override the generic dark-hero rules above). */
+body.has-dark-hero-visible .audio-mute--hero,
+body.has-dark-hero-visible .audio-mute--hero:hover {
+  color: #fff;
+}
+.audio-mute--hero.is-muted {
+  color: var(--saffron-glow, #FFB26B);
+  border-color: rgba(255, 178, 107, 0.7);
+}
+.audio-mute--hero svg { width: 24px; height: 24px; }
+
+@media (max-width: 768px) {
+  .audio-mute--hero { left: 16px; bottom: 16px; width: 46px; height: 46px; }
+  .audio-mute--hero svg { width: 21px; height: 21px; }
+}

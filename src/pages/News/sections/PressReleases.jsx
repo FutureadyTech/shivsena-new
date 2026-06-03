@@ -34,7 +34,7 @@ export default function PressReleases() {
  <h2 className="news__title">{t.title}</h2>
  </div>
 
- <a href="#" className="news__archive-link" data-cursor="link">
+ <a href="#" className="news__archive-link btn" data-cursor="link">
  <span>{t.viewAllLabel}</span>
  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
  <line x1="5" y1="12" x2="19" y2="12" />
@@ -62,7 +62,7 @@ export default function PressReleases() {
  </div>
  <h3 className="news-feature__title">{featured.title}</h3>
  <p className="news-feature__excerpt">{featured.excerpt}</p>
- <a href="#" className="news-feature__cta" data-cursor="link">
+ <a href="#" className="news-feature__cta btn--ghost" data-cursor="link">
  <span>{readArticleLabel}</span>
  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
  <line x1="5" y1="12" x2="19" y2="12" />

@@ -296,7 +296,7 @@ export default function ContactForm() {
 
  <button
  type="submit"
- className="cf-submit"
+ className="cf-submit btn"
  disabled={status === 'submitting'}
  data-cursor="link"
  >

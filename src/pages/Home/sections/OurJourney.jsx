@@ -45,15 +45,13 @@ export default function OurJourney() {
   const [activeIdx, setActiveIdx] = useState(0);
   const yearsRowRef = useRef(null);
 
-  /* Build the unique-year list for the bottom strip. Each year jumps to
- the FIRST event in that year. */
-  const yearStrip = useMemo(() => {
- const seen = new Map();
- events.forEach((ev, idx) => {
- if (!seen.has(ev.year)) seen.set(ev.year, idx);
- });
- return Array.from(seen.entries()).map(([year, idx]) => ({ year, idx }));
-  }, [events]);
+  /* One tick per event so years with multiple entries (e.g. 1972, 1995,
+ and the three 2024 milestones) each get their own dot, instead of
+ collapsing into a single tick per year. */
+  const yearStrip = useMemo(
+ () => events.map((ev, idx) => ({ year: ev.year, idx })),
+ [events]
+  );
 
   const goTo = useCallback((i) => {
  if (events.length === 0) return;
@@ -91,7 +89,6 @@ export default function OurJourney() {
 
   const activeEvent = events[activeIdx];
   const activeImage = EVENT_IMAGES[activeEvent.id] || '/img-1.webp';
-  const activeYearIdx = yearStrip.findIndex((y) => y.year === activeEvent.year);
 
   /* Heading sourced from the About-Us timeline content (single source
  of truth) falls back to a sensible default if it ever goes missing. */
@@ -131,11 +128,11 @@ export default function OurJourney() {
  <div className="journey__years" ref={yearsRowRef}>
  {/* horizontal hairline that connects every dot */}
  <span className="journey__years-line" aria-hidden="true" />
- {yearStrip.map(({ year, idx }, i) => (
+ {yearStrip.map(({ year, idx }) => (
  <button
- key={year}
+ key={idx}
  type="button"
- className={`journey__year-tick ${i === activeYearIdx ? 'is-active' : ''}`}
+ className={`journey__year-tick ${idx === activeIdx ? 'is-active' : ''}`}
  onClick={() => goTo(idx)}
  aria-label={`Go to ${year}`}
  >

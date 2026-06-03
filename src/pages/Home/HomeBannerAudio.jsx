@@ -86,24 +86,29 @@ if (typeof window !== 'undefined') {
  }
   };
 
-  /* Header un-mute toggle: resume a mute-paused track, or kick off
-     playback from the top if the banner is in view and we never
-     started (e.g. the user un-muted before the song first played). */
+  /* Header un-mute toggle:
+       1. If the track is just paused (muted mid-play) → resume from
+          the same spot.
+       2. Otherwise (it already ended / was retired / never started)
+          → start it again from the top. This is what makes the
+          toggle reliably play the song every time it's un-muted. */
   window.__resumeAmbient = () => {
  if (window.__audioMuted) return; // still muted ignore
- if (pausedByMute && audioEl) {
+
+ /* Case 1 — a live element exists (paused): just resume it. */
+ if (audioEl) {
  pausedByMute = false;
+ state = 'PLAYING';
  const p = audioEl.play();
  if (p && typeof p.catch === 'function') p.catch(() => {});
  return;
  }
- if (state === 'IDLE') {
- const banner = document.getElementById(BANNER_ID);
- if (!banner) return;
- const rect = banner.getBoundingClientRect();
- const inView = rect.top < window.innerHeight && rect.bottom > 0;
- if (inView) startPlay();
- }
+
+ /* Case 2 — no element (ended / retired / never played): rewind the
+    state machine and play a fresh instance from the start. */
+ pausedByMute = false;
+ state = 'IDLE';
+ startPlay();
   };
 }
 

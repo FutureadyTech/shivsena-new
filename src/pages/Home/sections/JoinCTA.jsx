@@ -51,7 +51,7 @@ export default function JoinCTA() {
  required
  aria-label={t.emailPlaceholder}
  />
- <button type="submit" className="join__submit" data-cursor="link">
+ <button type="submit" className="join__submit btn btn--inverse" data-cursor="link">
  {t.submitLabel}
  </button>
  </form>

@@ -84,7 +84,7 @@ function PlatformPlaceholder({ message, ctaHref, ctaLabel }) {
           href={ctaHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="social__placeholder-cta"
+          className="social__placeholder-cta btn"
         >
           {ctaLabel}
         </a>

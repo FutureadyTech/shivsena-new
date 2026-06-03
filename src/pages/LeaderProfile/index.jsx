@@ -60,7 +60,7 @@ export default function LeaderProfile() {
  </article>
 
  <div className="lp-body__back">
- <Link to="/leadership" className="lp-body__back-link" data-cursor="link">
+ <Link to="/leadership" className="lp-body__back-link btn" data-cursor="link">
  <span>{backLabel}</span>
  </Link>
  </div>

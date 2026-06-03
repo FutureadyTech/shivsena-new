@@ -211,3 +211,87 @@ html[lang="hi"] * {
     font-size: clamp(2rem, 8vw, 2.6rem);
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   UNIFIED BUTTON SYSTEM — one look for every CTA across the site.
+     .btn          → primary, solid saffron pill (default everywhere)
+     .btn--inverse → white pill, for use on saffron / dark backgrounds
+     .btn--ghost   → inline text link with an underline-on-hover
+   Section classes that opt in keep only their layout props (position,
+   margins, etc.) and inherit all visuals from here.
+═══════════════════════════════════════════════════════════════ */
+/* Element-qualified (a.btn / button.btn) so these beat the single-class
+   section selectors regardless of stylesheet load order. */
+a.btn, button.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: #fa6919;
+  color: #fff;
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  text-transform: none;
+  border: 1.5px solid #fa6919;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 20px -8px rgba(250, 105, 25, 0.55);
+  transition: background 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+a.btn:hover, button.btn:hover {
+  background: #e25a10;
+  color: #fff;
+  border-color: #e25a10;
+  box-shadow: 0 14px 28px -8px rgba(250, 105, 25, 0.7);
+  transform: translateY(-2px);
+}
+a.btn:active, button.btn:active { transform: translateY(0); }
+button.btn:disabled,
+a.btn.is-disabled, button.btn.is-disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+a.btn svg, button.btn svg { transition: transform 0.25s ease; }
+a.btn:hover svg, button.btn:hover svg { transform: translateX(4px); }
+
+/* Inverse — white pill for saffron / dark backgrounds */
+a.btn--inverse, button.btn--inverse {
+  background: #fff;
+  color: #fa6919;
+  border-color: #fff;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.35);
+}
+a.btn--inverse:hover, button.btn--inverse:hover {
+  background: #fff;
+  color: #e25a10;
+  border-color: #fff;
+  box-shadow: 0 14px 28px -8px rgba(0, 0, 0, 0.45);
+}
+
+/* Ghost — inline text link with arrow, underline grows on hover */
+a.btn--ghost, button.btn--ghost, span.btn--ghost {
+  padding: 4px 0;
+  background: transparent;
+  color: #fa6919;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  letter-spacing: 0.04em;
+}
+a.btn--ghost:hover, button.btn--ghost:hover, span.btn--ghost:hover {
+  background: transparent;
+  color: #e25a10;
+  border-bottom-color: #e25a10;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.btn, button.btn, a.btn svg, button.btn svg { transition: none; }
+  a.btn:hover, button.btn:hover { transform: none; }
+  a.btn:hover svg, button.btn:hover svg { transform: none; }
+}

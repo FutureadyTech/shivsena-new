@@ -91,15 +91,7 @@ function ComingSoon({ title }) {
  }}>
  <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '0.04em' }}>{title}</h1>
  <p style={{ color: '#FFB26B', letterSpacing: '0.3em', fontSize: '0.85rem' }}>COMING SOON</p>
- <Link to="/home" style={{
- marginTop: '12px',
- padding: '12px 28px',
- border: '1.5px solid #FF6B1A',
- borderRadius: '6px',
- color: '#FF6B1A',
- textDecoration: 'none',
- letterSpacing: '0.04em',
- }}>← BACK TO HOME</Link>
+ <Link to="/home" className="btn" style={{ marginTop: '12px' }}>← BACK TO HOME</Link>
  </div>
   );
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import AudioMuteToggle from '../../components/AudioMuteToggle.jsx';
 import './home.css';
 
 /* ─────────────────────────────────────────────────────────────
@@ -116,6 +117,9 @@ export default function Hero() {
  <div className="hero-logo">
  <img src="/Logo/white-logo.png" alt="शिवसेना" className="hero-logo__img" />
  </div>
+
+ {/* Sound toggle for the banner audio — lives on the hero only. */}
+ <AudioMuteToggle className="audio-mute--hero" />
 
  </section>
   );

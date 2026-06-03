@@ -282,6 +282,7 @@
   transition: color 0.35s ease, background 0.35s ease, transform 0.35s ease;
 }
 .lf-feat__cta::before {
+  display: none; /* superseded by the unified .btn solid fill */
   content: '';
   position: absolute;
   inset: 0;

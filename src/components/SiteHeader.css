@@ -19,10 +19,10 @@
 .site-nav__burger {
   display: none;
   position: relative;
-  width: 44px;
-  height: 44px;
-  border: 1.5px solid var(--saffron-on-light);
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
   background: transparent;
   cursor: pointer;
   flex-shrink: 0;
@@ -32,41 +32,46 @@
   gap: 5px;
   padding: 0;
   z-index: 110;
-  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 .site-nav__burger:hover {
   background: rgba(255, 107, 26, 0.08);
 }
 .site-nav__burger-line {
   display: block;
-  width: 20px;
+  width: 19px;
   height: 2px;
   background: var(--saffron-on-light);
   border-radius: 2px;
-  transition:
-    transform 0.5s cubic-bezier(0.5, 0.2, 0.3, 1),
-    opacity 0.3s ease,
-    width 0.4s ease;
   transform-origin: center;
+  transition:
+    transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    opacity 0.2s ease,
+    width 0.35s ease,
+    background 0.3s ease;
 }
+/* Two-stage morph timing:
+   — OPEN: middle bar fades out first (no delay), THEN the outer bars
+     rotate into the X (delayed).
+   — CLOSE: outer bars un-rotate first, THEN the middle bar fades back
+     in (delay on the middle line below). */
+.site-nav__burger-line:nth-child(2) { transition-delay: 0.18s; }
 
-/* Hamburger → X animation */
-.site-nav__burger.is-open {
-  background: var(--saffron-on-light);
-  border-color: var(--saffron-on-light);
-}
-.site-nav__burger.is-open .site-nav__burger-line { background: #fff; }
+/* Hamburger → X animation. Open state stays a clean transparent button
+   (no saffron box) with a saffron X. */
+.site-nav__burger.is-open .site-nav__burger-line { background: var(--saffron-on-light); }
 .site-nav__burger.is-open .site-nav__burger-line:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
-  width: 22px;
+  transition-delay: 0.18s;
 }
 .site-nav__burger.is-open .site-nav__burger-line:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
+  transition-delay: 0s;
 }
 .site-nav__burger.is-open .site-nav__burger-line:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
-  width: 22px;
+  transition-delay: 0.18s;
 }
 
 /* Burger over dark hero — invert the colors */
@@ -76,6 +81,17 @@ body.has-dark-hero-visible .site-nav__burger {
 body.has-dark-hero-visible .site-nav__burger-line { background: var(--gold-bright); }
 body.has-dark-hero-visible .site-nav__burger:hover {
   background: rgba(255, 178, 107, 0.12);
+}
+
+/* When the mobile menu is open, drop the header's solid background so the
+   full-screen menu reads as ONE continuous overlay (the menu comes up over
+   the logo strip). Logo / bell / close-X stay on top and clickable.
+   !important so it also wins over the dark-hero header treatment. */
+.site-nav.site-nav--mobile-open {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom-color: transparent !important;
 }
 
 /* ── Backdrop (dimmer behind the panel) ── */
@@ -101,7 +117,7 @@ body.has-dark-hero-visible .site-nav__burger:hover {
   top: 0;
   right: 0;
   bottom: 0;
-  width: min(420px, 92vw);
+  width: 100vw;
   z-index: 99;
   overflow: hidden;
   background:
@@ -409,12 +425,18 @@ body.has-dark-hero-visible .site-nav__burger:hover {
 
 /* ── Show / hide based on viewport ── */
 @media (max-width: 1023px) {
-  .site-nav__menu,
-  .site-nav__live,
+  /* `.site-nav` prefix raises specificity so these beat both the global
+     .site-nav__menu rule in home.css AND the .btn display on the Live
+     button — otherwise the desktop menu wouldn't collapse on mobile. */
+  .site-nav .site-nav__menu,
+  .site-nav .site-nav__live,
   .site-nav .lang-toggle {
     display: none;
   }
-  .site-nav__burger { display: inline-flex; }
+  .site-nav .site-nav__burger { display: inline-flex; }
+  /* Tighten the right-side icon cluster (bell + hamburger) so they read
+     as an aligned pair. header.site-nav beats the global gap in home.css. */
+  header.site-nav { gap: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

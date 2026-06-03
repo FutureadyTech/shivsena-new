@@ -3,7 +3,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useT } from '../i18n/LanguageContext.jsx';
 import LanguageToggle from './LanguageToggle.jsx';
 import NotificationsBell from './NotificationsBell.jsx';
-import AudioMuteToggle from './AudioMuteToggle.jsx';
 import './SiteHeader.css';
 
 /* ─── Nav structure ─────────────────────────────────────────────
@@ -107,13 +106,12 @@ export default function SiteHeader() {
           )}
         </nav>
 
-        <NavLink to="/shivsena-live" className="site-nav__live">
+        <NavLink to="/shivsena-live" className="site-nav__live btn">
           <span className="site-nav__live-dot" aria-hidden="true" />
           <span>{t('nav-live')}</span>
         </NavLink>
 
         <div className="site-nav__utils">
-          <AudioMuteToggle />
           <NotificationsBell />
         </div>
         <LanguageToggle />
@@ -187,11 +185,6 @@ function MobileMenu({ open, onClose, t }) {
         <span className="site-mobile__watermark" aria-hidden="true">॥</span>
 
         <div className="site-mobile__inner">
-          <header className="site-mobile__head">
-            <span className="site-mobile__ornament" aria-hidden="true">॥</span>
-            <span className="site-mobile__eyebrow">{t('brand') || 'शिवसेना'}</span>
-            <span className="site-mobile__ornament" aria-hidden="true">॥</span>
-          </header>
 
           <nav className="site-mobile__nav">
             <ol className="site-mobile__list">
@@ -209,9 +202,6 @@ function MobileMenu({ open, onClose, t }) {
                     style={{ '--item-delay': `${0.18 + i * 0.05}s` }}
                   >
                     <div className="site-mobile__row">
-                      <span className="site-mobile__num" aria-hidden="true">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
                       <NavLink
                         to={item.to}
                         className={({ isActive }) =>
@@ -231,26 +221,6 @@ function MobileMenu({ open, onClose, t }) {
                         }}
                       >
                         <span>{t(item.key)}</span>
-                        {hasChildren ? (
-                          <svg
-                            className="site-mobile__caret"
-                            viewBox="0 0 12 12" width="14" height="14"
-                            fill="none" stroke="currentColor"
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                          >
-                            <polyline points="3 5 6 8 9 5" />
-                          </svg>
-                        ) : (
-                          <svg
-                            className="site-mobile__arrow"
-                            viewBox="0 0 24 24" width="16" height="16"
-                            fill="none" stroke="currentColor"
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                          >
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                          </svg>
-                        )}
                       </NavLink>
                     </div>
 
@@ -285,14 +255,13 @@ function MobileMenu({ open, onClose, t }) {
           <footer className="site-mobile__foot">
             <NavLink
               to="/shivsena-live"
-              className="site-mobile__live"
+              className="site-mobile__live btn"
               onClick={onClose}
             >
               <span className="site-mobile__live-dot" aria-hidden="true" />
               <span>{t('nav-live')}</span>
             </NavLink>
             <div className="site-mobile__lang">
-              <AudioMuteToggle />
               <NotificationsBell />
               <LanguageToggle />
             </div>

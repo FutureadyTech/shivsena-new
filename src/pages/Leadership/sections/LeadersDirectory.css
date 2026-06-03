@@ -318,6 +318,52 @@
 .dir-cat__track::-webkit-scrollbar-thumb { background: rgba(196, 77, 14, 0.25); border-radius: 4px; }
 .dir-cat__track::-webkit-scrollbar-thumb:hover { background: rgba(196, 77, 14, 0.5); }
 
+/* ── Grid layout (4 per row) + See-more toggle ── */
+.dir-cat__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding: 6px 0 4px;
+}
+/* In the grid each card fills its column (flex-basis from the old
+   carousel no longer applies). */
+.dir-cat__grid .dir-card {
+  flex: initial;
+  min-width: 0;
+  width: 100%;
+}
+
+/* See-more / See-less button row */
+.dir-cat__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+.dir-cat__more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 26px;
+  border: 1.5px solid rgba(196, 77, 14, 0.5);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--saffron-on-light, #C44D0E);
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.dir-cat__more-btn:hover {
+  background: var(--saffron, #FF6B1A);
+  border-color: var(--saffron, #FF6B1A);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.dir-cat__more-btn svg { transition: transform 0.25s ease; }
+.dir-cat__more-btn svg.is-up { transform: rotate(180deg); }
+
 .dir-cat__empty {
   font-family: 'Noto Sans Devanagari', sans-serif;
   font-size: 0.95rem;
@@ -619,6 +665,7 @@
   .dir-section { padding: 80px 0 110px; }
   .dir-section__inner { padding: 0 32px; }
   .dir-card { flex-basis: 260px; }
+  .dir-cat__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
   .dir-section__inner { padding: 0 20px; }
@@ -628,6 +675,7 @@
   .dir-card { flex-basis: 240px; padding: 20px 18px; }
   .dir-card__avatar { width: 72px; height: 72px; }
   .dir-card__initials { font-size: 1.4rem; }
+  .dir-cat__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

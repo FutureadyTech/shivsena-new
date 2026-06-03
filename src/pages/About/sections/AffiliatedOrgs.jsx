@@ -264,7 +264,7 @@ function OrgCard({ org, index, ctaLabel }) {
  <div className="org-card__footer">
  <Link
  to={`/affiliated/${org.id}`}
- className="org-card__cta"
+ className="org-card__cta btn--ghost"
  data-cursor="link"
  >
  <span>{ctaLabel}</span>

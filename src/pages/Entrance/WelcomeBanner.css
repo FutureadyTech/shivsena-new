@@ -89,45 +89,66 @@
   font-weight: 600;
 }
 
-/* ─── Outlined CTA Button ─── */
+/* ─── CTA Button (uiverse "selfish-dolphin-96" — gray base + gradient
+   hover border, scale + label/arrow slide). Original colors kept. ─── */
 .welcome-banner__cta {
   pointer-events: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 32px;
-  background: #ffffff;
-  color: #C44D0E;
+  position: relative;
+  display: inline-block;
+  padding: 1px;                 /* p-px → thin frame */
+  border: none;
+  background: #1f2937;          /* bg-gray-800 (default frame) */
+  color: #ffffff;
   font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
-  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
   font-weight: 600;
-  letter-spacing: 0.04em;
-  border: 1.5px solid #ffffff;
-  border-radius: 2px;
+  line-height: 1.5;
+  border-radius: 12px;          /* rounded-xl */
   cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 25px 50px -12px rgba(24, 24, 27, 0.7); /* shadow-2xl shadow-zinc-900 */
+  transition: transform 0.3s ease-in-out;
+}
+.welcome-banner__cta:hover { transform: scale(1.05); }
+.welcome-banner__cta:active { transform: scale(0.95); }
+.welcome-banner__cta:disabled { cursor: default; opacity: 0.85; }
+
+/* Gradient ring — hidden until hover */
+.welcome-banner__cta-border {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 12px;
+  background: linear-gradient(to right, #FFB26B, #FF6B1A, #C44D0E); /* brand saffron gradient */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.welcome-banner__cta:hover .welcome-banner__cta-border { opacity: 1; }
+
+/* Inner dark pill */
+.welcome-banner__cta-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;           /* px-6 py-3 */
+  border-radius: 12px;
+  background: #030712;          /* bg-gray-950 */
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  letter-spacing: 0.02em;
 }
 
-.welcome-banner__cta:hover {
-  background: #ffffff;
-  color: #FF6B1A;
-  border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
+.welcome-banner__cta-label {
+  transition: transform 0.5s ease;
 }
-
-.welcome-banner__cta:active {
-  transform: translateY(0);
-}
+.welcome-banner__cta:hover .welcome-banner__cta-label { transform: translateX(4px); }
 
 .welcome-banner__cta-arrow {
   color: inherit;
-  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 0.5s ease;
 }
-
 .welcome-banner__cta:hover .welcome-banner__cta-arrow {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -155,9 +176,9 @@
  line-height: 1.65;
  margin-bottom: 26px;
   }
-  .welcome-banner__cta {
+  .welcome-banner__cta-inner {
  font-size: 0.95rem;
- padding: 12px 26px;
+ padding: 11px 22px;
   }
   .welcome-banner__cta-arrow {
  width: 16px;

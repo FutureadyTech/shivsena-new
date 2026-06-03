@@ -127,7 +127,7 @@ export default function PhotoGallery() {
  href={t.bulkDownloadUrl}
  target="_blank"
  rel="noopener noreferrer"
- className="pg-section__bulk-cta"
+ className="pg-section__bulk-cta btn"
  >
  <span className="pg-section__bulk-cta-icon" aria-hidden="true">
  {DownloadIcon}

@@ -141,7 +141,7 @@ function LeaderFeature({ leader, index, lang }) {
  {profileAvailable && (
  <Link
  to={`/leader/${leader.id}`}
- className="lf-feat__cta"
+ className="lf-feat__cta btn"
  data-cursor="link"
  >
  <span>{CTA_LABEL[lang]}</span>

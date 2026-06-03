@@ -410,6 +410,8 @@
 .org-card:hover .org-card__cta { gap: 12px; }
 .org-card:hover .org-card__cta svg { transform: translateX(4px); }
 .org-card:hover .org-card__cta::after { width: calc(100% - 28px); }
+/* Underline handled by the unified .btn--ghost border-bottom now. */
+.org-card__cta::after { display: none; }
 
 /* ── Social icon cluster (footer, right side) ── */
 .org-card__socials {

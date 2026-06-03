@@ -26,7 +26,7 @@ export default function NewsMedia() {
  <h2 className="news__title">{t.title}</h2>
  </div>
 
- <a href="/news" className="news__archive-link">
+ <a href="/news" className="news__archive-link btn">
  <span>{t.viewAllLabel}</span>
  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
  <line x1="5" y1="12" x2="19" y2="12" />
@@ -64,7 +64,7 @@ export default function NewsMedia() {
  </div>
  <h3 className="news-feature__title">{featured.title}</h3>
  <p className="news-feature__excerpt">{featured.excerpt}</p>
- <span className="news-feature__cta">
+ <span className="news-feature__cta btn--ghost">
  <span>{(t.readMoreLabel || 'READ FULL ARTICLE').toUpperCase()}</span>
  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
  <line x1="5" y1="12" x2="19" y2="12" />
