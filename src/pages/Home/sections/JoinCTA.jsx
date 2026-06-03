@@ -21,7 +21,6 @@ export default function JoinCTA() {
 
   return (
  <section className="join" id="join">
- <div className="join__pattern" aria-hidden="true"></div>
  <div className="join__inner">
 
  <div ref={headerRef} className="join__header reveal">

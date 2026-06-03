@@ -1,9 +1,22 @@
 import { useEffect, useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
+import { useLanguage } from '../../../i18n/LanguageContext.jsx';
 import homeContent from '../../../content/home.json';
 import { SOCIALS } from '../../../config/socials.js';
 import './SocialFeed.css';
+
+/* ─── Feed on/off switch ───────────────────────────────────────
+   Elfsight's free plan counts a "view" every time a widget loads.
+   This toggle lets us keep the feeds OFF by default so we don't burn
+   the monthly view quota; when OFF we render NOTHING from Elfsight
+   (no platform.js, no widget div) so zero views are consumed. The
+   choice is remembered per-browser in localStorage. */
+const FEEDS_KEY = 'SHIVSENA_FEEDS_ON';
+function readFeedsOn() {
+  if (typeof window === 'undefined') return false;
+  try { return window.localStorage.getItem(FEEDS_KEY) === '1'; } catch { return false; }
+}
 
 /* ═══════════════════════════════════════════════════════════════
    SOCIAL FEED  (per-platform native embeds)
@@ -25,16 +38,14 @@ import './SocialFeed.css';
    platform (one filtered to Instagram, one to Facebook, etc.)
    and paste each widget's app-ID below. */
 const ELFSIGHT_IDS = {
-  instagram: '1e6f21d3-9235-403d-af42-05d53f0b4a51',
-  facebook:  '1e6f21d3-9235-403d-af42-05d53f0b4a51',
-  twitter:   '1e6f21d3-9235-403d-af42-05d53f0b4a51',
-  youtube:   '1e6f21d3-9235-403d-af42-05d53f0b4a51',
+  instagram: '4bc21124-90e5-49a7-81c0-a37e15c40786',
+  facebook:  '4bc21124-90e5-49a7-81c0-a37e15c40786',
+  twitter:   '667cbb45-fd67-4956-804f-ca099fde336d',
+  youtube:   '271e47c0-41d6-4b93-b5f5-5aa68491343c',
 };
 const ELFSIGHT_SRC = 'https://elfsightcdn.com/platform.js';
 
-const PLATFORMS = ['instagram', 'facebook', 'twitter', 'youtube'];
-
-/* ─── Platform icon set (used in the top-right tab row) ─── */
+/* ─── Platform icon set (used as the per-column header label) ─── */
 const PlatformIcon = ({ name }) => {
   const ICONS = {
     instagram: (
@@ -114,27 +125,36 @@ function ElfsightEmbed({ appId, fallbackUrl }) {
   );
 }
 
-function InstagramEmbed() {
-  return <ElfsightEmbed appId={ELFSIGHT_IDS.instagram} fallbackUrl={SOCIALS.instagram.url} />;
-}
-function FacebookEmbed() {
-  return <ElfsightEmbed appId={ELFSIGHT_IDS.facebook} fallbackUrl={SOCIALS.facebook.url} />;
-}
-function TwitterEmbed() {
-  return <ElfsightEmbed appId={ELFSIGHT_IDS.twitter} fallbackUrl={SOCIALS.twitter.url} />;
-}
-function YouTubeEmbed() {
-  return <ElfsightEmbed appId={ELFSIGHT_IDS.youtube} fallbackUrl={SOCIALS.youtube.url} />;
-}
+/* Columns shown side-by-side, in display order. */
+const FEEDS = [
+  { key: 'facebook',  label: 'Facebook Feed' },
+  { key: 'instagram', label: 'Instagram Feed' },
+  { key: 'youtube',   label: 'YouTube Feed' },
+  { key: 'twitter',   label: 'Twitter Feed' },
+];
 
 /* ═══════════════════════════════════════════════════════════════ */
 export default function SocialFeed() {
   const t = useContent(homeContent.socialFeed);
+  const { lang } = useLanguage();
   const headerRef = useScrollReveal(0.25);
-  const widgetRef = useScrollReveal(0.15);
+  const gridRef = useScrollReveal(0.15);
 
-  /* Default to Instagram — the most visual feed. */
-  const [activePlatform, setActivePlatform] = useState('instagram');
+  const [feedsOn, setFeedsOn] = useState(() => readFeedsOn());
+  const toggleFeeds = () => setFeedsOn((prev) => {
+    const next = !prev;
+    try { window.localStorage.setItem(FEEDS_KEY, next ? '1' : '0'); } catch { /* ignore */ }
+    return next;
+  });
+
+  const isMr = lang === 'mr';
+  const toggleLabel = feedsOn
+    ? (isMr ? 'लाइव्ह फीड बंद करा' : 'Turn live feeds off')
+    : (isMr ? 'लाइव्ह फीड दाखवा' : 'Show live feeds');
+  const offMsg = isMr
+    ? 'लाइव्ह फीड सध्या बंद आहे. प्रोफाइल पाहण्यासाठी क्लिक करा.'
+    : 'Live feed is off. Click to view the profile.';
+  const ctaLabel = isMr ? 'प्रोफाइल उघडा' : 'Open profile';
 
   return (
     <section className="social">
@@ -144,48 +164,37 @@ export default function SocialFeed() {
             <h2 className="social__title">{t.title}</h2>
           </div>
 
-          {/* Top-right four icons act as tab buttons — clicking
-              swaps the feed body below. Active tab gets saffron. */}
-          <div className="social__handles" role="tablist" aria-label="Social platforms">
-            {PLATFORMS.map((platform) => {
-              const isActive = platform === activePlatform;
-              return (
-                <button
-                  key={platform}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  aria-controls="social-feed-body"
-                  className={`social__handle ${isActive ? 'social__handle--active' : ''}`}
-                  onClick={() => setActivePlatform(platform)}
-                  title={SOCIALS[platform]?.name || platform}
-                >
-                  <PlatformIcon name={platform} />
-                </button>
-              );
-            })}
-          </div>
+          {/* On/off switch — keeps Elfsight view-quota usage at zero
+              while feeds are off (nothing from Elfsight is rendered). */}
+          <button
+            type="button"
+            className={`social__toggle ${feedsOn ? 'is-on' : ''}`}
+            onClick={toggleFeeds}
+            aria-pressed={feedsOn}
+            title={toggleLabel}
+          >
+            <span className="social__toggle-track"><span className="social__toggle-knob" /></span>
+            <span className="social__toggle-text">{toggleLabel}</span>
+          </button>
         </div>
 
-        {/* Active platform's native embed.
-            The outer wrapper has NO `key` — we want it to stay
-            mounted across tab switches so the IntersectionObserver-
-            driven `is-revealed` class doesn't get wiped on every
-            click (that was the "empty area" bug). The INNER embed
-            is keyed by platform instead, so React swaps the
-            iframe correctly when you change tabs. */}
-        <div
-          ref={widgetRef}
-          id="social-feed-body"
-          className="social__feed-body reveal"
-          role="tabpanel"
-        >
-          <div key={activePlatform} className="social__feed-slot">
-            {activePlatform === 'instagram' && <InstagramEmbed />}
-            {activePlatform === 'facebook'  && <FacebookEmbed />}
-            {activePlatform === 'twitter'   && <TwitterEmbed />}
-            {activePlatform === 'youtube'   && <YouTubeEmbed />}
-          </div>
+        {/* All four feeds shown together, one column each. */}
+        <div ref={gridRef} className="social__grid reveal">
+          {FEEDS.map(({ key, label }) => (
+            <div key={key} className={`social__col social__col--${key}`}>
+              <div className="social__col-head">
+                <span className="social__col-icon"><PlatformIcon name={key} /></span>
+                <span className="social__col-label">{label}</span>
+              </div>
+              <div className="social__col-feed">
+                {feedsOn ? (
+                  <ElfsightEmbed appId={ELFSIGHT_IDS[key]} fallbackUrl={SOCIALS[key]?.url} />
+                ) : (
+                  <PlatformPlaceholder message={offMsg} ctaHref={SOCIALS[key]?.url} ctaLabel={ctaLabel} />
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

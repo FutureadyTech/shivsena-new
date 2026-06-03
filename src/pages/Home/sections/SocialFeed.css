@@ -15,11 +15,56 @@
 /* ─── Header ─── */
 .social__header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 24px;
   margin-bottom: 64px;
   flex-wrap: wrap;
+}
+
+/* ─── Feeds on/off toggle ─── */
+.social__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 8px 10px;
+  border: 1.5px solid rgba(26, 20, 16, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink-soft, #2E2820);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.social__toggle:hover { border-color: rgba(196, 77, 14, 0.55); color: var(--saffron-on-light, #C44D0E); }
+.social__toggle-track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(26, 20, 16, 0.22);
+  transition: background 0.25s ease;
+  flex-shrink: 0;
+}
+.social__toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s cubic-bezier(0.2, 0.85, 0.3, 1);
+}
+.social__toggle.is-on .social__toggle-track { background: var(--saffron, #FF6B1A); }
+.social__toggle.is-on .social__toggle-knob { transform: translateX(18px); }
+.social__toggle.is-on { border-color: var(--saffron, #FF6B1A); color: var(--saffron-on-light, #C44D0E); }
+@media (prefers-reduced-motion: reduce) {
+  .social__toggle-knob, .social__toggle-track { transition: none; }
 }
 
 .social__eyebrow {
@@ -49,151 +94,97 @@
   letter-spacing: -0.015em;
 }
 
-/* ─── Platform tab buttons (top-right of the section) ──────
-   <button> elements that switch which feed is shown below.
-   States:
-     - default : neutral outlined chip
-     - hover   : saffron tint, slight lift
-     - active  : saffron filled, white icon, with a glowing
-                 halo ring so the selection is unmistakable
-   The selectors below are scoped tightly to `button.social__handle`
-   so they beat the generic <button> reset. */
-.social__handles {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-button.social__handle {
-  position: relative;
-  width: 46px;
-  height: 46px;
-  padding: 0;
-  border: 1.5px solid rgba(26, 20, 16, 0.14);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--ink-soft, #2E2820);
-  cursor: pointer;
-  font: inherit;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s cubic-bezier(0.2, 0.85, 0.3, 1),
-    box-shadow 0.3s ease;
-}
-
-button.social__handle svg {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.25s ease;
-}
-
-/* Hover: light saffron tint, subtle lift. */
-button.social__handle:hover {
-  background: rgba(255, 107, 26, 0.08);
-  border-color: rgba(196, 77, 14, 0.55);
-  color: var(--saffron-on-light, #C44D0E);
-  transform: translateY(-2px);
-}
-button.social__handle:hover svg {
-  transform: scale(1.06);
-}
-
-/* Keyboard focus — same visual cue as hover plus a focus ring. */
-button.social__handle:focus-visible {
-  outline: none;
-  border-color: var(--saffron, #FF6B1A);
-  box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.22);
-}
-
-/* Active platform: saffron filled, white icon, glow halo
-   that reads as "this tab is selected" even on small screens. */
-button.social__handle.social__handle--active {
-  background: var(--saffron, #FF6B1A);
-  border-color: var(--saffron, #FF6B1A);
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow:
-    0 0 0 4px rgba(255, 107, 26, 0.18),
-    0 10px 22px -8px rgba(255, 107, 26, 0.55);
-}
-button.social__handle.social__handle--active:hover {
-  background: var(--saffron-deep, #C44D0E);
-  border-color: var(--saffron-deep, #C44D0E);
-  color: #FFFFFF;
-}
-button.social__handle.social__handle--active svg {
-  transform: scale(1.05);
-}
-
-/* Decorative pulse ring on the active tab — purely visual, points
-   at the selected platform without competing with the icon. */
-button.social__handle.social__handle--active::before {
-  content: '';
-  position: absolute;
-  inset: -5px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 107, 26, 0.35);
-  pointer-events: none;
-  animation: handlePulse 2.2s ease-in-out infinite;
-}
-@keyframes handlePulse {
-  0%, 100% { transform: scale(1);   opacity: 0.55; }
-  50%      { transform: scale(1.08); opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  button.social__handle.social__handle--active::before { animation: none; }
-  button.social__handle { transition: none; }
-}
-
-/* ─── Grid ─── */
+/* ─── Feed grid (all four platforms side-by-side) ─── */
 .social__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* minmax(0, 1fr) keeps all four tracks equal even when a widget
+     (e.g. the YouTube gallery) has a wide intrinsic min-content size. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
+  align-items: start;
 }
-
-/* ─── Active-platform feed body ─────────────────────────────────
-   The selected tab renders ONE native embed inside this container:
-   Behold for Instagram, Page Plugin iframe for Facebook, Twitter
-   widgets.js timeline for X, YouTube iframe for YouTube. Each embed
-   manages its own internal styling — we just give the container
-   room to breathe + the reveal-on-scroll animation. */
-.social__feed-body {
-  width: 100%;
-  min-height: 480px;
-  display: flex;
-  justify-content: center;
-}
-.social__feed-body.reveal {
+.social__grid.reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.social__feed-body.is-revealed {
+.social__grid.is-revealed {
   opacity: 1;
   transform: translateY(0);
 }
 @media (prefers-reduced-motion: reduce) {
-  .social__feed-body.reveal { opacity: 1; transform: none; transition: none; }
+  .social__grid.reveal { opacity: 1; transform: none; transition: none; }
 }
 
-/* Inner slot wrapping the keyed embed component — full width so
-   the Elfsight grid (or any future per-platform widget) gets the
-   entire section. */
-.social__feed-slot {
-  width: 100%;
+/* One platform column */
+.social__col {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0; /* allow the column to shrink; clip wide widget content */
 }
 
-/* Embed-specific containers — fill the feed-body box edge-to-edge. */
+/* Column header label (icon + platform name) — replaces the old tabs */
+.social__col-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink, #1A1410);
+}
+.social__col-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--saffron, #FF6B1A);
+  color: #fff;
+  flex-shrink: 0;
+}
+.social__col-icon svg { width: 16px; height: 16px; }
+
+/* Feed box — natural height up to a cap, then its own vertical
+   scroller. Using max-height (not a fixed height) lets each Elfsight
+   widget render at its true height: short feeds sit naturally while
+   a long feed (e.g. the YouTube gallery) caps and scrolls inside the
+   box. overscroll-behavior keeps that scroll from chaining to the page. */
+.social__col-feed {
+  width: 100%;
+  min-height: 480px;
+  max-height: 600px;
+  background: rgba(26, 20, 16, 0.04);
+  border: 1px solid var(--hairline, rgba(26, 20, 16, 0.1));
+  border-radius: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+/* Slim saffron scrollbar to match the brand */
+.social__col-feed::-webkit-scrollbar { width: 8px; }
+.social__col-feed::-webkit-scrollbar-track { background: transparent; }
+.social__col-feed::-webkit-scrollbar-thumb {
+  background: rgba(196, 77, 14, 0.35);
+  border-radius: 999px;
+}
+.social__col-feed::-webkit-scrollbar-thumb:hover { background: rgba(196, 77, 14, 0.55); }
+.social__col-feed { scrollbar-width: thin; scrollbar-color: rgba(196, 77, 14, 0.4) transparent; }
+
+/* Embed-specific containers — fill the column box edge-to-edge. */
 .social__embed {
   width: 100%;
+  max-width: 100%;
+}
+/* Keep any Elfsight widget within its column (some galleries render
+   wider than their container otherwise). */
+.social__col-feed [class*="elfsight-app-"] {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Facebook iframe — official Page Plugin renders at 500px max. */
@@ -493,7 +484,7 @@ button.social__handle.social__handle--active::before {
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .social { padding: 100px 28px 120px; }
-  .social__grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .social__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
   .social__header { margin-bottom: 48px; }
 }
 
@@ -501,7 +492,6 @@ button.social__handle.social__handle--active::before {
   .social { padding: 80px 20px 100px; }
   .social__grid { grid-template-columns: 1fr; }
   .social__title { font-size: clamp(2rem, 8vw, 2.4rem); }
-  .social__handle { width: 38px; height: 38px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

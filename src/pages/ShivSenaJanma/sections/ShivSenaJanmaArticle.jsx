@@ -73,12 +73,6 @@ export default function ShivSenaJanmaArticle() {
  ))}
  </ol>
 
- {/* Closing flourish */}
- <div className="ssj-article__flourish" aria-hidden="true">
- <span className="ssj-article__flourish-line" />
- <span className="ssj-article__flourish-mark">॥</span>
- <span className="ssj-article__flourish-line" />
- </div>
 
  </div>
  </section>

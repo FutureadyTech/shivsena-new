@@ -1,32 +1,16 @@
-import { useContent } from '../../../content/_shared/useContent.js';
-import mahayutiContent from '../../../content/mahayuti.json';
 import './MahayutiBanner.css';
 
+/* Image-only banner (same pattern as the About Us banner) — the
+   eyebrow / title / lede are baked into the artwork, so the JSX is
+   just the <img>. No overlays, text, or JSON dependency. */
 export default function MahayutiBanner() {
-  const t = useContent(mahayutiContent.banner);
-
   return (
     <section className="my-banner">
-      <div
+      <img
+        src="/banners/mahayuti/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AF%E0%A5%81%E0%A4%A4%E0%A5%80%20banner.webp"
+        alt=""
         className="my-banner__image"
-        style={{ backgroundImage: 'url(/img-2.webp)' }}
-        aria-hidden="true"
       />
-
-      <div className="ov-base" />
-      <div className="ov-pattern" />
-      <div className="ov-spotlight" />
-      <div className="ov-light-tl" />
-      <div className="ov-light-br" />
-      <div className="ov-top" />
-      <div className="ov-bottom" />
-
-      <div className="my-banner__content">
-        <p className="my-banner__eyebrow">{t.eyebrow}</p>
-        <h1 className="my-banner__title">{t.title}</h1>
-        <div className="my-banner__divider" aria-hidden="true" />
-        <p className="my-banner__lede">{t.subtitle}</p>
-      </div>
     </section>
   );
 }

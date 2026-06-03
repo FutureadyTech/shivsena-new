@@ -68,12 +68,6 @@ export default function MahayutiArticle() {
  ))}
  </ol>
 
- {/* Closing flourish */}
- <div className="my-article__flourish" aria-hidden="true">
- <span className="my-article__flourish-line" />
- <span className="my-article__flourish-mark">॥</span>
- <span className="my-article__flourish-line" />
- </div>
 
  </div>
  </section>
