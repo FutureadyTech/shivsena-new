@@ -97,12 +97,12 @@
   display: inline-block;
   padding: 1px;                 /* p-px → thin frame */
   border: none;
-  background: #1f2937;          /* bg-gray-800 (default frame) */
-  color: #ffffff;
+  background: #ffffff;          /* white frame */
+  color: #C44D0E;               /* saffron label + arrow */
   font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
   font-weight: 600;
   line-height: 1.5;
-  border-radius: 12px;          /* rounded-xl */
+  border-radius: 999px;          /* rounded-xl */
   cursor: pointer;
   box-shadow: 0 25px 50px -12px rgba(24, 24, 27, 0.7); /* shadow-2xl shadow-zinc-900 */
   transition: transform 0.3s ease-in-out;
@@ -116,7 +116,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  border-radius: 12px;
+  border-radius: 999px;
   background: linear-gradient(to right, #FFB26B, #FF6B1A, #C44D0E); /* brand saffron gradient */
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -132,8 +132,8 @@
   align-items: center;
   gap: 8px;
   padding: 12px 24px;           /* px-6 py-3 */
-  border-radius: 12px;
-  background: #030712;          /* bg-gray-950 */
+  border-radius: 999px;
+  background: #ffffff;          /* white pill */
   font-size: clamp(0.95rem, 1.15vw, 1.1rem);
   letter-spacing: 0.02em;
 }
