@@ -528,14 +528,7 @@ function SocialIcons({ socials, phone, email }) {
  { key: 'instagram', href: safe.instagram, label: 'Instagram' },
   ];
 
-  const cleanPhone = (phone || '').toString().trim();
-  if (cleanPhone) {
- candidates.push({
- key: 'phone',
- href: `tel:${cleanPhone.replace(/\s+/g, '')}`,
- label: `Call ${cleanPhone}`,
- });
-  }
+  /* Phone/call option intentionally removed from cards (temporary). */
 
   const cleanEmail = (email || '').toString().trim();
   if (cleanEmail) {
