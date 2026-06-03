@@ -61,7 +61,7 @@ const UNIFIED_CATEGORIES = [
   { key: 'divisionalCoContactHeads', source: 'state'    }, // 9. विभागीय सह संपर्क प्रमुख
   { key: 'lokSabhaContactHead',      source: 'state'    }, // 10. लोकसभा संपर्क प्रमुख
   { key: 'districtHead',             source: 'state'    }, // 11. जिल्हा प्रमुख
-  { key: 'womenDistrictHeads',       source: 'district' }, // 12. महिला जिल्हा प्रमुख
+  { key: 'womenDistrictHeads',       source: 'state'    }, // 12. महिला जिल्हा प्रमुख
 ];
 
 /* When a category has no real entries for this district, show this
@@ -83,7 +83,9 @@ const isFemale = (name) => !!name && (FEMALE_RE.test(name) || /ताई/.test(n
 
 const photoFor = (member) => {
   if (member.photo) return member.photo;
-  return isFemale(member.name) ? FEMALE_PLACEHOLDER : MALE_PLACEHOLDER;
+  /* `female: true` forces the female placeholder for entries whose name
+     doesn't trip the honorific heuristic (e.g. महिला जिल्हा प्रमुख). */
+  return (member.female || isFemale(member.name)) ? FEMALE_PLACEHOLDER : MALE_PLACEHOLDER;
 };
 
 export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mode = 'district' }) {
