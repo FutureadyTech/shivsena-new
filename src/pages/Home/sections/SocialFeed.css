@@ -165,6 +165,18 @@
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
+
+/* When the column only shows the "feed off" placeholder (no live embed),
+   collapse the tall feed box so it hugs the placeholder — otherwise the
+   reserved 480px embed height leaves a big empty area below it. */
+.social__col-feed:has(.social__placeholder) {
+  min-height: 0;
+  max-height: none;
+  overflow: visible;
+  background: transparent;
+  border: none;
+}
+.social__col-feed > .social__placeholder { margin: 0 auto; }
 /* Slim saffron scrollbar to match the brand */
 .social__col-feed::-webkit-scrollbar { width: 8px; }
 .social__col-feed::-webkit-scrollbar-track { background: transparent; }

@@ -1,83 +1,39 @@
 /* ═══════════════════════════════════════════════════════════════
-   AUDIO MUTE TOGGLE
+   AUDIO PLAY / PAUSE BUTTON
 
-   Sits in the SiteHeader next to the notifications bell. Mutes /
-   un-mutes the two "intro" audios:
-     • ambient.mp3  — home banner bed   (window.__stopAmbient)
-     • join.mp3     — Enter-click stinger (window.__stopJoin)
-
-   The choice is persisted in localStorage and exposed as a global
-   flag (window.__audioMuted) that both audio modules check before
-   they start playing. Toggling ON also stops anything currently
-   playing immediately.
+   A thin view over the HomeAudioProvider context: the icon is driven
+   purely by `isPlaying`, so it always matches the real audio. Renders
+   nothing if used outside the provider (i.e. off the home page).
 ═══════════════════════════════════════════════════════════════ */
-import { useState, useCallback } from 'react';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
+import { useHomeAudio } from '../pages/Home/HomeAudioProvider.jsx';
 import './AudioMuteToggle.css';
-
-const MUTE_KEY = 'SHIVSENA_AUDIO_MUTED';
-
-function readMuted() {
-  if (typeof window === 'undefined') return false;
-  try {
-    return window.localStorage.getItem(MUTE_KEY) === '1';
-  } catch {
-    return false;
-  }
-}
-
-/* Publish the initial flag at module load so the audio modules see
-   the correct value even before this component mounts. */
-if (typeof window !== 'undefined' && typeof window.__audioMuted === 'undefined') {
-  window.__audioMuted = readMuted();
-}
 
 export default function AudioMuteToggle({ className = '' }) {
   const { lang } = useLanguage();
-  const [muted, setMuted] = useState(() => readMuted());
+  const audio = useHomeAudio();
+  if (!audio) return null; // outside the home audio provider
 
-  const toggle = useCallback(() => {
-    setMuted((prev) => {
-      const next = !prev;
-      try {
-        window.localStorage.setItem(MUTE_KEY, next ? '1' : '0');
-      } catch {
-        /* localStorage unavailable — silently fail */
-      }
-      window.__audioMuted = next;
-      if (next) {
-        /* Muting: pause the ambient song (resumable) and silence the
-           short Enter stinger. */
-        try { window.__pauseAmbient?.(); } catch {}
-        try { window.__stopJoin?.(); } catch {}
-      } else {
-        /* Un-muting: resume the song from where it left off (or start
-           it if it never played yet). */
-        try { window.__resumeAmbient?.(); } catch {}
-      }
-      return next;
-    });
-  }, []);
-
-  const label = muted
-    ? (lang === 'mr' ? 'आवाज सुरू करा' : 'Unmute audio')
-    : (lang === 'mr' ? 'आवाज बंद करा' : 'Mute audio');
+  const { isPlaying, toggle } = audio;
+  const label = isPlaying
+    ? (lang === 'mr' ? 'आवाज बंद करा' : 'Pause audio')
+    : (lang === 'mr' ? 'आवाज सुरू करा' : 'Play audio');
 
   return (
     <button
       type="button"
-      className={`audio-mute ${muted ? 'is-muted' : ''} ${className}`.trim()}
+      className={`audio-mute ${isPlaying ? '' : 'is-muted'} ${className}`.trim()}
       aria-label={label}
-      aria-pressed={muted}
+      aria-pressed={!isPlaying}
       title={label}
       onClick={toggle}
     >
-      {muted ? <MutedIcon /> : <SoundIcon />}
+      {isPlaying ? <SoundIcon /> : <MutedIcon />}
     </button>
   );
 }
 
-/* Speaker with sound waves (audio on) */
+/* Speaker with sound waves (audio playing) */
 function SoundIcon() {
   return (
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -88,7 +44,7 @@ function SoundIcon() {
   );
 }
 
-/* Speaker with an X (audio muted) */
+/* Speaker with an X (audio paused) */
 function MutedIcon() {
   return (
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

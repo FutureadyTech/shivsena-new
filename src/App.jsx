@@ -51,17 +51,14 @@ function ScrollToTop() {
   return null;
 }
 
-/* Always-mounted route watcher that kills the home banner audios
- (ambient.mp3 + join.mp3) the instant pathname leaves /home.
- Lives at App level HomeBannerAudio itself can't do this
- because it unmounts on the same commit that the route changes,
- so its own useEffect would never run in time. */
+/* Stop the Enter-click stinger (join.mp3) the instant pathname leaves
+ /home, in case it's still playing. The looping home music stops on
+ its own when HomeAudioProvider unmounts on the route change. */
 function HomeAudioRouteGuard() {
   const { pathname } = useLocation();
   useEffect(() => {
  if (pathname === '/home') return;
  if (typeof window === 'undefined') return;
- try { window.__stopAmbient?.(); } catch {}
  try { window.__stopJoin?.(); } catch {}
   }, [pathname]);
   return null;

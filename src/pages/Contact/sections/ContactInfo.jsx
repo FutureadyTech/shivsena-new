@@ -58,7 +58,6 @@ export default function ContactInfo() {
 function ContactCard({ card, index }) {
   const ref = useScrollReveal(0.15);
   const icon = ICONS[card.icon] ?? ICONS.pin;
-  const external = card.linkHref && !card.linkHref.startsWith('mailto:') && !card.linkHref.startsWith('tel:');
 
   return (
     <article
@@ -72,19 +71,6 @@ function ContactCard({ card, index }) {
       <div className="ci-card__lines">
         {card.lines.map((line, j) => <p key={j} className="ci-card__line">{line}</p>)}
       </div>
-      {card.linkHref && (
-        <a
-          href={card.linkHref}
-          className="ci-card__link"
-          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-          data-cursor="link"
-        >
-          {card.linkLabel}
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-          </svg>
-        </a>
-      )}
     </article>
   );
 }

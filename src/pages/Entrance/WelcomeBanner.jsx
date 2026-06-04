@@ -26,8 +26,9 @@ if (typeof window !== 'undefined') {
 }
 
 function playJoinClick() {
-  /* User has muted the intro audio (header toggle) — don't play. */
-  if (typeof window !== 'undefined' && window.__audioMuted) return;
+  /* Respect the visitor's "audio off" choice (set by the home
+     play/pause button, persisted in localStorage). */
+  try { if (localStorage.getItem('SHIVSENA_AUDIO_OFF') === '1') return; } catch { /* ignore */ }
   /* If a previous click is still playing, stop it first so two
  clicks don't overlap and double-up. */
   stopJoin();
