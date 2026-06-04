@@ -108,6 +108,45 @@
   scroll-snap-align: start;
 }
 
+/* ── Grid layout (3 per row, 2 rows initially) + See-more toggle ── */
+.affiliated__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  padding-bottom: 14px; /* room for hover-lift box-shadow */
+}
+.affiliated__grid > .org-card { min-width: 0; }
+
+.affiliated__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.affiliated__more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 28px;
+  border: 1.5px solid rgba(196, 77, 14, 0.5);
+  border-radius: 999px;
+  background: #FFFCF5;
+  color: var(--saffron-on-light, #C44D0E);
+  font-family: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.affiliated__more-btn:hover {
+  background: var(--saffron, #FF6B1A);
+  border-color: var(--saffron, #FF6B1A);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.affiliated__more-btn svg { transition: transform 0.25s ease; }
+.affiliated__more-btn svg.is-up { transform: rotate(180deg); }
+
 /* Prev / Next arrows */
 .affiliated__nav {
   position: absolute;
@@ -160,26 +199,34 @@
   .affiliated__track > .org-card {
     flex: 0 0 calc((100% - 26px) / 2); /* 2 per row */
   }
+  .affiliated__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .affiliated__nav--prev { left: -10px; }
   .affiliated__nav--next { right: -10px; }
 }
 @media (max-width: 640px) {
+  /* One centred card per view, with the small arrows tucked into the side
+     gutters so they don't overlap the card. touch-action: pan-y disables
+     horizontal drag (it was fighting the vertical page scroll) — the arrows
+     handle navigation instead. */
   .affiliated__track {
-    gap: 18px;
-    /* Edge padding so the first/last card has visual breathing
-       room instead of butting against the section wall. */
-    padding-left: 4px;
-    padding-right: 4px;
+    gap: 0;
+    padding-left: 44px;
+    padding-right: 44px;
+    scroll-padding: 0 44px;
+    touch-action: pan-y;
   }
   .affiliated__track > .org-card {
-    flex: 0 0 84%; /* 1 + peek of the next */
+    flex: 0 0 100%;
   }
+  .affiliated__grid { grid-template-columns: 1fr; }
   .affiliated__nav {
-    width: 40px;
-    height: 40px;
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
   }
-  .affiliated__nav--prev { left: -6px; }
-  .affiliated__nav--next { right: -6px; }
+  .affiliated__nav svg { width: 16px; height: 16px; }
+  .affiliated__nav--prev { left: 2px; }
+  .affiliated__nav--next { right: 2px; }
 }
 
 /* Reduced motion: skip the smooth scroll animation */

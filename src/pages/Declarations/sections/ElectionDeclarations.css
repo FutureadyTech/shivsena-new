@@ -613,11 +613,15 @@
   .eci__sumcard-icon { width: 40px; height: 40px; }
   .eci__sumcard-icon svg { width: 20px; height: 20px; }
 
-  .eci__tab { padding: 10px 14px 10px 10px; gap: 10px; }
-  .eci__tab-icon { width: 30px; height: 30px; }
+  /* Compact 2-per-row grid so the 7 election tabs don't fill the whole
+     screen before the search + candidate list. */
+  .eci__tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .eci__tab { padding: 10px 12px; gap: 8px; }
+  .eci__tab-icon { width: 30px; height: 30px; flex-shrink: 0; }
   .eci__tab-icon svg { width: 16px; height: 16px; }
-  .eci__tab-label { font-size: 0.84rem; }
-  .eci__tab-sub { font-size: 0.65rem; }
+  .eci__tab-label { font-size: 0.82rem; }
+  .eci__tab-sub { font-size: 0.62rem; }
+  .eci__tab-count { flex-shrink: 0; }
   .eci__toolbar { gap: 12px; }
   .eci__search { max-width: none; }
 

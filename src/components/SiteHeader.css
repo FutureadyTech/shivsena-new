@@ -92,6 +92,16 @@ body.has-dark-hero-visible .site-nav__burger:hover {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   border-bottom-color: transparent !important;
+  /* Logo is hidden while open, so keep the lone close-X over the
+     right-side drawer instead of drifting to the left. */
+  justify-content: flex-end;
+}
+/* While the menu is open, hide the logo + bell so only the close (X)
+   shows — the menu reads as a clean full-screen overlay with no header
+   strip. (The bell still lives in the menu's own footer.) */
+.site-nav.site-nav--mobile-open .site-nav__brand,
+.site-nav.site-nav--mobile-open .site-nav__utils {
+  display: none;
 }
 
 /* ── Backdrop (dimmer behind the panel) ── */
@@ -117,7 +127,7 @@ body.has-dark-hero-visible .site-nav__burger:hover {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 100vw;
+  width: min(420px, 85vw);
   z-index: 99;
   overflow: hidden;
   background:
@@ -435,8 +445,12 @@ body.has-dark-hero-visible .site-nav__burger:hover {
   }
   .site-nav .site-nav__burger { display: inline-flex; }
   /* Tighten the right-side icon cluster (bell + hamburger) so they read
-     as an aligned pair. header.site-nav beats the global gap in home.css. */
-  header.site-nav { gap: 12px; }
+     as an aligned pair, and reduce the header side padding on mobile.
+     header.site-nav beats the global .site-nav rule in home.css. */
+  header.site-nav { gap: 12px; padding: 18px 15px; }
+  /* Push the bell to the right so it groups next to the hamburger
+     (instead of floating in the middle via space-between). */
+  .site-nav .site-nav__utils { margin-left: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

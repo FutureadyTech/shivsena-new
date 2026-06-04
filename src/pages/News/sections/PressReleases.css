@@ -245,6 +245,20 @@
   .pr-section__grid { grid-template-columns: 1fr; gap: 18px; }
 }
 
+/* Mobile: hide the "view all" button and centre the section heading.
+   Scoped to #press-releases so the shared .news__* styles elsewhere
+   (e.g. the home News section) are unaffected. */
+@media (max-width: 640px) {
+  #press-releases .news__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+  #press-releases .news__eyebrow { justify-content: center; }
+  #press-releases .news__archive-link { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pr-card.reveal,
   .pr-section__header.reveal { opacity: 1; transform: none; transition: none; }

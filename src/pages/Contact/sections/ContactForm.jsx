@@ -151,12 +151,6 @@ export default function ContactForm() {
 
  {/* ── HEADER + INSTRUCTIONS ──────────────────────── */}
  <div ref={headerRef} className="cf-section__header reveal">
- {t.eyebrow && (
- <div className="cf-section__eyebrow">
- <span className="cf-section__eyebrow-line" />
- <span>{t.eyebrow}</span>
- </div>
- )}
  <h2 className="cf-section__title">{t.title}</h2>
  <p className="cf-section__lede">{t.lede}</p>
  </div>

@@ -619,6 +619,15 @@
   box-shadow: none;
 }
 
+/* Keep the in-card "view more" button compact — the unified .btn sizing
+   (13px 28px) is too big inside a card. Specificity beats a.btn/button.btn. */
+.dir-card__action.btn {
+  padding: 8px 18px;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  gap: 8px;
+}
+
 .dir-card__action {
   display: inline-flex;
   align-items: center;

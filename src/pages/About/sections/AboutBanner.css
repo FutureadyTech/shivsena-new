@@ -130,11 +130,8 @@
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  .about-banner { min-height: 520px; }
-  .about-banner__content { transform: translate(-50%, -50%); }
-  .about-banner__lede { max-width: 86vw; }
-}
+/* Image-only banner — no fixed height on mobile; the section is exactly
+   the image's natural height (no empty gap below it). */
 
 @media (prefers-reduced-motion: reduce) {
   .about-banner__image,

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
@@ -136,6 +136,9 @@ function GenericOrgIcon() {
  *               Pass a unique id when rendering more than one
  *               instance on the same page.
  */
+const INITIAL_VISIBLE = 6; // 3 columns × 2 rows
+const REVEAL_STEP = 6;     // reveal two more rows per click
+
 export default function AffiliatedOrgs({
   content,
   sectionId = 'affiliated',
@@ -144,46 +147,20 @@ export default function AffiliatedOrgs({
   const headerRef = useScrollReveal(0.25);
 
   const orgs = t.orgs || [];
-  const trackRef = useRef(null);
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(false);
+  const [visible, setVisible] = useState(INITIAL_VISIBLE);
 
-  /* Recompute arrow-disabled state from the track's scroll offset.
-     8px tolerance covers sub-pixel rounding at either edge. */
-  const updateArrows = useCallback(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    setCanPrev(el.scrollLeft > 8);
-    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
-  }, []);
+  const total = orgs.length;
+  const canToggle = total > INITIAL_VISIBLE;
+  const visibleOrgs = orgs.slice(0, visible);
+  const allShown = visible >= total;
+  const remaining = total - visible; // how many more are still hidden
 
-  useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    updateArrows();
-    el.addEventListener('scroll', updateArrows, { passive: true });
-    window.addEventListener('resize', updateArrows);
-    return () => {
-      el.removeEventListener('scroll', updateArrows);
-      window.removeEventListener('resize', updateArrows);
-    };
-  }, [updateArrows, orgs.length]);
+  const showMore = () => setVisible((v) => Math.min(total, v + REVEAL_STEP));
+  const showLess = () => setVisible(INITIAL_VISIBLE);
 
-  /* Step = one card-width + the gap between cards. We measure from
-     the live DOM so any future width tweak in CSS picks up
-     automatically. Falls back to ~80% of viewport on the rare
-     case where no card has rendered yet. */
-  const scroll = (dir) => {
-    const el = trackRef.current;
-    if (!el) return;
-    const card = el.querySelector('.org-card');
-    const gap = parseInt(getComputedStyle(el).columnGap || getComputedStyle(el).gap, 10) || 26;
-    const step = card ? card.offsetWidth + gap : el.clientWidth * 0.8;
-    el.scrollBy({ left: dir * step, behavior: 'smooth' });
-  };
-
-  const prevLabel = t.prevLabel || (t._lang === 'mr' ? 'मागे' : 'Previous');
-  const nextLabel = t.nextLabel || (t._lang === 'mr' ? 'पुढे' : 'Next');
+  const isMr = t._lang === 'mr';
+  const moreLabel = isMr ? `आणखी पाहा (${remaining})` : `See more (${remaining})`;
+  const lessLabel = isMr ? 'कमी दाखवा' : 'See less';
 
   return (
  <section className="affiliated" id={sectionId}>
@@ -193,22 +170,9 @@ export default function AffiliatedOrgs({
  <h2 className="affiliated__title">{t.title}</h2>
  </div>
 
- {/* ── Slider: horizontal scroll-snap track + prev/next arrows ── */}
- <div className="affiliated__slider">
- <button
- type="button"
- className="affiliated__nav affiliated__nav--prev"
- onClick={() => scroll(-1)}
- disabled={!canPrev}
- aria-label={prevLabel}
- >
- <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
- <polyline points="15 18 9 12 15 6" />
- </svg>
- </button>
-
- <div className="affiliated__track" ref={trackRef} data-lenis-prevent>
- {orgs.map((org, i) => (
+ {/* ── Grid: shows 4 cards, "See more" reveals the rest in batches ── */}
+ <div className="affiliated__grid">
+ {visibleOrgs.map((org, i) => (
  <OrgCard
  key={org.id}
  org={org}
@@ -218,18 +182,21 @@ export default function AffiliatedOrgs({
  ))}
  </div>
 
+ {canToggle && (
+ <div className="affiliated__more">
  <button
  type="button"
- className="affiliated__nav affiliated__nav--next"
- onClick={() => scroll(1)}
- disabled={!canNext}
- aria-label={nextLabel}
+ className="affiliated__more-btn"
+ onClick={allShown ? showLess : showMore}
+ aria-expanded={visible > INITIAL_VISIBLE}
  >
- <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
- <polyline points="9 18 15 12 9 6" />
+ <span>{allShown ? lessLabel : moreLabel}</span>
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={allShown ? 'is-up' : ''}>
+ <polyline points="6 9 12 15 18 9" />
  </svg>
  </button>
  </div>
+ )}
 
  </div>
  </section>

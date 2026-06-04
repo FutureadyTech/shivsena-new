@@ -129,11 +129,8 @@
   animation: fadeUp 1s ease 0.85s both;
 }
 
-@media (max-width: 768px) {
-  .inn-banner { min-height: 520px; }
-  .inn-banner__content { transform: translate(-50%, -50%); }
-  .inn-banner__lede { max-width: 86vw; }
-}
+/* Image-only banner — no fixed height on mobile; the section is exactly
+   the image's natural height (no empty gap below it). */
 
 @media (prefers-reduced-motion: reduce) {
   .inn-banner__image,

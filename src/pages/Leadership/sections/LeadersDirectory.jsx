@@ -312,31 +312,46 @@ export default function LeadersDirectory({ activeDistrict, onChangeDistrict, mod
   );
 }
 
-/* ── Category grid — shows 4 cards, then reveals more in batches on
-   each "See more" click (not all at once). Collapses with "See less"
-   once everything is shown. ── */
-const INITIAL_VISIBLE = 4;
-const REVEAL_STEP = 8;
-
-function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, viewMoreLabel, lang, onSelect }) {
+/* ── Category carousel — horizontal scroll w/ snap + arrow buttons ── */
+function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabel, nextLabel, viewMoreLabel, lang, onSelect }) {
   const ref = useScrollReveal(0.12);
-  const [visible, setVisible] = useState(INITIAL_VISIBLE);
+  const trackRef = useRef(null);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(false);
+
+  const updateArrows = useCallback(() => {
+ const el = trackRef.current;
+ if (!el) return;
+ setCanPrev(el.scrollLeft > 8);
+ setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
+  }, []);
+
+  useEffect(() => {
+ const el = trackRef.current;
+ if (!el) return;
+ updateArrows();
+ el.addEventListener('scroll', updateArrows, { passive: true });
+ window.addEventListener('resize', updateArrows);
+ return () => {
+ el.removeEventListener('scroll', updateArrows);
+ window.removeEventListener('resize', updateArrows);
+ };
+  }, [updateArrows, items]);
+
+  const scroll = (dir) => {
+ const el = trackRef.current;
+ if (!el) return;
+ const card = el.querySelector('.dir-card');
+ const gap = parseInt(getComputedStyle(el).gap) || 18;
+ const step = card ? card.offsetWidth + gap : el.clientWidth * 0.8;
+ el.scrollBy({ left: dir * step, behavior: 'smooth' });
+  };
 
   const noItems = !items || items.length === 0;
   const realCount = isEmpty ? 0 : items.length;
+  const showArrows = !isEmpty && items.length > 1;
+
   const isTopLeader = catKey === 'topLeader';
-
-  const total = items ? items.length : 0;
-  const canToggle = total > INITIAL_VISIBLE;
-  const visibleItems = (items || []).slice(0, visible);
-  const allShown = visible >= total;
-  const remaining = total - visible; // how many more are still hidden
-
-  const showMore = () => setVisible((v) => Math.min(total, v + REVEAL_STEP));
-  const showLess = () => setVisible(INITIAL_VISIBLE);
-
-  const moreLabel = lang === 'mr' ? `आणखी पाहा (${remaining})` : `See more (${remaining})`;
-  const lessLabel = lang === 'mr' ? 'कमी दाखवा' : 'See less';
 
   return (
  <div ref={ref} className={`dir-cat reveal${catKey ? ` dir-cat--${catKey}` : ''}`}>
@@ -345,14 +360,39 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, viewMore
  {label}
  {!isEmpty && !isTopLeader && <span className="dir-cat__count">{realCount}</span>}
  </h3>
+ {showArrows && (
+ <div className="dir-cat__controls">
+ <button
+ type="button"
+ className={`dir-cat__arrow ${canPrev ? '' : 'is-disabled'}`}
+ onClick={() => scroll(-1)}
+ aria-label={prevLabel}
+ disabled={!canPrev}
+ >
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+ <polyline points="15 18 9 12 15 6" />
+ </svg>
+ </button>
+ <button
+ type="button"
+ className={`dir-cat__arrow ${canNext ? '' : 'is-disabled'}`}
+ onClick={() => scroll(1)}
+ aria-label={nextLabel}
+ disabled={!canNext}
+ >
+ <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+ <polyline points="9 18 15 12 9 6" />
+ </svg>
+ </button>
+ </div>
+ )}
  </div>
 
  {noItems ? (
  <p className="dir-cat__empty">{noDataLabel}</p>
  ) : (
- <>
- <div className="dir-cat__grid">
- {visibleItems.map((m, i) => (
+ <div ref={trackRef} className="dir-cat__track">
+ {items.map((m, i) => (
  <MemberCard
  key={m.id || i}
  member={m}
@@ -364,23 +404,6 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, viewMore
  />
  ))}
  </div>
-
- {canToggle && (
- <div className="dir-cat__more">
- <button
- type="button"
- className="dir-cat__more-btn"
- onClick={allShown ? showLess : showMore}
- aria-expanded={visible > INITIAL_VISIBLE}
- >
- <span>{allShown ? lessLabel : moreLabel}</span>
- <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={allShown ? 'is-up' : ''}>
- <polyline points="6 9 12 15 18 9" />
- </svg>
- </button>
- </div>
- )}
- </>
  )}
  </div>
   );

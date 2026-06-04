@@ -194,21 +194,18 @@
   /* True edge-to-edge: only a tiny breathing pad on each side */
   padding: var(--strip-pad-top) 16px 6px 16px;
   width: 100%;
+  /* Connecting hairline drawn as a fixed background on the strip so it
+     spans the full visible width and never breaks when the ticks scroll
+     (the absolute .journey__years-line span used to get cut off). */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22));
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 calc(var(--strip-pad-top) + var(--dot-size) / 2);
 }
 .journey__years::-webkit-scrollbar { display: none; }
 
-/* Horizontal hairline sits exactly on the vertical centre of the dots */
-.journey__years-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  /* padding-top + half the dot = centre of the dot row */
-  top: calc(var(--strip-pad-top) + var(--dot-size) / 2);
-  height: 1px;
-  background: rgba(255, 255, 255, 0.22);
-  pointer-events: none;
-  z-index: 0;
-}
+/* Old absolute hairline replaced by the strip background above. */
+.journey__years-line { display: none; }
 
 .journey__year-tick {
   position: relative;
@@ -281,8 +278,8 @@
 }
 
 .journey__nav-btn {
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.06);
@@ -294,6 +291,7 @@
   transition: background 0.3s ease, border-color 0.3s ease,
  transform 0.3s ease, opacity 0.3s ease;
 }
+.journey__nav-btn svg { width: 15px; height: 15px; }
 
 .journey__nav-btn:hover:not(:disabled) {
   background: var(--saffron, #FF6B1A);
@@ -339,7 +337,17 @@
   .journey__year  { font-size: clamp(3rem, 13vw, 4.5rem); }
 
   /* On mobile, drop nav below the strip so the strip can use the full width */
-  .journey__years { padding: var(--strip-pad-top) 16px 6px 16px; --dot-size: 10px; gap: 8px; }
+  .journey__years {
+    padding: var(--strip-pad-top) 16px 6px 16px;
+    --dot-size: 10px;
+    gap: 8px;
+    justify-content: flex-start;   /* scroll from the start instead of squeezing all in */
+  }
+  /* Fixed-width ticks → ~4 years visible at a time, the rest reachable by
+     horizontal swipe or the prev/next arrows (which auto-scroll the active
+     year into view). Stops all 19 labels from overlapping. */
+  .journey__year-tick { flex: 0 0 auto; min-width: 76px; scroll-snap-align: center; }
+  .journey__years { scroll-snap-type: x proximity; }
   .journey__year-label { font-size: 0.82rem; }
   .journey__nav {
  right: 16px;

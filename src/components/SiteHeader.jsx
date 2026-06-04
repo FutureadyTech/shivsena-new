@@ -73,10 +73,15 @@ export default function SiteHeader() {
     if (!mobileOpen) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    /* Pages use Lenis smooth-scroll, which ignores body overflow:hidden.
+       Pause it so the page behind the menu can't scroll; the drawer itself
+       scrolls natively (it carries data-lenis-prevent). */
+    try { window.__lenis?.stop(); } catch {}
     const onKey = (e) => { if (e.key === 'Escape') setMobileOpen(false); };
     document.addEventListener('keydown', onKey);
     return () => {
       document.body.style.overflow = prev;
+      try { window.__lenis?.start(); } catch {}
       document.removeEventListener('keydown', onKey);
     };
   }, [mobileOpen]);
@@ -178,6 +183,7 @@ function MobileMenu({ open, onClose, t }) {
         role="dialog"
         aria-modal="true"
         aria-label="Site navigation"
+        data-lenis-prevent
       >
         {/* Decorative saffron glows + Devanagari watermark */}
         <span className="site-mobile__glow site-mobile__glow--tl" aria-hidden="true" />

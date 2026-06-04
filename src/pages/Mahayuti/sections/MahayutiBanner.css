@@ -184,11 +184,8 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 768px) {
-  .my-banner { min-height: 520px; }
-  .my-banner__content { transform: translate(-50%, -50%); }
-  .my-banner__lede { max-width: 86vw; }
-}
+/* Image-only banner — no fixed height on mobile; the section is exactly
+   the image's natural height (no empty gap below it). */
 
 @media (prefers-reduced-motion: reduce) {
   .my-banner__content::before,
