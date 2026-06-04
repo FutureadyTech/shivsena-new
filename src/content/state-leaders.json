@@ -2858,7 +2858,8 @@
       "name": "श्रीम. शायना एनसी",
       "note": "राष्ट्रीय प्रवक्त्या",
       "role": "राष्ट्रीय प्रवक्त्या",
-      "phone": "9820436706"
+      "phone": "9820436706",
+      "photo": "/leaders/pravakte/01.webp"
     }
   ],
   "spokespersons": [
@@ -2866,7 +2867,7 @@
       "id": "spokespersons-1",
       "name": "श्री. दीपक केसरकर",
       "note": "आमदार",
-      "photo": "/leaders/Mla%20Photos/22_Shri%20Deepak%20Kesarkar.webp",
+      "photo": "/leaders/pravakte/02.webp",
       "phone": "9422096887",
       "role": "आमदार"
     },
@@ -2874,43 +2875,47 @@
       "id": "spokespersons-2",
       "name": "श्री. उदय सामंत",
       "note": "मंत्री",
-      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp",
+      "photo": "/leaders/pravakte/03.webp",
       "phone": "9860390909",
       "role": "मंत्री"
     },
     {
       "id": "spokespersons-3",
       "name": "श्री. किरण पावसकर",
-      "phone": "9821082800"
+      "phone": "9821082800",
+      "photo": "/leaders/pravakte/04.webp"
     },
     {
       "id": "spokespersons-4",
       "name": "श्री. नरेश म्हस्के",
       "note": "खासदार",
-      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp",
+      "photo": "/leaders/pravakte/05.webp",
       "phone": "9930998007",
       "role": "खासदार"
     },
     {
       "id": "spokespersons-5",
       "name": "सौ. शितल म्हात्रे",
-      "phone": "9870337777"
+      "phone": "9870337777",
+      "photo": "/leaders/pravakte/06.webp"
     },
     {
       "id": "spokespersons-6",
       "name": "श्री. राहुल लोंढे",
-      "phone": "9833314001"
+      "phone": "9833314001",
+      "photo": "/leaders/pravakte/07.webp"
     },
     {
       "id": "spokespersons-7",
       "name": "श्री. संजीव बबनराव भोर",
-      "phone": "8182837979"
+      "phone": "8182837979",
+      "photo": "/leaders/pravakte/08.webp"
     },
     {
       "id": "spokespersons-8",
       "name": "श्री. विजय शिवतारे",
       "note": "आमदार",
-      "photo": "/leaders/Mla%20Photos/23_Shri%20Vijay%20Shivtare.webp",
+      "photo": "/leaders/pravakte/09.webp",
       "phone": "9820081817",
       "role": "आमदार"
     },
@@ -2919,66 +2924,76 @@
       "name": "श्री. गुलाबचंद दुबे",
       "note": "हिंदी प्रवक्ते",
       "phone": "9869058002",
-      "role": "हिंदी प्रवक्ते"
+      "role": "हिंदी प्रवक्ते",
+      "photo": "/leaders/pravakte/10.webp"
     },
     {
       "id": "spokespersons-10",
       "name": "श्री. केदार शिवकुमार काळे",
-      "phone": "9890623946"
+      "phone": "9890623946",
+      "photo": "/leaders/pravakte/11.webp"
     },
     {
       "id": "spokespersons-11",
       "name": "श्री. संजय शिरसाट",
       "note": "मंत्री",
-      "photo": "/leaders/Mla%20Photos/50_Shri%20%20Sanjay%20Shirsat%20(Minister).webp",
+      "photo": "/leaders/pravakte/12.webp",
       "phone": "9422203930",
       "role": "मंत्री"
     },
     {
       "id": "spokespersons-12",
       "name": "डॉ. ज्योती नागनाथ वाघमारे",
-      "phone": "9850001807"
+      "phone": "9850001807",
+      "photo": "/leaders/pravakte/13.webp"
     },
     {
       "id": "spokespersons-13",
       "name": "सौ. मनिषा कायंदे",
       "note": "वि.स.स.",
       "phone": "9820236304",
-      "role": "वि.स.स."
+      "role": "वि.स.स.",
+      "photo": "/leaders/pravakte/14.webp"
     },
     {
       "id": "spokespersons-14",
       "name": "श्री. अरुण सावंत",
-      "phone": "9869044446"
+      "phone": "9869044446",
+      "photo": "/leaders/pravakte/15.webp"
     },
     {
       "id": "spokespersons-15",
       "name": "श्रीम. सुशीबेन शहा",
       "note": "हिंदी / इंग्रजी",
       "phone": "9821228125",
-      "role": "हिंदी/इंग्रजी प्रवक्ते"
+      "role": "हिंदी/इंग्रजी प्रवक्ते",
+      "photo": "/leaders/pravakte/16.webp"
     },
     {
       "id": "spokespersons-16",
       "name": "श्री. सुशील व्यास",
       "note": "हिंदी / इंग्रजी",
       "phone": "9320707999",
-      "role": "हिंदी/इंग्रजी प्रवक्ते"
+      "role": "हिंदी/इंग्रजी प्रवक्ते",
+      "photo": "/leaders/pravakte/17.webp"
     },
     {
       "id": "spokespersons-17",
       "name": "श्री. किरण सोनावणे",
-      "phone": "9922666607"
+      "phone": "9922666607",
+      "photo": "/leaders/pravakte/18.webp"
     },
     {
       "id": "spokespersons-18",
       "name": "श्री. राजीव साबळे",
-      "phone": "9323323323"
+      "phone": "9323323323",
+      "photo": "/leaders/pravakte/19.webp"
     },
     {
       "id": "spokespersons-19",
       "name": "डॉ. राजु वाघमारे",
-      "phone": "9920252363"
+      "phone": "9920252363",
+      "photo": "/leaders/pravakte/20.webp"
     },
     {
       "id": "spokespersons-20",
@@ -2988,17 +3003,20 @@
     {
       "id": "spokespersons-21",
       "name": "सौ. संजना संजय घाडी",
-      "phone": "9702251818"
+      "phone": "9702251818",
+      "photo": "/leaders/pravakte/22.webp"
     },
     {
       "id": "spokespersons-22",
       "name": "श्री. अक्षयमहाराज भोसले",
-      "phone": "8451822772"
+      "phone": "8451822772",
+      "photo": "/leaders/pravakte/23.webp"
     },
     {
       "id": "spokespersons-23",
       "name": "श्री. प्रकाश महाजन",
-      "phone": "9422201871"
+      "phone": "9422201871",
+      "photo": "/leaders/pravakte/24.webp"
     },
     {
       "id": "spokespersons-24",

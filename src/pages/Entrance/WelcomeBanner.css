@@ -130,10 +130,12 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;           /* px-6 py-3 */
+  justify-content: space-between;  /* label left, arrow pinned right */
+  gap: 14px;
+  min-width: 150px;                /* both buttons share one width */
+  padding: 12px 24px;              /* px-6 py-3 */
   border-radius: 999px;
-  background: #ffffff;          /* white pill */
+  background: #ffffff;             /* white pill */
   font-size: clamp(0.95rem, 1.15vw, 1.1rem);
   letter-spacing: 0.02em;
 }
