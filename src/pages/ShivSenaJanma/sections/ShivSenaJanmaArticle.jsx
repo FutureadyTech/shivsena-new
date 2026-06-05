@@ -11,39 +11,39 @@ import './ShivSenaJanmaArticle.css';
  ─────────────────────────────────────────────────────────── */
 const BLOCK_IMAGES = [
   {
- image: '/timeline/image-12.png',
- alt: 'बाळासाहेब ठाकरे मार्मिकचे संस्थापक',
- objectPosition: 'center center',
+    image: '/shivsena-janma/%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%A3%E0%A4%B8%E0%A4%BE%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%82%E0%A4%A8%20%E0%A4%9C%E0%A4%A8%E0%A5%8D%E0%A4%AE%E0%A4%B2%E0%A5%87%E0%A4%B2%E0%A5%80%20%E0%A4%9A%E0%A4%B3%E0%A4%B5%E0%A4%B3.webp',
+    alt: 'मराठी माणसाच्या वेदनेतून जन्मलेली चळवळ',
+    objectPosition: 'center center',
   },
   {
- image: '/timeline/main.png',
- alt: 'मार्मिक साप्ताहिक',
- objectPosition: 'center center',
+    image: '/shivsena-janma/%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%BF%E0%A4%95%E0%A4%AE%E0%A4%A7%E0%A5%82%E0%A4%A8%20%E0%A4%89%E0%A4%A0%E0%A4%B2%E0%A4%BE%20%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%86%E0%A4%B5%E0%A4%BE%E0%A4%9C.webp',
+    alt: '‘मार्मिक’मधून उठला मराठी आवाज',
+    objectPosition: 'center center',
   },
   {
- image: '/timeline/image-5.png',
- alt: 'संघटना की पक्ष?',
- objectPosition: 'center center',
+    image: '/shivsena-janma/%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%82%E0%A4%97%E0%A4%9A%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%A4%E0%A5%87%20%E0%A4%9C%E0%A4%A8%E0%A4%A4%E0%A5%87%E0%A4%9A%E0%A4%BE%20%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A4%BE.webp',
+    alt: 'व्यंगचित्रकार ते जनतेचा नेता',
+    objectPosition: 'center center',
   },
   {
- image: '/timeline/image-10.png',
- alt: 'प्रबोधनकार ठाकरे',
- objectPosition: 'center center',
+    image: '/shivsena-janma/%E0%A4%B8%E0%A4%82%E0%A4%98%E0%A4%9F%E0%A4%A8%E0%A5%87%E0%A4%9A%E0%A5%80%20%E0%A4%97%E0%A4%B0%E0%A4%9C%20%E0%A4%86%E0%A4%A3%E0%A4%BF%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AC%E0%A5%8B%E0%A4%A7%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A5%87%20%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%B6%E0%A4%A8.webp',
+    alt: 'संघटनेची गरज आणि प्रबोधनकारांचे मार्गदर्शन',
+    objectPosition: 'center center',
   },
   {
- image: '/timeline/image-4.png',
- alt: '१९ जून १९६६ · स्थापना',
- objectPosition: 'center center',
+    image: '/shivsena-janma/%E0%A5%A7%E0%A5%AF%20%E0%A4%9C%E0%A5%82%E0%A4%A8%20%E0%A5%A7%E0%A5%AF%E0%A5%AC%E0%A5%AC%20%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A5%87%E0%A4%9A%E0%A4%BE%20%E0%A4%9C%E0%A4%A8%E0%A5%8D%E0%A4%AE.webp',
+    alt: '१९ जून १९६६ : शिवसेनेचा जन्म',
+    objectPosition: 'center center',
   },
   {
- image: '/timeline/image-3.png',
- alt: 'शिवसेना नाव',
- objectPosition: 'center center',
+    image: '/shivsena-janma/%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%E2%80%99%20%E0%A4%A8%E0%A4%BE%E0%A4%B5%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%B2%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B0%E0%A4%A3%E0%A4%BE.webp',
+    alt: '‘शिवसेना’ नावामागील प्रेरणा',
+    objectPosition: 'center center',
   },
   {
- image: '/timeline/image-1.png',
- alt: '३० ऑक्टोबर १९६६ · पहिला दसरा मेळावा',
- objectPosition: 'center top',
+    image: '/shivsena-janma/%E0%A4%A6%E0%A4%B8%E0%A4%B0%E0%A4%BE%20%E0%A4%AE%E0%A5%87%E0%A4%B3%E0%A4%BE%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%82%E0%A4%A8%20%E0%A4%89%E0%A4%AD%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A5%87%E0%A4%B2%E0%A5%80%20%E0%A4%9C%E0%A4%A8%E0%A4%B6%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A5%80.webp',
+    alt: 'दसरा मेळाव्यातून उभी राहिलेली जनशक्ती',
+    objectPosition: 'center center',
   },
 ];
 
@@ -103,7 +103,9 @@ function StoryBlock({ index, kicker, text, imageMeta }) {
  {/* ─── Body ─── */}
  <div className="ssj-block__body">
  {kicker && <span className="ssj-block__kicker">{kicker}</span>}
- <p className="ssj-block__text">{text}</p>
+ {(Array.isArray(text) ? text : [text]).map((para, pi) => (
+ <p key={pi} className="ssj-block__text">{para}</p>
+ ))}
  </div>
  </li>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
-import { MH_PATHS } from './maharashtraPaths';
+import MaharashtraMap from './MaharashtraMap.jsx';
 import { useLanguage } from '../../../i18n/LanguageContext';
 import mlasByDistrict from '../../../content/mlas-by-district.json';
 import leadersByDistrict from '../../../content/leaders-by-district.json';
@@ -8,12 +8,11 @@ import {
   DIVISIONS_ORDER,
   DISTRICTS_BY_DIVISION,
 } from '../../../config/districts.js';
-import { PC_TO_DISTRICT } from '../../../config/pcToDistrict.js';
 import { mrMlaFor, asciiToDevanagari } from '../../Leadership/utils/transliterate.js';
 import LeaderPopup from './LeaderPopup.jsx';
 import './RegionExplorer.css';
 
-/* ─── Region → PC constituency mapping ─────────────────────────── */
+/* Per-division colour used to tint the district paths on the map */
 const REGION_COLORS = {
   konkan: '#C44D0E',
   pune: '#D4602A',
@@ -23,20 +22,6 @@ const REGION_COLORS = {
   vidarbha: '#8C2200',
 };
 
-const REGION_MAP = {
-  konkan: ['PC247','PC248','PC249','PC250','PC251','PC252','PC245','PC246','PC255','PC256','PC257','PC258','PC268','PC269','PC270'],
-  pune: ['PC243','PC244','PC259','PC260','PC261','PC271'],
-  nashik: ['PC224','PC225','PC226','PC227','PC241','PC242'],
-  marathwada: ['PC228','PC229','PC230','PC238','PC239','PC240','PC262','PC263','PC264','PC265','PC266','PC267'],
-  amravati: ['PC231','PC237'],
-  vidarbha: ['PC233','PC234','PC235','PC236'],
-};
-
-// Reverse: PC → region
-const PC_TO_REGION = {};
-Object.entries(REGION_MAP).forEach(([region, pcs]) => {
-  pcs.forEach(pc => { PC_TO_REGION[pc] = region; });
-});
 const REGION_LABELS = {
   konkan: { mr: 'कोकण', en: 'Konkan' },
   pune: { mr: 'पुणे', en: 'Pune' },
@@ -71,8 +56,7 @@ export default function RegionExplorer() {
   const { lang: language } = useLanguage();
   const [activeRegion, setActiveRegion] = useState('konkan');
   const [activeDistrict, setActiveDistrict] = useState('mumbai');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, label: '' });
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedLeader, setSelectedLeader] = useState(null);
 
   const lang = (language === 'mr') ? 'mr' : 'en';
@@ -198,8 +182,6 @@ export default function RegionExplorer() {
  );
   }, [sourceMembers, searchQuery]);
 
-  const getRegion = (pcId) => PC_TO_REGION[pcId];
-
   return (
  <section className="region-explorer">
  <div className="region-explorer__inner">
@@ -221,65 +203,16 @@ export default function RegionExplorer() {
  {/* ── MAP SIDE ── */}
  <div className="region-explorer__map-side">
  <div className="region-explorer__svg-wrap">
- <svg
- viewBox="0 0 1126.9 940.43"
- xmlns="http://www.w3.org/2000/svg"
+ <MaharashtraMap
+ lang={lang}
+ activeDistrict={activeDistrict}
+ onSelect={(slug) => {
+ const division = DISTRICTS[slug]?.division;
+ if (division) setActiveRegion(division);
+ setActiveDistrict(slug);
+ }}
  className="region-explorer__svg"
- >
- {/* State outline */}
- {MH_PATHS.filter(p => p.cls === 'cls-2').map(({ id, d }) => (
- <path key={id} d={d} className="mh-outline" />
- ))}
-
- {/* PC paths each colored by its district's parent
- division; the hovered or selected district's PCs get
- a brighter highlight via `mh-district--active`. */}
- {MH_PATHS.filter(p => p.cls === 'cls-1').map(({ id, d }) => {
- const district = PC_TO_DISTRICT[id];
- if (!district) return null;
- const meta = DISTRICTS[district];
- if (!meta) return null;
- const division = meta.division;
- const isActive = district === activeDistrict;
- const color = REGION_COLORS[division];
- const label = meta[lang] || meta.en || district;
- return (
- <path
- key={id}
- d={d}
- className={`mh-district ${isActive ? 'mh-district--active' : ''}`}
- style={{
- '--region-color': color,
- '--region-color-dim': color + '40',
- '--region-color-mid': color + '80',
- }}
- onMouseEnter={(e) => {
- setTooltip({ visible: true, x: e.clientX, y: e.clientY, label });
- }}
- onMouseMove={(e) => {
- setTooltip(t => (t.visible ? { ...t, x: e.clientX, y: e.clientY } : t));
- }}
- onMouseLeave={() => {
- setTooltip(t => ({ ...t, visible: false }));
- }}
- onClick={() => {
- setActiveRegion(division);
- setActiveDistrict(district);
- }}
  />
- );
- })}
- </svg>
-
- {tooltip.visible && (
- <div
- className="region-tooltip"
- style={{ left: tooltip.x, top: tooltip.y }}
- role="tooltip"
- >
- {tooltip.label}
- </div>
- )}
  </div>
 
  </div>

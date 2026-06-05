@@ -1,84 +1,108 @@
 {
   "banner": {
- "mr": {
- "eyebrow": "॥ अशी जन्माला आली शिवसेना ॥",
- "title": "अशी जन्माला आली शिवसेना",
- "subtitle": "मराठी माणसाच्या हितासाठी लढणारा एकमेव पक्ष आणि ज्वलंत हिंदुत्वाचा आग्रहाने पुरस्कार करणारा राजकीय पक्ष म्हणून शिवसेनेचा उदय झाला."
- },
- "en": {
- "eyebrow": "|| HOW SHIV SENA WAS BORN ||",
- "title": "How Shiv Sena Was Born",
- "subtitle": "Shiv Sena rose as the lone party that fought for the welfare of the Marathi people and the political force that championed an ardent Hindutva."
- }
+    "mr": {
+      "eyebrow": "॥ अशी जन्माला आली शिवसेना ॥",
+      "title": "अशी जन्माला आली शिवसेना",
+      "subtitle": "मराठी माणसाच्या हितासाठी लढणारा एकमेव पक्ष आणि ज्वलंत हिंदुत्वाचा आग्रहाने पुरस्कार करणारा राजकीय पक्ष म्हणून शिवसेनेचा उदय झाला."
+    },
+    "en": {
+      "eyebrow": "|| HOW SHIV SENA WAS BORN ||",
+      "title": "How Shiv Sena Was Born",
+      "subtitle": "Shiv Sena rose as the lone party that fought for the welfare of the Marathi people and the political force that championed an ardent Hindutva."
+    }
   },
   "article": {
- "mr": {
- "blocks": [
- {
- "kicker": "मार्मिकची मुळे",
- "text": "मराठी माणसाच्या हितासाठी लढणारा एकमेव पक्ष आणि ज्वलंत हिंदुत्वाचा आग्रहाने पुरस्कार करणारा राजकीय पक्ष म्हणून शिवसेनेचा उदय झाला, त्याची बीजं ‘मार्मिक’ या व्यंगचित्र साप्ताहिकामुळे रुजली गेली. महाराष्ट्राच्या निर्मितीनंतर विशेषतः मुंबईच्या संदर्भात एक प्रश्न वारंवार विचारला जाऊ लागला होता महाराष्ट्रात मुंबई आहे, परंतु मुंबईत महाराष्ट्र कुठे आहे? मराठी माणसांनी रक्त सांडून, चळवळ करुन, केंद्राशी भांडून मुंबईसह महाराष्ट्र मिळवला; परंतु मराठी माणसाला मुंबईत न्याय दिला जात नव्हता. विविध आस्थापनांमधील नोकर भरतीपासून तर उद्योग-व्यवसायापर्यंत सगळीकडून मराठी ठसा पुसला जाताना दिसत होता. व्यंगचित्रकार म्हणून ही राजकीय-सामाजिक स्थिती अभ्यासत असलेले बाळासाहेब ठाकरे त्यामुळे अस्वस्थ होत होते. आपल्या या अस्वस्थतेला एक माध्यम मिळावे म्हणून त्यांनी १३ ऑगस्ट १९६० रोजी ‘मार्मिक’ हे व्यंगचित्र साप्ताहिक सुरु केले."
- },
- {
- "kicker": "मार्मिकचा प्रहार",
- "text": "‘मार्मिक’च्या पहिल्या अंकाचे प्रकाशन महाराष्ट्राचे पहिले मुख्यमंत्री यशवंतराव चव्हाण यांच्या हस्ते झाले होते. मराठी माणसाचे प्रश्न आणि त्याला व्यवस्थेतून डावललं जाणं या विषयावर मार्मिकमधून सतत जोरदार प्रहार होऊ लागले. त्यातलं बाळासाहेबांचं ‘वाचा आणि थंड बसा’ हे सदर प्रचंड गाजलं. त्यामुळे मार्मिकचे कार्यालय आणि बाळासाहेब ठाकरे यांचे निवासस्थान या दोन्ही ठिकाणी मराठी माणसांची व समविचारींची वर्दळ वाढली. मार्मिकमधील अशा प्रकारच्या लेखांसोबतच बाळासाहेबांनी याच विषयांवर सभा घेणे सुरु केले; त्यांच्या भाषणांना आणि व्याख्यानांनाही तसाच प्रचंड प्रतिसाद मिळू लागला."
- },
- {
- "kicker": "संघटना की पक्ष?",
- "text": "हळू हळू बाळासाहेब ठाकरे यांच्या भोवती लोक मराठी भाषिकांचे प्रश्न घेऊन गोळा होऊ लागले. भेटायला येणाऱ्या लोकांपैकी काही लोक पक्ष स्थापनेचा सल्ला देत; परंतु हा सल्ला बाळासाहेबांनी सुरुवातीला झुगारून लावला. ‘लोकांना आपण नक्की एकत्र करूया. परंतु पक्ष काढून नव्हे, तर संघटना काढून. मराठी माणसांची, मराठी हिताचे रक्षण करणारी संघटना काढू या,’ असं बाळासाहेब म्हणू लागले."
- },
- {
- "kicker": "प्रबोधनकारांचा सल्ला",
- "text": "बाळासाहेबांचे वडिल प्रबोधनकार ठाकरे हे स्वतः अतिशय चिकित्सक असे विचारवंत आणि समाज प्रबोधक होते. या सर्व घडामोडी पाहून त्यांनीही बाळासाहेबांना विचारले एखादा पक्ष किंवा संघटना स्थापन करावी असा विचार डोक्यात आहे का? लोक येणार-जाणार, तू मार्गदर्शन करणार असे किती दिवस चालणार? लोकांच्या आवाजाला एकत्रित, संघटित असे रूप देण्याची हीच वेळ आहे."
- },
- {
- "kicker": "शिवसेनेची स्थापना",
- "text": "बाळासाहेबही त्याच दिशेने विचार करत होते. त्यांनी प्रबोधनकारांचे आशीर्वाद घेतले, समविचारी सहकाऱ्यांशी विचार विमर्श केला आणि १९ जून १९६६ रोजी ‘शिवसेना’ या राजकीय पक्षाची स्थापना केली. बाळासाहेबांच्या कुटुंबातील व्यक्तींच्या व काही निवडक सहकाऱ्यांच्या उपस्थितीत शिवसेना पक्ष स्थापनेचा सोहळा साधेपणाने पार पडला. यावेळी एकूण केवळ अठरा लोक हजर होते. नाईक नावाच्या एका कार्यकर्त्याने शेजारच्या किराणा दुकानातून नारळ आणला. सकाळी साडेनऊ वाजता प्रबोधनकारांच्या हस्ते नारळ वाढवून ‘छत्रपती शिवाजी महाराज की जय’ असा उद्घोष करीत शिवसेना पक्ष स्थापन झाल्याची घोषणा करण्यात आली."
- },
- {
- "kicker": "नाव · शिवसेना",
- "text": "राजकीय पक्ष असला तरी ‘पहिले ते समाजकारण आणि मग राजकारण’ अशी भूमिका बाळासाहेबांनी घेतली व ती ‘मार्मिक’मधून सविस्तर मांडली. प्रबोधनकारांनीच या संघटनेला ‘शिवसेना’ असं नाव सूचवलं. चळवळीच्या निमित्ताने प्रबोधनकार संपूर्ण महाराष्ट्रभर फिरत होते; छत्रपती शिवाजी महाराज यांच्याविषयी जनतेच्या मनात असलेली आदराची भावना त्यांनी अनुभवली होती. केवळ नाव घेतले तरी मराठी माणसांची छाती अभिमानाने फूलून येते हे त्यांनी पाहिले होते. त्यामुळे ‘शिवसेना’ हे नाव त्यांनी सूचवले."
- },
- {
- "kicker": "पहिला दसरा मेळावा",
- "text": "‘मार्मिक’मधून संघटनेच्या कार्यकर्त्यांची नोंदणी सुरू झाल्याचे जाहीर करण्यात आले आणि २००० फॉर्म्स तासाभरातच संपले. शिवसेनेचं सदस्यत्व मिळवण्यासाठी झूंबड उडू लागली. महिन्याभरात वीस हजार शिवसैनिकांची नोंदणी झाली. बाळासाहेबांचे विचार, त्यांचे लिखाण, त्यांची भाषणे एवढीच पूंजी शिवसेनेकडे होती त्याच बळावर ३० ऑक्टोबर १९६६ रोजी शिवसेनेचा पहिला दसरा मेळावा झाला. शिवाजी पार्कवर झालेल्या या मेळाव्याला प्रचंड प्रतिसाद मिळाला. प्रबोधनकार ठाकरे यांनी ‘हा बाळ मी आज तुम्हाला दिला’ असे उद्गार या सभेत काढले. त्यानंतर अल्पावधीतच ‘शिवसेना’ ही चार अक्षरे मराठी माणसांच्या मनामनात, घराघरात पोहोचली."
- }
- ],
- "pullQuote": "हा बाळ मी आज तुम्हाला दिला.",
- "pullQuoteAuthor": " प्रबोधनकार ठाकरे · पहिला दसरा मेळावा, ३० ऑक्टोबर १९६६"
- },
- "en": {
- "blocks": [
- {
- "kicker": "Marmik Takes Root",
- "text": "Shiv Sena rose as the only party fighting for the welfare of the Marathi people and the political force that championed an ardent Hindutva and its seed was planted by the cartoon weekly ‘Marmik’. After Maharashtra was carved out, a question began to be asked again and again about Mumbai: Maharashtra contains Mumbai, but where is Maharashtra inside Mumbai? Marathi people had shed blood, agitated and fought with the Centre to win Mumbai for Maharashtra and yet the Marathi person was not getting justice in his own city. From hiring at major establishments to industry and trade, the Marathi imprint was being wiped out everywhere. Studying this political-social condition as a cartoonist, Balasaheb Thackeray grew restless. To give that restlessness a voice, on 13 August 1960 he launched the cartoon weekly ‘Marmik’."
- },
- {
- "kicker": "Marmik Strikes",
- "text": "The first issue of ‘Marmik’ was released by Maharashtra's first Chief Minister, Yashwantrao Chavan. From its pages came sharp, sustained attacks on the injustice being done to the Marathi worker. Balasaheb's column ‘Vacha ani Thand Basa’ (Read and Sit Still) became enormously popular. The Marmik office and Balasaheb's home became crowded with Marathi people and like-minded sympathisers. Alongside the writing, Balasaheb began holding public meetings and the response to his speeches matched the readership of the paper."
- },
- {
- "kicker": "Organisation, Not a Party",
- "text": "Slowly, people began gathering around Balasaheb with the grievances of Marathi speakers. Some of the visitors pressed him to launch a political party, but Balasaheb refused outright at first. ‘We will certainly bring people together,’ he would say, ‘but not as a party as an organisation. An organisation of Marathi people, to protect Marathi interests.’"
- },
- {
- "kicker": "Prabhodankar's Counsel",
- "text": "Balasaheb's father, Prabhodankar Thackeray, was himself a deeply analytical thinker and a social reformer. Watching it all unfold, he asked Balasaheb directly is there a thought in your mind of starting a party or an organisation? People will keep coming and going, you will keep advising how long can that last? Now is the time to give the voice of the people a unified, organised form."
- },
- {
- "kicker": "The Founding",
- "text": "Balasaheb had been thinking in the same direction. He took Prabhodankar's blessings, consulted his like-minded colleagues, and on 19 June 1966 founded the political party ‘Shiv Sena’. The founding ceremony was carried out simply, in the presence of Balasaheb's family and a handful of select colleagues eighteen people in all. A worker named Naik brought a coconut from the kirana shop next door. At nine-thirty in the morning, Prabhodankar broke the coconut, raised the cry of ‘Chhatrapati Shivaji Maharaj ki Jai’ and announced that Shiv Sena had been founded."
- },
- {
- "kicker": "The Name · Shiv Sena",
- "text": "Even as a political party, Balasaheb's clear position was ‘society first, politics second’ and he set it out in detail in ‘Marmik’. It was Prabhodankar who suggested the name ‘Shiv Sena’. Travelling Maharashtra for the social movement, Prabhodankar had personally seen the reverence in the public's heart for Chhatrapati Shivaji Maharaj. He had seen how the very name made the Marathi chest swell with pride and so the name ‘Shiv Sena’ was suggested."
- },
- {
- "kicker": "First Dasara Melava",
- "text": "‘Marmik’ announced that registration for the organisation's members had begun and 2,000 forms ran out within an hour. People rushed to take up Shiv Sena membership. In a month, twenty thousand Shiv Sainiks had registered. Balasaheb's thought, his writing and his speeches were the only capital Shiv Sena had and on that strength alone, on 30 October 1966, the first Dasara Melava of Shiv Sena was held at Shivaji Park. The response was enormous. At the rally, Prabhodankar Thackeray declared: ‘This Bal I am giving to you today.’ In a short while after that, the four letters Shiv Sena had reached every Marathi heart, every Marathi home."
- }
- ],
- "pullQuote": "This Bal I am giving to you today.",
- "pullQuoteAuthor": " Prabhodankar Thackeray · First Dasara Melava, 30 October 1966"
- }
+    "mr": {
+      "blocks": [
+        {
+          "kicker": "मराठी माणसाच्या वेदनेतून जन्मलेली चळवळ!",
+          "text": [
+            "संयुक्त महाराष्ट्राच्या लढ्यात मराठी माणसाने रक्त सांडले, संघर्ष केला आणि मुंबईसह महाराष्ट्र मिळवला. मात्र राज्य निर्मितीनंतरही एक प्रश्न सतत विचारला जाऊ लागला की \"महाराष्ट्रात मुंबई आहे, पण मुंबईत महाराष्ट्र कुठे आहे?\"",
+            "मुंबईतील नोकऱ्या, उद्योग-व्यवसाय आणि विविध आस्थापनांमधून मराठी माणूस हळूहळू मागे पडत होता. स्वतःच्या राज्यातच त्याच्यावर अन्याय होत होता. मराठी माणसाचा ठसा पुसला जात असल्याची भावना सर्वत्र निर्माण झाली होती. हीच वेदना पुढे एका मोठ्या जनचळवळीचे कारण ठरली."
+          ]
+        },
+        {
+          "kicker": "‘मार्मिक’मधून उठला मराठी आवाज!",
+          "text": [
+            "ही सामाजिक आणि राजकीय परिस्थिती व्यंगचित्रकार बाळासाहेब ठाकरे यांना अस्वस्थ करत होती. आपल्या मनातील असंतोषाला दिशा देण्यासाठी त्यांनी १३ ऑगस्ट १९६० रोजी ‘मार्मिक’ या व्यंगचित्र साप्ताहिकाची स्थापना केली. महाराष्ट्राचे पहिले मुख्यमंत्री यशवंतराव चव्हाण यांच्या हस्ते पहिल्या अंकाचे प्रकाशन झाले.",
+            "‘मार्मिक’मधून मराठी माणसाच्या प्रश्नांवर सातत्याने घणाघाती प्रहार सुरू झाले. मराठी तरुणांना नोकऱ्यांमध्ये डावलले जाणे, प्रशासनातील अन्याय आणि मराठी समाजाचे दुर्लक्षित अस्तित्व याविरुद्ध ‘मार्मिक’ने आवाज उठवला. त्यामुळे हे साप्ताहिक लवकरच मराठी जनतेचे प्रभावी व्यासपीठ बनले."
+          ]
+        },
+        {
+          "kicker": "व्यंगचित्रकार ते जनतेचा नेता!",
+          "text": [
+            "मार्मिकमधील बाळासाहेबांचे ‘वाचा आणि थंड बसा’ हे सदर प्रचंड लोकप्रिय झाले. त्यांच्या लेखनातील धार, व्यंगचित्रांतील मार्मिकता आणि अन्यायाविरुद्धची भूमिका यामुळे मराठी जनतेत मोठी जागृती निर्माण झाली.",
+            "मार्मिकचे कार्यालय आणि बाळासाहेबांचे निवासस्थान येथे मराठी माणसांची वर्दळ वाढू लागली. लोक आपल्या समस्या, तक्रारी आणि गाऱ्हाणी घेऊन त्यांच्याकडे येऊ लागले. त्याच काळात बाळासाहेबांनी विविध ठिकाणी सभा, व्याख्याने आणि जनसंवाद सुरू केले. त्यांच्या भाषणांना उत्स्फूर्त प्रतिसाद मिळू लागला आणि हळूहळू त्यांच्या नेतृत्वाभोवती मराठी जनतेचा विश्वास दृढ होत गेला."
+          ]
+        },
+        {
+          "kicker": "संघटनेची गरज आणि प्रबोधनकारांचे मार्गदर्शन!",
+          "text": [
+            "बाळासाहेबांना भेटणाऱ्या अनेकांनी राजकीय पक्ष स्थापन करण्याचा सल्ला दिला. मात्र बाळासाहेबांची भूमिका वेगळी होती. ते म्हणत, \"लोकांना एकत्र आणायचे, पण पक्षासाठी नव्हे; मराठी माणसाच्या हिताचे रक्षण करणारी संघटना उभी करण्यासाठी.\"",
+            "याच काळात प्रबोधनकार ठाकरे यांनीही या घडामोडींकडे बारकाईने लक्ष दिले. त्यांनी बाळासाहेबांना विचारले, \"लोक येतात, जातात, तू मार्गदर्शन करतोस; पण हे किती दिवस चालणार? या जनभावनांना संघटीत रूप देण्याची वेळ आता आली आहे.\"",
+            "प्रबोधनकारांच्या या मार्गदर्शनाने बाळासाहेबांच्या विचारांना दिशा मिळाली आणि संघटना स्थापनेची प्रक्रिया वेगाने पुढे सरकली."
+          ]
+        },
+        {
+          "kicker": "१९ जून १९६६ : शिवसेनेचा जन्म!",
+          "text": [
+            "प्रबोधनकार ठाकरे यांचे आशीर्वाद, समविचारी सहकाऱ्यांचे सहकार्य आणि मराठी जनतेचा विश्वास यांच्या बळावर १९ जून १९६६ रोजी शिवसेनेची स्थापना झाली.",
+            "हा सोहळा अत्यंत साधेपणाने पार पडला. एकूण केवळ अठरा जण उपस्थित होते. त्यामध्ये ठाकरे कुटुंबातील चार सदस्य यामध्ये स्वतः बाळासाहेब ठाकरे, त्यांचे दोन बंधू आणि प्रबोधनकार ठाकरे यांचा समावेश होता.",
+            "नाईक नावाच्या एका कार्यकर्त्याने शेजारच्या किराणा दुकानातून नारळ आणला. सकाळी साडेनऊ वाजता प्रबोधनकार ठाकरे यांच्या हस्ते नारळ फोडण्यात आला आणि \"छत्रपती शिवाजी महाराज की जय!\" या गगनभेदी घोषणेने शिवसेनेच्या स्थापनेची घोषणा करण्यात आली. मराठी स्वाभिमानाच्या नव्या पर्वाची ही ऐतिहासिक सुरुवात होती."
+          ]
+        },
+        {
+          "kicker": "‘शिवसेना’ नावामागील प्रेरणा!",
+          "text": [
+            "शिवसेना स्थापनेनंतर बाळासाहेबांनी स्पष्ट भूमिका मांडली की \"पहिले समाजकारण आणि मग राजकारण.\" शिवसेना ही सुरुवातीला मराठी माणसाच्या प्रश्नांसाठी उभी राहणारी सामाजिक संघटना म्हणून कार्यरत झाली.",
+            "या संघटनेला ‘शिवसेना’ हे नाव प्रबोधनकार ठाकरे यांनी सुचवले. महाराष्ट्रभर फिरताना त्यांनी अनुभवले होते की, छत्रपती शिवाजी महाराजांचे नाव उच्चारताच मराठी माणसाची छाती अभिमानाने फुलते. मराठी अस्मिता, स्वाभिमान आणि संघर्षाचे प्रतीक म्हणून छत्रपती शिवाजी महाराजांची सेना अर्थात ‘शिवसेना’ हे नाव निश्चित करण्यात आले."
+          ]
+        },
+        {
+          "kicker": "दसरा मेळाव्यातून उभी राहिलेली जनशक्ती!",
+          "text": [
+            "‘मार्मिक’मधून शिवसेनेच्या सदस्य नोंदणीची घोषणा करण्यात आली आणि अवघ्या एका तासात दोन हजार अर्ज संपले. सदस्यत्वासाठी अक्षरशः झुंबड उडाली. महिन्याभरात वीस हजारांहून अधिक शिवसैनिकांची नोंदणी झाली. ना पैसा, ना सत्ता, ना मोठी यंत्रणा, फक्त बाळासाहेबांचे विचार, त्यांचे लेखन, त्यांची भाषणे आणि मराठी जनतेचा विश्वास हीच शिवसेनेची खरी ताकद होती.",
+            "या ताकदीची पहिली विराट झलक ३० ऑक्टोबर १९६६ रोजी शिवाजी पार्कवर भरलेल्या पहिल्या दसरा मेळाव्यात दिसली. या मेळाव्याला प्रचंड जनसमुदाय उपस्थित होता. त्या ऐतिहासिक सभेत प्रबोधनकार ठाकरे यांनी भावनिक शब्दांत घोषणा केली कि \"हा बाळ मी आज महाराष्ट्राला अर्पण करत आहे!\" आणि त्या क्षणापासून शिवसेना हे नाव महाराष्ट्राच्या कानाकोपऱ्यात पोहोचले. अल्पावधीतच शिवसेना मराठी माणसाच्या स्वाभिमानाची, संघर्षाची आणि हक्कांच्या लढ्याची सर्वात प्रभावी संघटना बनली.",
+            "शिवसेना ही केवळ एक संघटना नव्हती तर ती मराठी स्वाभिमान, हिंदुत्व आणि अन्यायाविरुद्धच्या संघर्षाची जाज्वल्य ज्योत होती आणि आजही आहे!"
+          ]
+        }
+      ],
+      "pullQuote": "हा बाळ मी आज महाराष्ट्राला अर्पण करत आहे!",
+      "pullQuoteAuthor": " प्रबोधनकार ठाकरे · पहिला दसरा मेळावा, ३० ऑक्टोबर १९६६"
+    },
+    "en": {
+      "blocks": [
+        {
+          "kicker": "Marmik Takes Root",
+          "text": "Shiv Sena rose as the only party fighting for the welfare of the Marathi people and the political force that championed an ardent Hindutva and its seed was planted by the cartoon weekly ‘Marmik’. After Maharashtra was carved out, a question began to be asked again and again about Mumbai: Maharashtra contains Mumbai, but where is Maharashtra inside Mumbai? Marathi people had shed blood, agitated and fought with the Centre to win Mumbai for Maharashtra and yet the Marathi person was not getting justice in his own city. From hiring at major establishments to industry and trade, the Marathi imprint was being wiped out everywhere. Studying this political-social condition as a cartoonist, Balasaheb Thackeray grew restless. To give that restlessness a voice, on 13 August 1960 he launched the cartoon weekly ‘Marmik’."
+        },
+        {
+          "kicker": "Marmik Strikes",
+          "text": "The first issue of ‘Marmik’ was released by Maharashtra's first Chief Minister, Yashwantrao Chavan. From its pages came sharp, sustained attacks on the injustice being done to the Marathi worker. Balasaheb's column ‘Vacha ani Thand Basa’ (Read and Sit Still) became enormously popular. The Marmik office and Balasaheb's home became crowded with Marathi people and like-minded sympathisers. Alongside the writing, Balasaheb began holding public meetings and the response to his speeches matched the readership of the paper."
+        },
+        {
+          "kicker": "Organisation, Not a Party",
+          "text": "Slowly, people began gathering around Balasaheb with the grievances of Marathi speakers. Some of the visitors pressed him to launch a political party, but Balasaheb refused outright at first. ‘We will certainly bring people together,’ he would say, ‘but not as a party as an organisation. An organisation of Marathi people, to protect Marathi interests.’"
+        },
+        {
+          "kicker": "Prabhodankar's Counsel",
+          "text": "Balasaheb's father, Prabhodankar Thackeray, was himself a deeply analytical thinker and a social reformer. Watching it all unfold, he asked Balasaheb directly is there a thought in your mind of starting a party or an organisation? People will keep coming and going, you will keep advising how long can that last? Now is the time to give the voice of the people a unified, organised form."
+        },
+        {
+          "kicker": "The Founding",
+          "text": "Balasaheb had been thinking in the same direction. He took Prabhodankar's blessings, consulted his like-minded colleagues, and on 19 June 1966 founded the political party ‘Shiv Sena’. The founding ceremony was carried out simply, in the presence of Balasaheb's family and a handful of select colleagues eighteen people in all. A worker named Naik brought a coconut from the kirana shop next door. At nine-thirty in the morning, Prabhodankar broke the coconut, raised the cry of ‘Chhatrapati Shivaji Maharaj ki Jai’ and announced that Shiv Sena had been founded."
+        },
+        {
+          "kicker": "The Name · Shiv Sena",
+          "text": "Even as a political party, Balasaheb's clear position was ‘society first, politics second’ and he set it out in detail in ‘Marmik’. It was Prabhodankar who suggested the name ‘Shiv Sena’. Travelling Maharashtra for the social movement, Prabhodankar had personally seen the reverence in the public's heart for Chhatrapati Shivaji Maharaj. He had seen how the very name made the Marathi chest swell with pride and so the name ‘Shiv Sena’ was suggested."
+        },
+        {
+          "kicker": "First Dasara Melava",
+          "text": "‘Marmik’ announced that registration for the organisation's members had begun and 2,000 forms ran out within an hour. People rushed to take up Shiv Sena membership. In a month, twenty thousand Shiv Sainiks had registered. Balasaheb's thought, his writing and his speeches were the only capital Shiv Sena had and on that strength alone, on 30 October 1966, the first Dasara Melava of Shiv Sena was held at Shivaji Park. The response was enormous. At the rally, Prabhodankar Thackeray declared: ‘This Bal I am giving to you today.’ In a short while after that, the four letters Shiv Sena had reached every Marathi heart, every Marathi home."
+        }
+      ],
+      "pullQuote": "This Bal I am giving to you today.",
+      "pullQuoteAuthor": " Prabhodankar Thackeray · First Dasara Melava, 30 October 1966"
+    }
   }
 }

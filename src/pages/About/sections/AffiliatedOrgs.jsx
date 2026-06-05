@@ -224,7 +224,6 @@ function OrgCard({ org, index, ctaLabel }) {
      have tag + body filled in). */}
  {org.tag && <span className="org-card__tag">{org.tag}</span>}
  <h3 className="org-card__name">{org.name}</h3>
- {org.body && <p className="org-card__desc">{org.body}</p>}
 
  <span className="org-card__divider" aria-hidden="true" />
 

@@ -9,7 +9,7 @@
 }
 
 .region-explorer__inner {
-  max-width: 1280px;
+  max-width: 1460px;
   margin: 0 auto;
   padding: 0 48px;
 }
@@ -53,8 +53,8 @@
 /* ── Body layout ─────────────────────────────── */
 .region-explorer__body {
   display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 40px;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
   align-items: start;
 }
 
@@ -72,7 +72,7 @@
   background: rgba(26, 20, 16, 0.03);
   border-radius: 16px;
   border: 1px solid rgba(26, 20, 16, 0.07);
-  padding: 24px;
+  padding: 12px;
   overflow: hidden;
 }
 
@@ -107,34 +107,42 @@
   cursor: pointer;
 }
 
-/* State outline (cls-2) */
-.mh-outline {
-  fill: none;
-  stroke: rgba(196, 77, 14, 0.25);
-  stroke-width: 2;
-  pointer-events: none;
-}
-
-/* District paths (cls-1) */
+/* District polygons — fill is set inline per district (orange heat-tints). */
 .mh-district {
-  fill: var(--region-color-dim, rgba(196, 77, 14, 0.15));
-  stroke: var(--paper, #FAF6EE);
+  stroke: #ffffff;
   stroke-width: 0.8;
-  transition: fill 0.2s ease, filter 0.2s ease, stroke-width 0.2s ease;
+  stroke-linejoin: round;
+  transition: filter 0.18s ease, stroke-width 0.18s ease;
   cursor: pointer;
 }
 
 /* Soft hover hint interactive feedback only, NOT a selection */
 .mh-district:hover {
-  fill: var(--region-color-mid, rgba(196, 77, 14, 0.5));
+  filter: brightness(0.92);
 }
 
 /* Active = the district the user actually clicked */
 .mh-district--active {
-  fill: var(--region-color, #C44D0E);
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
-  stroke: var(--paper, #FAF6EE);
-  stroke-width: 1.2;
+  filter: brightness(0.86) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.28));
+  stroke: #7a3c0a;
+  stroke-width: 1.6;
+}
+
+/* Red HQ dots */
+.mh-dot {
+  fill: #d40000;
+  pointer-events: none;
+}
+
+/* Marathi district labels */
+.mh-label {
+  fill: #1a1410;
+  font-weight: 700;
+  font-family: 'Noto Sans Devanagari', 'Mukta', 'Mangal', 'Nirmala UI', sans-serif;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 2.4px;
+  pointer-events: none;
 }
 
 /* ── Legend pills ────────────────────────────── */

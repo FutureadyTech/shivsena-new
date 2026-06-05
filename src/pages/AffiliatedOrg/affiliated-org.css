@@ -160,3 +160,88 @@
   .aff-org__back,
   .aff-org__back svg { animation: none; transition: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   AFFILIATED ORG — detail page (description + पदाधिकारी cards)
+═══════════════════════════════════════════════════════════════ */
+.aff-detail {
+  position: relative;
+  padding: 140px 32px 110px;
+  overflow: hidden;
+}
+.aff-detail__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  animation: affOrgRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.aff-detail__head {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 70px;
+}
+.aff-detail__name {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-size: clamp(2rem, 4.4vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: #fa6919;
+  margin: 14px 0 0;
+  letter-spacing: -0.01em;
+}
+.aff-detail__body {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.9;
+  color: var(--body-text, #5C544A);
+  max-width: 780px;
+  margin: 6px auto 0;
+  text-align: center;
+}
+
+/* पदाधिकारी block */
+.aff-detail__pad { margin-top: 8px; }
+.aff-detail__pad-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 700;
+  color: #fa6919;
+  margin: 0 0 30px;
+}
+.aff-detail__pad-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(196, 77, 14, 0.12);
+  color: var(--saffron-on-light, #C44D0E);
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* Fixed-width, centered cards (overrides the 4-col leadership grid so
+   orgs with 1–3 office bearers stay centred instead of left-stranded). */
+.aff-detail__grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  justify-content: center;
+  gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.aff-detail .aff-org__back { margin: 56px auto 0; display: inline-flex; }
+
+@media (max-width: 600px) {
+  .aff-detail { padding: 120px 18px 90px; }
+  .aff-detail__head { margin-bottom: 48px; }
+}

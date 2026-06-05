@@ -62,15 +62,13 @@
 /* ─── Media ─── */
 .ssj-block__media {
   position: relative;
-  height: 500px;
   border-radius: 22px;
   overflow: hidden;
 }
 
 .ssj-block__media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* show the image at its natural aspect — no forced crop */
   display: block;
   background: var(--paper-soft, #FCFBF7);
   box-shadow:
@@ -288,7 +286,6 @@
   .ssj-article { padding: 96px 28px 120px; }
   .ssj-article__list { gap: 90px; }
   .ssj-block { gap: 44px; }
-  .ssj-block__media { height: 440px; }
   .ssj-quote { margin-top: 96px; padding: 42px 36px 36px; }
 }
 
@@ -304,7 +301,6 @@
   .ssj-block--right .ssj-block__media { order: 0; }
   .ssj-block--right .ssj-block__body  { order: 1; }
 
-  .ssj-block__media { height: 340px; }
   .ssj-block__media--contain { padding: 26px; }
   .ssj-block__text { font-size: 0.98rem; line-height: 1.85; text-align: left; }
 

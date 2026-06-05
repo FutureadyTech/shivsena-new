@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { MH_PATHS } from '../../Home/sections/maharashtraPaths.js';
+import MaharashtraMap from '../../Home/sections/MaharashtraMap.jsx';
 import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
 import { useContent } from '../../../content/_shared/useContent.js';
 import { useLanguage } from '../../../i18n/LanguageContext.jsx';
@@ -10,7 +10,6 @@ import {
   DIVISION_LABELS,
   ALL_DISTRICTS,
 } from '../../../config/districts.js';
-import { PC_TO_DISTRICT } from '../../../config/pcToDistrict.js';
 import './RegionMap.css';
 
 /* Per-division colour used to tint the PC paths on the map */
@@ -43,8 +42,7 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
   const t = useContent(leadershipContent.map);
   const headerRef = useScrollReveal(0.2);
 
-  const [query, setQuery] = useState('');
-  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, label: '' });
+  const [query, setQuery] = useState('');
 
   const districts = useMemo(buildDistricts, []);
 
@@ -75,57 +73,12 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
 
  {/* ── SVG MAP ── */}
  <div className="rmap__svg-wrap">
- <svg
- viewBox="0 0 1126.9 940.43"
- xmlns="http://www.w3.org/2000/svg"
+ <MaharashtraMap
+ lang={lang}
+ activeDistrict={activeDistrict}
+ onSelect={(slug) => onSelectDistrict?.(slug)}
  className="rmap__svg"
- aria-label="Maharashtra map"
- >
- {MH_PATHS.filter((p) => p.cls === 'cls-2').map(({ id, d }) => (
- <path key={id} d={d} className="mh-outline" />
- ))}
- {MH_PATHS.filter((p) => p.cls === 'cls-1').map(({ id, d }) => {
- const district = PC_TO_DISTRICT[id];
- if (!district) return null;
- const meta = DISTRICTS[district];
- if (!meta) return null;
- const isActive = district === activeDistrict;
- const color = REGION_COLORS[meta.division];
- const label = meta[lang] || meta.en || district;
- return (
- <path
- key={id}
- d={d}
- className={`mh-district ${isActive ? 'mh-district--active' : ''}`}
- style={{
- '--region-color': color,
- '--region-color-dim': color + '40',
- '--region-color-mid': color + '80',
- }}
- onMouseEnter={(e) => {
- setTooltip({ visible: true, x: e.clientX, y: e.clientY, label });
- }}
- onMouseMove={(e) => {
- setTooltip((t2) => (t2.visible ? { ...t2, x: e.clientX, y: e.clientY } : t2));
- }}
- onMouseLeave={() => {
- setTooltip((t2) => ({ ...t2, visible: false }));
- }}
- onClick={() => onSelectDistrict?.(district)}
  />
- );
- })}
- </svg>
-
- {tooltip.visible && (
- <div
- className="rmap-tooltip"
- style={{ left: tooltip.x, top: tooltip.y }}
- role="tooltip"
- >
- {tooltip.label}
- </div>
- )}
 
  <div className="rmap__hint" aria-hidden="true">
  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
