@@ -27,46 +27,6 @@ function OrgIconAuto({ orgId }) {
   );
 }
 
-/* Party-wide socials used as the default for every org card. If an org
- later gets its own handles in about.json (`org.socials`), those override. */
-const DEFAULT_SOCIALS = {
-  facebook:  'https://www.facebook.com/Shivsenaofc',
-  twitter: 'https://x.com/Shivsenaofc',
-  instagram: 'https://www.instagram.com/shivsenaofc/',
-};
-
-const SOCIAL_META = [
-  {
- id: 'facebook',
- label: 'Facebook',
- icon: (
- <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
- <path d="M22 12a10 10 0 1 0-11.56 9.88V14.9H7.9V12h2.54V9.8c0-2.5 1.5-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.27c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.9h-2.33v6.98A10 10 0 0 0 22 12z" />
- </svg>
- ),
-  },
-  {
- id: 'twitter',
- label: 'X / Twitter',
- icon: (
- <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
- <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.79l-5.31-6.94L4.78 22H1.52l8.02-9.17L1 2h6.95l4.8 6.34L18.244 2zm-2.38 18h1.88L7.27 4H5.26l10.6 16z" />
- </svg>
- ),
-  },
-  {
- id: 'instagram',
- label: 'Instagram',
- icon: (
- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
- <rect x="3" y="3" width="18" height="18" rx="5" />
- <circle cx="12" cy="12" r="4" />
- <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
- </svg>
- ),
-  },
-];
-
 /* Optional per-org Flaticon overrides (kept for back-compat with
    the original 9 org IDs that had bespoke PNG icons). When the
    current PDF-driven list has no entry here, we fall back to
@@ -239,41 +199,10 @@ function OrgCard({ org, index, ctaLabel }) {
  <polyline points="12 5 19 12 12 19" />
  </svg>
  </Link>
-
- <OrgSocials socials={org.socials} orgName={org.name} />
  </div>
 
  {/* Left accent rail that fills in on hover */}
  <span className="org-card__rail" aria-hidden="true" />
  </article>
-  );
-}
-
-/* ── Social row beside the CTA ────────────────────────────
- Reads URLs from the org's own `socials` field first; falls
- back to the party-wide DEFAULT_SOCIALS when missing. */
-function OrgSocials({ socials, orgName }) {
-  const resolved = { ...DEFAULT_SOCIALS, ...(socials || {}) };
-  return (
- <div className="org-card__socials" aria-label={`${orgName} social profiles`}>
- {SOCIAL_META.map((s) => {
- const href = resolved[s.id];
- if (!href || href === '#') return null;
- return (
- <a
- key={s.id}
- href={href}
- target="_blank"
- rel="noopener noreferrer"
- className={`org-card__social org-card__social--${s.id}`}
- aria-label={s.label}
- title={s.label}
- onClick={(e) => e.stopPropagation()}
- >
- {s.icon}
- </a>
- );
- })}
- </div>
   );
 }

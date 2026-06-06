@@ -1671,7 +1671,8 @@
     },
     {
       "id": "districtHead-3",
-      "name": "श्री. मारुती धिंडे"
+      "name": "श्री. मारुती धिंडे",
+      "photo": "/leaders/untitled%20leaders/03_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%81%E0%A4%A4%E0%A5%80%20%E0%A4%A7%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "districtHead-4",
@@ -1731,7 +1732,8 @@
     },
     {
       "id": "districtHead-16",
-      "name": "श्री. शशिकांत चव्हाण"
+      "name": "श्री. शशिकांत चव्हाण",
+      "photo": "/leaders/untitled%20leaders/16%20-%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B6%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%A4%20%E0%A4%9A%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3.png"
     },
     {
       "id": "districtHead-17",
@@ -1895,7 +1897,8 @@
     },
     {
       "id": "districtHead-51",
-      "name": "श्री. बजरंग पाटील"
+      "name": "श्री. बजरंग पाटील",
+      "photo": "/leaders/untitled%20leaders/51_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%AC%E0%A4%9C%E0%A4%B0%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.png"
     },
     {
       "id": "districtHead-52",
@@ -2044,7 +2047,8 @@
     },
     {
       "id": "districtHead-82",
-      "name": "श्री. आनंद शेषराव भरोसे"
+      "name": "श्री. आनंद शेषराव भरोसे",
+      "photo": "/leaders/untitled%20leaders/82_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%86%E0%A4%A8%E0%A4%82%E0%A4%A6%20%E0%A4%B6%E0%A5%87%E0%A4%B7%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%AD%E0%A4%B0%E0%A5%8B%E0%A4%B8%E0%A5%87.png"
     },
     {
       "id": "districtHead-83",
@@ -2057,7 +2061,8 @@
     },
     {
       "id": "districtHead-85",
-      "name": "श्री. संतोष बद्रे"
+      "name": "श्री. संतोष बद्रे",
+      "photo": "/leaders/untitled%20leaders/85_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B8%E0%A4%82%E0%A4%A4%E0%A5%8B%E0%A4%B7%20%E0%A4%AC%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "districtHead-86",
@@ -2342,14 +2347,16 @@
       "name": "सौ. पूजा प्रल्हाद धुमाळ",
       "role": "सिन्नर, देवळाली, इगतपुरी",
       "phone": "7770001095",
-      "female": true
+      "female": true,
+      "photo": "/leaders/untitled%20leaders/19_%E0%A4%B8%E0%A5%8C.%20%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A6%20%E0%A4%A7%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B3.png"
     },
     {
       "id": "wdh-20",
       "name": "सौ. सुवर्णाताई मटाले",
       "role": "नाशिक पूर्व, पश्चिम व मध्य",
       "phone": "9552585292",
-      "female": true
+      "female": true,
+      "photo": "/leaders/untitled%20leaders/20_%E0%A4%B8%E0%A5%8C.%20%E0%A4%B8%E0%A5%81%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AE%E0%A4%9F%E0%A4%BE%E0%A4%B2%E0%A5%87.png"
     },
     {
       "id": "wdh-21",
@@ -2386,7 +2393,8 @@
       "name": "सौ. हेमाताई हेमाडे",
       "role": "धुळे शहर पूर्व आणि शिंदखेडा तालुका",
       "phone": "9168155527",
-      "female": true
+      "female": true,
+      "photo": "/leaders/untitled%20leaders/25_%E0%A4%B8%E0%A5%8C.%20%E0%A4%B9%E0%A5%87%E0%A4%AE%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B9%E0%A5%87%E0%A4%AE%E0%A4%BE%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "wdh-26",
