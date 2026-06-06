@@ -24,6 +24,7 @@ const EVENT_IMAGES = {
   'year-1989':  '/timeline/1989.webp',
   'year-1995a': '/timeline/1995.webp',
   'year-1995b': '/timeline/1995-2.webp',
+  'year-2001':  '/timeline/2001.jpeg',
   'year-2012':  '/timeline/2012.webp',
   'year-2014':  '/timeline/2014.webp',
   'year-2022':  '/timeline/2022.webp',
