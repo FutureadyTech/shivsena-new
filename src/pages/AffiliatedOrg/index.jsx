@@ -36,7 +36,10 @@ export default function AffiliatedOrg() {
   const { slug } = useParams();
   const { lang } = useLanguage();
   const affiliated = useContent(aboutContent.affiliated);
-  const org = affiliated.orgs?.find((o) => o.id === slug);
+  const salangna = useContent(aboutContent.salangna);
+  const org =
+    affiliated.orgs?.find((o) => o.id === slug) ||
+    salangna.orgs?.find((o) => o.id === slug);
 
   const orgName = org?.name ?? slug;
   const orgTag = org?.tag;

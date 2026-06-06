@@ -938,7 +938,8 @@
       "id": "deputy-9",
       "name": "श्री. हेमंत पाटील",
       "role": "वि.प.स., मा. खासदार",
-      "phone": "7030990000"
+      "phone": "7030990000",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/09_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B9%E0%A5%87%E0%A4%AE%E0%A4%82%E0%A4%A4%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.png"
     },
     {
       "id": "deputy-10",
@@ -986,7 +987,8 @@
       "id": "deputy-16",
       "name": "श्री. चिमणराव पाटील",
       "role": "मा. आमदार",
-      "phone": "9422771967"
+      "phone": "9422771967",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/16_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BF%E0%A4%AE%E0%A4%A3%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.png"
     },
     {
       "id": "deputy-17",
@@ -1019,31 +1021,36 @@
       "id": "deputy-21",
       "name": "श्री. रविंद्र फाटक",
       "role": "मा. आमदार",
-      "phone": "9819089999"
+      "phone": "9819089999",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/21_%E0%A4%B0%E0%A4%B5%E0%A5%80%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%AB%E0%A4%BE%E0%A4%9F%E0%A4%95_.png"
     },
     {
       "id": "deputy-22",
       "name": "श्री. सदानंद चव्हाण",
       "role": "मा. आमदार",
-      "phone": "9822129642"
+      "phone": "9822129642",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/22_%20%E0%A4%B8%E0%A4%A6%E0%A4%BE%E0%A4%A8%E0%A4%82%E0%A4%A6%20%E0%A4%9A%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3.png"
     },
     {
       "id": "deputy-23",
       "name": "श्री. कृष्णा हेगडे",
       "role": "मा. आमदार",
-      "phone": "9821372777"
+      "phone": "9821372777",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/23_%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A4%BE%20%E0%A4%B9%E0%A5%87%E0%A4%97%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "deputy-24",
       "name": "श्री. संजय कदम",
       "role": "मा. आमदार",
-      "phone": "9673639639"
+      "phone": "9673639639",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/24_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A4%82%E0%A4%9C%E0%A4%AF%20%E0%A4%95%E0%A4%A6%E0%A4%AE.png"
     },
     {
       "id": "deputy-25",
       "name": "श्री. यशवंत जाधव",
       "role": "उपनेते",
-      "phone": "9987147222"
+      "phone": "9987147222",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/25_%E0%A4%AF%E0%A4%B6%E0%A4%B5%E0%A4%82%E0%A4%A4%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.png"
     },
     {
       "id": "deputy-26",
@@ -1055,175 +1062,204 @@
       "id": "deputy-27",
       "name": "ॲड. अरुणजी जगताप",
       "role": "ग्राहक संरक्षण कक्ष",
-      "phone": "9820140878"
+      "phone": "9820140878",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/27_%20%E0%A4%85%E0%A4%B0%E0%A5%81%E0%A4%A3%E0%A4%9C%E0%A5%80%20%E0%A4%9C%E0%A4%97%E0%A4%A4%E0%A4%BE%E0%A4%AA_.png"
     },
     {
       "id": "deputy-28",
       "name": "श्री. अनिल पडवळ",
       "role": "शिक्षकेत्तर कर्मचारी सेना",
-      "phone": "9930194202"
+      "phone": "9930194202",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/28_%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%AA%E0%A4%A1%E0%A4%B5%E0%A4%B3.png"
     },
     {
       "id": "deputy-29",
       "name": "श्री. इरफान सय्यद",
       "role": "अल्प संख्यांक विभाग",
-      "phone": "9850417575"
+      "phone": "9850417575",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/29_%E0%A4%87%E0%A4%B0%E0%A4%AB%E0%A4%BE%E0%A4%A8%20%E0%A4%B8%E0%A4%AF%E0%A5%8D%E0%A4%AF%E0%A4%A6_.png"
     },
     {
       "id": "deputy-30",
       "name": "श्री. कमलेश राय",
       "role": "उपनेते",
-      "phone": "9820006067"
+      "phone": "9820006067",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/30_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%95%E0%A4%AE%E0%A4%B2%E0%A5%87%E0%A4%B6%20%E0%A4%B0%E0%A4%BE%E0%A4%AF.png"
     },
     {
       "id": "deputy-31",
       "name": "श्री. सुनील नरसाळे",
       "role": "उपनेते",
-      "phone": "9821206960"
+      "phone": "9821206960",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/31_%20%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A5%80%E0%A4%B2%20%E0%A4%A8%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%B3%E0%A5%87_.png"
     },
     {
       "id": "deputy-32",
       "name": "श्री. राजू वाघमारे",
       "role": "उपनेते",
-      "phone": "9920252363"
+      "phone": "9920252363",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/32_%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%82%20%E0%A4%B5%E0%A4%BE%E0%A4%98%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "deputy-33",
       "name": "श्री. अजय बोरस्ते",
       "role": "उपनेते",
-      "phone": "9890975999"
+      "phone": "9890975999",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/33_%E0%A4%85%E0%A4%9C%E0%A4%AF%20%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87_.png"
     },
     {
       "id": "deputy-34",
       "name": "श्री. विजय करंजकर",
       "role": "उपनेते",
-      "phone": "9767277999"
+      "phone": "9767277999",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/34_%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%82%E0%A4%9C%E0%A4%95%E0%A4%B0_.png"
     },
     {
       "id": "deputy-35",
       "name": "श्री. संजय आंग्रे",
       "role": "उपनेते",
-      "phone": "9423881071"
+      "phone": "9423881071",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/35_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B8%E0%A4%82%E0%A4%9C%E0%A4%AF%20%E0%A4%86%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "deputy-36",
       "name": "श्री. रुपेश म्हात्रे",
       "role": "उपनेते",
-      "phone": "9320959000"
+      "phone": "9320959000",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/36_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B0%E0%A5%81%E0%A4%AA%E0%A5%87%E0%A4%B6%20%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "deputy-37",
       "name": "श्री. विजय चौगुले",
       "role": "उपनेते",
-      "phone": "9892221000"
+      "phone": "9892221000",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/37_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%9A%E0%A5%8C%E0%A4%97%E0%A5%81%E0%A4%B2%E0%A5%87.png"
     },
     {
       "id": "deputy-38",
       "name": "श्री. निलेश सांबरे",
       "role": "उपनेते",
-      "phone": "9833921789"
+      "phone": "9833921789",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/38_%E0%A4%A8%E0%A4%BF%E0%A4%B2%E0%A5%87%E0%A4%B6%20%E0%A4%B8%E0%A4%BE%E0%A4%82%E0%A4%AC%E0%A4%B0%E0%A5%87_.png"
     },
     {
       "id": "deputy-39",
       "name": "श्री. दत्ता दळवी",
       "role": "उपनेते",
-      "phone": "9819001100"
+      "phone": "9819001100",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/39_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%A6%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BE%20%E0%A4%A6%E0%A4%B3%E0%A4%B5%E0%A5%80.png"
     },
     {
       "id": "deputy-40",
       "name": "श्री. शिशिर शिंदे",
       "role": "मा. आमदार",
-      "phone": "9820056100"
+      "phone": "9820056100",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/40_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B6%E0%A4%BF%E0%A4%B6%E0%A4%BF%E0%A4%B0%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87%20(%20%E0%A4%AE%E0%A4%BE.%20%E0%A4%86%E0%A4%AE%E0%A4%A6%E0%A4%BE%E0%A4%B0%20).png"
     },
     {
       "id": "deputy-41",
       "name": "श्री. ज्ञानेश्वर धाने–पाटील",
       "role": "मा. आमदार",
-      "phone": "9422157301"
+      "phone": "9422157301",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/41_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%E0%A5%87%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B0%20%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A5%87%20%E2%80%93%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2%20(%20%E0%A4%AE%E0%A4%BE.%20%E0%A4%86%E0%A4%AE%E0%A4%A6%E0%A4%BE%E0%A4%B0%20).png"
     },
     {
       "id": "deputy-42",
       "name": "श्री. दिलीप शिंदे",
       "role": "उपनेते",
-      "phone": "9819322322"
+      "phone": "9819322322",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/42_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%A6%E0%A4%BF%E0%A4%B2%E0%A5%80%E0%A4%AA%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
     },
     {
       "id": "deputy-43",
       "name": "सौ. आशाताई परमेश विचारे–मामिडी",
       "role": "सहकार विभाग",
-      "phone": "9892939633"
+      "phone": "9892939633",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/43_%E0%A4%B8%E0%A5%8C.%20%E0%A4%86%E0%A4%B6%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AA%E0%A4%B0%E0%A4%AE%E0%A5%87%E0%A4%B6%20%E0%A4%B5%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E2%80%93%20%E0%A4%AE%E0%A4%BE%E0%A4%AE%E0%A4%BF%E0%A4%A1%E0%A5%80.png"
     },
     {
       "id": "deputy-44",
       "name": "सौ. शितल म्हात्रे",
       "role": "उपनेते",
-      "phone": "9870337777"
+      "phone": "9870337777",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/44_%E0%A4%B8%E0%A5%8C.%20%E0%A4%B6%E0%A4%BF%E0%A4%A4%E0%A4%B2%20%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "deputy-45",
       "name": "श्रीमती. संध्या वढावकर",
       "role": "उपनेते",
-      "phone": "9820743044"
+      "phone": "9820743044",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/45_sandhya%20wadhavkar_.png"
     },
     {
       "id": "deputy-46",
       "name": "सौ. कला प्रदिप शिंदे",
       "role": "उपनेते",
-      "phone": "9833352435"
+      "phone": "9833352435",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/46_%E0%A4%B8%E0%A5%8C.%20%E0%A4%95%E0%A4%B2%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A6%E0%A4%BF%E0%A4%AA%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
     },
     {
       "id": "deputy-47",
       "name": "डॉ. शिल्पा देशमुख",
       "role": "उपनेते",
-      "phone": "7021551154"
+      "phone": "7021551154",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/47_%E0%A4%A1%E0%A5%89.%E0%A4%B6%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%BE%20%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "deputy-48",
       "name": "ज्योती मेहेर",
       "role": "उपनेते",
-      "phone": "7248988858"
+      "phone": "7248988858",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/48_%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%B9%E0%A5%87%E0%A4%B0.png"
     },
     {
       "id": "deputy-49",
       "name": "सौ. सुवर्णा करंजे",
       "role": "उपनेते",
-      "phone": "9821913889"
+      "phone": "9821913889",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/49_%E0%A4%B8%E0%A5%81%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BE%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%82%E0%A4%9C%E0%A5%87_.png"
     },
     {
       "id": "deputy-50",
       "name": "सौ. तृष्णा विश्वासराव",
       "role": "उपनेते",
-      "phone": "9920326416"
+      "phone": "9920326416",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/50_%E0%A4%A4%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A4%B0%E0%A4%BE%E0%A4%B5_.png"
     },
     {
       "id": "deputy-51",
       "name": "सौ. विजया पोटे",
       "role": "उपनेते",
-      "phone": "9967288548"
+      "phone": "9967288548",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/51_%E0%A4%B8%E0%A5%8C.%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%E0%A4%BE%20%E0%A4%AA%E0%A5%8B%E0%A4%9F%E0%A5%87.png"
     },
     {
       "id": "deputy-52",
       "name": "श्रीम. जयश्रीताई चंद्रकांत जाधव",
       "role": "उपनेते",
-      "phone": "9552073100"
+      "phone": "9552073100",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/52_%E0%A4%9C%E0%A4%AF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.png"
     },
     {
       "id": "deputy-53",
       "name": "श्रीम. सुलभा रामभाऊ उबाळे",
       "role": "उपनेते",
-      "phone": "9850240999"
+      "phone": "9850240999",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/53_%E0%A4%B8%E0%A5%81%E0%A4%B2%E0%A4%AD%E0%A4%BE%20%E0%A4%89%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A5%87_.png"
     },
     {
       "id": "deputy-54",
       "name": "सौ. संजना संजय घाडी",
       "role": "उपनेते",
-      "phone": "9702251818"
+      "phone": "9702251818",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/54_%E0%A4%B8%E0%A4%82%E0%A4%9C%E0%A4%A8%E0%A4%BE%20%E0%A4%98%E0%A4%BE%E0%A4%A1%E0%A5%80_.png"
     },
     {
       "id": "deputy-55",
       "name": "श्रीम. राजूल पटेल",
       "role": "उपनेते",
-      "phone": "9323801469"
+      "phone": "9323801469",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/55_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE.%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%82%E0%A4%B2%20%E0%A4%AA%E0%A4%9F%E0%A5%87%E0%A4%B2.png"
     },
     {
       "id": "deputy-56",
@@ -1235,7 +1271,8 @@
       "id": "deputy-57",
       "name": "प्रा.सौ. संगीता विजयप्रकाश ठोंबरे",
       "role": "उपनेते",
-      "phone": "7057984780"
+      "phone": "7057984780",
+      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/57_%E0%A4%B8%E0%A4%82%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%A0%E0%A5%8B%E0%A4%82%E0%A4%AC%E0%A4%B0%E0%A5%87.png"
     }
   ],
   "divisionalContactHeads": [
@@ -1264,13 +1301,15 @@
       "id": "dch-4",
       "name": "श्री. दगडूदादा सकपाळ",
       "role": "पश्चिम महाराष्ट्र पुणे, सातारा, सांगली, सोलापूर, कोल्हापूर",
-      "phone": "9820059385"
+      "phone": "9820059385",
+      "photo": "/leaders/02_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/04_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%A6%E0%A4%97%E0%A4%A1%E0%A5%82%20%E0%A4%A6%E0%A4%BE%E0%A4%A6%E0%A4%BE%20%E0%A4%B8%E0%A4%95%E0%A4%AA%E0%A4%BE%E0%A4%B3.png"
     },
     {
       "id": "dch-5",
       "name": "मंत्री श्री. प्रकाश आबिटकर",
       "role": "मराठवाडा धाराशिव, लातूर, बीड, नांदेड",
-      "phone": "9422421600"
+      "phone": "9422421600",
+      "photo": "/leaders/02_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/05_Shri%20Prakash%20Abitkar%20(Minister).png"
     },
     {
       "id": "dch-6",
@@ -1282,13 +1321,15 @@
       "id": "dch-7",
       "name": "आ.डॉ. मनिषा कायंदे",
       "role": "पूर्व विदर्भ वर्धा, चंद्रपूर, गडचिरोली",
-      "phone": "9820236304"
+      "phone": "9820236304",
+      "photo": "/leaders/02_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/07_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%20%E0%A4%A1%E0%A5%89%20%20%E0%A4%AE%E0%A4%A8%E0%A5%80%E0%A4%B7%E0%A4%BE%20%E0%A4%95%E0%A4%BE%E0%A4%AF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
     },
     {
       "id": "dch-8",
       "name": "मंत्री श्री. संजय राठोड",
       "role": "पश्चिम विदर्भ अमरावती, अकोला, वाशिम, यवतमाळ, बुलढाणा",
-      "phone": "7448166222"
+      "phone": "7448166222",
+      "photo": "/leaders/02_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/08_%E0%A4%B8%E0%A4%82%E0%A4%9C%E0%A4%AF%20%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%8B%E0%A4%A1_.png"
     }
   ],
   "divisionalCoContactHeads": [
@@ -1296,39 +1337,52 @@
       "id": "dcch-1",
       "name": "श्री. प्रदीप (भाई) खाडे",
       "role": "उत्तर कोकण रायगड, पालघर",
-      "phone": "9820322222"
+      "phone": "9820322222",
+      "photo": "/leaders/03_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%B9%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/01_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A6%E0%A5%80%E0%A4%AA%20%E0%A4%96%E0%A4%BE%E0%A4%A1%E0%A5%87_.png"
     },
     {
       "id": "dcch-2",
       "name": "श्री. हनुमान जगदाळे",
       "role": "पश्चिम महाराष्ट्र पुणे, सातारा, सांगली, सोलापूर, कोल्हापूर",
-      "phone": "9370070072"
+      "phone": "9370070072",
+      "photo": "/leaders/03_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%B9%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/02_%E0%A4%B9%E0%A4%A3%E0%A4%AE%E0%A4%82%E0%A4%A4%20%E0%A4%9C%E0%A4%97%E0%A4%A6%E0%A4%BE%E0%A4%B3%E0%A5%87.png"
     },
     {
       "id": "dcch-3",
       "name": "श्री. विकास रेपाळे",
       "role": "पश्चिम महाराष्ट्र मावळ, शिरूर",
-      "phone": "9822242866"
+      "phone": "9822242866",
+      "photo": "/leaders/03_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%B9%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/03_%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B8%20%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A4%BE%20%E0%A4%B0%E0%A5%87%E0%A4%AA%E0%A4%BE%E0%A4%B3%E0%A5%87.png"
     },
     {
       "id": "dcch-4",
       "name": "श्री. पराग पिंगळे",
       "role": "पश्चिम विदर्भ अमरावती, अकोला, वाशिम, यवतमाळ, बुलढाणा",
-      "phone": "9860934327"
+      "phone": "9860934327",
+      "photo": "/leaders/03_%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%80%E0%A4%AF%20%E0%A4%B8%E0%A4%B9%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/04_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.png"
     }
   ],
   "lokSabhaContactHead": [
     {
+      "id": "lsch-25",
+      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
+      "role": "ठाणे, मुंबई उत्तर, मुंबई उत्तर पश्चिम, मुंबई उत्तर पूर्व, मुंबई उत्तर मध्य, मुंबई दक्षिण मध्य, मुंबई दक्षिण",
+      "phone": "9324588400",
+      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
+    },
+    {
       "id": "lsch-1",
       "name": "मा. आ. श्री. शिरीष चौधरी",
       "role": "नंदुरबार",
-      "phone": "8806111111"
+      "phone": "8806111111",
+      "photo": "/leaders/loksabha-sampark/01_%20%E0%A4%B6%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%B7%20%E0%A4%9A%E0%A5%8C%E0%A4%A7%E0%A4%B0%E0%A5%80_.png"
     },
     {
       "id": "lsch-2",
       "name": "श्री. भाऊसाहेब चौधरी, शिवसेना सचिव",
       "role": "धुळे",
-      "phone": "9820306730"
+      "phone": "9820306730",
+      "photo": "/leaders/loksabha-sampark/02_%20%E0%A4%AD%E0%A4%BE%E0%A4%8A%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%9A%E0%A5%8C%E0%A4%A7%E0%A4%B0%E0%A5%80_.png"
     },
     {
       "id": "lsch-3",
@@ -1354,43 +1408,50 @@
       "id": "lsch-6",
       "name": "मा. आ. श्री. राजन साळवी",
       "role": "अकोला",
-      "phone": "9422429025"
+      "phone": "9422429025",
+      "photo": "/leaders/loksabha-sampark/06_%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%20%E0%A4%B8%E0%A4%BE%E0%A4%B3%E0%A4%B5%E0%A5%80_.png"
     },
     {
       "id": "lsch-7",
       "name": "आ. श्री. किशोर अप्पा पाटील",
       "role": "अमरावती",
-      "phone": "9860899091"
+      "phone": "9860899091",
+      "photo": "/leaders/loksabha-sampark/07_%20%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A5%8B%E0%A4%B0%20%E0%A4%86%E0%A4%AA%E0%A5%8D%E0%A4%AA%E0%A4%BE%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2_.png"
     },
     {
       "id": "lsch-8",
       "name": "श्री. राज दीक्षित",
       "role": "वर्धा",
-      "phone": "9821456389"
+      "phone": "9821456389",
+      "photo": "/leaders/loksabha-sampark/08_%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%20%E0%A4%A6%E0%A5%80%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BF%E0%A4%A4_.png"
     },
     {
       "id": "lsch-9",
       "name": "श्री. अनिल कोकीळ",
       "role": "रामटेक",
-      "phone": "7039081155"
+      "phone": "7039081155",
+      "photo": "/leaders/loksabha-sampark/09_%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%95%E0%A5%8B%E0%A4%95%E0%A5%80%E0%A4%B3_.png"
     },
     {
       "id": "lsch-10",
       "name": "मा. खा. श्री. संजय निरुपम",
       "role": "नागपूर",
-      "phone": "9821345666"
+      "phone": "9821345666",
+      "photo": "/leaders/loksabha-sampark/10_%E0%A4%B8%E0%A4%82%E0%A4%9C%E0%A4%AF%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%81%E0%A4%AA%E0%A4%AE.png"
     },
     {
       "id": "lsch-11",
       "name": "श्री. विलास चावरी",
       "role": "भंडारा - गोंदिया",
-      "phone": "9820613898"
+      "phone": "9820613898",
+      "photo": "/leaders/loksabha-sampark/11_%20%E0%A4%B5%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%B8%20%E0%A4%9A%E0%A4%BE%E0%A4%B5%E0%A4%B0%E0%A5%80.png"
     },
     {
       "id": "lsch-12",
       "name": "मा. मंत्री श्री. जगदीश गुप्ता",
       "role": "गडचिरोली - चिमूर",
-      "phone": "9422157070"
+      "phone": "9422157070",
+      "photo": "/leaders/loksabha-sampark/12_%20%E0%A4%9C%E0%A4%97%E0%A4%A6%E0%A5%80%E0%A4%B6%20%E0%A4%97%E0%A5%81%E0%A4%AA%E0%A5%8D%E0%A4%A4%E0%A4%BE1.png"
     },
     {
       "id": "lsch-13",
@@ -1403,43 +1464,50 @@
       "id": "lsch-14",
       "name": "श्रीमती प्रीती बंड",
       "role": "यवतमाळ - वाशिम",
-      "phone": "8698955666"
+      "phone": "8698955666",
+      "photo": "/leaders/loksabha-sampark/14_%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A5%80%20%E0%A4%AC%E0%A4%82%E0%A4%A1_.png"
     },
     {
       "id": "lsch-15",
       "name": "श्री. आनंदराव जाधव",
       "role": "हिंगोली",
-      "phone": "9869157853"
+      "phone": "9869157853",
+      "photo": "/leaders/loksabha-sampark/15_%20%E0%A4%86%E0%A4%A8%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.png"
     },
     {
       "id": "lsch-16",
       "name": "श्री. रमाकांत मढवी",
       "role": "नांदेड",
-      "phone": "9892733755"
+      "phone": "9892733755",
+      "photo": "/leaders/loksabha-sampark/16_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B0%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%A4%20%E0%A4%AE%E0%A4%A2%E0%A4%B5%E0%A5%80.png"
     },
     {
       "id": "lsch-17",
       "name": "श्री. भास्कर आंबेकर",
       "role": "परभणी",
-      "phone": "8329296323"
+      "phone": "8329296323",
+      "photo": "/leaders/loksabha-sampark/17_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%AD%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%B0%20%E0%A4%86%E0%A4%82%E0%A4%AC%E0%A5%87%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "lsch-18",
       "name": "खा. श्री. संदीपान भूमरे",
       "role": "जालना",
-      "phone": "7020257742"
+      "phone": "7020257742",
+      "photo": "/leaders/loksabha-sampark/18_%E0%A4%96%E0%A4%BE.%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A5%80%E0%A4%AA%E0%A4%BE%E0%A4%A8%20%E0%A4%AD%E0%A5%82%E0%A4%AE%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "lsch-19",
       "name": "श्री. विलास पारकर",
       "role": "छत्रपती संभाजीनगर",
-      "phone": "9967068628"
+      "phone": "9967068628",
+      "photo": "/leaders/loksabha-sampark/19_%20%E0%A4%B5%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%B8%20%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A4%B0_.png"
     },
     {
       "id": "lsch-20",
       "name": "श्री. भाऊसाहेब चौधरी",
       "role": "दिंडोरी",
-      "phone": "9820306730"
+      "phone": "9820306730",
+      "photo": "/leaders/loksabha-sampark/02_%20%E0%A4%AD%E0%A4%BE%E0%A4%8A%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%9A%E0%A5%8C%E0%A4%A7%E0%A4%B0%E0%A5%80_.png"
     },
     {
       "id": "lsch-21",
@@ -1452,124 +1520,45 @@
       "id": "lsch-22",
       "name": "श्री. पांडुरंग पाटील",
       "role": "पालघर",
-      "phone": "9821423737"
+      "phone": "9821423737",
+      "photo": "/leaders/loksabha-sampark/22_%20%E0%A4%AA%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A5%81%E0%A4%B0%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.png"
     },
     {
       "id": "lsch-23",
       "name": "खा. श्री. नरेश म्हस्के",
-      "role": "भिवंडी",
+      "role": "भिवंडी, कल्याण",
       "phone": "9819389080",
       "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
-    },
-    {
-      "id": "lsch-24",
-      "name": "खा. श्री. नरेश म्हस्के",
-      "role": "कल्याण",
-      "phone": "9819389080",
-      "photo": "/leaders/MP%20Photos/09_Naresh%20Mhaske.webp"
-    },
-    {
-      "id": "lsch-25",
-      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
-      "role": "ठाणे",
-      "phone": "9324588400",
-      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
-    },
-    {
-      "id": "lsch-26",
-      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
-      "role": "मुंबई उत्तर",
-      "phone": "9867996252",
-      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
     },
     {
       "id": "lsch-27",
       "name": "मंत्री श्री. योगेश कदम",
-      "role": "मुंबई उत्तर",
+      "role": "मुंबई उत्तर, मुंबई उत्तर पश्चिम",
       "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/12_Shri%20Yogesh%20Kadam%20(MoS).webp"
-    },
-    {
-      "id": "lsch-28",
-      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
-      "role": "मुंबई उत्तर पश्चिम",
-      "phone": "9867996252",
-      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
-    },
-    {
-      "id": "lsch-29",
-      "name": "मंत्री श्री. योगेश कदम",
-      "role": "मुंबई उत्तर पश्चिम",
-      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/12_Shri%20Yogesh%20Kadam%20(MoS).webp"
-    },
-    {
-      "id": "lsch-30",
-      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
-      "role": "मुंबई उत्तर पूर्व",
-      "phone": "9867999999",
-      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
     },
     {
       "id": "lsch-31",
       "name": "आ. श्री. निलेश राणे",
-      "role": "मुंबई उत्तर पूर्व",
+      "role": "मुंबई उत्तर पूर्व, मुंबई दक्षिण",
       "photo": "/leaders/Mla%20Photos/21_Shri%20Nilesh%20Rane.webp"
-    },
-    {
-      "id": "lsch-32",
-      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
-      "role": "मुंबई उत्तर मध्य",
-      "phone": "9324726710",
-      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
     },
     {
       "id": "lsch-33",
       "name": "मा. खा. श्री. राहुल शेवाळे",
-      "role": "मुंबई उत्तर मध्य",
+      "role": "मुंबई उत्तर मध्य, मुंबई दक्षिण मध्य",
       "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/10_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%81%E0%A4%B2%20%E0%A4%B6%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%B3%E0%A5%87.webp"
-    },
-    {
-      "id": "lsch-34",
-      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
-      "role": "मुंबई दक्षिण मध्य",
-      "phone": "9324726710",
-      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
-    },
-    {
-      "id": "lsch-35",
-      "name": "मा. खा. श्री. राहुल शेवाळे",
-      "role": "मुंबई दक्षिण मध्य",
-      "photo": "/leaders/09_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A5%87%E0%A4%A4%E0%A5%87/10_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%81%E0%A4%B2%20%E0%A4%B6%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%B3%E0%A5%87.webp"
-    },
-    {
-      "id": "lsch-36",
-      "name": "खा. डॉ. श्री. श्रीकांत शिंदे",
-      "role": "मुंबई दक्षिण",
-      "phone": "9867999999",
-      "photo": "/leaders/MP%20Photos/07_Dr%20Shrikant%20Eknath%20Shinde.webp"
-    },
-    {
-      "id": "lsch-37",
-      "name": "आ. श्री. निलेश राणे",
-      "role": "मुंबई दक्षिण",
-      "photo": "/leaders/Mla%20Photos/21_Shri%20Nilesh%20Rane.webp"
     },
     {
       "id": "lsch-38",
       "name": "श्री. अनिल नवघरे",
       "role": "रायगड",
-      "phone": "7775809568"
+      "phone": "7775809568",
+      "photo": "/leaders/loksabha-sampark/32_%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%A8%E0%A4%B5%E0%A4%98%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "lsch-39",
       "name": "मंत्री श्री. उदय सामंत",
-      "role": "मावळ",
-      "phone": "9860390909",
-      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp"
-    },
-    {
-      "id": "lsch-40",
-      "name": "मंत्री श्री. उदय सामंत",
-      "role": "पुणे",
+      "role": "मावळ, पुणे, कोल्हापूर",
       "phone": "9860390909",
       "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp"
     },
@@ -1583,13 +1572,15 @@
       "id": "lsch-42",
       "name": "आ. श्री. शरद सोनवणे",
       "role": "शिरूर",
-      "phone": "9867404567"
+      "phone": "9867404567",
+      "photo": "/leaders/loksabha-sampark/36_%E0%A4%86.%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B6%E0%A4%B0%E0%A4%A6%20%E0%A4%B8%E0%A5%8B%E0%A4%A8%E0%A4%B5%E0%A4%A3%E0%A5%87.png"
     },
     {
       "id": "lsch-43",
       "name": "श्री. राम रेपाळे",
       "role": "अहिल्यानगर",
-      "phone": "9987373333"
+      "phone": "9987373333",
+      "photo": "/leaders/loksabha-sampark/%E0%A5%A9%E0%A5%AD%20-%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%B0%E0%A5%87%E0%A4%AA%E0%A4%BE%E0%A4%B3%E0%A5%87_.png"
     },
     {
       "id": "lsch-44",
@@ -1601,13 +1592,15 @@
       "id": "lsch-45",
       "name": "श्री. मनोज शिंदे",
       "role": "बीड",
-      "phone": "9869204080"
+      "phone": "9869204080",
+      "photo": "/leaders/loksabha-sampark/%E0%A5%A9%E0%A5%AF%20-%20%E0%A4%AE%E0%A4%A8%E0%A5%8B%E0%A4%9C%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87_.png"
     },
     {
       "id": "lsch-46",
       "name": "मा. खा. श्री. उन्मेष पाटील",
       "role": "धाराशिव",
-      "phone": "8600110957"
+      "phone": "8600110957",
+      "photo": "/leaders/loksabha-sampark/%E0%A5%AA%E0%A5%A6%20-%20%E0%A4%89%E0%A4%A8%E0%A5%8D%E0%A4%AE%E0%A5%87%E0%A4%B7%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2_.png"
     },
     {
       "id": "lsch-47",
@@ -1620,25 +1613,29 @@
       "id": "lsch-48",
       "name": "खा. श्री. धैर्यशील माने",
       "role": "सोलापूर",
-      "phone": "9588667712"
+      "phone": "9588667712",
+      "photo": "/leaders/loksabha-sampark/%E0%A5%AA%E0%A5%A8%20-%20%E0%A4%A7%E0%A5%88%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%B6%E0%A5%80%E0%A4%B2%20%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%87_.png"
     },
     {
       "id": "lsch-49",
       "name": "श्री. चंद्रहार पाटील",
       "role": "माढा",
-      "phone": "9822555365"
+      "phone": "9822555365",
+      "photo": "/leaders/loksabha-sampark/%E0%A5%AA%E0%A5%A9%20-%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A4%BE%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2_.png"
     },
     {
       "id": "lsch-50",
       "name": "श्री. योगेश जानकर",
       "role": "सांगली",
-      "phone": "9773284474"
+      "phone": "9773284474",
+      "photo": "/leaders/loksabha-sampark/44_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A5%87%E0%A4%B6%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "lsch-51",
       "name": "श्री. शरद कणसे",
       "role": "सातारा",
-      "phone": "9892983203"
+      "phone": "9892983203",
+      "photo": "/leaders/loksabha-sampark/%E0%A5%AA%E0%A5%AB%20-%20%E0%A4%B6%E0%A4%B0%E0%A4%A6%20%E0%A4%95%E0%A4%A3%E0%A4%B8%E0%A5%87_.png"
     },
     {
       "id": "lsch-52",
@@ -1651,14 +1648,8 @@
       "id": "lsch-53",
       "name": "श्री. बाळा चिंदरकर",
       "role": "रत्नागिरी - सिंधुदुर्ग",
-      "phone": "9819881392"
-    },
-    {
-      "id": "lsch-54",
-      "name": "मंत्री श्री. उदय सामंत",
-      "role": "कोल्हापूर",
-      "phone": "9860390909",
-      "photo": "/leaders/06_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80/02_Shri%20Uday%20Samant%20(Minister).webp"
+      "phone": "9819881392",
+      "photo": "/leaders/loksabha-sampark/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A4%BE%20%E0%A4%9A%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "lsch-55",
@@ -1685,7 +1676,7 @@
     {
       "id": "districtHead-4",
       "name": "श्री. राजू यशवंत भोईर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/04%20-%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%82%20%E0%A4%AF%E0%A4%B6%E0%A4%B5%E0%A4%82%E0%A4%A4%20%E0%A4%AD%E0%A5%8B%E0%A4%88%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/04%20-%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%82%20%E0%A4%AF%E0%A4%B6%E0%A4%B5%E0%A4%82%E0%A4%A4%20%E0%A4%AD%E0%A5%8B%E0%A4%88%E0%A4%B0.png"
     },
     {
       "id": "districtHead-5",
@@ -1698,7 +1689,7 @@
     {
       "id": "districtHead-7",
       "name": "श्री. किशोर पाटकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/07_%20%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A5%8B%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/07_%20%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A5%8B%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-8",
@@ -1707,7 +1698,7 @@
     {
       "id": "districtHead-9",
       "name": "श्री. वसंत चव्हाण",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/09_%20%E0%A4%B5%E0%A4%B8%E0%A4%82%E0%A4%A4%20%E0%A4%9A%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/09_%20%E0%A4%B5%E0%A4%B8%E0%A4%82%E0%A4%A4%20%E0%A4%9A%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3.png"
     },
     {
       "id": "districtHead-10",
@@ -1716,27 +1707,27 @@
     {
       "id": "districtHead-11",
       "name": "श्री. संतोष भोईर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/11_%E0%A4%B8%E0%A4%82%E0%A4%A4%E0%A5%8B%E0%A4%B7%20%E0%A4%AD%E0%A5%8B%E0%A4%88%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/11_%E0%A4%B8%E0%A4%82%E0%A4%A4%E0%A5%8B%E0%A4%B7%20%E0%A4%AD%E0%A5%8B%E0%A4%88%E0%A4%B0.png"
     },
     {
       "id": "districtHead-12",
       "name": "श्री. राजा जगन्नाथ केणी",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/12_%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE%20%E0%A4%95%E0%A5%87%E0%A4%A3%E0%A5%80.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/12_%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE%20%E0%A4%95%E0%A5%87%E0%A4%A3%E0%A5%80.png"
     },
     {
       "id": "districtHead-13",
       "name": "श्री. प्रमोद घोसाळकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/13_%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8B%E0%A4%A6%20%E0%A4%98%E0%A5%8B%E0%A4%B8%E0%A4%BE%E0%A4%B3%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/13_%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8B%E0%A4%A6%20%E0%A4%98%E0%A5%8B%E0%A4%B8%E0%A4%BE%E0%A4%B3%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-14",
       "name": "श्री. विनोद सदाशिव साबळे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/14_%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8B%E0%A4%A6%20%E0%A4%B8%E0%A4%BE%E0%A4%AC%E0%A4%B3%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/14_%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8B%E0%A4%A6%20%E0%A4%B8%E0%A4%BE%E0%A4%AC%E0%A4%B3%E0%A5%87.png"
     },
     {
       "id": "districtHead-15",
       "name": "श्री. रामदास वामनराव शेवाळे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/15_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%B6%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%B3%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/15_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%B6%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%B3%E0%A5%87.png"
     },
     {
       "id": "districtHead-16",
@@ -1757,7 +1748,7 @@
     {
       "id": "districtHead-20",
       "name": "आ. श्री. सुहास कांदे",
-      "photo": "/leaders/Mla%20Photos/37_Shri%20Suhas%20(Anna)%20Kande.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/20_Shri%20Suhas%20(Anna)%20Kande.png"
     },
     {
       "id": "districtHead-21",
@@ -1766,37 +1757,37 @@
     {
       "id": "districtHead-22",
       "name": "श्री. अनिल ढिकले",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/22%20-%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%A2%E0%A4%BF%E0%A4%95%E0%A4%B2%E0%A5%87_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/22%20-%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%A2%E0%A4%BF%E0%A4%95%E0%A4%B2%E0%A5%87_.png"
     },
     {
       "id": "districtHead-23",
       "name": "श्री. भाऊलाल तांबडे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%AD%E0%A4%BE%E0%A4%8A%E0%A4%B2%E0%A4%BE%E0%A4%B2%20%E0%A4%A4%E0%A4%BE%E0%A4%82%E0%A4%AC%E0%A4%A1%E0%A5%87_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/23%20-%20%E0%A4%AD%E0%A4%BE%E0%A4%8A%E0%A4%B2%E0%A4%BE%E0%A4%B2%20%E0%A4%A4%E0%A4%BE%E0%A4%82%E0%A4%AC%E0%A4%A1%E0%A5%87_.png"
     },
     {
       "id": "districtHead-24",
       "name": "श्री. अजय बोरस्ते",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/24%20-%20%E0%A4%85%E0%A4%9C%E0%A4%AF%20%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/24%20-%20%E0%A4%85%E0%A4%9C%E0%A4%AF%20%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87_.png"
     },
     {
       "id": "districtHead-25",
       "name": "श्री. अनिल माधवराव शिंदे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%B5%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/25%20-%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%B5%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
     },
     {
       "id": "districtHead-26",
       "name": "श्री. बाबू कामलात उर्फ बाबूशेठ टायरवाले",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A5%82%20%E0%A4%95%E0%A4%BE%E0%A4%AE%E0%A4%B2%E0%A4%BE%E0%A4%A4%20%E0%A4%89%E0%A4%B0%E0%A5%8D%E0%A4%AB%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A5%82%E0%A4%B6%E0%A5%87%E0%A4%A0%20%E0%A4%9F%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/26%20-%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A5%82%20%E0%A4%95%E0%A4%BE%E0%A4%AE%E0%A4%B2%E0%A4%BE%E0%A4%A4%20%E0%A4%89%E0%A4%B0%E0%A5%8D%E0%A4%AB%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A5%82%E0%A4%B6%E0%A5%87%E0%A4%A0%20%E0%A4%9F%E0%A4%BE%E0%A4%AF%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%87.png"
     },
     {
       "id": "districtHead-27",
       "name": "श्री. कमलाकर गणपत कोते",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%95%E0%A4%AE%E0%A4%B2%E0%A4%BE%E0%A4%95%E0%A4%B0%20%E0%A4%97%E0%A4%A3%E0%A4%AA%E0%A4%A4%20%E0%A4%95%E0%A5%8B%E0%A4%A4%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/27%20-%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%95%E0%A4%AE%E0%A4%B2%E0%A4%BE%E0%A4%95%E0%A4%B0%20%E0%A4%97%E0%A4%A3%E0%A4%AA%E0%A4%A4%20%E0%A4%95%E0%A5%8B%E0%A4%A4%E0%A5%87.png"
     },
     {
       "id": "districtHead-28",
       "name": "श्री. नितीनराव औताडे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%A8%E0%A4%BF%E0%A4%A4%E0%A5%80%E0%A4%A8%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%94%E0%A4%A4%E0%A4%BE%E0%A4%A1%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/28%20-%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%A8%E0%A4%BF%E0%A4%A4%E0%A5%80%E0%A4%A8%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%94%E0%A4%A4%E0%A4%BE%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "districtHead-29",
@@ -1805,12 +1796,12 @@
     {
       "id": "districtHead-30",
       "name": "श्री. सतीश दिगंबर महाले",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/30%20-%20%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%B6%20%E0%A4%A6%E0%A4%BF%E0%A4%97%E0%A4%82%E0%A4%AC%E0%A4%B0%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B2%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/30%20-%20%E0%A4%B8%E0%A4%A4%E0%A5%80%E0%A4%B6%20%E0%A4%A6%E0%A4%BF%E0%A4%97%E0%A4%82%E0%A4%AC%E0%A4%B0%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B2%E0%A5%87.png"
     },
     {
       "id": "districtHead-31",
       "name": "श्री. मनोज दादासाहेब मोरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%AE%E0%A4%A8%E0%A5%8B%E0%A4%9C%20%E0%A4%A6%E0%A4%BE%E0%A4%A6%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%AE%E0%A5%8B%E0%A4%B0%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/31%20-%20%E0%A4%AE%E0%A4%A8%E0%A5%8B%E0%A4%9C%20%E0%A4%A6%E0%A4%BE%E0%A4%A6%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%AE%E0%A5%8B%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "districtHead-32",
@@ -1819,52 +1810,52 @@
     {
       "id": "districtHead-33",
       "name": "श्री. गणेश रूपसिंग पऱ्हाडकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/33%20-%20%E0%A4%97%E0%A4%A3%E0%A5%87%E0%A4%B6%20%E0%A4%B0%E0%A5%82%E0%A4%AA%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A4%B1%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A1%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/33%20-%20%E0%A4%97%E0%A4%A3%E0%A5%87%E0%A4%B6%20%E0%A4%B0%E0%A5%82%E0%A4%AA%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A4%B1%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A1%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-34",
       "name": "श्री. रावसाहेब मनोहर गिरीधर पाटील",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%AE%E0%A4%A8%E0%A5%8B%E0%A4%B9%E0%A4%B0%20%E0%A4%97%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%A7%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/34%20-%20%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%AE%E0%A4%A8%E0%A5%8B%E0%A4%B9%E0%A4%B0%20%E0%A4%97%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%A7%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.png"
     },
     {
       "id": "districtHead-35",
       "name": "श्री. विष्णू भंगाळे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A5%82%20%E0%A4%AD%E0%A4%82%E0%A4%97%E0%A4%BE%E0%A4%B3%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/35%20-%20%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A5%82%20%E0%A4%AD%E0%A4%82%E0%A4%97%E0%A4%BE%E0%A4%B3%E0%A5%87_.png"
     },
     {
       "id": "districtHead-36",
       "name": "श्री. वासुदेव सुभाष पाटील",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%81%E0%A4%A6%E0%A5%87%E0%A4%B5%20%E0%A4%B8%E0%A5%81%E0%A4%AD%E0%A4%BE%E0%A4%B7%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/36%20-%20%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%81%E0%A4%A6%E0%A5%87%E0%A4%B5%20%E0%A4%B8%E0%A5%81%E0%A4%AD%E0%A4%BE%E0%A4%B7%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.png"
     },
     {
       "id": "districtHead-37",
       "name": "श्री. समाधान महाजन",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%9C%E0%A4%A8.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/37%20-%20%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%9C%E0%A4%A8.png"
     },
     {
       "id": "districtHead-38",
       "name": "श्री. देविदास दत्तात्रय दरेकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/38%20-%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%A6%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AF%20%E0%A4%A6%E0%A4%B0%E0%A5%87%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/38%20-%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%A6%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AF%20%E0%A4%A6%E0%A4%B0%E0%A5%87%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-39",
       "name": "श्री. रमेश कोंडे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/39%20-%20%E0%A4%B0%E0%A4%AE%E0%A5%87%E0%A4%B6%20%E0%A4%AC%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%AA%E0%A5%82%20%E0%A4%95%E0%A5%8B%E0%A4%82%E0%A4%A1%E0%A5%87_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/39%20-%20%E0%A4%B0%E0%A4%AE%E0%A5%87%E0%A4%B6%20%E0%A4%AC%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%AA%E0%A5%82%20%E0%A4%95%E0%A5%8B%E0%A4%82%E0%A4%A1%E0%A5%87_.png"
     },
     {
       "id": "districtHead-40",
       "name": "श्री. प्रमोद नाना भानगिरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/40%20-%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8B%E0%A4%A6%20%E0%A4%A8%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A4%97%E0%A4%BF%E0%A4%B0%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/40%20-%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8B%E0%A4%A6%20%E0%A4%A8%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A4%97%E0%A4%BF%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "districtHead-41",
       "name": "श्री. राजेश शशिकांत खांडभोर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%87%E0%A4%B6%20%E0%A4%B6%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%A4%20%E0%A4%96%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A4%AD%E0%A5%8B%E0%A4%B0_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/41%20-%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%87%E0%A4%B6%20%E0%A4%B6%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%A4%20%E0%A4%96%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A4%AD%E0%A5%8B%E0%A4%B0_.png"
     },
     {
       "id": "districtHead-42",
       "name": "श्री. भगवान नारायण पोखरकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/42%20-%20%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%A8%20%E0%A4%A8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%A3%20%E0%A4%AA%E0%A5%8B%E0%A4%96%E0%A4%B0%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/42%20-%20%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%A8%20%E0%A4%A8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%A3%20%E0%A4%AA%E0%A5%8B%E0%A4%96%E0%A4%B0%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-43",
@@ -1873,17 +1864,17 @@
     {
       "id": "districtHead-44",
       "name": "श्री. सुरेंद्र शामसुंदर जेवरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/44%20-%20%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%B6%E0%A4%BE%E0%A4%AE%E0%A4%B8%E0%A5%81%E0%A4%82%E0%A4%A6%E0%A4%B0%20%E0%A4%9C%E0%A5%87%E0%A4%B5%E0%A4%B0%E0%A5%87%20_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/44%20-%20%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%B6%E0%A4%BE%E0%A4%AE%E0%A4%B8%E0%A5%81%E0%A4%82%E0%A4%A6%E0%A4%B0%20%E0%A4%9C%E0%A5%87%E0%A4%B5%E0%A4%B0%E0%A5%87%20_.png"
     },
     {
       "id": "districtHead-45",
       "name": "श्री. बाळासाहेब चांदेरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%9A%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A5%87%E0%A4%B0%E0%A5%87_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/45%20-%20%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%9A%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A5%87%E0%A4%B0%E0%A5%87_.png"
     },
     {
       "id": "districtHead-46",
       "name": "श्री. अतुल रमेश म्हस्के",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/46%20-%20%E0%A4%85%E0%A4%A4%E0%A5%81%E0%A4%B2%20%E0%A4%B0%E0%A4%AE%E0%A5%87%E0%A4%B6%20%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/46%20-%20%E0%A4%85%E0%A4%A4%E0%A5%81%E0%A4%B2%20%E0%A4%B0%E0%A4%AE%E0%A5%87%E0%A4%B6%20%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%87.png"
     },
     {
       "id": "districtHead-47",
@@ -1892,7 +1883,7 @@
     {
       "id": "districtHead-48",
       "name": "श्री. चंद्रकांत बाळासाहेब जाधव",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%A4%20%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/48%20-%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%82%E0%A4%A4%20%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.png"
     },
     {
       "id": "districtHead-49",
@@ -1909,17 +1900,17 @@
     {
       "id": "districtHead-52",
       "name": "श्री. संजय विभूते",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B8%E0%A4%82%E0%A4%9C%E0%A4%AF%20%E0%A4%86%E0%A4%A8%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A5%81%E0%A4%A4%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/52%20-%20%E0%A4%B8%E0%A4%82%E0%A4%9C%E0%A4%AF%20%E0%A4%86%E0%A4%A8%E0%A4%82%E0%A4%A6%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%B5%E0%A4%BF%E0%A4%AD%E0%A5%81%E0%A4%A4%E0%A5%87.png"
     },
     {
       "id": "districtHead-53",
       "name": "श्री. सुजित रामभाऊ चव्हाण",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/53%20-%20%E0%A4%B8%E0%A5%81%E0%A4%9C%E0%A4%BF%E0%A4%A4%E0%A4%AD%E0%A4%BE%E0%A4%8A%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%9A%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/53%20-%20%E0%A4%B8%E0%A5%81%E0%A4%9C%E0%A4%BF%E0%A4%A4%E0%A4%AD%E0%A4%BE%E0%A4%8A%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%9A%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3_.png"
     },
     {
       "id": "districtHead-54",
       "name": "श्री. विजय रघुनाथ बलुगडे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%AC%E0%A4%B2%E0%A5%81%E0%A4%97%E0%A4%A1%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/54%20-%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%AC%E0%A4%B2%E0%A5%81%E0%A4%97%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "districtHead-55",
@@ -1928,7 +1919,7 @@
     {
       "id": "districtHead-56",
       "name": "श्री. चरण हणमंत चवरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/56%20-%20%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B9%E0%A4%A3%E0%A4%AE%E0%A4%82%E0%A4%A4%20%E0%A4%9A%E0%A4%B5%E0%A4%B0%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/56%20-%20%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B9%E0%A4%A3%E0%A4%AE%E0%A4%82%E0%A4%A4%20%E0%A4%9A%E0%A4%B5%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "districtHead-57",
@@ -1937,12 +1928,12 @@
     {
       "id": "districtHead-58",
       "name": "श्री. अमर रतिकांत पाटील",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%85%E0%A4%AE%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/58%20-%20%E0%A4%85%E0%A4%AE%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2_.png"
     },
     {
       "id": "districtHead-59",
       "name": "श्री. अमोल बाळासाहेब शिंदे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/59%20-%20%E0%A4%85%E0%A4%AE%E0%A5%8B%E0%A4%B2%20%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/59%20-%20%E0%A4%85%E0%A4%AE%E0%A5%8B%E0%A4%B2%20%E0%A4%AC%E0%A4%BE%E0%A4%B3%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
     },
     {
       "id": "districtHead-60",
@@ -1951,17 +1942,17 @@
     {
       "id": "districtHead-61",
       "name": "श्री. राजेंद्र जंजाळ",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Rajendra%20Janjal_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/61%20-%20Rajendra%20Janjal_.png"
     },
     {
       "id": "districtHead-62",
       "name": "श्री. बाबासाहेब पा. जगताप",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/BABASAHEB%20JAGTAP.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/62%20-%20BABASAHEB%20JAGTAP.png"
     },
     {
       "id": "districtHead-63",
       "name": "श्री. रमेश पवार",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Ramesh%20Pawar.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/63%20-%20Ramesh%20Pawar.png"
     },
     {
       "id": "districtHead-64",
@@ -1970,77 +1961,77 @@
     {
       "id": "districtHead-65",
       "name": "श्री. भाऊसाहेब एकनाथराव घुगे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/65%20-%20BHAHUSAHEB%20GHUGHE.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/65%20-%20BHAHUSAHEB%20GHUGHE.png"
     },
     {
       "id": "districtHead-66",
       "name": "श्री. ए.जे. पाटील बोराडे उर्फ आसाराम बोराडे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%86%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A4%BE%E0%A4%A1%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/66%20-%20%E0%A4%86%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AC%E0%A5%8B%E0%A4%B0%E0%A4%BE%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "districtHead-67",
       "name": "श्री. स्वप्नील मधुकरराव गलधर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/67%20-%20SWAPNIL%20GALDHAR.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/67%20-%20SWAPNIL%20GALDHAR.png"
     },
     {
       "id": "districtHead-68",
       "name": "श्री. चंद्रकांत निवृत्तीराव नवले",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Chandrakant%20Navle.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/68%20-%20Chandrakant%20Navle.png"
     },
     {
       "id": "districtHead-69",
       "name": "श्री. सचिन मुळूक",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Sachin%20Muluk_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/69%20-%20Sachin%20Muluk_.png"
     },
     {
       "id": "districtHead-70",
       "name": "श्री. अनिल जगताप",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/70%20-%20ANIL%20JAGTAP.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/70%20-%20ANIL%20JAGTAP.png"
     },
     {
       "id": "districtHead-71",
       "name": "श्री. शिवाजी माने",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/SHIVAJI%20MANE.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/71%20-%20SHIVAJI%20MANE.png"
     },
     {
       "id": "districtHead-72",
       "name": "श्री. सचिन दाने",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/72%20-%20sachin%20dane.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/72%20-%20sachin%20dane.png"
     },
     {
       "id": "districtHead-73",
       "name": "श्री. चंद्रकांत टेंगे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/73%20-%20CHANDRAKANT%20TANGETOL.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/73%20-%20CHANDRAKANT%20TANGETOL.png"
     },
     {
       "id": "districtHead-74",
       "name": "श्री. दत्तात्रय ज्ञानोबा साळुंखे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Dattatray%20salunkhe.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/74%20-Dattatray%20salunkhe.png"
     },
     {
       "id": "districtHead-75",
       "name": "श्री. अजित बाप्पासाहेब पिंगळे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Ajit%20Pingale_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/75%20-%20Ajit%20Pingale_.png"
     },
     {
       "id": "districtHead-76",
       "name": "श्री. मोहन शिवयोगी पनुरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Mohan%20Panure.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/76%20-%20Mohan%20Panure.png"
     },
     {
       "id": "districtHead-77",
       "name": "श्री. उमेश मुंडे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/77-%20Umesh%20munde.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/77-%20Umesh%20munde.png"
     },
     {
       "id": "districtHead-78",
       "name": "श्री. विनय गिरडे-पाटील",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/78%20-%20vinay%20girde%20Patil.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/78%20-%20vinay%20girde%20Patil.png"
     },
     {
       "id": "districtHead-79",
       "name": "श्री. विवेक माधवराव देशमुख",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/Vivek%20Deshmukh_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/79%20-%20vivek%20deshmukh%202.png"
     },
     {
       "id": "districtHead-80",
@@ -2049,7 +2040,7 @@
     {
       "id": "districtHead-81",
       "name": "श्री. विशाल विजयकुमार कदम",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/VISHAL%20KADAM.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/81%20-%20VISHAL%20KADAM.png"
     },
     {
       "id": "districtHead-82",
@@ -2062,7 +2053,7 @@
     {
       "id": "districtHead-84",
       "name": "आ. श्री. संतोष लक्ष्मणराव बांगर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/84_Shri%20Santosh%20Bangar.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/84_Shri%20Santosh%20Bangar.png"
     },
     {
       "id": "districtHead-85",
@@ -2071,37 +2062,37 @@
     {
       "id": "districtHead-86",
       "name": "श्री. सुनील डिके",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/86%20-%20%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A5%80%E0%A4%B2%20%E0%A4%A1%E0%A4%BF%E0%A4%95%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/86%20-%20%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A5%80%E0%A4%B2%20%E0%A4%A1%E0%A4%BF%E0%A4%95%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "districtHead-87",
       "name": "श्री. आशिष धमाळे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%86%E0%A4%B6%E0%A4%BF%E0%A4%B7%20%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%B3%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/87%20-%20%E0%A4%86%E0%A4%B6%E0%A4%BF%E0%A4%B7%20%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%B3%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "districtHead-88",
       "name": "श्री. ठाकूर प्रमोदसिंह गडरेल",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80%20%E0%A5%B2%E0%A4%A1%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A5%82%E0%A4%B0%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%B9%20%E0%A4%97%E0%A4%A1%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B2.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/88%20-%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80%20%E0%A5%B2%E0%A4%A1%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A5%82%E0%A4%B0%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8B%E0%A4%A6%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%B9%20%E0%A4%97%E0%A4%A1%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B2.png"
     },
     {
       "id": "districtHead-89",
       "name": "श्री. अश्विन उद्धवराव नवले",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%85%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%A8%20%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%B5%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%A8%E0%A4%B5%E0%A4%B2%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/89%20-%20%E0%A4%85%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%BF%E0%A4%A8%20%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%B5%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%A8%E0%A4%B5%E0%A4%B2%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "districtHead-90",
       "name": "श्री. श्रीरंग पिंजरकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/90-%20%E0%A4%85%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%B0%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A4%BF%E0%A4%82%E0%A4%9C%E0%A4%B0%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/90-%20%E0%A4%85%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%B0%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A4%BF%E0%A4%82%E0%A4%9C%E0%A4%B0%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-91",
       "name": "श्री. चंद्रशेखर पांडे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A5%87%E0%A4%96%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/91%20-%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A5%87%E0%A4%96%E0%A4%B0%20%E0%A4%AA%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "districtHead-92",
       "name": "श्री. नारायणराव गव्हाणकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/92%20-%20%E0%A4%A8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%97%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3%E0%A4%95%E0%A4%B0%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/92%20-%20%E0%A4%A8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%97%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3%E0%A4%95%E0%A4%B0%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "districtHead-93",
@@ -2110,22 +2101,22 @@
     {
       "id": "districtHead-94",
       "name": "श्री. महादेव नारायणराव ठाकरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/94%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%A6%E0%A5%87%E0%A4%B5%20%E0%A4%A8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A5%87%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%202.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/94%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%A6%E0%A5%87%E0%A4%B5%20%E0%A4%A8%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A5%87%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%202.png"
     },
     {
       "id": "districtHead-95",
       "name": "श्री. संतोष शंकर डिवरे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/95%20%20-%E0%A4%B8%E0%A4%82%E0%A4%A4%E0%A5%8B%E0%A4%B7%20%20%E0%A4%A1%E0%A4%BF%E0%A4%B5%E0%A4%B0%E0%A5%87%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/95%20%20-%E0%A4%B8%E0%A4%82%E0%A4%A4%E0%A5%8B%E0%A4%B7%20%20%E0%A4%A1%E0%A4%BF%E0%A4%B5%E0%A4%B0%E0%A5%87%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "districtHead-96",
       "name": "श्री. बळीराम बारकुजी मापारी",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%AC%E0%A4%B3%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%81%E0%A4%9C%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/96%20-%20%E0%A4%AC%E0%A4%B3%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%81%E0%A4%9C%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96.png"
     },
     {
       "id": "districtHead-97",
       "name": "श्री. ओमसिंग किसनसिंग रजपूत",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%93%E0%A4%AE%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%AA%E0%A5%82%E0%A4%A4%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%AC%E0%A5%81%E0%A4%B2%E0%A4%A2%E0%A4%BE%E0%A4%A3%E0%A4%BE.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/97%20-%20%E0%A4%93%E0%A4%AE%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%AA%E0%A5%82%E0%A4%A4%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%AC%E0%A5%81%E0%A4%B2%E0%A4%A2%E0%A4%BE%E0%A4%A3%E0%A4%BE.png"
     },
     {
       "id": "districtHead-98",
@@ -2138,17 +2129,17 @@
     {
       "id": "districtHead-100",
       "name": "श्री. राजुदास जाधव",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%81%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/100%20-%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%81%E0%A4%A6%E0%A4%BE%E0%A4%B8%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5.png"
     },
     {
       "id": "districtHead-101",
       "name": "श्री. सुरज गोजे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%20%E0%A4%97%E0%A5%8B%E0%A4%9C%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/101%20-%20%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%20%E0%A4%97%E0%A5%8B%E0%A4%9C%E0%A5%87.png"
     },
     {
       "id": "districtHead-102",
       "name": "श्री. संदीप वसंत ईटकेलवार",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A5%80%E0%A4%AA%20%E0%A4%87%E0%A4%9F%E0%A4%95%E0%A5%87%E0%A4%B2%E0%A4%B5%E0%A4%BE%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/102%20-%20%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A5%80%E0%A4%AA%20%E0%A4%87%E0%A4%9F%E0%A4%95%E0%A5%87%E0%A4%B2%E0%A4%B5%E0%A4%BE%E0%A4%B0.png"
     },
     {
       "id": "districtHead-103",
@@ -2161,7 +2152,7 @@
     {
       "id": "districtHead-105",
       "name": "श्री. राजेशजी सराफ",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%87%E0%A4%B6%E0%A4%9C%E0%A5%80%20%E0%A4%B8%E0%A4%B0%E0%A4%BE%E0%A4%AB.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/105%20-%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A5%87%E0%A4%B6%E0%A4%9C%E0%A5%80%20%E0%A4%B8%E0%A4%B0%E0%A4%BE%E0%A4%AB.png"
     },
     {
       "id": "districtHead-106",
@@ -2170,12 +2161,12 @@
     {
       "id": "districtHead-107",
       "name": "श्री. बंडू मेगाजी हजारे",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%AC%E0%A4%82%E0%A4%A1%E0%A5%82%20%E0%A4%B9%E0%A4%9C%E0%A4%BE%E0%A4%B0%E0%A5%87.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/107%20-%20%E0%A4%AC%E0%A4%82%E0%A4%A1%E0%A5%82%20%E0%A4%B9%E0%A4%9C%E0%A4%BE%E0%A4%B0%E0%A5%87.png"
     },
     {
       "id": "districtHead-108",
       "name": "श्री. युवराज धानोरकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%AF%E0%A5%81%E0%A4%B5%E0%A4%B0%E0%A4%BE%E0%A4%9C%20%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A5%8B%E0%A4%B0%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/108%20-%20%E0%A4%AF%E0%A5%81%E0%A4%B5%E0%A4%B0%E0%A4%BE%E0%A4%9C%20%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A5%8B%E0%A4%B0%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-109",
@@ -2184,7 +2175,7 @@
     {
       "id": "districtHead-110",
       "name": "श्री. संदिप राजीव ठाकूर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A5%80%E0%A4%AA%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A5%82%E0%A4%B0_.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/110%20-%20%E0%A4%B8%E0%A4%82%E0%A4%A6%E0%A5%80%E0%A4%AA%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A5%82%E0%A4%B0_.png"
     },
     {
       "id": "districtHead-111",
@@ -2193,7 +2184,7 @@
     {
       "id": "districtHead-112",
       "name": "श्री. पद्माकर बावनकर",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%AA%E0%A4%A6%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%B0%20%E0%A4%AC%E0%A4%BE%E0%A4%B5%E0%A4%A8%E0%A4%95%E0%A4%B0.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/112%20-%20%E0%A4%AA%E0%A4%A6%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%B0%20%E0%A4%AC%E0%A4%BE%E0%A4%B5%E0%A4%A8%E0%A4%95%E0%A4%B0.png"
     },
     {
       "id": "districtHead-113",
@@ -2202,7 +2193,7 @@
     {
       "id": "districtHead-114",
       "name": "श्री. सुरेंद्र पी. नायडू",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/Mens/%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A4%A1%E0%A5%82.webp"
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/114%20-%20%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A4%A1%E0%A5%82.png"
     }
   ],
   "womenDistrictHeads": [
@@ -2211,42 +2202,48 @@
       "name": "सौ. मीनाक्षी शिंदे",
       "role": "ठाणे जिल्हा",
       "phone": "8286188888",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/01%20-%20%E0%A4%AE%E0%A5%80%E0%A4%A8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%80%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
     },
     {
       "id": "wdh-2",
       "name": "सौ. शितल कचरे",
       "role": "नवी मुंबई — ऐरोली",
       "phone": "8830798141",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/02%20-%20%E0%A4%B6%E0%A4%BF%E0%A4%A4%E0%A4%B2%20%E0%A4%95%E0%A4%9A%E0%A4%B0%E0%A5%87_.png"
     },
     {
       "id": "wdh-3",
       "name": "सौ. सरोज पाटील",
       "role": "नवी मुंबई — बेलापूर",
       "phone": "9821015688",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/03%20-%20%20SAROJ%20PATIL.png"
     },
     {
       "id": "wdh-4",
       "name": "वैष्णवी रहाणे",
       "role": "विक्रमगड, वाडा, जवार, मुखेडा",
       "phone": "8600343909",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/04%20-%20%E0%A4%B5%E0%A5%88%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A4%B5%E0%A5%80%20%E0%A4%B0%E0%A4%B9%E0%A4%BE%E0%A4%A3%E0%A5%87_.png"
     },
     {
       "id": "wdh-5",
       "name": "वैदेही वाढाण",
       "role": "डहाणू, पालघर",
       "phone": "7773901631",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/05%20-%20%E0%A4%B5%E0%A5%88%E0%A4%A6%E0%A5%87%E0%A4%B9%E0%A5%80%20%E0%A4%B5%E0%A4%BE%E0%A4%A2%E0%A4%BE%E0%A4%A3.png"
     },
     {
       "id": "wdh-6",
       "name": "सौ. शितल नविन कदम",
       "role": "वसई व नालासोपारा",
       "phone": "8855066629",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/06%20-%20%E0%A4%B6%E0%A4%BF%E0%A4%A4%E0%A4%B2%20%E0%A4%A8%E0%A4%B5%E0%A4%BF%E0%A4%A8%20%E0%A4%95%E0%A4%A6%E0%A4%AE_.png"
     },
     {
       "id": "wdh-7",
@@ -2274,28 +2271,32 @@
       "name": "सौ. कुंदा राजाराम गोळे",
       "role": "पनवेल",
       "phone": "9324442815",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/10_%E0%A4%B8%E0%A5%8C.%20%E0%A4%95%E0%A5%81%E0%A4%82%E0%A4%A6%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%97%E0%A5%8B%E0%A4%B3%E0%A5%87.png"
     },
     {
       "id": "wdh-11",
       "name": "सौ. रश्मी दिलीप गोखले",
       "role": "उत्तर रत्नागिरी",
       "phone": "9145946078",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/11-%20%E0%A4%B0%E0%A4%B6%E0%A5%8D%E0%A4%AE%E0%A5%80%20%E0%A4%97%E0%A5%8B%E0%A4%96%E0%A4%B2%E0%A5%87_.png"
     },
     {
       "id": "wdh-12",
       "name": "श्रीमती शिल्पा सुर्वे",
       "role": "चिपळूण, रत्नागिरी व राजापूर",
       "phone": "9423874981",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/12%20-%20%E0%A4%B6%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%BE%20%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87_.png"
     },
     {
       "id": "wdh-13",
       "name": "सौ. दिपलक्ष्मी पडते",
       "role": "कुडाळ-मालवण व कणकवली",
       "phone": "9730878579",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/13%20-%20%E0%A4%A6%E0%A5%80%E0%A4%AA%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%20%E0%A4%AA%E0%A4%A1%E0%A4%A4%E0%A5%87_.png"
     },
     {
       "id": "wdh-14",
@@ -2309,28 +2310,32 @@
       "name": "ॲड. सौ. श्रध्दा अरविंद कुलकर्णी",
       "role": "नांदगाव, येवला",
       "phone": "8975278011",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/15%20-%20%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BE%20%E0%A4%85%E0%A4%B0%E0%A4%B5%E0%A4%BF%E0%A4%82%E0%A4%A6%20%E0%A4%95%E0%A5%81%E0%A4%B2%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A5%80.png"
     },
     {
       "id": "wdh-16",
       "name": "सौ. रोशनीताई कुंभाडे",
       "role": "चांदवड, निफाड, देवळा",
       "phone": "8291719002",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/16%20-%20%E0%A4%B0%E0%A5%8B%E0%A4%B6%E0%A4%A8%E0%A5%80%20%E0%A4%95%E0%A5%81%E0%A4%82%E0%A4%AD%E0%A4%BE%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "wdh-17",
       "name": "सौ. मंगलाताई भास्कर",
       "role": "कळवण, सुरगाळा, पेठ, दिंडोरी",
       "phone": "9527717777 / 7276078912",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/17%20-%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B2%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AD%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%B0_.png"
     },
     {
       "id": "wdh-18",
       "name": "सौ. संगीता चव्हाण",
       "role": "मालेगाव मध्य, मालेगाव बाह्य, बागलाण",
       "phone": "9403276118",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/18%20-%20%E0%A4%B8%E0%A4%82%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%9A%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3_.png"
     },
     {
       "id": "wdh-19",
@@ -2351,14 +2356,16 @@
       "name": "सौ. सुनिताताई शेळके",
       "role": "संगमनेर, राहाता, अकोले",
       "phone": "8830319896",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/21%20-%20%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%B6%E0%A5%87%E0%A4%B3%E0%A4%95%E0%A5%87.png"
     },
     {
       "id": "wdh-22",
       "name": "सौ. विमलताई दत्तात्रय पुंडे",
       "role": "कोपरगाव, नेवासा, श्रीरामपूर, राहुरी ३२ गावे",
       "phone": "9637811129",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/22%20-%20%E0%A4%B5%E0%A4%BF%E0%A4%AE%E0%A4%B2%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AA%E0%A5%81%E0%A4%82%E0%A4%A1%E0%A5%87.png"
     },
     {
       "id": "wdh-23",
@@ -2386,7 +2393,7 @@
       "name": "श्रीम. संगीता पगारे",
       "role": "साक्री",
       "phone": "8275601661",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B8%E0%A4%82%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%AA%E0%A4%97%E0%A4%BE%E0%A4%B0%E0%A5%87.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/26%20-%20%E0%A4%B8%E0%A4%82%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%AA%E0%A4%97%E0%A4%BE%E0%A4%B0%E0%A5%87.png",
       "female": true
     },
     {
@@ -2401,7 +2408,7 @@
       "name": "सौ. ज्योती योगेश राजपूत",
       "role": "नंदुरबार, नवापूर व शहादा",
       "phone": "9763965686 / 9356550763",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%AA%E0%A5%82%E0%A4%A4,%20%E0%A4%A8%E0%A4%82%E0%A4%A6%E0%A5%81%E0%A4%B0%E0%A4%AC%E0%A4%BE%E0%A4%B0.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/28%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%AA%E0%A5%82%E0%A4%A4%2C%20%E0%A4%A8%E0%A4%82%E0%A4%A6%E0%A5%81%E0%A4%B0%E0%A4%AC%E0%A4%BE%E0%A4%B0.png",
       "female": true
     },
     {
@@ -2409,7 +2416,7 @@
       "name": "सौ. सरीता बी माळी",
       "role": "कोल्हे · जळगाव ग्रामीण व जळगाव शहर",
       "phone": "8087733999",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B8%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%AE%E0%A4%BE%E0%A4%B3%E0%A5%80,%20%E0%A4%9C%E0%A4%B3%E0%A4%97%E0%A4%BE%E0%A4%B5.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/29%20-%20%E0%A4%B8%E0%A4%B0%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%AE%E0%A4%BE%E0%A4%B3%E0%A5%80%2C%20%E0%A4%9C%E0%A4%B3%E0%A4%97%E0%A4%BE%E0%A4%B5.png",
       "female": true
     },
     {
@@ -2417,7 +2424,7 @@
       "name": "सौ. नंदाताई निकम",
       "role": "रावेर, मुक्ताईनगर, जामनेर व भुसावळ",
       "phone": "9209881391",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%A8%E0%A4%82%E0%A4%A6%E0%A4%BE%20%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%AE,%20%E0%A4%9C%E0%A4%B3%E0%A4%97%E0%A4%BE%E0%A4%B5.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/30%20-%20%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%A8%E0%A4%82%E0%A4%A6%E0%A4%BE%20%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%AE%2C%20%E0%A4%9C%E0%A4%B3%E0%A4%97%E0%A4%BE%E0%A4%B5.png",
       "female": true
     },
     {
@@ -2425,7 +2432,7 @@
       "name": "सौ. शिलाताई संदीप भोंडवे",
       "role": "पिंपरी, चिंचवड, मावळ",
       "phone": "9822296250",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B6%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AD%E0%A5%8B%E0%A4%82%E0%A4%A1%E0%A4%B5%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/31%20-%20%E0%A4%B6%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AD%E0%A5%8B%E0%A4%82%E0%A4%A1%E0%A4%B5%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2447,7 +2454,7 @@
       "name": "सौ. पूजा रावेतकर",
       "role": "खडकवासला, शिवाजीनगर",
       "phone": "8554991699",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A5%87%E0%A4%A4%E0%A4%95%E0%A4%B0_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/34%20-%20%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A5%87%E0%A4%A4%E0%A4%95%E0%A4%B0_.png",
       "female": true
     },
     {
@@ -2455,7 +2462,7 @@
       "name": "श्रीम. मनिषा मारुती परांडे",
       "role": "खेड आळंदी व भोसरी",
       "phone": "8788563628",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%BE%20%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/35%20-%20%E0%A4%AE%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%BE%20%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%82%E0%A4%A1%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2463,7 +2470,7 @@
       "name": "सौ. स्वाती टकले",
       "role": "पुरंदर व भोर",
       "phone": "9881787161",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%A4%E0%A5%80%20%E0%A4%9F%E0%A4%95%E0%A4%B2%E0%A5%87%20_page-0001%20(1).webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/36%20-%20%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%A4%E0%A5%80%20%E0%A4%9F%E0%A4%95%E0%A4%B2%E0%A5%87.png",
       "female": true
     },
     {
@@ -2477,7 +2484,7 @@
       "name": "सौ. सुरेखा संतोष तोंडे",
       "role": "मुळशी व राजगड",
       "phone": "9637733026",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%20%E0%A4%A4%E0%A5%8B%E0%A4%82%E0%A4%A1%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/38%20-%20%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%20%E0%A4%A4%E0%A5%8B%E0%A4%82%E0%A4%A1%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2492,7 +2499,7 @@
       "name": "रुक्मिणी हनमंत अंबेगिरी",
       "role": "सांगली",
       "phone": "8407965333",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%AE%E0%A4%BF%E0%A4%A3%E0%A5%80%20%E0%A4%86%E0%A4%82%E0%A4%AC%E0%A4%BF%E0%A4%97%E0%A5%87%E0%A4%B0.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/40%20-%20%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%AE%E0%A4%BF%E0%A4%A3%E0%A5%80%20%E0%A4%86%E0%A4%82%E0%A4%AC%E0%A4%BF%E0%A4%97%E0%A5%87%E0%A4%B0.png",
       "female": true
     },
     {
@@ -2506,7 +2513,7 @@
       "name": "रविना राठोड",
       "role": "बार्शी, अक्कलकोट",
       "phone": "8806939206",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B0%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%8B%E0%A4%A1_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/42%20-%20%E0%A4%B0%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%8B%E0%A4%A1_.png",
       "female": true
     },
     {
@@ -2514,7 +2521,7 @@
       "name": "मुबीना मुलाणी",
       "role": "पंढरपूर",
       "phone": "9890651192",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A5%81%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A4%BE%E0%A4%A8%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/43%20-%20%E0%A4%AE%E0%A5%81%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A4%BE%E0%A4%A8%E0%A5%80.png",
       "female": true
     },
     {
@@ -2522,7 +2529,7 @@
       "name": "सौ. आरती ओंकार बसवंती",
       "role": "माढा, करमाळा व माळशिरस",
       "phone": "8055487777",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%86%E0%A4%B0%E0%A4%A4%E0%A5%80%20%E0%A4%AC%E0%A4%B8%E0%A4%B5%E0%A4%82%E0%A4%A4%E0%A5%80_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/44%20-%20%E0%A4%86%E0%A4%B0%E0%A4%A4%E0%A5%80%20%E0%A4%AC%E0%A4%B8%E0%A4%B5%E0%A4%82%E0%A4%A4%E0%A5%80_.png",
       "female": true
     },
     {
@@ -2537,7 +2544,7 @@
       "name": "सौ. सुलभाताई सुभाषराव भोपळे",
       "role": "वैजापूर व गंगापूर",
       "phone": "9421417077",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B8%E0%A5%81%E0%A4%B2%E0%A4%AD%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B8%E0%A5%81%E0%A4%AD%E0%A4%BE%E0%A4%B7%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%B3%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/46%20-%20%E0%A4%B8%E0%A5%81%E0%A4%B2%E0%A4%AD%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B8%E0%A5%81%E0%A4%AD%E0%A4%BE%E0%A4%B7%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%B3%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2545,7 +2552,7 @@
       "name": "सौ. पुष्पाताई मधुकर गव्हाणे",
       "role": "फुलंब्री, सिल्लोड, पैठण व कन्नड",
       "phone": "9822448949",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AA%E0%A5%81%E0%A4%B7%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AE%E0%A4%A7%E0%A5%81%E0%A4%95%E0%A4%B0%20%E0%A4%97%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/47%20-%20%E0%A4%AA%E0%A5%81%E0%A4%B7%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AE%E0%A4%A7%E0%A5%81%E0%A4%95%E0%A4%B0%20%E0%A4%97%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%A3%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2553,7 +2560,7 @@
       "name": "सौ. कालिंदा कैलास ढगे",
       "role": "जालना, बदनापूर, अंबड, भोकरदन, जाफराबाद, मंठा",
       "phone": "9673295461",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%A6%E0%A4%BE%20%E0%A4%95%E0%A5%88%E0%A4%B2%E0%A4%BE%E0%A4%B8%20%E0%A4%A2%E0%A4%97%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/48%20-%20%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A5%80%E0%A4%82%E0%A4%A6%E0%A4%BE%20%E0%A4%95%E0%A5%88%E0%A4%B2%E0%A4%BE%E0%A4%B8%20%E0%A4%A2%E0%A4%97%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2561,7 +2568,7 @@
       "name": "सौ. चंदाताई रामेश्वर शिंदे",
       "role": "परतुर व घनसावंगी",
       "phone": "8459767273",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A5%87%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B0%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/49%20-%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A5%87%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B0%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png",
       "female": true
     },
     {
@@ -2569,7 +2576,7 @@
       "name": "रत्नमाला मधुकर आंधळे",
       "role": "बीड, गेवराई, आष्टी, पाटोदा, शिरूर का.",
       "phone": "9699133972",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B0%E0%A4%A4%E0%A5%8D%E0%A4%A8%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%AE%E0%A4%A7%E0%A5%81%E0%A4%95%E0%A4%B0%20%E0%A4%86%E0%A4%82%E0%A4%A7%E0%A4%B3%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/50%20-%20%E0%A4%B0%E0%A4%A4%E0%A5%8D%E0%A4%A8%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%AE%E0%A4%A7%E0%A5%81%E0%A4%95%E0%A4%B0%20%E0%A4%86%E0%A4%82%E0%A4%A7%E0%A4%B3%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2577,7 +2584,7 @@
       "name": "सौ. चंद्रकलाबाई बांगर",
       "role": "आंबाजोगाई, केज, परळी",
       "phone": "9421413462",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%B2%E0%A4%BE%E0%A4%AC%E0%A4%BE%E0%A4%88%20%E0%A4%AC%E0%A4%BE%E0%A4%82%E0%A4%97%E0%A4%B0_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/51%20-%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%B2%E0%A4%BE%E0%A4%AC%E0%A4%BE%E0%A4%88%20%E0%A4%AC%E0%A4%BE%E0%A4%82%E0%A4%97%E0%A4%B0_.png",
       "female": true
     },
     {
@@ -2585,7 +2592,7 @@
       "name": "कल्पनाताई शिवाप्पा बावगे",
       "role": "लातूर शहर, ग्रामीण",
       "phone": "9850066602",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E0%A4%B8%E0%A5%8C.%20%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%A8%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%AA%E0%A4%BE%20%E0%A4%AC%E0%A4%BE%E0%A4%B5%E0%A4%97%E0%A5%87.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/52%20-%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%B8%E0%A5%8C%20%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AA%E0%A4%A8%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%AA%E0%A4%BE%20%E0%A4%AC%E0%A4%BE%E0%A4%B5%E0%A4%97%E0%A5%87.png",
       "female": true
     },
     {
@@ -2593,7 +2600,7 @@
       "name": "सौ. उर्मिला संतोष भगत",
       "role": "उदगीर व अहमदपूर",
       "phone": "8766608300",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%89%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%AD%E0%A4%97%E0%A4%A4_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/53%20-%20%E0%A4%89%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%AD%E0%A4%97%E0%A4%A4_.png",
       "female": true
     },
     {
@@ -2601,7 +2608,7 @@
       "name": "श्रीमती अर्चनाताई बिरादार",
       "role": "औसा व निलंगा",
       "phone": "9730632517",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%A8%E0%A4%BE%20%E0%A4%AC%E0%A4%BF%E0%A4%B0%E0%A4%BE%E0%A4%A6%E0%A4%BE%E0%A4%B0.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/54%20-%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%A8%E0%A4%BE%20%E0%A4%AC%E0%A4%BF%E0%A4%B0%E0%A4%BE%E0%A4%A6%E0%A4%BE%E0%A4%B0.png",
       "female": true
     },
     {
@@ -2609,7 +2616,7 @@
       "name": "श्रीमती भारतीताई भाऊसाहेब गायकवाड",
       "role": "कळंब, धाराशीव",
       "phone": "9022498634",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AD%E0%A4%BE%E0%A4%8A%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%97%E0%A4%BE%E0%A4%AF%E0%A4%95%E0%A4%B5%E0%A4%BE%E0%A4%A1_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/55%20-%20%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AD%E0%A4%BE%E0%A4%8A%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A5%87%E0%A4%AC%20%E0%A4%97%E0%A4%BE%E0%A4%AF%E0%A4%95%E0%A4%B5%E0%A4%BE%E0%A4%A1_.png",
       "female": true
     },
     {
@@ -2617,7 +2624,7 @@
       "name": "सौ. अर्चना अंकुश दराडे",
       "role": "परंडा, भूम व वाशी",
       "phone": "8605039593",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%A8%E0%A4%BE%20%E0%A4%85%E0%A4%82%E0%A4%95%E0%A5%81%E0%A4%B6%20%E0%A4%A6%E0%A4%B0%E0%A4%BE%E0%A4%A1%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/56%20-%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%A8%E0%A4%BE%20%E0%A4%85%E0%A4%82%E0%A4%95%E0%A5%81%E0%A4%B6%20%E0%A4%A6%E0%A4%B0%E0%A4%BE%E0%A4%A1%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2625,7 +2632,7 @@
       "name": "श्रीम. मीनाताई रामचंद्र सोमाजीकदम",
       "role": "तुळजापूर, उमरगा-लोहारा तालुका",
       "phone": "9881558770",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A5%80%E0%A4%A8%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%B8%E0%A5%8B%E0%A4%AE%E0%A4%BE%E0%A4%9C%E0%A5%80%20%E0%A4%95%E0%A4%A6%E0%A4%AE_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/57%20-%20%E0%A4%AE%E0%A5%80%E0%A4%A8%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%B8%E0%A5%8B%E0%A4%AE%E0%A4%BE%E0%A4%9C%E0%A5%80%20%E0%A4%95%E0%A4%A6%E0%A4%AE_.png",
       "female": true
     },
     {
@@ -2633,7 +2640,7 @@
       "name": "सौ. वनमाला राठोड",
       "role": "नांदेड दक्षिण, मुखेड व देगलूर",
       "phone": "9767689147",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B5%E0%A4%A8%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%8B%E0%A4%A1_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/58%20-%20%E0%A4%B5%E0%A4%A8%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%8B%E0%A4%A1_.png",
       "female": true
     },
     {
@@ -2641,7 +2648,7 @@
       "name": "सौ. गिता मुकेश पुरोहित",
       "role": "लोहा व भोकर",
       "phone": "9422478737",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%AE%E0%A5%81%E0%A4%95%E0%A5%87%E0%A4%B6%20%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A5%8B%E0%A4%B9%E0%A4%BF%E0%A4%A4_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/59%20-%20%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%AE%E0%A5%81%E0%A4%95%E0%A5%87%E0%A4%B6%20%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A5%8B%E0%A4%B9%E0%A4%BF%E0%A4%A4_.png",
       "female": true
     },
     {
@@ -2649,7 +2656,7 @@
       "name": "सौ. शितल ज्योतिबा भांगे",
       "role": "हादगाव व किनवट",
       "phone": "9359046616",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B6%E0%A4%BF%E0%A4%A4%E0%A4%B2%20%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A4%BF%E0%A4%AC%E0%A4%BE%20%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/60%20-%20%E0%A4%B6%E0%A4%BF%E0%A4%A4%E0%A4%B2%20%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A4%BF%E0%A4%AC%E0%A4%BE%20%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2657,7 +2664,7 @@
       "name": "सौ. अपर्णाताई नेरलकर",
       "role": "उत्तर नांदेड व नायगाव",
       "phone": "9822192530",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%85%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%A8%E0%A5%87%E0%A4%B0%E0%A4%B2%E0%A4%95%E0%A4%B0_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/61%20-%20%E0%A4%85%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%A8%E0%A5%87%E0%A4%B0%E0%A4%B2%E0%A4%95%E0%A4%B0_.png",
       "female": true
     },
     {
@@ -2665,7 +2672,7 @@
       "name": "गीताताई बालाजी सूर्यवंशी",
       "role": "परभणी, जिंतूर",
       "phone": "9049209661",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AC%E0%A4%BE%E0%A4%B2%E0%A4%BE%E0%A4%9C%E0%A5%80%20%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%82%E0%A4%B6%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/62%20-%20%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AC%E0%A4%BE%E0%A4%B2%E0%A4%BE%E0%A4%9C%E0%A5%80%20%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%82%E0%A4%B6%E0%A5%80.png",
       "female": true
     },
     {
@@ -2673,7 +2680,7 @@
       "name": "जनाबाई रविंद्रकुमार मुंडे",
       "role": "पूर्णा, गंगाखेड, पालम",
       "phone": "7499994028",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%9C%E0%A4%A8%E0%A4%BE%E0%A4%AC%E0%A4%BE%E0%A4%88%20%E0%A4%B0%E0%A4%B5%E0%A5%80%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B0%20%E0%A4%AE%E0%A5%81%E0%A4%82%E0%A4%A1%E0%A5%87_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/63%20-%20%E0%A4%9C%E0%A4%A8%E0%A4%BE%E0%A4%AC%E0%A4%BE%E0%A4%88%20%E0%A4%B0%E0%A4%B5%E0%A5%80%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B0%20%E0%A4%AE%E0%A5%81%E0%A4%82%E0%A4%A1%E0%A5%87_.png",
       "female": true
     },
     {
@@ -2687,7 +2694,7 @@
       "name": "सौ. रेखाताई संभाजी देवकते पाटील",
       "role": "हिंगोली जिल्हा",
       "phone": "7775022657",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/65%20-%20%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.png",
       "female": true
     },
     {
@@ -2695,7 +2702,7 @@
       "name": "सौ. अरुणाताई इंगोले",
       "role": "दर्यापूर",
       "phone": "9527555077",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%85%E0%A4%B0%E0%A5%81%E0%A4%A3%E0%A4%BE%20%E0%A4%87%E0%A4%82%E0%A4%97%E0%A5%8B%E0%A4%B2%E0%A5%87,%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/66%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%85%E0%A4%B0%E0%A5%81%E0%A4%A3%E0%A4%BE%20%E0%A4%87%E0%A4%82%E0%A4%97%E0%A5%8B%E0%A4%B2%E0%A5%87%2C%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.png",
       "female": true
     },
     {
@@ -2703,7 +2710,7 @@
       "name": "श्रीम. वंदनाताई दारव्हेकर",
       "role": "अचलपूर व मेळघाट",
       "phone": "9011137237",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%20%E0%A4%B5%E0%A4%82%E0%A4%A6%E0%A4%A8%E0%A4%BE%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%A6%E0%A4%BE%E0%A4%B0%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A5%87%E0%A4%95%E0%A4%B0,%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/67%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%20%E0%A4%B5%E0%A4%82%E0%A4%A6%E0%A4%A8%E0%A4%BE%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%A6%E0%A4%BE%E0%A4%B0%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A5%87%E0%A4%95%E0%A4%B0%2C%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.png",
       "female": true
     },
     {
@@ -2711,7 +2718,7 @@
       "name": "सौ. रेखा खारोडे",
       "role": "बडनेरा, अमरावती व तिवसा",
       "phone": "9370964545",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%20%E0%A4%96%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%A1%E0%A5%87,%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/68%20-%20%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%20%E0%A4%96%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%A1%E0%A5%87%2C%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.png",
       "female": true
     },
     {
@@ -2719,7 +2726,7 @@
       "name": "सौ. जयश्री कातकिडे",
       "role": "धामणगाव रेल्वे व वरुड-मोर्शी",
       "phone": "7030846736",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%9C%E0%A4%AF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%95%E0%A4%BE%E0%A4%A4%E0%A4%95%E0%A5%80%E0%A4%A1%E0%A5%87,%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/69%20-%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%9C%E0%A4%AF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%95%E0%A4%BE%E0%A4%A4%E0%A4%95%E0%A5%80%E0%A4%A1%E0%A5%87%2C%20%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80.png",
       "female": true
     },
     {
@@ -2727,7 +2734,7 @@
       "name": "सौ. उषा जगजितसिंग विरक",
       "role": "अकोला पश्चिम, मुर्तीजापूर व अकोला पूर्व",
       "phone": "9011028855",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%89%E0%A4%B7%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%B0%E0%A4%95%20,%20%E0%A4%85%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/70%20-%20%E0%A4%89%E0%A4%B7%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%B0%E0%A4%95%20%2C%20%E0%A4%85%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE.png",
       "female": true
     },
     {
@@ -2735,7 +2742,7 @@
       "name": "सौ. रेखा राऊत",
       "role": "बाळापुर व अकोट",
       "phone": "7756927475",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%8A%E0%A4%A4,%20%E0%A4%85%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/71%20-%20%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%8A%E0%A4%A4%2C%20%E0%A4%85%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE.png",
       "female": true
     },
     {
@@ -2743,14 +2750,15 @@
       "name": "सौ. वैशाली मनोज येळणे",
       "role": "वाशीम जिल्हा",
       "phone": "9764864590 / 9579027436",
-      "female": true
+      "female": true,
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/72%20-%20%E0%A4%B8%E0%A5%8C.%20%E0%A4%B5%E0%A5%88%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A5%80%20%E0%A4%AF%E0%A5%87%E0%A4%B3%E0%A4%A3%E0%A5%87%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%20%E0%A4%B5%E0%A4%BE%E0%A4%B6%E0%A4%BF%E0%A4%AE.png"
     },
     {
       "id": "wdh-73",
       "name": "सौ. मायाताई गजानन म्हस्के",
       "role": "मेहकर, चिखली, सिंदखेड राजा व बुलडाणा",
       "phone": "7822990867",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%87,%20%E0%A4%AC%E0%A5%81%E0%A4%B2%E0%A4%A2%E0%A4%BE%E0%A4%A3%E0%A4%BE.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/73%20-%20%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A4%E0%A4%BE%E0%A4%88%20%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%87%2C%20%E0%A4%AC%E0%A5%81%E0%A4%B2%E0%A4%A2%E0%A4%BE%E0%A4%A3%E0%A4%BE.png",
       "female": true
     },
     {
@@ -2758,7 +2766,7 @@
       "name": "सौ. शारदाताई पाटील",
       "role": "जळगाव जामोद, खामगांव व मलकापूर",
       "phone": "7875248355",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%E0%A4%B6%E0%A4%BE%E0%A4%B0%E0%A4%A6%E0%A4%BE%20%E0%A4%B8%E0%A4%96%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2,%20%E0%A4%AC%E0%A5%81%E0%A4%B2%E0%A4%A2%E0%A4%BE%E0%A4%A3%E0%A4%BE.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/74%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%E0%A4%B6%E0%A4%BE%E0%A4%B0%E0%A4%A6%E0%A4%BE%20%E0%A4%B8%E0%A4%96%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2%2C%20%E0%A4%AC%E0%A5%81%E0%A4%B2%E0%A4%A2%E0%A4%BE%E0%A4%A3%E0%A4%BE.png",
       "female": true
     },
     {
@@ -2773,7 +2781,7 @@
       "name": "वैशाली प्रशांत मासाळ",
       "role": "पुसद, महागाव, दिग्रज, उमरखेड, नेर",
       "phone": "9767929203",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%B5%E0%A5%88%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B3_.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/76%20-%20%E0%A4%B5%E0%A5%88%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B3_.png",
       "female": true
     },
     {
@@ -2781,7 +2789,7 @@
       "name": "सौ. नेहाताई भोकरे",
       "role": "काटोल, हिंगणा, सावनेर",
       "phone": "7620294855",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%A8%E0%A5%87%E0%A4%B9%E0%A4%BE%20%E0%A4%AD%E0%A5%8B%E0%A4%95%E0%A4%B0%E0%A5%87%20,%20%E0%A4%A8%E0%A4%BE%E0%A4%97%E0%A4%AA%E0%A5%81%E0%A4%B0.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/77%20-%20%E0%A4%A8%E0%A5%87%E0%A4%B9%E0%A4%BE%20%E0%A4%AD%E0%A5%8B%E0%A4%95%E0%A4%B0%E0%A5%87%20%2C%20%E0%A4%A8%E0%A4%BE%E0%A4%97%E0%A4%AA%E0%A5%81%E0%A4%B0.png",
       "female": true
     },
     {
@@ -2796,7 +2804,7 @@
       "name": "सौ. अनिता निरंजन जाधव",
       "role": "नागपूर मध्य, उत्तर व पूर्व",
       "phone": "7410555341",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5,%20%E0%A4%A8%E0%A4%BE%E0%A4%97%E0%A4%AA%E0%A5%81%E0%A4%B0.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/79%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%9C%E0%A4%BE%E0%A4%A7%E0%A4%B5%2C%20%E0%A4%A8%E0%A4%BE%E0%A4%97%E0%A4%AA%E0%A5%81%E0%A4%B0.png",
       "female": true
     },
     {
@@ -2825,7 +2833,7 @@
       "name": "सौ. प्रतिमा ठाकूर",
       "role": "चंद्रपूर, राजुरा व वरोरा",
       "phone": "9657243995",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BF%E0%A4%AE%E0%A4%BE%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A5%82%E0%A4%B0%20,%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AA%E0%A5%82%E0%A4%B0.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/84%20-%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BF%E0%A4%AE%E0%A4%BE%20%E0%A4%A0%E0%A4%BE%E0%A4%95%E0%A5%82%E0%A4%B0%20%2C%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AA%E0%A5%82%E0%A4%B0.png",
       "female": true
     },
     {
@@ -2833,7 +2841,7 @@
       "name": "सौ. भारती राखडे",
       "role": "ब्रम्हपुरी, बल्लारपूर व चिमूर",
       "phone": "7972019452",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%20%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A5%80%E0%A4%B2%20%E0%A4%B0%E0%A4%BE%E0%A4%96%E0%A4%A1%E0%A5%87,%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AA%E0%A5%82%E0%A4%B0.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/85%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%20%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A5%80%E0%A4%B2%20%E0%A4%B0%E0%A4%BE%E0%A4%96%E0%A4%A1%E0%A5%87%2C%20%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%AA%E0%A5%82%E0%A4%B0.png",
       "female": true
     },
     {
@@ -2841,7 +2849,7 @@
       "name": "श्रीमती पौर्णिमा इस्टाम",
       "role": "अहेरी",
       "phone": "9403466436 / 9405661685",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%AA%E0%A5%8C%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BF%E0%A4%AE%E0%A4%BE%20%E0%A4%87%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%AE,%20%E0%A4%97%E0%A4%A1%E0%A4%9A%E0%A4%BF%E0%A4%B0%E0%A5%8B%E0%A4%B2%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/86%20-%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%AA%E0%A5%8C%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BF%E0%A4%AE%E0%A4%BE%20%E0%A4%87%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%AE%2C%20%E0%A4%97%E0%A4%A1%E0%A4%9A%E0%A4%BF%E0%A4%B0%E0%A5%8B%E0%A4%B2%E0%A5%80%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%AA%E0%A5%8C%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BF%E0%A4%AE%E0%A4%BE%20%E0%A4%87%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%AE%2C%20%E0%A4%97%E0%A4%A1%E0%A4%9A%E0%A4%BF%E0%A4%B0%E0%A5%8B%E0%A4%B2%E0%A5%80.png",
       "female": true
     },
     {
@@ -2856,7 +2864,7 @@
       "name": "श्रीमती अर्चना संतोष गोंधळे",
       "role": "आरमोरी",
       "phone": "8983238014",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%A8%E0%A4%BE%20%E0%A4%97%E0%A5%8B%E0%A4%82%E0%A4%A7%E0%A4%B3%E0%A5%87,%20%E0%A4%97%E0%A4%A1%E0%A4%9A%E0%A4%BF%E0%A4%B0%E0%A5%8B%E0%A4%B2%E0%A5%80.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/83%20-%20%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%A8%E0%A4%BE%20%E0%A4%97%E0%A5%8B%E0%A4%82%E0%A4%A7%E0%A4%B3%E0%A5%87%2C%20%E0%A4%97%E0%A4%A1%E0%A4%9A%E0%A4%BF%E0%A4%B0%E0%A5%8B%E0%A4%B2%E0%A5%80.png",
       "female": true
     },
     {
@@ -2864,7 +2872,7 @@
       "name": "सौ. मायाताई शिवनकर",
       "role": "अर्जुनी मोरगाव व आमगाव",
       "phone": "9284296915",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%BE%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%A3%E0%A4%95%E0%A4%B0,%20%E0%A4%97%E0%A5%8B%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%AF%E0%A4%BE.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/88%20-%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%BE%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%A3%E0%A4%95%E0%A4%B0%2C%20%E0%A4%97%E0%A5%8B%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%AF%E0%A4%BE.png",
       "female": true
     },
     {
@@ -2872,7 +2880,7 @@
       "name": "सौ. ज्योती अशोक लिल्हारे",
       "role": "उपवंशी · गोंदिया व तिरोडा-गोरेगाव",
       "phone": "9039785307",
-      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/womens/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96,%20%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A5%80%20%E0%A4%B2%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%B0%E0%A5%87,%20%E0%A4%97%E0%A5%8B%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%AF%E0%A4%BE.webp",
+      "photo": "/leaders/%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96/89%20-%20%E0%A4%9C%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%81%E0%A4%96%2C%20%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%A4%E0%A5%80%20%E0%A4%B2%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A4%B0%E0%A5%87%2C%20%E0%A4%97%E0%A5%8B%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%AF%E0%A4%BE.png",
       "female": true
     }
   ],
