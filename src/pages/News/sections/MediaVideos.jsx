@@ -83,7 +83,19 @@ function VideoCard({ item, index, onPlay }) {
       data-cursor="link"
     >
       <div className="mr-video__thumb">
-        <img className="mr-video__img" src={`https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`} alt="" loading="lazy" />
+        <img
+          className="mr-video__img"
+          src={`https://i.ytimg.com/vi/${item.videoId}/maxresdefault.jpg`}
+          alt=""
+          loading="lazy"
+          onError={(e) => {
+            // maxres isn't always available — fall back to the 16:9 medium thumb
+            if (!e.currentTarget.dataset.fb) {
+              e.currentTarget.dataset.fb = '1';
+              e.currentTarget.src = `https://i.ytimg.com/vi/${item.videoId}/mqdefault.jpg`;
+            }
+          }}
+        />
         <span className="mr-video__shade" aria-hidden="true" />
         <span className="mr-video__play" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5 V19 L20 12 Z" /></svg>
