@@ -22,7 +22,7 @@ export default function InnovativePrograms() {
             <span>{intro.eyebrow}</span>
           </div>
           <h2 className="inn__title">{intro.title}</h2>
-          <p className="inn__lede">{intro.lede}</p>
+          {intro.lede && <p className="inn__lede">{intro.lede}</p>}
         </div>
 
         {/* ── Programs (alternating layout) ── */}

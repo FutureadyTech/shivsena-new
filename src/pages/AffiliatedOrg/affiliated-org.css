@@ -229,14 +229,64 @@
   font-weight: 700;
 }
 
-/* Fixed-width, centered cards (overrides the 4-col leadership grid so
-   orgs with 1–3 office bearers stay centred instead of left-stranded). */
-.aff-detail__grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-  justify-content: center;
-  gap: 28px;
-  max-width: 1180px;
+/* पदाधिकारी — names only (compact accent cards, side-by-side) */
+.aff-detail__bearers {
+  list-style: none;
   margin: 0 auto;
+  padding: 0;
+  max-width: 920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.aff-detail__bearer {
+  position: relative;
+  flex: 0 1 268px;
+  text-align: center;
+  padding: 30px 26px 24px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FCF6EC 100%);
+  border: 1px solid rgba(196, 77, 14, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 14px 34px -24px rgba(133, 65, 0, 0.45);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+}
+/* top saffron accent bar */
+.aff-detail__bearer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, #FF6B1A, #C44D0E);
+}
+.aff-detail__bearer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px -22px rgba(133, 65, 0, 0.55);
+  border-color: rgba(196, 77, 14, 0.3);
+}
+.aff-detail__bearer-name {
+  display: block;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-weight: 700;
+  color: var(--ink, #1A1410);
+  line-height: 1.35;
+}
+.aff-detail__bearer-role {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: rgba(196, 77, 14, 0.1);
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--saffron-on-light, #C44D0E);
 }
 
 .aff-detail .aff-org__back { margin: 56px auto 0; display: inline-flex; }

@@ -1,0 +1,437 @@
+/* ═══════════════════════════════════════════════════════════════
+   MEDIA RESOURCES — shared section styling (मीडिया रिसोर्सेस)
+   Press releases · Appointment letters · Speeches · Interviews ·
+   Articles · News — all driven by src/content/media.json
+═══════════════════════════════════════════════════════════════ */
+.mr {
+  --mr-paper: #FAF6EE;
+  --mr-card: #FFFFFF;
+  --mr-card-soft: #FCF6EC;
+  --mr-ink: #1A1410;
+  --mr-body: #5C544A;
+  --mr-light: #847B6E;
+  --mr-saffron: #fa6919;
+  --mr-saffron-deep: #C44D0E;
+  --mr-line: rgba(26, 20, 16, 0.1);
+
+  position: relative;
+  padding: 120px 40px;
+  background: var(--mr-paper);
+}
+.mr--alt { background: #F4EEE2; }
+.mr__inner { max-width: 1240px; margin: 0 auto; }
+
+/* ── Section header ── */
+.mr__head { max-width: 760px; margin: 0 0 60px; }
+.mr__title {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--mr-ink);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.mr__title::before {
+  content: '';
+  width: 38px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--mr-saffron), var(--mr-saffron-deep));
+}
+.mr__count {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--mr-saffron-deep);
+  background: rgba(196, 77, 14, 0.1);
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+.mr__lede {
+  font-family: 'Mukta', sans-serif;
+  font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--mr-body);
+  margin: 16px 0 0;
+}
+
+/* ── Generic responsive grid — 3 columns on desktop ── */
+.mr__grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 980px) {
+  .mr__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+}
+@media (max-width: 640px) {
+  .mr__grid { grid-template-columns: 1fr; gap: 26px; }
+}
+
+/* ═══ POSTER CARD (press releases + appointment letters) ═══ */
+.mr-poster {
+  display: flex;
+  flex-direction: column;
+  background: var(--mr-card);
+  border: 1px solid var(--mr-line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 38px -28px rgba(133, 65, 0, 0.5);
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font: inherit;
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+}
+.mr-poster:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 52px -26px rgba(133, 65, 0, 0.55);
+  border-color: rgba(196, 77, 14, 0.3);
+}
+.mr-poster__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #bdbdbd;
+  overflow: hidden;
+}
+.mr-poster__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.mr-poster:hover .mr-poster__img { transform: scale(1.04); }
+.mr-poster__zoom {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: rgba(26, 20, 16, 0.55);
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.mr-poster:hover .mr-poster__zoom { opacity: 1; transform: scale(1); }
+.mr-poster__body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.mr-poster__name {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--mr-ink);
+  margin: 0 0 10px;
+}
+.mr-poster__excerpt {
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--mr-body);
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mr-poster__more {
+  margin-top: auto;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--mr-saffron-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.mr-poster:hover .mr-poster__more { gap: 11px; }
+
+/* ═══ VIDEO CARD (speeches + interviews) ═══ */
+.mr-video {
+  display: flex;
+  flex-direction: column;
+  background: var(--mr-card);
+  border: 1px solid var(--mr-line);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font: inherit;
+  box-shadow: 0 16px 38px -28px rgba(133, 65, 0, 0.5);
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+}
+.mr-video:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 52px -26px rgba(133, 65, 0, 0.55);
+  border-color: rgba(196, 77, 14, 0.3);
+}
+.mr-video__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1a1410;
+  overflow: hidden;
+}
+.mr-video__img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.mr-video:hover .mr-video__img { transform: scale(1.05); }
+.mr-video__shade {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.5) 100%);
+}
+.mr-video__play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 58px; height: 58px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--mr-saffron);
+  color: #fff;
+  box-shadow: 0 10px 26px -8px rgba(196, 77, 14, 0.8);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s ease;
+}
+.mr-video:hover .mr-video__play { transform: translate(-50%, -50%) scale(1.12); background: var(--mr-saffron-deep); }
+.mr-video__play svg { width: 24px; height: 24px; margin-left: 3px; }
+.mr-video__body { padding: 16px 18px 20px; }
+.mr-video__title {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--mr-ink);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ═══ ARTICLE CARD (लेख) ═══ */
+.mr-article {
+  display: flex;
+  flex-direction: column;
+  background: var(--mr-card);
+  border: 1px solid var(--mr-line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 38px -28px rgba(133, 65, 0, 0.5);
+  text-decoration: none;
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+}
+.mr-article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 52px -26px rgba(133, 65, 0, 0.55);
+  border-color: rgba(196, 77, 14, 0.3);
+}
+.mr-article__media { width: 100%; aspect-ratio: 4 / 3; background: #bdbdbd; overflow: hidden; }
+.mr-article__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.mr-article:hover .mr-article__img { transform: scale(1.04); }
+.mr-article__body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.mr-article__source {
+  align-self: flex-start;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--mr-saffron-deep);
+  background: rgba(196, 77, 14, 0.1);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.mr-article__title {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.38;
+  color: var(--mr-ink);
+  margin: 0 0 10px;
+}
+.mr-article__excerpt {
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--mr-body);
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mr-article__cta {
+  margin-top: auto;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--mr-saffron-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.mr-article:hover .mr-article__cta { gap: 11px; }
+
+/* ═══ NEWS LIST (बातम्या) ═══ */
+.mr-news { display: flex; flex-direction: column; gap: 14px; }
+.mr-news__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--mr-card);
+  border: 1px solid var(--mr-line);
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 10px 26px -22px rgba(133, 65, 0, 0.5);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+.mr-news__item:hover {
+  transform: translateX(5px);
+  border-color: rgba(196, 77, 14, 0.3);
+  box-shadow: 0 16px 34px -20px rgba(133, 65, 0, 0.5);
+}
+.mr-news__source {
+  flex-shrink: 0;
+  width: 96px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--mr-saffron-deep);
+}
+.mr-news__headline {
+  flex: 1;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--mr-ink);
+  margin: 0;
+}
+.mr-news__arrow {
+  flex-shrink: 0;
+  color: var(--mr-saffron-deep);
+  display: grid; place-items: center;
+  transition: transform 0.28s ease;
+}
+.mr-news__item:hover .mr-news__arrow { transform: translateX(4px); }
+
+/* ═══ LIGHTBOX MODAL (poster + video) ═══ */
+.mr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(18, 12, 6, 0.82);
+  backdrop-filter: blur(6px);
+  animation: mrFade 0.3s ease both;
+}
+@keyframes mrFade { from { opacity: 0; } to { opacity: 1; } }
+.mr-modal__close {
+  position: absolute;
+  top: 22px; right: 26px;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.mr-modal__close:hover { background: rgba(255, 255, 255, 0.25); }
+
+/* video modal */
+.mr-modal__video {
+  width: min(960px, 100%);
+  animation: mrRise 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.mr-modal__embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8);
+}
+.mr-modal__embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.mr-modal__cap {
+  margin: 16px 4px 0;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+/* poster modal */
+.mr-modal__poster {
+  display: flex;
+  flex-direction: column;
+  width: min(880px, 100%);
+  max-height: calc(100vh - 56px);
+  background: var(--mr-card);
+  border-radius: 16px;
+  overflow: hidden;
+  animation: mrRise 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes mrRise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 720px) {
+  .mr-modal__poster { flex-direction: row; }
+  .mr-modal__poster-img { width: 46%; }
+}
+.mr-modal__poster-img {
+  flex-shrink: 0;
+  background: #bdbdbd;
+  display: grid;
+  place-items: center;
+}
+.mr-modal__poster-img img { width: 100%; height: 100%; object-fit: contain; max-height: 70vh; display: block; }
+.mr-modal__poster-text {
+  padding: 32px 30px;
+  overflow-y: auto;
+}
+.mr-modal__poster-title {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--mr-saffron-deep);
+  margin: 0 0 18px;
+}
+.mr-modal__poster-body {
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--mr-body);
+  white-space: pre-line;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .mr { padding: 72px 18px; }
+  .mr-news__item { flex-wrap: wrap; gap: 8px 14px; padding: 16px 18px; }
+  .mr-news__source { width: auto; }
+  .mr-modal { padding: 16px; }
+  .mr-modal__poster-text { padding: 24px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mr-poster, .mr-video, .mr-article, .mr-news__item,
+  .mr-poster__img, .mr-video__img, .mr-article__img,
+  .mr-modal, .mr-modal__poster, .mr-modal__video { animation: none; transition: none; }
+}

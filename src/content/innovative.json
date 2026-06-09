@@ -14,13 +14,11 @@
   "intro": {
     "mr": {
       "eyebrow": "॥ जनसेवा ॥",
-      "title": "लोकांच्या जीवनात बदल घडवणारे उपक्रम",
-      "lede": "गावापासून शहरापर्यंत, गरीब रुग्णापासून सक्षम महिलेपर्यंत खालील उपक्रमांद्वारे शिवसेना व महायुती सरकारने लाखो लोकांच्या आयुष्यात प्रत्यक्ष फरक घडवला आहे."
+      "title": "लोकांच्या जीवनात बदल घडवणारे उपक्रम"
     },
     "en": {
       "eyebrow": "|| FOR THE PEOPLE ||",
-      "title": "Programmes that have changed lives",
-      "lede": "From village to city, from patient in need to woman seeking dignity these initiatives by Shiv Sena and the Mahayuti government have made a measurable difference in millions of lives."
+      "title": "Programmes that have changed lives"
     }
   },
   "programs": [

@@ -316,7 +316,15 @@ export function mrMlaFor(member) {
 /* Convenience helper used by leader cards */
 export function memberFor(member, lang) {
   if (lang !== 'en') {
- /* English-source MLAs: pull the MR name/role from leadership.json */
+ /* If the member already carries a Devanagari name, it's a state-sourced
+    entry (mp / mla / minister / नेते …) that already has its correct MR
+    name + role — use it as-is. Running the constituencyNo cross-reference
+    on these caused collisions (e.g. खासदार बुलडाणा #5 vs आमदार साक्री #5,
+    so प्रतापराव जाधव's card showed मंजुळाताई गावित's name). */
+ if (member && member.name && HAS_DEVANAGARI.test(member.name)) {
+ return { name: member.name, role: member.role };
+ }
+ /* English-source MLAs (mlas-by-district.json): pull the MR name/role. */
  const mr = mrMlaFor(member);
  if (mr) return { name: mr.name, role: mr.role };
  return { name: member.name, role: member.role };

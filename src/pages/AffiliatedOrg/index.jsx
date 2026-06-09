@@ -7,28 +7,7 @@ import { useContent } from '../../content/_shared/useContent.js';
 import { useLanguage } from '../../i18n/LanguageContext.jsx';
 import aboutContent from '../../content/about.json';
 
-/* Reuse the leadership directory card styles for पदाधिकारी cards. */
-import '../Leadership/sections/LeadersDirectory.css';
 import './affiliated-org.css';
-
-/* Gender-aware placeholder (same heuristic as the leadership page). */
-const FEMALE_RE = /(^|\s)(सौ\.|श्रीम\.|श्रीमती\.|कु\.|डॉ\.\s*श्रीम\.|डॉ\.\s*श्रीमती\.)/;
-const isFemale = (n) => !!n && (FEMALE_RE.test(n) || /ताई/.test(n));
-const photoFor = (n) =>
-  isFemale(n) ? '/placeholder/placeholder-women.png' : '/placeholder/placeholder-men.png';
-
-function BearerCard({ bearer }) {
-  return (
-    <article className="dir-card">
-      <img src={photoFor(bearer.name)} alt="" loading="lazy" className="dir-card__bg" />
-      <div className="dir-card__shade" aria-hidden="true" />
-      <div className="dir-card__content">
-        <h4 className="dir-card__name">{bearer.name}</h4>
-        {bearer.role && <p className="dir-card__role">{bearer.role}</p>}
-      </div>
-    </article>
-  );
-}
 
 export default function AffiliatedOrg() {
   useLenis();
@@ -70,18 +49,21 @@ export default function AffiliatedOrg() {
             <p className="aff-detail__body">{org?.body || soonBody}</p>
           </header>
 
-          {/* ── पदाधिकारी (leadership-card layout) ── */}
+          {/* ── पदाधिकारी (names only — no photo cards) ── */}
           {bearers.length > 0 && (
             <div className="aff-detail__pad">
               <h2 className="aff-detail__pad-title">
                 {padTitle}
                 <span className="aff-detail__pad-count">{bearers.length}</span>
               </h2>
-              <div className="dir-cat__grid aff-detail__grid">
+              <ul className="aff-detail__bearers">
                 {bearers.map((b, i) => (
-                  <BearerCard key={i} bearer={b} />
+                  <li key={i} className="aff-detail__bearer">
+                    <span className="aff-detail__bearer-name">{b.name}</span>
+                    {b.role && <span className="aff-detail__bearer-role">{b.role}</span>}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           )}
 
