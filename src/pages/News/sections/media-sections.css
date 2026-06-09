@@ -421,6 +421,30 @@
   white-space: pre-line;
   margin: 0;
 }
+.mr-modal__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 26px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--mr-saffron);
+  color: #fff;
+  font-family: 'Mukta', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  box-shadow: 0 12px 28px -12px rgba(196, 77, 14, 0.7);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mr-modal__download:hover {
+  background: var(--mr-saffron-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -12px rgba(196, 77, 14, 0.65);
+}
+.mr-modal__download svg { transition: transform 0.3s ease; }
+.mr-modal__download:hover svg { transform: translateY(2px); }
 
 @media (max-width: 600px) {
   .mr { padding: 72px 18px; }
