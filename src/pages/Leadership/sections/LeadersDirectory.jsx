@@ -54,14 +54,22 @@ const UNIFIED_CATEGORIES = [
   { key: 'ministers',                source: 'state'    }, // 2. मंत्री
   { key: 'mp',                       source: 'state'    }, // 3. खासदार
   { key: 'mla',                      source: 'state'    }, // 4. आमदार
-  { key: 'leaders',                  source: 'state'    }, // 5. नेते
-  { key: 'deputyLeaders',            source: 'state'    }, // 6. उपनेते
-  { key: 'spokespersons',            source: 'state'    }, // 7. प्रवक्ते (state-level)
-  { key: 'divisionalContactHeads',   source: 'state'    }, // 8. विभागीय संपर्क प्रमुख
-  { key: 'divisionalCoContactHeads', source: 'state'    }, // 9. विभागीय सह संपर्क प्रमुख
-  { key: 'lokSabhaContactHead',      source: 'state'    }, // 10. लोकसभा संपर्क प्रमुख
-  { key: 'districtHead',             source: 'state'    }, // 11. जिल्हा प्रमुख
-  { key: 'womenDistrictHeads',       source: 'state'    }, // 12. महिला जिल्हा प्रमुख
+  { key: 'mlc',                      source: 'state'    }, // 5. विधान परिषद सदस्य
+  { key: 'leaders',                  source: 'state'    }, // 6. नेते
+  { key: 'deputyLeaders',            source: 'state'    }, // 7. उपनेते
+  { key: 'spokespersons',            source: 'state'    }, // 8. प्रवक्ते (state-level)
+  { key: 'generalSecretary',         source: 'state'    }, // 9. सरचिटणीस
+  { key: 'secretaries',              source: 'state'    }, // 10. सचिव
+  { key: 'coSecretaries',            source: 'state'    }, // 11. सह-सचिव
+  { key: 'treasurer',                source: 'state'    }, // 12. खजिनदार
+  { key: 'coordinators',             source: 'state'    }, // 13. समन्वयक
+  { key: 'divisionalContactHeads',   source: 'state'    }, // 14. विभागीय संपर्क प्रमुख
+  { key: 'divisionalCoContactHeads', source: 'state'    }, // 15. विभागीय सह संपर्क प्रमुख
+  { key: 'lokSabhaContactHead',      source: 'state'    }, // 16. लोकसभा संपर्क प्रमुख
+  { key: 'yuvaSena',                 source: 'state'    }, // 17. युवासेना
+  { key: 'socialMedia',              source: 'state'    }, // 18. सोशल मीडिया
+  { key: 'districtHead',             source: 'state'    }, // 19. जिल्हा प्रमुख
+  { key: 'womenDistrictHeads',       source: 'state'    }, // 20. महिला जिल्हा प्रमुख
 ];
 
 /* When a category has no real entries for this district, show this
