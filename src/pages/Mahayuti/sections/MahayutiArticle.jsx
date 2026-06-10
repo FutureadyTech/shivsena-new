@@ -40,9 +40,11 @@ export default function MahayutiArticle() {
   const lang = language === 'mr' ? 'mr' : 'en';
   const t = useContent(mahayutiContent.article);
 
-  const paragraphs = Array.isArray(t.paragraphs) ? t.paragraphs : [];
-  const blocks = paragraphs.map((text, i) => ({
- text,
+  const sections = Array.isArray(t.sections) ? t.sections : [];
+  const blocks = sections.map((sec, i) => ({
+ kicker: sec.kicker || '',
+ title: sec.title || '',
+ paragraphs: Array.isArray(sec.paragraphs) ? sec.paragraphs : [],
  meta: BLOCKS[i] || BLOCKS[BLOCKS.length - 1],
   }));
 
@@ -61,7 +63,9 @@ export default function MahayutiArticle() {
  <StoryBlock
  key={i}
  index={i}
- text={b.text}
+ kicker={b.kicker}
+ title={b.title}
+ paragraphs={b.paragraphs}
  meta={b.meta}
  lang={lang}
  />
@@ -74,8 +78,8 @@ export default function MahayutiArticle() {
   );
 }
 
-/* ── One alternating block: image on one side, paragraph on the other. ── */
-function StoryBlock({ index, text, meta, lang }) {
+/* ── One alternating block: image on one side, heading + paragraphs on the other. ── */
+function StoryBlock({ index, kicker, title, paragraphs, meta }) {
   const ref = useScrollReveal(0.15);
   const orientation = index % 2 === 0 ? 'left' : 'right';
 
@@ -97,8 +101,11 @@ function StoryBlock({ index, text, meta, lang }) {
 
  {/* ─── Body ─── */}
  <div className="my-block__body">
- <span className="my-block__kicker">{meta.kicker[lang]}</span>
- <p className="my-block__text">{text}</p>
+ {kicker && <span className="my-block__kicker">{kicker}</span>}
+ {title && <h3 className="my-block__title">{title}</h3>}
+ {paragraphs.map((p, i) => (
+ <p key={i} className="my-block__text">{p}</p>
+ ))}
  </div>
  </li>
   );

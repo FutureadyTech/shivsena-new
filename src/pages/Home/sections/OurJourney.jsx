@@ -28,6 +28,7 @@ const EVENT_IMAGES = {
   'year-2012':  '/timeline/2012.webp',
   'year-2014':  '/timeline/2014.webp',
   'year-2022':  '/timeline/2022.webp',
+  'year-2022b': '/timeline/17_2022.jpeg',
   'year-2023':  '/timeline/2023.webp',
   'year-2024a': '/timeline/2024.webp',
   'year-2024b': '/timeline/2024-2.webp',

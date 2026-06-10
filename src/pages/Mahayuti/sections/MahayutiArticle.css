@@ -128,6 +128,20 @@
   overflow-wrap: normal;
 }
 
+/* Descriptive sub-heading under the saffron kicker (Marathi sections). */
+.my-block__title {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink, #1A1410);
+  margin: 2px 0 16px;
+}
+/* Tighten the kicker's gap when a sub-heading follows it. */
+.my-block__kicker:has(+ .my-block__title) { margin-bottom: 12px; }
+/* Space between successive paragraphs within a block. */
+.my-block__text + .my-block__text { margin-top: 14px; }
+
 /* ─── Pull quote (Balasaheb verbatim) ─── */
 .my-quote {
   position: relative;
