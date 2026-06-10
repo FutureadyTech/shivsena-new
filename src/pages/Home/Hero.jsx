@@ -20,7 +20,7 @@ import './home.css';
  ───────────────────────────────────────────────────────────── */
 const SOURCE = 'mp4'; // 'mp4' | 'youtube'
 
-const MP4_SRC = '/youtube-banner-video.mp4';
+const MP4_SRC = '/new-banner.mp4';
 
 const YT_VIDEO_ID = 'c82ukzAhwPg';
 const YT_SRC =
