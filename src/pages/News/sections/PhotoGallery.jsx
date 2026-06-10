@@ -101,7 +101,6 @@ export default function PhotoGallery() {
  <span>{t.eyebrow}</span>
  </div>
  <h2 className="pg-section__title">{t.title}</h2>
- <p className="pg-section__lede">{t.lede}</p>
  </div>
 
  <div className="pg-masonry">

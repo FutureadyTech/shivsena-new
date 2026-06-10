@@ -396,7 +396,7 @@ function NavDropdown({ item, t }) {
         </svg>
       </NavLink>
 
-      <div className="site-nav__submenu" role="menu">
+      <div className="site-nav__submenu" role="menu" data-lenis-prevent>
         {item.children.map((child) => {
           // NavLink's built-in isActive only compares pathname, so two
           // sub-items that share a pathname (e.g. /about#history and

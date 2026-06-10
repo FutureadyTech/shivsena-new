@@ -399,7 +399,7 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabe
  {noItems ? (
  <p className="dir-cat__empty">{noDataLabel}</p>
  ) : (
- <div ref={trackRef} className="dir-cat__track">
+ <div ref={trackRef} className={`dir-cat__track${items.length <= 2 ? ' dir-cat__track--center' : ''}`}>
  {items.map((m, i) => (
  <MemberCard
  key={m.id || i}

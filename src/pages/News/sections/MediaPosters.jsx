@@ -40,7 +40,6 @@ export default function MediaPosters({ block, sectionId, alt = false }) {
       <div className="mr__inner">
         <div ref={headerRef} className="mr__head reveal">
           <h2 className="mr__title">{t.title}<span className="mr__count">{items.length}</span></h2>
-          {t.lede && <p className="mr__lede">{t.lede}</p>}
         </div>
 
         <div className="mr__grid">

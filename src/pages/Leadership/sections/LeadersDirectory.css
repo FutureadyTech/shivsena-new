@@ -313,6 +313,12 @@
 .dir-cat--topLeader .dir-cat__track {
   justify-content: safe center;
 }
+/* Categories with only 1–2 members → centre the cards instead of leaving
+   a big empty gap on the right. `safe center` keeps them left-aligned +
+   scrollable if the layout ever can't fit them. */
+.dir-cat__track--center {
+  justify-content: safe center;
+}
 
 .dir-cat__track::-webkit-scrollbar { height: 6px; }
 .dir-cat__track::-webkit-scrollbar-track { background: transparent; }

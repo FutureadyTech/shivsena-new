@@ -34,7 +34,6 @@ export default function VideoGallery() {
             <span>{t.eyebrow}</span>
           </div>
           <h2 className="vg-section__title">{t.title}</h2>
-          <p className="vg-section__lede">{t.lede}</p>
         </div>
 
         <div className="vg-grid">
