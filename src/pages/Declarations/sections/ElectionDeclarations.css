@@ -613,9 +613,8 @@
   .eci__sumcard-icon { width: 40px; height: 40px; }
   .eci__sumcard-icon svg { width: 20px; height: 20px; }
 
-  /* Compact 2-per-row grid so the 7 election tabs don't fill the whole
-     screen before the search + candidate list. */
-  .eci__tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  /* Single column on mobile — one election tab per row (1×7). */
+  .eci__tabs { display: grid; grid-template-columns: 1fr; gap: 10px; }
   .eci__tab { padding: 10px 12px; gap: 8px; }
   .eci__tab-icon { width: 30px; height: 30px; flex-shrink: 0; }
   .eci__tab-icon svg { width: 16px; height: 16px; }

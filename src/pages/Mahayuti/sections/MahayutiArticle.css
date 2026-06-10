@@ -62,15 +62,13 @@
 /* ─── Media ─── */
 .my-block__media {
   position: relative;
-  height: 500px;
   border-radius: 22px;
   overflow: hidden;
 }
 
 .my-block__media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
   background: var(--paper-soft, #FCFBF7);
   box-shadow:
@@ -276,7 +274,6 @@
   .my-article { padding: 96px 28px 120px; }
   .my-article__list { gap: 90px; }
   .my-block { gap: 44px; }
-  .my-block__media { height: 440px; }
   .my-quote { margin-top: 96px; padding: 42px 36px 36px; }
 }
 
@@ -292,7 +289,6 @@
   .my-block--right .my-block__media { order: 0; }
   .my-block--right .my-block__body  { order: 1; }
 
-  .my-block__media { height: 340px; }
   .my-block__text { font-size: 0.98rem; line-height: 1.85; text-align: left; }
 
   .my-quote { margin-top: 72px; padding: 36px 22px 30px; }

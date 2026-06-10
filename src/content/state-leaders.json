@@ -874,19 +874,22 @@
       "id": "leaders-1",
       "name": "श्री. रामदास कदम",
       "role": "नेते",
-      "phone": "9821083468"
+      "phone": "9821083468",
+      "photo": "/leaders/leaders/ramdas-kadam.png"
     },
     {
       "id": "leaders-2",
       "name": "श्री. गजानन कीर्तीकर",
       "role": "मा. खासदार",
-      "phone": "9821114872"
+      "phone": "9821114872",
+      "photo": "/leaders/leaders/gajanan-kirtikar.png"
     },
     {
       "id": "leaders-3",
       "name": "श्री. आनंदराव अडसुळ",
       "role": "नेते",
-      "phone": "9821072192"
+      "phone": "9821072192",
+      "photo": "/leaders/leaders/anandrao-adsul.png"
     },
     {
       "id": "leaders-4",
@@ -920,7 +923,8 @@
       "id": "leaders-8",
       "name": "सौ. मीनाताई कांबळी",
       "role": "नेते",
-      "phone": "9967300508"
+      "phone": "9967300508",
+      "photo": "/leaders/leaders/minatai-kamble.png"
     },
     {
       "id": "leaders-9",
@@ -1061,7 +1065,8 @@
       "id": "deputy-19",
       "name": "डॉ. दिपक सावंत",
       "role": "मा. आमदार",
-      "phone": "9820207600"
+      "phone": "9820207600",
+      "photo": "/leaders/deputy-leaders/deepak-sawant.png"
     },
     {
       "id": "deputy-20",
@@ -1109,7 +1114,8 @@
       "id": "deputy-26",
       "name": "श्री. आनंदराव जाधव",
       "role": "उपनेते",
-      "phone": "9869157853"
+      "phone": "9869157853",
+      "photo": "/leaders/deputy-leaders/anandrao-jadhav.png"
     },
     {
       "id": "deputy-27",
@@ -1318,7 +1324,8 @@
       "id": "deputy-56",
       "name": "श्रीम. प्रिती बंड",
       "role": "उपनेते",
-      "phone": "8698955666"
+      "phone": "8698955666",
+      "photo": "/leaders/deputy-leaders/priti-band.png"
     },
     {
       "id": "deputy-57",
@@ -1368,7 +1375,8 @@
       "id": "dch-6",
       "name": "माजी मंत्री डॉ. दिपक सावंत",
       "role": "पूर्व विदर्भ नागपूर, भंडारा, गोंदिया",
-      "phone": "9821627600"
+      "phone": "9821627600",
+      "photo": "/leaders/deputy-leaders/deepak-sawant.png"
     },
     {
       "id": "dch-7",
@@ -1633,7 +1641,8 @@
       "id": "lsch-44",
       "name": "खा. डॉ. ज्योती वाघमारे",
       "role": "शिर्डी",
-      "phone": "9850001807"
+      "phone": "9850001807",
+      "photo": "/leaders/mp/06_Dr%20Jyoti%20Waghmare.webp"
     },
     {
       "id": "lsch-45",
@@ -3106,7 +3115,8 @@
     {
       "id": "spokespersons-20",
       "name": "श्री. शिरीष दत्तात्रय शिवदे",
-      "phone": "9067778822"
+      "phone": "9067778822",
+      "photo": "/leaders/spokespersons/shirish-shivde.png"
     },
     {
       "id": "spokespersons-21",

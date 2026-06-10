@@ -321,8 +321,17 @@
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .journey__inner  { padding: 56px 32px 130px 32px; }
-  .journey__years  { padding-right: 110px; }
   .journey__nav { right: 24px; }
+
+  /* Tablet: 19 year ticks don't fit when equally distributed, so switch
+     to fixed-width scrollable ticks (same as mobile) instead of squeezing
+     every label into the strip and overlapping them. */
+  .journey__years {
+    justify-content: flex-start;
+    scroll-snap-type: x proximity;
+    padding-right: 96px;        /* clear space for the prev/next nav */
+  }
+  .journey__year-tick { flex: 0 0 auto; min-width: 84px; scroll-snap-align: center; }
 }
 
 @media (max-width: 768px) {

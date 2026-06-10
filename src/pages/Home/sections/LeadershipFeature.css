@@ -330,28 +330,32 @@
   .lf { padding: 40px 18px 80px; }
   .lf__list { gap: 64px; }
 
-  .lf-feat {
- grid-template-columns: 1fr;
- gap: 28px;
-  }
-  /* Mobile: image always on top, body below, regardless of orientation */
-  .lf-feat--right .lf-feat__media { order: 0; }
-  .lf-feat--right .lf-feat__body  { order: 1; }
-
-  .lf-feat__media { height: 340px; }
+  /* Tablet keeps the 2-column (image | body) layout in one row,
+     just tighter spacing and a shorter image. */
+  .lf-feat { gap: 32px; }
+  .lf-feat__media { height: 360px; }
 
   .lf-feat__index {
  top: -28px;
  font-size: clamp(5rem, 18vw, 7rem);
  -webkit-text-stroke: 1.2px rgba(196, 77, 14, 0.18);
   }
-  .lf-feat--left  .lf-feat__index,
-  .lf-feat--right .lf-feat__index { left: auto; right: 6px; }
 
   .lf-feat__title { font-size: 1.2rem; }
   .lf-feat__name  { font-size: clamp(1.6rem, 6vw, 2rem); }
   .lf-feat__lede  { font-size: 1rem; padding-left: 12px; }
   .lf-feat__cta { padding: 11px 22px; font-size: 0.76rem; letter-spacing: 0.18em; }
+}
+
+/* Phones: stack image over body (single column) */
+@media (max-width: 600px) {
+  .lf-feat { grid-template-columns: 1fr; gap: 28px; }
+  /* image always on top, body below, regardless of orientation */
+  .lf-feat--right .lf-feat__media { order: 0; }
+  .lf-feat--right .lf-feat__body  { order: 1; }
+  .lf-feat__media { height: 340px; }
+  .lf-feat--left  .lf-feat__index,
+  .lf-feat--right .lf-feat__index { left: auto; right: 6px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
