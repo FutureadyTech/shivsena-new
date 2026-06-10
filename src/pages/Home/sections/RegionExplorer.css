@@ -107,25 +107,29 @@
   cursor: pointer;
 }
 
-/* District polygons — fill is set inline per district (orange heat-tints). */
+/* District polygons — fill is set inline per district (orange heat-tints).
+   Base districts render softened (paler) so the selected district stands
+   out vividly, matching the reference map. */
 .mh-district {
   stroke: #ffffff;
   stroke-width: 0.8;
   stroke-linejoin: round;
-  transition: filter 0.18s ease, stroke-width 0.18s ease;
+  fill-opacity: 0.5;
+  transition: fill-opacity 0.18s ease, filter 0.18s ease, stroke-width 0.18s ease;
   cursor: pointer;
 }
 
 /* Soft hover hint interactive feedback only, NOT a selection */
 .mh-district:hover {
-  filter: brightness(0.92);
+  fill-opacity: 0.7;
 }
 
-/* Active = the district the user actually clicked */
+/* Active = the district the user actually clicked → full vivid colour.
+   Keeps the white border (no dark outline) — just a fuller fill. */
 .mh-district--active {
-  filter: brightness(0.86) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.28));
-  stroke: #7a3c0a;
-  stroke-width: 1.6;
+  fill-opacity: 1;
+  stroke: #ffffff;
+  stroke-width: 1;
 }
 
 /* Red HQ dots */

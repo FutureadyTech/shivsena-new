@@ -300,3 +300,15 @@ a.btn--ghost:hover, button.btn--ghost:hover, span.btn--ghost:hover {
    site-wide (covers *__eyebrow, *__eyebrow-line, eyebrow-rule, etc.).
 ═══════════════════════════════════════════════════════════════ */
 [class*="eyebrow"] { display: none !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   Devanagari safety: never auto-hyphenate / break words mid-word.
+   Marathi has no hyphenation rules, so a mid-word break (e.g.
+   यशवंतराव → यश-वंतराव) is wrong and changes meaning. Words still
+   wrap normally at spaces.
+═══════════════════════════════════════════════════════════════ */
+html {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}

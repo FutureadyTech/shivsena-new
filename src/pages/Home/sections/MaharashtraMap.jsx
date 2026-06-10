@@ -55,7 +55,7 @@ export default function MaharashtraMap({ activeDistrict, onSelect, lang = 'mr', 
             key={slug}
             d={d}
             className={`mh-district ${isActive ? 'mh-district--active' : ''}`}
-            style={{ fill: DISTRICT_FILL[slug] || FALLBACK_FILL }}
+            style={{ fill: FALLBACK_FILL }}
             onClick={() => onSelect?.(slug)}
           >
             <title>{meta[lang] || meta.en || slug}</title>
@@ -63,43 +63,6 @@ export default function MaharashtraMap({ activeDistrict, onSelect, lang = 'mr', 
         );
       })}
 
-      {/* Red HQ dots */}
-      <g className="mh-dots" aria-hidden="true">
-        {MH_DISTRICT_PATHS.map(({ slug, cx, cy }) => (
-          <circle key={slug} cx={cx} cy={cy} r="3.1" className="mh-dot" />
-        ))}
-      </g>
-
-      {/* Marathi labels */}
-      <g className="mh-labels" aria-hidden="true">
-        {MH_DISTRICT_PATHS.map(({ slug, cx, cy }) => {
-          const meta = DISTRICTS[slug];
-          if (!meta) return null;
-          const name = meta[lang] || meta.en || slug;
-
-          // Mumbai: stacked labels to the left (Mumbai City + Suburban share one polygon)
-          if (slug === 'mumbai') {
-            const rx = cx - 9;
-            const sub = lang === 'mr' ? 'मुंबई उपनगर' : 'Mumbai Suburban';
-            return (
-              <g key={slug}>
-                <text x={rx} y={cy - 4} fontSize={FONT} textAnchor="end" className="mh-label">{sub}</text>
-                <text x={rx} y={cy + FONT - 3} fontSize={FONT} textAnchor="end" className="mh-label">{name}</text>
-              </g>
-            );
-          }
-
-          const lines = wrapName(name);
-          const top = cy - 7 - (lines.length - 1) * (FONT * 0.55);
-          return (
-            <text key={slug} x={cx} y={top} fontSize={FONT} textAnchor="middle" className="mh-label">
-              {lines.map((ln, i) => (
-                <tspan key={i} x={cx} dy={i === 0 ? 0 : FONT}>{ln}</tspan>
-              ))}
-            </text>
-          );
-        })}
-      </g>
     </svg>
   );
 }

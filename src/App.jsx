@@ -22,31 +22,68 @@ import ShivSenaJanma from './pages/ShivSenaJanma/index.jsx';
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
- // Run on next tick so the new page has mounted (and any new Lenis
- // instance has had a chance to attach).
- const id = requestAnimationFrame(() => {
- // If the route includes a hash anchor (e.g. /about#affiliated),
- // scroll to that element instead of jumping to the top.
+ let cancelled = false;
+ const timers = [];
+ const clearAll = () => { cancelled = true; timers.forEach(clearTimeout); };
+
+ /* ── Hash anchor (e.g. /leadership#secretaries) ──
+    Heavy pages mount their Lenis instance + content AFTER the first
+    frame, so a single early attempt scrolls before the page is ready
+    (and gets reset to 0 once Lenis attaches). Poll until BOTH the
+    target element and Lenis exist, then issue the scroll — with a
+    couple of correction passes for lazy-loaded images that shift the
+    layout above the target. */
  if (hash) {
+ const doScroll = () => {
  const el = document.querySelector(hash);
- if (el) {
+ if (!el) return false;
  const top = el.getBoundingClientRect().top + window.scrollY - 80; // header offset
- if (window.__lenis && typeof window.__lenis.scrollTo === 'function') {
- window.__lenis.scrollTo(top, { immediate: false });
- } else {
- window.scrollTo({ top, left: 0, behavior: 'smooth' });
+ const lenis = window.__lenis;
+ if (lenis && typeof lenis.scrollTo === 'function') lenis.scrollTo(top, { immediate: false });
+ else window.scrollTo({ top, left: 0, behavior: 'smooth' });
+ return true;
+ };
+ let tries = 0;
+ const poll = () => {
+ if (cancelled) return;
+ const ready = document.querySelector(hash) && window.__lenis;
+ if (ready || tries > 20) {
+ if (doScroll()) {
+ /* Lazy images above the target keep growing the page after the
+    first scroll, so the target drifts down (esp. for sections
+    near the bottom). Re-align until its absolute position holds
+    steady for a few checks, or we hit the time cap. */
+ let last = -1, stable = 0, n = 0;
+ const correct = () => {
+ if (cancelled) return;
+ const el = document.querySelector(hash);
+ if (!el) return;
+ const pos = Math.round(el.getBoundingClientRect().top + window.scrollY);
+ if (pos === last) { stable += 1; } else { stable = 0; last = pos; doScroll(); }
+ n += 1;
+ if (stable < 3 && n < 22) timers.push(setTimeout(correct, 140));
+ };
+ timers.push(setTimeout(correct, 160));
  }
  return;
  }
+ tries += 1;
+ timers.push(setTimeout(poll, 70));
+ };
+ timers.push(setTimeout(poll, 40));
+ return clearAll;
  }
 
+ /* ── No hash → jump to top ── */
+ const id = requestAnimationFrame(() => {
+ if (cancelled) return;
  if (window.__lenis && typeof window.__lenis.scrollTo === 'function') {
  window.__lenis.scrollTo(0, { immediate: true, force: true });
  } else {
  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
  }
  });
- return () => cancelAnimationFrame(id);
+ return () => { cancelled = true; cancelAnimationFrame(id); };
   }, [pathname, hash]);
   return null;
 }

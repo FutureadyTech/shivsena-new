@@ -194,6 +194,9 @@ body.has-dark-hero-visible .site-nav__link--active { color: var(--saffron); }
   transform: translateX(-50%) translateY(-6px);
   min-width: 240px;
   padding: 10px;
+  max-height: min(72vh, 560px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: var(--paper-soft, #FCFBF7);
   border: 1px solid var(--hairline, rgba(26, 20, 16, 0.1));
   border-radius: 10px;

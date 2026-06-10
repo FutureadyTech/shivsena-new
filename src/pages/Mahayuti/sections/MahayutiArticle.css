@@ -121,8 +121,11 @@
   line-height: 1.95;
   color: var(--body-text, #5C544A);
   margin: 0;
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
+  /* Never hyphenate/break Devanagari words mid-word — it changes meaning. */
+  -webkit-hyphens: none;
+  hyphens: none;
+  overflow-wrap: normal;
 }
 
 /* ─── Pull quote (Balasaheb verbatim) ─── */

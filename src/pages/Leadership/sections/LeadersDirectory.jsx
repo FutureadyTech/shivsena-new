@@ -362,7 +362,7 @@ function CategoryCarousel({ catKey, label, items, isEmpty, noDataLabel, prevLabe
   const isTopLeader = catKey === 'topLeader';
 
   return (
- <div ref={ref} className={`dir-cat reveal${catKey ? ` dir-cat--${catKey}` : ''}`}>
+ <div ref={ref} id={catKey || undefined} className={`dir-cat reveal${catKey ? ` dir-cat--${catKey}` : ''}`}>
  <div className="dir-cat__head">
  <h3 className="dir-cat__label">
  {label}

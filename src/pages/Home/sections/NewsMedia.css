@@ -131,6 +131,9 @@
   height: 300px;
   transition: transform 1.2s var(--ease-out-expo);
   object-fit: cover;
+  /* News photos frame faces in the upper area — bias the crop toward the
+     top so heads aren't clipped. */
+  object-position: center 20%;
 }
 
 .news-feature:hover .news-feature__image { transform: scale(1.04); }
@@ -242,7 +245,7 @@
 .news-side__thumb {
   aspect-ratio: 1 / 1;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   background-repeat: no-repeat;
   background-color: var(--paper-deep);
   overflow: hidden;

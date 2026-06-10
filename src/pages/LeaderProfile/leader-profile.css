@@ -124,8 +124,11 @@
 
 .lp-body__paragraph {
   margin: 0 0 1.2em;
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
+  /* Never hyphenate/break Devanagari words mid-word — it changes meaning. */
+  -webkit-hyphens: none;
+  hyphens: none;
+  overflow-wrap: normal;
 }
 
 /* First paragraph gets a slight emphasis */
