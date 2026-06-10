@@ -56,7 +56,7 @@ export default function RegionExplorer() {
   const { lang: language } = useLanguage();
   const [activeRegion, setActiveRegion] = useState('konkan');
   const [activeDistrict, setActiveDistrict] = useState('mumbai');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedLeader, setSelectedLeader] = useState(null);
 
   const lang = (language === 'mr') ? 'mr' : 'en';
@@ -105,7 +105,26 @@ export default function RegionExplorer() {
        the state-level shared rosters (नेते / उपनेते) are intentionally
        excluded here because they're the same for every district and
        belong on the Leadership page, not the homepage map. */
-    const seen = new Set();
+    /* Normalised person key — strips honorifics (incl. stacked ones like
+       "खा.श्री.") and matches on first + last name token, so the same
+       leader written differently across categories ("श्री. नरेश गणपत
+       म्हस्के" vs "खा.श्री. नरेश म्हस्के") collapses to one person. */
+    const HONORIFIC = /^(श्री|श्रीम|श्रीमती|सौ|कु|डॉ|खा|आ|मंत्री|मा|अ?ॅड|ॲड|Shri|Smt|Smt|Dr|Prof|Kha|Mantri|Adv)\.?\s*/i;
+    const personKey = (raw) => {
+      let n = (raw || '').replace(/\s*[|·.]\s*/g, ' ').trim();
+      let prev;
+      do { prev = n; n = n.replace(HONORIFIC, ''); } while (n !== prev);
+      const toks = n.split(/\s+/).filter(Boolean);
+      if (toks.length === 0) return (raw || '').trim().toLowerCase();
+      if (toks.length === 1) return toks[0].toLowerCase();
+      return (toks[0] + ' ' + toks[toks.length - 1]).toLowerCase();
+    };
+
+    /* Group by PERSON, not by position. A leader who holds several roles
+       in this district (e.g. Naresh Mhaske = खासदार + जिल्हाप्रमुख +
+       लोकसभा संपर्कप्रमुख) appears ONCE, with all positions collected in
+       a `roles` array shown under their single photo. */
+    const byPerson = new Map();
     const out = [];
     const order = ['mp', 'mla',
                    'divisionalContactHeads', 'divisionalCoContactHeads',
@@ -114,13 +133,31 @@ export default function RegionExplorer() {
       const arr = bucket[cat] || [];
       const catLabel = (lang === 'mr' ? CATEGORY_LABELS_MR : CATEGORY_LABELS_EN)[cat];
       for (const m of arr) {
-        const dedupKey = (m.name || '') + '|' + (m.role || '') + '|' + (m.phone || '');
-        if (seen.has(dedupKey)) continue;
-        seen.add(dedupKey);
-        /* Build display fields. Names are mostly Marathi; for EN mode
-           we still display the Marathi (no client EN names yet) — same
-           as the Leadership page does today. */
         const cleanName = (m.name || '').replace(/\s*\|\s*/g, ' · ').trim();
+        if (!cleanName) continue;
+        /* Suppress the generic "राज्यस्तर" / "State Level" tag — for
+           state-level leaders the role field is just that label, which
+           adds no information next to the category it already lives under. */
+        const isGenericStateLevel = /^(राज्यस्तर|state\s*level)$/i.test((m.role || '').trim());
+        const roleSuffix = (m.role && !isGenericStateLevel) ? ' · ' + m.role : '';
+        const roleText = catLabel + roleSuffix;
+
+        /* Person identity = normalised first+last name (honorifics &
+           middle names ignored) so the same leader merges across roles. */
+        const identity = personKey(cleanName);
+
+        const existing = byPerson.get(identity);
+        if (existing) {
+          if (!existing.roles.includes(roleText)) existing.roles.push(roleText);
+          if (!existing.photo && m.photo) existing.photo = m.photo;
+          if (m.social) existing.social = { ...m.social, ...existing.social };
+          /* Keep the most complete spelling of the name (most tokens). */
+          if (cleanName.split(/\s+/).length > existing.name.split(/\s+/).length) {
+            existing.name = cleanName;
+          }
+          continue;
+        }
+
         /* Initials: first letter of first two name tokens after
            stripping honorifics. */
         const initials = cleanName
@@ -131,24 +168,25 @@ export default function RegionExplorer() {
           .map((w) => [...w][0] || '')
           .join('')
           .toUpperCase();
-        /* Suppress the generic "राज्यस्तर" / "State Level" tag — for
-           state-level leaders (नेते, उपनेते) the role field is just
-           that label, which adds no information next to the category
-           it already lives under. Keep specific roles like
-           "१५४-मागाठाणे" or "लोकसभा — मुंबई दक्षिण मध्य". */
-        const isGenericStateLevel = /^(राज्यस्तर|state\s*level)$/i.test((m.role || '').trim());
-        const roleSuffix = (m.role && !isGenericStateLevel) ? ' · ' + m.role : '';
-        const role = catLabel + roleSuffix;
-        out.push({
+
+        const entry = {
           initials: initials || '?',
           name: cleanName,
-          role,
-          constituency: isGenericStateLevel ? '' : (m.role || ''),
+          roles: [roleText],
           social: m.social || {},
           photo: m.photo || '',
-        });
+        };
+        byPerson.set(identity, entry);
+        out.push(entry);
       }
     }
+
+    /* Flatten the collected positions: `role` keeps a joined string for
+       search + the LeaderPopup; the card renders the `roles` array. */
+    out.forEach((e) => {
+      e.role = e.roles.join(', ');
+      e.constituency = '';
+    });
 
     /* MLA enrichment: if the same MLA exists in mlas-by-district.json
        (which carries social handles + photos), merge those in. */
@@ -286,8 +324,7 @@ export default function RegionExplorer() {
  </div>
  <div className="region-member__info">
  <p className="region-member__name">{m.name}</p>
- <p className="region-member__role">{m.role}</p>
- <p className="region-member__constituency">{m.constituency}</p>
+ <p className="region-member__role">{(m.roles || [m.role]).join(', ')}</p>
  </div>
  <div className="region-member__arrow">→</div>
  </button>
