@@ -24,7 +24,7 @@ export default function News() {
       <SiteHeader />
       <NewsBanner />
 
-      {/* मीडिया रिसोर्सेस — driven by src/content/media.json.
+      {/* मिडीया रिसोर्सेस — driven by src/content/media.json.
           Anchor ids match the header dropdown links. */}
       <MediaPosters  block={mediaContent.pressReleases} sectionId="press-releases" />
       <MediaPosters  block={mediaContent.appointments}  sectionId="appointment-letters" alt />

@@ -562,15 +562,9 @@
   background: rgba(34, 139, 70, 0.08);
   border-color: rgba(34, 139, 70, 0.22);
   color: #1F6A40;
-  cursor: pointer;
+  cursor: default;
 }
 .eci-chip.is-available .eci-chip__dot { background: #2EA058; }
-.eci-chip.is-available:hover {
-  background: rgba(34, 139, 70, 0.16);
-  border-color: rgba(34, 139, 70, 0.45);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px -6px rgba(34, 139, 70, 0.4);
-}
 
 .eci-chip.is-unavailable {
   background: rgba(26, 20, 16, 0.04);

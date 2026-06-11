@@ -105,9 +105,17 @@ export default function WelcomeBanner() {
 
  setTimeout(() => {
  if (targetLang === 'en') {
- // Full load so the Translate engine applies English to /home from
- // a clean state (reliable across the route change).
+ // Translate live via the already-mounted engine, then route in
+ // smoothly — Google's observer carries the translation onto /home.
+ // Falls back to a full load only if the engine isn't ready yet.
+ const combo = document.querySelector('.goog-te-combo');
+ if (combo) {
+ combo.value = 'en';
+ combo.dispatchEvent(new Event('change'));
+ navigate('/home');
+ } else {
  window.location.assign('/home');
+ }
  } else {
  navigate('/home');
  }

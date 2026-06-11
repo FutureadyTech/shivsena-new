@@ -263,9 +263,9 @@
 
   "social": {
  "mr": {
- "eyebrow": "सोशल मीडिया",
- "title": "अधिकृत सोशल मिडिया",
- "lede": "ताज्या अपडेट्ससाठी आम्हाला सोशल मीडियावर फॉलो करा.",
+ "eyebrow": "सोशल मिडीया",
+ "title": "अधिकृत सोशल मिडीया",
+ "lede": "ताज्या अपडेट्ससाठी आम्हाला सोशल मिडीयावर फॉलो करा.",
  "items": [
  { "id": "facebook",  "name": "फेसबुक", "handle": "@Shivsenaofc", "href": "https://www.facebook.com/Shivsenaofc" },
  { "id": "instagram", "name": "इंस्टाग्राम",  "handle": "@shivsenaofc", "href": "https://www.instagram.com/shivsenaofc/" },

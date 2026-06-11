@@ -6,15 +6,6 @@ import declarationsContent from '../../../content/declarations.json';
 import { mrMlaFor, asciiToDevanagari } from '../../Leadership/utils/transliterate.js';
 import './ElectionDeclarations.css';
 
-const SOURCE_URL = 'https://shivsenacentraloffice.com/main.asp?page=ecinorm';
-
-/* When a form is "Available" on the source page but we don't yet have a
- direct PDF URL hosted on this site, we link back to the source page so
- users still reach the actual filing. */
-function formLink(available) {
-  return available ? SOURCE_URL : null;
-}
-
 /* Per-cycle icons small SVG glyphs rendered inside each tab */
 const CYCLE_ICONS = {
   /* State assembly (Vidhan Sabha) building with central flag */
@@ -237,9 +228,6 @@ export default function ElectionDeclarations() {
 }
 
 function CandidateRow({ c, t, lang }) {
-  const c2Href = formLink(c.c2);
-  const c7Href = formLink(c.c7);
-
   /* Marathi mode resolution order:
        1. Explicit candidateMr / constituencyMr fields in JSON
           (added by scripts/marathify-declarations.cjs — uses a
@@ -281,32 +269,25 @@ function CandidateRow({ c, t, lang }) {
  )}
  </div>
  <div className="eci-row__forms">
- <FormChip label={t.c2Label} href={c2Href} available={c.c2} availableText={t.available} />
- <FormChip label={t.c7Label} href={c7Href} available={c.c7} availableText={t.available} />
+ <FormChip label={t.c2Label} available={c.c2} availableText={t.available} />
+ <FormChip label={t.c7Label} available={c.c7} availableText={t.available} />
  </div>
  </li>
   );
 }
 
-function FormChip({ label, href, available, availableText }) {
-  /* Unavailable filings are omitted entirely no greyed-out chip. */
-  if (!available || !href) return null;
+function FormChip({ label, available, availableText }) {
+  /* Unavailable filings are omitted entirely no greyed-out chip.
+     Status badge only — no link / download action. */
+  if (!available) return null;
   return (
- <a
+ <span
  className="eci-chip is-available"
  title={availableText}
  aria-label={`${label} ${availableText}`}
- href={href}
- target="_blank"
- rel="noopener noreferrer"
  >
  <span className="eci-chip__dot" aria-hidden="true" />
  <span className="eci-chip__label">{label}</span>
- <svg className="eci-chip__icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
- <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
- <polyline points="7 10 12 15 17 10" />
- <line x1="12" y1="15" x2="12" y2="3" />
- </svg>
- </a>
+ </span>
   );
 }

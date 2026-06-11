@@ -62,12 +62,15 @@ const UNIFIED_CATEGORIES = [
   { key: 'secretaries',              source: 'state'    }, // 10. सचिव
   { key: 'coSecretaries',            source: 'state'    }, // 11. सह-सचिव
   { key: 'treasurer',                source: 'state'    }, // 12. खजिनदार
-  { key: 'coordinators',             source: 'state'    }, // 13. समन्वयक
+  { key: 'nationalCoCoordinator',    source: 'state'    }, // 13. राष्ट्रीय सह-समन्वयक
+  { key: 'stateCoordinator',         source: 'state'    }, // 14. महाराष्ट्र प्रदेश समन्वयक
+  { key: 'coordinators',             source: 'state'    }, // 15. समन्वयक (निवडणूक विभाग)
+  { key: 'electionCell',             source: 'state'    }, // 16. निवडणूक विभाग
   { key: 'divisionalContactHeads',   source: 'state'    }, // 14. विभागीय संपर्क प्रमुख
   { key: 'divisionalCoContactHeads', source: 'state'    }, // 15. विभागीय सह संपर्क प्रमुख
   { key: 'lokSabhaContactHead',      source: 'state'    }, // 16. लोकसभा संपर्क प्रमुख
   { key: 'yuvaSena',                 source: 'state'    }, // 17. युवासेना
-  { key: 'socialMedia',              source: 'state'    }, // 18. सोशल मीडिया
+  { key: 'socialMedia',              source: 'state'    }, // 18. सोशल मिडीया
   { key: 'districtHead',             source: 'state'    }, // 19. जिल्हा प्रमुख
   { key: 'womenDistrictHeads',       source: 'state'    }, // 20. महिला जिल्हा प्रमुख
 ];

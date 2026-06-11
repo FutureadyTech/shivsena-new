@@ -7,7 +7,7 @@ export default function MahayutiBanner() {
   return (
     <section className="my-banner">
       <img
-        src="/banners/mahayuti/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AF%E0%A5%81%E0%A4%A4%E0%A5%80%20banner.webp"
+        src="/banners/mahayuti/mahayuti-banner.jpeg"
         alt=""
         className="my-banner__image"
       />

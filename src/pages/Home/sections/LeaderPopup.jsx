@@ -91,7 +91,7 @@ export default function LeaderPopup({ leader, lang, regionColor, onClose }) {
   const availableSocials = Object.entries(SOCIAL_META).filter(([key]) => isValidUrl(social[key]));
 
   const closeLabel = 'बंद करा';
-  const noSocialsLabel = 'सोशल मीडिया तपशील उपलब्ध नाहीत';
+  const noSocialsLabel = 'सोशल मिडीया तपशील उपलब्ध नाहीत';
 
   const photoSrc = leader.photo || getPlaceholderPhoto(leader.name);
 

@@ -12,6 +12,7 @@ build/
 PHOTOS/
 homepage-all-content/
 .claude/
+new content/
 
 # Logs
 *.log

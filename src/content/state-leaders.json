@@ -3231,58 +3231,34 @@
   "coordinators": [
     {
       "id": "coordinators-1",
-      "name": "श्री. नरेश म्हस्के",
-      "role": "महाराष्ट्र प्रदेश समन्वयक",
-      "photo": "/leaders/coordinator-state/01_Naresh%20Mhaske.png"
-    },
-    {
-      "id": "coordinators-2",
-      "name": "श्री. दिनेश बबनराव शिंदे",
-      "role": "राष्ट्रीय सह-समन्वयक / प्रसार माध्यम समन्वयक",
-      "photo": "/leaders/coordinator-national/01_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%A6%E0%A4%BF%E0%A4%A8%E0%A5%87%E0%A4%B6%20%E0%A4%AC%E0%A4%AC%E0%A4%A8%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
-    },
-    {
-      "id": "coordinators-3",
       "name": "श्री. विलास जोशी",
       "role": "महाराष्ट्र समन्वयक (निवडणूक विभाग)",
       "photo": "/leaders/coordinator-election/01_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%B5%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%B8%20%E0%A4%9C%E0%A5%8B%E0%A4%B6%E0%A5%80.png"
     },
     {
-      "id": "coordinators-4",
+      "id": "coordinators-2",
       "name": "श्री. अरुण रेडकर",
       "role": "महाराष्ट्र समन्वयक (निवडणूक विभाग)",
       "photo": "/leaders/coordinator-election/02_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%85%E0%A4%B0%E0%A5%81%E0%A4%A3%20%E0%A4%B0%E0%A5%87%E0%A4%A1%E0%A4%95%E0%A4%B0.png"
     },
     {
-      "id": "coordinators-5",
+      "id": "coordinators-3",
       "name": "श्री. अनिल भोर",
       "role": "महाराष्ट्र समन्वयक (निवडणूक विभाग)",
       "photo": "/leaders/coordinator-election/03_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%B2%20%E0%A4%AD%E0%A5%8B%E0%A4%B0.png"
-    },
-    {
-      "id": "coordinators-6",
-      "name": "श्री. अमोल नवले",
-      "role": "निवडणूक विभाग",
-      "photo": "/leaders/election-cell/01_Amol%20Navle.png"
-    },
-    {
-      "id": "coordinators-7",
-      "name": "श्री. विजय दत्ताराम देवळेकर",
-      "role": "निवडणूक विभाग",
-      "photo": "/leaders/election-cell/02_%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%A6%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%B3%E0%A5%87%E0%A4%95%E0%A4%B0.png"
     }
   ],
   "socialMedia": [
     {
       "id": "socialMedia-1",
       "name": "श्री. राहुल कनाल",
-      "role": "सोशल मीडिया राज्यप्रमुख",
+      "role": "सोशल मिडीया राज्यप्रमुख",
       "photo": "/leaders/social-media/rahul-kanal.png"
     },
     {
       "id": "socialMedia-2",
       "name": "श्री. प्रतिक शर्मा",
-      "role": "सोशल मीडिया उप-राज्यप्रमुख",
+      "role": "सोशल मिडीया उप-राज्यप्रमुख",
       "photo": "/leaders/social-media/pratik-sharma.png"
     }
   ],
@@ -3370,6 +3346,36 @@
       "name": "श्री. विठ्ठल सरप पाटील",
       "role": "युवासेना राज्य सचिव – पश्चिम विदर्भ",
       "photo": "/leaders/yuva-sena-secretaries/vitthal-sarap-patil.png"
+    }
+  ],
+  "nationalCoCoordinator": [
+    {
+      "id": "nationalCoCoordinator-1",
+      "name": "श्री. दिनेश बबनराव शिंदे",
+      "role": "राष्ट्रीय सह-समन्वयक",
+      "photo": "/leaders/coordinator-national/01_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80.%20%E0%A4%A6%E0%A4%BF%E0%A4%A8%E0%A5%87%E0%A4%B6%20%E0%A4%AC%E0%A4%AC%E0%A4%A8%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%B6%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%87.png"
+    }
+  ],
+  "stateCoordinator": [
+    {
+      "id": "stateCoordinator-1",
+      "name": "श्री. नरेश म्हस्के",
+      "role": "महाराष्ट्र प्रदेश समन्वयक",
+      "photo": "/leaders/coordinator-state/01_Naresh%20Mhaske.png"
+    }
+  ],
+  "electionCell": [
+    {
+      "id": "electionCell-1",
+      "name": "श्री. अमोल नवले",
+      "role": "निवडणूक विभाग",
+      "photo": "/leaders/election-cell/01_Amol%20Navle.png"
+    },
+    {
+      "id": "electionCell-2",
+      "name": "श्री. विजय दत्ताराम देवळेकर",
+      "role": "निवडणूक विभाग",
+      "photo": "/leaders/election-cell/02_%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%A6%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%B3%E0%A5%87%E0%A4%95%E0%A4%B0.png"
     }
   ]
 }

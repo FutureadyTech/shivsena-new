@@ -39,6 +39,26 @@ export default function GoogleTranslate({ variant = 'auto', className = '' }) {
     if (next === lang) return;
     // '/mr/en' translates to English; '/mr/mr' restores the original.
     setGoogTransCookie(next === 'en' ? '/mr/en' : '/mr/mr');
+
+    if (next === 'en') {
+      // Translate LIVE — drive Google's already-mounted combo instead of
+      // reloading. No reboot, no Marathi flash → much faster. The DOM
+      // safety patch in main.jsx keeps React from crashing mid-translate.
+      const combo = document.querySelector('.goog-te-combo');
+      if (combo) {
+        combo.value = 'en';
+        combo.dispatchEvent(new Event('change'));
+        setLang('en');
+        return;
+      }
+      // Engine not ready yet → fall back to a reload (applies via cookie).
+      window.location.reload();
+      return;
+    }
+
+    // Restoring the original Marathi can't be undone cleanly in place,
+    // so a reload (which renders the source content, no translation) is
+    // both reliable AND fast — there's nothing to fetch.
     window.location.reload();
   }, [lang]);
 
