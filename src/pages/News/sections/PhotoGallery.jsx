@@ -89,7 +89,7 @@ export default function PhotoGallery() {
   }, [activeIdx, close, prev, next]);
 
   const activePhoto = activeIdx !== null ? items[activeIdx] : null;
-  const downloadLabel = t.downloadLabel || 'Download photo';
+  const downloadLabel = t.downloadLabel || 'फोटो डाउनलोड करा';
 
   return (
  <section className="pg-section" id="photo-gallery">
@@ -131,7 +131,7 @@ export default function PhotoGallery() {
  <span className="pg-section__bulk-cta-icon" aria-hidden="true">
  {DownloadIcon}
  </span>
- <span>{t.bulkDownloadLabel || 'Download HD Images'}</span>
+ <span>{t.bulkDownloadLabel || 'एचडी फोटो डाउनलोड करा'}</span>
  </a>
  </div>
  )}

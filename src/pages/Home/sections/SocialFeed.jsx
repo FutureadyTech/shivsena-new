@@ -127,10 +127,10 @@ function ElfsightEmbed({ appId, fallbackUrl }) {
 
 /* Columns shown side-by-side, in display order. */
 const FEEDS = [
-  { key: 'facebook',  label: 'Facebook Feed' },
-  { key: 'instagram', label: 'Instagram Feed' },
-  { key: 'youtube',   label: 'YouTube Feed' },
-  { key: 'twitter',   label: 'Twitter Feed' },
+  { key: 'facebook',  label: 'फेसबुक' },
+  { key: 'instagram', label: 'इन्स्टाग्राम' },
+  { key: 'youtube',   label: 'यूट्यूब' },
+  { key: 'twitter',   label: 'ट्विटर' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════ */
@@ -148,13 +148,9 @@ export default function SocialFeed() {
   });
 
   const isMr = lang === 'mr';
-  const toggleLabel = feedsOn
-    ? (isMr ? 'लाइव्ह फीड बंद करा' : 'Turn live feeds off')
-    : (isMr ? 'लाइव्ह फीड दाखवा' : 'Show live feeds');
-  const offMsg = isMr
-    ? 'लाइव्ह फीड सध्या बंद आहे. प्रोफाइल पाहण्यासाठी क्लिक करा.'
-    : 'Live feed is off. Click to view the profile.';
-  const ctaLabel = isMr ? 'प्रोफाइल उघडा' : 'Open profile';
+  const toggleLabel = feedsOn ? 'लाइव्ह फीड बंद करा' : 'लाइव्ह फीड दाखवा';
+  const offMsg = 'लाइव्ह फीड सध्या बंद आहे. प्रोफाइल पाहण्यासाठी क्लिक करा.';
+  const ctaLabel = 'प्रोफाइल उघडा';
 
   return (
     <section className="social">

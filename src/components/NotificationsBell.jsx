@@ -214,9 +214,9 @@ function NotifDrawerOverlay({
           <div>
             <h3 className="notif-drawer__title">{labels.title}</h3>
             <p className="notif-drawer__count">
-              {sorted.length} {lang === 'mr' ? 'सूचना' : 'items'}
+              {sorted.length} सूचना
               {unreadCount > 0 && (
-                <span className="notif-drawer__unread"> · {unreadCount} {lang === 'mr' ? 'नवीन' : 'new'}</span>
+                <span className="notif-drawer__unread"> · {unreadCount} नवीन</span>
               )}
             </p>
           </div>

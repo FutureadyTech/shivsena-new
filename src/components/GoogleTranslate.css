@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════════════
+   GOOGLE TRANSLATE — custom toggle (मराठी | ENG)
+═══════════════════════════════════════════════════════════════ */
+.gtr {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  color: inherit;
+}
+.gtr__btn {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 4px 6px;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: currentColor;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  line-height: 1;
+}
+.gtr__btn:hover { opacity: 0.9; }
+.gtr__btn.is-active {
+  opacity: 1;
+  color: var(--saffron-on-light, #fa6919);
+}
+.gtr__sep {
+  opacity: 0.35;
+  font-size: 0.8rem;
+  user-select: none;
+}
+
+/* Variant overrides (parity with the old language toggle API) */
+.gtr--dark .gtr__btn { color: #fff; }
+.gtr--dark .gtr__btn.is-active { color: #FFB26B; }
+
+/* ═══════════════════════════════════════════════════════════════
+   Hide ALL of Google Translate's injected chrome so only our toggle
+   shows. The engine still works; just its banner/tooltip/bar are gone.
+═══════════════════════════════════════════════════════════════ */
+#google_translate_element {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Top banner iframe + its body offset */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+/* Hover tooltip / balloon / highlight that Google sprinkles in */
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover { display: none !important; }
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* The little gadget icon / "Powered by" link, just in case */
+.goog-te-gadget-icon { display: none !important; }
+.goog-te-gadget { font-size: 0 !important; }

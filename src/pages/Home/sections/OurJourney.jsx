@@ -12,27 +12,30 @@ const toDevDigits = (s) => String(s ?? '').replace(/[0-9]/g, (d) => DEV_DIGITS[+
 /* Year-keyed image map — each new timeline image has the year + title +
    body baked in, so the panel text overlays have been removed. */
 const EVENT_IMAGES = {
-  'year-1960':  '/timeline/1960.webp',
-  'year-1966':  '/timeline/1966.webp',
-  'year-1967':  '/timeline/1967.webp',
-  'year-1969':  '/timeline/1969.webp',
-  'year-1970':  '/timeline/1970.webp',
-  'year-1971':  '/timeline/1971.webp',
-  'year-1972a': '/timeline/1972.webp',
-  'year-1972b': '/timeline/1972-2.webp',
-  'year-1984':  '/timeline/1984.webp',
-  'year-1989':  '/timeline/1989.webp',
-  'year-1995a': '/timeline/1995.webp',
-  'year-1995b': '/timeline/1995-2.webp',
-  'year-2001':  '/timeline/2001.jpeg',
-  'year-2012':  '/timeline/2012.webp',
-  'year-2014':  '/timeline/2014.webp',
-  'year-2022':  '/timeline/2022.webp',
-  'year-2022b': '/timeline/17_2022.jpeg',
-  'year-2023':  '/timeline/2023.webp',
-  'year-2024a': '/timeline/2024.webp',
-  'year-2024b': '/timeline/2024-2.webp',
-  'year-2024c': '/timeline/2024-3.webp',
+  'year-1960':  '/timeline/new/1960.webp',
+  'year-1966':  '/timeline/new/1966.webp',
+  'year-1967':  '/timeline/new/1967.webp',
+  'year-1969':  '/timeline/new/1969.webp',
+  'year-1970':  '/timeline/new/1970.webp',
+  'year-1971':  '/timeline/new/1971.webp',
+  'year-1972a': '/timeline/new/1972a.webp',
+  'year-1972b': '/timeline/new/1972b.webp',
+  'year-1984a': '/timeline/new/1984a.webp',
+  'year-1984b': '/timeline/new/1984b.webp',
+  'year-1984c': '/timeline/new/1984c.webp',
+  'year-1986':  '/timeline/new/1986.webp',
+  'year-1988':  '/timeline/new/1988.webp',
+  'year-1989':  '/timeline/new/1989.webp',
+  'year-1995':  '/timeline/new/1995.webp',
+  'year-1999':  '/timeline/new/1999.webp',
+  'year-2012':  '/timeline/new/2012.webp',
+  'year-2014':  '/timeline/new/2014.webp',
+  'year-2022a': '/timeline/new/2022a.webp',
+  'year-2022b': '/timeline/new/2022b.webp',
+  'year-2023':  '/timeline/new/2023.webp',
+  'year-2024a': '/timeline/new/2024a.webp',
+  'year-2024b': '/timeline/new/2024b.webp',
+  'year-2024c': '/timeline/new/2024c.webp',
 };
 
 export default function OurJourney() {
@@ -94,9 +97,9 @@ export default function OurJourney() {
 
   /* Heading sourced from the About-Us timeline content (single source
  of truth) falls back to a sensible default if it ever goes missing. */
-  const titleLabel = t.title || (isMr ? 'शिवसेना टाइम लाईन' : 'Shivsena Timeline');
-  const prevLabel  = isMr ? 'मागे' : 'Previous';
-  const nextLabel  = isMr ? 'पुढे' : 'Next';
+  const titleLabel = t.title || 'शिवसेना टाइम लाईन';
+  const prevLabel  = 'मागे';
+  const nextLabel  = 'पुढे';
 
   return (
  <section className="journey" id="history">

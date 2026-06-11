@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
+import GoogleTranslateEngine from './components/GoogleTranslateEngine.jsx';
 import Entrance from './pages/Entrance/index.jsx';
 import Home from './pages/Home/index.jsx';
 import About from './pages/About/index.jsx';
@@ -124,8 +125,8 @@ function ComingSoon({ title }) {
  padding: '20px',
  }}>
  <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '0.04em' }}>{title}</h1>
- <p style={{ color: '#FFB26B', letterSpacing: '0.3em', fontSize: '0.85rem' }}>COMING SOON</p>
- <Link to="/home" className="btn" style={{ marginTop: '12px' }}>← BACK TO HOME</Link>
+ <p style={{ color: '#FFB26B', letterSpacing: '0.3em', fontSize: '0.85rem' }}>लवकरच येत आहे</p>
+ <Link to="/home" className="btn" style={{ marginTop: '12px' }}>← मुख्यपृष्ठावर परत जा</Link>
  </div>
   );
 }
@@ -134,6 +135,7 @@ export default function App() {
   return (
  <LanguageProvider defaultLang="mr">
  <BrowserRouter>
+ <GoogleTranslateEngine />
  <ScrollToTop />
  <HomeAudioRouteGuard />
  <Routes>
@@ -150,8 +152,8 @@ export default function App() {
  <Route path="/mahayuti" element={<Mahayuti />} />
  <Route path="/shivsena-janma" element={<ShivSenaJanma />} />
  <Route path="/shivsena-live" element={<ComingSoon title="शिवसेना लाइव्ह" />} />
- <Route path="/members" element={<ComingSoon title="Members" />} />
- <Route path="*" element={<ComingSoon title="Page Not Found" />} />
+ <Route path="/members" element={<ComingSoon title="सदस्य" />} />
+ <Route path="*" element={<ComingSoon title="पृष्ठ सापडले नाही" />} />
  </Routes>
  <GlobalWhatsApp />
  </BrowserRouter>

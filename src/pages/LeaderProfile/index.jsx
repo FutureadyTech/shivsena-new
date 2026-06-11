@@ -23,7 +23,7 @@ export default function LeaderProfile() {
   const t = useContent(data);
   const bodyRef = useScrollReveal(0.15);
 
-  const backLabel = lang === 'mr' ? '← सर्व नेतृत्व पहा' : '← BACK TO LEADERSHIP';
+  const backLabel = '← सर्व नेतृत्व पहा';
 
   return (
  <div className="leader-profile-page">

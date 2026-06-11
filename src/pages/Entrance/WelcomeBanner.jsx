@@ -1,6 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from '../../i18n/LanguageContext.jsx';
 import './WelcomeBanner.css';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -49,11 +48,25 @@ function stopJoin() {
   joinAudio = null;
 }
 
+/* Set/clear the Google Translate cookie so the chosen language is applied
+   once we land on /home. English → "/mr/en"; Marathi → cleared (original). */
+function applyLangCookie(targetLang) {
+  const host = window.location.hostname;
+  const variants = ['', `;domain=${host}`, `;domain=.${host}`];
+  variants.forEach((d) => {
+    if (targetLang === 'en') {
+      document.cookie = `googtrans=/mr/en;path=/${d}`;
+    } else {
+      document.cookie = `googtrans=/mr/mr;path=/${d}`;
+      document.cookie = `googtrans=;path=/${d};expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+    }
+  });
+}
+
 export default function WelcomeBanner() {
   const [opacity, setOpacity] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
   const navigate = useNavigate();
-  const { setLang } = useLanguage();
 
   useEffect(() => {
  const fadeInTimer = setTimeout(() => {
@@ -81,25 +94,30 @@ export default function WelcomeBanner() {
  e.preventDefault();
  e.stopPropagation();
 
- setLang(targetLang);
+ // Drive Google Translate via its cookie before we leave the entrance.
+ applyLangCookie(targetLang);
 
- // Play the "Enter" click stinger. Tracked at module scope so the
- // unmount cleanup can stop it that's what stops it from bleeding
- // into /home. The ambient bed is handled by HomeBannerAudio.
+ // Play the "Enter" click stinger.
  playJoinClick();
 
  setIsExiting(true);
  setOpacity(0);
 
  setTimeout(() => {
+ if (targetLang === 'en') {
+ // Full load so the Translate engine applies English to /home from
+ // a clean state (reliable across the route change).
+ window.location.assign('/home');
+ } else {
  navigate('/home');
+ }
  }, 380);
-  }, [navigate, setLang]);
+  }, [navigate]);
 
   return (
  <div className="welcome-banner" style={{ opacity }} aria-hidden={opacity < 0.1}>
 
- <div className="welcome-banner__actions">
+ <div className="welcome-banner__actions" translate="no">
  <button
  type="button"
  className="welcome-banner__cta welcome-banner__cta--mr"

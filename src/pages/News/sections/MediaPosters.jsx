@@ -33,7 +33,7 @@ export default function MediaPosters({ block, sectionId, alt = false }) {
   const items = t.items || [];
   if (items.length === 0) return null;
 
-  const moreLabel = lang === 'mr' ? 'अधिक वाचा' : 'Read more';
+  const moreLabel = 'अधिक वाचा';
 
   return (
     <section className={`mr${alt ? ' mr--alt' : ''}`} id={sectionId}>
@@ -73,7 +73,7 @@ export default function MediaPosters({ block, sectionId, alt = false }) {
                 <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                {lang === 'mr' ? 'डाउनलोड करा' : 'Download'}
+                डाउनलोड करा
               </a>
             </div>
           </div>

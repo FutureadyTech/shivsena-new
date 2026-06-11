@@ -120,7 +120,7 @@ body.has-dark-hero-visible .site-nav__logo {
 .site-nav__menu {
   display: flex;
   align-items: center;
-  gap: 38px;
+  gap: 28px;
   flex: 1;
   justify-content: center;
 }
@@ -134,6 +134,9 @@ body.has-dark-hero-visible .site-nav__logo {
   color: var(--body-text);
   text-decoration: none;
   padding: 6px 2px;
+  /* Keep each item on one line so the longer English (Google-translated)
+     labels don't wrap and break the row's alignment. */
+  white-space: nowrap;
   transition: color 0.3s ease;
 }
 

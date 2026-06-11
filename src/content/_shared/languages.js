@@ -1,10 +1,10 @@
 /**
  * Supported languages across the site.
- * Add a new language here AND ensure all content files have the new key.
+ * The site is Marathi-only — English has been retired. Add a language
+ * back here AND ensure all content files have the new key to re-enable.
  */
 export const LANGUAGES = {
   mr: { code: 'mr', label: 'मराठी', latinLabel: 'Marathi' },
-  en: { code: 'en', label: 'EN',     latinLabel: 'English' },
 };
 
 export const SUPPORTED_LANGS = Object.keys(LANGUAGES);

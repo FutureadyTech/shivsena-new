@@ -24,8 +24,8 @@ export default function AffiliatedOrg() {
   const orgTag = org?.tag;
   const bearers = Array.isArray(org?.officeBearers) ? org.officeBearers : [];
 
-  const padTitle  = lang === 'mr' ? 'पदाधिकारी' : 'Office Bearers';
-  const soonBody  = lang === 'mr' ? 'माहिती लवकरच उपलब्ध होईल.' : 'Details coming soon.';
+  const padTitle  = 'पदाधिकारी';
+  const soonBody  = 'माहिती लवकरच उपलब्ध होईल.';
 
   return (
     <div className="aff-org-page">

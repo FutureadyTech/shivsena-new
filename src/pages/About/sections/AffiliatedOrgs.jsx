@@ -119,8 +119,8 @@ export default function AffiliatedOrgs({
   const showLess = () => setVisible(INITIAL_VISIBLE);
 
   const isMr = t._lang === 'mr';
-  const moreLabel = isMr ? `आणखी पाहा (${remaining})` : `See more (${remaining})`;
-  const lessLabel = isMr ? 'कमी दाखवा' : 'See less';
+  const moreLabel = `आणखी पाहा (${remaining})`;
+  const lessLabel = 'कमी दाखवा';
 
   return (
  <section className="affiliated" id={sectionId}>

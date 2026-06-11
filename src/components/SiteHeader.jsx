@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useT } from '../i18n/LanguageContext.jsx';
-import LanguageToggle from './LanguageToggle.jsx';
 import NotificationsBell from './NotificationsBell.jsx';
+import GoogleTranslate from './GoogleTranslate.jsx';
 import './SiteHeader.css';
 
 /* ─── Nav structure ─────────────────────────────────────────────
@@ -146,15 +146,15 @@ export default function SiteHeader() {
 
         <div className="site-nav__utils">
           <NotificationsBell />
+          <GoogleTranslate />
         </div>
-        <LanguageToggle />
 
         {/* ───────── MOBILE HAMBURGER (only visible < 1024px) ───────── */}
         <button
           type="button"
           className={`site-nav__burger ${mobileOpen ? 'is-open' : ''}`}
           onClick={() => setMobileOpen((v) => !v)}
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          aria-label={mobileOpen ? 'मेनू बंद करा' : 'मेनू उघडा'}
           aria-expanded={mobileOpen}
           aria-controls="site-mobile-menu"
         >
@@ -297,7 +297,7 @@ function MobileMenu({ open, onClose, t }) {
             </NavLink>
             <div className="site-mobile__lang">
               <NotificationsBell />
-              <LanguageToggle />
+              <GoogleTranslate />
             </div>
           </footer>
 
