@@ -16,7 +16,7 @@ const NAV = [
     children: [
       { to: '/shivsena-janma', key: 'nav-shivsena-janma' },
       { to: '/about#history',  key: 'nav-timeline' },
-      { to: '/about',          key: 'nav-about-party' },
+      { to: '/about#affiliated', key: 'nav-about-party' },
       { to: '/mahayuti',       key: 'nav-mahayuti' },
     ],
   },
