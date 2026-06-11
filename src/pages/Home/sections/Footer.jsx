@@ -71,8 +71,7 @@ export default function Footer() {
             <Link to="/home" className="footer__brand">
               <img src="/logo.png" alt="शिवसेना" className="footer__logo" />
               <div className="footer__brand-text">
-                <span className="footer__brand-name">शिवसेना</span>
-                <span className="footer__brand-tag">{t.brandTag}</span>
+                <img src="/Logos/footer-shivsena-text.png" alt="शिवसेना" className="footer__brand-name-img" />
               </div>
             </Link>
             <p className="footer__about">{t.about}</p>

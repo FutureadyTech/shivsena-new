@@ -58,6 +58,13 @@
   line-height: 1.1;
 }
 
+/* शिवसेना text logo (PNG) — replaces the old text + tagline. */
+.footer__brand-name-img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 12px rgba(244, 214, 138, 0.3));
+}
+
 .footer__brand-name {
   font-family: var(--font-display-dev);
   font-size: 1.6rem;
