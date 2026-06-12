@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import WelcomeBanner from './WelcomeBanner.jsx';
 
 /**
@@ -25,6 +25,19 @@ export default function HeroExperience() {
     return () => clearTimeout(id);
   }, []);
 
+  /* Mobile: show a static banner image instead of the (heavy) looping
+     video so phones don't download / decode the clip. */
+  const mq = '(max-width: 768px)';
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia(mq).matches
+  );
+  useEffect(() => {
+    const m = window.matchMedia(mq);
+    const onChange = (e) => setIsMobile(e.matches);
+    m.addEventListener('change', onChange);
+    return () => m.removeEventListener('change', onChange);
+  }, []);
+
   return (
     <>
       {/* Full-bleed entrance banner — looping muted video, no controls.
@@ -33,17 +46,25 @@ export default function HeroExperience() {
           differs from the clip's first frame. The dark .vestibule-cover
           background covers the brief moment before the clip loads. */}
       <div className="vestibule-cover" id="vestibule-cover" aria-hidden="true">
-        <video
-          src="/entrance/Flag-1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          disableRemotePlayback
-          tabIndex={-1}
-        />
+        {isMobile ? (
+          <img
+            src="/entrance/entrance-banner-mobile.webp"
+            alt=""
+            className="vestibule-banner-mobile"
+          />
+        ) : (
+          <video
+            src="/entrance/Flag-1.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            disablePictureInPicture
+            disableRemotePlayback
+            tabIndex={-1}
+          />
+        )}
       </div>
 
       {/* Subtle ambient overlays kept for visual polish (no JS). */}

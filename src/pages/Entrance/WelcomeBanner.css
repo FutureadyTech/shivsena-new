@@ -29,9 +29,26 @@
 }
 
 @media (max-width: 540px) {
-  .welcome-banner { bottom: 5vh; }
-  .welcome-banner__actions { gap: 12px; flex-direction: column; }
-  .welcome-banner__actions .welcome-banner__cta { width: 100%; justify-content: center; }
+  /* Pin the buttons to the bottom, centred, side-by-side. */
+  .welcome-banner {
+    bottom: 4vh;
+    text-align: center;
+    padding: 0 18px;
+  }
+  .welcome-banner__actions {
+    display: flex;
+    flex-direction: row;          /* beside each other */
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .welcome-banner__actions .welcome-banner__cta {
+    flex: 1 1 0;                   /* two equal-width buttons */
+    min-width: 0;
+    justify-content: center;
+  }
+  .welcome-banner__cta-inner { padding: 13px 18px; gap: 8px; }
 }
 
 /* ─── Eyebrow ─── */
@@ -158,7 +175,8 @@
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   .welcome-banner {
- top: 48%;
+ /* No `top` — the banner now holds only the language buttons, so it
+    anchors to the bottom (via `bottom`) instead of floating mid-screen. */
  padding: 0 20px;
   }
   .welcome-banner__eyebrow {

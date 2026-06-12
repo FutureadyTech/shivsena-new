@@ -932,6 +932,12 @@
       "role": "नेते",
       "phone": "9765004888",
       "photo": "/leaders/leaders/07_%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%B6%20%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A5%80%E0%A4%B2.webp"
+    },
+    {
+      "id": "leaders-10",
+      "name": "श्री. बच्चू कडू",
+      "role": "नेते",
+      "photo": "/leaders/leaders/bacchu-kadu.webp"
     }
   ],
   "deputyLeaders": [
@@ -1738,11 +1744,13 @@
     },
     {
       "id": "districtHead-5",
-      "name": "श्री. गोपाळ रामचंद्र लांडगे"
+      "name": "श्री. गोपाळ रामचंद्र लांडगे",
+      "photo": "/leaders/district-heads/gopal-landge.webp"
     },
     {
       "id": "districtHead-6",
-      "name": "श्री. द्वारकानाथ बाबू भोईर"
+      "name": "श्री. द्वारकानाथ बाबू भोईर",
+      "photo": "/leaders/district-heads/dwarkanath-bhoir.webp"
     },
     {
       "id": "districtHead-7",
@@ -1751,7 +1759,8 @@
     },
     {
       "id": "districtHead-8",
-      "name": "श्री. निलेश तेंडोलकर"
+      "name": "श्री. निलेश तेंडोलकर",
+      "photo": "/leaders/district-heads/nilesh-tendolkar.webp"
     },
     {
       "id": "districtHead-9",
@@ -1760,7 +1769,8 @@
     },
     {
       "id": "districtHead-10",
-      "name": "श्री. कुंदन संख्ये"
+      "name": "श्री. कुंदन संख्ये",
+      "photo": "/leaders/district-heads/kundan-sakhe.webp"
     },
     {
       "id": "districtHead-11",
@@ -1813,7 +1823,8 @@
     },
     {
       "id": "districtHead-21",
-      "name": "श्री. संजय दुसाने"
+      "name": "श्री. संजय दुसाने",
+      "photo": "/leaders/district-heads/sanjay-dusane.webp"
     },
     {
       "id": "districtHead-22",
@@ -1922,7 +1933,8 @@
     },
     {
       "id": "districtHead-43",
-      "name": "श्री. महेश प्रभाकर पासलकर"
+      "name": "श्री. महेश प्रभाकर पासलकर",
+      "photo": "/leaders/district-heads/mahesh-pasalkar.webp"
     },
     {
       "id": "districtHead-44",
@@ -1941,7 +1953,8 @@
     },
     {
       "id": "districtHead-47",
-      "name": "श्री. रणजितसिंह गजानन भोसले"
+      "name": "श्री. रणजितसिंह गजानन भोसले",
+      "photo": "/leaders/district-heads/ranjitsingh-bhosale.webp"
     },
     {
       "id": "districtHead-48",
@@ -1950,11 +1963,13 @@
     },
     {
       "id": "districtHead-49",
-      "name": "श्री. जयवंतराव देवजी शेलार"
+      "name": "श्री. जयवंतराव देवजी शेलार",
+      "photo": "/leaders/district-heads/jaywantrao-shelar.webp"
     },
     {
       "id": "districtHead-50",
-      "name": "श्री. आनंदराव रामचंद्र पवार"
+      "name": "श्री. आनंदराव रामचंद्र पवार",
+      "photo": "/leaders/district-heads/anandrao-pawar.webp"
     },
     {
       "id": "districtHead-51",
@@ -1978,7 +1993,8 @@
     },
     {
       "id": "districtHead-55",
-      "name": "श्री. रविंद्र माने"
+      "name": "श्री. रविंद्र माने",
+      "photo": "/leaders/district-heads/ravindra-mane.webp"
     },
     {
       "id": "districtHead-56",
@@ -1987,7 +2003,8 @@
     },
     {
       "id": "districtHead-57",
-      "name": "श्री. महेश चिवटे"
+      "name": "श्री. महेश चिवटे",
+      "photo": "/leaders/district-heads/mahesh-chivte.webp"
     },
     {
       "id": "districtHead-58",
@@ -2001,7 +2018,8 @@
     },
     {
       "id": "districtHead-60",
-      "name": "श्री. लक्ष्मीकांत ठोंगे पाटील"
+      "name": "श्री. लक्ष्मीकांत ठोंगे पाटील",
+      "photo": "/leaders/district-heads/laxmikant-patil.webp"
     },
     {
       "id": "districtHead-61",
@@ -2165,7 +2183,8 @@
     },
     {
       "id": "districtHead-93",
-      "name": "श्री. विजय ज्ञानबा खानझोडे"
+      "name": "श्री. विजय ज्ञानबा खानझोडे",
+      "photo": "/leaders/district-heads/vijay-khanzode.webp"
     },
     {
       "id": "districtHead-94",
@@ -2193,7 +2212,8 @@
     },
     {
       "id": "districtHead-99",
-      "name": "श्री. गजानन डोमाळे"
+      "name": "श्री. गजानन डोमाळे",
+      "photo": "/leaders/district-heads/gajanan-dhomale.webp"
     },
     {
       "id": "districtHead-100",
@@ -2212,11 +2232,13 @@
     },
     {
       "id": "districtHead-103",
-      "name": "श्री. विनोद सातंगे"
+      "name": "श्री. विनोद सातंगे",
+      "photo": "/leaders/district-heads/vinod-satange.webp"
     },
     {
       "id": "districtHead-104",
-      "name": "प्रशांत शहागडकर"
+      "name": "प्रशांत शहागडकर",
+      "photo": "/leaders/district-heads/prashant-shahagadkar.webp"
     },
     {
       "id": "districtHead-105",
@@ -2239,7 +2261,8 @@
     },
     {
       "id": "districtHead-109",
-      "name": "श्री. राकेश लक्ष्मणराव बेलसारे"
+      "name": "श्री. राकेश लक्ष्मणराव बेलसारे",
+      "photo": "/leaders/district-heads/rakesh-belsare.webp"
     },
     {
       "id": "districtHead-110",
@@ -2248,7 +2271,8 @@
     },
     {
       "id": "districtHead-111",
-      "name": "श्री. अनिल श्रीराम गायधने"
+      "name": "श्री. अनिल श्रीराम गायधने",
+      "photo": "/leaders/district-heads/anil-gaydhane.webp"
     },
     {
       "id": "districtHead-112",
@@ -2257,7 +2281,8 @@
     },
     {
       "id": "districtHead-113",
-      "name": "श्री. रुपेश कुथे"
+      "name": "श्री. रुपेश कुथे",
+      "photo": "/leaders/district-heads/rupesh-kuthe.webp"
     },
     {
       "id": "districtHead-114",
@@ -2514,7 +2539,8 @@
       "name": "सौ. सीमा प्रशांत कल्याणकर",
       "role": "इंदापूर व दौंड",
       "phone": "7796688214",
-      "female": true
+      "female": true,
+      "photo": "/leaders/district-heads/seema-kalyankar.webp"
     },
     {
       "id": "wdh-33",
@@ -2887,21 +2913,24 @@
       "name": "सौ. मनिषा पापडकर",
       "role": "नागपूर दक्षिण पश्चिम, दक्षिण व पश्चिम",
       "phone": "8793452575",
-      "female": true
+      "female": true,
+      "photo": "/leaders/district-heads/manisha-papadkar.webp"
     },
     {
       "id": "wdh-81",
       "name": "सौ. वंदना प्रमोद भुते",
       "role": "आर्वी व वर्धा",
       "phone": "7264935850",
-      "female": true
+      "female": true,
+      "photo": "/leaders/district-heads/vandana-bhute.webp"
     },
     {
       "id": "wdh-82",
       "name": "सौ. शुभांगी होमेश्वर ठमेकर",
       "role": "देवळी-पुलगाव व हिंगणघाट",
       "phone": "9422154116",
-      "female": true
+      "female": true,
+      "photo": "/leaders/district-heads/shubhangi-thamekar.webp"
     },
     {
       "id": "wdh-83",
