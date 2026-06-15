@@ -12,7 +12,6 @@ const NAV = [
   { to: '/home', key: 'nav-home' },
   {
     key: 'nav-about',
-    to: '/about',
     children: [
       { to: '/shivsena-janma', key: 'nav-shivsena-janma' },
       { to: '/about#history',  key: 'nav-timeline' },
@@ -225,7 +224,7 @@ function MobileMenu({ open, onClose, t }) {
               {NAV.map((item, i) => {
                 const hasChildren = !!item.children;
                 const isExpanded = expandedKey === item.key;
-                const [parentPath] = item.to.split('#');
+                const [parentPath] = (item.to || '').split('#');
                 const isParentActive = pathname === parentPath ||
                   (hasChildren && item.children.some((c) => c.to.split('#')[0] === pathname));
 
@@ -236,26 +235,37 @@ function MobileMenu({ open, onClose, t }) {
                     style={{ '--item-delay': `${0.18 + i * 0.05}s` }}
                   >
                     <div className="site-mobile__row">
-                      <NavLink
-                        to={item.to}
-                        className={({ isActive }) =>
-                          `site-mobile__link ${isActive || isParentActive ? 'is-active' : ''}`
-                        }
-                        onClick={(e) => {
-                          if (hasChildren) {
-                            /* Tap on parent first opens the accordion;
-                               second tap follows the parent link. */
-                            if (!isExpanded) {
-                              e.preventDefault();
-                              setExpandedKey(item.key);
-                              return;
-                            }
+                      {item.to ? (
+                        <NavLink
+                          to={item.to}
+                          className={({ isActive }) =>
+                            `site-mobile__link ${isActive || isParentActive ? 'is-active' : ''}`
                           }
-                          onClose();
-                        }}
-                      >
-                        <span>{t(item.key)}</span>
-                      </NavLink>
+                          onClick={(e) => {
+                            if (hasChildren) {
+                              /* Tap on parent first opens the accordion;
+                                 second tap follows the parent link. */
+                              if (!isExpanded) {
+                                e.preventDefault();
+                                setExpandedKey(item.key);
+                                return;
+                              }
+                            }
+                            onClose();
+                          }}
+                        >
+                          <span>{t(item.key)}</span>
+                        </NavLink>
+                      ) : (
+                        /* No `to` (e.g. पक्ष) — pure accordion toggle, no navigation. */
+                        <button
+                          type="button"
+                          className={`site-mobile__link ${isParentActive ? 'is-active' : ''}`}
+                          onClick={() => setExpandedKey(isExpanded ? null : item.key)}
+                        >
+                          <span>{t(item.key)}</span>
+                        </button>
+                      )}
                     </div>
 
                     {hasChildren && (
@@ -362,39 +372,62 @@ function NavDropdown({ item, t }) {
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
-      <NavLink
-        to={item.to}
-        className={`site-nav__link site-nav__link--has-children ${
+      {(() => {
+        const caret = (
+          <svg
+            className="site-nav__caret"
+            viewBox="0 0 12 12"
+            width="10"
+            height="10"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="3 5 6 8 9 5" />
+          </svg>
+        );
+        const cls = `site-nav__link site-nav__link--has-children ${
           isParentActive ? 'site-nav__link--active' : ''
-        }`}
-        onClick={(e) => {
-          // On touch / no-hover devices, the first tap should open the menu
-          // rather than navigate. Once open, a second tap on the parent
-          // proceeds to the parent route.
-          if (!window.matchMedia('(hover: hover)').matches && !open) {
-            e.preventDefault();
-            setOpen(true);
-          }
-        }}
-        aria-haspopup="menu"
-        aria-expanded={open}
-      >
-        {t(item.key)}
-        <svg
-          className="site-nav__caret"
-          viewBox="0 0 12 12"
-          width="10"
-          height="10"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <polyline points="3 5 6 8 9 5" />
-        </svg>
-      </NavLink>
+        }`;
+        /* Parent with NO `to` (e.g. पक्ष) is a pure dropdown trigger —
+           render a button so it never navigates. */
+        if (!item.to) {
+          return (
+            <button
+              type="button"
+              className={cls}
+              onClick={() => setOpen((v) => !v)}
+              aria-haspopup="menu"
+              aria-expanded={open}
+            >
+              {t(item.key)}
+              {caret}
+            </button>
+          );
+        }
+        return (
+          <NavLink
+            to={item.to}
+            className={cls}
+            onClick={(e) => {
+              // On touch / no-hover devices, the first tap should open the menu
+              // rather than navigate. Once open, a second tap proceeds to the route.
+              if (!window.matchMedia('(hover: hover)').matches && !open) {
+                e.preventDefault();
+                setOpen(true);
+              }
+            }}
+            aria-haspopup="menu"
+            aria-expanded={open}
+          >
+            {t(item.key)}
+            {caret}
+          </NavLink>
+        );
+      })()}
 
       <div className="site-nav__submenu" role="menu" data-lenis-prevent>
         {item.children.map((child) => {

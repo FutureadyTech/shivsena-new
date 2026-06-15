@@ -29,9 +29,9 @@
 }
 
 @media (max-width: 540px) {
-  /* Pin the buttons to the bottom, centred, side-by-side. */
+  /* Pin the buttons near the bottom, centred, side-by-side. */
   .welcome-banner {
-    bottom: 4vh;
+    bottom: 11vh;
     text-align: center;
     padding: 0 18px;
   }
