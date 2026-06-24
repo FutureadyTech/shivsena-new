@@ -24,8 +24,8 @@ export default function AffiliatedOrg() {
   const orgTag = org?.tag;
   const bearers = Array.isArray(org?.officeBearers) ? org.officeBearers : [];
 
-  const padTitle  = 'पदाधिकारी';
-  const soonBody  = 'माहिती लवकरच उपलब्ध होईल.';
+  const padTitle  = lang === 'mr' ? 'पदाधिकारी' : 'Office Bearers';
+  const soonBody  = lang === 'mr' ? 'माहिती लवकरच उपलब्ध होईल.' : 'Details coming soon.';
 
   return (
     <div className="aff-org-page">
@@ -41,6 +41,9 @@ export default function AffiliatedOrg() {
           <header className="aff-detail__head">
             {orgTag && <span className="aff-org__tag">{orgTag}</span>}
             <h1 className="aff-detail__name">{orgName}</h1>
+            {org?.jurisdiction && (
+              <p className="aff-detail__jurisdiction">{org.jurisdiction}</p>
+            )}
             <div className="aff-org__divider" aria-hidden="true">
               <span className="aff-org__divider-line" />
               <span className="aff-org__divider-dot" />

@@ -97,9 +97,9 @@ export default function OurJourney() {
 
   /* Heading sourced from the About-Us timeline content (single source
  of truth) falls back to a sensible default if it ever goes missing. */
-  const titleLabel = t.title || 'शिवसेना टाइम लाईन';
-  const prevLabel  = 'मागे';
-  const nextLabel  = 'पुढे';
+  const titleLabel = t.title || (isMr ? 'शिवसेना टाइम लाईन' : 'Shivsena Timeline');
+  const prevLabel  = isMr ? 'मागे' : 'Previous';
+  const nextLabel  = isMr ? 'पुढे' : 'Next';
 
   return (
  <section className="journey" id="history">

@@ -16,7 +16,7 @@ export default function MediaArticles({ block, sectionId, alt = false }) {
   const items = t.items || [];
   if (items.length === 0) return null;
 
-  const readLabel = 'संपूर्ण लेख वाचा';
+  const readLabel = lang === 'mr' ? 'संपूर्ण लेख वाचा' : 'Read full article';
 
   return (
     <section className={`mr${alt ? ' mr--alt' : ''}`} id={sectionId}>

@@ -1,25 +1,36 @@
-import { createContext, useContext, useCallback, useMemo, useEffect } from 'react';
+import { createContext, useContext, useState, useCallback, useMemo, useEffect } from 'react';
 import TRANSLATIONS from './translations.json';
 
 const LanguageContext = createContext(null);
+const STORAGE_KEY = 'SHIVSENA_LANG';
 
-/* The site is Marathi-only. Language is locked to 'mr' — setLang is kept
-   as a no-op so existing callers (e.g. the entrance screen) don't break. */
-export function LanguageProvider({ children }) {
-  const lang = 'mr';
+/* Bilingual: Marathi (source) ↔ English (client translation). The chosen
+   language persists in localStorage so it survives reloads and route
+   changes. UI strings fall back to Marathi if an English key is missing. */
+export function LanguageProvider({ children, defaultLang = 'mr' }) {
+  const [lang, setLangState] = useState(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && TRANSLATIONS[saved]) return saved;
+    } catch { /* ignore */ }
+    return defaultLang;
+  });
 
   useEffect(() => {
-    document.documentElement.lang = 'mr';
-  }, []);
+    document.documentElement.lang = lang;
+  }, [lang]);
 
-  // Locked: switching languages is disabled.
-  const changeLang = useCallback(() => {}, []);
+  const changeLang = useCallback((next) => {
+    if (!TRANSLATIONS[next]) return;
+    setLangState(next);
+    try { localStorage.setItem(STORAGE_KEY, next); } catch { /* ignore */ }
+  }, []);
 
   const t = useCallback((key) => {
-    return TRANSLATIONS.mr?.[key] ?? key;
-  }, []);
+    return TRANSLATIONS[lang]?.[key] ?? TRANSLATIONS.mr?.[key] ?? key;
+  }, [lang]);
 
-  const value = useMemo(() => ({ lang, setLang: changeLang, t }), [changeLang, t]);
+  const value = useMemo(() => ({ lang, setLang: changeLang, t }), [lang, changeLang, t]);
 
   return (
     <LanguageContext.Provider value={value}>

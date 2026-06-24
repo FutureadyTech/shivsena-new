@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useT } from '../i18n/LanguageContext.jsx';
 import NotificationsBell from './NotificationsBell.jsx';
-import GoogleTranslate from './GoogleTranslate.jsx';
+import LanguageToggle from './LanguageToggle.jsx';
 import './SiteHeader.css';
 
 /* ─── Nav structure ─────────────────────────────────────────────
@@ -145,7 +145,7 @@ export default function SiteHeader() {
 
         <div className="site-nav__utils">
           <NotificationsBell />
-          <GoogleTranslate />
+          <LanguageToggle />
         </div>
 
         {/* ───────── MOBILE HAMBURGER (only visible < 1024px) ───────── */}
@@ -307,7 +307,7 @@ function MobileMenu({ open, onClose, t }) {
             </NavLink>
             <div className="site-mobile__lang">
               <NotificationsBell />
-              <GoogleTranslate />
+              <LanguageToggle />
             </div>
           </footer>
 

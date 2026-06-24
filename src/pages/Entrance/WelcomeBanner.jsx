@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '../../i18n/LanguageContext.jsx';
 import './WelcomeBanner.css';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -48,25 +49,11 @@ function stopJoin() {
   joinAudio = null;
 }
 
-/* Set/clear the Google Translate cookie so the chosen language is applied
-   once we land on /home. English → "/mr/en"; Marathi → cleared (original). */
-function applyLangCookie(targetLang) {
-  const host = window.location.hostname;
-  const variants = ['', `;domain=${host}`, `;domain=.${host}`];
-  variants.forEach((d) => {
-    if (targetLang === 'en') {
-      document.cookie = `googtrans=/mr/en;path=/${d}`;
-    } else {
-      document.cookie = `googtrans=/mr/mr;path=/${d}`;
-      document.cookie = `googtrans=;path=/${d};expires=Thu, 01 Jan 1970 00:00:00 GMT`;
-    }
-  });
-}
-
 export default function WelcomeBanner() {
   const [opacity, setOpacity] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
   const navigate = useNavigate();
+  const { setLang } = useLanguage();
 
   useEffect(() => {
  const fadeInTimer = setTimeout(() => {
@@ -94,8 +81,8 @@ export default function WelcomeBanner() {
  e.preventDefault();
  e.stopPropagation();
 
- // Drive Google Translate via its cookie before we leave the entrance.
- applyLangCookie(targetLang);
+ // Set the site language (native bilingual) before entering.
+ setLang(targetLang);
 
  // Play the "Enter" click stinger.
  playJoinClick();
@@ -104,23 +91,9 @@ export default function WelcomeBanner() {
  setOpacity(0);
 
  setTimeout(() => {
- if (targetLang === 'en') {
- // Translate live via the already-mounted engine, then route in
- // smoothly — Google's observer carries the translation onto /home.
- // Falls back to a full load only if the engine isn't ready yet.
- const combo = document.querySelector('.goog-te-combo');
- if (combo) {
- combo.value = 'en';
- combo.dispatchEvent(new Event('change'));
  navigate('/home');
- } else {
- window.location.assign('/home');
- }
- } else {
- navigate('/home');
- }
  }, 380);
-  }, [navigate]);
+  }, [navigate, setLang]);
 
   return (
  <div className="welcome-banner" style={{ opacity }} aria-hidden={opacity < 0.1}>

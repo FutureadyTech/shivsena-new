@@ -60,8 +60,8 @@ export default function ContactForm() {
  } catch (err) {
  setErrorMsg(
  err.message === 'photo-too-large'
- ? 'चित्र 2 MB पेक्षा मोठे आहे.'
- : 'चित्र वाचता आले नाही.'
+ ? (isMr ? 'चित्र 2 MB पेक्षा मोठे आहे.' : 'Photo exceeds 2 MB limit.')
+ : (isMr ? 'चित्र वाचता आले नाही.' : 'Could not read photo.')
  );
  }
   }, [isMr]);
@@ -121,7 +121,7 @@ export default function ContactForm() {
  setStatus('success');
  } catch (err) {
  console.warn('PDF generation failed:', err);
- setErrorMsg('PDF तयार होऊ शकले नाही. कृपया पुन्हा प्रयत्न करा.');
+ setErrorMsg(isMr ? 'PDF तयार होऊ शकले नाही. कृपया पुन्हा प्रयत्न करा.' : 'Could not generate the PDF. Please try again.');
  setStatus('error');
  }
   }, [fields, buildCardData, t, isMr]);

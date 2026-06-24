@@ -85,7 +85,7 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
  <line x1="12" y1="5" x2="12" y2="19" />
  <polyline points="19 12 12 19 5 12" />
  </svg>
- <span>जिल्हा निवडा</span>
+ <span>{language === 'mr' ? 'जिल्हा निवडा' : 'Pick a district'}</span>
  </div>
  </div>
 
@@ -101,7 +101,7 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
  type="text"
  value={query}
  onChange={(e) => setQuery(e.target.value)}
- placeholder="जिल्हा शोधा"
+ placeholder={language === 'mr' ? 'जिल्हा शोधा' : 'Search district'}
  className="rmap__legend-search-input"
  aria-label="Search"
  />
@@ -119,7 +119,7 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
  <div className="rmap__legend-list" data-lenis-prevent>
  {filtered.length === 0 && (
  <p className="rmap__legend-empty">
- काही सापडले नाही.
+ {language === 'mr' ? 'काही सापडले नाही.' : 'No matches found.'}
  </p>
  )}
  {filtered.map((d) => {
@@ -132,7 +132,7 @@ export default function RegionMap({ activeDistrict, onSelectDistrict }) {
  const isActive = d.slug === activeDistrict;
  /* Always render the count for consistency "0 आमदार" is
  a real signal that no Shiv Sena MLA is from that district. */
- const countLabel = ` · ${d.mlaCount} आमदार`;
+ const countLabel = ` · ${d.mlaCount} ${language === 'mr' ? 'आमदार' : 'MLAs'}`;
  return (
  <button
  key={d.slug}

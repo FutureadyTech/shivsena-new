@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
-import GoogleTranslateEngine from './components/GoogleTranslateEngine.jsx';
 import Entrance from './pages/Entrance/index.jsx';
 import Home from './pages/Home/index.jsx';
 import About from './pages/About/index.jsx';
@@ -135,7 +134,6 @@ export default function App() {
   return (
  <LanguageProvider defaultLang="mr">
  <BrowserRouter>
- <GoogleTranslateEngine />
  <ScrollToTop />
  <HomeAudioRouteGuard />
  <Routes>

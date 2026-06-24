@@ -15,7 +15,9 @@ export default function AudioMuteToggle({ className = '' }) {
   if (!audio) return null; // outside the home audio provider
 
   const { isPlaying, toggle } = audio;
-  const label = isPlaying ? 'आवाज बंद करा' : 'आवाज सुरू करा';
+  const label = isPlaying
+    ? (lang === 'mr' ? 'आवाज बंद करा' : 'Pause audio')
+    : (lang === 'mr' ? 'आवाज सुरू करा' : 'Play audio');
 
   return (
     <button

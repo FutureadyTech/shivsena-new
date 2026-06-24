@@ -34,3 +34,4 @@ Thumbs.db
 # Vercel
 .vercel
 .xlsx 
+.claude/settings.local.json
