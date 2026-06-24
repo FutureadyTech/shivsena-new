@@ -33,5 +33,23 @@ Thumbs.db
 
 # Vercel
 .vercel
-.xlsx 
+
+# Spreadsheets / data dumps (intermediate work products)
+*.xlsx
+docs_jp.xml
+jp_marathi_rows.json
+
+# One-off data/build scripts kept locally
+/build_image_audit_xlsx.cjs
+/strip_emdash.cjs
+scripts/_mh.geojson
+
+# Internal notes / planning docs (not for the repo)
+PENDING_TASKS.md
+ICON_RECOMMENDATIONS.md
+IMAGE_SPECS.md
+SOCIAL_SETUP.md
+
+# Claude Code local config
+.claude/
 .claude/settings.local.json
