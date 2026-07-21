@@ -163,6 +163,42 @@
       "note": "राज्यसभा",
       "phone": "9850001807",
       "photo": "/leaders/mp/06_Dr%20Jyoti%20Waghmare.webp"
+    },
+    {
+      "id": "mp-10",
+      "name": "श्री. संजय दिना पाटील",
+      "constituency": "मुंबई उत्तर-पूर्व",
+      "photo": "/leaders/mp/sanjay-dina-patil.png"
+    },
+    {
+      "id": "mp-11",
+      "name": "श्री. संजय देशमुख",
+      "constituency": "यवतमाळ-वाशीम",
+      "photo": "/leaders/mp/sanjay-deshmukh.png"
+    },
+    {
+      "id": "mp-12",
+      "name": "श्री. ओमराजे निंबाळकर",
+      "constituency": "धाराशिव",
+      "photo": "/leaders/mp/omraje-nimbalkar.png"
+    },
+    {
+      "id": "mp-13",
+      "name": "श्री. संजय जाधव",
+      "constituency": "परभणी",
+      "photo": "/leaders/mp/sanjay-jadhav.png"
+    },
+    {
+      "id": "mp-14",
+      "name": "श्री. भाऊसाहेब वाकचौरे",
+      "constituency": "शिर्डी",
+      "photo": "/leaders/mp/bhausaheb-wakchaure.png"
+    },
+    {
+      "id": "mp-15",
+      "name": "श्री. नागेश पाटील आष्टीकर",
+      "constituency": "हिंगोली",
+      "photo": "/leaders/mp/nagesh-patil-ashtikar.png"
     }
   ],
   "mla": [
@@ -873,6 +909,12 @@
       "name": "श्री. बच्चू कडू",
       "role": "विधान परिषद सदस्य",
       "photo": "/leaders/leaders/bacchu-kadu.webp"
+    },
+    {
+      "id": "mlc-10",
+      "name": "श्री. सचिन अहीर",
+      "role": "विधान परिषद सदस्य",
+      "photo": "/leaders/mlc/sachin-ahir.webp"
     }
   ],
   "leaders": [
