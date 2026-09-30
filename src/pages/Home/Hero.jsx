@@ -110,13 +110,6 @@ export default function Hero() {
  </div>
  )}
 
- {/* ─── HERO LOGO — banner content is just the white Shiv Sena
-        logo, centred over the dimmed video. The veil stays so the
-        logo reads clearly against the footage. ─── */}
- <div className="hero-quote__veil" aria-hidden="true" />
- <div className="hero-logo">
- <img src="/Logo/white-logo.png" alt="शिवसेना" className="hero-logo__img" />
- </div>
 
  {/* Sound toggle for the banner audio — lives on the hero only. */}
  <AudioMuteToggle className="audio-mute--hero" />

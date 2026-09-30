@@ -53,3 +53,4 @@ SOCIAL_SETUP.md
 # Claude Code local config
 .claude/
 .claude/settings.local.json
+_eng_src.txt
