@@ -102,6 +102,10 @@ export default function OurJourney() {
   const nextLabel  = isMr ? 'पुढे' : 'Next';
 
   return (
+ <>
+ <div className="journey__topbar">
+ <h2 className="journey__heading">{titleLabel}</h2>
+ </div>
  <section className="journey" id="history">
  {/* Background swaps on every event change with a slow cross-fade */}
  <div
@@ -112,8 +116,6 @@ export default function OurJourney() {
  />
 
  <div ref={headerRef} className="journey__inner reveal">
-
- <h2 className="journey__heading">{titleLabel}</h2>
 
  {/* Image-only mode: panel renders ONLY when text content exists.
      New timeline images have year + title + body baked in, so the
@@ -175,5 +177,6 @@ export default function OurJourney() {
  </div>
  </div>
  </section>
+ </>
   );
 }
