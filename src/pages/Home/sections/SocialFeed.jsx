@@ -130,7 +130,7 @@ const FEEDS = [
   { key: 'facebook',  label: 'फेसबुक',       labelEn: 'Facebook' },
   { key: 'instagram', label: 'इन्स्टाग्राम', labelEn: 'Instagram' },
   { key: 'youtube',   label: 'यूट्यूब',      labelEn: 'YouTube' },
-  { key: 'twitter',   label: 'ट्विटर',       labelEn: 'Twitter' },
+  { key: 'twitter',   label: 'एक्स',       labelEn: 'X' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════ */

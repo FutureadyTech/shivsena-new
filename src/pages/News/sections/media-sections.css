@@ -459,3 +459,32 @@
   .mr-poster__img, .mr-video__img, .mr-article__img,
   .mr-modal, .mr-modal__poster, .mr-modal__video { animation: none; transition: none; }
 }
+
+/* ─── Load more (video sections) ─── */
+.mr__more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.mr__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border: 1.5px solid var(--mr-saffron);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--mr-saffron-deep);
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+.mr__more:hover {
+  background: linear-gradient(90deg, var(--mr-saffron), var(--mr-saffron-deep));
+  color: #fff;
+  transform: translateY(-2px);
+}
+.mr__more svg { transition: transform 0.2s ease; }
+.mr__more:hover svg { transform: translateY(2px); }

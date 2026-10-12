@@ -113,6 +113,8 @@ export default function OurJourney() {
 
  <div ref={headerRef} className="journey__inner reveal">
 
+ <h2 className="journey__heading">{titleLabel}</h2>
+
  {/* Image-only mode: panel renders ONLY when text content exists.
      New timeline images have year + title + body baked in, so the
      text overlays are skipped. */}

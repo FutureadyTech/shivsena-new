@@ -706,10 +706,6 @@
             {
               "label": "संघटना",
               "href": "/about"
-            },
-            {
-              "label": "महायुती",
-              "href": "/mahayuti"
             }
           ]
         },
@@ -811,10 +807,6 @@
             {
               "label": "Organisation",
               "href": "/about"
-            },
-            {
-              "label": "Mahayuti",
-              "href": "/mahayuti"
             }
           ]
         },

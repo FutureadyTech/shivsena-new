@@ -16,7 +16,6 @@ const NAV = [
       { to: '/shivsena-janma', key: 'nav-shivsena-janma' },
       { to: '/about#history',  key: 'nav-timeline' },
       { to: '/about#affiliated', key: 'nav-about-party' },
-      { to: '/mahayuti',       key: 'nav-mahayuti' },
     ],
   },
   {

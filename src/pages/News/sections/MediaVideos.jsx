@@ -1,7 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useScrollReveal } from '../../Home/hooks/useScrollReveal.js';
-import { useContent } from '../../../content/_shared/useContent.js';
+import { useContentWithLang } from '../../../content/_shared/useContent.js';
 import './media-sections.css';
+
+// How many video cards to show before "Load more" is needed, and how
+// many more each click reveals.
+const PAGE_SIZE = 6;
 
 /**
  * Video media section — used for भाषणे (speeches) and मुलाखत (interviews).
@@ -14,9 +18,10 @@ import './media-sections.css';
  *   alt        — render the alt background variant
  */
 export default function MediaVideos({ block, sectionId, alt = false }) {
-  const t = useContent(block);
+  const { t, lang } = useContentWithLang(block);
   const headerRef = useScrollReveal(0.2);
   const [active, setActive] = useState(null);
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   useEffect(() => {
     if (!active) return;
@@ -31,6 +36,10 @@ export default function MediaVideos({ block, sectionId, alt = false }) {
   const items = (t.items || []).filter((v) => v.videoId);
   if (items.length === 0) return null;
 
+  const shown = items.slice(0, visible);
+  const hasMore = visible < items.length;
+  const moreLabel = lang === 'mr' ? 'अधिक पहा' : 'Load more';
+
   return (
     <section className={`mr${alt ? ' mr--alt' : ''}`} id={sectionId}>
       <div className="mr__inner">
@@ -39,10 +48,26 @@ export default function MediaVideos({ block, sectionId, alt = false }) {
         </div>
 
         <div className="mr__grid">
-          {items.map((item, i) => (
+          {shown.map((item, i) => (
             <VideoCard key={item.id} item={item} index={i} onPlay={() => setActive(item)} />
           ))}
         </div>
+
+        {hasMore && (
+          <div className="mr__more-wrap">
+            <button
+              type="button"
+              className="mr__more"
+              onClick={() => setVisible((v) => v + PAGE_SIZE)}
+              data-cursor="link"
+            >
+              {moreLabel}
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
 
       {active && (
